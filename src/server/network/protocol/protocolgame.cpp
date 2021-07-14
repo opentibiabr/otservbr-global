@@ -628,7 +628,20 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 
 	// Modules system
 	if(recvbyte != 0xD3){
-		g_dispatcher.addTask(createTask(std::bind(&Modules::executeOnRecvbyte, g_modules, player, msg, recvbyte)));
+		g_dispatcher.addTask(createTask(std::bind(&Modules::executeOnRecvbyte, g_modules, player->getID(), msg, recvbyte)));
+	}
+
+	g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::parsePacketFromDispatcher, getThis(), msg, recvbyte)));
+}
+
+void ProtocolGame::parsePacketFromDispatcher(NetworkMessage msg, uint8_t recvbyte)
+{
+	if (!acceptPackets || g_game.getGameState() == GAME_STATE_SHUTDOWN) {
+		return;
+	}
+
+	if (!player || player->isRemoved() || player->getHealth() <= 0) {
+		return;
 	}
 
 	switch (recvbyte) {
