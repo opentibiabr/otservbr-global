@@ -5,37 +5,37 @@ local storeItemID = {
 	-- registered item ids here are not tradable with players
 	-- these items can be set to moveable at items.xml
 	-- 500 charges exercise weapons
-	32384, -- exercise sword
-	32385, -- exercise axe
-	32386, -- exercise club
-	32387, -- exercise bow
-	32388, -- exercise rod
-	32389, -- exercise wand
+	28552, -- exercise sword
+	28553, -- exercise axe
+	28554, -- exercise club
+	28555, -- exercise bow
+	28556, -- exercise rod
+	28557, -- exercise wand
 
 	-- 50 charges exercise weapons
-	32124, -- training sword
-	32125, -- training axe
-	32126, -- training club
-	32127, -- training bow
-	32128, -- training wand
-	32129, -- training club
+	28540, -- training sword
+	28541, -- training axe
+	28542, -- training club
+	28543, -- training bow
+	28544, -- training wand
+	28545, -- training club
 
 	-- magic gold and magic converter (activated/deactivated)
-	32109, -- magic gold converter
-	33299, -- magic gold converter
-	26378, -- gold converter
-	29020, -- gold converter
+	28525, -- magic gold converter
+	28526, -- magic gold converter
+	23722, -- gold converter
+	25719, -- gold converter
 
 	-- foods
-	35172, -- roasted wyvern wings
-	35173, -- carrot pie
-	35174, -- tropical marinated tiger
-	35175, -- delicatessen salad
-	35176, -- chilli con carniphila
-	35177, -- svargrond salmon filet
-	35178, -- carrion casserole
-	35179, -- consecrated beef
-	35180, -- overcooked noodles
+	29408, -- roasted wyvern wings
+	29409, -- carrot pie
+	29410, -- tropical marinated tiger
+	29411, -- delicatessen salad
+	29412, -- chilli con carniphila
+	29413, -- svargrond salmon filet
+	29414, -- carrion casserole
+	29415, -- consecrated beef
+	29416, -- overcooked noodles
 }
 
 -- Capacity imbuement store
@@ -291,7 +291,7 @@ local function antiPush(self, item, count, fromPosition, toPosition, fromCylinde
 
 	pushDelay[cid].items = pushDelay[cid].items + 1
 
-	local currentTime = os.mtime()
+	local currentTime = systemTime()
 	if pushDelay[cid].time == 0 then
 		pushDelay[cid].time = currentTime
 	elseif pushDelay[cid].time == currentTime then
@@ -348,7 +348,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 	-- Cults of Tibia begin
 	local frompos = Position(33023, 31904, 14) -- Checagem
 	local topos = Position(33052, 31932, 15) -- Checagem
-	if self:getPosition():isInRange(frompos, topos) and item:getId() == 26397 then
+	if self:getPosition():isInRange(frompos, topos) and item:getId() == 23729 then
 		local tileBoss = Tile(toPosition)
 		if tileBoss and tileBoss:getTopCreature() and tileBoss:getTopCreature():isMonster() then
 			if tileBoss:getTopCreature():getName():lower() == 'the remorseless corruptor' then
@@ -374,7 +374,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 	-- SSA exhaust
 	local exhaust = { }
 	if toPosition.x == CONTAINER_POSITION and toPosition.y == CONST_SLOT_NECKLACE
-	and item:getId() == ITEM_STONE_SKIN_AMULET then
+	and item:getClientId() == ITEM_STONE_SKIN_AMULET then
 		local pid = self:getId()
 		if exhaust[pid] then
 			self:sendCancelMessage(RETURNVALUE_YOUAREEXHAUSTED)
@@ -390,7 +390,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 	local containerIdFrom = fromPosition.y - 64
 	local containerFrom = self:getContainerById(containerIdFrom)
 	if (containerFrom) then
-		if (containerFrom:getId() == ITEM_STORE_INBOX
+		if (containerFrom:getClientId() == ITEM_STORE_INBOX
 		and toPosition.y >= 1 and toPosition.y <= 11 and toPosition.y ~= 3) then
 			self:sendCancelMessage(RETURNVALUE_CONTAINERNOTENOUGHROOM)
 			return false
@@ -399,14 +399,14 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 
 	local containerTo = self:getContainerById(toPosition.y-64)
 	if (containerTo) then
-		if (containerTo:getId() == ITEM_STORE_INBOX) or (containerTo:getParent():isContainer() and containerTo:getParent():getId() == ITEM_STORE_INBOX and containerTo:getId() ~= ITEM_GOLD_POUCH) then
+		if (containerTo:getClientId() == ITEM_STORE_INBOX) or (containerTo:getParent():isContainer() and containerTo:getParent():getClientId() == ITEM_STORE_INBOX and containerTo:getClientId() ~= ITEM_GOLD_POUCH) then
 			self:sendCancelMessage(RETURNVALUE_CONTAINERNOTENOUGHROOM)
 			return false
 		end
 		-- Gold Pouch
-		if (containerTo:getId() == ITEM_GOLD_POUCH) then
-			if (not (item:getId() == ITEM_CRYSTAL_COIN or item:getId() == ITEM_PLATINUM_COIN
-			or item:getId() == ITEM_GOLD_COIN)) then
+		if (containerTo:getClientId() == ITEM_GOLD_POUCH) then
+			if (not (item:getClientId() == ITEM_CRYSTAL_COIN or item:getClientId() == ITEM_PLATINUM_COIN
+			or item:getClientId() == ITEM_GOLD_COIN)) then
 				self:sendCancelMessage("You can move only money to this container.")
 				return false
 			end
@@ -461,7 +461,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 		end
 
 		-- Do not let the player insert items into either the Reward Container or the Reward Chest
-		local itemId = container:getId()
+		local itemId = container:getClientId()
 		if itemId == ITEM_REWARD_CONTAINER or itemId == ITEM_REWARD_CHEST then
 			self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
 			return false
@@ -859,7 +859,7 @@ function Player:onApplyImbuement(imbuement, item, slot, protectionCharm)
 			self:removeItem(pid.itemid, pid.count)
 		end
 		-- Removing money
-		self:removeMoneyNpc(price)
+		self:removeMoneyBank(price)
 		-- Refreshing shrine window
 		local nitem = Item(item.uid)
 		self:sendImbuementPanel(nitem)
@@ -887,7 +887,7 @@ function Player:onApplyImbuement(imbuement, item, slot, protectionCharm)
 		end
 	end
 
-	if not self:removeMoneyNpc(price) then
+	if not self:removeMoneyBank(price) then
 		self:sendImbuementResult(MESSAGEDIALOG_IMBUEMENT_ROLL_FAILED, "You don't have enough money " ..price.. " gps.")
 		return false
 	end
@@ -925,7 +925,7 @@ function Player:clearImbuement(item, slot)
 	end
 
 	local imbuement = item:getImbuement(slot)
-	if not self:removeMoneyNpc(imbuement:getBase().removecust) then
+	if not self:removeMoneyBank(imbuement:getBase().removecust) then
 		self:sendImbuementResult(MESSAGEDIALOG_CLEARING_CHARM_ERROR,
 			"You don't have enough money " ..imbuement:getBase().removecust.. " gps.")
 		return false
@@ -952,7 +952,7 @@ function Player:onCombat(target, item, primaryDamage, primaryType, secondaryDama
 	end
 
 	if ItemType(item:getId()):getWeaponType() == WEAPON_AMMO then
-		if isInArray({ITEM_OLD_DIAMOND_ARROW, ITEM_DIAMOND_ARROW}, item:getId()) then
+		if isInArray({ITEM_OLD_DIAMOND_ARROW, ITEM_DIAMOND_ARROW}, item:getClientId()) then
 			return primaryDamage, primaryType, secondaryDamage, secondaryType
 		else
 			item = self:getSlotItem(CONST_SLOT_LEFT)

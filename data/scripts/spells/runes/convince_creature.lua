@@ -33,7 +33,6 @@ function rune.onCastSpell(creature, variant, isHotkey)
 	creature:addMana(-manaCost)
 	creature:addManaSpent(manaCost)
 	creature:addSummon(target)
-	target:reload()
 	creature:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 	return true
 end
@@ -41,7 +40,7 @@ end
 rune:group("support")
 rune:id(12)
 rune:name("Convince Creature Rune")
-rune:runeId(2290)
+rune:runeId(3177)
 rune:allowFarUse(true)
 rune:charges(1)
 rune:level(16)
