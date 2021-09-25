@@ -82,7 +82,6 @@ Storage = {
 	-- General storages
 	isTraining = 30000,
 	NpcExhaust = 30001,
-	NpcExhaustOnBuy = 30002,
 	Dragonfetish = 30003,
 	EdronRopeQuest = 30004,
 	GhostShipQuest = 30005,
@@ -1368,6 +1367,7 @@ Storage = {
 		cockroachBodyMsgStorage = 51670,
 		ZirellaNpcGreetStorage = 51671,
 		ZirellaQuestLog = 51672,
+		CarlosNpcTradeStorage = 51673,
 		CarlosNpcGreetStorage = 51677,
 		CarlosQuestLog = 51678
 	},
