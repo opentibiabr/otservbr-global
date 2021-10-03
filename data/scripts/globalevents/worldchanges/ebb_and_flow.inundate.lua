@@ -1,14 +1,16 @@
 local config = {
-    -- Posição inicial para onde os players serão teleportados quando o mapa for inundado e não estejam no raft
+    -- Starting position to where players will be teleported when the map is flooded and are not in raft
     waitPosition = Position(33878, 31002, 8),
 
-    -- Tempo para ocorrer a alteração, tempo padrão é 2 minutos (120 * 1000)
+    -- Time to change, default time is 2 minutes (120 * 1000)
     interval = (120 * 1000),
 
-    -- Posição central da cave no primeiro andar para ser usada como referencia do getSpectators
+    -- Central basement position on the first floor to be used as a getSpectators reference
 	positionFirstFloor = {fromPosition = Position(33866, 30985, 8), toPosition = Position(33951, 31122, 8),center = Position(33906, 31055, 8)},
-    -- Posições da cave no segundo andar para ser usada como referencia do getSpectators
+
+    -- Basement positions on the second floor to be used as a getSpectators reference
 	positionSecondFloor = {fromPosition = Position(33866, 30985, 9), toPosition = Position(33951, 31122, 9), center = Position(33906, 31055, 9)},
+
 	boatPositionEmptyRoom = {
 		{center = Position(33910, 31002, 9), rangeMinX = 1, rangeMaxX = 2, rangeMinY = 1, rangeMaxY = 2},
 		{center = Position(33910, 31030, 9), rangeMinX = 2, rangeMaxX = 3, rangeMinY = 1, rangeMaxY = 2},
@@ -199,8 +201,7 @@ local config = {
 	 }
 }
 
---[[ Esse LoadMap vai carregar o mapa vázio somente com os detalhes e setar que ele está vázio. --]]
-
+-- This LoadMap will load the map vázio only with the details and setar that it is vázio.
 local EbbAndFlow = GlobalEvent("EbbAndFlow")
 function EbbAndFlow.onStartup(interval)
 	Game.loadMap('data/world/ebbandflow/eebandflowempty.otbm')
@@ -208,15 +209,14 @@ function EbbAndFlow.onStartup(interval)
 	Game.setStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.Active, 0)
 	return true
 end
+
 EbbAndFlow:register()
 
---[[ 
-    Funções para carregar os mapas da wolrd change,
-    nesses mapas contém somente os detalhes que serão alterados. 
---]]
+-- Functions for loading wolrd change maps, these maps contain only the details that will be changed.
 local function loadMapEmpty()
 	Game.loadMap('data/world/ebbandflow/eebandflowempty.otbm')
 end
+
 local function loadMapInundate()
 	Game.loadMap('data/world/ebbandflow/eebandflowinundate.otbm')
 end
@@ -354,7 +354,7 @@ local function isWater(itemId)
 		end
 	end
 
--- Vai percorrer a area do mapa e remover os sqms do primeiro andar para que os novos entrem
+-- You'll scroll through the map area and remove the sqms from the first floor for the new ones to enter
 local function reloadFirstFloor()
 	for x = config.positionFirstFloor.fromPosition.x, config.positionFirstFloor.toPosition.x do
 		for y = config.positionFirstFloor.fromPosition.y, config.positionFirstFloor.toPosition.y do
@@ -383,7 +383,8 @@ local function reloadFirstFloor()
 		end
 	end
 end
--- Vai percorrer a area do mapa e remover os sqms do segundo andar para que os novos entrem
+
+-- You'll scroll through the map area and remove the sqms from the second floor for new ones to enter
 local function reloadSecondFloor()
 		for x = config.positionSecondFloor.fromPosition.x, config.positionSecondFloor.toPosition.x do
 			for y = config.positionSecondFloor.fromPosition.y, config.positionSecondFloor.toPosition.y do
@@ -417,15 +418,16 @@ local function reloadMap()
 		reloadSecondFloor()
 
 end
--- Evento que vai disparar a cada 2 minutos uma série de eventos para atualizar o mapa.
+
+-- Event that will fire every 2 minutes a series of events to update the map.
 local eddAndFlowInundate = GlobalEvent("eddAndFlowInundate")
 function eddAndFlowInundate.onThink(interval, lastExecution)
 	 if ChecksPlayersOnSecondFloor() or ChecksPlayersOnFirstFloor() then
 		Game.setStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.Active, 1)
-		print('Ebb And Flow - Ativado')
+		Spdlog.info('Ebb And Flow - activated')
 	 else
 		Game.setStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.Active, 0)
-		print('Ebb And Flow - Desativado')
+		Spdlog.info('Ebb And Flow - Deactivated')
 	 end
 
 	if Game.getStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.Active) == 0 then
@@ -433,17 +435,17 @@ function eddAndFlowInundate.onThink(interval, lastExecution)
 	end
 		if Game.getStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.Empty) <= 1 then
 			-- Game.broadcastMessage('Map flooded in 2 minutes.', MESSAGE_EVENT_ADVANCE)
-			addEvent(reloadMap, config.interval)--Correto 120 * 1000
-			addEvent(loadMapInundate, config.interval)--Correto 120 * 1000
-			addEvent(sendPlayerToStart, config.interval)--Correto 120 * 1000
+			addEvent(reloadMap, config.interval)  -- Correct 120 * 1000
+			addEvent(loadMapInundate, config.interval)  -- Correct 120 * 1000
+			addEvent(sendPlayerToStart, config.interval)  -- Correct 120 * 1000
 			Game.setStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.Empty, 2)
 			Game.setStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.doors, -1)
 			return true
 		else
 			-- Game.broadcastMessage('Map empty in 2 minutes.', MESSAGE_EVENT_ADVANCE)
-			addEvent(reloadMap, config.interval)--Correto 120 * 1000
-			addEvent(loadMapEmpty, config.interval) --Correto 120 * 1000
-			addEvent(playerInBoatInundateRoom, config.interval) --Correto 120 * 1000
+			addEvent(reloadMap, config.interval)  -- Correct 120 * 1000
+			addEvent(loadMapEmpty, config.interval)   -- Correct 120 * 1000
+			addEvent(playerInBoatInundateRoom, config.interval)   -- Correct 120 * 1000
 			Game.setStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.Empty, 0)
 			Game.setStorageValue(GlobalStorage.SoulWarQuest.EddAndFlow.doors, 1)
 			return true
@@ -451,9 +453,9 @@ function eddAndFlowInundate.onThink(interval, lastExecution)
 
 	return true
 end
+
 eddAndFlowInundate:interval(config.interval)
 eddAndFlowInundate:register()
-
 
 local lockDoorInundate = Action()
 function lockDoorInundate.onUse(player, item, fromPosition, target, toPosition, isHotkey)
@@ -475,6 +477,7 @@ function lockDoorInundate.onUse(player, item, fromPosition, target, toPosition, 
 	end
 	return true
 end
+
 lockDoorInundate:aid(26001)
 lockDoorInundate:register()
 
