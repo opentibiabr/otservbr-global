@@ -20,8 +20,11 @@ function rashid.onStartup()
 	local config = positionByDay[today]
 	if config then
 		local rashid = Game.createNpc("Rashid", config.position)
-		rashid:setMasterPos(config.position)
-		rashid:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		if rashid then
+			rashid:setMasterPos(config.position)
+			rashid:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		end
+
 		Spdlog.info(string.format("Rashid arrived at %s", config.city))
 		local message = string.format("Rashid arrived at %s today.", config.city) -- Declaring the message to send to webhook.
 		addEvent(rashidwebhook, 60000, message) -- Event with 1 minute delay to send webhook message after server starts.
