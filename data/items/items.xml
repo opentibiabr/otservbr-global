@@ -47027,7 +47027,7 @@
 	</item>
 	<item id="32919" name="bronze cup"/>
 	<item id="32920" name="silver cup"/>
-	<item id="32920" name="gold cup"/>
+	<item id="32921" name="gold cup"/>
 	<item id="32943" article="a" name="Vexclaw Doll">
 		<attribute key="wrapableTo" value="23398" />
 		<attribute key="weight" value="860" />
