@@ -17487,7 +17487,7 @@
 		<attribute key="containerSize" value="8"/>
 		<attribute key="slotType" value="backpack"/>
 	</item>
-	<item id="9152" article="a" name="demonbone amulet">
+	<item id="9152" article="a" name="v-belt">
 		<attribute key="weight" value="690"/>
 		<attribute key="slotType" value="necklace"/>
 	</item>
@@ -42511,7 +42511,7 @@
 	<item id="30060" article="a" name="giant emerald">
 		<attribute key="weight" value="150"/>
 	</item>
-	<item id="30061" article="a" name="giant amethyst">
+	<item id="30061" article="a" name="giant sapphire">
 		<attribute key="weight" value="150"/>
 	</item>
 	<item id="30062" article="a" name="dead lumbering carnivor">
@@ -43487,7 +43487,7 @@
 	<item id="30321" article="a" name="fly agaric">
 		<attribute key="weight" value="700"/>
 	</item>
-	<item id="30322" article="a" name="small ladubug">
+	<item id="30322" article="a" name="small ladybug">
 		<attribute key="weight" value="700"/>
 	</item>
 	<item id="30323" article="a" name="rainbow necklace">
@@ -45152,7 +45152,7 @@
 	<item id="31592" article="a" name="signet ring">
 		<attribute key="weight" value="70"/>
 	</item>
-	<item id="31593" article="a" name="noble cap">
+	<item id="31593" article="a" name="noble cape">
 		<attribute key="weight" value="100"/>
 	</item>
 	<item id="31594" article="a" name="token of love">
