@@ -20,8 +20,8 @@ You are subject to our code of conduct, read at [this link](https://github.com/o
 ### Getting **Started**
 
 * **WARNING: YOU NEED TO UNZIP THE MAP BEFORE START THE SERVER.**
-* [Compiling on Windows](https://forums.otserv.com.br/index.php?/forums/topic/169235-windowsvc2019-compilando-sources-otservbr-global/)
-* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/otservbr-global/wiki/Compiling-on-Ubuntu-or-Debian-GNU-Linux), [Windows](https://github.com/opentibiabr/otservbr-global/wiki/Compiling-on-Windows-(vcpkg)))
+* [Compiling on Windows](https://forums.otserv.com.br/index.php?/forums/topic/169235-windowsvc2019-compilando-sources-canary/)
+* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/canary/wiki/Compiling-on-Ubuntu-or-Debian-GNU-Linux), [Windows](https://github.com/opentibiabr/canary/wiki/Compiling-on-Windows-(vcpkg)))
 
 ### Issues
 
@@ -49,7 +49,7 @@ Before [creating a pull request](https://github.com/opentibiabr/otservbr-global/
   * [mattyx14/otxserver](https://github.com/mattyx14/otxserver) and contributors
   * [otland/forgottenserver](https://github.com/otland/forgottenserver) and contributors
   * [saiyansking/optimized_forgottenserver](https://github.com/SaiyansKing/optimized_forgottenserver) and contributors
-  * [Dominik Marszk](https://github.com/dmarszk/)
+  * [dominik marszk](https://github.com/dmarszk/)
   * if we forget someone, we apologize by forgot you. but you know, **forgot**tenserver.
 
 ### **Sponsors**
