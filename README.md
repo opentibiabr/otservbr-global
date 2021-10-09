@@ -4,7 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/opentibiabr/otservbr-global)](https://github.com/opentibiabr/otservbr-global/issues)
 [![GitHub pull request](https://img.shields.io/github/issues-pr/opentibiabr/otservbr-global)](https://github.com/opentibiabr/otservbr-global/pulls)
 [![Contributors](https://img.shields.io/github/contributors/opentibiabr/otservbr-global.svg?style=flat-square)](https://github.com/opentibiabr/otservbr-global/graphs/contributors)
-[![GitHub](https://img.shields.io/github/license/opentibiabr/otservbr-global)](https://github.com/opentibiabr/otservbr-global/blob/develop/LICENSE)
+[![GitHub](https://img.shields.io/github/license/opentibiabr/otservbr-global)](https://github.com/opentibiabr/otservbr-global/blob/main/LICENSE)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/opentibiabr/otservbr-global)
 
@@ -14,7 +14,7 @@
 
 ## Builds
 
-[![Build status](https://ci.appveyor.com/api/projects/status/github/opentibiabr/otservbr-global?branch=develop&passingText=develop%20-%20OK&svg=true)](https://ci.appveyor.com/project/opentibiabr/otservbr-global/build/artifacts "Download nightly builds for Windows")
+[![Build status](https://ci.appveyor.com/api/projects/status/github/opentibiabr/otservbr-global?branch=main&passingText=main%20-%20OK&svg=true)](https://ci.appveyor.com/project/opentibiabr/otservbr-global/build/artifacts "Download nightly builds for Windows")
 
 [![Build on Ubuntu](https://github.com/opentibiabr/otservbr-global/workflows/Build%20on%20Ubuntu/badge.svg)](https://github.com/opentibiabr/otservbr-global/actions?query=workflow%3A%22Build+on+Ubuntu%22)
 [![Build on Windows](https://github.com/opentibiabr/otservbr-global/workflows/Build%20on%20Windows/badge.svg)](https://github.com/opentibiabr/otservbr-global/actions?query=workflow%3A%22Build+on+Windows%22)
@@ -23,7 +23,7 @@
 
 OTServ Brasil - Global Server is a free and open-source MMORPG server emulator written in C++. It is a fork of the [Forgotten Server](https://github.com/otland/forgottenserver) project. To connect to the server and to take a stable experience, you can use our [own client](https://forums.otserv.com.br/index.php?/forums/topic/167933-otservbr-global-cliente-tibia-12/) and if you want to edit something, check our [customized tools](https://github.com/opentibiabr/tools).
 
-You are subject to our code of conduct, read at [this link](https://github.com/opentibiabr/otservbr-global/blob/develop/CODE_OF_CONDUCT.md).
+You are subject to our code of conduct, read at [this link](https://github.com/opentibiabr/otservbr-global/blob/main/CODE_OF_CONDUCT.md).
 
 ### Getting **Started**
 
