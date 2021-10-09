@@ -1,11 +1,17 @@
 local specialQuests = {
-	[2886] = Storage.DreamersChallenge.Reward,
-	[9628] = Storage.PitsOfInferno.WeaponReward,
-	[11557] = Storage.ThievesGuild.Reward,
-	[11418] = Storage.WrathoftheEmperor.mainReward,
-	[23644] = Storage.SvargrondArena.RewardGreenhorn,
-	[24632] = Storage.SvargrondArena.RewardScrapper,
-	[14338] = Storage.SvargrondArena.RewardWarlord
+	-- {x = 32752, y = 32343, z = 14}
+	[52167] = Storage.DreamersChallenge.Reward,
+	-- {x = 32806, y = 32230, z = 11}
+	[52003] = Storage.PitsOfInferno.WeaponReward,
+	-- {x = 32311, y = 32211, z = 8}
+	[51400] = Storage.ThievesGuild.Reward,
+	[51324] = Storage.WrathoftheEmperor.mainReward,
+	-- {x = 32232, y = 31066, z = 7}
+	[51715] = Storage.SvargrondArena.RewardGreenhorn,
+	-- {x = 32232, y = 31059, z = 7}
+	[51716] = Storage.SvargrondArena.RewardScrapper,
+	-- {x = 32232, y = 31052, z = 7}
+	[51717] = Storage.SvargrondArena.RewardWarlord
 }
 
 local questsExperience = {
