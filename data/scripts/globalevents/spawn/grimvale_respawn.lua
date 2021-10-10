@@ -26,7 +26,6 @@ end
 
 local grimvaleRespawn = GlobalEvent("grimvale respawn")
 function grimvaleRespawn.onStartup()
-	local contador = 1
 	if spawnDay == tonumber(currentDay) then
 		table.insert(monsters, 'wereboar')
 		table.insert(monsters, 'werebadger')
@@ -34,6 +33,7 @@ function grimvaleRespawn.onStartup()
 			for y = config.position.fromPosition.y, config.position.toPosition.y do
 				if math.random(1000) >= 983 then
 					if Game.createRandom(Position(x, y, 7)) then
+						return
 					end
 				end
 			end
@@ -47,6 +47,7 @@ function grimvaleRespawn.onStartup()
 			for y = config.position.fromPosition.y, config.position.toPosition.y do
 				if math.random(1000) >= 983 then
 					if Game.createRandom(Position(x, y, 7)) then
+						return
 					end
 				end
 			end
@@ -54,4 +55,5 @@ function grimvaleRespawn.onStartup()
 	end
 	return true
 end
+
 grimvaleRespawn:register()
