@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a tentuglys head"
 monster.experience = 40000
 monster.outfit = {
-	lookTypeEx = 39940
+	lookTypeEx = 35105
 }
 
 monster.health = 0 --?

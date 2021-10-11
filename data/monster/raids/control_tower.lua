@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a control tower"
 monster.experience = 3000
 monster.outfit = {
-	lookTypeEx = 23265
+	lookTypeEx = 20894
 }
 
 monster.health = 7500
