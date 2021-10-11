@@ -442,7 +442,7 @@ ChestUnique = {
 		reward = {{3302, 1}},
 		storage = Storage.Quest.VampireShield.DragonLance
 	},
-	-- Dragon lance
+	-- Vampire shield
 	[6042] = {
 		itemId = 2469,
 		itemPos = {x = 33195, y = 31688, z = 14},

@@ -66,7 +66,7 @@ end
 local function playerAddContainerItem(params, item)
 	local player = params.player
 
-	local reward = params.containerReward
+	local reward = player:addItem(params.containerReward)
 	if params.action then
 		local itemType = ItemType(params.itemid)
 		if itemType:isKey() then
@@ -82,17 +82,17 @@ local function playerAddContainerItem(params, item)
 	end
 
 	reward:addItem(params.itemid, params.count)
-	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. getItemName(params.itemBagName) .. ".")
+	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. getItemName(params.containerReward) .. ".")
 	player:setStorageValue(params.storage, 1)
 	return true
 end
 
 local questReward = Action()
 
-function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
+function questReward.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local setting = ChestUnique[item.uid]
 	if not setting then
-		return true
+		return false
 	end
 
 	if setting.weight then
@@ -115,17 +115,15 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 		return true
 	end
 
-	local container = player:addItem(setting.container)
 	for i = 1, #setting.reward do
 		local itemid = setting.reward[i][1]
 		local count = setting.reward[i][2]
 		local itemDescriptions = getItemDescriptions(itemid)
 		local itemArticle = itemDescriptions.article
 		local itemName = itemDescriptions.name
-		local itemBagName = setting.container
-		local itemBag = container
+		local container = setting.container
 
-		if not setting.container then
+		if not container then
 			local addItemParams = {
 				player = player,
 				itemid = itemid,
@@ -150,7 +148,7 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 			end
 		end
 
-		if setting.container then
+		if container then
 			local addContainerItemParams = {
 				player = player,
 				itemid = itemid,
@@ -158,8 +156,7 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 				weight = setting.weight,
 				storage = setting.storage,
 				action = setting.keyAction,
-				itemBagName = itemBagName,
-				containerReward = itemBag
+				containerReward = container
 			}
 
 			if not playerAddContainerItem(addContainerItemParams, item) then
