@@ -108,7 +108,7 @@ function heartDestructionQuake.onUse(player, item, fromPosition, itemEx, toPosit
 					foreshockStage = 0
 					aftershockStage = 0
 
-					local vortex = Tile({x = 32199, y = 31248, z = 14}):getItemById(26138)
+					local vortex = Tile({x = 32199, y = 31248, z = 14}):getItemById(23482)
 					if vortex then
 						vortex:transform(23483)
 						vortex:setActionId(14345)

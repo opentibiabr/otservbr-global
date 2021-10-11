@@ -100,7 +100,7 @@ function theShattererKill.onKill(creature, target)
 		teleport:transform(22761)
 		targetMonster:getPosition():sendMagicEffect(CONST_ME_THUNDER)
 		teleport:setDestination(newPos)
-		addEvent(revertTeleport, 2 * 60 * 1000, teleportPos, 25417, 1387, oldPos)
+		addEvent(revertTeleport, 2 * 60 * 1000, teleportPos, 22761, 1949, oldPos)
 		revert()
 	end
 	Game.setStorageValue(GlobalStorage.FerumbrasAscendant.TheShattererLever, 0)

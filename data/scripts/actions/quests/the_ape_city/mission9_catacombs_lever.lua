@@ -15,7 +15,7 @@ local config = {
 	},
 
 	walls = {
-		{position = Position(32864, 32556, 11), itemId = 3474}
+		{position = Position(32864, 32556, 11), itemId = 1563}
 	}
 }
 

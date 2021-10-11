@@ -16,7 +16,7 @@ function theCursedMiscItem.onUse(cid, item, frompos, item2, topos)
 			user1:sendTextMessage(MESSAGE_EVENT_ADVANCE, "As you use the small bell an unearthly sound rings out sweetly. At the same moment, the lake's waters begin to whirl.")
 				addEvent(function() 
 					Tile(TCC_VORTEX_POSITION):getItemById(7804):remove() 
-				end, 10000)		
+				end, 10000)
 		end
 	end
 end

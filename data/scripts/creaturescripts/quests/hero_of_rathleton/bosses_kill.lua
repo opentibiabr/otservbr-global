@@ -45,7 +45,7 @@ end
 local rathletonBossKill = CreatureEvent("RathletonBossKill")
 function rathletonBossKill.onKill(creature, target)
 	local targetMonster = target:getMonster()
-	if not targetMonster or targetMonster:getMaster() then
+	if not target or not targetMonster or targetMonster:getMaster() then
 		return true
 	end
 	local bossConfig = bosses[targetMonster:getName():lower()]
@@ -59,7 +59,10 @@ function rathletonBossKill.onKill(creature, target)
 	end
 
 	local teleport = Tile(bossConfig.teleportPos):getItemById(1949)
-	if not teleport then return true end
+	if not teleport then
+		return true
+	end
+
 	local teleportPos = bossConfig.teleportPos
 	local oldPos = teleport:getDestination()
 	local newPos = bossConfig.nextpos
@@ -67,7 +70,7 @@ function rathletonBossKill.onKill(creature, target)
 		teleport:transform(22761)
 		targetMonster:getPosition():sendMagicEffect(CONST_ME_THUNDER)
 		teleport:setDestination(newPos)
-		addEvent(revertTeleport, 2 * 60 * 1000, teleportPos, 25417, 1387, oldPos)
+		addEvent(revertTeleport, 2 * 60 * 1000, teleportPos, 22761, 1949, oldPos)
 		Game.setStorageValue(bossConfig.globaltimer, 0)
 	end
 	return true

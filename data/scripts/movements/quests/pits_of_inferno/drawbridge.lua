@@ -14,7 +14,6 @@ function drawbridge.onStepIn(creature, item, position, fromPosition)
 	local lavaItem = tile:getItemById(21477)
 	if lavaItem then
 		lavaItem:transform(1771)
-
 		local dirtItem
 		for i = 1, #dirtIds do
 			dirtItem = tile:getItemById(dirtIds[i])

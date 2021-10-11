@@ -33,7 +33,7 @@ function sacrificeSkulls.onStepIn(creature, item, position, fromPosition)
 				end
 			end
 			player:teleportTo({x = 32479, y = 31923, z = 7})
-		end 
+		end
 	end
 	return true
 end

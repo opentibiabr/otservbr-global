@@ -17,7 +17,7 @@ function stepTile.onStepIn(player, item, frompos, item2, topos)
 		return true
 	end
 
-	local tile = Tile(tileOne):getItemById(416) -- verifica primeiro piso
+	local tile = Tile(tileOne):getItemById(416)
 	if tiles.tileId == tile then
 		player:teleportTo(tile.positionTo)
 	else

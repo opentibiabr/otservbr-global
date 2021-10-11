@@ -135,6 +135,7 @@ Storage = {
 	BlueberryCupcake = 30053,
 	PetSummonEvent10 = 30054,
 	PetSummonEvent60 = 30055,
+	ChayenneKeyTime = 30056,
 	FreeQuests = 990000,
 	PremiumAccount = 998899,
 

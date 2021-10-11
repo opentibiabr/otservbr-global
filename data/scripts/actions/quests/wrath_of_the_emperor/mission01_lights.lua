@@ -17,7 +17,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 			}
 			for i = 1, #pos do
 				transformLamp(pos[i], 10491, 10490)
-				addEvent(transformLamp, 20 * 1000, pos[i], 11446, 11447)
+				addEvent(transformLamp, 20 * 1000, pos[i], 10490, 10491)
 			end
 		end
 	elseif(item.uid == 3172) then
@@ -26,7 +26,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light02, 0)
 			local pos = Position(33360, 31079, 8)
 			transformLamp(pos, 10493, 10507)
-			addEvent(transformLamp, 20 * 1000, pos, 11463, 11449)
+			addEvent(transformLamp, 20 * 1000, pos, 10507, 10493)
 		end
 	elseif(item.uid == 3173) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light03) ~= 1 then
@@ -34,7 +34,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light03, 0)
 			local pos = Position(33346, 31074, 8)
 			transformLamp(pos, 10493, 10507)
-			addEvent(transformLamp, 20 * 1000, pos, 11463, 11449)
+			addEvent(transformLamp, 20 * 1000, pos, 10507, 10493)
 		end
 	elseif(item.uid == 3174) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light04) ~= 1 then

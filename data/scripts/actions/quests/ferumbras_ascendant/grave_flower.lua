@@ -6,6 +6,7 @@ local function revertItem(position, itemId, transformId)
 end
 
 local ferumbrasAscendantGraveFlower = Action()
+
 function ferumbrasAscendantGraveFlower.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	item:transform(22874)
 	player:addItem(3661, 1)

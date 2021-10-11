@@ -20,9 +20,10 @@ function theCursedMedusa.onUse(player, item, fromPosition, target, toPosition, i
 			local stone = Tile(TCC_PILLARPETRIFIED):getItemById(10797)
 			doSendMagicEffect(stone:getPosition(), CONST_ME_POFF)
 			stone:transform(10870)
-				addEvent(function() 
-				stone:transform(10797)
-				end,5000)
+			addEvent(
+				function() 
+					stone:transform(10797)
+				end, 5000)
 		end
 		return
 	elseif(item.itemid == 9106)then

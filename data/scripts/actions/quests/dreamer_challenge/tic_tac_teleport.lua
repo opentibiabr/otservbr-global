@@ -1,13 +1,13 @@
 local config = {
-	{position = Position(32845, 32264, 14), itemId = 2639},
-	{position = Position(32843, 32266, 14), itemId = 2639},
-	{position = Position(32843, 32268, 14), itemId = 2639},
-	{position = Position(32845, 32268, 14), itemId = 2639},
-	{position = Position(32844, 32267, 14), itemId = 2639},
-	{position = Position(32840, 32269, 14), itemId = 2639},
-	{position = Position(32841, 32269, 14), itemId = 2638},
-	{position = Position(32840, 32268, 14), itemId = 2638},
-	{position = Position(32842, 32267, 14), itemId = 2638}
+	{position = Position(32845, 32264, 14), itemId = 3548},
+	{position = Position(32843, 32266, 14), itemId = 3548},
+	{position = Position(32843, 32268, 14), itemId = 3548},
+	{position = Position(32845, 32268, 14), itemId = 3548},
+	{position = Position(32844, 32267, 14), itemId = 3548},
+	{position = Position(32840, 32269, 14), itemId = 3548},
+	{position = Position(32841, 32269, 14), itemId = 3547},
+	{position = Position(32840, 32268, 14), itemId = 3547},
+	{position = Position(32842, 32267, 14), itemId = 3547}
 }
 
 local dreamerTicTacTeleport = Action()
@@ -42,7 +42,7 @@ function dreamerTicTacTeleport.onUse(player, item, fromPosition, target, toPosit
 
 	local position = Position(32836, 32288, 14)
 	if item.itemid == 2772 then
-		local crack = Tile(position):getItemById(6298)
+		local crack = Tile(position):getItemById(6297)
 		if crack then
 			crack:remove()
 

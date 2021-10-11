@@ -30,7 +30,7 @@ local function functionBack()
 end
 
 local function removeVortex(position)
-	local vortex = Tile(position):getItemById(26580)
+	local vortex = Tile(position):getItemById(23912)
 	if vortex then
 		vortex:remove()
 	end

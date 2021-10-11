@@ -104,7 +104,7 @@ function heartDestructionRupture.onUse(player, item, fromPosition, itemEx, toPos
 					Game.createMonster("Spark of Destruction", {x = 32338, y = 31250, z = 14}, false, true)
 					Game.createMonster("Rupture", {x = 32332, y = 31250, z = 14}, false, true)
 
-					local vortex = Tile({x = 32326, y = 31250, z = 14}):getItemById(26138)
+					local vortex = Tile({x = 32326, y = 31250, z = 14}):getItemById(23482)
 					if vortex then
 						vortex:transform(23483)
 						vortex:setActionId(14343)

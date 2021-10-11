@@ -20,8 +20,8 @@ function lever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				entranceTeleportTile:getItemById(1949):remove()
 				exitTeleportTile:getItemById(1949):remove()
 			else
-				local teleportEntrance = Game.createItem(1387, 1, {x = 32232, y = 32276, z = 9})
-				local teleportExit = Game.createItem(1387, 1, {x = 32225, y = 32276, z = 10})
+				local teleportEntrance = Game.createItem(1949, 1, {x = 32232, y = 32276, z = 9})
+				local teleportExit = Game.createItem(1949, 1, {x = 32225, y = 32276, z = 10})
 				if teleportEntrance and teleportExit then
 					teleportEntrance:setDestination({x = 32225, y = 32274, z = 10})
 					teleportExit:setDestination({x = 32230, y = 32276, z = 9})

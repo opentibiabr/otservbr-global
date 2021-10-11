@@ -10,7 +10,7 @@ end
 local azerus = CreatureEvent("Azerus")
 function azerus.onKill(creature, target)
 	local targetMonster = target:getMonster()
-	if not targetMonster or targetMonster:getName():lower() ~= 'azerus' then
+	if not target or not targetMonster or targetMonster:getName():lower() ~= 'azerus' then
 		return true
 	end
 

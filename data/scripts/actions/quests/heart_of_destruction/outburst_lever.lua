@@ -105,7 +105,7 @@ function heartDestructionOutburst.onUse(player, item, fromPosition, itemEx, toPo
 					outburstStage = 0
 					outburstHealth = 290000
 
-					local vortex = Tile({x = 32225, y = 31285, z = 14}):getItemById(26138)
+					local vortex = Tile({x = 32225, y = 31285, z = 14}):getItemById(23482)
 					if vortex then
 						vortex:transform(23483)
 						vortex:setActionId(14350)

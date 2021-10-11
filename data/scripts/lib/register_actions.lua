@@ -387,7 +387,7 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 		Position(32070, 32266, 7):sendMagicEffect(CONST_ME_TUTORIALARROW)
 		Position(32070, 32266, 7):sendMagicEffect(CONST_ME_TUTORIALSQUARE)
 		target:transform(594)
-		addEvent(revertItem, 30 * 1000, toPosition, 469, 8579)
+		addEvent(revertItem, 30 * 1000, toPosition, 594, 7749)
 	elseif target.actionid == 4654 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission49) == 1
 	and player:getStorageValue(Storage.GravediggerOfDrefia.Mission50) < 1 then
 		-- Gravedigger Quest
@@ -585,7 +585,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 				)
 				player:addItem(22058)
 				target:transform(4464)
-				addEvent(revertItem, 10 * 60 * 1000, toPosition, 4475, 24731)
+				addEvent(revertItem, 10 * 60 * 1000, toPosition, 4464, 22075)
 			end
 			player:setStorageValue(Storage.Grimvale.SilverVein, os.time() + 2 * 60)
 		else
@@ -712,7 +712,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 				player:addItem(10426, 1)
 				player:setStorageValue(Storage.TibiaTales.JackFutureQuest.Statue, 2)
 				player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) + 1)
-				addEvent(revertItem, 2 * 60 * 1000, {x = 33277, y = 31754, z = 7}, 3701, 3706)
+				addEvent(revertItem, 2 * 60 * 1000, {x = 33277, y = 31754, z = 7}, 2066, 2071)
 			end
 		end
 	else
@@ -926,7 +926,7 @@ function onUseKitchenKnife(player, item, fromPosition, target, toPosition, isHot
 				player:addItem(7245, 1)
 				player:setStorageValue(Storage.TheIceIslands.FlowerCactus, 1)
 				target:transform(3637)
-				addEvent(revertItem, 60 * 1000, toPosition, 2723, 2733)
+				addEvent(revertItem, 60 * 1000, toPosition, 3637, 3647)
 				toPosition:sendMagicEffect(CONST_ME_MAGIC_GREEN)
 				player:say("You cut a flower from a cactus.", TALKTYPE_MONSTER_SAY)
 			end
@@ -937,7 +937,7 @@ function onUseKitchenKnife(player, item, fromPosition, target, toPosition, isHot
 				player:addItem(7249, 1)
 				player:setStorageValue(Storage.TheIceIslands.FlowerBush, 1)
 				target:transform(3750)
-				addEvent(revertItem, 60 * 1000, toPosition, 4014, 4017)
+				addEvent(revertItem, 60 * 1000, toPosition, 3750, 3753)
 				toPosition:sendMagicEffect(CONST_ME_MAGIC_GREEN)
 				player:say("You cut a flower from a bush.", TALKTYPE_MONSTER_SAY)
 			end

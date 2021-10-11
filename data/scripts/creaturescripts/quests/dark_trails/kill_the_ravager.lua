@@ -14,7 +14,7 @@ function theRavager.onKill(creature, target)
 
 	local position = target:getPosition()
 	position:sendMagicEffect(CONST_ME_TELEPORT)
-	local item = Game.createItem(1387, 1, {x = 33496, y = 32070, z = 8})
+	local item = Game.createItem(1949, 1, {x = 33496, y = 32070, z = 8})
 	if item:isTeleport() then
 		item:setDestination(Position(33459,32083,8))
 	end

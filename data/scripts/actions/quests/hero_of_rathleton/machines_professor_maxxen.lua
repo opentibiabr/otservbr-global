@@ -22,7 +22,7 @@ function heroRathletonProfessor.onUse(player, item, fromPosition, target, toPosi
 	end
 
 	item:transform(21744)
-	addEvent(revertMachine, 10 * 60 * 1000, toPosition, 24113, 24112)
+	addEvent(revertMachine, 10 * 60 * 1000, toPosition, 21744, 21743)
 	Game.setStorageValue(GlobalStorage.HeroRathleton.ThirdMachines, Game.getStorageValue(GlobalStorage.HeroRathleton.ThirdMachines) + 1)
 	player:say('~Zzzz~\n The machine is working!', TALKTYPE_MONSTER_SAY, false, nil, toPosition)
 	return true

@@ -1,6 +1,6 @@
 local othersSerpentineTorch = Action()
 function othersSerpentineTorch.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local wallItem = Tile(33151, 32866, 8):getItemById(1100)
+	local wallItem = Tile(33151, 32866, 8):getItemById(1345)
 	if wallItem then
 		wallItem:remove()
 		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)

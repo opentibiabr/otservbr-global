@@ -76,7 +76,7 @@ function ascendantBossesKill.onKill(creature, target)
 		teleport:transform(22761)
 		targetMonster:getPosition():sendMagicEffect(CONST_ME_THUNDER)
 		teleport:setDestination(bossConfig.godbreakerPos)
-		addEvent(revertTeleport, 2 * 60 * 1000, bossConfig.teleportPos, 25417, 1387, teleport:getDestination())
+		addEvent(revertTeleport, 2 * 60 * 1000, bossConfig.teleportPos, 22761, 1949, teleport:getDestination())
 	end
 
 	if targetMonster:getName():lower() == 'ferumbras mortal shell' then

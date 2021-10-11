@@ -46,7 +46,7 @@ function othersFireBug.onUse(player, item, fromPosition, target, toPosition, isH
 		target:transform(22876)
 		player:setStorageValue(Storage.FerumbrasAscension.BasinCounter, player:getStorageValue(Storage.FerumbrasAscension.BasinCounter) + 1)
 		toPosition:sendMagicEffect(CONST_ME_FIREAREA)
-		addEvent(revert, 2 * 60 * 1000, toPosition, 25532, 25531)
+		addEvent(revert, 2 * 60 * 1000, toPosition, 22876, 22875)
 		return true
 	elseif target.uid == 2243 then
 		local tile = Tile(Position(32849, 32233, 9))

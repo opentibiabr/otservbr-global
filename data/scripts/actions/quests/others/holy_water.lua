@@ -81,7 +81,7 @@ function othersHolyWater.onUse(player, item, fromPosition, target, toPosition, i
 		if doorItem then
 			doorItem:transform(7868)
 		end
-		addEvent(revertItem, 10 * 1000, doorPosition, 8696, 8697)
+		addEvent(revertItem, 10 * 1000, doorPosition, 7868, 7869)
 		return true
 	end
 

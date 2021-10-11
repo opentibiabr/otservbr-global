@@ -1,11 +1,11 @@
 local config = {
 	bridgePositions = {
-		{position = Position(33119, 32794, 14), groundId = 598},
-		{position = Position(33119, 32795, 14), groundId = 598},
-		{position = Position(33120, 32794, 14), groundId = 598},
-		{position = Position(33120, 32795, 14), groundId = 598},
-		{position = Position(33121, 32794, 14), groundId = 598},
-		{position = Position(33121, 32795, 14), groundId = 598}
+		{position = Position(33119, 32794, 14), groundId = 727},
+		{position = Position(33119, 32795, 14), groundId = 727},
+		{position = Position(33120, 32794, 14), groundId = 727},
+		{position = Position(33120, 32795, 14), groundId = 727},
+		{position = Position(33121, 32794, 14), groundId = 727},
+		{position = Position(33121, 32795, 14), groundId = 727}
 
 	},
 	leverPositions = {

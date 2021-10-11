@@ -78,7 +78,7 @@ function redGem.onStepIn(creature, item, position, fromPosition)
 	addEvent(activeBasin, 1 * 1000, position)
 	addEvent(revertBasin, 60 * 60 * 1000, position)
 	addEvent(revertStorages, 60 * 60 * 1000)
-	addEvent(revertItem, 60 * 60 * 1000,  position, 9564, item.itemid)
+	addEvent(revertItem, 60 * 60 * 1000,  position, 8648, item.itemid)
 	return true
 end
 

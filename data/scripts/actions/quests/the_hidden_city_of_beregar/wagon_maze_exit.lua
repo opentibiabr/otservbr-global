@@ -47,8 +47,8 @@ function theHiddenWagonExit.onUse(player, item, fromPosition, target, toPosition
 		}
 	}
 
-	for i = 1, #config do
-		local table = config[i]
+	for i = 1, #destinations do
+		local table = destinations[i]
 		if table.railCheck then
 			player:teleportTo(table.teleportPos)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
