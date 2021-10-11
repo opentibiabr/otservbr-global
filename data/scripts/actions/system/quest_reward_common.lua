@@ -123,7 +123,21 @@ function questReward.onUse(player, item, fromPosition, target, toPosition, isHot
 		local itemName = itemDescriptions.name
 		local container = setting.container
 
-		if not container then
+		if container then
+			local addContainerItemParams = {
+				player = player,
+				itemid = itemid,
+				count = count,
+				weight = setting.weight,
+				storage = setting.storage,
+				action = setting.keyAction,
+				containerReward = container
+			}
+
+			if not playerAddContainerItem(addContainerItemParams, item) then
+				return true
+			end
+		else
 			local addItemParams = {
 				player = player,
 				itemid = itemid,
@@ -144,22 +158,6 @@ function questReward.onUse(player, item, fromPosition, target, toPosition, isHot
 				addItemParams.message = "You have found " .. itemArticle .. " " .. itemName
 			end
 			if not playerAddItem(addItemParams, item) then
-				return true
-			end
-		end
-
-		if container then
-			local addContainerItemParams = {
-				player = player,
-				itemid = itemid,
-				count = count,
-				weight = setting.weight,
-				storage = setting.storage,
-				action = setting.keyAction,
-				containerReward = container
-			}
-
-			if not playerAddContainerItem(addContainerItemParams, item) then
 				return true
 			end
 		end
