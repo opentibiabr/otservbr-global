@@ -2,11 +2,6 @@ local spawnByDay = true
 local spawnDay = 13
 local currentDay = os.date("%d")
 
-
-local config = {
-	position = {fromPosition = Position(33415, 31522, 11), toPosition = Position(33445, 31554, 11)}
-}
-
 local grimVale = GlobalEvent("grimvale")
 
 function grimVale.onThink(interval, lastExecution)
@@ -20,7 +15,7 @@ function grimVale.onThink(interval, lastExecution)
 				if chance <= 5 then
 					addEvent(removeItems, 30 * 60 * 1000)
 					addEvent(Game.loadMap, 30 * 60 * 1000, 'data/world/feroxa/middle.otbm')
-					addEvent(spectators, 30 * 60 * 1000)
+					addEvent(grimvaleSpectators, 30 * 60 * 1000)
 					Game.setStorageValue(GlobalStorage.Feroxa.Active, 1)
 					Game.broadcastMessage('Grimvale drowns in werecreatures as the full moon reaches its apex and ancient evil returns.', MESSAGE_EVENT_ADVANCE)
 				else

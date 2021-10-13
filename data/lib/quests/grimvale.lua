@@ -1,5 +1,8 @@
-
 local oldpos = {}
+
+local config = {
+	position = {fromPosition = Position(33415, 31522, 11), toPosition = Position(33445, 31554, 11)}
+}
 
 local function teleportPlayer(playerId, pos)
 	local player = Player(playerId)
@@ -42,7 +45,7 @@ local function final()
 	addEvent(removeFeroxa, 5 * 60 * 1000, feroxa:getId())
 end
 
-local function removeItems()
+function removeItems()
 	for x = config.position.fromPosition.x, config.position.toPosition.x do
 		for y = config.position.fromPosition.y, config.position.toPosition.y do
 			for z = config.position.fromPosition.z, config.position.toPosition.z do
@@ -65,7 +68,7 @@ local function removeItems()
 	end
 end
 
-local function spectators()
+function grimvaleSpectators()
 	local specs, spec = Game.getSpectators(Position(33430, 31537, 11), false, false, 18, 18, 18, 18)
 	for i = 1, #specs do
 		spec = specs[i]
