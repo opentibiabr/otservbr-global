@@ -1,5 +1,5 @@
 ---@author @Glatharth
----@version 1.1
+---@version 1.2
 ---@since 1.0
 Spectators = {}
 setmetatable(Spectators, {
@@ -54,6 +54,8 @@ end
 function Spectators.setCheckPosition(self, position)
     if position.from and position.to then
         self.check_position = position
+    else
+        error("Error set position.")
     end
 end
 
@@ -136,7 +138,9 @@ function Spectators.removePlayers(self, players)
 end
 
 function Spectators.check(self, pos)
-    self:setCheckPosition(pos)
+    if pos ~= nil then
+        self:setCheckPosition(pos)
+    end
     local range = self:convertPosToRange()
     pos = self:convertPos()
     local specs = Game.getSpectators(pos, self:getMultiFloor(), self:getOnlyPlayer(), range.x, range.x, range.y, range.y)
