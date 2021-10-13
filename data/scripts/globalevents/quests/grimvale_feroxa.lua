@@ -9,6 +9,7 @@ function grimVale.onThink(interval, lastExecution)
 	if Game.getStorageValue(GlobalStorage.Feroxa.Active) >= 1 then
 		return true
 	end
+
 	if spawnByDay then
 		if Game.getStorageValue(GlobalStorage.Feroxa.Active) < 1 then
 			if spawnDay == tonumber(currentDay) then
@@ -26,5 +27,6 @@ function grimVale.onThink(interval, lastExecution)
 	end
 	return true
 end
+
 grimVale:interval(60000)
 grimVale:register()
