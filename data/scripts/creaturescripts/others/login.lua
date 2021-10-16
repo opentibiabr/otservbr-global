@@ -48,6 +48,8 @@ function playerLogin.onLogin(player)
 	local freeTowns = {"Ab'Dendriel", "Carlin", "Kazordoon", "Thais", "Venore", "Rookgaard", "Dawnport", "Dawnport Tutorial", "Island of Destiny"} -- towns in free account area
 
 	if isPremium(player) == false and isInArray(freeTowns, player:getTown():getName()) == false then
+	if player:setStorageValue(Storage.PremiumAccount, 0)
+	else
 		local town = player:getTown()
 		local sex = player:getSex()
 		local home = getHouseByPlayerGUID(getPlayerGUID(player))
@@ -66,6 +68,7 @@ function playerLogin.onLogin(player)
             player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, 'You\'ve lost your house because you are not premium anymore.')
 			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, 'Your items from house are send to your inbox.')
         end
+			end
 	end
 	-- End 'Premium Ends Teleport to Temple'
 
