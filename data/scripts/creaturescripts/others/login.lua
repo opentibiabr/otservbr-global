@@ -48,7 +48,7 @@ function playerLogin.onLogin(player)
 	local freeTowns = {"Ab'Dendriel", "Carlin", "Kazordoon", "Thais", "Venore", "Rookgaard", "Dawnport", "Dawnport Tutorial", "Island of Destiny"} -- towns in free account area
 
 	if isPremium(player) == false and isInArray(freeTowns, player:getTown():getName()) == false then
-	if player:setStorageValue(Storage.PremiumAccount, 0)
+	if player:getStorageValue(Storage.PremiumAccount) == 0 then
 	else
 		local town = player:getTown()
 		local sex = player:getSex()
