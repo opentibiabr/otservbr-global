@@ -2707,18 +2707,21 @@ void ProtocolGame::sendCreatureLight(const Creature *creature)
 void ProtocolGame::sendCreatureIcon(const Creature* creature)
 {
 	if (!creature)
-    	return;
-  	CreatureIcon_t icon = creature->getIcon();
-  	NetworkMessage msg;
- 	msg.addByte(0x8B);
-  	msg.add<uint32_t>(creature->getID());
-  	msg.addByte(14); // type 14 for this
-  	msg.addByte(icon != CREATUREICON_NONE); // 0 = no icon, 1 = we'll send an icon
-  	if (icon != CREATUREICON_NONE) {
-    	msg.addByte(icon);
-    	msg.addByte(1); // ???
-    	msg.add<uint16_t>(0); // used for the life in the new quest
-  	}
+	{
+		return;
+	}
+
+	CreatureIcon_t icon = creature->getIcon();
+	NetworkMessage msg;
+	msg.addByte(0x8B);
+	msg.add<uint32_t>(creature->getID());
+	msg.addByte(14); // type 14 for this
+	msg.addByte(icon != CREATUREICON_NONE); // 0 = no icon, 1 = we'll send an icon
+	if (icon != CREATUREICON_NONE) {
+		msg.addByte(icon);
+		msg.addByte(0); // Creature update
+		msg.add<uint16_t>(0); // Used for the life in the new quest
+	}
 	writeToOutputBuffer(msg);
 }
 
