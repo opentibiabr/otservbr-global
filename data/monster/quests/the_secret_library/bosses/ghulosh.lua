@@ -72,7 +72,7 @@ monster.loot = {
 	{name = "bullseye potion", chance = 90000},
 	{name = "demon horn", chance = 90000},
 	{name = "magic sulphur", chance = 90000},
-	{name = "red gem", chance = 90000},
+	{id = 2156, chance = 90000},
 	{name = "stone skin amulet", chance = 90000},
 	{name = "yellow gem", chance = 90000},
 	{name = "wand of voodoo", chance = 90000},

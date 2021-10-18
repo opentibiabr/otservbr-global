@@ -82,7 +82,7 @@ monster.loot = {
 	{name = "Lamassu Hoof", chance = 7700},
 	{name = "Violet Crystal Shard", chance = 6800},
 	{name = "Blue Crystal Shard", chance = 6500},
-	{name = "Red Gem", chance = 6200},
+	{id = 2156, chance = 6200},
 	{name = "Terra Hood", chance = 5900},
 	{name = "Sacred Tree Amulet", chance = 2300},
 	{name = "Elven Amulet", chance = 2000},

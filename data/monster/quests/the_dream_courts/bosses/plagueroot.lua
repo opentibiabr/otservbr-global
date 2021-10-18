@@ -77,7 +77,7 @@ monster.loot = {
 	{name = "Royal Star", chance = 15770, maxCount = 100},
 	{name = "Green Gem", chance = 12800, maxCount = 2},
 	{name = "Yellow Gem", chance = 12000, maxCount = 2},
-	{name = "Red Gem", chance = 12700, maxCount = 2},
+	{id = 2156, chance = 12700, maxCount = 2},
 	{name = "Bullseye Potion", chance = 25000, maxCount = 10},
 	{name = "Pomegranate", chance = 8000},
 	{name = "Crystal Coin", chance = 7700, maxCount = 2},

@@ -74,7 +74,7 @@ monster.loot = {
 	{name = "bullseye potion", minCount = 0, maxCount = 10, chance = 12000},
 	{name = "berserk potion", minCount = 0, maxCount = 10, chance = 12000},
 	{name = "piece of hell steel", minCount = 0, maxCount = 4, chance = 9000},
-	{name = "red gem", minCount = 0, maxCount = 2, chance = 12000},
+	{id = 2156, minCount = 0, maxCount = 2, chance = 12000},
 	{name = "blue gem", minCount = 0, maxCount = 2, chance = 12000},
 	{name = "silver token", minCount = 0, maxCount = 2, chance = 9500},
 	{name = "ancient liche bone", chance = 5200},

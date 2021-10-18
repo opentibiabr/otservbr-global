@@ -90,7 +90,7 @@ monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 200},
 	{name = "small emerald", chance = 19000, maxCount = 10},
 	{name = "great mana potion", chance = 31230, maxCount = 5},
-	{name = "red gem", chance = 12000},
+	{id = 2156, chance = 12000},
 	{name = "oriental shoes", chance = 11000},
 	{name = "torn shirt", chance = 42000},
 	{name = "fig leaf", chance = 32000},

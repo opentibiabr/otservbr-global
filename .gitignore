@@ -372,6 +372,7 @@ config.lua
 *.ini
 *.otb
 *.exe
+*.manifest
 *.otbm
 *.rar
 

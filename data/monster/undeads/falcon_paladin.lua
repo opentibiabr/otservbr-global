@@ -85,7 +85,7 @@ monster.loot = {
 	{name = "Small Ruby", chance = 20700, maxCount = 2},
 	{name = "Small Topaz", chance = 20100, maxCount = 2},
 	{name = "Onyx Arrow", chance = 14000, maxCount = 15},
-	{name = "Red Gem", chance = 7500, maxCount = 3},
+	{id = 2156, chance = 7500, maxCount = 3},
 	{name = "Green Gem", chance = 4880},
 	{name = "Violet Gem", chance = 4180},
 	{id = 7633, chance = 2260},

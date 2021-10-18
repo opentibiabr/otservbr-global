@@ -97,7 +97,7 @@ monster.loot = {
 	{name = "talon", chance = 5400},
 	{name = "yellow gem", chance = 5090},
 	{name = "wand of voodoo", chance = 4940},
-	{name = "red gem", chance = 4730},
+	{id = 2156, chance = 4730},
 	{name = "ice rapier", chance = 4730},
 	{name = "fire axe", chance = 3520},
 	{name = "might ring", chance = 2250},

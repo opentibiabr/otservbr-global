@@ -89,7 +89,7 @@ monster.loot = {
 	{name = "violet gem", chance = 1300},
 	{name = "yellow gem", chance = 3060},
 	{name = "green gem", chance = 1210},
-	{name = "red gem", chance = 4800},
+	{id = 2156, chance = 4800},
 	{name = "sacred tree amulet", chance = 5100},
 	{name = "green crystal shard", chance = 2130},
 	{id = 26189, chance = 740}-- ring of red plasma
