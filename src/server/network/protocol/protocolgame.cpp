@@ -2936,7 +2936,6 @@ void ProtocolGame::sendCyclopediaCharacterGeneralStats()
 	//		msg.add<uint16_t>(); // Magic boost value
 	// }
 	// Version 12.70 end
-	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendCyclopediaCharacterCombatStats()
@@ -3124,8 +3123,6 @@ void ProtocolGame::sendCyclopediaCharacterCombatStats()
 
 	msg.setBufferPosition(startCombats);
 	msg.addByte(combats);
-
-	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendCyclopediaCharacterRecentDeaths(uint16_t page, uint16_t pages, const std::vector<RecentDeathEntry> &entries)
@@ -4604,8 +4601,6 @@ void ProtocolGame::sendMarketDetail(uint16_t itemId)
 	{
 		msg.addByte(0x00);
 	}
-
-	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendTradeItemRequest(const std::string &traderName, const Item *item, bool ack)
