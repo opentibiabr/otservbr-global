@@ -89,6 +89,13 @@ enum ItemTypes_t {
 	ITEM_TYPE_LAST,
 };
 
+struct Modifiers {
+	public:
+		uint16_t cleaveDamage = 0;
+		uint16_t reflectDamage = 0;
+		uint16_t perfectBonus = 0;
+};
+
 struct Abilities {
 	public:
 		uint32_t conditionImmunities = 0;
@@ -114,9 +121,6 @@ struct Abilities {
 
 		//elemental damage
 		uint16_t elementDamage = 0;
-		uint16_t cleaveDamage = 0;
-		uint16_t reflectDamage = 0;
-		uint16_t perfectBonus = 0;
 		CombatType_t elementType = COMBAT_NONE;
 
 		bool manaShield = false;
@@ -239,6 +243,13 @@ class ItemType
 			return *abilities;
 		}
 
+		Modifiers& getModifiers() {
+			if (!modifiers) {
+				modifiers.reset(new Modifiers());
+			}
+			return *modifiers;
+		}
+
 		std::string getPluralName() const {
 			if (!pluralName.empty()) {
 				return pluralName;
@@ -269,6 +280,8 @@ class ItemType
 		std::string description;
 		std::string runeSpellName;
 		std::string vocationString;
+
+		std::unique_ptr<Modifiers> modifiers;
 
 		std::unique_ptr<Abilities> abilities;
 		std::unique_ptr<ConditionDamage> conditionDamage;
