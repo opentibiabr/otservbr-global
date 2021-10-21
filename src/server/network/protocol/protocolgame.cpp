@@ -3788,9 +3788,8 @@ void ProtocolGame::sendShop(Npc *npc, const ShopInfoList &itemList)
 	NetworkMessage msg;
 	msg.addByte(0x7A);
 	msg.addString(npc->getName());
-	msg.add<uint16_t>(npc->getCurrencyTrading());
-
-	msg.addString(std::string()); // ??
+	//msg.add<uint16_t>(npc->getCurrencyTrading());  //maybe no need anymore to check old versions
+	//msg.addString(std::string()); // ??			 //used to work in old versions
 
 	uint16_t itemsToSend = std::min<size_t>(itemList.size(), std::numeric_limits<uint16_t>::max());
 	msg.add<uint16_t>(itemsToSend);
