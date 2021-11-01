@@ -2408,6 +2408,13 @@ GlobalStorage = {
 	Inquisition = 65013,
 	Yasir = 65014,
 	NightmareIsle = 65015
+	SoulWarQuest = {
+		EddAndFlow = {
+			Empty = 60170,
+			doors = 60171,
+			Active = 60172,
+		}
+	}
 }
 
 
