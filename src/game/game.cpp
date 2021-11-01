@@ -6512,21 +6512,20 @@ void Game::checkImbuements()
 	auto it = imbuedItems[bucket].begin(), end = imbuedItems[bucket].end();
 	while (it != end) {
 		Item* item = *it;
-
 		if (!item) {
 			continue;
 		}
 
-		if (item->isRemoved() || !item->getParent()->getCreature()) {
+		Player* player = item->getHoldingPlayer();
+		if (item->isRemoved() || !player) {
 			ReleaseItem(item);
 			it = imbuedItems[bucket].erase(it);
 			continue;
 		}
-
-		Player* player = item->getHoldingPlayer();
-		if (!player) {
-			ReleaseItem(item);
-			it = imbuedItems[bucket].erase(it);
+		
+		const ItemType& itemType = Item::items[item->getID()];
+		if (!player->hasCondition(CONDITION_INFIGHT) && !itemType.isContainer()) {
+			it++;
 			continue;
 		}
 
