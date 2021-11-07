@@ -31,5 +31,5 @@ function Party:onShareExperience(exp)
 		sharedExperienceMultiplier = 1.0 + ((size * (5 * (size - 1) + 10)) / 100)
 	end
 
-	return (exp * sharedExperienceMultiplier) / (#self:getMembers() + 1)
+	return (exp * sharedExperienceMultiplier)
 end

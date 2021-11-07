@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Imbuement Assistant" walkinterval="2000" floorchange="0" script="imbuement_assistant.lua">
+<npc name="Dhalia" walkinterval="0" walkradius="1" floorchange="0" script="imbuement_assistant.lua">
 	<health now="100" max="100"/>
-	<look type="141" head="41" body="72" legs="39" feet="96" addons="3" mount="688" />
+	<look type="141" head="41" body="72" legs="39" feet="96" addons="3" />
 	<parameters>
 		<parameter key="module_shop" value="1"/>
 		<parameter key="shop_buyable" value="
@@ -72,7 +72,7 @@
 			waspoid wing, 15484, 100;
 			wereboar hooves, 24709, 100;
 			winter wolf fur, 11212, 100;
-			wyrm scale, 10582, 100;			
+			wyrm scale, 10582, 100;
 			wyvern talisman, 10561, 100;"/>
 	</parameters>
 </npc>

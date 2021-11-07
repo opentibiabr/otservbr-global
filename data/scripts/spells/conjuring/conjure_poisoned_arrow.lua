@@ -1,7 +1,7 @@
 local spell = Spell("instant")
 
 function spell.onCastSpell(creature, variant)
-	return creature:conjureItem(0, 2545, 7, CONST_ME_MAGIC_BLUE)
+	return creature:conjureItem(0, 2545, 10, CONST_ME_MAGIC_BLUE)
 end
 
 spell:name("Conjure Poisoned Arrow")
@@ -12,8 +12,8 @@ spell:id(48)
 spell:cooldown(2 * 1000)
 spell:groupCooldown(2 * 1000)
 spell:level(16)
-spell:mana(130)
-spell:soul(2)
+spell:mana(180)
+spell:soul(4)
 spell:isSelfTarget(true)
 spell:isAggressive(false)
 spell:needLearn(false)

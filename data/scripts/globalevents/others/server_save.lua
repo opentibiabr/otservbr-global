@@ -9,7 +9,7 @@ local function ServerSave()
 		Game.setGameState(GAME_STATE_SHUTDOWN)
 	end
 	-- Updating daily reward next server save.
-	updateGlobalStorage(DailyReward.storages.lastServerSave, os.time())
+	updateGlobalStorage(DailyReward.storages.lastServerSave, os.time() - (os.time() % 60))
 	-- Reset gamestore exp boost count.
 	db.query('UPDATE `player_storage` SET `value` = 0 WHERE `player_storage`.`key` = 51052')
 end
@@ -44,5 +44,5 @@ function serversave.onTime(interval)
 	addEvent(ServerSaveWarning, 60000, remaningTime)	-- Schedule next event in 1 minute(60000)
 	return not configManager.getBoolean(configKeys.SERVER_SAVE_SHUTDOWN)
 end
-serversave:time("05:55:00")
+serversave:time("11:55:00")
 serversave:register()

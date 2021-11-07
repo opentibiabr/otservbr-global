@@ -15,15 +15,15 @@ function onThink()
     npcHandler:onThink()
 end
 
-local voices = { {text = 'Hello adventurer, looking for Imbuement items? Just ask me!'} }
+local voices = { {text = 'Hello adventurer, looking for imbuement items?'} }
 npcHandler:addModule(VoiceModule:new(voices))
 
 -- Basic
 
-keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = "Currently I have been working selling items for imbuement."})
+keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = "I am currently selling items for imbuements."})
 
-npcHandler:setMessage(MESSAGE_GREET, "Welcome to Imbuement's shop!")
-npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye and come again.")
-npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye and come again.")
+npcHandler:setMessage(MESSAGE_GREET, "Welcome to the imbuements shop!")
+npcHandler:setMessage(MESSAGE_FAREWELL, "Goodbye, and come again.")
+npcHandler:setMessage(MESSAGE_WALKAWAY, "Goodbye, and come again.")
 
 npcHandler:addModule(FocusModule:new())

@@ -59,10 +59,6 @@ Before [creating a pull request](https://github.com/opentibiabr/otservbr-global/
   * [saiyansking/optimized_forgottenserver](https://github.com/SaiyansKing/optimized_forgottenserver) and contributors
   * if we forget someone, we apologize by forgot you. but you know, **forgot**tenserver.
 
-### **Sponsors**
-
-If you want to sponsor here, join on discord and send a message for one of our administrators.
-
 ### Partners
 
 [![Supported by OTServ Brasil](https://raw.githubusercontent.com/otbr/otserv-brasil/main/otbr.png)](https://forums.otserv.com.br)

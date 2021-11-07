@@ -26,7 +26,7 @@ local config = {
 	[13293]	= {NAME = 'Midnight Panther', ID = 5, BREAK = true, TYPE = TYPE_MONSTER, CHANCE = 20, FAIL_MSG = { {1, 'The panther has escaped.'}, {2, 'The whip broke.'} },SUCCESS_MSG = 'You have tamed the panther.', ACHIEV = "Starless Night"},
 	[18516]	= {NAME = 'Modified Gnarlhound', ID = 32, BREAK = false, TYPE = TYPE_MONSTER, CHANCE = 100, FAIL_MSG = { }, SUCCESS_MSG = 'You now own a modified gnarlhound.', ACHIEV = "Mind the Dog!"},
 	[30840]	= {NAME = 'Mole', ID = 119, BREAK = true,	TYPE = TYPE_MONSTER, CHANCE = 30, FAIL_MSG = { {2, 'The Mole is a bit capricious. Maybe I should leave it alone.'}, {4, 'The Mole is a bit capricious. Maybe I should leave it alone.'} }, SUCCESS_MSG = 'You tamed the mole.', ACHIEV = "Up the Molehill"},
-	[23810]	= {NAME = 'Noble Lion', ID = 40, BREAK = false, TYPE = TYPE_MONSTER, CHANCE = 30, FAIL_MSG = { {2, 'The lion got scared and ran away.'}, {4, 'The lion is trying to nibble.'} }, SUCCESS_MSG = 'You tamed the lion.', ACHIEV = "Lion King"},	
+	[23810]	= {NAME = 'Noble Lion', ID = 40, BREAK = false, TYPE = TYPE_MONSTER, CHANCE = 30, FAIL_MSG = { {2, 'The lion got scared and ran away.'}, {4, 'The lion is trying to nibble.'} }, SUCCESS_MSG = 'You tamed the lion.', ACHIEV = "Lion King"},
 	[13538]	= {NAME = 'Panda', ID = 19, BREAK = true,	TYPE = TYPE_MONSTER, CHANCE = 40, FAIL_MSG = { {4, 'Panda the leaves and ran away.'} }, SUCCESS_MSG = 'You have tamed the panda.', ACHIEV = "Chequered Teddy"},
 	[13498]	= {NAME = 'Sandstone Scorpion', ID = 21, BREAK = true, TYPE = TYPE_MONSTER, CHANCE = 40, FAIL_MSG = { {1, 'The scorpion has vanished.'}, {2, 'Scorpion broken the sceptre.'} }, SUCCESS_MSG = 'You have tamed the scorpion.', ACHIEV = "Golden Sands"},
 	[22608]	= {NAME = 'Shock Head', ID = 42, BREAK = true, TYPE = TYPE_MONSTER, CHANCE = 30, FAIL_MSG = { {1, 'The shock head ran away.'}, {3, 'The shock head is growling at you.'} }, SUCCESS_MSG = 'You tamed the shock head.', ACHIEV = "Personal Nightmare"},
@@ -38,8 +38,8 @@ local config = {
 	[23557]	= {NAME = 'Walker', ID = 43, BREAK = true, TYPE = TYPE_MONSTER, CHANCE = 30, FAIL_MSG = { {2, 'This walker is incompatible with your control unit.'}, {4, 'This walker is incompatible with your control unit.'} }, SUCCESS_MSG = 'You tamed the walker.', ACHIEV = "Gear Up"},
 	[20138]	= {NAME = 'Water Buffalo', ID = 35, BREAK = true,	TYPE = TYPE_MONSTER, CHANCE = 30, FAIL_MSG = { {1, 'The water buffalo got scared and ran away.'}, {3, 'The water buffalo is trying to nibble.'} }, SUCCESS_MSG = 'You tamed a water buffalo.', ACHIEV = "Swamp Beast"},
 	[13939]	= {NAME = 'Wild Horse', ID = 17, BREAK = true, TYPE = TYPE_MONSTER, CHANCE = 15, FAIL_MSG = { {1, 'The horse runs away.'}, {2, 'The horse ate the oats.'} }, SUCCESS_MSG = 'You have tamed the horse.', ACHIEV = "Lucky Horseshoe"}
-	
-	
+
+
 }
 
 local function doFailAction(cid, mount, pos, item, itemEx, loseItem)
@@ -57,7 +57,7 @@ local function doFailAction(cid, mount, pos, item, itemEx, loseItem)
 		Item(item.uid):remove(1)
 		end
 	end
-	
+
 	pos:sendMagicEffect(effect)
 	Player(cid):say(action[2], TALKTYPE_MONSTER_SAY)
 	return action
@@ -75,7 +75,7 @@ function mounts.onUse(cid, item, fromPosition, itemEx, toPosition)
 		return false
 	end
 
-	local rand = math.random(100)
+	local rand = math.random(50)
 	--Monster Mount
 	if targetMonster ~= nil and mount.TYPE == TYPE_MONSTER then
 		if Creature(itemEx.uid):getMaster() then
@@ -107,7 +107,7 @@ function mounts.onUse(cid, item, fromPosition, itemEx, toPosition)
 				return true
 			end
 			if mount.ACHIEV then
-			player:addAchievement(mount.ACHIEV)			
+			player:addAchievement(mount.ACHIEV)
 			end
 			player:addAchievement("Natural Born Cowboy")
 			player:addMount(mount.ID)
@@ -124,7 +124,7 @@ function mounts.onUse(cid, item, fromPosition, itemEx, toPosition)
 				return true
 			end
 			if mount.ACHIEV then
-			player:addAchievement(mount.ACHIEV)			
+			player:addAchievement(mount.ACHIEV)
 			end
 			player:addAchievement("Natural Born Cowboy")
 			player:addMount(mount.ID)
@@ -141,7 +141,7 @@ function mounts.onUse(cid, item, fromPosition, itemEx, toPosition)
 				return true
 			end
 			if mount.ACHIEV then
-			player:addAchievement(mount.ACHIEV)			
+			player:addAchievement(mount.ACHIEV)
 			end
 			player:addAchievement("Natural Born Cowboy")
 			player:addMount(mount.ID)
@@ -158,7 +158,7 @@ function mounts.onUse(cid, item, fromPosition, itemEx, toPosition)
 				return true
 			end
 			if mount.ACHIEV then
-			player:addAchievement(mount.ACHIEV)			
+			player:addAchievement(mount.ACHIEV)
 			end
 			player:addAchievement("Natural Born Cowboy")
 			player:addMount(mount.ID)

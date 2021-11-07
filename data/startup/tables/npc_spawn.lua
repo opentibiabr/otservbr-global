@@ -955,5 +955,6 @@ NpcTable = {
 	[954] = {name = "one_eyed_joe", position = {x = 32025, y = 32884, z = 6}},
 	[955] = {name = "stricken_soul", position = {x = 32699, y = 32247, z = 8}},
 	[956] = {name = "h.l.", position = {x = 32643, y = 32212, z = 7}},
-	[957] = {name = "nicholas", position = {x = 33640, y = 31897, z = 5}}
+	[957] = {name = "nicholas", position = {x = 33640, y = 31897, z = 5}},
+	[958] = {name = "imbuement_assistant", position = {x = 32371, y = 32241, z = 6}}
 }

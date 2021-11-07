@@ -80,8 +80,8 @@ local potions = {
 	},
 	[7588] = {
 		health = {
-			250,
-			350
+			500,
+			700
 		},
 		vocations = {
 			VOCATION.BASE_ID.PALADIN,
@@ -93,8 +93,8 @@ local potions = {
 	},
 	[7589] = {
 		mana = {
-			115,
-			185
+			230,
+			370
 		},
 		level = 50,
 		flask = 7634,
@@ -102,8 +102,8 @@ local potions = {
 	},
 	[7590] = {
 		mana = {
-			150,
-			250
+			300,
+			500
 		},
 		vocations = {
 			VOCATION.BASE_ID.SORCERER,
@@ -116,8 +116,8 @@ local potions = {
 	},
 	[7591] = {
 		health = {
-			425,
-			575
+			850,
+			1150
 		},
 		vocations = {
 			VOCATION.BASE_ID.KNIGHT
@@ -128,26 +128,26 @@ local potions = {
 	},
 	[7618] = {
 		health = {
-			125,
-			175
+			250,
+			350
 		},
 		flask = 7636
 	},
 	[7620] = {
 		mana = {
-			75,
-			125
+			150,
+			250
 		},
 		flask = 7636
 	},
 	[8472] = {
 		health = {
-			250,
-			350
+			500,
+			700
 		},
 		mana = {
-			100,
-			200
+			200,
+			400
 		},
 		vocations = {
 			VOCATION.BASE_ID.PALADIN
@@ -157,7 +157,10 @@ local potions = {
 		description = "Only paladins of level 80 or above may drink this fluid."
 	},
 	[8473] = {
-		health = {650, 850},
+		health = {
+			1300,
+			1700
+		},
 		vocations = {
 			VOCATION.BASE_ID.KNIGHT
 		},
@@ -171,15 +174,15 @@ local potions = {
 	},
 	[8704] = {
 		health = {
-			60,
-			90
+			120,
+			180
 		},
 		flask = 7636
 	},
 	[26029] = {
 		mana = {
-			425,
-			575
+			850,
+			1150
 		},
 		vocations = {
 			VOCATION.BASE_ID.SORCERER,
@@ -191,12 +194,12 @@ local potions = {
 	},
 	[26030] = {
 		health = {
-			420,
-			580
+			840,
+			1160
 		},
 		mana = {
-			250,
-			350
+			500,
+			700
 		},
 		vocations = {
 			VOCATION.BASE_ID.PALADIN
@@ -207,8 +210,8 @@ local potions = {
 	},
 	[26031] = {
 		health = {
-			875,
-			1125
+			1750,
+			2250
 		},
 		vocations = {
 			VOCATION.BASE_ID.KNIGHT
@@ -268,7 +271,7 @@ function flaskPotion.onUse(player, item, fromPosition, target, toPosition, isHot
 
 	-- Delay potion
 	playerDelayPotion[player:getId()] = os.mtime() + 500
-	
+
 	if potion.func then
 		potion.func(player)
 		if potion.text then

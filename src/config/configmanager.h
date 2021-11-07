@@ -65,7 +65,7 @@ class ConfigManager
 			SAVE_INTERVAL_CLEAN_MAP,
 			STAMINA_TRAINER,
 			STAMINA_PZ,
-
+			PARTY_EXP_SHARE_ALWAYS,
 			SORT_LOOT_BY_CHANCE,
 
 			LAST_BOOLEAN_CONFIG /* this must be the last one */
