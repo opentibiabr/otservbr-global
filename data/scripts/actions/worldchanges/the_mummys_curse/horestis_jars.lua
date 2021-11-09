@@ -19,7 +19,7 @@ function horestisJars.onUse(cid, item, fromPosition, itemEx, toPosition)
 
 	local exaustedSeconds = 1
 	local player = Player(cid)
-	local chances = math.random(10)
+	local chances = 1
 
 	if item.actionid == 50006 then
 		if(item.itemid == 13500) then
