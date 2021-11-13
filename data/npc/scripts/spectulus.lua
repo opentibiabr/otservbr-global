@@ -605,6 +605,36 @@ local function creatureSayCallback(cid, type, msg)
 			)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 7)
 			npcHandler.topic[cid] = 0
+		elseif npcHandler.topic[cid] == 34 then
+			player:removeItem(15573, 1)
+			player:setStorageValue(Storage.LiquidBlackQuest.Outfit, 1)
+			npcHandler:say({
+				"The first volume of the Book of Death. That must have been written in Lagatos's final days. A very dark tone underlies these writings. ...",
+				"Mh. Hm. He talks about a change, a transformation. Something has happened to the creatures of the deep that turned them towards war. ...",
+				"We need all three books if we want to unravel this mystery.",
+			}, cid)
+		elseif npcHandler.topic[cid] == 35 then
+			player:removeItem(15574, 1)
+			player:setStorageValue(Storage.LiquidBlackQuest.Outfit, 2)
+			npcHandler:say({
+				"The second volume of the Book of Death. It seems the Deeplings were indeed changed by an outside force of some kind. They turned against each other, started to suppress certain castes. ...",
+				"There is only one other book needed to unravel this mystery.",
+			}, cid)
+		elseif npcHandler.topic[cid] == 36 then
+			player:removeItem(15575, 1)
+			player:setStorageValue(Storage.LiquidBlackQuest.Outfit, 3)
+			player:addOutfit(464)
+			player:addOutfit(463)
+			npcHandler:say({
+				"The third volume of the Book of Death. Mmh, mh. So the 'blackness' found them. They rule the 'black void' - I assume the deeper parts of the sea - and they will 'conquer the surface'. ....",
+				"'And they will walk the path of pain', also, 'they will be followed by a trail of blood' and finally, 'their work is cruel, their reward death'. It gets quite dark from there on, though. ...",
+				"Now that I have read all three books it is clear that an outside force, something unknown, was manipulating the Deeplings. ...",
+				"They were never the peaceful type but they would never deny the heir of their culture to take part in a full-scale war. ...",
+				"The oppression of the lesser Deeplings, destruction of knowledge, abandoning their libraries and cult sites - someone WANTED them to do all this. ...",
+				"Why? I don't know. What to do? I don't know either. I can, however, still help you as good as I can from here. ...",
+				"During my failed expedition, I also found some kind of armor. It was broken but I managed to complete it using some rare materials from my stock. ...",
+				"This thing is quite heavy but should work just perfectly underwater. I hope this will help you on your quest to find out what really is going on in these depths.",
+			}, cid)
 		end
 	elseif msgcontains(msg, "jack") then
 		if player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 10 then
@@ -660,6 +690,21 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say("Hmpf. *mumbles*", cid)
 		end
 		npcHandler.topic[cid] = 0
+	elseif msgcontains(msg, "book") then
+		if player:getItemCount(15573) > 0 and player:getStorageValue(Storage.LiquidBlackQuest.Outfit) < 1 then
+		  npcHandler:say("You found what? Well, you'll have to hand it over to me to help you with this, will you?", cid);
+			npcHandler.topic[cid] = 34
+		end
+
+		if player:getItemCount(15574) > 0 and player:getStorageValue(Storage.LiquidBlackQuest.Outfit) == 1 then
+			npcHandler:say("You found another volume of the Book of Death? Well, I need to see this one. Will you give it to me?", cid);
+			npcHandler.topic[cid] = 35
+		end
+
+		if player:getItemCount(15575) > 0 and player:getStorageValue(Storage.LiquidBlackQuest.Outfit) == 2 then
+			npcHandler:say("You found another volume of the Book of Death? Well, I need to see this one. Will you give it to me?", cid);
+			npcHandler.topic[cid] = 36
+		end
 	end
 
 	if msgcontains(msg, "machine") and player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3 then
