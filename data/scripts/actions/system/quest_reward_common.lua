@@ -88,7 +88,6 @@ local function playerAddContainerItem(params, item)
 		player:addAchievement(achievement)
 	end
 
-	reward:addItem(params.itemid, params.count)
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. getItemName(params.itemBagName) .. ".")
 	player:setStorageValue(params.storage, 1)
 	return true
