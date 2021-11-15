@@ -5675,12 +5675,6 @@ bool Game::combatChangeHealth(Creature* attacker, Creature* target, CombatDamage
 				{
 					continue;
 				}
-
-				if (damage.primary.type == COMBAT_HEALING && target && target->getMonster()) {
-					if (target != attacker) {
-						return false;
-					}
-				}
 				
 				if (tmpPlayer == attackerPlayer && attackerPlayer != targetPlayer) {
 					ss.str({});
