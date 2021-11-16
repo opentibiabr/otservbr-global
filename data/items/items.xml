@@ -6,8 +6,7 @@
 	<item id="3" name="beer" />
 	<item id="4" name="slime" />
 	<item id="5" name="lemonade" />
-	<item id="6" name="milk" /><!-- Kazordoon -->
-	<item fromid="40828" toid="40847" name="sarcophagus" />
+	<item id="6" name="milk" />
 	<item id="7" name="manafluid" />
 	<item id="10" name="lifefluid" />
 	<item id="11" name="oil" />
