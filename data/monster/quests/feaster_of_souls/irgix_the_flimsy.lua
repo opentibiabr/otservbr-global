@@ -69,7 +69,7 @@ monster.loot = {
 	{name = "white gem", chance = 33333},
 	{name = "terra rod", chance = 16670},
 	{name = "yellow gem", chance = 16670},
-	{id = 2156, chance = 16670},
+	{name = "red gem", chance = 16670},
 	{name = "necklace of the deep", chance = 8330},
 	{name = "wand of starstorm", chance = 8330},
 	{name = "wand of cosmic energy", chance = 8330},

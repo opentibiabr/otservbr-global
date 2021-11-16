@@ -56,7 +56,7 @@ monster.loot = {
 	{name = "gold token", minCount = 0, maxCount = 3, chance = 18000},
 	{name = "silver token", minCount = 0, maxCount = 3, chance = 25000},
 	{name = "green gem", chance = 19000},
-	{id = 2156, chance = 18500},
+	{name = "red gem", chance = 18500},
 	{name = "yellow gem", chance = 18500},
 	{name = "giant sapphire", chance = 16800},
 	{name = "collar of green plasma", chance = 15200},

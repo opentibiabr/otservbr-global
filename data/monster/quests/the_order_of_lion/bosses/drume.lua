@@ -76,7 +76,7 @@ monster.loot = {
 	{name = "supreme health potion", chance = 57831, maxCount = 20},
 	{name = "ultimate mana potion", chance = 55723, maxCount = 20},
 	{name = "yellow gem", chance = 35843, maxCount = 2},
-	{id = 2156, chance = 35542, maxCount = 2},
+	{name = "red gem", chance = 35542, maxCount = 2},
 	{name = "ultimate spirit potion", chance = 31627, maxCount = 6},
 	{name = "royal star", chance = 31325, maxCount = 100},
 	{name = "bullseye potion", chance = 22590, maxCount = 10},

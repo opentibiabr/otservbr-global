@@ -85,7 +85,7 @@ monster.loot = {
 	{name = "small ruby", chance = 9010, maxCount = 2},
 	{name = "small diamond", chance = 7060, maxCount = 2},
 	{name = "mind stone", chance = 6140},
-	{id = 2156, chance = 5120},
+	{name = "red gem", chance = 5120},
 	{name = "shrimp", chance = 4810, maxCount = 5},
 	{name = "vortex bolt", chance = 3790, maxCount = 5},
 	{id = 7632, chance = 1430},--giant shimmering pearl(brown)

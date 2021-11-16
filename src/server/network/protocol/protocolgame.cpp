@@ -2916,7 +2916,6 @@ void ProtocolGame::sendCyclopediaCharacterGeneralStats()
 	msg.add<uint16_t>(player->getBaseMagicLevel());
 	msg.add<uint16_t>(player->getMagicLevelPercent() * 100);
 
-	// Check if all clients have the same hardcoded skill ids
 	static const uint8_t HardcodedSkillIds[] = { 11, 9, 8, 10, 7, 6, 13 };
 	for (uint8_t i = SKILL_FIRST; i < SKILL_CRITICAL_HIT_CHANCE; ++i)
 	{
@@ -2928,14 +2927,8 @@ void ProtocolGame::sendCyclopediaCharacterGeneralStats()
 		msg.add<uint16_t>(player->getSkillPercent(i) * 100);
 	}
 
-	// Version 12.70 start
-	msg.addByte(0x00); // 0x00 -> false, 0x01 -> true
-	// * Feature not implemented yet *
-	// if (true) {
-	//		msg.addByte(); // Element type getCipbiaElement()
-	//		msg.add<uint16_t>(); // Magic boost value
-	// }
-	// Version 12.70 end
+	// Version 12.70
+	msg.addByte(0x00);
 }
 
 void ProtocolGame::sendCyclopediaCharacterCombatStats()
@@ -2950,20 +2943,20 @@ void ProtocolGame::sendCyclopediaCharacterCombatStats()
 		msg.add<uint16_t>(0);
 	}
 
-	// Version 12.70 start
-	msg.add<uint16_t>(0); // Cleave
-
-	// Magic shield capacity
+	// Cleave (12.70)
+	msg.add<uint16_t>(0);
+	// Magic shield capacity (12.70)
 	msg.add<uint16_t>(0); // Direct bonus
 	msg.add<uint16_t>(0); // Percentage bonus
 
+	// Perfect shot range (12.70)
 	for (uint16_t i = 1; i <= 5; i++)
 	{
-		msg.add<uint16_t>(0x00); // Perfect shot range
+		msg.add<uint16_t>(0x00);
 	}
 
-	msg.add<uint16_t>(0); // Reflection
-	// Version 12.70 end
+	// Damage reflection
+	msg.add<uint16_t>(0);
 
 	uint8_t haveBlesses = 0;
 	uint8_t blessings = 8;
@@ -3121,8 +3114,13 @@ void ProtocolGame::sendCyclopediaCharacterCombatStats()
 		}
 	}
 
+	// Concoctions potions (12.70)
+	msg.addByte(0x00);
+
 	msg.setBufferPosition(startCombats);
 	msg.addByte(combats);
+
+	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendCyclopediaCharacterRecentDeaths(uint16_t page, uint16_t pages, const std::vector<RecentDeathEntry> &entries)
@@ -4518,52 +4516,6 @@ void ProtocolGame::sendMarketDetail(uint16_t itemId)
 		msg.add<uint16_t>(0x00);
 	}
 
-	// Version 12.70
-	// New items modifiers
-
-	// Magic
-	std::ostringstream string;
-	msg.add<uint16_t>(0x00);
-
-	if (it.modifiers)
-	{
-		// Cleave
-		if (it.modifiers->cleaveDamage)
-		{
-			string.clear();
-			string << it.modifiers->cleaveDamage << "%";
-			msg.addString(string.str());
-		}
-		else
-		{
-			msg.add<uint16_t>(0x00);
-		}
-
-		// Reflection
-		if (it.modifiers->reflectDamage)
-		{
-			string.clear();
-			string << it.modifiers->reflectDamage;
-			msg.addString(string.str());
-		}
-		else
-		{
-			msg.add<uint16_t>(0x00);
-		}
-
-		// Perf shot
-		if (it.modifiers->perfectBonus)
-		{
-			string.clear();
-			string << "+" << it.modifiers->perfectBonus << " at range";
-			msg.addString(string.str());
-		}
-		else
-		{
-			msg.add<uint16_t>(0x00);
-		}
-	}
-
 	uint8_t slot = Item::items[itemId].imbuingSlots;
 	if (slot > 0)
 	{
@@ -4573,6 +4525,15 @@ void ProtocolGame::sendMarketDetail(uint16_t itemId)
 	{
 		msg.add<uint16_t>(0x00);
 	}
+
+	// Magic shield capacity modifier (12.70)
+	msg.add<uint16_t>(0x00);
+	// Cleave modifier (12.70)
+	msg.add<uint16_t>(0x00);
+	// Damage reflection modifier (12.70)
+	msg.add<uint16_t>(0x00);
+	// Perfect shot modifier (12.70)
+	msg.add<uint16_t>(0x00);
 
 	MarketStatistics *statistics = IOMarket::getInstance().getPurchaseStatistics(itemId);
 	if (statistics)
@@ -4601,6 +4562,8 @@ void ProtocolGame::sendMarketDetail(uint16_t itemId)
 	{
 		msg.addByte(0x00);
 	}
+
+	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendTradeItemRequest(const std::string &traderName, const Item *item, bool ack)

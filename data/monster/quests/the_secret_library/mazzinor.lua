@@ -73,7 +73,7 @@ monster.loot = {
 	{name = "small emerald", chance = 70000, maxCount = 12},
 	{name = "demon horn", chance = 70000},
 	{name = "lightning boots", chance = 70000},
-	{id = 2156, chance = 70000},
+	{name = "Red Gem", chance = 70000},
 	{name = "violet gem", chance = 70000},
 	{name = "stone skin amulet", chance = 70000},
 	{name = "wand of starstorm", chance = 70000},

@@ -73,7 +73,7 @@ monster.loot = {
 	{name = "warrior's axe", chance = 8300},
 	{name = "death toll", chance = 150},
 	{name = "silver hand mirror", chance = 150},
-	{id = 2156, chance = 150, maxCount = 2}
+	{name = "red gem", chance = 150, maxCount = 2}
 }
 
 monster.attacks = {

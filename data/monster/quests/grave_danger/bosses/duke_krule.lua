@@ -76,7 +76,7 @@ monster.loot = {
 	{name = "blue gem", chance = 11000},
 	{name = "crusader helmet", chance = 6400},
 	{name = "gold ingot", minCount = 0, maxCount = 1, chance = 10000},
-	{id = 2156, chance = 11000},
+	{name = "red gem", chance = 11000},
 	{name = "terra hood", chance = 7800},
 	{name = "yellow gem", chance = 9500},
 	{name = "young lich worm", chance = 5800},

@@ -96,7 +96,7 @@ monster.loot = {
 	{name = "Harpoon of a Giant Snail", chance = 10000},
 	{name = "Huge Spiky Snail Shell", chance = 10000},
 	{name = "Luminous Orb", chance = 10000},
-	{id = 2156, chance = 10000},
+	{name = "Red Gem", chance = 10000},
 	{name = "Silver Token", chance = 1000},
 	{name = "Stone Skin Amulet", chance = 1000},
 	{name = "Twiceslicer", chance = 1000},
