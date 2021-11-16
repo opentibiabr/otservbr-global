@@ -2916,9 +2916,9 @@ void ProtocolGame::sendCyclopediaCharacterGeneralStats()
 	msg.add<uint16_t>(player->getBaseMagicLevel());
 	msg.add<uint16_t>(player->getMagicLevelPercent() * 100);
 
-	static const uint8_t HardcodedSkillIds[] = { 11, 9, 8, 10, 7, 6, 13 };
 	for (uint8_t i = SKILL_FIRST; i < SKILL_CRITICAL_HIT_CHANCE; ++i)
 	{
+		static const uint8_t HardcodedSkillIds[] = { 11, 9, 8, 10, 7, 6, 13 };
 		msg.addByte(HardcodedSkillIds[i]);
 		msg.add<uint16_t>(std::min<int32_t>(player->getSkillLevel(i), std::numeric_limits<uint16_t>::max()));
 		msg.add<uint16_t>(player->getBaseSkill(i));
@@ -2929,6 +2929,8 @@ void ProtocolGame::sendCyclopediaCharacterGeneralStats()
 
 	// Version 12.70
 	msg.addByte(0x00);
+
+	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendCyclopediaCharacterCombatStats()
