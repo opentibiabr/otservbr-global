@@ -21,7 +21,6 @@ local UniqueTable = {
 	},
 	[14006] = {
 		itemId = 2156,
-		name = "red gem",
 		count = 1
 	},
 	[14007] = {
@@ -104,7 +103,7 @@ function treasureChest.onUse(player, item, fromPosition, target, toPosition, isH
 	player:addItem(setting.name or setting.itemId, setting.count, true)
 	player:setStorageValue(item.uid, 1)
 	player:setStorageValue(Storage.FirstDragon.ChestCounter, player:getStorageValue(Storage.FirstDragon.ChestCounter) + 1)
-	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You found ' ..setting.count.. ' ' ..setting.name..'.')
+	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You found ' ..setting.count.. ' ' .. getItemName(setting.itemId) .. '.')
 	return true
 end
 
