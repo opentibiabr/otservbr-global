@@ -100,10 +100,15 @@ function treasureChest.onUse(player, item, fromPosition, target, toPosition, isH
 		player:setStorageValue(Storage.FirstDragon.ChestCounter, player:getStorageValue(Storage.FirstDragon.ChestCounter) + 1)
 		return true
 	end
-	player:addItem(setting.name or setting.itemId, setting.count, true)
 	player:setStorageValue(item.uid, 1)
 	player:setStorageValue(Storage.FirstDragon.ChestCounter, player:getStorageValue(Storage.FirstDragon.ChestCounter) + 1)
-	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You found ' ..setting.count.. ' ' .. getItemName(setting.itemId) .. '.')
+	if setting.name then
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You found ' ..setting.count.. ' ' ..setting.name..'.')
+		player:addItem(setting.name, setting.count, true)
+	elseif setting.itemId then
+		player:addItem(setting.itemId, setting.count, true)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You found ' ..setting.count.. ' ' .. getItemName(setting.itemId) .. '.')
+	end
 	return true
 end
 
