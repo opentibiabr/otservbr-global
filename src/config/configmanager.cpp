@@ -140,7 +140,7 @@ bool ConfigManager::load()
 
 		integer[MARKET_OFFER_DURATION] = getGlobalNumber(L, "marketOfferDuration", 30 * 24 * 60 * 60);
 
-		integer[CLIENT_VERSION] = getGlobalNumber(L, "clientVersion", 1264);
+		integer[CLIENT_VERSION] = getGlobalNumber(L, "clientVersion", 1272);
 		integer[FREE_DEPOT_LIMIT] = getGlobalNumber(L, "freeDepotLimit", 2000);
 		integer[PREMIUM_DEPOT_LIMIT] = getGlobalNumber(L, "premiumDepotLimit", 8000);
 		integer[DEPOT_BOXES] = getGlobalNumber(L, "depotBoxes", 19);
