@@ -85,7 +85,7 @@ local treasureChest = Action()
 function treasureChest.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local setting = UniqueTable[item.uid]
 	if not setting then
-		return true
+		return false
 	end
 
 	if player:getStorageValue(item.uid) >= 1 then
