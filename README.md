@@ -40,7 +40,7 @@ You are subject to our code of conduct, read at [this link](https://github.com/o
 
 * **WARNING: YOU NEED TO UNZIP THE MAP BEFORE STARTING THE SERVER.**
 * [Compiling on Windows](https://forums.otserv.com.br/index.php?/forums/topic/170157-windowsvc2022-compilando-sources-canary/)
-* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/canary/wiki/Compiling-on-Ubuntu-or-Debian-GNU-Linux), [Windows](https://github.com/opentibiabr/canary/wiki/Compiling-on-Windows-(vcpkg)))
+* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/canary/wiki/Compiling-on-Debian-or-Ubuntu), [Windows](https://github.com/opentibiabr/canary/wiki/Compiling-on-Windows))
 
 ### Issues
 #### NOTE: If your issue is related to source code, please open it in the [canary repository](https://github.com/opentibiabr/canary)
