@@ -357,7 +357,7 @@ class ItemAttributes
 
 	private:
 		bool hasAttribute(itemAttrTypes type) const {
-			return (type & attributeBits) != 0;
+			return (type & static_cast<itemAttrTypes>(attributeBits)) != 0;
 		}
 		void removeAttribute(itemAttrTypes type);
 
@@ -431,7 +431,7 @@ class ItemAttributes
 		};
 
 		std::forward_list<Attribute> attributes;
-		uint32_t attributeBits = 0;
+		std::underlying_type<itemAttrTypes>::type attributeBits = 0;
 
 		const std::string& getStrAttr(itemAttrTypes type) const;
 		void setStrAttr(itemAttrTypes type, const std::string& value);
