@@ -7787,7 +7787,7 @@ int LuaScriptInterface::luaItemHasProperty(lua_State* L)
 
 int LuaScriptInterface::luaItemGetImbuement(lua_State* L)
 {
-	// itemType:getImbuement()
+	// item:getImbuement()
 	Item* item = getUserdata<Item>(L, 1);
 	if (!item) {
 		reportErrorFunc(getErrorDesc(LUA_ERROR_ITEM_NOT_FOUND));
@@ -7808,13 +7808,18 @@ int LuaScriptInterface::luaItemGetImbuement(lua_State* L)
 
 		pushUserdata<Imbuement>(L, imbuement);
 		setMetatable(L, -1, "Imbuement");
+
+		lua_createtable(L, 0, 3);
+		setField(L, "id", imbuement->getID());
+		setField(L, "name", imbuement->getName());
+		setField(L, "duration", imbuementInfo.duration);
 	}
 	return 1;
 }
 
 int LuaScriptInterface::luaItemGetImbuementSlot(lua_State* L)
 {
-	// itemType:getImbuementSlot()
+	// item:getImbuementSlot()
 	Item* item = getUserdata<Item>(L, 1);
 	if (!item) {
 		reportErrorFunc(getErrorDesc(LUA_ERROR_ITEM_NOT_FOUND));
