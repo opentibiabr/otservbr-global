@@ -68,7 +68,6 @@ local function playerAddContainerItem(params, item)
 
 	local reward = params.containerReward
 	local itemType = ItemType(params.itemid)
-	
 	if itemType:isKey() then
 		-- If is key inside container, uses the "keyAction" variable
 		keyItem = reward:addItem(params.itemid, params.count)
