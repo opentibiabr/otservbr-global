@@ -55,7 +55,7 @@ class Imbuements {
 		friend class Imbuement;
 
 
-		std::map<uint32_t, Imbuement> imbuementList;
+		std::map<uint32_t, Imbuement> imbuementMap;
 
 		std::vector<BaseImbuement> basesImbuement;
 		std::vector<CategoryImbuement> categoriesImbuement;
