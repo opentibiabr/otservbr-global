@@ -217,8 +217,8 @@ bool Item::equals(const Item* otherItem) const
 		return false;
 	}
 
-	if (!attributes) {
-		return !otherItem->attributes;
+	if (!attributes || attributes->attributeBits == 0) {
+		return (!otherItem->attributes || otherItem->attributes->attributeBits == 0);
 	}
 
 	const auto& otherAttributes = otherItem->attributes;
@@ -869,7 +869,7 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 	if (hasAttribute(ITEM_ATTRIBUTE_CUSTOM)) {
 		const ItemAttributes::CustomAttributeMap* customAttrMap = attributes->getCustomAttributeMap();
 		propWriteStream.write<uint8_t>(ATTR_CUSTOM_ATTRIBUTES);
-		propWriteStream.write<uint64_t>(customAttrMap->size());
+		propWriteStream.write<uint64_t>(static_cast<uint64_t>(customAttrMap->size()));
 		for (const auto &entry : *customAttrMap) {
 			// Serializing key type and value
 			propWriteStream.writeString(entry.first);
@@ -2350,17 +2350,11 @@ void ItemAttributes::removeAttribute(itemAttrTypes type)
 		return;
 	}
 
-	auto prev_it = attributes.cbegin();
-	if ((*prev_it).type == type) {
-		attributes.pop_front();
-	} else {
-		auto it = prev_it, end = attributes.cend();
-		while (++it != end) {
-			if ((*it).type == type) {
-				attributes.erase_after(prev_it);
-				break;
-			}
-			prev_it = it;
+	for (auto it = attributes.begin(), end = attributes.end(); it != end; ++it) {
+		if ((*it).type == type) {
+			(*it) = std::move(attributes.back());
+			attributes.pop_back();
+			break;
 		}
 	}
 	attributeBits &= ~type;
@@ -2420,8 +2414,8 @@ ItemAttributes::Attribute& ItemAttributes::getAttr(itemAttrTypes type)
 	}
 
 	attributeBits |= type;
-	attributes.emplace_front(type);
-	return attributes.front();
+	attributes.emplace_back(type);
+	return attributes.back();
 }
 
 void Item::startDecaying()
@@ -2465,40 +2459,4 @@ bool Item::hasMarketAttributes() const
 	}
 
 	return true;
-}
-
-template<>
-const std::string& ItemAttributes::CustomAttribute::get<std::string>() {
-	if (value.type() == typeid(std::string)) {
-		return boost::get<std::string>(value);
-	}
-
-	return emptyString;
-}
-
-template<>
-const int64_t& ItemAttributes::CustomAttribute::get<int64_t>() {
-	if (value.type() == typeid(int64_t)) {
-		return boost::get<int64_t>(value);
-	}
-
-	return emptyInt;
-}
-
-template<>
-const double& ItemAttributes::CustomAttribute::get<double>() {
-	if (value.type() == typeid(double)) {
-		return boost::get<double>(value);
-	}
-
-	return emptyDouble;
-}
-
-template<>
-const bool& ItemAttributes::CustomAttribute::get<bool>() {
-	if (value.type() == typeid(bool)) {
-		return boost::get<bool>(value);
-	}
-
-	return emptyBool;
 }
