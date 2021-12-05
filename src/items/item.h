@@ -17,8 +17,8 @@
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#ifndef FS_ITEM_H_009A319FB13D477D9EEFFBBD9BB83562
-#define FS_ITEM_H_009A319FB13D477D9EEFFBBD9BB83562
+#ifndef SRC_ITEMS_ITEM_H_
+#define SRC_ITEMS_ITEM_H_
 
 #include <utility>
 #include <vector>
@@ -44,6 +44,7 @@ class Mailbox;
 class Door;
 class MagicField;
 class BedItem;
+class Imbuement;
 
 enum ITEMPROPERTY {
 	CONST_PROP_BLOCKSOLID = 0,
@@ -107,11 +108,11 @@ enum AttrTypes_t {
 	ATTR_HITCHANCE = 32,
 	ATTR_SHOOTRANGE = 33,
 	ATTR_SPECIAL = 34,
-	ATTR_IMBUINGSLOTS = 35,
+	ATTR_IMBUEMENT_SLOT = 35,
 	ATTR_OPENCONTAINER = 36,
 	ATTR_CUSTOM_ATTRIBUTES = 37,
-
-	ATTR_QUICKLOOTCONTAINER = 38
+	ATTR_QUICKLOOTCONTAINER = 38,
+	ATTR_IMBUEMENT_TYPE = 39
 };
 
 enum Attr_ReadValue {
@@ -120,7 +121,10 @@ enum Attr_ReadValue {
 	ATTR_READ_END,
 };
 
-#define IMBUEMENT_SLOT 500
+struct ImbuementInfo {
+	Imbuement *imbuement;
+	int32_t duration = 0;
+};
 
 class ItemAttributes
 {
@@ -368,8 +372,7 @@ class ItemAttributes
 
 		typedef std::unordered_map<std::string, CustomAttribute> CustomAttributeMap;
 
-		struct Attribute
-		{
+		struct Attribute {
 			union {
 				int64_t integer;
 				std::string* string;
@@ -518,11 +521,11 @@ class ItemAttributes
 			| ITEM_ATTRIBUTE_WEIGHT | ITEM_ATTRIBUTE_ATTACK | ITEM_ATTRIBUTE_DEFENSE | ITEM_ATTRIBUTE_EXTRADEFENSE
 			| ITEM_ATTRIBUTE_ARMOR | ITEM_ATTRIBUTE_HITCHANCE | ITEM_ATTRIBUTE_SHOOTRANGE | ITEM_ATTRIBUTE_OWNER
 			| ITEM_ATTRIBUTE_DURATION | ITEM_ATTRIBUTE_DECAYSTATE | ITEM_ATTRIBUTE_CORPSEOWNER | ITEM_ATTRIBUTE_CHARGES
-			| ITEM_ATTRIBUTE_FLUIDTYPE | ITEM_ATTRIBUTE_DOORID | ITEM_ATTRIBUTE_IMBUINGSLOTS
+			| ITEM_ATTRIBUTE_FLUIDTYPE | ITEM_ATTRIBUTE_DOORID | ITEM_ATTRIBUTE_IMBUEMENT_SLOT
 			| ITEM_ATTRIBUTE_OPENCONTAINER | ITEM_ATTRIBUTE_QUICKLOOTCONTAINER | ITEM_ATTRIBUTE_DURATION_TIMESTAMP;
 
 		const static uint32_t stringAttributeTypes = ITEM_ATTRIBUTE_DESCRIPTION | ITEM_ATTRIBUTE_TEXT | ITEM_ATTRIBUTE_WRITER
-			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_SPECIAL;
+			| ITEM_ATTRIBUTE_NAME | ITEM_ATTRIBUTE_ARTICLE | ITEM_ATTRIBUTE_PLURALNAME | ITEM_ATTRIBUTE_SPECIAL | ATTR_IMBUEMENT_TYPE;
 
 	public:
 		static bool isIntAttrType(itemAttrTypes type) {
@@ -616,7 +619,7 @@ class Item : virtual public Thing
 			getAttributes()->setStrAttr(type, value);
 		}
 
-		int64_t getIntAttr(itemAttrTypes type) const {
+		int32_t getIntAttr(itemAttrTypes type) const {
 			if (!attributes) {
 				return 0;
 			}
@@ -828,8 +831,10 @@ class Item : virtual public Thing
 			return static_cast<ItemDecayState_t>(getIntAttr(ITEM_ATTRIBUTE_DECAYSTATE));
 		}
 
-    static std::vector<std::pair<std::string, std::string>> getDescriptions(const ItemType& it,
-																						const Item* item = nullptr);
+		static std::string parseImbuementDescription(const Item* item);
+
+		static std::vector<std::pair<std::string, std::string>> getDescriptions(const ItemType& it,
+                                    const Item* item = nullptr);
 		static std::string getDescription(const ItemType& it, int32_t lookDistance, const Item* item = nullptr, int32_t subType = -1, bool addArticle = true);
 		static std::string getNameDescription(const ItemType& it, const Item* item = nullptr, int32_t subType = -1, bool addArticle = true);
 		static std::string getWeightDescription(const ItemType& it, uint32_t weight, uint32_t count = 1);
@@ -907,11 +912,11 @@ class Item : virtual public Thing
 			}
 			return items[id].extraDefense;
 		}
-		int32_t getImbuingSlots() const {
-			if (hasAttribute(ITEM_ATTRIBUTE_IMBUINGSLOTS)) {
-				return getIntAttr(ITEM_ATTRIBUTE_IMBUINGSLOTS);
+		int32_t getImbuementSlot() const {
+			if (hasAttribute(ITEM_ATTRIBUTE_IMBUEMENT_SLOT)) {
+				return getIntAttr(ITEM_ATTRIBUTE_IMBUEMENT_SLOT);
 			}
-			return items[id].imbuingSlots;
+			return items[id].imbuementSlot;
 		}
 		int32_t getSlotPosition() const {
 			return items[id].slotPosition;
@@ -1009,9 +1014,9 @@ class Item : virtual public Thing
 			count = n;
 		}
 
-		static uint32_t countByType(const Item* i, int32_t subType) {
-			if (subType == -1 || subType == i->getSubType()) {
-				return i->getItemCount();
+		static uint32_t countByType(const Item* item, int32_t subType) {
+			if (subType == -1 || subType == item->getSubType()) {
+				return item->getItemCount();
 			}
 
 			return 0;
@@ -1054,7 +1059,7 @@ class Item : virtual public Thing
 			return !loadedFromMap && canRemove() && isPickupable() && !hasAttribute(ITEM_ATTRIBUTE_UNIQUEID) && !hasAttribute(ITEM_ATTRIBUTE_ACTIONID);
 		}
 
-		bool hasMarketAttributes() const;
+		bool hasMarketAttributes();
 
 		std::unique_ptr<ItemAttributes>& getAttributes() {
 			if (!attributes) {
@@ -1086,8 +1091,30 @@ class Item : virtual public Thing
 			return !parent || parent->isRemoved();
 		}
 
-		uint32_t getImbuement(uint8_t slot);
-		void setImbuement(uint8_t slot, int64_t info);
+		/**
+		 * @brief Get the Imbuement Info object
+		 *
+		 * @param slot
+		 * @param imbuementInfo (Imbuement *imbuement, uint32_t duration = 0)
+		 * @return true = duration is > 0 (info >> 8)
+		 * @return false
+		 */
+		bool getImbuementInfo(uint8_t slot, ImbuementInfo *imbuementInfo);
+		void setImbuement(uint8_t slot, uint16_t id, int32_t duration);
+		bool hasImbuementType(ImbuementTypes_t imbuementType) {
+			return items[id].imbuementTypes.find(imbuementType) != items[id].imbuementTypes.end();
+		}
+		bool hasImbuementCategoryId(uint16_t categoryId);
+		bool hasImbuements() {
+			for (uint8_t slotid = 0; slotid < getImbuementSlot(); slotid++) {
+				ImbuementInfo imbuementInfo;
+				if (getImbuementInfo(slotid, &imbuementInfo)) {
+					return true;
+				}
+			}
+
+			return false;
+		}
 
 	protected:
 		std::string getWeightDescription(uint32_t weight) const;
@@ -1111,4 +1138,4 @@ using ItemList = std::list<Item*>;
 using ItemDeque = std::deque<Item*>;
 using StashContainerList = std::vector<std::pair<Item*, uint32_t>>;
 
-#endif
+#endif  // SRC_ITEMS_ITEM_H_

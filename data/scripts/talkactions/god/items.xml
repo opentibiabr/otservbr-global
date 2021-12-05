@@ -1565,10 +1565,8 @@
 	<item id="1988" article="a" name="backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="1989" article="a" name="basket">
 		<attribute key="weight" value="950" />
@@ -1616,59 +1614,45 @@
 	<item id="1998" article="a" name="green backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="1999" article="a" name="yellow backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2000" article="a" name="red backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2001" article="a" name="purple backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2002" article="a" name="blue backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2003" article="a" name="grey backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2004" article="a" name="golden backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2005" article="a" name="bucket">
 		<attribute key="weight" value="2000" />
@@ -2157,14 +2141,7 @@
 		<attribute key="armor" value="0" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2140" article="a" name="holy scarab">
 		<attribute key="loottype" value="valuable" />
@@ -2367,15 +2344,7 @@
 		<attribute key="defense" value="14" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2176" article="an" name="orb">
 		<attribute key="loottype" value="other" />
@@ -3141,14 +3110,7 @@
 		<attribute key="magiclevelpoints" value="1" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2324" article="a" name="witchesbroom">
 		<attribute key="description" value="Don't use it without flying license. Not suitable for minors." />
@@ -3339,10 +3301,8 @@
 	<item id="2365" article="a" name="backpack of holding">
 		<attribute key="weight" value="1500" />
 		<attribute key="containerSize" value="24" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2366" article="a" name="roc feather">
 		<attribute key="weight" value="100" />
@@ -3502,14 +3462,8 @@
 		<attribute key="attack" value="45" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2392" article="a" name="fire sword">
 		<attribute key="description" value="The blade is a magic flame." />
@@ -3528,14 +3482,8 @@
 		<attribute key="attack" value="46" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2394" article="a" name="morning star">
 		<attribute key="weight" value="5400" />
@@ -3706,14 +3654,8 @@
 		<attribute key="attack" value="47" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2415" article="a" name="great axe">
 		<attribute key="description" value="A masterpiece of a dwarven smith." />
@@ -3722,14 +3664,8 @@
 		<attribute key="attack" value="52" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2416" article="a" name="crowbar">
 		<attribute key="description" value="It may come in handy sometime." />
@@ -3827,14 +3763,8 @@
 		<attribute key="attack" value="46" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2428" article="an" name="orcish axe">
 		<attribute key="weight" value="4500" />
@@ -3968,14 +3898,8 @@
 		<attribute key="attack" value="49" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2444" article="a" name="hammer of wrath">
 		<attribute key="description" value="A giant is said to have forged this hammer to take revenge for the death of his brother." />
@@ -3984,14 +3908,8 @@
 		<attribute key="attack" value="48" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2445" article="a" name="crystal mace">
 		<attribute key="weight" value="8000" />
@@ -4000,13 +3918,7 @@
 		<attribute key="extradef" value="1" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2446" article="a" name="pharaoh sword">
 		<attribute key="weight" value="5200" />
@@ -4022,14 +3934,8 @@
 		<attribute key="attack" value="45" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2448" article="a" name="studded club">
 		<attribute key="description" value="It has been reinforced with iron." />
@@ -4070,14 +3976,8 @@
 		<attribute key="attack" value="49" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2453" article="an" name="arcane staff">
 		<attribute key="description" value="It is enchanted with ancient magic that renders a weak staff into a powerful weapon." />
@@ -4086,14 +3986,8 @@
 		<attribute key="attack" value="50" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2454" article="a" name="war axe">
 		<attribute key="weight" value="6150" />
@@ -4101,14 +3995,8 @@
 		<attribute key="attack" value="48" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="2455" article="a" name="crossbow">
 		<attribute key="weight" value="4000" />
@@ -4138,14 +4026,7 @@
 		<attribute key="armor" value="2" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2459" article="an" name="iron helmet">
 		<attribute key="weight" value="3000" />
@@ -4182,15 +4063,7 @@
 		<attribute key="armor" value="6" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2465" article="a" name="brass armor">
 		<attribute key="weight" value="8000" />
@@ -4203,15 +4076,7 @@
 		<attribute key="armor" value="14" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2467" article="a" name="leather armor">
 		<attribute key="weight" value="6000" />
@@ -4243,29 +4108,14 @@
 		<attribute key="armor" value="12" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2472" article="a" name="magic plate armor">
 		<attribute key="weight" value="8500" />
 		<attribute key="armor" value="17" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2473" article="a" name="viking helmet">
 		<attribute key="weight" value="3900" />
@@ -4285,29 +4135,14 @@
 		<attribute key="armor" value="8" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2476" article="a" name="knight armor">
 		<attribute key="weight" value="12000" />
 		<attribute key="armor" value="12" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2477" name="knight legs">
 		<attribute key="weight" value="7000" />
@@ -4368,15 +4203,7 @@
 		<attribute key="armor" value="11" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2487" article="a" name="crown armor">
 		<attribute key="weight" value="9900" />
@@ -4408,14 +4235,7 @@
 		<attribute key="armor" value="7" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2492" article="a" name="dragon scale mail">
 		<attribute key="weight" value="11400" />
@@ -4430,29 +4250,14 @@
 		<attribute key="armor" value="10" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2494" article="a" name="demon armor">
 		<attribute key="weight" value="8000" />
 		<attribute key="armor" value="16" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2495" name="demon legs">
 		<attribute key="weight" value="7000" />
@@ -4471,14 +4276,7 @@
 		<attribute key="armor" value="8" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2498" article="a" name="royal helmet">
 		<attribute key="description" value="An excellent masterpiece of a smith." />
@@ -4486,28 +4284,14 @@
 		<attribute key="armor" value="9" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2499" article="an" name="amazon helmet">
 		<attribute key="weight" value="2950" />
 		<attribute key="armor" value="7" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2500" article="an" name="amazon armor">
 		<attribute key="weight" value="4500" />
@@ -4515,15 +4299,7 @@
 		<attribute key="skillDist" value="3" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2501" article="a" name="ceremonial mask">
 		<attribute key="weight" value="4000" />
@@ -4585,15 +4361,7 @@
 		<attribute key="defense" value="21" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2510" article="a" name="plate shield">
 		<attribute key="weight" value="6500" />
@@ -4625,15 +4393,7 @@
 		<attribute key="defense" value="37" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2515" article="a" name="guardian shield">
 		<attribute key="weight" value="5500" />
@@ -4646,15 +4406,7 @@
 		<attribute key="defense" value="31" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2517" article="a" name="shield of honour">
 		<attribute key="description" value="A mighty shield awarded by the gods of Tibia." />
@@ -4668,30 +4420,14 @@
 		<attribute key="defense" value="28" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2519" article="a" name="crown shield">
 		<attribute key="weight" value="6200" />
 		<attribute key="defense" value="32" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2520" article="a" name="demon shield">
 		<attribute key="description" value="This powerful shield seems to be as light as air." />
@@ -4699,15 +4435,7 @@
 		<attribute key="defense" value="35" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2521" article="a" name="dark shield">
 		<attribute key="weight" value="5200" />
@@ -4721,15 +4449,7 @@
 		<attribute key="defense" value="38" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2523" article="a" name="blessed shield">
 		<attribute key="description" value="The shield grants divine protection." />
@@ -4744,15 +4464,7 @@
 		<attribute key="defense" value="22" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2525" article="a" name="dwarven shield">
 		<attribute key="weight" value="5500" />
@@ -4777,15 +4489,7 @@
 		<attribute key="defense" value="32" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2529" article="a" name="black shield">
 		<attribute key="description" value="An unholy creature covers the shield." />
@@ -4805,15 +4509,7 @@
 		<attribute key="defense" value="22" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2532" article="an" name="ancient shield">
 		<attribute key="weight" value="6100" />
@@ -4826,15 +4522,7 @@
 		<attribute key="defense" value="29" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2534" article="a" name="vampire shield">
 		<attribute key="description" value="Dark powers enchant this shield." />
@@ -4842,60 +4530,28 @@
 		<attribute key="defense" value="34" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2535" article="a" name="castle shield">
 		<attribute key="weight" value="4900" />
 		<attribute key="defense" value="28" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2536" article="a" name="medusa shield">
 		<attribute key="weight" value="5800" />
 		<attribute key="defense" value="33" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2537" article="an" name="amazon shield">
 		<attribute key="weight" value="6200" />
 		<attribute key="defense" value="32" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2538" article="an" name="eagle shield">
 		<attribute key="weight" value="6200" />
@@ -4909,15 +4565,7 @@
 		<attribute key="defense" value="34" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2540" article="a" name="scarab shield">
 		<attribute key="weight" value="4700" />
@@ -4936,15 +4584,7 @@
 		<attribute key="defense" value="36" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2543" article="a" name="bolt">
 		<attribute key="weight" value="80" />
@@ -5238,52 +4878,40 @@
 		<attribute key="armor" value="2" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2642" name="sandals">
 		<attribute key="weight" value="600" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2643" name="leather boots">
 		<attribute key="weight" value="900" />
 		<attribute key="armor" value="1" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2644" name="bunnyslippers">
 		<attribute key="weight" value="600" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2645" name="steel boots">
 		<attribute key="weight" value="2900" />
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2646" name="golden boots">
 		<attribute key="weight" value="3100" />
 		<attribute key="armor" value="4" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="2647" name="plate legs">
 		<attribute key="weight" value="5000" />
@@ -5346,15 +4974,7 @@
 		<attribute key="armor" value="11" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2657" article="a" name="simple dress">
 		<attribute key="weight" value="1000" />
@@ -5388,14 +5008,7 @@
 		<attribute key="armor" value="1" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="2663" article="a" name="mystic turban">
 		<attribute key="description" value="Something is strange about this turban." />
@@ -8157,10 +7770,8 @@
 	<item id="3940" article="a" name="camouflage backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item fromid="3941" toid="3942" article="a" name="cup">
 		<attribute key="weight" value="200" />
@@ -8213,9 +7824,7 @@
 		<attribute key="containerSize" value="20" />
 		<attribute key="slotType" value="backpack" />
 		<attribute key="loottype" value="container" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="3961" article="a" name="lich staff">
 		<attribute key="description" value="A scent of death and decay sticks to this weapon." />
@@ -8233,13 +7842,7 @@
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
 		<attribute key="extradef" value="1" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="3963" article="a" name="templar scytheblade">
 		<attribute key="weight" value="2900" />
@@ -8285,15 +7888,7 @@
 		<attribute key="armor" value="9" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="3969" article="a" name="horseman helmet">
 		<attribute key="weight" value="4200" />
@@ -8318,14 +7913,7 @@
 		<attribute key="armor" value="7" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="3973" article="a" name="tusk shield">
 		<attribute key="weight" value="6900" />
@@ -8338,15 +7926,7 @@
 		<attribute key="defense" value="22" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="3975" article="a" name="salamander shield">
 		<attribute key="weight" value="5900" />
@@ -8368,9 +7948,7 @@
 		<attribute key="armor" value="1" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="3983" article="a" name="bast skirt">
 		<attribute key="weight" value="350" />
@@ -9625,9 +9203,7 @@
 		<attribute key="armor" value="2" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="5463" article="a" name="sugar cane">
 		<attribute key="description" value="It has just been harvested." />
@@ -10088,14 +9664,7 @@
 		<attribute key="armor" value="9" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item fromid="5743" toid="5744" name="wooden floor" />
 	<item id="5745" article="a" name="closed door">
@@ -10187,10 +9756,8 @@
 		<attribute key="weight" value="1700" />
 		<attribute key="containerSize" value="22" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="5802" article="a" name="message in a bottle">
 		<attribute key="weight" value="1200" />
@@ -10502,10 +10069,8 @@
 	<item id="5926" article="a" name="pirate backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="5927" article="a" name="pirate bag">
 		<attribute key="weight" value="800" />
@@ -10611,10 +10176,8 @@
 	<item id="5949" article="a" name="beach backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="5950" article="a" name="beach bag">
 		<attribute key="weight" value="800" />
@@ -12280,15 +11843,7 @@
 		<attribute key="defense" value="37" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="6392" article="a" name="hawser" />
 	<item id="6393" article="a" name="valentine's cake">
@@ -12310,15 +11865,7 @@
 		<attribute key="defense" value="37" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="6434" article="a" name="blue tapestry" />
 	<item id="6435" article="a" name="demon trophy" />
@@ -12516,14 +12063,8 @@
 		<attribute key="attack" value="50" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="6529" article="an" name="infernal bolt">
 		<attribute key="weight" value="90" />
@@ -12620,14 +12161,8 @@
 		<attribute key="attack" value="50" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item fromid="6556" toid="6557" article="a" name="tic-tac-toe token">
 		<attribute key="description" value="It seems to be rather fragile." />
@@ -13479,10 +13014,8 @@
 	<item id="7342" article="a" name="fur backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="7343" article="a" name="fur bag">
 		<attribute key="weight" value="800" />
@@ -13655,13 +13188,7 @@
 		<attribute key="slotType" value="two-handed" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7381" article="a" name="mammoth whopper">
 		<attribute key="description" value="Made from a mammoth's legbones, it is one of the favoured weapons among barbarians." />
@@ -13677,14 +13204,8 @@
 		<attribute key="attack" value="47" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7383" article="a" name="relic sword">
 		<attribute key="weight" value="4800" />
@@ -13764,14 +13285,8 @@
 		<attribute key="attack" value="45" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7392" article="an" name="orcish maul">
 		<attribute key="weight" value="5400" />
@@ -13825,14 +13340,8 @@
 		<attribute key="attack" value="44" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7403" article="a" name="berserker">
 		<attribute key="weight" value="13000" />
@@ -13840,14 +13349,8 @@
 		<attribute key="attack" value="48" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7404" article="an" name="assassin dagger">
 		<attribute key="weight" value="1700" />
@@ -13864,14 +13367,8 @@
 		<attribute key="attack" value="49" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7406" article="a" name="blacksteel sword">
 		<attribute key="weight" value="5900" />
@@ -13889,14 +13386,8 @@
 		<attribute key="attack" value="40" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7408" article="a" name="wyvern fang">
 		<attribute key="weight" value="2000" />
@@ -13921,13 +13412,7 @@
 		<attribute key="attack" value="43" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7411" article="an" name="ornamented axe">
 		<attribute key="weight" value="6150" />
@@ -13960,14 +13445,8 @@
 		<attribute key="attack" value="47" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7415" article="a" name="cranial basher">
 		<attribute key="weight" value="7800" />
@@ -14029,13 +13508,7 @@
 		<attribute key="attack" value="45" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7422" article="a" name="jade hammer">
 		<attribute key="weight" value="3200" />
@@ -14051,14 +13524,8 @@
 		<attribute key="attack" value="51" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7424" article="a" name="lunar staff">
 		<attribute key="weight" value="3800" />
@@ -14066,14 +13533,8 @@
 		<attribute key="attack" value="40" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7425" article="a" name="taurus mace">
 		<attribute key="weight" value="5100" />
@@ -14089,14 +13550,8 @@
 		<attribute key="attack" value="43" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7427" article="a" name="chaos mace">
 		<attribute key="description" value="Only those who have descended to the deepest depths may wield this hammer without it cursing them." />
@@ -14133,13 +13588,7 @@
 		<attribute key="attack" value="35" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7431" article="a" name="demonbone">
 		<attribute key="weight" value="18000" />
@@ -14148,13 +13597,7 @@
 		<attribute key="attack" value="48" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7432" article="a" name="furry club">
 		<attribute key="weight" value="4200" />
@@ -14206,13 +13649,7 @@
 		<attribute key="attack" value="37" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7438" article="an" name="elvish bow">
 		<attribute key="description" value="This beautifully ornamented bow was made by a skilled elvish bowmaker." />
@@ -14284,13 +13721,7 @@
 		<attribute key="attack" value="39" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7452" article="a" name="spiked squelcher">
 		<attribute key="weight" value="6800" />
@@ -14298,14 +13729,8 @@
 		<attribute key="attack" value="41" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="7453" article="an" name="executioner">
 		<attribute key="weight" value="9900" />
@@ -14313,14 +13738,8 @@
 		<attribute key="attack" value="51" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7454" article="a" name="glorious axe">
 		<attribute key="weight" value="9500" />
@@ -14362,14 +13781,7 @@
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="7459" article="a" name="pair of earmuffs">
 		<attribute key="weight" value="500" />
@@ -14383,15 +13795,7 @@
 		<attribute key="defense" value="28" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="7461" article="a" name="krimhorn helmet">
 		<attribute key="weight" value="5100" />
@@ -16203,9 +15607,7 @@
 		<attribute key="loottype" value="boots" />
 		<attribute key="absorbPercentIce" value="5" />
 		<attribute key="absorbPercentEnergy" value="-5" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="7893" name="lightning boots">
 		<attribute key="weight" value="750" />
@@ -16214,9 +15616,7 @@
 		<attribute key="absorbPercentEarth" value="-5" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="7894" name="magma legs">
 		<attribute key="weight" value="1900" />
@@ -17249,10 +16649,7 @@
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost magic level" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="8821" article="a" name="witchhunter's coat">
 		<attribute key="weight" value="2500" />
@@ -17315,13 +16712,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="range" value="5" />
 		<attribute key="hitChance" value="1" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8850" article="a" name="chain bolter">
 		<attribute key="weight" value="5500" />
@@ -17331,13 +16722,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="range" value="3" />
 		<attribute key="attack" value="4" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8851" article="a" name="royal crossbow">
 		<attribute key="weight" value="12000" />
@@ -17348,13 +16733,7 @@
 		<attribute key="range" value="6" />
 		<attribute key="hitChance" value="3" />
 		<attribute key="attack" value="5" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8852" article="the" name="devileye">
 		<attribute key="weight" value="5500" />
@@ -17365,13 +16744,7 @@
 		<attribute key="range" value="6" />
 		<attribute key="hitChance" value="-20" />
 		<attribute key="attack" value="20" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8853" article="the" name="ironworker">
 		<attribute key="weight" value="5500" />
@@ -17381,13 +16754,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="range" value="5" />
 		<attribute key="attack" value="4" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8854" article="a" name="warsinger bow">
 		<attribute key="weight" value="4500" />
@@ -17398,13 +16765,7 @@
 		<attribute key="range" value="7" />
 		<attribute key="hitChance" value="5" />
 		<attribute key="attack" value="3" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8855" article="a" name="composite hornbow">
 		<attribute key="weight" value="5200" />
@@ -17415,13 +16776,7 @@
 		<attribute key="range" value="6" />
 		<attribute key="hitChance" value="2" />
 		<attribute key="attack" value="3" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8856" name="Yol's bow">
 		<attribute key="weight" value="3500" />
@@ -17440,13 +16795,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="range" value="6" />
 		<attribute key="hitChance" value="3" />
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="8858" name="Elethriel's elemental bow">
 		<attribute key="weight" value="4400" />
@@ -17698,15 +17047,7 @@
 		<attribute key="defense" value="18" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="8901" article="a" name="spellbook of warding">
 		<attribute key="description" value="It shows your spells and can also shield against attacks when worn." />
@@ -17715,15 +17056,7 @@
 		<attribute key="defense" value="22" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="8902" article="a" name="spellbook of mind control">
 		<attribute key="description" value="It shows your spells and can also shield against attacks when worn." />
@@ -17893,14 +17226,8 @@
 		<attribute key="attack" value="53" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="8927" article="a" name="dark trinity mace">
 		<attribute key="weight" value="9900" />
@@ -17925,14 +17252,8 @@
 		<attribute key="attack" value="51" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="8930" article="an" name="emerald sword">
 		<attribute key="weight" value="4100" />
@@ -18874,10 +18195,8 @@
 	<item id="9774" article="a" name="brocade backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="9775" article="a" name="brocade bag">
 		<attribute key="weight" value="800" />
@@ -20301,14 +19620,7 @@
 		<attribute key="armor" value="5" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="10292" name="pointed rabbitslayer">
 		<attribute key="description" value="Someone has sharpened this carrot to inflict some nasty damage especially on rabbits." />
@@ -20332,15 +19644,7 @@
 		<attribute key="defense" value="8" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="10295" article="a" name="musician's bow">
 		<attribute key="description" value="If you could only figure out how you are supposed to fire more arrows at once." />
@@ -20358,15 +19662,7 @@
 		<attribute key="armor" value="6" />
 		<attribute key="slotType" value="body" />
 		<attribute key="loottype" value="armor" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="10297" article="a" name="shield of care">
 		<attribute key="description" value="This shield will surely care for anyone who can bear it." />
@@ -20374,15 +19670,7 @@
 		<attribute key="defense" value="8" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="10298" article="a" name="helmet of ultimate terror">
 		<attribute key="description" value="There is evil inside." />
@@ -20390,14 +19678,7 @@
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="10299" article="a" name="helmet of nature">
 		<attribute key="description" value="One can only hope nobody will ever insist on wearing that." />
@@ -20405,14 +19686,7 @@
 		<attribute key="armor" value="3" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="10300" name="trousers of the ancients">
 		<attribute key="description" value="These atavistic trousers already served the forefathers of mankind." />
@@ -20769,18 +20043,14 @@
 	<item id="10518" article="a" name="demon backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="10519" article="an" name="orange backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="10520" article="an" name="orange bag">
 		<attribute key="weight" value="800" />
@@ -20791,18 +20061,14 @@
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="10522" article="a" name="crown backpack">
 		<attribute key="weight" value="1700" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="10523" article="an" name="egg of The Many">
 		<attribute key="loottype" value="creatureproduct" />
@@ -20980,14 +20246,7 @@
 		<attribute key="absorbPercentManaDrain" value="5" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="10571" article="a" name="war crystal" plural="war crystals">
 		<attribute key="loottype" value="creatureproduct" />
@@ -21432,10 +20691,8 @@
 	<item id="11119" article="a" name="heart backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="11120" article="a" name="skull pile" />
 	<item id="11122" article="a" name="pile of bones" />
@@ -21751,18 +21008,14 @@
 	<item id="11243" article="a" name="dragon backpack">
 		<attribute key="weight" value="1700" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="11244" article="a" name="minotaur backpack">
 		<attribute key="weight" value="1850" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="11245" article="a" name="bunch of ripe rice" plural="bunches of ripe rice">
 		<attribute key="loottype" value="other" />
@@ -21855,10 +21108,8 @@
 	<item id="11263" article="a" name="santa backpack">
 		<attribute key="weight" value="1650" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="11264" article="a" name="dragon tapestry">
 		<attribute key="weight" value="1000" />
@@ -22033,14 +21284,8 @@
 		<attribute key="attack" value="47" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="11306" article="a" name="sai">
 		<attribute key="weight" value="5000" />
@@ -22073,14 +21318,8 @@
 		<attribute key="attack" value="32" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="11310" article="a" name="dead wailing widow">
 		<attribute key="containerSize" value="10" />
@@ -22360,14 +21599,7 @@
 		<attribute key="magiclevelpoints" value="1" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="11369" article="a" name="terramite shell" plural="terramite shells">
 		<attribute key="loottype" value="creatureproduct" />
@@ -23481,14 +22713,8 @@
 		<attribute key="attack" value="47" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="12614" name="draken sulphur">
 		<attribute key="loottype" value="creatureproduct" />
@@ -23647,9 +22873,7 @@
 		<attribute key="weight" value="2500" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="12647" article="a" name="snake god's wristguard">
 		<attribute key="description" value="It shows your spells and can also shield against attacks when worn." />
@@ -26284,15 +25508,7 @@
 		<attribute key="showattributes" value="1" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="15414" article="an" name="ornate mace">
 		<attribute key="weight" value="14900" />
@@ -26300,13 +25516,7 @@
 		<attribute key="defense" value="24" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="15415" article="a" name="trophy of Obujos">
 		<attribute key="weight" value="500" />
@@ -26473,15 +25683,7 @@
 		<attribute key="defense" value="33" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="15454" article="a" name="guardian axe">
 		<attribute key="weight" value="11000" />
@@ -26579,15 +25781,7 @@
 		<attribute key="defense" value="36" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="15492" article="a" name="hive scythe">
 		<attribute key="weight" value="7500" />
@@ -26744,19 +25938,15 @@
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="15646" article="a" name="buggy backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="15647" article="a" name="deepling squelcher">
 		<attribute key="weight" value="8900" />
@@ -26764,13 +25954,7 @@
 		<attribute key="defense" value="28" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="15648" article="a" name="tarsal arrow">
 		<attribute key="weight" value="70" />
@@ -26828,10 +26012,8 @@
 		<attribute key="description" value="It was awarded during the festivities of Tibia's 15th anniversary." />
 		<attribute key="weight" value="1500" />
 		<attribute key="containerSize" value="15" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item fromid="16008" toid="16013" article="a" name="tapestry of honour">
 		<attribute key="description" value="This tapestry has been awarded to the guild for being more than age years old on January 7th 2012 at Tibia's 15th birthday." />
@@ -27774,17 +26956,13 @@
 		<attribute key="containerSize" value="20" />
 		<attribute key="slotType" value="backpack" />
 		<attribute key="loottype" value="container" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="18394" article="a" name="crystal backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="18395" article="a" name="muck remover">
 		<attribute key="description" value="The gnomish slime remover works wonders on mucky objects." />
@@ -29276,13 +28454,7 @@
 		<attribute key="extradef" value="2" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item fromid="20094" toid="20096" name="swamp lichen" />
 	<item id="20097" article="a" name="cheese cutter">
@@ -29390,14 +28562,7 @@
 		<attribute key="armor" value="7" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="20133" name="lost bracers" plural="lost bracers">
 		<attribute key="loottype" value="creatureproduct" />
@@ -32590,10 +31755,8 @@
 	<item id="21475" article="a" name="pannier backpack">
 		<attribute key="containerSize" value="20" />
 		<attribute key="weight" value="1800" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="21476" name="Omrabas' talking skull">
 		<attribute key="weight" value="2180" />
@@ -33071,14 +32234,8 @@
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
 		<attribute key="skillSword" value="3" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 		<attribute key="skillSword" value="3" />
 	</item>
 	<item id="22404" article="a" name="crude umbral axe">
@@ -33132,14 +32289,8 @@
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
 		<attribute key="skillAxe" value="3" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 		<attribute key="skillAxe" value="3" />
 	</item>
 	<item id="22410" article="a" name="crude umbral mace">
@@ -33193,14 +32344,8 @@
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
 		<attribute key="skillClub" value="3" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 		<attribute key="skillClub" value="3" />
 	</item>
 	<item id="22416" article="a" name="crude umbral bow">
@@ -33290,15 +32435,7 @@
 		<attribute key="defense" value="16" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="22424" article="an" name="umbral master spellbook">
 		<attribute key="weight" value="3000" />
@@ -33310,15 +32447,7 @@
 		<attribute key="defense" value="20" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="22425" article="a" name="bed chamber" />
 	<item fromid="22426" toid="22427" article="an" name="unknown"/>
@@ -33912,10 +33041,8 @@
 	<item id="22696" article="a" name="cake backpack">
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="20" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="22699" article="a" name="cake tapestry">
 		<attribute key="weight" value="1000" />
@@ -36311,9 +35438,7 @@
 		<attribute key="containerSize" value="20" />
 		<attribute key="slotType" value="backpack" />
 		<attribute key="loottype" value="container" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="24741" article="a" name="fur armor">
 		<attribute key="weight" value="4900" />
@@ -36766,14 +35891,7 @@
 		<attribute key="armor" value="4" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="24849" article="an" name="onyx chip" plural="onyx chips">
 		<attribute key="loottype" value="valuable" />
@@ -37279,14 +36397,8 @@
 		<attribute key="attack" value="48" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="25384" article="a" name="vexclaw talon" plural="vexclaw talons">
 		<attribute key="loottype" value="creatureproduct" />
@@ -37372,14 +36484,7 @@
 		<attribute key="weight" value="3800" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="25411" article="a" name="book of lies">
 		<attribute key="weight" value="2400" />
@@ -37387,24 +36492,14 @@
 		<attribute key="defense" value="18" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="25412" article="a" name="treader of torment">
 		<attribute key="armor" value="4" />
 		<attribute key="weight" value="3600" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="25413" article="a" name="shroud of despair">
 		<attribute key="armor" value="7" />
@@ -37418,15 +36513,7 @@
 		<attribute key="defense" value="38" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="25415" article="a" name="plague bite">
 		<attribute key="weight" value="9900" />
@@ -37798,14 +36885,8 @@
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
 		<attribute key="weight" value="7000" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="25885" article="a" name="bow of mayhem">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
@@ -37934,14 +37015,8 @@
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
 		<attribute key="weight" value="7000" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="25943" article="a" name="bow of remedy">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
@@ -38039,14 +37114,8 @@
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
 		<attribute key="weight" value="7000" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="25983" article="a" name="bow of carving">
 		<attribute key="description" value="It can only be wielded properly by players of level 100 or higher." />
@@ -38672,10 +37741,8 @@
 	<item id="26181" article="an" name="energetic backpack">
 		<attribute key="weight" value="2160" />
 		<attribute key="containerSize" value="24" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="26182" article="a" name="collar of blue plasma">
 		<attribute key="weight" value="500" />
@@ -39310,9 +38377,7 @@
 		<attribute key="containerSize" value="24" />
 		<attribute key="slotType" value="backpack" />
 		<attribute key="loottype" value="container" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="27062" article="an" name="orclops santa">
 		<attribute key="weight" value="650" />
@@ -39321,10 +38386,8 @@
 		<attribute key="containerSize" value="20" />
 		<attribute key="weight" value="1500" />
 		<attribute key="description" value="It was awarded during the festivities of Tibia's 20th anniversary." />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="27064" article="a" name="birthday cake">
 		<attribute key="weight" value="500" />
@@ -40378,15 +39441,7 @@
 		<attribute key="defense" value="16" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="29005" article="a" name="dream blossom staff">
 		<attribute key="description" value="It's a gnarly branch with a gleaming blue blossom." />
@@ -42516,14 +41571,8 @@
 		<attribute key="attack" value="52" />
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="30686" article="an" name="axe of destruction">
 		<attribute key="weight" value="5000" />
@@ -42539,14 +41588,8 @@
 		<attribute key="attack" value="52" />
 		<attribute key="weaponType" value="axe" />
 		<attribute key="loottype" value="axe" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="30688" article="a" name="mace of destruction">
 		<attribute key="weight" value="5000" />
@@ -42554,13 +41597,7 @@
 		<attribute key="attack" value="50" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="30689" article="a" name="hammer of destruction">
 		<attribute key="weight" value="7000" />
@@ -42568,14 +41605,8 @@
 		<attribute key="attack" value="53" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="3">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="3" />
 	</item>
 	<item id="30690" article="a" name="bow of destruction">
 		<attribute key="weight" value="5500" />
@@ -44753,10 +43784,8 @@
 		<attribute key="weight" value="1800" />
 		<attribute key="containerSize" value="22" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="33319" article="an" name="ornate tome">
 		<attribute key="loottype" value="unassigned" />
@@ -46787,9 +45816,7 @@
 		<attribute key="containerSize" value="22" />
 		<attribute key="weight" value="1500" />
 		<attribute key="loottype" value="container" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 		<attribute key="slotType" value="backpack" />
 	</item>
 	<item id="35057" article="a" name="meringue cake">
@@ -48936,14 +47963,8 @@
 		<attribute key="elementEarth" value="49" />
 		<attribute key="defense" value="32" />
 		<attribute key="skillSword" value="3" />
-		<attribute key="slotType" value="two-handed"/>
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="slotType" value="two-handed" />
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="36450" article="a" name="unknown pic">
 		<attribute key="weight" value="4500" />
@@ -49005,10 +48026,8 @@
 		<attribute key="weight" value="1500" />
 		<attribute key="containerSize" value="24" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item fromid="36461" toid="36465" article="a" name="gryphon nest"/>
 	<item id="36466" article="a" name="the cobra amulet">
@@ -50294,10 +49313,8 @@
 		<attribute key="weight" value="500" />
 		<attribute key="containerSize" value="26" />
 		<attribute key="loottype" value="container" />
-		<attribute key="slotType" value="backpack"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase capacity" value="17"/>
-		</attribute>
+		<attribute key="slotType" value="backpack" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="37456" article="a" name="ring of souls">
 		<attribute key="description" value="This ring is out of magic energy." />
@@ -50346,14 +49363,7 @@
 		<attribute key="armor" value="1" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="37466" article="a" name="ghost claw">
 		<attribute key="loottype" value="other" />
@@ -52131,10 +51141,8 @@
 		<attribute key="absorbPercentPhysical" value="7" />
 		<attribute key="absorbPercentFire" value="5" />
 		<attribute key="speed" value="30"/>
-		<attribute key="slotType" value="feet"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="loottype" value="boots" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="38933" name="pair of soulstalkers">
 		<attribute key="weight" value="1300"/>
@@ -52143,10 +51151,8 @@
 		<attribute key="skillDist" value="1"/>
 		<attribute key="absorbPercentPhysical" value="5" />
 		<attribute key="speed" value="40"/>
-		<attribute key="slotType" value="feet"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="loottype" value="boots" />
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="38934" article="a" name="soulbastion">
 		<attribute key="weight" value="5800" />
@@ -52417,15 +51423,7 @@
 		<attribute key="defense" value="20" />
 		<attribute key="weaponType" value="shield" />
 		<attribute key="loottype" value="shield" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="38989" article="a" name="lion shield">
 		<attribute key="weight" value="6500" />
@@ -52434,15 +51432,7 @@
 		<attribute key="absorbPercentPhysical" value="7" />
 		<attribute key="absorbPercentEarth" value="10" />
 		<attribute key="weaponType" value="shield"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="38990" article="a" name="lion longsword">
 		<attribute key="weight" value="7500" />
@@ -52453,13 +51443,7 @@
 		<attribute key="weaponType" value="sword" />
 		<attribute key="loottype" value="sword" />
 		<attribute key="skillSword" value="3" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="38991" article="a" name="lion spangenhelm">
 		<attribute key="weight" value="3000" />
@@ -52469,14 +51453,7 @@
 		<attribute key="absorbPercentEarth" value="5" />
 		<attribute key="slotType" value="head" />
 		<attribute key="loottype" value="helmet" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="skillbost shielding" value="1"/>
-			<attribute key="skillbost sword" value="1"/>
-			<attribute key="skillbost distance" value="1"/>
-			<attribute key="skillbost axe" value="1"/>
-			<attribute key="skillbost club" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="38992" article="a" name="lion plate">
 		<attribute key="slotType" value="body" />
@@ -52487,15 +51464,7 @@
 		<attribute key="skillClub" value="3" />
 		<attribute key="absorbPercentPhysical" value="6" />
 		<attribute key="weight" value="15000" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="elemental protection holy" value="1"/>
-			<attribute key="elemental protection fire" value="1"/>
-			<attribute key="elemental protection death" value="1"/>
-			<attribute key="elemental protection earth" value="1"/>
-			<attribute key="elemental protection energy" value="1"/>
-			<attribute key="elemental protection ice" value="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="38993" article="a" name="lion amulet">
 		<attribute key="weight" value="520" />
@@ -53028,13 +51997,7 @@
 		<attribute key="slotType" value="two-handed" />
 		<attribute key="weaponType" value="club" />
 		<attribute key="loottype" value="club" />
-		<attribute key="imbuementslot" value="2">
-			<attribute key="mana leech" value="1"/>
-			<attribute key="elemental damage" value ="1"/>
-			<attribute key="skillbost club" value="1"/>
-			<attribute key="critical hit" value ="1"/>
-			<attribute key="life leech" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="2" />
 	</item>
 	<item id="40350" article="a" name="throwing axe">
 		<attribute key="weight" value="4700" />
@@ -53081,9 +52044,7 @@
 		<attribute key="absorbPercentFire" value="6" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="40355" name="make-do boots">
 		<attribute key="weight" value="1200" />
@@ -53092,9 +52053,7 @@
 		<attribute key="absorbPercentIce" value="6" />
 		<attribute key="slotType" value="feet" />
 		<attribute key="loottype" value="boots" />
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="1"/>
-		</attribute>
+		<attribute key="imbuingSlots" value="1" />
 	</item>
 	<item id="40356" article="a" name="jungle rod">
 		<attribute key="weaponType" value="wand" />

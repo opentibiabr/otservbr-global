@@ -501,9 +501,14 @@ void Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 {
 	assert(data);
 	CombatDamage damage = *data;
-	if (caster && caster->getPlayer()) {
-		Item* tool = caster->getPlayer()->getWeapon();
-		g_events->eventPlayerOnCombat(caster->getPlayer(), target, tool, damage);
+	if (caster) {
+		Player *player = caster->getPlayer();
+		if (!player) {
+			return;
+		}
+
+		Item* item = player->getWeapon();
+		g_events->eventPlayerOnCombat(player, target, item, damage);
 	}
 
 	if (g_game.combatBlockHit(damage, caster, target, params.blockedByShield, params.blockedByArmor, params.itemId != 0)) {
