@@ -6364,24 +6364,24 @@ void ProtocolGame::openImbuementWindow(Item *item)
 		addImbuementInfo(msg, imbuement->getID());
 
 		const auto &items = imbuement->getItems();
-		for (const auto &itm : items)
+		for (const auto &imbuementItems : items)
 		{
-			if (!needItems.count(itm.first))
+			if (!needItems.count(imbuementItems.first))
 			{
-				needItems[itm.first] = player->getItemTypeCount(itm.first);
-				uint32_t stashCount = player->getStashItemCount(Item::items[itm.first].clientId);
+				needItems[imbuementItems.first] = player->getItemTypeCount(imbuementItems.first);
+				uint32_t stashCount = player->getStashItemCount(Item::items[imbuementItems.first].clientId);
 				if (stashCount > 0) {
-					needItems[itm.first] += stashCount;
+					needItems[imbuementItems.first] += stashCount;
 				}
 			}
 		}
 	}
 
 	msg.add<uint32_t>(needItems.size());
-	for (const auto &itm : needItems)
+	for (const auto &imbuementItems : needItems)
 	{
-		msg.addItemId(itm.first);
-		msg.add<uint16_t>(itm.second);
+		msg.addItemId(imbuementItems.first);
+		msg.add<uint16_t>(imbuementItems.second);
 	}
 
 	sendResourcesBalance(player->getMoney(), player->getBankBalance());
