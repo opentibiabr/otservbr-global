@@ -368,7 +368,7 @@ std::vector<Imbuement*> Imbuements::getImbuements(const Player* player, Item* it
 		int32_t valueStorage;
 		if (g_config.getBoolean(ConfigManager::TOGLE_IMBUEMENT_SHRINE_STORAGE)
 		&& imbuement->getStorage() != 0
-		&& player->getStorageValue(imbuement->getStorage(), valueStorage)
+		&& !player->getStorageValue(imbuement->getStorage(), valueStorage)
 		&& imbuement->getBaseID() >= 1 && imbuement->getBaseID() <= 3) {
 			continue;
 		}
