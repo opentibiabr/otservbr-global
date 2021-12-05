@@ -1179,14 +1179,6 @@ bool Creature::addCondition(Condition* condition, bool force/* = false*/)
 		return false;
 	}
 
-	if (!force && condition->getType() == CONDITION_HASTE && hasCondition(CONDITION_PARALYZE)) {
-		int64_t walkDelay = getWalkDelay();
-		if (walkDelay > 0) {
-			g_scheduler.addEvent(createSchedulerTask(walkDelay, std::bind(&Game::forceAddCondition, &g_game, getID(), condition)));
-			return false;
-		}
-	}
-
 	Condition* prevCond = getCondition(condition->getType(), condition->getId(), condition->getSubId());
 	if (prevCond) {
 		prevCond->addCondition(this, condition);
@@ -1225,14 +1217,6 @@ void Creature::removeCondition(ConditionType_t type, bool force/* = false*/)
 		if (condition->getType() != type) {
 			++it;
 			continue;
-		}
-
-		if (!force && type == CONDITION_PARALYZE) {
-			int64_t walkDelay = getWalkDelay();
-			if (walkDelay > 0) {
-				g_scheduler.addEvent(createSchedulerTask(walkDelay, std::bind(&Game::forceRemoveCondition, &g_game, getID(), type)));
-				return;
-			}
 		}
 
 		it = conditions.erase(it);
@@ -1290,14 +1274,6 @@ void Creature::removeCondition(Condition* condition, bool force/* = false*/)
 	auto it = std::find(conditions.begin(), conditions.end(), condition);
 	if (it == conditions.end()) {
 		return;
-	}
-
-	if (!force && condition->getType() == CONDITION_PARALYZE) {
-		int64_t walkDelay = getWalkDelay();
-		if (walkDelay > 0) {
-			g_scheduler.addEvent(createSchedulerTask(walkDelay, std::bind(&Game::forceRemoveCondition, &g_game, getID(), condition->getType())));
-			return;
-		}
 	}
 
 	conditions.erase(it);
