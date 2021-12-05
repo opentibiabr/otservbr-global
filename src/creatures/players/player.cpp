@@ -1325,7 +1325,7 @@ void Player::openImbuementWindow(Item* item)
 		return;
 	}
 
-	if (item->getImbuementSlot() <= 0 ) {
+	if (item->getImbuementSlot() <= 0) {
 		this->sendTextMessage(MESSAGE_FAILURE, "This item is not imbuable.");
 		return;
 	}

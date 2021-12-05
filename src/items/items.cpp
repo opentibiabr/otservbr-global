@@ -1006,7 +1006,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 		} else if (tmpStrValue == "imbuementslot") {
 			it.imbuementSlot = pugi::cast<int32_t>(valueAttribute.value());
 
-			for (auto subAttributeNode: attributeNode.children()) {
+			for (auto subAttributeNode : attributeNode.children()) {
 				pugi::xml_attribute subKeyAttribute = subAttributeNode.attribute("key");
 				if (!subKeyAttribute) {
 					continue;
@@ -1018,7 +1018,9 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 					if (imbuementType != IMBUEMENT_NONE) {
 						it.setImbuementType(imbuementType);
 					}
+				}
 				else
+				{
 					SPDLOG_WARN("[Items::parseItemNode] - Unknown imbuement type: {}",
 								valueAttribute.as_string());
 				}

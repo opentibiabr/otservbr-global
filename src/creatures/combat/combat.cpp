@@ -544,7 +544,7 @@ CombatDamage Combat::applyImbuementElementalDamage(Item* item, CombatDamage dama
 		/* If damage imbuement is set, we can return without checking other slots */
 		break;
 	}
-	
+
 	return damage;
 }
 

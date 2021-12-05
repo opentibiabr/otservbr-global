@@ -464,7 +464,7 @@ class Player final : public Creature, public Cylinder
 			bedItem = b;
 		}
 
-		bool hasImbuingItem () {
+		bool hasImbuingItem() {
 			return imbuingItem != nullptr;
 		}
 		void setImbuingItem(Item* item);
@@ -2062,7 +2062,7 @@ class Player final : public Creature, public Cylinder
 		GuildRank_ptr guildRank;
 		Group* group = nullptr;
 		Inbox* inbox;
-		Item* imbuingItem = nullptr; // for internal use
+		Item* imbuingItem = nullptr;
 		Item* tradeItem = nullptr;
  		Item* inventory[CONST_SLOT_LAST + 1] = {};
 		Item* writeItem = nullptr;
