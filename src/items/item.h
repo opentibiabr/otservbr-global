@@ -557,6 +557,9 @@ class ItemAttributes
 			checkTypes |= ITEM_ATTRIBUTE_CHARGES;
 			checkTypes |= ITEM_ATTRIBUTE_FLUIDTYPE;
 			checkTypes |= ITEM_ATTRIBUTE_DOORID;
+			checkTypes |= ITEM_ATTRIBUTE_IMBUINGSLOTS
+			checkTypes |= ITEM_ATTRIBUTE_OPENCONTAINER 
+			checkTypes |= ITEM_ATTRIBUTE_QUICKLOOTCONTAINER 
 			checkTypes |= ITEM_ATTRIBUTE_DURATION_TIMESTAMP;
 			return (type & static_cast<itemAttrTypes>(checkTypes)) != 0;
 		}
@@ -568,6 +571,7 @@ class ItemAttributes
 			checkTypes |= ITEM_ATTRIBUTE_NAME;
 			checkTypes |= ITEM_ATTRIBUTE_ARTICLE;
 			checkTypes |= ITEM_ATTRIBUTE_PLURALNAME;
+			checkTypes |= ITEM_ATTRIBUTE_SPECIAL;
 			return (type & static_cast<itemAttrTypes>(checkTypes)) != 0;
 		}
 		inline static bool isCustomAttrType(itemAttrTypes type) {
