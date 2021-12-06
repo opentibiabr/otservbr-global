@@ -2719,7 +2719,7 @@ void ProtocolGame::sendCreatureIcon(const Creature* creature)
 	msg.addByte(icon != CREATUREICON_NONE); // 0 = no icon, 1 = we'll send an icon
 	if (icon != CREATUREICON_NONE) {
 		msg.addByte(icon);
-		msg.addByte(0); // Creature update
+		msg.addByte(1); // Creature update
 		msg.add<uint16_t>(0); // Used for the life in the new quest
 	}
 	writeToOutputBuffer(msg);
