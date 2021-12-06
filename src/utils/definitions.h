@@ -54,8 +54,6 @@ static constexpr auto AUTHENTICATOR_PERIOD = 30U;
 #define HAS_ITERATOR_DEBUGGING 0
 #endif
 
-#define IMBUEMENT_SLOT 500
-
 #pragma warning(disable:4127) // conditional expression is constant
 #pragma warning(disable:4244) // 'argument' : conversion from 'type1' to 'type2', possible loss of data
 #pragma warning(disable:4250) // 'class1' : inherits 'class2::member' via dominance
