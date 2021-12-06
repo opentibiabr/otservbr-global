@@ -1685,8 +1685,6 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(ITEM_GOLD_POUCH)
 	registerEnum(ITEM_STORE_INBOX)
 
-	registerEnum(IMBUEMENT_SLOT)
-
 	registerEnum(CHARM_GUT)
 	registerEnum(CHARM_SCAVENGE)
 
