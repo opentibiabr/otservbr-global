@@ -406,7 +406,7 @@ class ItemAttributes
 			} value;
 			itemAttrTypes type;
 
-			//non-copyable
+			// Singleton - ensures we don't accidentally copy it
 			Attribute& operator=(const Attribute& other) = delete;
 
 			Attribute(itemAttrTypes type) : type(type) {
