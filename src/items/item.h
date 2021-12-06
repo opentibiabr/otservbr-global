@@ -409,7 +409,7 @@ class ItemAttributes
 			// Singleton - ensures we don't accidentally copy it
 			Attribute& operator=(const Attribute& other) = delete;
 
-			Attribute(itemAttrTypes type) : type(type) {
+			explicit Attribute(itemAttrTypes type) : type(type) {
 				memset(&value, 0, sizeof(value));
 			}
 			Attribute(const Attribute& i) {
