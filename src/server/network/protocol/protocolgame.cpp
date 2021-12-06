@@ -2715,12 +2715,16 @@ void ProtocolGame::sendCreatureIcon(const Creature* creature)
 	NetworkMessage msg;
 	msg.addByte(0x8B);
 	msg.add<uint32_t>(creature->getID());
-	msg.addByte(14); // type 14 for this
-	msg.addByte(icon != CREATUREICON_NONE); // 0 = no icon, 1 = we'll send an icon
+	// Type 14 for this
+	msg.addByte(14);
+	// 0 = no icon, 1 = we'll send an icon
+	msg.addByte(icon != CREATUREICON_NONE);
 	if (icon != CREATUREICON_NONE) {
 		msg.addByte(icon);
-		msg.addByte(1); // Creature update
-		msg.add<uint16_t>(0); // Used for the life in the new quest
+		// Creature update
+		msg.addByte(1);
+		// Used for the life in the new quest
+		msg.add<uint16_t>(0);
 	}
 	writeToOutputBuffer(msg);
 }
