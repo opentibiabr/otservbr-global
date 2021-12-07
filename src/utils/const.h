@@ -22,6 +22,8 @@
 
 static constexpr size_t NETWORKMESSAGE_PLAYERNAME_MAXLENGTH = 30;
 static constexpr int32_t NETWORKMESSAGE_MAXSIZE = 24590;
+// This is in miliseconds
+static constexpr int32_t EVENT_IMBUEMENT_INTERVAL = 1000;
 
 enum MagicEffectClasses : uint8_t {
 	CONST_ME_NONE,

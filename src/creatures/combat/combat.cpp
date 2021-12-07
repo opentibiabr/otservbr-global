@@ -502,8 +502,9 @@ void Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 	assert(data);
 	CombatDamage damage = *data;
 	if (caster && caster->getPlayer()) {
-		Item* tool = caster->getPlayer()->getWeapon();
-		g_events->eventPlayerOnCombat(caster->getPlayer(), target, tool, damage);
+		Item *item = caster->getPlayer()->getWeapon();
+		damage = applyImbuementElementalDamage(item, damage);
+		g_events->eventPlayerOnCombat(caster->getPlayer(), target, item, damage);
 	}
 
 	if (g_game.combatBlockHit(damage, caster, target, params.blockedByShield, params.blockedByArmor, params.itemId != 0)) {
@@ -521,6 +522,30 @@ void Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 		CombatConditionFunc(caster, target, params, &damage);
 		CombatDispelFunc(caster, target, params, nullptr);
 	}
+}
+
+CombatDamage Combat::applyImbuementElementalDamage(Item* item, CombatDamage damage) {
+	if (!item) {
+		return damage;
+	}
+
+	for (uint8_t slotid = 0; slotid < item->getImbuementSlot(); slotid++) {
+		ImbuementInfo imbuementInfo;
+		if (!item->getImbuementInfo(slotid, &imbuementInfo)) {
+			continue;
+		}
+
+		float damagePercent = imbuementInfo.imbuement->elementDamage / 100.0;
+
+		damage.secondary.type = imbuementInfo.imbuement->combatType;
+		damage.secondary.value = damage.primary.value * (damagePercent);
+		damage.primary.value = damage.primary.value * (1 - damagePercent);
+
+		/* If damage imbuement is set, we can return without checking other slots */
+		break;
+	}
+
+	return damage;
 }
 
 void Combat::CombatManaFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data)

@@ -464,10 +464,10 @@ class Player final : public Creature, public Cylinder
 			bedItem = b;
 		}
 
-		bool inImbuing() {
-			return imbuing != nullptr;
+		bool hasImbuingItem() {
+			return imbuingItem != nullptr;
 		}
-		void inImbuing(Item* item);
+		void setImbuingItem(Item* item);
 
 		void addBlessing(uint8_t index, uint8_t count) {
 			if (blessings[index - 1] == 255) {
@@ -1454,7 +1454,28 @@ class Player final : public Creature, public Cylinder
 				client->sendOutfitWindow();
 			}
 		}
-		void sendImbuementWindow(Item* item);
+		// Imbuements
+		void onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bool protectionCharm);
+		void onClearImbuement(Item* item, uint8_t slot);
+
+		void addItemImbuementStats(const Imbuement* imbuement);
+		void removeItemImbuementStats(const Imbuement* imbuement);
+
+		void sendImbuementResult(const std::string message)
+		{
+			if (client)
+			{
+				client->sendImbuementResult(message);
+			}
+		}
+		void openImbuementWindow(Item* item);
+		void closeImbuementWindow() const
+		{
+			if(client)
+			{
+				client->closeImbuementWindow();
+			}
+		}
 		void sendPodiumWindow(const Item* podium, const Position& position, uint16_t spriteId, uint8_t stackpos) {
 			if (client) {
 				client->sendPodiumWindow(podium, position, spriteId, stackpos);
@@ -1737,9 +1758,6 @@ class Player final : public Creature, public Cylinder
 
 		void setTraining(bool value);
 
-		void onEquipImbueItem(Imbuement* imbuement);
-		void onDeEquipImbueItem(Imbuement* imbuement);
-
 		bool isMarketExhausted() const;
 		void updateMarketExhausted() {
 			lastMarketInteraction = OTSYS_TIME();
@@ -1931,6 +1949,11 @@ class Player final : public Creature, public Cylinder
 		void removeExperience(uint64_t exp, bool sendText = false);
 
 		void updateInventoryWeight();
+		/**
+		 * @brief Starts checking the imbuements in the item so that the time decay is performed
+		 * Registers the player in an unordered_map in game.h so that the function can be initialized by the task
+		 */
+		void updateInventoryImbuement(bool init = false);
 
 		void setNextWalkActionTask(SchedulerTask* task);
 		void setNextWalkTask(SchedulerTask* task);
@@ -2039,7 +2062,7 @@ class Player final : public Creature, public Cylinder
 		GuildRank_ptr guildRank;
 		Group* group = nullptr;
 		Inbox* inbox;
-		Item* imbuing = nullptr; // for intarnal use
+		Item* imbuingItem = nullptr;
 		Item* tradeItem = nullptr;
  		Item* inventory[CONST_SLOT_LAST + 1] = {};
 		Item* writeItem = nullptr;

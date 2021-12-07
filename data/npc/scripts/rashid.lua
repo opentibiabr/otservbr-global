@@ -224,9 +224,11 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Come back soon!")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Take all the time you need to decide what you want!")
 
 local function onTradeRequest(cid)
-	if Player(cid):getStorageValue(Storage.TravellingTrader.Mission07) ~= 1 then
-		npcHandler:say('Sorry, but you do not belong to my exclusive customers. I have to make sure that I can trust in the quality of your wares.', cid)
-		return false
+	if Npc(getNpcCid()):getName() == "Rashid" then
+		if Player(cid):getStorageValue(Storage.TravellingTrader.Mission07) ~= 1 then
+			npcHandler:say('Sorry, but you do not belong to my exclusive customers. I have to make sure that I can trust in the quality of your wares.', cid)
+			return false
+		end
 	end
 
 	return true

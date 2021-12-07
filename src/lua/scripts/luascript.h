@@ -762,6 +762,9 @@ class LuaScriptInterface
 
 		static int luaItemHasProperty(lua_State* L);
 
+		static int luaItemGetImbuement(lua_State* L);
+		static int luaItemGetImbuementSlot(lua_State* L);
+
 		// Container
 		static int luaContainerCreate(lua_State* L);
 
@@ -1067,7 +1070,8 @@ class LuaScriptInterface
 		static int luaPlayerForgetSpell(lua_State* L);
 		static int luaPlayerHasLearnedSpell(lua_State* L);
 
-		static int luaPlayerSendImbuementPanel(lua_State* L);
+		static int luaPlayerOpenImbuementWindow(lua_State* L);
+		static int luaPlayerCloseImbuementWindow(lua_State* L);
 
 		static int luaPlayerSendTutorial(lua_State* L);
 		static int luaPlayerAddMapMark(lua_State* L);
@@ -1334,7 +1338,7 @@ class LuaScriptInterface
 		static int luaItemTypeGetAttack(lua_State* L);
 		static int luaItemTypeGetDefense(lua_State* L);
 		static int luaItemTypeGetExtraDefense(lua_State* L);
-		static int luaItemTypeGetImbuingSlots(lua_State* L);
+		static int luaItemTypeGetImbuementSlot(lua_State* L);
 		static int luaItemTypeGetArmor(lua_State* L);
 		static int luaItemTypeGetWeaponType(lua_State* L);
 
