@@ -368,11 +368,13 @@ TODO
 ## CUSTOM
 # Files
 config.lua
-otservbr.otbm
+client_assertions.txt
 # Extensions
 *.ini
 *.otb
 *.exe
+*.manifest
+*.otbm
 *.rar
 
 # SFTP for Sublime

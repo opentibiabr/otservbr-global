@@ -74,9 +74,16 @@ function MonsterType.createLootItem(self, lootBlock, chance, lootTable)
 		end
 	end
 
+	local charges, n = itemType:getCharges()
 	while itemCount > 0 do
-		local n = math.min(itemCount, 100)
-		itemCount = itemCount - n
+		if charges > 0 then
+			n = charges
+			itemCount = itemCount - 1
+		else
+			n = math.min(itemCount, 100)
+			itemCount = itemCount - n
+		end
+
 		table.insert(lootTable, {lootBlock.itemId, n})
 	end
 
