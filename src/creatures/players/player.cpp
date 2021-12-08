@@ -515,7 +515,7 @@ void Player::updateInventoryImbuement(bool init /* = false */)
 			int32_t duration = std::max<int32_t>(0, imbuementInfo.duration - EVENT_IMBUEMENT_INTERVAL / 1000);
 			item->setImbuement(slotid, imbuementInfo.imbuement->getID(), duration);
 			if (duration == 0) {
-				removeItemImbuementStats(imbuementInfo.imbuement);
+				removeItemImbuementStats(imbuementInfo.imbuement, Item::items[item->getID()]);
 				g_game.decreasePlayerActiveImbuements(getID());
 			}
 
@@ -1239,7 +1239,7 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 	uint32_t price = baseImbuement->price;
 	price += protectionCharm ? baseImbuement->protectionPrice : 0;
 
-	if (!g_game.removeMoney(this, price, 0, false))
+	if (!g_game.removeMoney(this, price, 0, true))
 	{
 		std::string message = "You don't have " + std::to_string(price) + " gold coins.";
 
@@ -1276,7 +1276,8 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 
 	item->setImbuement(slot, imbuement->getID(), baseImbuement->duration);
 
-	addItemImbuementStats(imbuement);
+	if (item->getParent() == this)
+		addItemImbuementStats(imbuement, Item::items[item->getID()]);
 	openImbuementWindow(item);
 }
 
@@ -1308,6 +1309,9 @@ void Player::onClearImbuement(Item* item, uint8_t slot)
 		this->openImbuementWindow(item);
 		return;
 	}
+
+	if (item->getParent() == this)
+		removeItemImbuementStats(imbuementInfo.imbuement, Item::items[item->getID()]);
 
 	item->setImbuement(slot, imbuementInfo.imbuement->getID(), 0);
 	this->openImbuementWindow(item);
@@ -5428,12 +5432,12 @@ uint16_t Player::getFreeBackpackSlots() const
 	return counter;
 }
 
-void Player::addItemImbuementStats(const Imbuement* imbuement)
+void Player::addItemImbuementStats(const Imbuement* imbuement, const ItemType& it)
 {
 	bool requestUpdate = false;
 	// Check imbuement skills
 	for (int32_t i = SKILL_FIRST; i <= SKILL_LAST; ++i) {
-		if (imbuement->skills[i]) {
+		if (imbuement->skills[i] && (i != SKILL_CRITICAL_HIT_CHANCE || !it.abilities || !it.abilities->skills[i])) {
 			requestUpdate = true;
 			setVarSkill(static_cast<skills_t>(i), imbuement->skills[i]);
 		}
@@ -5471,13 +5475,13 @@ void Player::addItemImbuementStats(const Imbuement* imbuement)
 	return;
 }
 
-void Player::removeItemImbuementStats(const Imbuement* imbuement)
+void Player::removeItemImbuementStats(const Imbuement* imbuement, const ItemType& it)
 {
 	bool requestUpdate = false;
 
 	// Check imbuement skills
 	for (int32_t i = SKILL_FIRST; i <= SKILL_LAST; ++i) {
-		if (imbuement->skills[i]) {
+		if (imbuement->skills[i] && (i != SKILL_CRITICAL_HIT_CHANCE || !it.abilities || !it.abilities->skills[i])) {
 			requestUpdate = true;
 			setVarSkill(static_cast<skills_t>(i), -imbuement->skills[i]);
 		}

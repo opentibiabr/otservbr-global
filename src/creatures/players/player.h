@@ -1458,8 +1458,8 @@ class Player final : public Creature, public Cylinder
 		void onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bool protectionCharm);
 		void onClearImbuement(Item* item, uint8_t slot);
 
-		void addItemImbuementStats(const Imbuement* imbuement);
-		void removeItemImbuementStats(const Imbuement* imbuement);
+		void addItemImbuementStats(const Imbuement* imbuement, const ItemType& item);
+		void removeItemImbuementStats(const Imbuement* imbuement, const ItemType& item);
 
 		void sendImbuementResult(const std::string message)
 		{
