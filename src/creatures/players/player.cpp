@@ -1300,7 +1300,7 @@ void Player::onClearImbuement(Item* item, uint8_t slot)
 		return;
 	}
 
-	if (!g_game.removeMoney(this, baseImbuement->removeCost, 0, false))
+	if (!g_game.removeMoney(this, baseImbuement->removeCost, 0, true))
 	{
 		std::string message = "You don't have " + std::to_string(baseImbuement->removeCost) + " gold coins.";
 
