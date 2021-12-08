@@ -1009,7 +1009,12 @@ std::vector<std::pair<std::string, std::string>>
 				}
 
 				ss.str("");
-				ss << std::showpos << it.abilities->skills[i] << '%' << std::noshowpos;
+
+				if (i != SKILL_CRITICAL_HIT_CHANCE)
+					ss << std::showpos;
+				ss << it.abilities->skills[i] << '%';
+				if (i != SKILL_CRITICAL_HIT_CHANCE)
+					ss << std::noshowpos;	
 				descriptions.emplace_back(getSkillName(i), ss.str());
 			}
 
@@ -1257,7 +1262,11 @@ std::vector<std::pair<std::string, std::string>>
 				}
 
 				ss.str("");
-				ss << std::showpos << it.abilities->skills[i] << '%' << std::noshowpos;
+				if (i != SKILL_CRITICAL_HIT_CHANCE)
+					ss << std::showpos;
+				ss << it.abilities->skills[i] << '%';
+				if (i != SKILL_CRITICAL_HIT_CHANCE)
+					ss << std::noshowpos;
 				descriptions.emplace_back(getSkillName(i), ss.str());
 			}
 
@@ -1574,7 +1583,12 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 					else {
 						s << ", ";
 					}
-					s << getSkillName(i) << ' ' << std::showpos << it.abilities->skills[i] << std::noshowpos;
+					s << getSkillName(i) << ' ';
+					if (i != SKILL_CRITICAL_HIT_CHANCE)
+						s << std::showpos;
+					s << it.abilities->skills[i];
+					if (i != SKILL_CRITICAL_HIT_CHANCE)
+						s << std::noshowpos;
 				}
 
 				if (it.abilities->stats[STAT_MAGICPOINTS]) {
@@ -1760,7 +1774,13 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 					else {
 						s << ", ";
 					}
-					s << getSkillName(i) << ' ' << std::showpos << it.abilities->skills[i] << std::noshowpos << '%';
+					s << getSkillName(i) << ' ';
+					if (i != SKILL_CRITICAL_HIT_CHANCE)
+						s << std::showpos;
+					s << it.abilities->skills[i];
+					if (i != SKILL_CRITICAL_HIT_CHANCE)
+						s << std::noshowpos;
+					s << '%';
 				}
 
 				if (it.abilities->stats[STAT_MAGICPOINTS]) {
@@ -1920,7 +1940,13 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 					s << ", ";
 				}
 
-				s << getSkillName(i) << ' ' << std::showpos << it.abilities->skills[i] << std::noshowpos << '%';
+				s << getSkillName(i) << ' ';
+				if (i != SKILL_CRITICAL_HIT_CHANCE)
+					s << std::showpos;
+				s << it.abilities->skills[i];
+				if (i != SKILL_CRITICAL_HIT_CHANCE)
+					s << std::noshowpos;
+				s << '%';
 			}
 
 			if (it.abilities->stats[STAT_MAGICPOINTS]) {
