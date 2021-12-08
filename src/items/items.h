@@ -273,8 +273,8 @@ class ItemType
 			return str;
 		}
 
-		void setImbuementType(ImbuementTypes_t imbuementType) {
-			imbuementTypes[imbuementType] = true;
+		void setImbuementType(ImbuementTypes_t imbuementType, uint16_t maxTier) {
+			imbuementTypes[imbuementType] = maxTier;
 		}
 
 		itemgroup_t group = ITEM_GROUP_NONE;
@@ -335,7 +335,7 @@ class ItemType
 		ShootType_t shootType = CONST_ANI_NONE;
 		RaceType_t corpseType = RACE_NONE;
 		FluidTypes_t fluidSource = FLUID_NONE;
-		std::map<ImbuementTypes_t, bool> imbuementTypes;
+		std::map<ImbuementTypes_t, uint16_t> imbuementTypes;
 
 		uint8_t floorChange = 0;
 		uint8_t alwaysOnTopOrder = 0;
