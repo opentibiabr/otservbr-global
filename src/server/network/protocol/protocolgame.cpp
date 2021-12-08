@@ -4432,11 +4432,14 @@ void ProtocolGame::sendMarketDetail(uint16_t itemId)
 			}
 
 			ss << getSkillName(i) << ' ';
-			if (i != SKILL_CRITICAL_HIT_CHANCE)
+			if (i != SKILL_CRITICAL_HIT_CHANCE) {
 				ss << std::showpos;
+			}
 			ss << it.abilities->skills[i] << '%';
-			if (i != SKILL_CRITICAL_HIT_CHANCE)
+
+			if (i != SKILL_CRITICAL_HIT_CHANCE) {
 				ss << std::noshowpos;
+			}
 		}
 
 		if (it.abilities->stats[STAT_MAGICPOINTS] != 0)

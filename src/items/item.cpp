@@ -1010,11 +1010,15 @@ std::vector<std::pair<std::string, std::string>>
 
 				ss.str("");
 
-				if (i != SKILL_CRITICAL_HIT_CHANCE)
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
 					ss << std::showpos;
+				}
+
 				ss << it.abilities->skills[i] << '%';
-				if (i != SKILL_CRITICAL_HIT_CHANCE)
-					ss << std::noshowpos;	
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
+					ss << std::noshowpos;
+				}
+
 				descriptions.emplace_back(getSkillName(i), ss.str());
 			}
 
@@ -1262,11 +1266,15 @@ std::vector<std::pair<std::string, std::string>>
 				}
 
 				ss.str("");
-				if (i != SKILL_CRITICAL_HIT_CHANCE)
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
 					ss << std::showpos;
+				}
 				ss << it.abilities->skills[i] << '%';
-				if (i != SKILL_CRITICAL_HIT_CHANCE)
+
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
 					ss << std::noshowpos;
+				}
+	
 				descriptions.emplace_back(getSkillName(i), ss.str());
 			}
 
@@ -1584,11 +1592,14 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 						s << ", ";
 					}
 					s << getSkillName(i) << ' ';
-					if (i != SKILL_CRITICAL_HIT_CHANCE)
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
 						s << std::showpos;
+					}
 					s << it.abilities->skills[i];
-					if (i != SKILL_CRITICAL_HIT_CHANCE)
+
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
 						s << std::noshowpos;
+					}
 				}
 
 				if (it.abilities->stats[STAT_MAGICPOINTS]) {
@@ -1775,11 +1786,14 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 						s << ", ";
 					}
 					s << getSkillName(i) << ' ';
-					if (i != SKILL_CRITICAL_HIT_CHANCE)
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
 						s << std::showpos;
+					}
 					s << it.abilities->skills[i];
-					if (i != SKILL_CRITICAL_HIT_CHANCE)
+
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
 						s << std::noshowpos;
+					}
 					s << '%';
 				}
 
@@ -1941,11 +1955,14 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 				}
 
 				s << getSkillName(i) << ' ';
-				if (i != SKILL_CRITICAL_HIT_CHANCE)
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
 					s << std::showpos;
+				}
 				s << it.abilities->skills[i];
-				if (i != SKILL_CRITICAL_HIT_CHANCE)
+
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
 					s << std::noshowpos;
+				}
 				s << '%';
 			}
 

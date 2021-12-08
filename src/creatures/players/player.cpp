@@ -1274,10 +1274,11 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 		return;
 	}
 
-	item->setImbuement(slot, imbuement->getID(), baseImbuement->duration);
-
-	if (item->getParent() == this)
+	if (item->getParent() == this) {
 		addItemImbuementStats(imbuement, Item::items[item->getID()]);
+	}
+
+	item->setImbuement(slot, imbuement->getID(), baseImbuement->duration);
 	openImbuementWindow(item);
 }
 
@@ -1310,8 +1311,9 @@ void Player::onClearImbuement(Item* item, uint8_t slot)
 		return;
 	}
 
-	if (item->getParent() == this)
+	if (item->getParent() == this) {
 		removeItemImbuementStats(imbuementInfo.imbuement, Item::items[item->getID()]);
+	}
 
 	item->setImbuement(slot, imbuementInfo.imbuement->getID(), 0);
 	this->openImbuementWindow(item);
