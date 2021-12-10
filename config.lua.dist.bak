@@ -22,7 +22,6 @@ orangeSkullDuration = 7
 
 onlyInvitedCanMoveHouseItems = true
 cleanProtectionZones = false
--- test
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
