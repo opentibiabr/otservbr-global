@@ -1150,6 +1150,8 @@ class LuaScriptInterface
 		static int luaPlayerGetFreeBackpackSlots(lua_State* L);
 
 		static int luaPlayerOpenMarket(lua_State* L);
+		
+		static int luaPlayerGetItemAbilityEnabled(lua_State* L);
 
 		// Monster
 		static int luaMonsterCreate(lua_State* L);
@@ -1360,6 +1362,8 @@ class LuaScriptInterface
 		static int luaItemTypeGetWrapableTo(lua_State* L);
 
 		static int luaItemTypeHasSubType(lua_State* L);
+		
+		static int luaItemTypeGetExperience(lua_State* L);
 
 		// Combat
 		static int luaCombatCreate(lua_State* L);

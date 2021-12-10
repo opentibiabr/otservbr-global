@@ -2857,6 +2857,8 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Player", "isOffline", LuaScriptInterface::luaPlayerIsOffline);
 
 	registerMethod("Player", "openMarket", LuaScriptInterface::luaPlayerOpenMarket);
+	
+	registerMethod("Player", "getItemAbilityEnabled", LuaScriptInterface::luaPlayerGetItemAbilityEnabled);
 
 	// Monster
 	registerClass("Monster", "Creature", LuaScriptInterface::luaMonsterCreate);
@@ -3076,6 +3078,8 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("ItemType", "getBaseSpeed", LuaScriptInterface::luaItemTypeGetBaseSpeed);
 
 	registerMethod("ItemType", "hasSubType", LuaScriptInterface::luaItemTypeHasSubType);
+	
+	registerMethod("ItemType", "getExperience", LuaScriptInterface::luaItemTypeGetExperience);
 
 	// Combat
 	registerClass("Combat", "", LuaScriptInterface::luaCombatCreate);
@@ -12478,6 +12482,18 @@ int LuaScriptInterface::luaPlayerOpenMarket(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaPlayerGetItemAbilityEnabled(lua_State* L)
+{	
+	const Player* player = getUserdata<const Player>(L, 1);
+	if (player) {
+		uint32_t slot = getNumber<uint32_t>(L, 2);
+		lua_pushboolean(L, player->isItemAbilityEnabled(static_cast<slots_t>(slot)));
+	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
 // Monster
 int LuaScriptInterface::luaMonsterCreate(lua_State* L)
 {
@@ -14692,6 +14708,24 @@ int LuaScriptInterface::luaItemTypeHasSubType(lua_State* L)
 		lua_pushnil(L);
 	}
 	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetExperience(lua_State* L)
+{
+    // itemType:getMagicDamage()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (!itemType) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	auto& abilities = itemType->abilities;
+	if (abilities) {
+		lua_pushnumber(L, abilities->experience);
+	} else {
+		lua_pushnil(L);
+	}
+	return 1;   
 }
 
 // Combat

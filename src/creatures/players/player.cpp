@@ -2094,7 +2094,10 @@ void Player::addExperience(Creature* source, uint64_t exp, bool sendText/* = fal
 	if (exp == 0) {
 		return;
 	}
-
+    
+	std::cout << "PLAYER " << getName() << "Otrzymal expa: " << experience << std::endl;
+	std::cout << "PLAYER " << getName() << "Otrzymal expa 2: " << exp << std::endl;
+	
 	experience += exp;
 
 	if (sendText) {

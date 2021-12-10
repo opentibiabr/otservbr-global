@@ -744,6 +744,10 @@ uint32_t MoveEvent::EquipItem(MoveEvent* moveEvent, Player* player, Item* item, 
 	if (it.abilities->speed != 0) {
 		g_game.changeSpeed(player, it.abilities->speed);
 	}
+	
+	if (it.abilities->experience != 0) {
+		std::cout << "GUL GUL GUL" << std::endl;
+	}
 
 	if (it.abilities->conditionSuppressions != 0) {
 		player->addConditionSuppressions(it.abilities->conditionSuppressions);

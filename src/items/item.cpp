@@ -1024,6 +1024,12 @@ std::vector<std::pair<std::string, std::string>>
 				ss << std::showpos << (it.abilities->speed >> 1) << std::noshowpos;
 				descriptions.emplace_back("Speed", ss.str());
 			}
+			
+			if (it.abilities->experience) {
+				ss.str("");
+				ss << std::showpos << it.abilities->experience << std::noshowpos;
+				descriptions.emplace_back("Experience", ss.str());
+			}
 
 			if (hasBitSet(CONDITION_DRUNK, it.abilities->conditionSuppressions)) {
 				ss.str("");
@@ -1271,6 +1277,12 @@ std::vector<std::pair<std::string, std::string>>
 				ss.str("");
 				ss << std::showpos << (it.abilities->speed >> 1) << std::noshowpos;
 				descriptions.emplace_back("Speed", ss.str());
+			}
+			
+			if (it.abilities->experience) {
+				ss.str("");
+				ss << std::showpos << (it.abilities->experience) << std::noshowpos;
+				descriptions.emplace_back("Experience", ss.str());
 			}
 
 			if (hasBitSet(CONDITION_DRUNK, it.abilities->conditionSuppressions)) {
@@ -1690,6 +1702,17 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 
 					s << "speed " << std::showpos << (it.abilities->speed >> 1) << std::noshowpos;
 				}
+				
+				if (it.abilities->experience) {
+					if (begin) {
+						begin = false;
+						s << " (";
+					} else {
+						s << ", ";
+					}
+
+					s << "experience " << std::showpos << (it.abilities->experience) << std::noshowpos;
+				}
 			}
 
 			if (!begin) {
@@ -1876,6 +1899,17 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 
 					s << "speed " << std::showpos << (it.abilities->speed >> 1) << std::noshowpos;
 				}
+				
+				if (it.abilities->experience) {
+					if (begin) {
+						begin = false;
+						s << " (";
+					} else {
+						s << ", ";
+					}
+
+					s << "experience " << std::showpos << (it.abilities->experience) << std::noshowpos;
+				}
 			}
 
 			if (!begin) {
@@ -2035,6 +2069,17 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 
 				s << "speed " << std::showpos << (it.abilities->speed >> 1) << std::noshowpos;
 			}
+			
+			if (it.abilities->experience) {
+				if (begin) {
+					begin = false;
+					s << " (";
+				} else {
+					s << ", ";
+				}
+
+				s << "experience " << std::showpos << (it.abilities->experience) << std::noshowpos;
+			}
 		}
 
 		if (!begin) {
@@ -2067,6 +2112,8 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 				s << " (faster regeneration)";
 			} else if (it.abilities->manaShield) {
 				s << " (mana shield)";
+			} else if (it.abilities->experience) {
+				s << " (experience)";
 			} else {
 				found = false;
 			}
@@ -2385,6 +2432,19 @@ LightInfo Item::getLightInfo() const
 	const ItemType& it = items[id];
 	return {it.lightLevel, it.lightColor};
 }
+
+int16_t Item::getExperience()
+{
+	int16_t value = 0;
+	const ItemType& it = Item::items[id];
+	if (it.abilities) {
+		value += it.abilities->experience;
+	}
+
+	return value;
+}
+	
+
 
 std::string ItemAttributes::emptyString;
 int64_t ItemAttributes::emptyInt;

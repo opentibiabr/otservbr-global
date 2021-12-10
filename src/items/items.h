@@ -123,6 +123,7 @@ struct Abilities {
 		int32_t skills[SKILL_LAST + 1] = { 0 };
 
 		int32_t speed = 0;
+		int32_t experience = 0;
 
 		// field damage abilities modifiers
 		int16_t fieldAbsorbPercent[COMBAT_COUNT] = { 0 };
@@ -155,6 +156,10 @@ struct Abilities {
 
 		uint32_t getHealthTicks() const {
 			return healthTicks / g_config.getFloat(ConfigManager::RATE_HEALTH_REGEN_SPEED);
+		}
+		
+		uint32_t getExperience() const {
+			return experience;
 		}
 
 		void setManaGain(uint32_t value) {

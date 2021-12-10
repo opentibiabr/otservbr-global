@@ -979,6 +979,8 @@ class Item : virtual public Thing
 
 		uint32_t getWorth() const;
 		LightInfo getLightInfo() const;
+		
+		int16_t getExperience();
 
 		bool hasProperty(ITEMPROPERTY prop) const;
 		bool isBlocking() const {
