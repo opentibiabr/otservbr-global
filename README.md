@@ -29,7 +29,7 @@ You are subject to our code of conduct, read at [this link](https://github.com/o
 
 * **WARNING: YOU NEED TO UNZIP THE MAP BEFORE START THE SERVER.**
 * [Compiling on Windows](https://forums.otserv.com.br/index.php?/forums/topic/169235-windowsvc2019-compilando-sources-otservbr-global/), alternatively if you are ****not** going to change anything on the source** you can download the latest compiled version for windows from [nightly builds for Windows](https://ci.appveyor.com/project/opentibiabr/otservbr-global/build/artifacts).
-* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/otservbr-global/wiki/Compiling-on-Ubuntu-or-Debian-GNU-Linux), [Windows](https://github.com/opentibiabr/otservbr-global/wiki/Compiling-on-Windows-(vcpkg)))
+* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/otservbr-global/wiki/Compiling-on-Debian-or-Ubuntu), [Windows](https://github.com/opentibiabr/otservbr-global/wiki/Compiling-on-Windows))
 
 ### Issues
 
