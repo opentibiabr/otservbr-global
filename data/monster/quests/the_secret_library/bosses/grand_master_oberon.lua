@@ -1,4 +1,4 @@
-dofile("data/monster/quests/the_secret_library/bosses/grande_master_oberon_functions.lua")
+dofile("data/monster/quests/the_secret_library/bosses/grand_master_oberon_functions.lua")
 
 local mType = Game.createMonsterType("Grand Master Oberon")
 local monster = {}
