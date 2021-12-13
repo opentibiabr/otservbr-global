@@ -810,6 +810,20 @@ local function setNewTradeTable(table)
 	return items
 end
 
+local function onSell(cid, item, subType, amount, ignoreCap, inBackpacks)
+	local player = Player(cid)
+	local creatureId = Creature(cid):getId()
+	local items = setNewTradeTable(getTable(creatureId))
+
+	if items[item].sellPrice and player:removeItem(items[item].itemId, amount) then
+		player:addMoney(items[item].sellPrice * amount)
+		return player:sendTextMessage(MESSAGE_LOOK, 'Sold '..amount..'x '..items[item].realName..' for '..items[item].sellPrice * amount..' gold coins.')
+	end
+
+	selfSay("You don't have item to sell.", cid)
+	return true
+end
+
 local function onBuy(cid, item, subType, amount, ignoreCap, inBackpacks)
 	local player = Player(cid)
 	local creatureId = Creature(cid):getId()
