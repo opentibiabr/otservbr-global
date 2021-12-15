@@ -5439,7 +5439,7 @@ void Player::addItemImbuementStats(const Imbuement* imbuement)
 	bool requestUpdate = false;
 	// Check imbuement skills
 	for (int32_t i = SKILL_FIRST; i <= SKILL_LAST; ++i) {
-		if (imbuement->skills[i] && (i != SKILL_CRITICAL_HIT_CHANCE || !it.abilities || !it.abilities->skills[i])) {
+		if (imbuement->skills[i]) {
 			requestUpdate = true;
 			setVarSkill(static_cast<skills_t>(i), imbuement->skills[i]);
 		}
@@ -5478,7 +5478,7 @@ void Player::removeItemImbuementStats(const Imbuement* imbuement)
 
 	// Check imbuement skills
 	for (int32_t i = SKILL_FIRST; i <= SKILL_LAST; ++i) {
-		if (imbuement->skills[i] && (i != SKILL_CRITICAL_HIT_CHANCE || !it.abilities || !it.abilities->skills[i])) {
+		if (imbuement->skills[i]) {
 			requestUpdate = true;
 			setVarSkill(static_cast<skills_t>(i), -imbuement->skills[i]);
 		}
