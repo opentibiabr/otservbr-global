@@ -515,7 +515,7 @@ void Player::updateInventoryImbuement(bool init /* = false */)
 			int32_t duration = std::max<int32_t>(0, imbuementInfo.duration - EVENT_IMBUEMENT_INTERVAL / 1000);
 			item->setImbuement(slotid, imbuementInfo.imbuement->getID(), duration);
 			if (duration == 0) {
-				removeItemImbuementStats(imbuementInfo.imbuement, Item::items[item->getID()]);
+				removeItemImbuementStats(imbuementInfo.imbuement);
 				g_game.decreasePlayerActiveImbuements(getID());
 			}
 
@@ -1275,7 +1275,7 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 	}
 
 	if (item->getParent() == this) {
-		addItemImbuementStats(imbuement, Item::items[item->getID()]);
+		addItemImbuementStats(imbuement);
 	}
 
 	item->setImbuement(slot, imbuement->getID(), baseImbuement->duration);
@@ -1312,7 +1312,7 @@ void Player::onClearImbuement(Item* item, uint8_t slot)
 	}
 
 	if (item->getParent() == this) {
-		removeItemImbuementStats(imbuementInfo.imbuement, Item::items[item->getID()]);
+		removeItemImbuementStats(imbuementInfo.imbuement);
 	}
 
 	item->setImbuement(slot, imbuementInfo.imbuement->getID(), 0);
@@ -5434,7 +5434,7 @@ uint16_t Player::getFreeBackpackSlots() const
 	return counter;
 }
 
-void Player::addItemImbuementStats(const Imbuement* imbuement, const ItemType& it)
+void Player::addItemImbuementStats(const Imbuement* imbuement)
 {
 	bool requestUpdate = false;
 	// Check imbuement skills
@@ -5443,11 +5443,6 @@ void Player::addItemImbuementStats(const Imbuement* imbuement, const ItemType& i
 			requestUpdate = true;
 			setVarSkill(static_cast<skills_t>(i), imbuement->skills[i]);
 		}
-	}
-
-	if (requestUpdate) {
-		sendSkills();
-		requestUpdate = false;
 	}
 
 	// Check imbuement magic level
@@ -5477,7 +5472,7 @@ void Player::addItemImbuementStats(const Imbuement* imbuement, const ItemType& i
 	return;
 }
 
-void Player::removeItemImbuementStats(const Imbuement* imbuement, const ItemType& it)
+void Player::removeItemImbuementStats(const Imbuement* imbuement)
 {
 	bool requestUpdate = false;
 
@@ -5487,11 +5482,6 @@ void Player::removeItemImbuementStats(const Imbuement* imbuement, const ItemType
 			requestUpdate = true;
 			setVarSkill(static_cast<skills_t>(i), -imbuement->skills[i]);
 		}
-	}
-
-	if (requestUpdate) {
-		sendSkills();
-		requestUpdate = false;
 	}
 
 	// Check imbuement magic level
