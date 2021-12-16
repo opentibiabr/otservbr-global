@@ -78,7 +78,7 @@ monster.loot = {
 	{name = "red crystal fragment", chance = 13600000, maxCount = 2},
 	{name = "small enchanted ruby", chance = 13600000, maxCount = 3},
 	{name = "furry club", chance = 13600000},
-	{name = "red gem", chance = 13600000},
+	{id= 3039, chance = 13600000},
 	{name = "spiked squelcher", chance = 13600000},
 	{name = "stone skin amulet", chance = 13600000},
 	{name = "wereboar hooves", chance = 13600000, maxCount = 2},

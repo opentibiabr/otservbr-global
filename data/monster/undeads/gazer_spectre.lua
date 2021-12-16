@@ -86,7 +86,7 @@ monster.loot = {
 	{name = "Small Enchanted Ruby", chance = 7500},
 	{name = "Small Diamond", chance = 6000},
 	{name = "Small Sapphire", chance = 5000},
-	{name = "Red Gem", chance = 4000},
+	{id= 3039, chance = 4000},
 	{name = "Yellow Gem", chance = 3000},
 	{id = 29299, chance = 1100},
 	{name = "Wand of Draconia", chance = 3500},

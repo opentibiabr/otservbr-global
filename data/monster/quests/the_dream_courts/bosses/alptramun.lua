@@ -86,7 +86,7 @@ monster.loot = {
 	{name = "Mysterious Remains", chance = 90000},
 	{name = "Piggy Bank", chance = 13770, maxCount = 4},
 	{name = "green gem", chance = 2740},
-	{name = "red gem", chance = 2580},
+	{id= 3039, chance = 2580},
 	{name = "Crunor Idol", chance = 2640},
 	{name = "Giant Ruby", chance = 2840},
 	{name = "Magic Sulphur", chance = 2740},

@@ -76,7 +76,7 @@ monster.loot = {
 	{name = "Broccoli", chance = 2439, maxCount = 10},
 	{name = "Small Diamond", chance = 498, maxCount = 10},
 	{name = "Blue Gem", chance = 2500},
-	{name = "Red Gem", chance = 2000},
+	{id= 3039, chance = 2000},
 	{name = "Deepling Ceremonial Dagger", chance = 200},
 	{name = "Deepling Fork", chance = 200},
 	{name = "True Book of Death", chance = 70000}

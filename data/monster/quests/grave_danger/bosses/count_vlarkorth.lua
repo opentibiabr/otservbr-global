@@ -81,7 +81,7 @@ monster.loot = {
 	{name = "gold ingot", minCount = 0, maxCount = 1, chance = 10000},
 	{name = "green gem", chance = 8200},
 	{name = "magic sulphur", chance = 6500},
-	{name = "red gem", chance = 8000},
+	{id= 3039, chance = 8000},
 	{id = 23529, chance = 5000},-- ring of blue plasma
 	{id = 23533, chance = 5000},-- ring of red plasma
 	{id = 23531, chance = 5000},-- ring of green plasma

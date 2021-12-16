@@ -93,7 +93,7 @@ monster.loot = {
 	{name = "ominous book", chance = 1000},
 	{name = "magic sulphur", chance = 1000, maxCount = 2},
 	{name = "muck rod", chance = 1000},
-	{name = "red gem", chance = 1000},
+	{id= 3039, chance = 1000},
 	{id = 8906, chance = 1000},
 	{id = 8900, chance = 1000},
 	{name = "silver Token", chance = 1000, maxCount = 6},

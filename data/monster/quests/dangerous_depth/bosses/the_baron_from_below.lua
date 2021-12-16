@@ -91,7 +91,7 @@ monster.loot = {
 	{name = "Luminous Orb", chance = 10000},
 	{name = "Magic Sulphur", chance = 10000, maxCount = 2},
 	{name = "Magma Coat", chance = 10000},
-	{name = "Red Gem", chance = 10000},
+	{id= 3039, chance = 10000},
 	{id = 8906, chance = 10000},
 	{id = 8900, chance = 10000},
 	{name = "Slimy Leg", chance = 10000},

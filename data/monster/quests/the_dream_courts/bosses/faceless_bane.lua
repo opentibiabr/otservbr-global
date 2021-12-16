@@ -72,7 +72,7 @@ monster.loot = {
 	{name = "Ice Rapier", chance = 42000},
 	{name = "Hailstorm Rod", chance = 42000},
 	{name = "Violet Crystal Shard", chance = 22000},
-	{name = "Red Gem", chance = 22000},
+	{id= 3039, chance = 22000},
 	{name = "Red Crystal Fragment", chance = 18000},
 	{name = "Small Sapphire", minCount = 1, maxCount = 3, chance = 25000},
 	{name = "Knife", chance = 19000},

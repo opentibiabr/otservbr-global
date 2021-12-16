@@ -69,7 +69,7 @@ monster.loot = {
 	{name = "chaos mace", chance = 25000},
 	{id = 30279, chance = 24500},
 	{name = "berserk potion", chance = 23000, maxCount = 10},
-	{name = "red gem", chance = 22500},
+	{id= 3039, chance = 22500},
 	{name = "soul stone", chance = 224000},
 	{id = 30275, chance = 25000},
 	{name = "flames of the percht queen", chance = 18000},
