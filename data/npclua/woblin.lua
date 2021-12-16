@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				He would not have stayed abroad that long without refilling his inkpot for his research notes. \z
 				But at least the amulet should be retrieved.", npc, creature)
 			player:removeItem(21402, 1)
-			key = player:addItem(23763, 1)
+			key = player:addItem(21392, 1)
 			key:setActionId(103)
 			player:setStorageValue(Storage.Quest.Dawnport.TheDormKey, 4)
 			npcHandler:setTopic(playerId, 0)
