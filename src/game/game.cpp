@@ -6511,7 +6511,6 @@ void Game::checkImbuements()
 	for (uint32_t playerId : toErase) {
 		setPlayerActiveImbuements(playerId, 0);
 	}
-
 }
 
 void Game::checkLight()
