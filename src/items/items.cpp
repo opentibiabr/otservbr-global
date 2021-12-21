@@ -1011,12 +1011,16 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 				if (!subKeyAttribute) {
 					continue;
 				}
+				pugi::xml_attribute subValueAttribute = subAttributeNode.attribute("value");
+				if (!subValueAttribute) {
+					continue;
+				}
 
 				auto itemMap = ImbuementsTypeMap.find(asLowerCaseString(subKeyAttribute.as_string()));
 				if (itemMap != ImbuementsTypeMap.end()) {
 					ImbuementTypes_t imbuementType = getImbuementType(asLowerCaseString(subKeyAttribute.as_string()));
 					if (imbuementType != IMBUEMENT_NONE) {
-						it.setImbuementType(imbuementType);
+						it.setImbuementType(imbuementType, pugi::cast<uint16_t>(subValueAttribute.value()));
 					}
 				}
 				else

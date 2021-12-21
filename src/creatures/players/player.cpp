@@ -1239,7 +1239,7 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 	uint32_t price = baseImbuement->price;
 	price += protectionCharm ? baseImbuement->protectionPrice : 0;
 
-	if (!g_game.removeMoney(this, price, 0, false))
+	if (!g_game.removeMoney(this, price, 0, true))
 	{
 		std::string message = "You don't have " + std::to_string(price) + " gold coins.";
 
@@ -1274,9 +1274,11 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 		return;
 	}
 
-	item->setImbuement(slot, imbuement->getID(), baseImbuement->duration);
+	if (item->getParent() == this) {
+		addItemImbuementStats(imbuement);
+	}
 
-	addItemImbuementStats(imbuement);
+	item->setImbuement(slot, imbuement->getID(), baseImbuement->duration);
 	openImbuementWindow(item);
 }
 
@@ -1299,7 +1301,7 @@ void Player::onClearImbuement(Item* item, uint8_t slot)
 		return;
 	}
 
-	if (!g_game.removeMoney(this, baseImbuement->removeCost, 0, false))
+	if (!g_game.removeMoney(this, baseImbuement->removeCost, 0, true))
 	{
 		std::string message = "You don't have " + std::to_string(baseImbuement->removeCost) + " gold coins.";
 
@@ -1307,6 +1309,10 @@ void Player::onClearImbuement(Item* item, uint8_t slot)
 		this->sendImbuementResult(message);
 		this->openImbuementWindow(item);
 		return;
+	}
+
+	if (item->getParent() == this) {
+		removeItemImbuementStats(imbuementInfo.imbuement);
 	}
 
 	item->setImbuement(slot, imbuementInfo.imbuement->getID(), 0);
@@ -5439,11 +5445,6 @@ void Player::addItemImbuementStats(const Imbuement* imbuement)
 		}
 	}
 
-	if (requestUpdate) {
-		sendSkills();
-		requestUpdate = false;
-	}
-
 	// Check imbuement magic level
 	for (int32_t s = STAT_FIRST; s <= STAT_LAST; ++s) {
 		if (imbuement->stats[s]) {
@@ -5481,11 +5482,6 @@ void Player::removeItemImbuementStats(const Imbuement* imbuement)
 			requestUpdate = true;
 			setVarSkill(static_cast<skills_t>(i), -imbuement->skills[i]);
 		}
-	}
-
-	if (requestUpdate) {
-		sendSkills();
-		requestUpdate = false;
 	}
 
 	// Check imbuement magic level
