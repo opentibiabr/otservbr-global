@@ -128,7 +128,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	if msgcontains(message, 'buy') then
 		npcHandler:say("I'm sorry, I don't buy anything. My main concern right now is the bulding of this temple.", npc, creature)
-		openShopWindow(creature, getTable(), onBuy, onSell)
+		npc:openShopWindow(creature)
 	end
 
 	--- ##Astral Shaper Rune##

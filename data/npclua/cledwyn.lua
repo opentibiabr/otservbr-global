@@ -47,65 +47,38 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-local shop = {
-	{id=22521, buy=100, sell=0, name='earthheart cuirass'},
-	{id=22522, buy=100, sell=0, name='earthheart hauberk'},
-	{id=22523, buy=100, sell=0, name='earthheart platemail'},
-	{id=22535, buy=100, sell=0, name='earthmind raiment'},
-	{id=22531, buy=100, sell=0, name='earthsoul tabard'},
-	{id=22518, buy=100, sell=0, name='fireheart cuirass'},
-	{id=22519, buy=100, sell=0, name='fireheart hauberk'},
-	{id=22520, buy=100, sell=0, name='fireheart platemail'},
-	{id=22534, buy=100, sell=0, name='firemind raiment'},
-	{id=22530, buy=100, sell=0, name='firesoul tabard'},
-	{id=22527, buy=100, sell=0, name='frostheart cuirass'},
-	{id=22528, buy=100, sell=0, name='frostheart hauberk'},
-	{id=22529, buy=100, sell=0, name='frostheart platemail'},
-	{id=22537, buy=100, sell=0, name='frostmind raiment'},
-	{id=22533, buy=100, sell=0, name='frostsoul tabard'},
-	{id=35563, buy=1, sell=0, name='magic shield potion'},
-	{id=22524, buy=100, sell=0, name='thunderheart cuirass'},
-	{id=22525, buy=100, sell=0, name='thunderheart hauberk'},
-	{id=22526, buy=100, sell=0, name='thunderheart platemail'},
-	{id=22536, buy=100, sell=0, name='thundermind raiment'},
-	{id=22532, buy=100, sell=0, name='thundersoul tabard'}
+npcConfig.shop = {
+	{ clientId= 22521, buy = 100, itemName = "earthheart cuirass"},
+	{ clientId= 22522, buy = 100, itemName = "earthheart hauberk"},
+	{ clientId= 22523, buy = 100, itemName = "earthheart platemail"},
+	{ clientId= 22535, buy = 100, itemName = "earthmind raiment"},
+	{ clientId= 22531, buy = 100, itemName = "earthsoul tabard"},
+	{ clientId= 22518, buy = 100, itemName = "fireheart cuirass"},
+	{ clientId= 22519, buy = 100, itemName = "fireheart hauberk"},
+	{ clientId= 22520, buy = 100, itemName = "fireheart platemail"},
+	{ clientId= 22534, buy = 100, itemName = "firemind raiment"},
+	{ clientId= 22530, buy = 100, itemName = "firesoul tabard"},
+	{ clientId= 22527, buy = 100, itemName = "frostheart cuirass"},
+	{ clientId= 22528, buy = 100, itemName = "frostheart hauberk"},
+	{ clientId= 22529, buy = 100, itemName = "frostheart platemail"},
+	{ clientId= 22537, buy = 100, itemName = "frostmind raiment"},
+	{ clientId= 22533, buy = 100, itemName = "frostsoul tabard"},
+	{ clientId= 35563, buy = 1, itemName = "magic shield potion"},
+	{ clientId= 22524, buy = 100, itemName = "thunderheart cuirass"},
+	{ clientId= 22525, buy = 100, itemName = "thunderheart hauberk"},
+	{ clientId= 22526, buy = 100, itemName = "thunderheart platemail"},
+	{ clientId= 22536, buy = 100, itemName = "thundermind raiment"},
+	{ clientId= 22532, buy = 100, itemName = "thundersoul tabard"}
 }
 
-local function setNewTradeTable(table)
-	local items, item = {}
-	for i = 1, #table do
-		item = table[i]
-		items[item.id] = {id = item.id, buy = item.buy, sell = item.sell, subType = 0, name = item.name}
-	end
-	return items
+-- On buy npc shop message
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
+	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
 end
-
-local function onBuy(creature, item, subType, amount, ignoreCap, inBackpacks)
-	local player = Player(creature)
-	local itemsTable = setNewTradeTable(shop)
-	if not ignoreCap and player:getFreeCapacity() < ItemType(itemsTable[item].id):getWeight(amount) then
-		return player:sendTextMessage(MESSAGE_FAILURE, "You don't have enough cap.")
-	end
-	if itemsTable[item].buy then
-		if player:removeItem(Npc():getCurrency(), amount * itemsTable[item].buy) then
-			if amount > 1 then
-				currencyName = ItemType(Npc():getCurrency()):getPluralName():lower()
-			else
-				currencyName = ItemType(Npc():getCurrency()):getName():lower()
-			end
-			player:addItem(itemsTable[item].id, amount)
-			return player:sendTextMessage(MESSAGE_TRADE,
-						"Bought "..amount.."x "..itemsTable[item].name.." for "..itemsTable[item].buy * amount.." "..currencyName..".")
-		else
-			return player:sendTextMessage(MESSAGE_FAILURE, "You don't have enough "..currencyName..".")
-		end
-	end
-
-	return true
-end
-
-local function onSell(creature, item, subType, amount, ignoreCap, inBackpacks)
-	return true
+-- On sell npc shop message
+npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
 end
 
 local chargeItem = {
@@ -115,11 +88,6 @@ local chargeItem = {
 	['theurgic amulet'] = {noChargeID = 30401, ChargeID = 30403},
 	['ring of souls'] = {noChargeID = 32621, ChargeID = 32636}
 }
-
-local function greetCallback(npc, creature)
-	local playerId = creature:getId()
-	return true
-end
 
 npcConfig.voices = {
 	interval = 5000,
@@ -156,10 +124,17 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)	local player = Player(creature)
-	if not player then
+function creatureSayCallback(npc, creature, type, message)
+	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
+
+	local playerId = creature:getId()
+	local player = Player(creature)
+	if not player or not playerId then
+		return false
+	end
+
 	if msgcontains(message, 'token') or msgcontains(message, 'tokens') then
 		npcHandler:say("If you have any {silver} tokens with you, let's have a look! Maybe I can offer you something in exchange.", npc, creature)
 	elseif msgcontains(message, 'information') then
@@ -169,7 +144,8 @@ function creatureSayCallback(npc, creature, type, message)	local player = Player
 						 "The weather continues just fine here, don't you think? Just the day for a little walk around the town! ...",
 						 "Actually, I haven't been around much yet, but I'm looking forward to exploring the city once I've finished trading {token}s."}, npc, creature)
 	elseif msgcontains(message, 'silver') then
-		openShopWindow(creature, shop, onBuy, onSell)
+		npc:setCurrency(22516)
+		npc:openShopWindow(creature)
 		npcHandler:say({"Here's the deal, " .. player:getName() .. ". For 100 of your silver tokens, I can offer you some first-class torso armor. These armors provide a solid boost to your main attack skill, as well as ...",
 		"some elemental protection of your choice! I also sell a magic shield potion for one silver token. So these are my offers."}, npc, creature)
 	elseif msgcontains(message, 'enchant') then
@@ -242,7 +218,7 @@ function creatureSayCallback(npc, creature, type, message)	local player = Player
 	return true
 end
 
-npcHandler:setCallback(CALLBACK_GREET, greetCallback)
+npcHandler:setMessage(MESSAGE_GREET, "Blessings, Player! How may I be of service? Do you wish to trade some {token}s, or would you like some {information} or {talk}?")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
