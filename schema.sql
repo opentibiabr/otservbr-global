@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `server_config` (
 	CONSTRAINT `server_config_pk` PRIMARY KEY (`config`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '17'), ('motd_hash', ''), ('motd_num', '0'), ('players_record', '0');
+INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '18'), ('motd_hash', ''), ('motd_num', '0'), ('players_record', '0');
 
 -- --------------------------------------------------------
 
@@ -484,10 +484,12 @@ DELIMITER ;
 --
 
 CREATE TABLE IF NOT EXISTS `house_lists` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`house_id` int(11) NOT NULL,
 	`listid` int(11) NOT NULL,
 	`list` text NOT NULL,
 	INDEX `house_id` (`house_id`),
+	CONSTRAINT `house_lists_pk` PRIMARY KEY (`id`),
 	CONSTRAINT `houses_list_house_fk`
 		FOREIGN KEY (`house_id`) REFERENCES `houses` (`id`)
 		ON DELETE CASCADE
@@ -579,6 +581,7 @@ CREATE TABLE IF NOT EXISTS `players_online` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_charms` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_guid` INT(250) NOT NULL,
 	`charm_points` VARCHAR(250) NULL,
 	`charm_expansion` BOOLEAN NULL,
@@ -603,7 +606,8 @@ CREATE TABLE IF NOT EXISTS `player_charms` (
 	`rune_void` INT(250) NULL,
 	`UsedRunesBit` VARCHAR(250) NULL,
 	`UnlockedRunesBit` VARCHAR(250) NULL,
-	`tracker list` BLOB NULL
+	`tracker list` BLOB NULL,
+	CONSTRAINT `player_charms_pk` PRIMARY KEY (`id`)
 ) ENGINE = InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -613,6 +617,7 @@ CREATE TABLE IF NOT EXISTS `player_charms` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_deaths` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL,
 	`time` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
 	`level` int(11) NOT NULL DEFAULT '1',
@@ -625,6 +630,7 @@ CREATE TABLE IF NOT EXISTS `player_deaths` (
 	INDEX `player_id` (`player_id`),
 	INDEX `killed_by` (`killed_by`),
 	INDEX `mostdamage_by` (`mostdamage_by`),
+	CONSTRAINT `player_deaths_pk` PRIMARY KEY (`id`),
 	CONSTRAINT `player_deaths_players_fk`
 		FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
 		ON DELETE CASCADE
@@ -699,6 +705,7 @@ CREATE TABLE IF NOT EXISTS `player_inboxitems` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_items` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL DEFAULT '0',
 	`pid` int(11) NOT NULL DEFAULT '0',
 	`sid` int(11) NOT NULL DEFAULT '0',
@@ -707,6 +714,7 @@ CREATE TABLE IF NOT EXISTS `player_items` (
 	`attributes` blob NOT NULL,
 	INDEX `player_id` (`player_id`),
 	INDEX `sid` (`sid`),
+	CONSTRAINT `player_items_pk` PRIMARY KEY (`id`),
 	CONSTRAINT `player_items_players_fk`
 		FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
 		ON DELETE CASCADE
@@ -719,10 +727,12 @@ CREATE TABLE IF NOT EXISTS `player_items` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_kills` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL,
 	`time` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
 	`target` int(11) NOT NULL,
-	`unavenged` tinyint(1) NOT NULL DEFAULT '0'
+	`unavenged` tinyint(1) NOT NULL DEFAULT '0',
+	CONSTRAINT `player_kills_pk` PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -732,8 +742,10 @@ CREATE TABLE IF NOT EXISTS `player_kills` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_misc` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL,
-	`info` blob NOT NULL
+	`info` blob NOT NULL,
+	CONSTRAINT `player_misc_pk` PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -766,10 +778,12 @@ CREATE TABLE IF NOT EXISTS `player_namelocks` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_prey` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL,
 	`name` varchar(50) NOT NULL,
 	`mindex` smallint(6) NOT NULL,
-	`mcolumn` int(11) NOT NULL
+	`mcolumn` int(11) NOT NULL,
+	CONSTRAINT `player_prey_pk` PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -779,6 +793,7 @@ CREATE TABLE IF NOT EXISTS `player_prey` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_preytimes` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL,
 	`bonus_type1` int(11) NOT NULL,
 	`bonus_value1` int(11) NOT NULL,
@@ -788,7 +803,8 @@ CREATE TABLE IF NOT EXISTS `player_preytimes` (
 	`bonus_name2` varchar(50) NOT NULL,
 	`bonus_type3` int(11) NOT NULL,
 	`bonus_value3` int(11) NOT NULL,
-	`bonus_name3` varchar(50) NOT NULL
+	`bonus_name3` varchar(50) NOT NULL,
+	CONSTRAINT `player_preytimes_pk` PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -817,9 +833,11 @@ CREATE TABLE IF NOT EXISTS `player_rewards` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_spells` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL,
 	`name` varchar(255) NOT NULL,
 	INDEX `player_id` (`player_id`),
+	CONSTRAINT `player_spells_pk` PRIMARY KEY (`id`),
 	CONSTRAINT `player_spells_players_fk`
 		FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
 		ON DELETE CASCADE
@@ -832,9 +850,11 @@ CREATE TABLE IF NOT EXISTS `player_spells` (
 --
 
 CREATE TABLE IF NOT EXISTS `player_stash` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` INT(16) NOT NULL,
 	`item_id` INT(16) NOT NULL,
-	`item_count` INT(32) NOT NULL
+	`item_count` INT(32) NOT NULL,
+	CONSTRAINT `player_stash_pk` PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -882,9 +902,11 @@ CREATE TABLE IF NOT EXISTS `store_history` (
 --
 
 CREATE TABLE IF NOT EXISTS `tile_store` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`house_id` int(11) NOT NULL,
 	`data` longblob NOT NULL,
 	INDEX `house_id` (`house_id`),
+	CONSTRAINT `tile_store_pk` PRIMARY KEY (`id`),
 	CONSTRAINT `tile_store_account_fk`
 		FOREIGN KEY (`house_id`) REFERENCES `houses` (`id`)
 		ON DELETE CASCADE
@@ -897,6 +919,7 @@ CREATE TABLE IF NOT EXISTS `tile_store` (
 --
 
 CREATE TABLE IF NOT EXISTS `prey_slots` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`player_id` int(11) NOT NULL,
 	`num` smallint(2) NOT NULL,
 	`state` smallint(2) NOT NULL DEFAULT '1',
@@ -911,6 +934,7 @@ CREATE TABLE IF NOT EXISTS `prey_slots` (
 	`bonus_grade` smallint(3) NOT NULL DEFAULT '0',
 	`tick` smallint(3) NOT NULL DEFAULT '0',
 	INDEX `player_id` (`player_id`),
+	CONSTRAINT `prey_slots_pk` PRIMARY KEY (`id`),
 	CONSTRAINT `prey_slots_players_fk`
 		FOREIGN KEY (`player_id`) REFERENCES `players` (`id`)
 		ON DELETE CASCADE
