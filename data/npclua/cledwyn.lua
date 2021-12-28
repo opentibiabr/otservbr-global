@@ -23,29 +23,7 @@ npcConfig.flags = {
 	floorchange = false
 }
 
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-local talkState = {}
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
-end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
-end
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
+npcConfig.currency = 22516
 
 npcConfig.shop = {
 	{ clientId= 22521, buy = 100, itemName = "earthheart cuirass"},
@@ -79,6 +57,30 @@ end
 -- On sell npc shop message
 npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+
+local keywordHandler = KeywordHandler:new()
+local npcHandler = NpcHandler:new(keywordHandler)
+
+local talkState = {}
+npcType.onAppear = function(npc, creature)
+	npcHandler:onAppear(npc, creature)
+end
+
+npcType.onDisappear = function(npc, creature)
+	npcHandler:onDisappear(npc, creature)
+end
+
+npcType.onSay = function(npc, creature, type, message)
+	npcHandler:onSay(npc, creature, type, message)
+end
+
+npcType.onCloseChannel = function(npc, creature)
+	npcHandler:onCloseChannel(npc, creature)
+end
+
+npcType.onThink = function(npc, interval)
+	npcHandler:onThink(npc, interval)
 end
 
 local chargeItem = {
@@ -144,7 +146,6 @@ function creatureSayCallback(npc, creature, type, message)
 						 "The weather continues just fine here, don't you think? Just the day for a little walk around the town! ...",
 						 "Actually, I haven't been around much yet, but I'm looking forward to exploring the city once I've finished trading {token}s."}, npc, creature)
 	elseif msgcontains(message, 'silver') then
-		npc:setCurrency(22516)
 		npc:openShopWindow(creature)
 		npcHandler:say({"Here's the deal, " .. player:getName() .. ". For 100 of your silver tokens, I can offer you some first-class torso armor. These armors provide a solid boost to your main attack skill, as well as ...",
 		"some elemental protection of your choice! I also sell a magic shield potion for one silver token. So these are my offers."}, npc, creature)

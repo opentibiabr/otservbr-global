@@ -23,30 +23,28 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+npcConfig.shop = {
+	{clientId = 19214, buy = 250, count = 4, storage = SPIKE_MIDDLE_MUSHROOM_MAIN},
+	{clientId = 19205, buy = 150, count = 3, storage = SPIKE_UPPER_TRACK_MAIN},
+	{clientId = 19219, buy = 100, count = 4, storage = SPIKE_LOWER_PARCEL_MAIN},
+	{clientId = 19207, buy = 250, count = 1, storage = SPIKE_MIDDLE_CHARGE_MAIN},
+	{clientId = 19203, buy = 150, count = 4, storage = SPIKE_UPPER_MOUND_MAIN},
+	{clientId = 19206, buy = 500, count = 1, storage = SPIKE_LOWER_LAVA_MAIN},
+	{clientId = 19204, buy = 150, count = 7, storage = SPIKE_UPPER_PACIFIER_MAIN}
+}
+-- On buy npc shop message
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
+	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On sell npc shop message
+npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 
-local talkState = {}
-
-local spike_items = {
-	[19214] = {250, 4, SPIKE_MIDDLE_MUSHROOM_MAIN},
-	[19205] = {150, 3, SPIKE_UPPER_TRACK_MAIN},
-	[19219] = {100, 4, SPIKE_LOWER_PARCEL_MAIN},
-	[19207] = {250, 1, SPIKE_MIDDLE_CHARGE_MAIN},
-	[19203] = {150, 4, SPIKE_UPPER_MOUND_MAIN},
-	[19206] = {500, 1, SPIKE_LOWER_LAVA_MAIN},
-	[19204] = {150, 7, SPIKE_UPPER_PACIFIER_MAIN}
-}
-
-local onBuy = function(creature, item, subType, amount, ignoreCap, inBackpacks)
-	if not doPlayerRemoveMoney(creature, spike_items[item][1] * amount) then
-		selfSay("You don't have enough money.", npc, creature)
-	else
-		doPlayerAddItem(creature, item, amount)
-		selfSay("Here you are!", npc, creature)
-	end
-	return true
-end
 npcType.onAppear = function(npc, creature)
 	npcHandler:onAppear(npc, creature)
 end
@@ -68,26 +66,6 @@ npcType.onThink = function(npc, interval)
 end
 
 function creatureSayCallback(npc, creature, type, message)
-
-	local player, canBuy, shopWindow = Player(creature), false, {}
-
-	for itemid, data in pairs(spike_items) do
-		if not isInArray({-1, data[2]}, player:getStorageValue(data[3])) then
-			canBuy = true
-			table.insert(shopWindow, {id = itemid, subType = 0, buy = data[1], sell = 0, name = ItemType(itemid):getName()})
-		end
-	end
-
-	if msgcontains(message, 'trade') then
-		if canBuy then
-			openShopWindow(creature, shopWindow, onBuy, onSell)
-			return npcHandler:say("Here you are.", npc, creature)
-		else
-			return npcHandler:say("Sorry, there's nothing for you right now.", npc, creature)
-		end
-		return true
-	end
-
 	if msgcontains(message, 'job') then
 		npcHandler:say("I'm responsible for resupplying foolish adventurers with equipment that they may have lost. If you're one of them, just ask me about a {trade}. ", npc, creature)
 	end

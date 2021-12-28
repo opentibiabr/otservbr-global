@@ -152,3 +152,9 @@ registerNpcType.shop = function(npcType, mask)
 		end
 	end
 end
+
+registerNpcType.currency = function(npcType, mask)
+	if mask.currency then
+		npcType:currency(mask.currency)
+	end
+end

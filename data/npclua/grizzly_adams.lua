@@ -23,6 +23,81 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+npcConfig.shop = {
+	-- HuntsMan rank
+	-- Sell offers
+	{clientId = 10297, sell = 50, itemName = "antlers", storage = {POINTSSTORAGE, 1}},
+	{clientId = 9633, sell = 100, itemName = "bloody pincers", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10272, sell = 35, itemName = "crab pincers", storage = {POINTSSTORAGE, 1}},
+	{clientId = 9657, sell = 55, itemName = "cyclops toe", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12316, sell = 550, itemName = "cavebear skull", storage = {POINTSSTORAGE, 1}},
+	{clientId = 17818, sell = 150, itemName = "cheesy figurine", storage = {POINTSSTORAGE, 1}},
+	{clientId = 11514, sell = 110, itemName = "colourful feather", storage = {POINTSSTORAGE, 1}},
+	{clientId = 7398, sell = 500, itemName = "cyclops trophy", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10398, sell = 15000, itemName = "draken trophy", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12309, sell = 800, itemName = "draptor scales", storage = {POINTSSTORAGE, 1}},
+	{clientId = 18994, sell = 115, itemName = "elven hoof", storage = {POINTSSTORAGE, 1}},
+	{clientId = 9648, sell = 30, itemName = "frosty ear of a troll", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12317, sell = 950, itemName = "giant crab pincer", storage = {POINTSSTORAGE, 1}},
+	{clientId = 11539, sell = 20, itemName = "goblin ear", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12314, sell = 400, itemName = "hollow stampor hoof", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10282, sell = 600, itemName = "hydra head", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10455, sell = 80, itemName = "lancer beetle shell", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10419, sell = 8000, itemName = "lizard trophy", storage = {POINTSSTORAGE, 1}},
+	{clientId = 11489, sell = 280, itemName = "mantassin tail", storage = {POINTSSTORAGE, 1}},
+	{clientId = 17461, sell = 65, itemName = "marsh stalker beak", storage = {POINTSSTORAGE, 1}},
+	{clientId = 17462, sell = 50, itemName = "marsh stalker feather", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12315, sell = 250, itemName = "maxilla", storage = {POINTSSTORAGE, 1}},
+	{clientId = 7401, sell = 500, itemName = "minotaur trophy", storage = {POINTSSTORAGE, 1}},
+	{clientId = 9662, sell = 420, itemName = "mutated bat ear", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12039, sell = 750, itemName = "panther head", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12040, sell = 300, itemName = "panther paw", storage = {POINTSSTORAGE, 1}},
+	{clientId = 11491, sell = 500, itemName = "quara bone", storage = {POINTSSTORAGE, 1}},
+	{clientId = 11491, sell = 350, itemName = "quara eye", storage = {POINTSSTORAGE, 1}},
+	{clientId = 11490, sell = 410, itemName = "quara pincers", storage = {POINTSSTORAGE, 1}},
+	{clientId = 11487, sell = 140, itemName = "quara tentacle", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12172, sell = 50, itemName = "rabbit's foot", storage = {POINTSSTORAGE, 1}},
+	{clientId = 18993, sell = 70, itemName = "rorc feather", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10311, sell = 400, itemName = "sabretooth"},
+	{clientId = 10456, sell = 20, itemName = "sandcrawler shell", storage = {POINTSSTORAGE, 1}},
+	{clientId = 9631, sell = 280, itemName = "scarab pincers", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12312, sell = 280, itemName = "stampor horn", storage = {POINTSSTORAGE, 1}},
+	{clientId = 12313, sell = 150, itemName = "stampor talons", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10454, sell = 60, itemName = "terramite legs", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10452, sell = 170, itemName = "terramite shell", storage = {POINTSSTORAGE, 1}},
+	{clientId = 10273, sell = 95, itemName = "terrorbird beak", storage = {POINTSSTORAGE, 1}},
+	-- Buy offers
+	{clientId = 5907, buy = 35000, itemName = "slingshot", storage = {POINTSSTORAGE, 1}},
+	-- BigGameHunter rank
+	{clientId = 10244, sell = 6000, itemName = "bonebeast trophy", storage = {POINTSSTORAGE, 20}},
+	{clientId = 7397, sell = 3000, itemName = "deer trophy", storage = {POINTSSTORAGE, 20}},
+	{clientId = 7400, sell = 3000, itemName = "lion trophy", storage = {POINTSSTORAGE, 20}},
+	{clientId = 7395, sell = 1000, itemName = "orc trophy", storage = {POINTSSTORAGE, 20}},
+	{clientId = 7394, sell = 3000, itemName = "wolf trophy", storage = {POINTSSTORAGE, 20}},
+	-- TrophyHunter rank
+	-- Sell offers
+	{clientId = 7396, sell = 20000, itemName = "behemoth trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 7393, sell = 40000, itemName = "demon trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 7399, sell = 10000, itemName = "dragon lord trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 10421, sell = 3000, itemName = "disgusting trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 22101, sell = 9000, itemName = "werebadger trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 22102, sell = 10000, itemName = "wereboar trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 22103, sell = 11000, itemName = "werebear trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 27706, sell = 9000, itemName = "werefox trophy", storage = {POINTSSTORAGE, 70}},
+	{clientId = 34219, sell = 12000, itemName = "werehyaena trophy", storage = {POINTSSTORAGE, 70}},
+	-- Buy offers
+	{clientId = 9601, buy = 1000, itemName = "demon backpack", storage = {POINTSSTORAGE, 70}}
+}
+-- On buy npc shop message
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
+	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On sell npc shop message
+npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 
@@ -50,96 +125,6 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-local choose = {}
-local cancel = {}
-
-local grizzlyAdamsConfig = {
-	ranks = {
-		huntsMan_rank = {
-			-- SELL OFFERS
-			{id=10297, buy=0, sell=50, name="antlers"},
-			{id=9633, buy=0, sell=100, name="bloody pincers"},
-			{id=10272, buy=0, sell=35, name="crab pincers"},
-			{id=9657, buy=0, sell=55, name="cyclops toe"},
-			{id=12316, buy=0, sell=550, name="cavebear skull"},
-			{id=17818, buy=0, sell=150, name="cheesy figurine"},
-			{id=11514, buy=0, sell=110, name="colourful feather"},
-			{id=7398, buy=0, sell=500, name="cyclops trophy"},
-			{id=10398, buy=0, sell=15000, name="draken trophy"},
-			{id=12309, buy=0, sell=800, name="draptor scales"},
-			{id=18994, buy=0, sell=115, name="elven hoof"},
-			{id=9648, buy=0, sell=30, name="frosty ear of a troll"},
-			{id=12317, buy=0, sell=950, name="giant crab pincer"},
-			{id=11539, buy=0, sell=20, name="goblin ear"},
-			{id=12314, buy=0, sell=400, name="hollow stampor hoof"},
-			{id=10282, buy=0, sell=600, name="hydra head"},
-			{id=10455, buy=0, sell=80, name="lancer beetle shell"},
-			{id=10419, buy=0, sell=8000, name="lizard trophy"},
-			{id=11489, buy=0, sell=280, name="mantassin tail"},
-			{id=17461, buy=0, sell=65, name="marsh stalker beak"},
-			{id=17462, buy=0, sell=50, name="marsh stalker feather"},
-			{id=12315, buy=0, sell=250, name="maxilla"},
-			{id=7401, buy=0, sell=500, name="minotaur trophy"},
-			{id=9662, buy=0, sell=420, name="mutated bat ear"},
-			{id=12039, buy=0, sell=750, name="panther head"},
-			{id=12040, buy=0, sell=300, name="panther paw"},
-			{id=11491, buy=0, sell=500, name="quara bone"},
-			{id=11491, buy=0, sell=350, name="quara eye"},
-			{id=11490, buy=0, sell=410, name="quara pincers"},
-			{id=11487, buy=0, sell=140, name="quara tentacle"},
-			{id=12172, buy=0, sell=50, name="rabbit's foot"},
-			{id=18993, buy=0, sell=70, name="rorc feather"},
-			{id=10311, buy=0, sell=400, name="sabretooth"},
-			{id=10456, buy=0, sell=20, name="sandcrawler shell"},
-			{id=9631, buy=0, sell=280, name="scarab pincers"},
-			{id=12312, buy=0, sell=280, name="stampor horn"},
-			{id=12313, buy=0, sell=150, name="stampor talons"},
-			{id=10454, buy=0, sell=60, name="terramite legs"},
-			{id=10452, buy=0, sell=170, name="terramite shell"},
-			{id=10273, buy=0, sell=95, name="terrorbird beak"},
-			-- BUY OFFERS
-			{id=5907, buy=35000, sell=0, name="slingshot"}
-		},
-
-		bigGameHunter_rank = {
-			{id=10244, buy=0, sell=6000, name="bonebeast trophy"},
-			{id=7397, buy=0, sell=3000, name="deer trophy"},
-			{id=7400, buy=0, sell=3000, name="lion trophy"},
-			{id=7395, buy=0, sell=1000, name="orc trophy"},
-			{id=7394, buy=0, sell=3000, name="wolf trophy"}
-		},
-
-		trophyHunter_rank = {
-			-- SELL OFFERS
-			{id=7396, buy=0, sell=20000, name="behemoth trophy"},
-			{id=7393, buy=0, sell=40000, name="demon trophy"},
-			{id=7399, buy=0, sell=10000, name="dragon lord trophy"},
-			{id=10421, buy=0, sell=3000, name="disgusting trophy"},
-			{id=22101, buy=0, sell=9000, name="werebadger trophy"},
-			{id=22102, buy=0, sell=10000, name="wereboar trophy"},
-			{id=22103, buy=0, sell=11000, name="werebear trophy"},
-			{id=27706, buy=0, sell=9000, name="werefox trophy"},
-			{id=34219, buy=0, sell=12000, name="werehyaena trophy"},
-			-- BUY OFFERS
-			{id=9601, buy=1000, sell=0, name="demon backpack"}
-		},
-	}
-}
-
-local items, data = {}
-for i = 1, #grizzlyAdamsConfig.ranks.huntsMan_rank do
-	data = grizzlyAdamsConfig.ranks.huntsMan_rank[i]
-	items[data.id] = {id = data.id, buy = data.buy, sell = data.sell, name = ItemType(data.id):getName():lower()}
-end
-for i = 1, #grizzlyAdamsConfig.ranks.bigGameHunter_rank do
-	data = grizzlyAdamsConfig.ranks.bigGameHunter_rank[i]
-	items[data.id] = {id = data.id, buy = data.buy, sell = data.sell, name = ItemType(data.id):getName():lower()}
-end
-for i = 1, #grizzlyAdamsConfig.ranks.trophyHunter_rank do
-	data = grizzlyAdamsConfig.ranks.trophyHunter_rank[i]
-	items[data.id] = {id = data.id, buy = data.buy, sell = data.sell, name = ItemType(data.id):getName():lower()}
-end
-
 local function greetCallback(npc, creature)
 	local playerId = creature:getId()
 	local player = Player(creature)
@@ -154,59 +139,8 @@ local function greetCallback(npc, creature)
 	return true
 end
 
-local function joinTables(old, new)
-	for k, v in pairs(new) do
-		old[k] = v
-	end
-	return old
-end
-
-local function onBuy(creature, item, subType, amount, ignoreCap, inBackpacks)
-	local player = Player(creature)
-	if not ignoreCap and player:getFreeCapacity() < ItemType(items[item].id):getWeight(amount) then
-		return player:sendTextMessage(MESSAGE_FAILURE, "You don't have enough cap.")
-	end
-	if items[item].buy then
-		if player:removeMoneyBank(amount * items[item].buy) then
-			player:addItem(items[item].id, amount)
-			return player:sendTextMessage(MESSAGE_TRADE,
-						"Bought "..amount.."x "..items[item].name.." for "..items[item].buy * amount.." gold coins.")
-		else
-			return player:sendTextMessage(MESSAGE_FAILURE, "You don't have enough money.")
-		end
-	end
-	return true
-end
-
-local function onSell(creature, item, subType, amount, ignoreCap, inBackpacks)
-	local player = Player(creature)
-	if items[item].sell then
-		if player:removeItem(items[item].id, amount) then
-			player:addMoney(items[item].sell * amount)
-			return player:sendTextMessage(MESSAGE_TRADE,
-						"Sold "..amount.."x "..items[item].name.." for "..items[item].sell * amount.." gold coins.")
-		else
-			return player:sendTextMessage(MESSAGE_TRADE, "You don't have the items you're trying to sell.")
-		end
-	end
-	return true
-end
-
-local function startTrade(creature, player)
-	if player:getPawAndFurRank() >= 2 then
-		local tradeItems = grizzlyAdamsConfig.ranks.huntsMan_rank
-		if player:getPawAndFurRank() >= 4 then
-			tradeItems = joinTables(tradeItems, grizzlyAdamsConfig.ranks.bigGameHunter_rank)
-		end
-		if player:getPawAndFurRank() >= 6 then
-			tradeItems = joinTables(tradeItems, grizzlyAdamsConfig.ranks.trophyHunter_rank)
-		end
-		openShopWindow(creature, tradeItems, onBuy, onSell)
-		return npcHandler:say("It's my offer.", npc, creature)
-	else
-		return npcHandler:say("You don't have any rank.", npc, creature)
-	end
-end
+local choose = {}
+local cancel = {}
 
 local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
