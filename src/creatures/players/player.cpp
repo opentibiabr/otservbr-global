@@ -812,7 +812,7 @@ bool Player::canWalkthrough(const Creature* creature) const
 	const Monster* monster = creature->getMonster();
 	const Npc* npc = creature->getNpc();
 	if (monster) {
-		if (!monster->isPet()) {
+		if (!monster->isFamiliar()) {
 			return false;
 		}
 		return true;
@@ -859,7 +859,7 @@ bool Player::canWalkthroughEx(const Creature* creature) const
 
 	const Monster* monster = creature->getMonster();
 	if (monster) {
-		if (!monster->isPet()) {
+		if (!monster->isFamiliar()) {
 			return false;
 		}
 		return true;
