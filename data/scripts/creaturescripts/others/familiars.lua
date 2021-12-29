@@ -38,9 +38,6 @@ function familiarLogin.onLogin(player)
 	end
 
 	local vocation = familiar[player:getVocation():getBaseId()]
-	if not vocation and player:getAccountType() <= ACCOUNT_TYPE_SENIORTUTOR then
-		return false
-	end
 
 	local familiarName
 	local petTimeLeft = player:getStorageValue(familiarStorage) - player:getLastLogout()
@@ -114,9 +111,7 @@ function familiarDeath.onDeath(creature, corpse, lasthitkiller, mostdamagekiller
 	end
 
 	local vocation = familiar[player:getVocation():getBaseId()]
-	if not vocation and player:getAccountType() <= ACCOUNT_TYPE_SENIORTUTOR then
-		return false
-	end
+
 	if table.contains(vocation, creature:getName()) then
 		player:setStorageValue(familiarStorage, os.time())
 		for sendMessage = 1, #timer do
