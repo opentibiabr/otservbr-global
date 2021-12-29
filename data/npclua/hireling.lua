@@ -23,14 +23,327 @@ npcConfig.flags = {
 	floorchange = false
 }
 
---[[
-	Created By Leonardo "Leu" Pereira (jlcvp@github)
-]]
+npcConfig.shop = {
+	-- Various
+	{itemName = "amphora", clientId = 2023, buy = 4},
+	{itemName = "armor rack kit", clientId = 6114, buy = 90},
+	{itemName = "bamboo drawer kit", clientId = 3921, buy = 20},
+	{itemName = "bamboo table kit", clientId = 3914, buy = 25},
+	{itemName = "barrel kit", clientId = 3919, buy = 12},
+	{itemName = "big table kit", clientId = 3911, buy = 30},
+	{itemName = "birdcage kit", clientId = 3922, buy = 50},
+	{itemName = "blue bed kit", clientId = 7907, buy = 80},
+	{itemName = "blue pillow", clientId = 1686, buy = 25},
+	{itemName = "blue tapestry", clientId = 1872, buy = 25},
+	{itemName = "bookcase kit", clientId = 6373, buy = 70},
+	{itemName = "box", clientId = 1738, buy = 10},
+	{itemName = "canopy bed kit", clientId = 20252, buy = 200},
+	{itemName = "chest", clientId = 1740, buy = 10},
+	{itemName = "chest of drawers", clientId = 3915, buy = 18},
+	{itemName = "chimney kit", clientId = 8692, buy = 200},
+	{itemName = "coal basin kit", clientId = 3932, buy = 25},
+	{itemName = "cookie", clientId = 2687, buy = 2},
+	{itemName = "crate", clientId = 1739, buy = 10},
+	{itemName = "cuckoo clock", clientId = 1877, buy = 40},
+	{itemName = "dresser kit", clientId = 3916, buy = 25},
+	{itemName = "goldfish bowl", clientId = 5928, buy = 50},
+	{itemName = "exercise axe", clientId = 32385, buy = 262500, subType = 500},
+	{itemName = "exercise bow", clientId = 32387, buy = 262500, subType = 500},
+	{itemName = "exercise club", clientId = 32386, buy = 262500, subType = 500},
+	{itemName = "exercise rod", clientId = 32388, buy = 262500, subType = 500},
+	{itemName = "exercise sword", clientId = 32384, buy = 262500, subType = 500},
+	{itemName = "exercise wand", clientId = 32389, buy = 262500, subType = 500},
+	{itemName = "fireworks rocket", clientId = 6576, buy = 100},
+	{itemName = "flower bowl", clientId = 2102, buy = 6},
+	{itemName = "globe", clientId = 3923, buy = 50},
+	{itemName = "goblin statue kit", clientId = 3930, buy = 50},
+	{itemName = "god flowers", clientId = 2100, buy = 5},
+	{itemName = "green balloons", clientId = 6577, buy = 500},
+	{itemName = "green bed kit", clientId = 7904, buy = 80},
+	{itemName = "green cushioned chair kit", clientId = 3902, buy = 40},
+	{itemName = "green pillow", clientId = 1688, buy = 25},
+	{itemName = "green tapestry", clientId = 1860, buy = 25},
+	{itemName = "harp kit", clientId = 3934, buy = 50},
+	{itemName = "heart pillow", clientId = 1685, buy = 30},
+	{itemName = "honey flower", clientId = 2103, buy = 5},
+	{itemName = "indoor plant kit", clientId = 3937, buy = 8},
+	{itemName = "ivory chair kit", clientId = 3907, buy = 25},
+	{itemName = "knight statue kit", clientId = 3928, buy = 50},
+	{itemName = "large amphora kit", clientId = 3931, buy = 50},
+	{itemName = "large trunk", clientId = 3920, buy = 10},
+	{itemName = "locker kit", clientId = 3917, buy = 30},
+	{itemName = "minotaur statue kit", clientId = 3929, buy = 50},
+	{itemName = "orange tapestry", clientId = 1866, buy = 25},
+	{itemName = "oven kit", clientId = 6372, buy = 80},
+	{itemName = "party hat", clientId = 6578, buy = 800},
+	{itemName = "party trumpet", clientId = 6572, buy = 500},
+	{itemName = "pendulum clock kit", clientId = 3927, buy = 75},
+	{itemName = "piano kit", clientId = 3933, buy = 200},
+	{itemName = "potted flower", clientId = 2104, buy = 5},
+	{itemName = "present", clientId = 1990, buy = 10},
+	{itemName = "purple tapestry", clientId = 1857, buy = 25},
+	{itemName = "red balloons", clientId = 6575, buy = 500},
+	{itemName = "red bed kit", clientId = 7906, buy = 80},
+	{itemName = "red cushioned chair kit", clientId = 3901, buy = 40},
+	{itemName = "red pillow", clientId = 1687, buy = 25},
+	{itemName = "red tapestry", clientId = 1869, buy = 25},
+	{itemName = "rocking horse", clientId = 3926, buy = 30},
+	{itemName = "round blue pillow", clientId = 1690, buy = 25},
+	{itemName = "round purple pillow", clientId = 1692, buy = 25},
+	{itemName = "round red pillow", clientId = 1691, buy = 25},
+	{itemName = "round turquoise pillow", clientId = 1693, buy = 25},
+	{itemName = "small blue pillow", clientId = 1681, buy = 20},
+	{itemName = "small green pillow", clientId = 1679, buy = 20},
+	{itemName = "small ice statue", clientId = 7447, buy = 50},
+	{itemName = "small ice statue", clientId = 7448, buy = 50},
+	{itemName = "small orange pillow", clientId = 1682, buy = 20},
+	{itemName = "small purple pillow", clientId = 1678, buy = 20},
+	{itemName = "small red pillow", clientId = 1680, buy = 20},
+	{itemName = "small round table", clientId = 14328, buy = 25},
+	{itemName = "small table kit", clientId = 3908, buy = 20},
+	{itemName = "small trunk", clientId = 3821, buy = 20},
+	{itemName = "small turquoise pillow", clientId = 1683, buy = 20},
+	{itemName = "small white pillow", clientId = 1684, buy = 20},
+	{itemName = "sofa chair kit", clientId = 3905, buy = 55},
+	{itemName = "square table kit", clientId = 14329, buy = 25},
+	{itemName = "stone table kit", clientId = 3912, buy = 30},
+	{itemName = "table lamp kit", clientId = 3924, buy = 35},
+	{itemName = "telescope kit", clientId = 3925, buy = 70},
+	{itemName = "thick trunk", clientId = 3811, buy = 20},
+	{itemName = "treasure chest", clientId = 1746, buy = 1000},
+	{itemName = "trophy stand", clientId = 7936, buy = 50},
+	{itemName = "trough kit", clientId = 3918, buy = 7},
+	{itemName = "tusk chair kit", clientId = 3906, buy = 25},
+	{itemName = "tusk table kit", clientId = 3913, buy = 25},
+	{itemName = "vase", clientId = 2008, buy = 3},
+	{itemName = "venorean cabinet", clientId = 20254, buy = 90},
+	{itemName = "venorean drawer", clientId = 20257, buy = 40},
+	{itemName = "venorean wardrobe", clientId = 20255, buy = 50},
+	{itemName = "wall mirror", clientId = 1851, buy = 40},
+	{itemName = "wall mirror", clientId = 1848, buy = 40},
+	{itemName = "wall mirror", clientId = 1845, buy = 40},
+	{itemName = "water pipe", clientId = 2099, buy = 40},
+	{itemName = "weapon rack kit", clientId = 6115, buy = 90},
+	{itemName = "white tapestry", clientId = 1880, buy = 25},
+	{itemName = "wooden chair kit", clientId = 3903, buy = 15},
+	{itemName = "yellow bed kit", clientId = 7905, buy = 80},
+	{itemName = "yellow pillow", clientId = 1689, buy = 25},
+	{itemName = "yellow tapestry", clientId = 1863, buy = 25},
+	-- Equipment
+	{itemName = "axe", clientId = 2386, buy = 20, sell = 7},
+	{itemName = "battle axe", clientId = 2378, buy = 235, sell = 80},
+	{itemName = "battle hammer", clientId = 2417, buy = 350, sell = 120},
+	{itemName = "bone sword", clientId = 2450, buy = 75, sell = 20},
+	{itemName = "brass armor", clientId = 2465, buy = 450, sell = 150},
+	{itemName = "brass helmet", clientId = 2460, buy = 120, sell = 30},
+	{itemName = "brass legs", clientId = 2478, buy = 195, sell = 49},
+	{itemName = "brass shield", clientId = 2511, buy = 65, sell = 25},
+	{itemName = "carlin sword", clientId = 2395, buy = 473, sell = 118},
+	{itemName = "chain armor", clientId = 2464, buy = 200, sell = 70},
+	{itemName = "chain helmet", clientId = 2458, buy = 52, sell = 17},
+	{itemName = "chain legs", clientId = 2648, buy = 80, sell = 25},
+	{itemName = "club", clientId = 2382, buy = 5, sell = 1},
+	{itemName = "coat", clientId = 2651, buy = 8, sell = 1},
+	{itemName = "crowbar", clientId = 2416, buy = 260, sell = 50},
+	{itemName = "dagger", clientId = 2379, buy = 5, sell = 2},
+	{itemName = "doublet", clientId = 2485, buy = 16, sell = 3},
+	{itemName = "dwarven shield", clientId = 2525, buy = 500, sell = 100},
+	{itemName = "exercise axe", clientId = 32385, buy = 262500, sell = 500, subType = 500},
+	{itemName = "exercise bow", clientId = 32387, buy = 262500, sell = 500, subType = 500},
+	{itemName = "exercise club", clientId = 32386, buy = 262500, sell = 500, subType = 500},
+	{itemName = "exercise sword", clientId = 32384, buy = 262500, sell = 500, subType = 500},
+	{itemName = "hand axe", clientId = 2380, buy = 8, sell = 4},
+	{itemName = "iron helmet", clientId = 2459, buy = 390, sell = 150},
+	{itemName = "jacket", clientId = 2650, buy = 12, sell = 1},
+	{itemName = "leather armor", clientId = 2467, buy = 35, sell = 12},
+	{itemName = "leather boots", clientId = 2643, buy = 10, sell = 2},
+	{itemName = "leather helmet", clientId = 2461, buy = 12, sell = 4},
+	{itemName = "leather legs", clientId = 2649, buy = 10, sell = 9},
+	{itemName = "longsword", clientId = 2397, buy = 160, sell = 51},
+	{itemName = "mace", clientId = 2398, buy = 90, sell = 30},
+	{itemName = "morning star", clientId = 2394, buy = 430, sell = 100},
+	{itemName = "plate armor", clientId = 2463, buy = 1200, sell = 400},
+	{itemName = "plate shield", clientId = 2510, buy = 125, sell = 45},
+	{itemName = "rapier", clientId = 2384, buy = 15, sell = 5},
+	{itemName = "sabre", clientId = 2385, buy = 35, sell = 12},
+	{itemName = "scale armor", clientId = 2483, buy = 260, sell = 75},
+	{itemName = "short sword", clientId = 2406, buy = 26, sell = 10},
+	{itemName = "sickle", clientId = 2405, buy = 7, sell = 3},
+	{itemName = "soldier helmet", clientId = 2481, buy = 110, sell = 16},
+	{itemName = "spike sword", clientId = 2383, buy = 8000, sell = 240},
+	{itemName = "steel helmet", clientId = 2457, buy = 580, sell = 293},
+	{itemName = "steel shield", clientId = 2509, buy = 240, sell = 80},
+	{itemName = "studded armor", clientId = 2484, buy = 90, sell = 25},
+	{itemName = "studded helmet", clientId = 2482, buy = 63, sell = 20},
+	{itemName = "studded legs", clientId = 2468, buy = 50, sell = 15},
+	{itemName = "studded shield", clientId = 2526, buy = 50, sell = 16},
+	{itemName = "sword", clientId = 2376, buy = 85, sell = 25},
+	{itemName = "throwing knife", clientId = 2410, buy = 25, sell = 2},
+	{itemName = "two handed sword", clientId = 2377, buy = 950, sell = 450},
+	{itemName = "viking helmet", clientId = 2473, buy = 265, sell = 66},
+	{itemName = "viking shield", clientId = 2531, buy = 260, sell = 85},
+	{itemName = "war hammer", clientId = 2391, buy = 10000, sell = 470},
+	{itemName = "wooden shield", clientId = 2512, buy = 15, sell = 5},
+	-- Distance
+	{itemName = "arrow", clientId = 2544, buy = 2},
+	{itemName = "blue quiver", clientId = 40683, buy = 400},
+	{itemName = "bolt", clientId = 2580, buy = 4},
+	{itemName = "bow", clientId = 2456, buy = 400, sell = 100},
+	{itemName = "crossbow", clientId = 2455, buy = 500, sell = 120},
+	{itemName = "crystalline arrow", clientId = 18304, buy = 20},
+	{itemName = "drill bolt", clientId = 18436, buy = 12},
+	{itemName = "diamond arrow", clientId = 40736, buy = 100},
+	{itemName = "earth arrow", clientId = 7850, buy = 5},
+	{itemName = "envenomed arrow", clientId = 18437, buy = 12},
+	{itemName = "flaming arrow", clientId = 7840, buy = 5},
+	{itemName = "flash arrow", clientId = 7838, buy = 5},
+	{itemName = "onyx arrow", clientId = 7365, buy = 7},
+	{itemName = "piercing bolt", clientId = 7363, buy = 5},
+	{itemName = "power bolt", clientId = 2547, buy = 7},
+	{itemName = "prismatic bolt", clientId = 18435, buy = 20},
+	{itemName = "quiver", clientId = 40397, buy = 400},
+	{itemName = "red quiver", clientId = 40684, buy = 400},
+	{itemName = "royal spear", clientId = 7378, buy = 15},
+	{itemName = "shiver arrow", clientId = 7839, buy = 5},
+	{itemName = "sniper arrow", clientId = 7364, buy = 5},
+	{itemName = "spear", clientId = 2389, buy = 9, sell = 3},
+	{itemName = "spectral bolt", clientId = 40737, buy = 70},
+	{itemName = "tarsal arrow", clientId = 15648, buy = 6},
+	{itemName = "throwing star", clientId = 2399, buy = 42},
+	{itemName = "vortex bolt", clientId = 15649, buy = 6},
+	-- Wands
+	{itemName = "exercise rod", clientId = 32388, buy = 262500, subType = 500},
+	{itemName = "exercise wand", clientId = 32389, buy = 262500, subType = 500},
+	{itemName = "hailstorm rod", clientId = 2183, buy = 15000},
+	{itemName = "moonlight rod", clientId = 2186, buy = 1000},
+	{itemName = "necrotic rod", clientId = 2185, buy = 5000},
+	{itemName = "northwind rod", clientId = 8911, buy = 7500},
+	{itemName = "snakebite rod", clientId = 2182, buy = 500},
+	{itemName = "spellwand", clientId = 651, sell = 299},
+	{itemName = "springsprout rod", clientId = 8912, buy = 18000},
+	{itemName = "terra rod", clientId = 2181, buy = 10000},
+	{itemName = "underworld rod", clientId = 8910, buy = 22000},
+	{itemName = "wand of cosmic energy", clientId = 2189, buy = 10000},
+	{itemName = "wand of decay", clientId = 2188, buy = 5000},
+	{itemName = "wand of draconia", clientId = 8921, buy = 7500},
+	{itemName = "wand of dragonbreath", clientId = 2191, buy = 1000},
+	{itemName = "wand of inferno", clientId = 2187, buy = 15000},
+	{itemName = "wand of starstorm", clientId = 8920, buy = 18000},
+	{itemName = "wand of voodoo", clientId = 8922, buy = 22000},
+	{itemName = "wand of vortex", clientId = 2190, buy = 500},
+	-- Rods
+	{itemName = "exercise rod", clientId = 32388, buy = 262500, subType = 500},
+	{itemName = "exercise wand", clientId = 32389, buy = 262500, subType = 500},
+	{itemName = "hailstorm rod", clientId = 2183, buy = 15000},
+	{itemName = "moonlight rod", clientId = 2186, buy = 1000},
+	{itemName = "necrotic rod", clientId = 2185, buy = 5000},
+	{itemName = "northwind rod", clientId = 8911, buy = 7500},
+	{itemName = "snakebite rod", clientId = 2182, buy = 500},
+	{itemName = "springsprout rod", clientId = 8912, buy = 18000},
+	{itemName = "terra rod", clientId = 2181, buy = 10000},
+	{itemName = "underworld rod", clientId = 8910, buy = 22000},
+	{itemName = "wand of cosmic energy", clientId = 2189, buy = 10000},
+	{itemName = "wand of decay", clientId = 2188, buy = 5000},
+	{itemName = "wand of draconia", clientId = 8921, buy = 7500},
+	{itemName = "wand of dragonbreath", clientId = 2191, buy = 1000},
+	{itemName = "wand of inferno", clientId = 2187, buy = 15000},
+	{itemName = "wand of starstorm", clientId = 8920, buy = 18000},
+	{itemName = "wand of voodoo", clientId = 8922, buy = 22000},
+	{itemName = "wand of vortex", clientId = 2190, buy = 500},
+	-- Potions
+	{itemName = "great health potion", clientId = 7591, buy = 225},
+	{itemName = "great mana potion", clientId = 7590, buy = 144},
+	{itemName = "great spirit potion", clientId = 8472, buy = 228},
+	{itemName = "health potion", clientId = 7618, buy = 50},
+	{itemName = "mana potion", clientId = 7620, buy = 56},
+	{itemName = "strong health potion", clientId = 7588, buy = 115},
+	{itemName = "strong mana potion", clientId = 7589, buy = 93},
+	{itemName = "supreme health potion", clientId = 26031, buy = 625},
+	{itemName = "ultimate health potion", clientId = 8473, buy = 379},
+	{itemName = "ultimate mana potion", clientId = 26029, buy = 438},
+	{itemName = "ultimate spirit potion", clientId = 26030, buy = 438},
+	{itemName = "empty potion flask", clientId = 283, sell = 5},
+	{itemName = "empty potion flask", clientId = 284, sell = 5},
+	{itemName = "empty potion flask", clientId = 285, sell = 5},
+	{itemName = "vial", clientId = 375, sell = 5},
+	-- Runes
+	{itemName = "animate dead rune", clientId = 2316, buy = 375},
+	{itemName = "avalanche rune", clientId = 2274, buy = 57},
+	{itemName = "blank rune", clientId = 2260, buy = 10},
+	{itemName = "chameleon rune", clientId = 2291, buy = 210},
+	{itemName = "convince creature rune", clientId = 2290, buy = 80},
+	{itemName = "cure poison rune", clientId = 2266, buy = 65},
+	{itemName = "destroy field rune", clientId = 2261, buy = 15},
+	{itemName = "disintegrate rune", clientId = 2310, buy = 26},
+	{itemName = "energy bomb rune", clientId = 2262, buy = 203},
+	{itemName = "energy field rune", clientId = 2277, buy = 38},
+	{itemName = "energy wall rune", clientId = 2279, buy = 85},
+	{itemName = "explosion rune", clientId = 2313, buy = 31},
+	{itemName = "fire bomb rune", clientId = 2305, buy = 147},
+	{itemName = "fire field rune", clientId = 2301, buy = 28},
+	{itemName = "fire wall rune", clientId = 2303, buy = 61},
+	{itemName = "fireball rune", clientId = 2302, buy = 30},
+	{itemName = "great fireball rune", clientId = 2304, buy = 57},
+	{itemName = "heavy magic missile rune", clientId = 2311, buy = 12},
+	{itemName = "holy missile rune", clientId = 2295, buy = 16},
+	{itemName = "icicle rune", clientId = 2271, buy = 30},
+	{itemName = "intense healing rune", clientId = 2265, buy = 95},
+	{itemName = "light magic missile rune", clientId = 2287, buy = 4},
+	{itemName = "magic wall rune", clientId = 2293, buy = 116},
+	{itemName = "paralyse rune", clientId = 2278, buy = 700},
+	{itemName = "poison bomb rune", clientId = 2286, buy = 85},
+	{itemName = "poison field rune", clientId = 2285, buy = 21},
+	{itemName = "poison wall rune", clientId = 2289, buy = 52},
+	{itemName = "soulfire rune", clientId = 2308, buy = 46},
+	{itemName = "stalagmite rune", clientId = 2292, buy = 12},
+	{itemName = "stone shower rune", clientId = 2288, buy = 37},
+	{itemName = "sudden death rune", clientId = 2268, buy = 135},
+	{itemName = "thunderstorm rune", clientId = 2315, buy = 47},
+	{itemName = "ultimate healing rune", clientId = 2273, buy = 175},
+	{itemName = "wild growth rune", clientId = 2269, buy = 160},
+	-- Supplies
+	{itemName = "brown mushroom", clientId = 2789, buy = 10},
+	{itemName = "ham", clientId = 2671, buy = 10},
+	{itemName = "meat", clientId = 2666, buy = 5},
+	-- Tools
+	{itemName = "basket", clientId = 1989, buy = 6},
+	{itemName = "bottle", clientId = 2007, buy = 3},
+	{itemName = "bucket", clientId = 2005, buy = 4},
+	{itemName = "candelabrum", clientId = 2041, buy = 8},
+	{itemName = "candlestick", clientId = 2047, buy = 2},
+	{itemName = "closed trap", clientId = 2578, buy = 280, sell = 75},
+	{itemName = "crowbar", clientId = 2416, buy = 260, sell = 50},
+	{itemName = "fishing rod", clientId = 2580, buy = 150, sell = 40},
+	{itemName = "machete", clientId = 2420, buy = 35, sell = 6},
+	{itemName = "pick", clientId = 2553, buy = 50, sell = 15},
+	{itemName = "rope", clientId = 2120, buy = 50, sell = 15},
+	{itemName = "scythe", clientId = 2550, buy = 50, sell = 10},
+	{itemName = "shovel", clientId = 2554, buy = 50, sell = 8},
+	{itemName = "spellwand", clientId = 651, sell = 299},
+	{itemName = "torch", clientId = 2050, buy = 2},
+	{itemName = "watch", clientId = 2036, buy = 20, sell = 6},
+	{itemName = "worm", clientId = 3976, buy = 1},
+	-- Postal
+	{itemName = "label", clientId = 2599, buy = 1},
+	{itemName = "letter", clientId = 2597, buy = 8},
+	{itemName = "parcel", clientId = 2595, buy = 15}
+}
+-- On buy npc shop message
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
+	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On sell npc shop message
+npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 local hireling = nil
 local count = {} -- for banking
 local transfer = {} -- for banking
+
 npcType.onAppear = function(npc, creature)
 	npcHandler:onAppear(npc, creature)
 
@@ -803,131 +1116,6 @@ local function getGoodsGreetingMessage()
 	return str
 end
 
-local function getTable(creature)
-	local topic = getTopic(creature)
-	if topic == TOPIC_GOODS.VARIOUS then
-		return HIRELING_GOODS.VARIOUS
-	elseif topic == TOPIC_GOODS.EQUIPMENT then
-		return HIRELING_GOODS.EQUIPMENT
-	elseif topic == TOPIC_GOODS.DISTANCE then
-		return HIRELING_GOODS.DISTANCE
-	elseif topic == TOPIC_GOODS.WANDS then
-		return HIRELING_GOODS.WANDS
-	elseif topic == TOPIC_GOODS.RODS then
-		return HIRELING_GOODS.RODS
-	elseif topic == TOPIC_GOODS.POTIONS then
-		return HIRELING_GOODS.POTIONS
-	elseif topic == TOPIC_GOODS.RUNES then
-		return HIRELING_GOODS.RUNES
-	elseif topic == TOPIC_GOODS.SUPPLIES then
-		return HIRELING_GOODS.SUPPLIES
-	elseif topic == TOPIC_GOODS.TOOLS then
-		return HIRELING_GOODS.TOOLS
-	elseif topic == TOPIC_GOODS.POSTAL then
-		return HIRELING_GOODS.POSTAL
-	end
-end
-
-local function setNewTradeTable(table)
-	local items, item = {}
-	for i = 1, #table do
-		item = table[i]
-		items[item.id] = {itemId = item.id, buyPrice = item.buy, sellPrice = item.sell, subType = item.subType, realName = item.name}
-	end
-	return items
-end
-
-local function onBuy(creature, item, subType, amount, ignoreCap, inBackpacks)
-	local player = Player(creature)
-	local creatureId = Creature(creature):getId()
-	local items = setNewTradeTable(getTable(creatureId))
-	local itemType = ItemType(items[item].itemId)
-	if itemType:getWrapableTo() ~= 0 then
-		itemType = ItemType(itemType:getWrapableTo())
-	end
-	local backpack = player:getSlotItem(CONST_SLOT_BACKPACK)
-	if not backpack or backpack:getEmptySlots(true) < 1 then
-		player:sendCancelMessage(RETURNVALUE_NOTENOUGHROOM)
-		return false
-	end
-	if not ignoreCap and player:getFreeCapacity() < itemType:getWeight(amount) then
-		return player:sendTextMessage(MESSAGE_FAILURE, 'You don\'t have enough cap.')
-	end
-	if not player:removeMoneyBank(items[item].buyPrice * amount) then
-		selfSay("You don't have enough money.", npc, creature)
-	else
-		player:addItem(itemType:getId(), amount, true, subType)
-		return player:sendTextMessage(MESSAGE_LOOK, 'Bought '..amount..'x '..items[item].realName..' for '..items[item].buyPrice * amount..' gold coins.')
-	end
-	return true
-end
-
-local function getTradeMessage(creature)
-	local topic = getTopic(creature)
-	local message = "Here you go!"
-
-	if topic == TOPIC_GOODS.EQUIPMENT then
-		message = "Alright, here's all the equipment I can order for you!"
-	elseif topic == TOPIC_GOODS.DISTANCE then
-		message = "Great, here are the distance weapons I can order for you!"
-	elseif topic == TOPIC_GOODS.WANDS then
-		message = "Ok, here are the wands I can order for you!"
-	elseif topic == TOPIC_GOODS.RODS then
-		message = "Nice, here are the rods I can order for you!"
-	elseif topic == TOPIC_GOODS.POTIONS then
-		message = "Sure, here are all the potions I can order for you!"
-	elseif topic == TOPIC_GOODS.RUNES then
-		message = "With pleasure, here are all the runes I can order for you!"
-	elseif topic == TOPIC_GOODS.SUPPLIES then
-		message = "Here are some supplies to get you through the day!"
-	elseif topic == TOPIC_GOODS.TOOLS then
-		message = "All the handy tools you'll ever need!"
-	elseif topic == TOPIC_GOODS.POSTAL then
-		message = "I have all the necessary items to properly enhance your communication, feel free to browse!"
-	end
-
-	return message
-end
-
-local function sendTradeWindow(creature)
-	openShopWindow(creature, getTable(creature), onBuy, onSell)
-	local response = getTradeMessage()
-	npcHandler:say(response, npc, creature)
-end
-local function handleGoodsActions(creature, message)
-	local playerId = creature:getId()
-	if msgcontains(message, "various") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.VARIOUS)
-	elseif msgcontains(message, "equipment") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.EQUIPMENT)
-	elseif msgcontains(message, "distance") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.DISTANCE)
-	elseif msgcontains(message, "wands") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.WANDS)
-	elseif msgcontains(message, "rods") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.RODS)
-	elseif msgcontains(message, "potions") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.POTIONS)
-	elseif msgcontains(message, "runes") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.RUNES)
-	elseif msgcontains(message, "supplies") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.SUPPLIES)
-	elseif msgcontains(message, "tools") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.TOOLS)
-	elseif msgcontains(message, "postal") then
-		npcHandler:setTopic(playerId, TOPIC_GOODS.POSTAL)
-	end
-	if table.contains(TOPIC_GOODS, npcHandler:getTopic(playerId)) then
-		sendTradeWindow(creature)
-	end
-end
-
--- ======================[[ END TRADER FUNCTIONS ]] ======================== --
---[[
-############################################################################
-############################################################################
-############################################################################
-]]
 -- ========================[[ COOKER FUNCTIONS ]] ========================== --
 
 local function getDeliveredMessageByFoodId(food_id) -- remove the hardcoded food ids
