@@ -20,7 +20,7 @@ end
 
 rune:group("attack")
 rune:id(117)
-rune:name("Thunderstorm")
+rune:name("thunderstorm rune")
 rune:runeId(3202)
 rune:allowFarUse(true)
 rune:charges(4)

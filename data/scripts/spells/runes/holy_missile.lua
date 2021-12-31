@@ -20,7 +20,7 @@ end
 
 rune:group("attack")
 rune:id(130)
-rune:name("Holy Missile")
+rune:name("holy missile rune")
 rune:runeId(3182)
 rune:allowFarUse(true)
 rune:charges(5)

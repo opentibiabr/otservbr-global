@@ -12,7 +12,7 @@ end
 
 rune:group("attack")
 rune:id(25)
-rune:name("Fire Field")
+rune:name("fire field rune")
 rune:runeId(3188)
 rune:allowFarUse(true)
 rune:setPzLocked(true)

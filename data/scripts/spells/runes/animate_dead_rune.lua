@@ -32,7 +32,7 @@ end
 
 rune:group("support")
 rune:id(83)
-rune:name("Animate Dead")
+rune:name("animate dead rune")
 rune:runeId(3203)
 rune:allowFarUse(true)
 rune:charges(1)

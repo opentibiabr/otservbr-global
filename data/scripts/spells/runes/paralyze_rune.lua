@@ -20,7 +20,7 @@ end
 
 rune:group("support")
 rune:id(54)
-rune:name("Paralyze")
+rune:name("paralyze rune")
 rune:runeId(3165)
 rune:allowFarUse(true)
 rune:charges(1)

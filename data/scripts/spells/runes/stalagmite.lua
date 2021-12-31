@@ -19,7 +19,7 @@ end
 
 rune:group("attack")
 rune:id(77)
-rune:name("Stalagmite")
+rune:name("stalagmite rune")
 rune:runeId(3179)
 rune:allowFarUse(true)
 rune:charges(10)

@@ -13,7 +13,7 @@ end
 
 rune:group("attack")
 rune:id(17)
-rune:name("Firebomb")
+rune:name("firebomb rune")
 rune:runeId(3192)
 rune:allowFarUse(true)
 rune:setPzLocked(true)

@@ -39,7 +39,7 @@ end
 
 rune:group("support")
 rune:id(12)
-rune:name("Convince Creature Rune")
+rune:name("convince creature rune")
 rune:runeId(3177)
 rune:allowFarUse(true)
 rune:charges(1)

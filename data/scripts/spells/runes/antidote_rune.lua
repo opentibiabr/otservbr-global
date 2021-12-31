@@ -11,7 +11,7 @@ end
 
 rune:group("healing")
 rune:id(31)
-rune:name("Antidote Rune")
+rune:name("antidote rune")
 rune:runeId(3153)
 rune:allowFarUse(true)
 rune:charges(1)

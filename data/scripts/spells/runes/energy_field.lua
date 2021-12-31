@@ -12,7 +12,7 @@ end
 
 rune:group("attack")
 rune:id(27)
-rune:name("Energy Field")
+rune:name("energy field rune")
 rune:runeId(3164)
 rune:allowFarUse(true)
 rune:setPzLocked(true)
