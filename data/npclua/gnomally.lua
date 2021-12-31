@@ -71,7 +71,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-local t = {}
+local topic = {}
 local renown = {}
 
 local config = {
@@ -96,12 +96,6 @@ local config = {
 	['iron loadstone'] = {itemid = 16153, token = {type = 'major', id = 16129, count = 20}},
 	['glow wine'] = {itemid = 16154, token = {type = 'major', id = 16129, count = 20}}
 }
-
-local function greetCallback(npc, creature)
-	local playerId = creature:getId()
-	npcHandler:setMessage(MESSAGE_GREET, 'Oh, hello! I\'m the gnome-human relations assistant. I am here for you to trade your tokens for {equipment}, resupply you with mission {items} and talk to you about your {relations} to us gnomes! ...')
-	return true
-end
 
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
@@ -130,7 +124,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		local itemType = ItemType(config[message].itemid)
 		npcHandler:say(string.format('Do you want to trade %s %s for %d %s tokens?', (itemType:getArticle() ~= "" and itemType:getArticle() or ""), itemType:getName(), config[message].token.count, config[message].token.type), npc, creature)
 		npcHandler:setTopic(playerId, 1)
-		t[playerId] = message
+		topic[playerId] = message
 	elseif MsgContains(message, 'relations') then
 		local player = Player(creature)
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 25 then
@@ -152,7 +146,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 5)
 	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
-			local player, targetTable = Player(creature), config[t[playerId]]
+			local player, targetTable = Player(creature), config[topic[playerId]]
 			if player:getItemCount(targetTable.token.id) < targetTable.token.count then
 				npcHandler:say('Sorry, you don\'t have enough ' .. targetTable.token.type .. ' tokens with you.', npc, creature)
 				npcHandler:setTopic(playerId, 0)
@@ -203,10 +197,10 @@ end
 
 local function onReleaseFocus(creature)
 	local playerId = creature:getId()
-	t[playerId], renown[playerId] = nil, nil
+	topic[playerId], renown[playerId] = nil, nil
 end
 
-npcHandler:setCallback(CALLBACK_GREET, greetCallback)
+npcHandler:setMessage(MESSAGE_GREET, 'Oh, hello! I\'m the gnome-human relations assistant. I am here for you to trade your tokens for {equipment}, resupply you with mission {items} and talk to you about your {relations} to us gnomes! ...')
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setCallback(CALLBACK_REMOVE_INTERACTION, onReleaseFocus)
 npcHandler:addModule(FocusModule:new())
