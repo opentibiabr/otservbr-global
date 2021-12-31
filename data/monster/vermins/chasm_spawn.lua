@@ -101,9 +101,9 @@ monster.attacks = {
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -5, maxDamage = -16, range = 7, shootEffect = CONST_ANI_POISON, target = true},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -30, maxDamage = -60, range = 7, shootEffect = CONST_ANI_DEATH, target = true},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -70, maxDamage = -160, range = 3, length = 3, spread = 3, effect = CONST_ME_MORTAREA, target = false},
-	{name ="explosion", interval = 2000, chance = 15, minDamage = -50, maxDamage = -170, target = false},
+	{name ="explosion rune", interval = 2000, chance = 15, minDamage = -50, maxDamage = -170, target = false},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_MANADRAIN, minDamage = -40, maxDamage = -60, range = 7, target = false},
-	{name ="stone shower", interval = 2000, chance = 10, minDamage = -70, maxDamage = -140, range = 7, target = false},
+	{name ="stone shower rune", interval = 2000, chance = 10, minDamage = -70, maxDamage = -140, range = 7, target = false},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -70, maxDamage = -140, length = 3, spread = 3, effect = CONST_ME_PLANTATTACK, target = false}
 }
 
