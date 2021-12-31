@@ -84,12 +84,13 @@ keywordHandler:addKeyword({'durin'}, StdModule.say, {npcHandler = npcHandler, te
 keywordHandler:addKeyword({'monsters'}, StdModule.say, {npcHandler = npcHandler, text = "AHHHH!!! WHERE??? WHERE???"})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	if msgcontains(message, 'invitation') then
 		if player:getStorageValue(Storage.ThievesGuild.Mission03) == 1 then

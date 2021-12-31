@@ -50,8 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if(msgcontains(message, "nargor")) then
 		if player:getStorageValue(Storage.TheShatteredIsles.AccessToNargor) == 1 then
 			npcHandler:say("Do you want to sail Nargor for 50 gold coins?", npc, creature)

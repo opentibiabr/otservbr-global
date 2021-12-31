@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if isInArray({"addon", "outfit"}, message) then
 		if player:getStorageValue(Storage.OutfitQuest.DruidHatAddon) < 1 then
 			npcHandler:say("What are you thinking! I would never allow you to slay my beloved friends for the sake of your narcism. Only {Faolan} can grant you a fur like this one.", npc, creature)

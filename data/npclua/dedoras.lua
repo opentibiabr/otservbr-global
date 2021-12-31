@@ -51,8 +51,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.Kilmaresh.First.Access) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "How could I help you?") -- It needs to be revised, it's not the same as the global
 		npcHandler:setTopic(playerId, 1)
@@ -69,12 +70,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	
 	if msgcontains(message, "report") and player:getStorageValue(Storage.TheSecretLibrary.PinkTel) == 1 then
 		npcHandler:say({"Talk to Captain Charles in Port Hope. He told me that he once ran ashore on a small island where he discovered a small ruin. The architecture was like nothing he had seen before."}, npc, creature)

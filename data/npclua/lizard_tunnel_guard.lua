@@ -46,8 +46,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.WrathoftheEmperor.Questline) >= 2 then
 		player:setStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou, 1)
 		player:setStorageValue(Storage.WrathoftheEmperor.CrateStatus, 0)

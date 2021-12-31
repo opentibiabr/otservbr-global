@@ -57,8 +57,9 @@ npcConfig.voices = {
 local quantidade = {}
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player then
 		npcHandler:setMessage(MESSAGE_GREET, {"Greetings. A warning straight ahead: I don't like loiterin'. If you're not here to {help} us, you're here to waste my time. Which I consider loiterin'. Now, try and prove your {worth} to our alliance. ... ",
 											  "I have sealed some of the areas far too dangerous for anyone to enter. If you can prove you're capable, you'll get an opportunity to help destroy the weird machines, pumping lava into the caves leading to the most dangerous enemies."})
@@ -79,12 +80,13 @@ keywordHandler:addKeyword({'enemy'}, StdModule.say, {npcHandler = npcHandler, te
 keywordHandler:addKeyword({'name'}, StdModule.say, {npcHandler = npcHandler, text = 'Klom Stonecutter\'s the name. '})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	npc = Npc(creature)
 
 	local tempo = 20*60*60

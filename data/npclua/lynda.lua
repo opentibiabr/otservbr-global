@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	if msgcontains(message, "angelina") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) == 1 then
@@ -155,7 +156,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 end
 
-local function confirmWedding(creature, message, keywords, parameters, node)
+local function confirmWedding(npc, creature, message, keywords, parameters, node)
 	local player = Player(creature)
 	local playerStatus = getPlayerMarriageStatus(player:getGuid())
 	local candidate = getPlayerSpouse(player:getGuid())
@@ -179,8 +180,9 @@ local function confirmWedding(creature, message, keywords, parameters, node)
 	end
 	return true
 end
-		-- END --
-local function confirmRemoveEngage(creature, message, keywords, parameters, node)
+-- END --
+
+local function confirmRemoveEngage(npc, creature, message, keywords, parameters, node)
 	local player = Player(creature)
 	local playerStatus = getPlayerMarriageStatus(player:getGuid())
 	local playerSpouse = getPlayerSpouse(player:getGuid())
@@ -205,7 +207,7 @@ local function confirmRemoveEngage(creature, message, keywords, parameters, node
 	return true
 end
 
-local function confirmDivorce(creature, message, keywords, parameters, node)
+local function confirmDivorce(npc, creature, message, keywords, parameters, node)
 	local player = Player(creature)
 	local playerStatus = getPlayerMarriageStatus(player:getGuid())
 	local playerSpouse = getPlayerSpouse(player:getGuid())

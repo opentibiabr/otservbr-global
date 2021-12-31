@@ -47,12 +47,13 @@ end
 
 local creatures = { 'Slime', 'Slime', 'Slime', 'Orc Warlord', 'Orc Warlord', 'Orc Leader', 'Orc Leader', 'Orc Leader' }
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.OrcKingGreeting) ~= 1 then
 		player:setStorageValue(Storage.OrcKingGreeting, 1)
 		for i = 1, #creatures do
-			Game.createMonster(creatures[i], Npc():getPosition())
+			Game.createMonster(creatures[i], npc:getPosition())
 		end
 		npcHandler:say('Arrrrgh! A dirty paleskin! To me my children! Kill them my guards!', TALKTYPE_SAY)
 		return false
@@ -63,12 +64,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	local efreet, marid = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03), player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission03)
 	-- Mission 3 - Orc Fortress
 	if msgcontains(message, 'lamp') then
@@ -121,7 +123,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:addAchievement('Allow Cookies?')
 			end
 
-			Npc():getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
+			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say('Well, I hope it stinks a lot. I like stinking cookies best ... BY MY THOUSAND SONS! YOU ARE SO DEAD HUMAN! DEAD!', npc, creature)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)

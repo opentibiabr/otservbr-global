@@ -54,10 +54,12 @@ keywordHandler:addKeyword({'hi'}, StdModule.say, {npcHandler = npcHandler, onlyU
 keywordHandler:addKeyword({'hello'}, StdModule.say, {npcHandler = npcHandler, onlyUnfocus = true, text = "MIND YOUR MANNERS COMMONER! To address the queen greet with her title!"})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	if isInArray({'fuck', 'idiot', 'asshole', 'ass', 'fag', 'stupid', 'tyrant', 'shit', 'lunatic'}, message) then
 		local player = Player(creature)
@@ -70,7 +72,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		player:getPosition():sendMagicEffect(CONST_ME_EXPLOSIONAREA)
 		player:addHealth(1 - player:getHealth())
 		npcHandler:say('Take this!', npc, creature)
-		Npc():getPosition():sendMagicEffect(CONST_ME_YELLOW_RINGS)
+		npc:getPosition():sendMagicEffect(CONST_ME_YELLOW_RINGS)
 	end
 	return true
 end

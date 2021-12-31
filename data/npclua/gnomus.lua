@@ -53,8 +53,9 @@ end
 local quantidade = {}
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player then
 		npcHandler:setMessage(MESSAGE_GREET, {"Greetings, member of the Bigfoot Brigade. We could really use some {help} from you right now. You should prove {worthy} to our alliance."})
 		npcHandler:setTopic(playerId, 1)
@@ -75,12 +76,13 @@ keywordHandler:addKeyword({'name'}, StdModule.say, {npcHandler = npcHandler, tex
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m the main gnomish contact for this base. I coordinate our efforts with those of the dwarves to ensure everything is running smoothly.'})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	npc = Npc(creature)
 
 	local tempo = 20*60*60

@@ -150,12 +150,13 @@ local topicTable = {
 }
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	local health = player:getHealth()
 
 	local vocationDefaultMessages = {
@@ -406,8 +407,9 @@ local function creatureSayCallback(npc, creature, type, message)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getLevel() >= 8 then
 		npcHandler:setMessage(MESSAGE_GREET, "Welcome, young adventurer. Tell me if you need help in \z
 												{choosing} your {vocation}, or if you have {decided} on the {vocation} you want to choose.")

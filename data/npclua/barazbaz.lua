@@ -50,8 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if msgcontains(message, "ritual") and player:getStorageValue(Storage.DarkTrails.Mission06) == 1 then
 		npcHandler:say({
 			"Ancient structures in the sewers you say? Well, our city has had a certain bloody past, even before it has \z

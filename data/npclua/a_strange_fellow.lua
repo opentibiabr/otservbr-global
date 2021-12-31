@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if player:getStorageValue(Storage.Postman.Mission03) ~= 1 then
 		return true
 	end
@@ -86,7 +87,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 5)
 		elseif npcHandler:getTopic(playerId) == 5 then
 			for i = 1, 5 do
-				Game.createMonster("Rabbit", Npc():getPosition())
+				Game.createMonster("Rabbit", npc:getPosition())
 			end
 			npcHandler:say("Noooooo! Argh, ok, ok, I guess I can't deny it anymore, I am David Brassacres, the magnificent, so what do you want?", npc, creature)
 			npcHandler:setTopic(playerId, 6)

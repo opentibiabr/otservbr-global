@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "crystal") then
 		if player:getStorageValue(Storage.TheIceIslands.Mission08) == 2 then
 			npcHandler:say("Here, take the memory crystal and leave immediately.", npc, creature)

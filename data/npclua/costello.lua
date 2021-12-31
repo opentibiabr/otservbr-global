@@ -45,8 +45,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if msgcontains(message, 'fugio') then
 		if player:getStorageValue(Storage.Quest.SimpleChest.FamilyBrooch) == 1 then
 			npcHandler:say('To be honest, I fear the omen in my dreams may be true. \z

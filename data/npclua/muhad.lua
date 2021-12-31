@@ -61,12 +61,13 @@ keywordHandler:addKeyword({'undead'}, StdModule.say, {npcHandler = npcHandler, t
 keywordHandler:addKeyword({'daraman'}, StdModule.say, {npcHandler = npcHandler, text = 'We have nothing that would be of value for you.'})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	local AritosTask = player:getStorageValue(Storage.TibiaTales.AritosTask)
 
 		-- AritosTask

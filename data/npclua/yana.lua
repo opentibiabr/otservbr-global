@@ -23,56 +23,37 @@ npcConfig.flags = {
 	floorchange = false
 }
 
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-local shop = {
-	{id=27451, buy=50, sell=0, name='axe of desctruction'},
-	{id=27449, buy=50, sell=0, name='blade of desctruction'},
-	{id=27455, buy=50, sell=0, name='bow of desctruction'},
-	{id=27452, buy=50, sell=0, name='chopper of desctruction'},
-	{id=27456, buy=50, sell=0, name='crossbow of desctruction'},
-	{id=27454, buy=50, sell=0, name='hammer of desctruction'},
-	{id=27453, buy=50, sell=0, name='mace of desctruction'},
-	{id=27458, buy=50, sell=0, name='rod of desctruction'},
-	{id=27450, buy=50, sell=0, name='slayer of desctruction'},
-	{id=27457, buy=50, sell=0, name='wand of desctruction'}
+npcConfig.voices = {
+	interval = 5000,
+	chance = 50,
+	{text = 'Trading tokens! First-class equipment available!'}
 }
 
-local function setNewTradeTable(table)
-	local items, item = {}
-	for i = 1, #table do
-		item = table[i]
-		items[item.id] = {id = item.id, buy = item.buy, sell = item.sell, subType = 0, name = item.name}
-	end
-	return items
+npcConfig.currency = 22721
+
+npcConfig.shop = {
+	{clientId = 27451, buy = 50, name = "axe of desctruction"},
+	{clientId = 27449, buy = 50, name = "blade of desctruction"},
+	{clientId = 27455, buy = 50, name = "bow of desctruction"},
+	{clientId = 27452, buy = 50, name = "chopper of desctruction"},
+	{clientId = 27456, buy = 50, name = "crossbow of desctruction"},
+	{clientId = 27454, buy = 50, name = "hammer of desctruction"},
+	{clientId = 27453, buy = 50, name = "mace of desctruction"},
+	{clientId = 27458, buy = 50, name = "rod of desctruction"},
+	{clientId = 27450, buy = 50, name = "slayer of desctruction"},
+	{clientId = 27457, buy = 50, name = "wand of desctruction"}
+}
+-- On buy npc shop message
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
+	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
-
-local function onBuy(creature, item, subType, amount, ignoreCap, inBackpacks)
-	local player = Player(creature)
-	local itemsTable = setNewTradeTable(shop)
-	if not ignoreCap and player:getFreeCapacity() < ItemType(itemsTable[item].id):getWeight(amount) then
-		return player:sendTextMessage(MESSAGE_FAILURE, "You don't have enough cap.")
-	end
-	if itemsTable[item].buy then
-		if player:removeItem(npc:getCurrency(), amount * itemsTable[item].buy) then
-			if amount > 1 then
-				currencyName = ItemType(npc:getCurrency()):getPluralName():lower()
-			else
-				currencyName = ItemType(npc:getCurrency()):getName():lower()
-			end
-			player:addItem(itemsTable[item].id, amount)
-			return player:sendTextMessage(MESSAGE_TRADE,
-						"Bought "..amount.."x "..itemsTable[item].name.." for "..itemsTable[item].buy * amount.." "..currencyName..".")
-		else
-			return player:sendTextMessage(MESSAGE_TRADE, "You don't have enough "..currencyName..".")
-		end
-	end
-
-	return true
+-- On sell npc shop message
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
 end
-
-local function onSell(creature, item, subType, amount, ignoreCap, inBackpacks)
-	return true
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 local products = {
@@ -158,12 +139,24 @@ local products = {
 
 local answerType = {}
 local answerLevel = {}
+
+local keywordHandler = KeywordHandler:new()
+local npcHandler = NpcHandler:new(keywordHandler)
+
+npcType.onThink = function(npc, interval)
+	npcHandler:onThink(npc, interval)
+end
+
 npcType.onAppear = function(npc, creature)
 	npcHandler:onAppear(npc, creature)
 end
 
 npcType.onDisappear = function(npc, creature)
 	npcHandler:onDisappear(npc, creature)
+end
+
+npcType.onMove = function(npc, creature, fromPosition, toPosition)
+	npcHandler:onMove(npc, creature, fromPosition, toPosition)
 end
 
 npcType.onSay = function(npc, creature, type, message)
@@ -174,10 +167,6 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
 local function greetCallback(npc, creature)
 	local playerId = creature:getId()
 	npcHandler:setTopic(playerId, 0)
@@ -185,12 +174,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	if msgcontains(message, "information") then
 		npcHandler:say({"{Tokens} are small objects made of metal or other materials. You can use them to buy superior equipment from token traders like me.",
@@ -200,9 +190,9 @@ local function creatureSayCallback(npc, creature, type, message)
 	-- after kill message: 'You disrupted the Heart of Destruction, defeated the World Devourer and bought our world some time. You have proven your worth.'
 	npcHandler:say({"Disrupt the Heart of Destruction, fell the World Devourer to prove your worth and you will be granted the power to imbue 'Powerful Strike', 'Powerful Void' and --'Powerful Vampirism'."}, npc, creature)
 	elseif msgcontains(message, "tokens") then
-		openShopWindow(creature, shop, onBuy, onSell)
+		npc:openShopWindow(creature)
 		npcHandler:say("If you have any gold tokens with you, let's have a look! These are my offers.", npc, creature)
-	elseif msgcontains(message, "trade") then
+	elseif msgcontains(message, "ofert") then
 		npcHandler:say({"I have creature products for the imbuements {strike}, {vampirism} and {void}. Make your choice, please!"}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif npcHandler:getTopic(playerId) == 1 then
@@ -239,7 +229,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					npcHandler:say("There it is.", npc, creature)
 					npcHandler:setTopic(playerId, 0)
 				else
-					npcHandler:say("I'm sorry but it seems you don't have enough gold tokens? yet. Bring me "..products[answerType[playerId]][answerLevel[playerId]].value.." of them and we'll make a trade.", npc, creature)
+					npcHandler:say("I'm sorry but it seems you don't have enough ".. ItemType(npc:getCurrency()):getPluralName():lower().." ..? yet. Bring me "..products[answerType[playerId]][answerLevel[playerId]].value.." of them and we'll make a trade.", npc, creature)
 				end
 			else
 				npcHandler:say("You don\'t have enough capacity. You must have "..neededCap.." oz.", npc, creature)
@@ -250,39 +240,6 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 	end
 	return true
-end
-
-npcConfig.voices = {
-	interval = 5000,
-	chance = 50,
-	{text = 'Trading tokens! First-class equipment available!'}
-}
-
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
-end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
-npcType.onMove = function(npc, creature, fromPosition, toPosition)
-	npcHandler:onMove(npc, creature, fromPosition, toPosition)
-end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
 end
 
 npcHandler:setCallback(CALLBACK_SET_INTERACTION, onAddFocus)

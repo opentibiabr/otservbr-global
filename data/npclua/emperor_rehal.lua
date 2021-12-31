@@ -53,8 +53,10 @@ end
 keywordHandler:addKeyword({'hi'}, StdModule.say, {npcHandler = npcHandler, onlyUnfocus = true})
 keywordHandler:addKeyword({'hello'}, StdModule.say, {npcHandler = npcHandler, onlyUnfocus = true})
 
-function creatureSayCallback(npc, creature, type, message)
-	local player = Player(creature)	
+local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if (msgcontains(message, "nokmir")) then
 		if player:getStorageValue(Storage.HiddenCityOfBeregar.JusticeForAll) == 1 then
 			npcHandler:say("I always liked him and I still can't believe that he really stole that ring.", npc, creature)

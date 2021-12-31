@@ -49,7 +49,7 @@ if not UNDERCOVER_CONTACTED then
 	UNDERCOVER_CONTACTED = {}
 end
 
-function greetCallback(npc, creature)
+local function greetCallback(npc, creature)
 	local player = Player(creature)
 	local SPIKE_STORAGE = player:getStorageValue(SPIKE_LOWER_UNDERCOVER_MAIN)
 

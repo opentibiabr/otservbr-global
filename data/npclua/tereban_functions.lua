@@ -1,4 +1,5 @@
-local message = {}
+local topic = {}
+
 local storages = {
 	Storage.FathersBurden.Sinew, Storage.FathersBurden.Wood,
 	Storage.FathersBurden.Cloth, Storage.FathersBurden.Silk,
@@ -6,7 +7,7 @@ local storages = {
 	Storage.FathersBurden.Iron, Storage.FathersBurden.Scale
 }
 
-terebanConfig = {
+TerebanConfig = {
 	['strong sinew'] = {
 		storage = Storage.FathersBurden.Sinew,
 		messages = {
@@ -97,12 +98,15 @@ terebanConfig = {
 	}
 }
 
-function clearTerebanMessages(creature)
-	message[playerId] = nil
+function ClearTerebanMessages(npc, creature)
+	local player = Player(creature)
+	local playerId = player:getId()
+	topic[playerId] = nil
 end
 
-function parseTerebanSay(npc, creature, message, npcHandler)
+function ParseTerebanSay(npc, creature, message, npcHandler)
 	local player = Player(creature)
+	local playerId = player:getId()
 	if npcHandler:getTopic(playerId) == 0 then
 		if msgcontains(message, "cloak") then
 			if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 14) then
@@ -153,8 +157,8 @@ function parseTerebanSay(npc, creature, message, npcHandler)
 					}, npc, creature)
 				npcHandler:setTopic(playerId, 1)
 			end
-		elseif terebanConfig[message:lower()] then
-			local targetMessage = terebanConfig[message:lower()]
+		elseif TerebanConfig[message:lower()] then
+			local targetMessage = TerebanConfig[message:lower()]
 			if player:getStorageValue(targetMessage.storage) == 2 then
 				npcHandler:say(targetMessage.messages.done, npc, creature)
 				return true
@@ -162,7 +166,7 @@ function parseTerebanSay(npc, creature, message, npcHandler)
 
 			npcHandler:say(targetMessage.messages.deliever, npc, creature)
 			npcHandler:setTopic(playerId, 2)
-			message[playerId] = targetMessage
+			topic[playerId] = targetMessage
 		end
 	elseif npcHandler:getTopic(playerId) == 1 then
 		if msgcontains(message, "yes") then
@@ -178,7 +182,7 @@ function parseTerebanSay(npc, creature, message, npcHandler)
 		end
 		npcHandler:setTopic(playerId, 0)
 	elseif npcHandler:getTopic(playerId) == 2 then
-		local targetMessage = message[playerId]
+		local targetMessage = topic[playerId]
 		if msgcontains(message, "yes") then
 			if not player:removeItem(player:getItemIdByCid(targetMessage.itemId), 1) then
 				npcHandler:say(targetMessage.messages.failure, npc, creature)

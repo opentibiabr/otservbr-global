@@ -58,12 +58,13 @@ keywordHandler:addKeyword({'forest fury'}, StdModule.say, {npcHandler = npcHandl
 keywordHandler:addKeyword({'orclops'}, StdModule.say, {npcHandler = npcHandler, text = "Cruel beings. Large and monstrous, with a single eye, staring at their prey. "})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "distress") or msgcontains(message, "mission") then
 		npcHandler:say({
 			"My pride is great but not greater than reason. I am not too proud to ask for help as this is a dark hour. ... ",

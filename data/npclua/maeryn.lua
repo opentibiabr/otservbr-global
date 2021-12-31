@@ -77,7 +77,10 @@ local function greetCallback(npc, creature)
 	return true
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if msgcontains(message, 'tokens') then
 	elseif isInArray({'dangerous', 'beasts'}, message:lower()) then
 		npcHandler:say("So you don't know it yet. This island, Grimvale, is affected by were-sickness. Many {pitiful}, who are stricken with the curse, dwell in the {tunnels} and caverns underneath the village and the nearby hurst.", npc, creature)

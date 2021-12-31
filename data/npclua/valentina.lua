@@ -23,34 +23,35 @@ npcConfig.flags = {
 	floorchange = false
 }
 
- local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
-end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
-end
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
 npcConfig.voices = {
 	interval = 5000,
 	chance = 50,
 	{text = 'Love is beautiful, we are loved.'}
 }
+
+npcConfig.shop = {
+	-- Buyable items
+	{ itemName = "crimson rose", clientId = 21954, buy = 15 },
+	{ itemName = "flower bouquet", clientId = 649, buy = 20 },
+	{ itemName = "heart backpack", clientId = 10202, buy = 500 },
+	{ itemName = "present", clientId = 2856, buy = 10 },
+	{ itemName = "sweetheart ring", clientId = 21955, buy = 500 },
+	{ itemName = "truelove teddy", clientId = 21953, buy = 1000 },
+	{ itemName = "valentines cake", clientId = 6392, buy = 30 },
+	{ itemName = "valentines card", clientId = 6538, buy = 5 }
+}
+-- On buy npc shop message
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
+	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
+end
+-- On sell npc shop message
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
+end
 
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
@@ -87,26 +88,5 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Please come back from time to time.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Please come back from time to time.")
 
 npcHandler:addModule(FocusModule:new())
-
-npcConfig.shop = {
-	-- Buyable items
-	{ itemName = "crimson rose", clientId = 21954, buy = 15 },
-	{ itemName = "flower bouquet", clientId = 649, buy = 20 },
-	{ itemName = "heart backpack", clientId = 10202, buy = 500 },
-	{ itemName = "present", clientId = 2856, buy = 10 },
-	{ itemName = "sweetheart ring", clientId = 21955, buy = 500 },
-	{ itemName = "truelove teddy", clientId = 21953, buy = 1000 },
-	{ itemName = "valentines cake", clientId = 6392, buy = 30 },
-	{ itemName = "valentines card", clientId = 6538, buy = 5 }
-}
--- On buy npc shop message
-npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
-	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
-end
--- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
-	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
-end
 
 npcType:register(npcConfig)

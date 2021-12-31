@@ -45,8 +45,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-local function greetCallback(creature, message)
+local function greetCallback(npc, creature, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not msgcontains(message, 'djanni\'hah') and player:getStorageValue(Storage.DjinnWar.Faction.MaridDoor) ~= 1 then
 		npcHandler:say('Whoa! A human! This is no place for you, |PLAYERNAME|. Go and play somewhere else.', npc, creature)
 		return false
@@ -73,12 +75,13 @@ local function greetCallback(creature, message)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	-- To Appease the Mighty Quest
 	if msgcontains(message, "mission") and player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) == 1 then

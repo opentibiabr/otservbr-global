@@ -52,44 +52,15 @@ npcConfig.shop = {
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
 end
-
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-local talkState = {}
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
-end
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
-local chargeItem = {
-	['pendulet'] = {noChargeID = 29429, ChargeID = 30345},
-	['sleep shawl'] = {noChargeID = 29428, ChargeID = 30343},
-	['blister ring'] = {noChargeID = 31557, ChargeID = 31621},
-	['theurgic amulet'] = {noChargeID = 30401, ChargeID = 30403},
-	['ring of souls'] = {noChargeID = 32621, ChargeID = 32636}
-}
 
 npcConfig.voices = {
 	interval = 5000,
@@ -126,13 +97,24 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local charge = {}
+
+local chargeItem = {
+	['pendulet'] = {noChargeID = 29429, ChargeID = 30345},
+	['sleep shawl'] = {noChargeID = 29428, ChargeID = 30343},
+	['blister ring'] = {noChargeID = 31557, ChargeID = 31621},
+	['theurgic amulet'] = {noChargeID = 30401, ChargeID = 30403},
+	['ring of souls'] = {noChargeID = 32621, ChargeID = 32636}
+}
+
+local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if not player or not playerId then
 		return false
 	end
@@ -153,7 +135,7 @@ function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("The following items can be enchanted: {pendulet}, {sleep shawl}, {blister ring}, {theurgic amulet}. Make you choice!", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif isInArray({'pendulet', 'sleep shawl', 'blister ring', 'theurgic amulet'}, message:lower()) and npcHandler:getTopic(playerId) == 1 then
-		npcHandler:say("Should I enchant the item pendulet for 2 ".. ItemType(Npc():getCurrency()):getPluralName():lower() .."?", npc, creature)
+		npcHandler:say("Should I enchant the item pendulet for 2 ".. ItemType(npc:getCurrency()):getPluralName():lower() .."?", npc, creature)
 		charge = message:lower()
 		npcHandler:setTopic(playerId, 2)
 	elseif npcHandler:getTopic(playerId) == 2 then
@@ -161,13 +143,13 @@ function creatureSayCallback(npc, creature, type, message)
 			if not chargeItem[charge] then
 				npcHandler:say("Sorry, you don't have an unenchanted ".. charge ..".",creature)
 			else
-				if (player:getItemCount(Npc():getCurrency()) >= 2) and (player:getItemCount(chargeItem[charge].noChargeID) >= 1) then
-					player:removeItem(Npc():getCurrency(), 2)
+				if (player:getItemCount(npc:getCurrency()) >= 2) and (player:getItemCount(chargeItem[charge].noChargeID) >= 1) then
+					player:removeItem(npc:getCurrency(), 2)
 					player:removeItem(chargeItem[charge].noChargeID, 1)
 					local itemAdd = player:addItem(chargeItem[charge].ChargeID, 1)
 					npcHandler:say("Ah, excellent. Here is your " .. itemAdd:getName():lower() .. ".", npc, creature)
 				else
-					npcHandler:say("Sorry, friend, but one good turn deserves another. Bring enough ".. ItemType(Npc():getCurrency()):getPluralName():lower() .." and it's a deal.", npc, creature)
+					npcHandler:say("Sorry, friend, but one good turn deserves another. Bring enough ".. ItemType(npc:getCurrency()):getPluralName():lower() .." and it's a deal.", npc, creature)
 				end
 				npcHandler:setTopic(playerId, 0)
 			end
@@ -193,7 +175,7 @@ function creatureSayCallback(npc, creature, type, message)
 						player:addAchievement("Rift Warrior")
 					end
 				else
-					npcHandler:say("Sorry, friend, but one good turn deserves another. Bring enough ".. ItemType(Npc():getCurrency()):getPluralName():lower() .." and it's a deal.", npc, creature)
+					npcHandler:say("Sorry, friend, but one good turn deserves another. Bring enough ".. ItemType(npc:getCurrency()):getPluralName():lower() .." and it's a deal.", npc, creature)
 				end
 			else
 				npcHandler:say("Sorry, friend, you already have the first Rift Warrior addon.", npc, creature)
@@ -208,7 +190,7 @@ function creatureSayCallback(npc, creature, type, message)
 						player:addAchievement("Rift Warrior")
 					end
 				else
-					npcHandler:say("Sorry, friend, but one good turn deserves another. Bring enough ".. ItemType(Npc():getCurrency()):getPluralName():lower() .." and it's a deal.", npc, creature)
+					npcHandler:say("Sorry, friend, but one good turn deserves another. Bring enough ".. ItemType(npc:getCurrency()):getPluralName():lower() .." and it's a deal.", npc, creature)
 				end
 			else
 				npcHandler:say("Sorry, friend, you already have the second Rift Warrior addon.", npc, creature)

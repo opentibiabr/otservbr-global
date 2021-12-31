@@ -23,33 +23,6 @@ npcConfig.flags = {
 	floorchange = false
 }
 
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
-end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
-npcType.onMove = function(npc, creature, fromPosition, toPosition)
-	npcHandler:onMove(npc, creature, fromPosition, toPosition)
-end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
-end
-
 local hints = {
 	[1] = "If you don't know the meaning of an icon on the minimap, move the mouse cursor on it and wait a moment.",
 	[2] = "If you seek more information, look at or click on objects near you, like wall signs, \z
@@ -279,12 +252,13 @@ keywordHandler:addKeyword({"fishing rod"}, StdModule.say,
 )
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "portal") then
 		npcHandler:say(
 			{
@@ -683,6 +657,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				end
 				local item = container:getItem(i)
 				if item then
+---@diagnostic disable-next-line: undefined-field
 					if not table.contains(allowedIds, item:getId()) then
 						toBeDeleted[#toBeDeleted + 1] = item.uid
 					end

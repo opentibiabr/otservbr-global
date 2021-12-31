@@ -51,8 +51,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player then
 		npcHandler:setMessage(MESSAGE_GREET, "Greeting, |PLAYERNAME|! I welcome you to this sacred {place}. \z
 			If you are interested in {missions} just ask.")
@@ -461,12 +462,13 @@ local value = {}
 local rewardExperience = {}
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "missions") then
 		-- Final boss check
 		if player:getStorageValue(Storage.CultsOfTibia.FinalBoss.Mission) > 2 then

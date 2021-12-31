@@ -190,7 +190,7 @@ local defaultTown = TOWNS_LIST.VENORE
 local townNames = {all = "", free = "", premium = ""}
 
 -- Function to build town names strings and adds additional data to sailable/premium towns about
-function buildStrings()
+local function buildStrings()
 	local townsList = {all = {}, free = {}, premium = {}}
 	for id, town in pairs(towns) do
 		if town.canBeSailed then
@@ -219,7 +219,9 @@ end
 buildStrings()
 
 -- Function to handle donations and its messages
-local function donationHandler(creature, message, keywords, parameters, node)	local player = Player(creature)
+local function donationHandler(npc, creature, message, keywords, parameters, node)	local player = Player(creature)
+	local playerId = player:getId()
+
 	if (parameters.confirm ~= true) and (parameters.decline ~= true) then
 		npcHandler:say("So you want to donate " .. (player:getMoney() - 500) .. " gold coins? \z
 			The little kiddies are going to appreciate it.", npc, creature)
@@ -245,7 +247,9 @@ local function donationHandler(creature, message, keywords, parameters, node)	lo
 end
 
 -- Function to handle town travel and its messages
-local function townTravelHandler(creature, message, keywords, parameters, node)	local player = Player(creature)
+local function townTravelHandler(npc, creature, message, keywords, parameters, node)	local player = Player(creature)
+	local playerId = player:getId()
+
 	if (parameters.confirm ~= true) and (parameters.decline ~= true) and parameters.townId then
 		local town = towns[parameters.townId]
 		if town.canBeSailed == false then
@@ -439,10 +443,12 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	local currentNode = keywordHandler:getLastNode(creature)
 	-- Handle other words for nodes while still handling (bye, farewell) keywords

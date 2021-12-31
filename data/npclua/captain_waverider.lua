@@ -50,8 +50,9 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
 
 	if(msgcontains(message, "peg leg")) then
 		if player:getStorageValue(Storage.TheShatteredIsles.AccessToMeriana) == 1 then

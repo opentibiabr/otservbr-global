@@ -51,8 +51,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.ForgottenKnowledge.BabyDragon) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "Greetings humans! Consider yourselfs lucky, I'm in need of {help}.")
 		npcHandler:setTopic(playerId, 1)
@@ -68,12 +69,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "help") then
 		npcHandler:say({
 			"I'm aware what you are looking for. Usually I would rather devour you, but due to unfortunate circumstances, I need your {assistance}.",

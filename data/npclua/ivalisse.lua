@@ -61,12 +61,13 @@ keywordHandler:addKeyword({'duties'}, StdModule.say, {npcHandler = npcHandler, t
 keywordHandler:addKeyword({'mission'}, StdModule.say, {npcHandler = npcHandler, text = "Besides my various {duties} in the temple, I also take care of visitors. Well, I would but right now I can't get my mind of how my {father}'s doing. I am sorry."})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "temple") then
 		npcHandler:say({
 			"Well, I hope you like it here. We tried to rebuild in the {Shaper}'s will. I am a bit preoccupied at the moment because of the absence of my {father}. I may not be the best of help currently, sorry."

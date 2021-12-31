@@ -46,12 +46,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if npcHandler:getTopic(playerId) == 0 then
 		if msgcontains(message, 'outfit') then
 			npcHandler:say({
@@ -85,7 +86,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:addAchievement('Allow Cookies?')
 			end
 
-			Npc():getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
+			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say('Well, you won\'t! Though it looks tasty ...What the ... WHAT DO YOU THINK YOU ARE? THIS IS THE ULTIMATE INSULT! GET LOST!', npc, creature)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)

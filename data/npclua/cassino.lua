@@ -124,8 +124,9 @@ local function createMoney(money)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getPosition() ~= config.playerPosition then
 		npcHandler:say("If you want to play with me please come near me.", npc, creature)
 		npcHandler:removeInteraction(npc, creature)
@@ -135,12 +136,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if player:getPosition() ~= config.playerPosition then
 		npcHandler:unGreet(creature)
 		return false

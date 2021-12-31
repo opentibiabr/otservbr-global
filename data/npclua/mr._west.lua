@@ -51,8 +51,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if(player:getStorageValue(Storage.InServiceofYalahar.MrWestDoor) == 1) then
 		npcHandler:setMessage(MESSAGE_GREET, "Wh .. What? How did you get here? Where are all the guards? You .. you could have killed me but yet you chose to talk? What a relief! ... So what brings you here my friend, if I might call you like that? ")
 	elseif(player:getStorageValue(Storage.InServiceofYalahar.MrWestDoor) == 2) then
@@ -62,12 +63,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if(msgcontains(message, "mission")) then
 		if(player:getStorageValue(Storage.InServiceofYalahar.Questline) == 24) then
 			if(player:getStorageValue(Storage.InServiceofYalahar.MrWestDoor) == 1) then

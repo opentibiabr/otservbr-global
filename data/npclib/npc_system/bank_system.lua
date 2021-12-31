@@ -326,7 +326,7 @@ function Npc:parseBank(message, npc, creature, npcHandler)
 	end
 end
 
-function Npc:parseGuildBank(message, npc, creature, npcHandler)
+function Npc:parseGuildBank(message, npc, creature, playerId, npcHandler)
 	local player = Player(creature)
 	-- Guild balance
 	if msgcontains(message, "guild balance") then
@@ -397,7 +397,7 @@ function Npc:parseGuildBank(message, npc, creature, npcHandler)
 			end
 
 			local inbox = player:getInbox()
-			local receipt = getReceipt(info)
+			local receipt = GetReceipt(info)
 			inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 		elseif msgcontains(message, "no") then
 			npcHandler:say("As you wish. Is there something else I can do for you?", npc, creature)
@@ -468,7 +468,7 @@ function Npc:parseGuildBank(message, npc, creature, npcHandler)
 			end
 
 			local inbox = player:getInbox()
-			local receipt = getReceipt(info)
+			local receipt = GetReceipt(info)
 			inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			npcHandler:setTopic(playerId, 0)
 		elseif msgcontains(message, "no") then
@@ -555,10 +555,10 @@ function Npc:parseGuildBank(message, npc, creature, npcHandler)
                                 due to a lack of the required sum on your guild account."
 				info.success = false
 				local inbox = player:getInbox()
-				local receipt = getReceipt(info)
+				local receipt = GetReceipt(info)
 				inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			else
-				getGuildIdByName(transfer[playerId], transferFactory(player:getName(),
+				GetGuildIdByName(transfer[playerId], TransferFactory(player:getName(),
                                  tonumber(count[playerId]), guild:getId(), info))
 			end
 			npcHandler:setTopic(playerId, 0)
@@ -570,13 +570,13 @@ function Npc:parseGuildBank(message, npc, creature, npcHandler)
 end
 
 -- Greet callback
-function npcBankGreetCallback(npc, creature)
+function NpcBankGreetCallback(npc, creature)
 	local playerId = creature:getId()
 	count[playerId], transfer[playerId] = nil, nil
 	return true
 end
 
-function getReceipt(info)
+function GetReceipt(info)
 	local receipt = Game.createItem(info.success and 19598 or 19599)
 	receipt:setAttribute(ITEM_ATTRIBUTE_TEXT, receiptFormat:format(os.date("%d. %b %Y - %H:%M:%S"),
                          info.type, info.amount, info.owner, info.recipient, info.message))
@@ -584,7 +584,7 @@ function getReceipt(info)
 	return receipt
 end
 
-function getGuildIdByName(name, func)
+function GetGuildIdByName(name, func)
 	db.asyncStoreQuery("SELECT `id` FROM `guilds` WHERE `name` = " .. db.escapeString(name),
 		function(resultId)
 			if resultId then
@@ -597,7 +597,7 @@ function getGuildIdByName(name, func)
 	)
 end
 
-function getGuildBalance(id)
+function GetGuildBalance(id)
 	local guild = Guild(id)
 	if guild then
 		return guild:getBankBalance()
@@ -613,7 +613,7 @@ function getGuildBalance(id)
 	end
 end
 
-function setGuildBalance(id, balance)
+function SetGuildBalance(id, balance)
 	local guild = Guild(id)
 	if guild then
 		guild:setBankBalance(balance)
@@ -622,7 +622,7 @@ function setGuildBalance(id, balance)
 	end
 end
 
-function transferFactory(playerName, amount, fromGuildId, info)
+function TransferFactory(playerName, amount, fromGuildId, info)
 	return function(toGuildId)
 		if not toGuildId then
 			local player = Player(playerName)
@@ -630,25 +630,25 @@ function transferFactory(playerName, amount, fromGuildId, info)
 				info.success = false
 				info.message = "We are sorry to inform you that we could not fulfil your request, because we could not find the recipient guild."
 				local inbox = player:getInbox()
-				local receipt = getReceipt(info)
+				local receipt = GetReceipt(info)
 				inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			end
 		else
-			local fromBalance = getGuildBalance(fromGuildId)
+			local fromBalance = GetGuildBalance(fromGuildId)
 			if fromBalance < amount then
 				info.success = false
 				info.message = "We are sorry to inform you that we could not fulfill your request, due to a lack of the required sum on your guild account."
 			else
 				info.success = true
 				info.message = "We are happy to inform you that your transfer request was successfully carried out."
-				setGuildBalance(fromGuildId, fromBalance - amount)
-				setGuildBalance(toGuildId, getGuildBalance(toGuildId) + amount)
+				SetGuildBalance(fromGuildId, fromBalance - amount)
+				SetGuildBalance(toGuildId, GetGuildBalance(toGuildId) + amount)
 			end
 
 			local player = Player(playerName)
 			if player then
 				local inbox = player:getInbox()
-				local receipt = getReceipt(info)
+				local receipt = GetReceipt(info)
 				inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			end
 		end

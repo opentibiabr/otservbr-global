@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "eleonore") then
 		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) == 2 and player:getStorageValue(Storage.TheShatteredIsles.ADjinnInLove) < 1 then
 			npcHandler:say("I heard the birds sing about her beauty. But how could a human rival the enchanting beauty of a {mermaid}?", npc, creature)

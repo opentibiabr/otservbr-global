@@ -66,8 +66,9 @@ local config = {
 }
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.AdventurersGuild.CharosTrav) > 6 then
 		npcHandler:say("Sorry, you have traveled a lot.", npc, creature)
 		npcHandler:resetNpc(creature)
@@ -81,12 +82,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if npcHandler:getTopic(playerId) == 0 then
 		if msgcontains(message, "yes") then
 			npcHandler:say("Fine. You have ".. -player:getStorageValue(Storage.AdventurersGuild.CharosTrav)+7 .." \z

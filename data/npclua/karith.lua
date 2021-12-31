@@ -57,8 +57,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) == -1 then
 		npcHandler:setMessage(MESSAGE_GREET, 'Hello! Tell me what\'s on your mind. Time is money.')
 		player:setStorageValue(Storage.SearoutesAroundYalahar.TownsCounter, 0)
@@ -69,12 +70,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-local player = Player(creature)
 	if msgcontains(message, "passage") or msgcontains(message, "sail") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({

@@ -53,7 +53,7 @@ keywordHandler:addKeyword({'Chuqua'}, StdModule.say, {npcHandler = npcHandler, t
 
 local fishsID = {7158,7159}
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 
 local player = Player(creature)
 

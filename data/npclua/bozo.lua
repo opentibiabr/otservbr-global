@@ -616,12 +616,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, 'join') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) ~= -1 then
 			npcHandler:say('Wow, your stupidity would be pride and joy for every fool. You\'ve already applied as a member. Let\'s rather talk about your current mission.', npc, creature)
@@ -748,7 +749,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 
 			if targetValue.effect then
-				Npc():getPosition():sendMagicEffect(targetValue.effect)
+				npc:getPosition():sendMagicEffect(targetValue.effect)
 			end
 
 			if targetValue.last then

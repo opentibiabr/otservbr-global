@@ -1,6 +1,7 @@
-function parseAlesarSay(npc, creature, message, npcHandler)
+function ParseAlesarSay(npc, creature, message, npcHandler)
 	local player = Player(creature)
-	
+	local playerId = player:getId()
+
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission02)
 	if msgcontains(message, "mission") then
 		if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) == 3 then

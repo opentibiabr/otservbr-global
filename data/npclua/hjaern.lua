@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	if msgcontains(message, "mission") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 3 then
@@ -222,7 +223,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:addAchievement('Allow Cookies?')
 			end
 
-			Npc():getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
+			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say('In the name of the spirits I accept this offer ... UHNGH ... The spirits are not amused!', npc, creature)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)

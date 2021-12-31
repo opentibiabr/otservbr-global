@@ -50,12 +50,13 @@ keywordHandler:addKeyword({'name'}, StdModule.say, {npcHandler = npcHandler, tex
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = "Well, I am drinking most of the time. Er, no I mean - trying to hold my fluids... ah, wait that came out wrong: I am doing research. Let's just keep it at that."})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "chalice") and player:getStorageValue(Storage.ForgottenKnowledge.Chalice) == 1 then
 		npcHandler:say({
 			"Finally. That's what I... oh wait, you're still talking to me - you will blow my cover! What do you want? Oh wait, did my {daughter} send you? It has been some time now, indeed."

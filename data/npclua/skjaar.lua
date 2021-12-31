@@ -46,12 +46,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, 'key') then
 		npcHandler:say('I will give the key to the crypt only to the closest followers of my master. Would you like me to test you?', npc, creature)
 		npcHandler:setTopic(playerId, 1)

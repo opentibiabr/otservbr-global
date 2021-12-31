@@ -60,7 +60,7 @@ local function greetCallback(npc, creature)
 	return true
 end
 
-local function releasePlayer(creature)
+local function releasePlayer(npc, creature)
 	if not Player(creature) then
 		return
 	end
@@ -70,12 +70,13 @@ local function releasePlayer(creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	local questProgress = player:getStorageValue(Storage.TheApeCity.Questline)
 	if msgcontains(message, 'mission') then
 		if questProgress < 1 then
@@ -492,7 +493,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:addAchievement('Allow Cookies?')
 			end
 
-			Npc():getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
+			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say('Thank you, you are ... YOU SON OF LIZARD!', npc, creature)
 			addEvent(releasePlayer, 1000, npc, creature)
 		elseif msgcontains(message, 'no') then
@@ -536,11 +537,14 @@ npcConfig.shop = {
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcType:register(npcConfig)

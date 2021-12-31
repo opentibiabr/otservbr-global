@@ -41,17 +41,15 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
--- Storage IDs --
-storage = Storage.WayfarerOutfit
+-- Messages
+local newaddon = 'Here you are, enjoy your brand new addon!'
+local noItems = 'You do not have all the required items.'
+local already = 'It seems you already have this addon, don\'t you try to mock me son!'
 
-newaddon = 'Here you are, enjoy your brand new addon!'
-noitems = 'You do not have all the required items.'
-noitems2 = 'You do not have all the required items or you do not have the first addon, which by the way, is a requirement for this addon.'
-already = 'It seems you already have this addon, don\'t you try to mock me son!'
 --WAYFARER START --
-function WayfarerFirst(creature, message, keywords, parameters, node)
+function WayfarerFirst(npc, creature, message, keywords, parameters, node)
 	if isPremium(creature) then
-		addon = getPlayerStorageValue(creature,storage)
+		local addon = getPlayerStorageValue(creature, Storage.WayfarerOutfit)
 		if addon == -1 then
 			if getPlayerItemCount(creature,11701) >= 1 then
 				if doPlayerRemoveItem(creature,11701,1) then
@@ -59,10 +57,10 @@ function WayfarerFirst(creature, message, keywords, parameters, node)
 					doSendMagicEffect(getCreaturePosition(creature), 13)
 					doPlayerAddOutfit(creature, 366, 1)
 					doPlayerAddOutfit(creature, 367, 1)
-					setPlayerStorageValue(creature,storage,1)
+					setPlayerStorageValue(creature, Storage.WayfarerOutfit,1)
 				end
 			else
-				npcHandler:say(noitems, npc, creature)
+				npcHandler:say(noItems, npc, creature)
 			end
 		else
 			npcHandler:say(already, npc, creature)
@@ -70,20 +68,19 @@ function WayfarerFirst(creature, message, keywords, parameters, node)
 	end
 end
 
-function WayfarerSecond(creature, message, keywords, parameters, node)
+function WayfarerSecond(npc, creature, message, keywords, parameters, node)
 	if isPremium(creature) then
-		addon = getPlayerStorageValue(creature,storage+1)
-		if addon == -1 then
+		if getPlayerStorageValue(creature, Storage.WayfarerOutfit + 1) == -1 then
 			if getPlayerItemCount(creature,11700) >= 1 then
 				if doPlayerRemoveItem(creature,11700,1) then
 					npcHandler:say(newaddon, npc, creature)
 					doSendMagicEffect(getCreaturePosition(creature), 13)
 					doPlayerAddOutfit(creature, 366, 2)
 					doPlayerAddOutfit(creature, 367, 2)
-					setPlayerStorageValue(creature,storage + 1, 1)
+					setPlayerStorageValue(creature, Storage.WayfarerOutfit + 1, 1)
 				end
 			else
-				npcHandler:say(noitems, npc, creature)
+				npcHandler:say(noItems, npc, creature)
 			end
 		else
 			npcHandler:say(already, npc, creature)
@@ -102,11 +99,11 @@ keywordHandler:addKeyword({'mission'}, StdModule.say, {npcHandler = npcHandler, 
 
 keywordHandler:addKeyword({'help'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = "llected all the required pieces, say 'yes' and voila - you got yourself an addon!"})
 
-	node1 = keywordHandler:addKeyword({'first addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the first storage addon you need to give me the Old Cape. Do you have them with you?'})
+	local node1 = keywordHandler:addKeyword({'first addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the first storage addon you need to give me the Old Cape. Do you have them with you?'})
 	node1:addChildKeyword({'yes'}, WayfarerFirst, {})
 	node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Alright then. Come back when you got all neccessary items.', reset = true})
 
-	node2 = keywordHandler:addKeyword({'second addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the second storage addon you need to give me the Sedge Hat. Do you have them with you?'})
+	local node2 = keywordHandler:addKeyword({'second addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the second storage addon you need to give me the Sedge Hat. Do you have them with you?'})
 	node2:addChildKeyword({'yes'}, WayfarerSecond, {})
 	node2:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Alright then. Come back when you got all neccessary items.', reset = true})
  npcHandler:addModule(FocusModule:new())

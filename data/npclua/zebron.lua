@@ -57,12 +57,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 0 then
 			npcHandler:say('Hmmm, would you like to play for {money} or for a chance to win your own {dice}?', npc, creature)
@@ -74,7 +75,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				return false
 			end
 
-			Npc():getPosition():sendMagicEffect(CONST_ME_CRAPS)
+			npc:getPosition():sendMagicEffect(CONST_ME_CRAPS)
 			local realRoll = math.random(30)
 			local roll = math.random(5)
 			if realRoll < 30 then
@@ -114,7 +115,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			return false
 		end
 
-		Npc():getPosition():sendMagicEffect(CONST_ME_CRAPS)
+		npc:getPosition():sendMagicEffect(CONST_ME_CRAPS)
 		local roll = math.random(6)
 		if roll < 6 then
 			npcHandler:say('Ok, here we go ... '.. roll ..'! You have lost. Bad luck. One more game?', npc, creature)

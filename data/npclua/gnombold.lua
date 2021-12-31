@@ -48,8 +48,9 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
 
 	if msgcontains(message, 'job') then
 		return npcHandler:say('I\'m the officer responsible for this area. I give out missions, accept mission reports and oversee our defences.', npc, creature)

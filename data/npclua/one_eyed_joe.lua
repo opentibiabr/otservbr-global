@@ -56,7 +56,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if (player:getStorageValue(Storage.TibiaTales.TheCursedCrystal.Oneeyedjoe) == 3) then
 		if (player:getStorageValue(Storage.TibiaTales.TheCursedCrystal.Questline) == 3)then
 			player:setStorageValue(Storage.TibiaTales.TheCursedCrystal.Questline, 4)
@@ -67,7 +70,8 @@ function creatureSayCallback(npc, creature, type, message)
 		doPlayerAddItem(creature,16120,1)
 		doPlayerAddItem(creature,16121,1)
 		math.randomseed(os.time())
-		chanceToPirate = math.random(1,4)
+
+		local chanceToPirate = math.random(1,4)
 		if chanceToPirate == 1 then
 			doPlayerAddItem(creature,5926,1)
 		elseif chanceToPirate == 2 then

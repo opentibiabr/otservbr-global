@@ -51,10 +51,12 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	if msgcontains(message, 'cigar') then
 		npcHandler:say('Oh my. Have you gotten an exquisite cigar for me, my young friend?', npc, creature)
@@ -67,7 +69,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 		player:setStorageValue(Storage.WhatAFoolish.Cigar, 1)
-		Npc():getPosition():sendMagicEffect(CONST_ME_EXPLOSIONHIT)
+		npc:getPosition():sendMagicEffect(CONST_ME_EXPLOSIONHIT)
 		npcHandler:say({
 			'Ah what a fine blend. I really ...',
 			'OUCH! What have you done you fool? How dare you???'

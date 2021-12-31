@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, 'belongings of deceasead') or msgcontains(message, 'medicine') then
 		if player:getItemCount(12517) > 0 then
 			npcHandler:say('Did you bring me the medicine pouch?', npc, creature)

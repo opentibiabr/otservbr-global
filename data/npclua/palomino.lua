@@ -51,10 +51,12 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	if msgcontains(message, 'transport') then
 		npcHandler:say('We can bring you to Venore with one of our coaches for 125 gold. Are you interested?', npc, creature)

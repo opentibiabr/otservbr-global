@@ -57,12 +57,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, 'ticket') then
 		if player:getStorageValue(Storage.WagonTicket) >= os.time() then
 			npcHandler:say('Your weekly ticket is still valid. Would be a waste of money to purchase a second one', npc, creature)

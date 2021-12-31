@@ -57,15 +57,17 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	-- Parse bank
 	npc:parseBank(message, npc, creature, npcHandler)
 	-- Parse guild bank
-	npc:parseGuildBank(message, npc, creature, npcHandler)
+	npc:parseGuildBank(message, npc, creature, playerId, npcHandler)
 	-- Normal messages
 	npc:parseBankMessages(message, npc, creature, npcHandler)
 	return true
@@ -74,7 +76,7 @@ end
 npcHandler:setMessage(MESSAGE_GREET, "Yes? What may I do for you, |PLAYERNAME|? Bank business, perhaps?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Have a nice day.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Have a nice day.")
-npcHandler:setCallback(CALLBACK_GREET, npcBankGreetCallback)
+npcHandler:setCallback(CALLBACK_GREET, NpcBankGreetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 

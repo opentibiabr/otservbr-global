@@ -97,7 +97,7 @@ local function getReward()
 	 return rewardItem
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or creature
 	
 	if msgcontains(message, 'present') then

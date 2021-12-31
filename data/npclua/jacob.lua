@@ -50,8 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	-- Mission 3 start
 	if(msgcontains(message, "abandoned sewers")) then
 		if player:getStorageValue(Storage.Oramond.MissionAbandonedSewer) < 21 then

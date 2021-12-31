@@ -66,10 +66,12 @@ keywordHandler:addKeyword({'magic'}, StdModule.say, {npcHandler = npcHandler, te
 keywordHandler:addKeyword({'hellgate'}, StdModule.say, {npcHandler = npcHandler, text = 'For the worst of crimes, criminals are cast into hellgate. It is said no one can return from there. Since it is not actually forbidden to enter hellgate, you might convince Elathriel to grant you entrance.'})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	if msgcontains(message, 'songs of the forest') then
 		npcHandler:say({
@@ -119,11 +121,14 @@ npcConfig.shop = {
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcType:register(npcConfig)

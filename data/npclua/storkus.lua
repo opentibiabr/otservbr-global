@@ -50,12 +50,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if(msgcontains(message, "mission")) then
 		if(player:getStorageValue(Storage.TheInquisition.Questline) == 6) then
 			if(player:getStorageValue(Storage.TheInquisition.StorkusVampiredust) < 0) then
@@ -119,7 +120,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif(msgcontains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			local count = player:getItemCount(5905)
-			requiredCount = 20 - player:getStorageValue(Storage.TheInquisition.StorkusVampiredust)
+			local requiredCount = 20 - player:getStorageValue(Storage.TheInquisition.StorkusVampiredust)
 			if(count > requiredCount) then
 				count = requiredCount
 			end

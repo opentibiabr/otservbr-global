@@ -52,8 +52,9 @@ condition:setParameter(CONDITION_PARAM_TICKINTERVAL, 4000)
 
 local guards = { "Minotaur Guard", "Minotaur Archer", "Minotaur Mage" }
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.MarkwinGreeting) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "Intruder! Guards, take him down!")
 		player:setStorageValue(Storage.MarkwinGreeting, 1)
@@ -76,12 +77,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "letter") then
 		if player:getStorageValue(Storage.Postman.Mission10) == 1 then
 			if player:getItemCount(3220) > 0 then
@@ -113,7 +115,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:addAchievement('Allow Cookies?')
 			end
 
-			Npc():getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
+			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say('I understand this as a peace-offering, human ... UNGH ... THIS IS AN OUTRAGE! THIS MEANS WAR!!!', npc, creature)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)

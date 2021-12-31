@@ -23,6 +23,15 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+npcConfig.voices = {
+	interval = 5000,
+	chance = 50,
+	{text = "Where did I put my broom? Mother?"},
+	{text = "Mother?! Oh no, now I have to do this all over again"},
+	{text = "Mhmhmhmhm."},
+	{text = "Lalala..."}
+}
+
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 
@@ -51,12 +60,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "jack") then
 		if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 5) then
 			if
@@ -105,41 +115,6 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-npcConfig.voices = {
-	interval = 5000,
-	chance = 50,
-	{text = "Where did I put my broom? Mother?"},
-	{text = "Mother?! Oh no, now I have to do this all over again"},
-	{text = "Mhmhmhmhm."},
-	{text = "Lalala..."}
-}
-
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
-end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
-npcType.onMove = function(npc, creature, fromPosition, toPosition)
-	npcHandler:onMove(npc, creature, fromPosition, toPosition)
-end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
-end
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_GREET, "Mh hello there. What can I do for you?")
 npcHandler:addModule(FocusModule:new())

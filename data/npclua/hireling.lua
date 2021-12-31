@@ -331,11 +331,14 @@ npcConfig.shop = {
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 local keywordHandler = KeywordHandler:new()
@@ -442,6 +445,8 @@ local function getHirelingServiceString(creature)
 	str = str .. "?"
 
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getGuid() == hireling:getOwnerId() then
 		str = str .. " If you want, I can go back to my {lamp} or maybe change my {outfit}."
 	end
@@ -449,11 +454,11 @@ local function getHirelingServiceString(creature)
 end
 
 local function getTopic(creature)
-	playerId = creature:getId()
+	local playerId = creature:getId()
 	return npcHandler:getTopic(playerId) and npcHandler:getTopic(playerId) > 0 and npcHandler:getTopic(playerId) or TOPIC.SERVICES
 end
 
-local function sendSkillNotLearned(creature, SKILL)
+local function sendSkillNotLearned(npc, creature, SKILL)
 	local message = "Sorry, but I do not have mastery in this skill yet."
 	local profession
 	if SKILL == HIRELING_SKILLS.BANKER then
@@ -481,14 +486,14 @@ end
 -- ----------------------[[ BANKING FUNCTIONS ]] ------------------------------
 -------------------------------- guild bank -----------------------------------------------
 local receiptFormat = 'Date: %s\nType: %s\nGold Amount: %d\nReceipt Owner: %s\nRecipient: %s\n\n%s'
-local function getReceipt(info)
+local function GetReceipt(info)
 	local receipt = Game.createItem(info.success and 21932 or 21933)
 	receipt:setAttribute(ITEM_ATTRIBUTE_TEXT, receiptFormat:format(os.date('%d. %b %Y - %H:%M:%S'), info.type, info.amount, info.owner, info.recipient, info.message))
 
 	return receipt
 end
 
-local function getGuildIdByName(name, func)
+local function GetGuildIdByName(name, func)
 	db.asyncStoreQuery('SELECT `id` FROM `guilds` WHERE `name` = ' .. db.escapeString(name),
 		function(resultId)
 			if resultId then
@@ -501,7 +506,7 @@ local function getGuildIdByName(name, func)
 	)
 end
 
-local function getGuildBalance(id)
+local function GetGuildBalance(id)
 	local guild = Guild(id)
 	if guild then
 		return guild:getBankBalance()
@@ -517,7 +522,7 @@ local function getGuildBalance(id)
 	end
 end
 
-local function setGuildBalance(id, balance)
+local function SetGuildBalance(id, balance)
 	local guild = Guild(id)
 	if guild then
 		guild:setBankBalance(balance)
@@ -526,7 +531,7 @@ local function setGuildBalance(id, balance)
 	end
 end
 
-local function transferFactory(playerName, amount, fromGuildId, info)
+local function TransferFactory(playerName, amount, fromGuildId, info)
 	return function(toGuildId)
 		if not toGuildId then
 			local player = Player(playerName)
@@ -534,32 +539,32 @@ local function transferFactory(playerName, amount, fromGuildId, info)
 				info.success = false
 				info.message = 'We are sorry to inform you that we could not fulfil your request, because we could not find the recipient guild.'
 				local inbox = player:getInbox()
-				local receipt = getReceipt(info)
+				local receipt = GetReceipt(info)
 				inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			end
 		else
-			local fromBalance = getGuildBalance(fromGuildId)
+			local fromBalance = GetGuildBalance(fromGuildId)
 			if fromBalance < amount then
 				info.success = false
 				info.message = 'We are sorry to inform you that we could not fulfill your request, due to a lack of the required sum on your guild account.'
 			else
 				info.success = true
 				info.message = 'We are happy to inform you that your transfer request was successfully carried out.'
-				setGuildBalance(fromGuildId, fromBalance - amount)
-				setGuildBalance(toGuildId, getGuildBalance(toGuildId) + amount)
+				SetGuildBalance(fromGuildId, fromBalance - amount)
+				SetGuildBalance(toGuildId, GetGuildBalance(toGuildId) + amount)
 			end
 
 			local player = Player(playerName)
 			if player then
 				local inbox = player:getInbox()
-				local receipt = getReceipt(info)
+				local receipt = GetReceipt(info)
 				inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			end
 		end
 	end
 end
 --------------------------------end guild bank-----------------------------------------------
-local function handleBankActions(creature, message)
+local function handleBankActions(npc, creature, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 ---------------------------- help ------------------------
@@ -661,7 +666,7 @@ local function handleBankActions(creature, message)
 			end
 
 			local inbox = player:getInbox()
-			local receipt = getReceipt(info)
+			local receipt = GetReceipt(info)
 			inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 		elseif msgcontains(message, 'no') then
 			npcHandler:say('As you wish. Is there something else I can do for you?', npc, creature)
@@ -787,7 +792,7 @@ local function handleBankActions(creature, message)
 			end
 
 			local inbox = player:getInbox()
-			local receipt = getReceipt(info)
+			local receipt = GetReceipt(info)
 			inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			npcHandler:setTopic(playerId, 1445)
 		elseif msgcontains(message, 'no') then
@@ -912,10 +917,10 @@ local function handleBankActions(creature, message)
 				info.message = 'We are sorry to inform you that we could not fulfill your request, due to a lack of the required sum on your guild account.'
 				info.success = false
 				local inbox = player:getInbox()
-				local receipt = getReceipt(info)
+				local receipt = GetReceipt(info)
 				inbox:addItemEx(receipt, INDEX_WHEREEVER, FLAG_NOLIMIT)
 			else
-				getGuildIdByName(transfer[playerId], transferFactory(player:getName(), tonumber(count[playerId]), guild:getId(), info))
+				GetGuildIdByName(transfer[playerId], TransferFactory(player:getName(), tonumber(count[playerId]), guild:getId(), info))
 			end
 			npcHandler:setTopic(playerId, 1445)
 		elseif msgcontains(message, 'no') then
@@ -1143,7 +1148,7 @@ local function getDeliveredMessageByFoodId(food_id) -- remove the hardcoded food
 	return message
 end
 
-local function deliverFood(creature, food_id)
+local function deliverFood(npc, creature, food_id)
 	local playerId = creature:getId()
 	local player = Player(creature)
 	local itType = ItemType(food_id)
@@ -1164,7 +1169,7 @@ local function deliverFood(creature, food_id)
 	npcHandler:setTopic(playerId, TOPIC.SERVICES)
 end
 
-local function cookFood(creature)
+local function cookFood(npc, creature)
 	local playerId = creature:getId()
 	local random = math.random(6)
 	if random == 6 then
@@ -1172,15 +1177,15 @@ local function cookFood(creature)
 		npcHandler:setTopic(playerId, TOPIC_FOOD.SKILL_CHOOSE)
 		npcHandler:say("Yay! I have the ingredients to make a skill boost dish. Would you rather like to boost your {magic}, {melee}, {shielding} or {distance} skill?", npc, creature)
 	else -- deliver the random generated index
-		deliverFood(creature, HIRELING_FOODS[random])
+		deliverFood(npc, creature, HIRELING_FOODS[random])
 	end
 end
 
-local function handleFoodActions(creature, message)
+local function handleFoodActions(npc, creature, message)
 	local playerId = creature:getId()
 	if npcHandler:getTopic(playerId) == TOPIC.FOOD then --initial node
 		if msgcontains(message, "yes") then
-			cookFood(creature)
+			cookFood(npc, creature)
 		elseif msgcontains(message, "no") then
 			npcHandler:setTopic(playerId, TOPIC.SERVICES)
 			npcHandler:say("Alright then, ask me for other {services}, if you want.", npc, creature)
@@ -1189,13 +1194,13 @@ local function handleFoodActions(creature, message)
 		end
 	elseif npcHandler:getTopic(playerId) == TOPIC_FOOD.SKILL_CHOOSE then
 		if msgcontains(message, "magic") then
-			deliverFood(creature, HIRELING_FOODS_BOOST.MAGIC)
+			deliverFood(npc, creature, HIRELING_FOODS_BOOST.MAGIC)
 		elseif msgcontains(message,"melee") then
-			deliverFood(creature, HIRELING_FOODS_BOOST.MELEE)
+			deliverFood(npc, creature, HIRELING_FOODS_BOOST.MELEE)
 		elseif msgcontains(message,"shielding") then
-			deliverFood(creature, HIRELING_FOODS_BOOST.SHIELDING)
+			deliverFood(npc, creature, HIRELING_FOODS_BOOST.SHIELDING)
 		elseif msgcontains(message,"distance") then
-			deliverFood(creature, HIRELING_FOODS_BOOST.DISTANCE)
+			deliverFood(npc, creature, HIRELING_FOODS_BOOST.DISTANCE)
 		else
 			npcHandler:say("Sorry, but you must choose a valid skill class. Would you like to boost your {magic}, {melee}, {shielding} or {distance} skill?", npc, creature)
 		end
@@ -1204,12 +1209,13 @@ end
 
 -- ======================[[ END COOKER FUNCTIONS ]] ======================== --
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	if not hireling:canTalkTo(player) then
 		return false
@@ -1234,21 +1240,21 @@ local function creatureSayCallback(npc, creature, type, message)
 				count[playerId], transfer[playerId] = nil, nil
 				npcHandler:say(GREETINGS.BANK, npc, creature)
 			else
-				sendSkillNotLearned(creature, HIRELING_SKILLS.BANKER)
+				sendSkillNotLearned(npc, creature, HIRELING_SKILLS.BANKER)
 			end
 		elseif msgcontains(message, "food") then
 			if hireling:hasSkill(HIRELING_SKILLS.COOKING) then
 				npcHandler:setTopic(playerId, TOPIC.FOOD)
 				npcHandler:say(GREETINGS.FOOD, npc, creature)
 			else
-				sendSkillNotLearned(creature, HIRELING_SKILLS.COOKING)
+				sendSkillNotLearned(npc, creature, HIRELING_SKILLS.COOKING)
 			end
 		elseif msgcontains(message, "stash") then
 			if hireling:hasSkill(HIRELING_SKILLS.STEWARD) then
 				npcHandler:say(GREETINGS.STASH, npc, creature)
 				player:openStash(true)
 			else
-				sendSkillNotLearned(creature, HIRELING_SKILLS.STEWARD)
+				sendSkillNotLearned(npc, creature, HIRELING_SKILLS.STEWARD)
 			end
 		elseif msgcontains(message, "goods") or msgcontains(message, "trade") then
 			npcHandler:setTopic(playerId, TOPIC.GOODS)
@@ -1278,9 +1284,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Alright then, I will be here.", npc, creature)
 		end
 	elseif(getTopic(creature) >= TOPIC.BANK and getTopic(creature) < TOPIC.FOOD) then
-		handleBankActions(creature, message)
+		handleBankActions(npc, creature, message)
 	elseif(getTopic(creature) >= TOPIC.FOOD and getTopic(creature) < TOPIC.GOODS) then
-		handleFoodActions(creature, message)
+		handleFoodActions(npc, creature, message)
 	elseif(getTopic(creature) >= TOPIC.GOODS) then
 		if msgcontains(message, "goods") or msgcontains(message, "trade") then
 			npcHandler:setTopic(playerId, TOPIC.GOODS)

@@ -50,8 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if(msgcontains(message, "funding")) then
 		if(player:setStorageValue(Storage.DarkTrails.Mission07) == 1) then
 			selfSay("So far you earned x votes. Each single vote can be spent on a different topic or you're also able to cast all your votes on one voting. ...", npc, creature)

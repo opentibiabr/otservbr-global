@@ -50,6 +50,8 @@ local function greetCallback(npc, creature)
 	local playerId = creature:getId()
 
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 13 then
 		npcHandler:setMessage(MESSAGE_GREET, "Enter answers for the following {questions}:")
 		npcHandler:setTopic(playerId, 1)
@@ -111,12 +113,13 @@ local quiz3 = {
 	[2] = {p = "Is the number divisible by 2?", r = function(player)return (player:getStorageValue(Storage.CultsOfTibia.MotA.Answer) % 2 == 0 and 1 or 0)end}
 }
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	-- Começou a quest
 	if msgcontains(message, "questions") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say("Ready to {start}?", npc, creature)

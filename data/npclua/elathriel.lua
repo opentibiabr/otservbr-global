@@ -247,10 +247,12 @@ keywordHandler:addKeyword({"sell"}, StdModule.say,
 )
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	if msgcontains(message, "key") then
 		npcHandler:say("If you are that curious, do you want to buy a key for 5000 gold? \z

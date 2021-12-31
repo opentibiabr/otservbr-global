@@ -50,12 +50,13 @@ condition:setParameter(CONDITION_PARAM_DELAYED, 1)
 condition:addDamage(14, 1000, -10)
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if isInArray({"fuck", "idiot", "asshole", "ass", "fag", "stupid", "tyrant", "shit", "lunatic"}, message) then
 		npcHandler:say("Take this!", npc, creature)
 		player:getPosition():sendMagicEffect(CONST_ME_EXPLOSIONAREA)

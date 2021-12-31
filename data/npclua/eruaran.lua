@@ -144,11 +144,10 @@ local ACTION = {
 }
 
 -- dream START --
-function dreamFirst(creature, message, keywords, parameters, node)
+local function dreamFirst(npc, creature, message, keywords, parameters, node)
 
 	if isPremium(creature) then
-		addon = getPlayerStorageValue(creature, storage)
-		if addon == -1 then
+		if getPlayerStorageValue(creature, storage) == -1 then
 			if getPlayerItemCount(creature,20276) >= 1 then
 				if doPlayerRemoveItem(creature,20276,1) then
 					selfSay(newaddon, npc, creature)
@@ -168,11 +167,9 @@ function dreamFirst(creature, message, keywords, parameters, node)
 
 end
 
-function dreamSecond(creature, message, keywords, parameters, node)
-		
+local function dreamSecond(npc, creature, message, keywords, parameters, node)
 	if isPremium(creature) then
-		addon = getPlayerStorageValue(creature, storage+1)
-		if addon == -1 then
+		if getPlayerStorageValue(creature, storage + 1) == -1 then
 			if getPlayerItemCount(creature,20275) >= 1 then
 				if doPlayerRemoveItem(creature,20275,1) then
 					selfSay(newaddon, npc, creature)
@@ -194,8 +191,9 @@ end
 -- dream END --
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.EruaranGreeting) > 0 then
 		npcHandler:setMessage(MESSAGE_GREET, "Ashari Lillithy, so we meet {again}! What brings you here this time, general {information}, {transform}, {improve}, {create}, {outfit}, or {talk}?")
 	else
@@ -206,12 +204,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "create") then
 		npcHandler:say("You can try to create {sword}s, {axe}s, {club}s, {bow}s, {crossbow}s and {spellbook}s.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
@@ -412,11 +411,11 @@ local function creatureSayCallback(npc, creature, type, message)
 end
 
 keywordHandler:addKeyword({'outfit'}, StdModule.say, {npcHandler = npcHandler, text = 'What addon you are looking? I need for first addon: {dream warden claw} and for second {dream warden mask}.'})
-	node1 = keywordHandler:addKeyword({'dream warden mask'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the first dream addon you need to give me 1 dream warden claw. Do you have them with you?'})
+	local node1 = keywordHandler:addKeyword({'dream warden mask'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the first dream addon you need to give me 1 dream warden claw. Do you have them with you?'})
 	node1:addChildKeyword({'yes'}, dreamFirst, {})
 	node1:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Alright then. Come back when you got all neccessary items.', reset = true})
 
-	node2 = keywordHandler:addKeyword({'dream warden claw'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the second dream addon you need to give me 1 dream warden mask. Do you have them with you?'})
+	local node2 = keywordHandler:addKeyword({'dream warden claw'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the second dream addon you need to give me 1 dream warden mask. Do you have them with you?'})
 	node2:addChildKeyword({'yes'}, dreamSecond, {})
 	node2:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Alright then. Come back when you got all neccessary items.', reset = true})
 

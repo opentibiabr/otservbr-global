@@ -60,12 +60,13 @@ function Player.getInquisitionGold(self)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "mission") then
 		npcHandler:say({
 			"First, you will help us rebuilding this wretched {bridge} we cannot cross. We need mortar and there are several types of monsters who try to keep us away from it. ...",

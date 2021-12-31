@@ -51,8 +51,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.Kilmaresh.Fifth.Memories) == 4 then
 		player:addItem(31414, 1)
 		npcHandler:setMessage(MESSAGE_GREET, {

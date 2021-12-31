@@ -51,12 +51,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "do for you") then
 			npcHandler:say("I run the dog sled service from this city to {Nibelor}.", npc, creature)
 	elseif msgcontains(message, "Nibelor") or msgcontains(message, "passage") then

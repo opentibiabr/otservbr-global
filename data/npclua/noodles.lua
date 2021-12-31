@@ -56,12 +56,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "banana skin") then
 		if player:getStorageValue(Storage.Postman.Mission06) == 7 then
 			if player:getItemCount(3104) > 0 then

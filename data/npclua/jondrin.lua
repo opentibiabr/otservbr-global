@@ -50,8 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if(msgcontains(message, "necrometer")) then
 		--[[if player:getStorageValue(Storage.Oramond.TaskProbing == 1) then
 		--for this mission is needed script of the npc Doubleday]]

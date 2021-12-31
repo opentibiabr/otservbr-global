@@ -29,11 +29,14 @@ npcConfig.shop = {
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 local keywordHandler = KeywordHandler:new()
@@ -93,12 +96,13 @@ keywordHandler:addKeyword({"have"}, StdModule.say, {npcHandler = npcHandler, tex
 keywordHandler:addKeyword({"time"}, StdModule.say, {npcHandler = npcHandler, text = "Now, it is |TIME|."})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	-- Demon oak quest
 	if msgcontains(message, "mission") or msgcontains(message, "demon oak") then
@@ -139,7 +143,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				if player:removeItem(3274, 1) and player:removeMoneyBank(1000) then
 					npcHandler:say("Let's see....<mumbles a prayer>....here we go. The blessing on this axe will be absorbed by all the demonic energy around here. I presume it will not last very long, so better hurry. Actually, I can refresh the blessing as often as you like.",creature)
 					player:addItem(919, 1)
-					Npc():getPosition():sendMagicEffect(CONST_ME_YELLOWENERGY)
+					npc:getPosition():sendMagicEffect(CONST_ME_YELLOWENERGY)
 					npcHandler:setTopic(playerId, 0)
 				else
 					npcHandler:say("There is no axe with you.",creature)

@@ -81,8 +81,9 @@ local function playerHasIngredients(creature)
 	return true
 end
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.HotCuisineQuest.QuestStart) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "Greetings, |PLAYERNAME|. What are you doing out here?")
 	else
@@ -92,12 +93,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "cook") then
 		if player:getStorageValue(Storage.HotCuisineQuest.QuestStart) < 1 then
 			npcHandler:say("Well, I'm not a simple cook. I travel the whole Tibian continent for the most artfully seasoned {recipes} and constantly develop new ones.", npc, creature)

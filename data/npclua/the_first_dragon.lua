@@ -50,8 +50,9 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or creature
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
 
 	if msgcontains(message, 'reward') and npcHandler:getTopic(playerId) == 0 and player:getStorageValue(34013) < 1 then
 		npcHandler:say({

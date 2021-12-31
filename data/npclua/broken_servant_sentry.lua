@@ -50,7 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if(msgcontains(message, "slime") or msgcontains(message, "mould") or msgcontains(message, "fungus") or msgcontains(message, "sample")) then
 		if(getPlayerStorageValue(creature, Storage.ElementalistQuest1) < 1) then
 			npcHandler:say("If. You. Bring. Slime. Fungus. Samples. Fro-Fro-Fro-Frrrr*chhhhchrk*From. Other. Tower. You. Must. Be. The. Master. Are. You. There. Master?", npc, creature)

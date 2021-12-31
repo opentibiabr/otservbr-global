@@ -23,18 +23,21 @@ npcConfig.flags = {
 }
 
 npcConfig.shop = {
-	{name="metal fitting", id=9115, buy=500},
-	{name="nail", id=953, sell=10},
-	{name="flask of rust remover", id=9016, buy=50, storage = {Storage.HiddenCityOfBeregar.JusticeForAll, 6}}
+	{name="metal fitting", clientId=9115, buy=500},
+	{name="nail", clientId=953, sell=10},
+	{name="flask of rust remover", clientId=9016, buy=50, storageKey = Storage.HiddenCityOfBeregar.JusticeForAll, storageValue = 6}
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 local keywordHandler = KeywordHandler:new()

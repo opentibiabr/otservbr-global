@@ -52,7 +52,7 @@ end
 
 npcHandler:addModule(FocusModule:new())
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 end
 

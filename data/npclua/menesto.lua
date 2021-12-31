@@ -50,8 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function greetCallback(npc, creature)
+local function greetCallback(npc, creature)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.Tutorial) < 1 then
 		npcHandler:say(
 			{
@@ -71,12 +73,13 @@ function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "ready") then
 		if player:getStorageValue(Storage.Dawnport.Tutorial) == 1 then
 			npcHandler:say(

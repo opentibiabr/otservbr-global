@@ -23,6 +23,15 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+npcConfig.voices = {
+	interval = 5000,
+	chance = 50,
+	{ text = 'Newcomers - visit me! I\'ll answer your questions!' },
+	{ text = 'Get some training in the academy!' },
+	{ text = 'Feeling lost? Ask me for help!' },
+	{ text = 'Gain some knowledge in the academy!' }
+}
+
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 npcHandler.rats = {}
@@ -47,42 +56,9 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-npcConfig.voices = {
-	interval = 5000,
-	chance = 50,
-	{ text = 'Newcomers - visit me! I\'ll answer your questions!' },
-	{ text = 'Get some training in the academy!' },
-	{ text = 'Feeling lost? Ask me for help!' },
-	{ text = 'Gain some knowledge in the academy!' }
-}
-
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
-end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
 npcType.onMove = function(npc, creature, fromPosition, toPosition)
 	npcHandler:onMove(npc, creature, fromPosition, toPosition)
 end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
-end
-
 
 -- Greeting and Farewell
 local hiKeyword = keywordHandler:addGreetKeyword({'hi'}, {npcHandler = npcHandler, text = 'Hello, |PLAYERNAME|. Welcome to the Academy of Rookgaard. May I sign you up as a {student}?'})

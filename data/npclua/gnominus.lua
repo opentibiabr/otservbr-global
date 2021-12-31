@@ -52,12 +52,13 @@ end
 
 -- transcript for buying fresh mushroom beer is probably wrong except for the case where you buy it
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, 'recruitment') then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 3 then
 			npcHandler:say('Your examination is quite easy. Just step through the green crystal apparatus in the south! We will examine you with what we call g-rays. Where g stands for gnome of course ...', npc, creature)

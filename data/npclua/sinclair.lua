@@ -59,7 +59,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-local function releasePlayer(creature)
+local function releasePlayer(npc, creature)
 	if not Player(creature) then
 		return
 	end
@@ -69,12 +69,13 @@ local function releasePlayer(creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	if msgcontains(message, 'mission') then
 		local qStorage = player:getStorageValue(Storage.SpiritHunters.Mission01)

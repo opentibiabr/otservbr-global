@@ -46,8 +46,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getCondition(CONDITION_POISON) then
 		player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "Venture the path of decay!")
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)

@@ -97,12 +97,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if npcHandler:getTopic(playerId) == 0 then
 		if msgcontains(message, "yes") then
 			npcHandler:say("IN WHICH TOWN DO YOU WANT TO LIVE: {CARLIN}, {THAIS}, OR {VENORE}?", npc, creature)
@@ -150,6 +151,8 @@ local function onAddFocus(creature)
 end
 
 local function onReleaseFocus(creature)
+	local player = Player(creature)
+	local playerId = player:getId()
 	town[playerId] = nil
 	vocation[playerId] = nil
 end

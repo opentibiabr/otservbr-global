@@ -69,10 +69,12 @@ keywordHandler:addKeyword({'ab\'dendriel'}, StdModule.say, {npcHandler = npcHand
 keywordHandler:addKeyword({'kazordoon'}, StdModule.say, {npcHandler = npcHandler, text = "The city is like the dwarfs that built it. Stony, never-changing and hard to understand for an outsider."})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	if msgcontains(message, "winfred") then
 		npcHandler:say({

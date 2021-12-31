@@ -182,6 +182,7 @@ if NpcHandler == nil then
 	-- If the player is not interacting with the npc, it set the npc's interaction with the player
 	-- It clean the eventDelayedSay and turn npc to the player
 	function NpcHandler:updateInteraction(npc, player)
+		local playerId = player:getId()
 		if not self:checkInteraction(npc, player) then
 			npc:setPlayerInteraction(player, 0)
 			return true

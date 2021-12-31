@@ -56,8 +56,10 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-function greetCallback(npc, creature)
+local function greetCallback(npc, creature)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if isInArray({-1, 4}, player:getStorageValue(SPIKE_LOWER_PARCEL_MAIN)) then
 		return false
 	end
@@ -67,7 +69,7 @@ function greetCallback(npc, creature)
 	return true
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local status = player:getStorageValue(SPIKE_LOWER_PARCEL_MAIN)
 

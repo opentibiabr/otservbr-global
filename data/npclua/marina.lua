@@ -46,12 +46,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "silk") or msgcontains(message, "yarn") or msgcontains(message, "silk yarn") or msgcontains(message, "spool of yarn") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheMermaidMarina) < 1 then
 			npcHandler:say("Um. You mean, you really want me to touch that gooey spider silk just because you need yarn? Well... do you think that I'm pretty?", npc, creature)

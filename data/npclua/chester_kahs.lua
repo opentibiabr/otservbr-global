@@ -66,12 +66,13 @@ fire:setParameter(CONDITION_PARAM_FORCEUPDATE, true)
 fire:addDamage(25, 9000, -10)
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, 'gamel') and msgcontains(message, 'rebel') then
 		npcHandler:say('Are you saying that Gamel is a member of the rebellion?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
@@ -91,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			if player:removeItem(3052, 1) then
 				npcHandler:say('So be healed!', npc, creature)
 				player:addHealth(player:getMaxHealth())
-				Npc():getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
+				npc:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			else
 				npcHandler:say('Sorry, you are not worthy!', npc, creature)
 			end
@@ -168,7 +169,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Traitor!', npc, creature)
 			player:addCondition(fire)
 			player:getPosition():sendMagicEffect(CONST_ME_EXPLOSIONHIT)
-			Npc():getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)
+			npc:getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)
 			player:removeItem(3061, 1)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)

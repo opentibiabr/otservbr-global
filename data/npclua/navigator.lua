@@ -47,8 +47,9 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
 
 	if(msgcontains(message, "flou")) then
 		if(getPlayerStorageValue(creature, Storage.Navigator) < 1) then

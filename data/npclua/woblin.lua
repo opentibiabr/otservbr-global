@@ -46,12 +46,13 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "key") then
 		if player:getStorageValue(Storage.Quest.Dawnport.TheDormKey) == 1 then
 			npcHandler:say("Me not give key! Key my precious now! \z
@@ -77,8 +78,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				He would not have stayed abroad that long without refilling his inkpot for his research notes. \z
 				But at least the amulet should be retrieved.", npc, creature)
 			player:removeItem(21402, 1)
-			key = player:addItem(21392, 1)
-			key:setActionId(103)
+			local TheDormKey = player:addItem(21392, 1)
+			TheDormKey:setActionId(103)
 			player:setStorageValue(Storage.Quest.Dawnport.TheDormKey, 4)
 			npcHandler:setTopic(playerId, 0)
 		end

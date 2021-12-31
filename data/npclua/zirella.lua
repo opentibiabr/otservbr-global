@@ -61,8 +61,9 @@ end
 
 local storeTalkCid = {}
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "Oh, heaven must have sent you! Could you please help me with a {quest}?")
 		storeTalkCid[playerId] = 0
@@ -94,12 +95,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if isInArray({"yes", "quest", "ok"}, message) then
 		if storeTalkCid[playerId] == 0 then
 			npcHandler:say("By the way, 'quest' is a keyword that many NPCs react to, especially those which have tasks for you. So darling, about that {quest}... are you listening?", npc, creature)

@@ -56,8 +56,9 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
 
 	if msgcontains(message, 'commander') then
 		return npcHandler:say('I\'m responsible for the security and reward heroes to our cause. If you are looking for missions, talk to Gnomilly, Gnombold and Gnomagery.', npc, creature)

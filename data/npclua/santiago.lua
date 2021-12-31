@@ -62,8 +62,9 @@ end
 
 local storeTalkCid = {}
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage) < 1 then
 		player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 1)
 		player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoQuestLog, 1)
@@ -122,12 +123,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if isInArray({"yes", "right", "ok"}, message) then
 		if storeTalkCid[playerId] == 0 then
 			npcHandler:say("Great, please go to my house, just a few steps south of here. Upstairs in my room, you'll find a chest. You can keep what you find inside of it! Come back after you got it and greet me to talk to me again. {Yes}?", npc, creature)
@@ -179,7 +181,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		elseif storeTalkCid[playerId] == 6 then
 			npcHandler:say("This is an important lesson from me - an experienced veteran fighter. Take this! Look at your status bar again. As you can see, you've lost health. Now I'll tell you how to heal that, {yes}?", npc, creature)
 			player:getPosition():sendMagicEffect(CONST_ME_MORTAREA)
-			Npc():getPosition():sendMagicEffect(CONST_ME_MORTAREA)
+			npc:getPosition():sendMagicEffect(CONST_ME_MORTAREA)
 			player:addHealth(-20, COMBAT_PHYSICALDAMAGE)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 10)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoQuestLog, 8)
@@ -211,7 +213,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if storeTalkCid[playerId] == 6 then
 			npcHandler:say("This is an important lesson from me - an experienced veteran fighter. Take this! Look at your status bar again. As you can see, you've lost health. Now I'll tell you how to heal that, {yes}?", npc, creature)
 			player:getPosition():sendMagicEffect(CONST_ME_MORTAREA)
-			Npc():getPosition():sendMagicEffect(CONST_ME_MORTAREA)
+			npc:getPosition():sendMagicEffect(CONST_ME_MORTAREA)
 			player:addHealth(-20, COMBAT_PHYSICALDAMAGE)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 8)
 			player:sendTutorial(19)

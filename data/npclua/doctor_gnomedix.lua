@@ -36,6 +36,8 @@ end
 
 npcType.onSay = function(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 5 then
 		npcHandler:setMessage(MESSAGE_GREET, "Stand still on the examination platform |PLAYERNAME|.")
 		player:setStorageValue(Storage.BigfootBurden.QuestLine, 6)
@@ -48,10 +50,12 @@ npcType.onThink = function(npc, interval)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
 	local playerId = creature:getId()
 	return true
 end

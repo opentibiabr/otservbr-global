@@ -64,12 +64,13 @@ keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text
 keywordHandler:addKeyword({'mission'}, StdModule.say, {npcHandler = npcHandler, text = 'Well I would rather call it an {Ultimate Challenge} than a mission.'})
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	local arenaId = player:getStorageValue(Storage.SvargrondArena.Arena)
 	if msgcontains(message, 'fight') or msgcontains(message, 'pit') or msgcontains(message, 'challenge') or msgcontains(message, 'arena') then
 		if player:getStorageValue(Storage.SvargrondArena.PitDoor) == 1 then

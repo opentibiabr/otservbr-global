@@ -50,8 +50,10 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-function creatureSayCallback(npc, creature, type, message)
+local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	-- Missing script for complete the mission 16 of dark trails
 	if(msgcontains(message, "mission")) then
 		if player:getStorageValue(Storage.DarkTrails.Mission16) == 1 then

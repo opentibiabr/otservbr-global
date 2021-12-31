@@ -49,8 +49,10 @@ local condition = Condition(CONDITION_FIRE)
 condition:setParameter(CONDITION_PARAM_DELAYED, 1)
 condition:addDamage(150, 2000, -10)
 
-local function greetCallback(creature, message)
+local function greetCallback(npc, creature, message)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not player:getCondition(CONDITION_FIRE) and not msgcontains(message, "djanni'hah") then
 		player:getPosition():sendMagicEffect(CONST_ME_EXPLOSIONAREA)
 		player:addCondition(condition)
@@ -67,12 +69,13 @@ local function greetCallback(creature, message)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01)
 	if msgcontains(message, 'mission') then
 		if missionProgress < 1 then

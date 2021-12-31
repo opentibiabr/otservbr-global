@@ -64,7 +64,7 @@ local function greetCallback(npc, creature)
 		player:setStorageValue(Storage.SecretService.AVINMission01, 2)
 		npcHandler:say("I don't like the way you look. Help me boys!", npc, creature)
 		for i = 1, 2 do
-			Game.createMonster("Bandit", Npc():getPosition())
+			Game.createMonster("Bandit", npc:getPosition())
 		end
 		npcHandler:setTopic(playerId, 0)
 	else
@@ -74,12 +74,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 
 	if msgcontains(message, "letter") then
 		if player:getStorageValue(Storage.SecretService.AVINMission01) == 2 then
@@ -193,11 +194,14 @@ npcConfig.shop = {
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcType:register(npcConfig)

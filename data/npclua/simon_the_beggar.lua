@@ -29,11 +29,14 @@ npcConfig.shop = {
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
 	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
-	npc:talk(player, string.format("You've bought %i %s for %i gold coins.", amount, name, totalCost))
+	npc:talk(player, string.format("You've bought %i %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
 	npc:talk(player, string.format("You've sold %i %s for %i gold coins.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcConfig.voices = {
@@ -72,8 +75,10 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 -- First beggar addon
-local function BeggarFirst(creature, message, keywords, parameters, node)
+local function BeggarFirst(npc, creature, message, keywords, parameters, node)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:isPremium() then
 		if player:getStorageValue(Storage.OutfitQuest.BeggarFirstAddonDoor) == -1 then
 			if player:getItemCount(5883) >= 100 and player:getMoney() + player:getBankBalance() >= 20000 then
@@ -94,8 +99,10 @@ local function BeggarFirst(creature, message, keywords, parameters, node)
 end
 
 -- Second beggar addon
-local function BeggarSecond(creature, message, keywords, parameters, node)
+local function BeggarSecond(npc, creature, message, keywords, parameters, node)
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:isPremium() then
 		if player:getStorageValue(Storage.OutfitQuest.BeggarSecondAddon) == -1 then
 			if player:getItemCount(6107) >= 1 then
@@ -116,12 +123,13 @@ local function BeggarSecond(creature, message, keywords, parameters, node)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "cookie") then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31
 				and player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.SimonTheBeggar) ~= 1 then
@@ -144,7 +152,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:addAchievement("Allow Cookies?")
 			end
 
-			Npc():getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
+			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say("Well, it's the least you can do for those who live in dire poverty. \z
 						A single cookie is a bit less than I'd expected, but better than ... WHA ... WHAT?? \z
 						MY BEARD! MY PRECIOUS BEARD! IT WILL TAKE AGES TO CLEAR IT OF THIS CONFETTI!", npc, creature)
@@ -199,7 +207,7 @@ local function creatureSayCallback(npc, creature, type, message)
 end
 
 -- Node 1
-node1 = keywordHandler:addKeyword({"addon"}, StdModule.say,
+local node1 = keywordHandler:addKeyword({"addon"}, StdModule.say,
 	{
 		npcHandler = npcHandler,
 		text = "For the small fee of 20000 gold pieces I will help you mix this potion. \z
@@ -216,7 +224,7 @@ node1:addChildKeyword({"no"}, StdModule.say,
 )
 
 -- Node 2
-node2 = keywordHandler:addKeyword({"dress"}, StdModule.say,
+local node2 = keywordHandler:addKeyword({"dress"}, StdModule.say,
 	{
 		npcHandler = npcHandler,
 		text = "For the small fee of 20000 gold pieces I will help you mix this potion. \z
@@ -233,7 +241,7 @@ node2:addChildKeyword({"no"}, StdModule.say,
 )
 
 -- Node 3
-node3 = keywordHandler:addKeyword({"staff"}, StdModule.say,
+local node3 = keywordHandler:addKeyword({"staff"}, StdModule.say,
 	{
 		npcHandler = npcHandler,
 		text = "To get beggar staff you need to give me simon the beggar's staff. Do you have it with you?"
@@ -249,7 +257,7 @@ node3:addChildKeyword({"no"}, StdModule.say,
 )
 
 -- Node 4
-node4 = keywordHandler:addKeyword({"outfit"}, StdModule.say,
+local node4 = keywordHandler:addKeyword({"outfit"}, StdModule.say,
 	{
 		npcHandler = npcHandler,
 		text = "For the small fee of 20000 gold pieces I will help you mix this potion. \z

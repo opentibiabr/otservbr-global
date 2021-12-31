@@ -18,35 +18,6 @@ npcConfig.flags = {
 	floorchange = false
 }
 
-local keywordHandler = KeywordHandler:new()
-local npcHandler = NpcHandler:new(keywordHandler)
-
-npcType.onAppear = function(npc, creature)
-	npcHandler:onAppear(npc, creature)
-end
-
-npcType.onDisappear = function(npc, creature)
-	npcHandler:onDisappear(npc, creature)
-end
-
-npcType.onSay = function(npc, creature, type, message)
-	npcHandler:onSay(npc, creature, type, message)
-end
-
-npcType.onCloseChannel = function(npc, creature)
-	npcHandler:onCloseChannel(npc, creature)
-end
-function onSay(creature, type, message)
-	if not (msgcontains(message, 'hi') or msgcontains(message, 'hello')) then
-		npcHandler:say('LEAVE THE DRAGONS\' CEMETERY AT ONCE!', creature.uid)
-	end
-	npcHandler:onSay(creature, type, message)
-end
-
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
 npcConfig.voices = {
 	interval = 5000,
 	chance = 50,
@@ -56,10 +27,6 @@ npcConfig.voices = {
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 
-npcType.onThink = function(npc, interval)
-	npcHandler:onThink(npc, interval)
-end
-
 npcType.onAppear = function(npc, creature)
 	npcHandler:onAppear(npc, creature)
 end
@@ -68,11 +35,10 @@ npcType.onDisappear = function(npc, creature)
 	npcHandler:onDisappear(npc, creature)
 end
 
-npcType.onMove = function(npc, creature, fromPosition, toPosition)
-	npcHandler:onMove(npc, creature, fromPosition, toPosition)
-end
-
 npcType.onSay = function(npc, creature, type, message)
+	if not (msgcontains(message, 'hi') or msgcontains(message, 'hello')) then
+		npcHandler:say('LEAVE THE DRAGONS\' CEMETERY AT ONCE!', npc, creature)
+	end
 	npcHandler:onSay(npc, creature, type, message)
 end
 
@@ -80,9 +46,18 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+npcType.onThink = function(npc, interval)
+	npcHandler:onThink(npc, interval)
+end
+
+npcType.onMove = function(npc, creature, fromPosition, toPosition)
+	npcHandler:onMove(npc, creature, fromPosition, toPosition)
+end
+
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.Dragonfetish) == 1 then
 		npcHandler:say('LEAVE THE DRAGONS\' CEMETERY AT ONCE!', npc, creature)
 		return false

@@ -51,8 +51,9 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
+	local playerId = player:getId()
+
 	if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 30 then
 		npcHandler:setMessage(MESSAGE_GREET, "Have you the {animal cure}?")
 	elseif player:getStorageValue(Storage.InServiceofYalahar.Questline) == 31 then
@@ -64,12 +65,13 @@ local function greetCallback(npc, creature)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
 
-	local playerId = creature:getId()
-	local player = Player(creature)
 	if msgcontains(message, "mission") then
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 29 then
 			npcHandler:say({
