@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, 'cigar') then
 		npcHandler:say('Oh my. Have you gotten an exquisite cigar for me, my young friend?', npc, creature)
 		npcHandler:setTopic(playerId, 1)

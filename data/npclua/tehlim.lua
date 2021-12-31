@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "mission") then
 		if Player(creature):getStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue) < 300 then
 			npcHandler:say("I warn you, those trolls are WAY more dangerous than the usual kind. Alone, I can't do anything for my brothers. Find a way to the trolls' hideout and rescue my brothers. Are you willing to help me?", npc, creature)

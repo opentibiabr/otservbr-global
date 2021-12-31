@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "interesting") then
 		npcHandler:say({
 			"I'd really like to rebuild my reputation someday and maybe find a nice girl. If you come across scrolls of heroic deeds or addresses of lovely maidens... let me know! ...",

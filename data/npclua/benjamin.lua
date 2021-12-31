@@ -65,7 +65,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "measurements") then
 		local player = Player(creature)
 		if player:getStorageValue(Storage.Postman.Mission07) >= 1 and	player:getStorageValue(Storage.Postman.MeasurementsBenjamin) ~= 1 then

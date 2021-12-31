@@ -63,7 +63,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "seamonster") then
 		npcHandler:say({
 			'Only some days ago I was at the docks late in the night and was looking for my husband\'s ship when suddenly a known noise appeared near the docks. ...',

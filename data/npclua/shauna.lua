@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	-- Mission 1 - The Supply Thief
 	if MsgContains(message, "job") then
 		if Player(creature):getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) == 2 then

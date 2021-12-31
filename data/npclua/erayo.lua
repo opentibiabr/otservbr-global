@@ -50,7 +50,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-local message = {}
+local topic = {}
 
 local config = {
 	['blue cloth'] = {storageValue = 1, text = {'Brought the 50 pieces of blue cloth?', 'Good. Get me 50 pieces of green cloth now.'}, itemId = 5912, count = 50},
@@ -81,7 +81,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.OutfitQuest.AssassinFirstAddon) == config[message].storageValue then
 			npcHandler:say(config[message].text[1], npc, creature)
 			npcHandler:setTopic(playerId, 3)
-			message[playerId] = message
+			topic[playerId] = message
 		end
 	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
@@ -100,7 +100,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Good. Start with the blue cloth. I\'ll wait.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 3 then
-			local targetMessage = config[message[playerId]]
+			local targetMessage = config[topic[playerId]]
 			if not player:removeItem(targetMessage.itemId, targetMessage.count) then
 				npcHandler:say('You don\'t have the required items.', npc, creature)
 				npcHandler:setTopic(playerId, 0)
@@ -125,7 +125,7 @@ end
 
 local function onReleaseFocus(creature)
 	local playerId = creature:getId()
-	message[playerId] = nil
+	topic[playerId] = nil
 end
 
 npcHandler:setMessage(MESSAGE_GREET, 'What the... I mean, of course I sensed you.')

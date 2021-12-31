@@ -75,7 +75,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "winfred") then
 		npcHandler:say({
 			'He was my one and only true love. He was a mere commoner and so my {father} forbid me to see him ...',

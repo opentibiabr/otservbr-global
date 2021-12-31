@@ -53,7 +53,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "trip") or MsgContains(message, "passage") then
 		--if Player(creature):getStorageValue(Storage.TheNewFrontier.Questline) >= 24 then
 			npcHandler:say("You want trip to Izzle of Zztrife?", npc, creature)

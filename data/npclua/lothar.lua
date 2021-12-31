@@ -99,7 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "control unit") then
 		npcHandler:say({
 			'That\'s an interesting one, nothing like I have ever seen myself. What you describe is a device of which I heard that it grants literally \'complete\' control over some sort of... artificial thing? ...',

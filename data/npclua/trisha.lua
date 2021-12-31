@@ -97,12 +97,12 @@ local config = {
 	}
 }
 
-local message = {}
+local topic = {}
 
 local function greetCallback(npc, creature)
 	local playerId = creature:getId()
 	npcHandler:setMessage(MESSAGE_GREET, "Salutations, |PLAYERNAME|. What can I do for you?")
-	message[playerId] = nil
+	topic[playerId] = nil
 	return true
 end
 
@@ -113,7 +113,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	local player, storage = Player(creature), Storage.OutfitQuest.WarriorShoulderAddon
 	if npcHandler:getTopic(playerId) == 0 then
 		if isInArray({"outfit", "addon"}, message) then
@@ -139,7 +139,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 			npcHandler:say(targetMessage.message.deliever, npc, creature)
 			npcHandler:setTopic(playerId, 3)
-			message[playerId] = targetMessage
+			topic[playerId] = targetMessage
 		end
 	elseif npcHandler:getTopic(playerId) == 1 then
 		if MsgContains(message, "yes") then
@@ -171,7 +171,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif npcHandler:getTopic(playerId) == 3 then
 		if MsgContains(message, "yes") then
-			local targetMessage = message[playerId]
+			local targetMessage = topic[playerId]
 			if not player:removeItem(targetMessage.itemId, targetMessage.count or 1) then
 				npcHandler:say("Why do men always lie?", npc, creature)
 				return true

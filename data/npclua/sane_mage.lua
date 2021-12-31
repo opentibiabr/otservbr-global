@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "job") then
 		npcHandler:say({
 			'Well I conduct experiments. Viscosity, consistency and overall elegance of {SLIME}. Fungus, I am currently working on a formula for the perfect {slime fungus}.',

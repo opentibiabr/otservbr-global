@@ -59,6 +59,7 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local count = {}
+
 local function greetCallback(npc, creature)
 	local playerId = creature:getId()
 	count[playerId] = nil

@@ -50,7 +50,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-local message = {}
+local topic = {}
 
 local config = {
 	['30 bonelord eyes'] = {storageValue = 1, text = {'Have you really managed to bring me 30 bonelord eyes? <hicks>', 'Do bonelord eyes continue blinking when they are seperated from the bonelord? That is a scary thought.', 'Aw-awsome! <hicks> Squishy! Now, please bring me 10 {red dragon scales}.'}, itemId = 5898, count = 30},
@@ -101,7 +101,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.OutfitQuest.AssassinBaseOutfit) == config[message].storageValue then
 			npcHandler:say(config[message].text[1], npc, creature)
 			npcHandler:setTopic(playerId, 3)
-			message[playerId] = message
+			topic[playerId] = message
 		else
 			npcHandler:say(config[message].text[2], npc, creature)
 		end
@@ -131,7 +131,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('G-good. Go get them, I\'ll have a beer in the meantime.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 3 then
-			local targetMessage = config[message[playerId]]
+			local targetMessage = config[topic[playerId]]
 			local count = targetMessage.count or 1
 			if not player:removeItem(targetMessage.itemId, count) then
 				npcHandler:say('Next time you lie to me I\'ll k-kill you. <hicks> Don\'t think I can\'t aim well just because I\'m d-drunk.', npc, creature)
@@ -156,7 +156,7 @@ end
 
 local function onReleaseFocus(creature)
 	local playerId = creature:getId()
-	message[playerId] = nil
+	topic[playerId] = nil
 end
 
 keywordHandler:addKeyword({'addon'}, StdModule.say, {npcHandler = npcHandler, text = 'I can give you a <hicks> scar as an addon. Nyahahah.'})

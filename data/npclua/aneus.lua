@@ -62,7 +62,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "story") then
 		npcHandler:say({
 			'Ok, sit down and listen. Back in the early days, one of the ancestors ... <press m for more>',

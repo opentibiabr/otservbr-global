@@ -56,7 +56,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	if MsgContains(message, "key") then
 		npcHandler:say("Do you want to buy a key for 50 gold?", npc, creature)
 		npcHandler:setTopic(playerId, 1)

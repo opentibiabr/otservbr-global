@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	local playerId = creature:getId()
+
 	--The New Frontier
 	if MsgContains(message, "farmine") then
 		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 15 then

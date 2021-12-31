@@ -50,7 +50,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-local message = {}
+local topic = {}
 
 local config = {
 	['ape fur'] = {
@@ -120,7 +120,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) == config[message].storageValue then
 			npcHandler:say(config[message].text[1], npc, creature)
 			npcHandler:setTopic(playerId, 3)
-			message[playerId] = message
+			topic[playerId] = message
 		else
 			npcHandler:say(config[message].text[2], npc, creature)
 		end
@@ -143,7 +143,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Excellent! Come back to me once you have collected 100 pieces of ape fur.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 3 then
-			local targetMessage = config[message[playerId]]
+			local targetMessage = config[topic[playerId]]
 			if not player:removeItem(targetMessage.itemId, targetMessage.count) then
 				npcHandler:say('That is a shameless lie.', npc, creature)
 				npcHandler:setTopic(playerId, 0)
@@ -169,7 +169,7 @@ end
 
 local function onReleaseFocus(creature)
 	local playerId = creature:getId()
-	message[playerId] = nil
+	topic[playerId] = nil
 end
 
 npcHandler:setMessage(MESSAGE_GREET, 'Greetings |PLAYERNAME|. What leads you to me?')
