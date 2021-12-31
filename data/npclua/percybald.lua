@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'disguise') then
+	if MsgContains(message, 'disguise') then
 		if player:getStorageValue(Storage.ThievesGuild.TheatreScript) < 0 then
 			npcHandler:say({
 				'Hmpf. Why should I waste my time to help some amateur? I\'m afraid I can only offer my assistance to actors that are as great as I am. ...',
@@ -66,12 +66,12 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(Storage.ThievesGuild.TheatreScript, 0)
 		end
-	elseif msgcontains(message, 'test') then
+	elseif MsgContains(message, 'test') then
 		if player:getStorageValue(Storage.ThievesGuild.Mission04) == 5 then
 			npcHandler:say('I hope you learnt your role! I\'ll tell you a line from the script and you\'ll have to answer with the corresponding line! Ready?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('How dare you? Are you mad? I hold the princess hostage and you drop your weapons. You\'re all lost!', npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -94,7 +94,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'I don\'t think so, dear doctor!') then
+		if MsgContains(message, 'I don\'t think so, dear doctor!') then
 			npcHandler:say('Ok, ok. You\'ve got this one right! Ready for the next one?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		else
@@ -102,7 +102,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 4 then
-		if msgcontains(message, 'Watch out! It\'s a trap!') then
+		if MsgContains(message, 'Watch out! It\'s a trap!') then
 			npcHandler:say('Ok, ok. You\'ve got this one right! Ready for the next one?', npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		else
@@ -110,7 +110,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 6 then
-		if msgcontains(message, 'Look! It\'s Lucky, the wonder dog!') then
+		if MsgContains(message, 'Look! It\'s Lucky, the wonder dog!') then
 			npcHandler:say('Ok, ok. You\'ve got this one right! Ready for the next one?', npc, creature)
 			npcHandler:setTopic(playerId, 7)
 		else
@@ -118,7 +118,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 8 then
-		if msgcontains(message, 'Ahhhhhh!') then
+		if MsgContains(message, 'Ahhhhhh!') then
 			npcHandler:say('Ok, ok. You\'ve got this one right! Ready for the next one?', npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		else
@@ -126,7 +126,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 10 then
-		if msgcontains(message, 'Hahaha! Now drop your weapons or else...') then
+		if MsgContains(message, 'Hahaha! Now drop your weapons or else...') then
 			npcHandler:say('Ok, ok. You\'ve got this one right! Ready for the next one?', npc, creature)
 			npcHandler:setTopic(playerId, 11)
 		else

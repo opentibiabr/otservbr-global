@@ -75,10 +75,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "help") then
+	if MsgContains(message, "help") then
 			npcHandler:say("Defeat. {Slime}. We. Will. Why. Did. You. Kill. Us? Do. You. Want. To. Rectify. And. Help?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.TheirMastersVoice.SlimeGobblerReceived, 1)
 			player:addItem(12077, 1)

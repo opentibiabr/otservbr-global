@@ -79,17 +79,17 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "transport") or msgcontains(message, "passage") then
+	if MsgContains(message, "transport") or MsgContains(message, "passage") then
 		npcHandler:say("You want me to transport you to forbidden land?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say("Take care!", npc, creature)
 			local destination = Position(33025, 32580, 6)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			player:teleportTo(destination)
 			destination:sendMagicEffect(CONST_ME_TELEPORT)
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say("Wise decision maybe.", npc, creature)
 		end
 	end

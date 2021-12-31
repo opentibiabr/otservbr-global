@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 4) then
 			npcHandler:say({
 				"You succeeded! It seems the poachers have read your little faked story about killing white deer and the ensuing doom. They stopped chasing me. Thank you! ...",
@@ -79,7 +79,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 1)
 		end
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if (player:getStorageValue(Storage.ThreatenedDreams.Start) == 1) then
 				npcHandler:say("You have already started this mission.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.ThreatenedDreams.Start, 1)
 				player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 1)
 			end
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Then not.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

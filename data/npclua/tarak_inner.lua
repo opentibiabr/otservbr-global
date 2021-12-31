@@ -58,10 +58,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "monument tower") or msgcontains(message, "passage") or msgcontains(message, "trip") then
+	if MsgContains(message, "monument tower") or MsgContains(message, "passage") or MsgContains(message, "trip") then
 		npcHandler:say("Do you want to travel to the {monument tower} for a 50 gold fee?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			local player = Player(creature)
 			if player:getMoney() + player:getBankBalance() >= 50 then

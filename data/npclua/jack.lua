@@ -66,7 +66,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "spectulus") then
+	if MsgContains(message, "spectulus") then
 		if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 1) then
 			npcHandler:say("Gesundheit! Are you alright? Did you... want to tell me something by that?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 4)
 			end
 		end
-	elseif msgcontains(message, "furniture") then
+	elseif MsgContains(message, "furniture") then
 		if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 3) then
 			if
 				(player:getStorageValue(Storage.TibiaTales.JackFutureQuest.Furniture01) == 1) and
@@ -99,7 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 3)
 			end
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 10 then
 			if (npcHandler:getTopic(playerId) == 0) then
 				npcHandler:say("WHAT?? No way, I ask you again - you DID tell me the TRUTH here... right?", npc, creature)
@@ -121,7 +121,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if (npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say(
 				{
@@ -161,7 +161,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, "hobbies") or msgcontains(message, "hobby") then
+	elseif MsgContains(message, "hobbies") or MsgContains(message, "hobby") then
 		if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 7) then
 			if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.Statue) < 1) then
 				npcHandler:say(

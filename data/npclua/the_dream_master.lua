@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "join") then
+	if MsgContains(message, "join") then
 		if player:getStorageValue(Storage.OutfitQuest.BrotherhoodOutfit) < 1 and player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) < 1 then
 			npcHandler:say({
 				"The Nightmare Knights are almost extinct now, and as far as I know I am the only teacher that is left. But you might beright and its time to accept new disciples ...",
@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "advancement") then
+	elseif MsgContains(message, "advancement") then
 		if player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) == 1 then
 			npcHandler:say("So you want to advance to a {Initiate} rank? Did you bring 500 demonic essences with you?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -78,7 +78,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("So you want to advance to a {Lord Protector} rank? Did you bring 1500 demonic essences with you?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Please know that your decision is irrevocable. You will abandon the opportunity to join any order whose doctrine is incontrast to our own ...", npc, creature)
 			npcHandler:say("Do you still want to join our order?", npc, creature)

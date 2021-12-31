@@ -103,9 +103,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'outfit') then
+	if MsgContains(message, 'outfit') then
 		npcHandler:say(player:getSex() == PLAYERSEX_FEMALE and 'Hehe, would you like to wear a pretty veil like I do? Well... I could help you, but you would have to complete a task first.' or 'My veil? No, I will definitely not lift it for you! If you are looking for an addon, go talk to Razan.', npc, creature)
-	elseif msgcontains(message, 'task') then
+	elseif MsgContains(message, 'task') then
 		if player:getSex() == PLAYERSEX_MALE then
 			npcHandler:say('Uh... I don\'t think that I have work for you right now. If you need a job, go talk to Razan.', npc, creature)
 			return true
@@ -122,14 +122,14 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say(config[message].text[2], npc, creature)
 		end
-	elseif msgcontains(message, 'scarab cheese') then
+	elseif MsgContains(message, 'scarab cheese') then
 		if player:getStorageValue(Storage.TravellingTrader.Mission03) == 1 then
 			npcHandler:say('Let me cover my nose before I get this for you... Would you REALLY like to buy scarab cheese for 100 gold?', npc, creature)
 		elseif player:getStorageValue(Storage.TravellingTrader.Mission03) == 2 then
 			npcHandler:say('Oh the last cheese molded? Would you like to buy another one for 100 gold?', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 4)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				'Alright, then listen to the following requirements. We are currently in dire need of ape fur since the Caliph has requested a new bathroom carpet. ...',
@@ -173,7 +173,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
 		npcHandler:say('What a pity.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

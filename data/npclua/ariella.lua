@@ -63,19 +63,19 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "cookie") then
+	if MsgContains(message, "cookie") then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31 and
 		player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.Ariella) ~= 1 then
 			npcHandler:say("So you brought a cookie to a pirate?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "addon") and player:getStorageValue(Storage.OutfitQuest.PirateBaseOutfit) == 1 then
+	elseif MsgContains(message, "addon") and player:getStorageValue(Storage.OutfitQuest.PirateBaseOutfit) == 1 then
 		npcHandler:say(
 		"To get pirate hat you need give me Brutus Bloodbeard's Hat, \
 		Lethal Lissy's Shirt, Ron the Ripper's Sabre and Deadeye Devious' Eye Patch. Do you have them with you?",
 		creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 1 then
 			npcHandler:say(
 			"You know, we have plenty of rum here but we lack some basic food. \
@@ -99,7 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Did you get a sample of the whisper beer from Carlin?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeItem(130, 1) then
 				npcHandler:say("You have no cookie that I'd like.", npc, creature)
@@ -164,7 +164,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				end
 			end
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("I see.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

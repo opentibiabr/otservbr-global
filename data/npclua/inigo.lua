@@ -259,7 +259,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "portal") then
+	if MsgContains(message, "portal") then
 		npcHandler:say(
 			{
 				"It seems to emanate a magical call or pulse that draws all sorts of creatures to it - no offense meant. \z
@@ -273,7 +273,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					If you're unsure on how to {help} exactly, I can give you directions."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "menesto") then
+	elseif MsgContains(message, "menesto") then
 		npcHandler:say(
 			{
 				"Hasn't been with us for very long. Very interested in all things mystical, \z
@@ -285,7 +285,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					I can give directions, {hints}, you name it. <winks at you>"
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "play") then
+	elseif MsgContains(message, "play") then
 		npcHandler:say(
 			{
 				"Our world {Tibia} is swarmed by many dangerous {monsters}, so {fighting} is something you will \z
@@ -300,7 +300,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"If you have any other questions, tell me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "combat") then
+	elseif MsgContains(message, "combat") then
 		npcHandler:say(
 			{
 				"There are many dangers in {Tibia}. You may have to defend yourself not only against {monsters}, \z
@@ -311,7 +311,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"You can also define your attack and defense mode, by selecting {offensive}, {balanced} or {defensive} fighting."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "pvp") then
+	elseif MsgContains(message, "pvp") then
 		npcHandler:say(
 			{
 				"Depending on the world you chose in {Tibia}, {players} may attack you at all times or only if you consent. ...",
@@ -323,7 +323,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					and not possible until you have reached level 8 at least. If you have any other questions, tell me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "players") then
+	elseif MsgContains(message, "players") then
 		npcHandler:say(
 			{
 				"To chat with other players, you can click on one of the chat channels and see who is posting in there. ...",
@@ -331,7 +331,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					'Message to <player name>'. This will open up a chat channel where you can type in your message to him or her."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "npc") then
+	elseif MsgContains(message, "npc") then
 		npcHandler:say(
 			{
 				"NPC means someone like me or {Hamish} or {Coltrayne}, for example. \z
@@ -345,7 +345,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					If you have any other questions, tell me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "spells") then
+	elseif MsgContains(message, "spells") then
 		npcHandler:say(
 			{
 				"Every vocation has specific spells that can only be used if you have that vocation. \z
@@ -356,7 +356,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					They can tell you more."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "shovel") then
+	elseif MsgContains(message, "shovel") then
 		npcHandler:say(
 			{
 				"Second best thing to a rope - a shovel will reveal secret entrances buried \z
@@ -366,7 +366,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					and maybe you'll even find a shovel, who knows!"
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "dawnport") then
+	elseif MsgContains(message, "dawnport") then
 		npcHandler:say(
 			{
 				"We found the island following a strange glow we saw at night, close before dawn. \z
@@ -382,7 +382,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					defend this place against the evil that wants to claim it! If you need any help in how to do these things, ask me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "mainland") then
+	elseif MsgContains(message, "mainland") then
 		npcHandler:say(
 			{
 				"The mainland harbours the most ancient cities of {Tibia}, and many dangers and adventures as well. \z
@@ -393,7 +393,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					and mysteries to be explored; and you can do quests to ride mounts, and dress in a variety of new outfits."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "figthing") then
+	elseif MsgContains(message, "figthing") then
 		npcHandler:say(
 			{
 				"Go through one of the open gates on this floor and you will be equipped with \z
@@ -411,7 +411,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"If you have any other questions, tell me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "vocations") then
+	elseif MsgContains(message, "vocations") then
 		npcHandler:say(
 			{
 				"A vocation is your profession and chosen destiny, rolled into one. \z
@@ -424,7 +424,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"If you have any other questions, tell me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "help") then
+	elseif MsgContains(message, "help") then
 		npcHandler:say(
 			{
 				"I can give you directions how to {play}, some basic survival and {combat} tips, or explain {PvP}, ...",
@@ -437,7 +437,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					many useful things lie hidden beneath earth, sand or stones! "
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "offensive") then
+	elseif MsgContains(message, "offensive") then
 		npcHandler:say(
 			{
 				"Offensive {fighting} means you deal harder attacks, but have a weaker defense. \z
@@ -447,7 +447,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					I can also tell you something about {balanced} and {defensive} fighting."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "balanced") then
+	elseif MsgContains(message, "balanced") then
 		npcHandler:say(
 			{
 				"Balanced {fighting} balances out your attack strength as well as your defense strength. \z
@@ -455,7 +455,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"I can also tell you something about {offensive} and {defensive} fighting."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "defensive") then
+	elseif MsgContains(message, "defensive") then
 		npcHandler:say(
 			{
 				"Defensive {fighting} increases your defense but reduces your attack strength. \z
@@ -463,7 +463,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"I can also tell you something about {offensive} and {balanced} fighting."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "skull") then
+	elseif MsgContains(message, "skull") then
 		npcHandler:say(
 			{
 				"A white skull means that this player attacked and maybe killed another player without justification. ...",
@@ -471,7 +471,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					someone on a serious killing spree - so watch out!"
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "hamish") then
+	elseif MsgContains(message, "hamish") then
 		npcHandler:say(
 			{
 				"Some sort of misguided genius, I think. Brilliant with potions and runes, \z
@@ -482,7 +482,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					If you need a wand, rune or potion, Hamish's your man."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "coltrayne") then
+	elseif MsgContains(message, "coltrayne") then
 		npcHandler:say(
 			{
 				"Coltrayne doesn't say much about himself. What I gathered from the 15 years \z
@@ -491,7 +491,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					Then he met {Morris} and decided to go adventuring with him."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "morris") then
+	elseif MsgContains(message, "morris") then
 		npcHandler:say(
 			{
 				"Ah, there are lots of stories about Morris. Likes to insist on the 'Mr'. Nobody knows his first name, \z
@@ -503,7 +503,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					but if you're looking for a quest, go ask Morris for one."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "skills") then
+	elseif MsgContains(message, "skills") then
 		npcHandler:say(
 			{
 				"Not your level, but your skill with your weapon determines how much damage you make. \z
@@ -513,7 +513,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					Their wand or rod damage is not affected by their magic level. If you have any other questions, tell me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "rope") then
+	elseif MsgContains(message, "rope") then
 		npcHandler:say(
 			{
 				"You should never leave without a rope. NEVER. A rope can save your life. \z
@@ -523,7 +523,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					even has a rope with it, that sort of thing happens."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "oressa") then
+	elseif MsgContains(message, "oressa") then
 		npcHandler:say(
 			{
 				"Our local healer. Don't know why that druid girl decided she wanted the unsteady life of an \z
@@ -533,7 +533,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					choose your vocation to leave for the {Mainland}."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "temple") then
+	elseif MsgContains(message, "temple") then
 		npcHandler:say(
 			{
 				"When you die, you will be resurrected in the temple of the city you chose as your home. \z
@@ -543,7 +543,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					harbour once you have reached the {mainland}."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "dying") then
+	elseif MsgContains(message, "dying") then
 		npcHandler:say(
 			{
 				"Don't be deceived by its sweet looks - {Tibia} is a rough world. \z
@@ -554,7 +554,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Always have a {rope} with you, for a start. A rope is essential."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "druid spells") then
+	elseif MsgContains(message, "druid spells") then
 		npcHandler:say(
 			{
 				"Every vocation has specific {spells} that can only be used if you have that vocation. \z
@@ -566,7 +566,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					They can tell you more."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "train") then
+	elseif MsgContains(message, "train") then
 		npcHandler:say(
 			{
 				"Go through one of the open gates on this floor and you will be equipped with \z
@@ -584,7 +584,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"If you have any other questions, tell me."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "bless") then
+	elseif MsgContains(message, "bless") then
 		npcHandler:say(
 			{
 				"The blessings of the gods will protect you from item loss and alleviate the skill \z
@@ -598,7 +598,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					unless you attack another player. If you attack another player or reach level 20, you will lose this blessing."
 			},
 		npc, creature, 10)
-	elseif msgcontains(message, "hints") then
+	elseif MsgContains(message, "hints") then
 		for i = 0,35,1 do
 			if i <= 35 then
 				npcHandler:say({hints[i]})
@@ -607,7 +607,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 
-	elseif msgcontains(message, "rookgaard") and player:getLevel() <= 9 then
+	elseif MsgContains(message, "rookgaard") and player:getLevel() <= 9 then
 		if Player.getAccountStorage(player, accountId, Storage.Dawnport.Mainland, true) == 1 then
 			npcHandler:say("Hmmm. Long time I visited that isle. Not very exciting place. \z
 			Why do you ask? Do you wish to go there?", npc, creature)
@@ -617,15 +617,15 @@ local function creatureSayCallback(npc, creature, type, message)
 				"I'm sorry, but I cannot let you go there, you'll get much better training here than on that ancient isle.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say({
 			"Careful, careful, it's a one-way ticket only! \z
 			You can never come back here if you leave now, and you will loso all your Dawnport equipment and products! ...",
 			"Are you {SURE} you want to {LEAVE} Dawnport for ROOKGAARD?"
 		}, npc, creature, 10)
 		npcHandler:setTopic(playerId, 2)
-	elseif npcHandler:getTopic(playerId) == 2 and msgcontains(message, "yes")
-	or msgcontains(message, "sure") or msgcontains(message, "leave") then
+	elseif npcHandler:getTopic(playerId) == 2 and MsgContains(message, "yes")
+	or MsgContains(message, "sure") or MsgContains(message, "leave") then
 		local town = Town(TOWNS_LIST.ROOKGAARD)
 		player:setTown(town)
 		-- Change to none vocation, convert magic level and skills and set proper stats

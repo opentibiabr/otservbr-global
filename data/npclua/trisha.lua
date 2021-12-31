@@ -119,7 +119,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if isInArray({"outfit", "addon"}, message) then
 			npcHandler:say("Are you talking about my spiky shoulder pad? You can't buy one of these. \z
 				They have to be {earned}.", npc, creature)
-		elseif msgcontains(message, "earn") then
+		elseif MsgContains(message, "earn") then
 			if player:getStorageValue(storage) < 1 then
 				npcHandler:say("I'm not sure if you are enough of a hero to earn them. \z
 					You could try, though. What do you think?", npc, creature)
@@ -142,7 +142,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			message[playerId] = targetMessage
 		end
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say({
 				"Okay, who knows, maybe you have a chance. A really small one though. Listen up: ...",
 				"First, you have to prove your guts by bringing me 100 hardened bones. ...",
@@ -154,23 +154,23 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Did you understand everything I told you and are willing to handle this task?"
 			}, npc, creature, 100)
 			npcHandler:setTopic(playerId, 2)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("I thought so. Train hard and maybe some day you will be ready to face this mission.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			player:setStorageValue(storage, 1)
 			-- This for default start of outfit and addon quests
 			player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1)
 			npcHandler:say("Excellent! Don't forget: Your first task is to bring me 100 hardened bones. Good luck!", npc, creature)
 			npcHandler:setTopic(playerId, 0)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Would you like me to repeat the task requirements then?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			local targetMessage = message[playerId]
 			if not player:removeItem(targetMessage.itemId, targetMessage.count or 1) then
 				npcHandler:say("Why do men always lie?", npc, creature)
@@ -179,7 +179,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 			player:setStorageValue(storage, player:getStorageValue(storage) + 1)
 			npcHandler:say(targetMessage.message.success, npc, creature)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Don't give up just yet.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

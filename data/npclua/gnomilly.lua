@@ -52,15 +52,15 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if msgcontains(message, 'job') then
+	if MsgContains(message, 'job') then
 		return npcHandler:say('I\'m the officer responsible for this area. I give out missions, accept mission reports and oversee our defences.', npc, creature)
 	end
 
-	if msgcontains(message, 'gnome') then
+	if MsgContains(message, 'gnome') then
 		return npcHandler:say('We are the only protectors of the world against the enemies below. With small stature comes great responsibilities, as they say.', npc, creature)
 	end
 
-	if msgcontains(message, 'area') then
+	if MsgContains(message, 'area') then
 		return npcHandler:say({
 			"On these levels we found evidence of some monumental battle that has taken place here centuries ago. We also found some grave sites, but oddly enough no clues of any form of settlement. ...",
 			"Some evidence we have found suggests that at least one of the battles here was fought for many, many years. People came here, lived here, fought here and died here. ...",
@@ -71,7 +71,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		}, npc, creature)
 	end
 
-	if msgcontains(message, 'mission') then
+	if MsgContains(message, 'mission') then
 		if player:getLevel() > levels[2] then
 			npcHandler:say('Sorry, but no! Your expertise could be put to better use elsewhere. Here awaits you no challenge. You are desperately needed in the deeper levels of the Spike. Report there immediately. ', npc, creature)
 		else
@@ -80,13 +80,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return
 	end
 
-	if msgcontains(message, 'report') then
+	if MsgContains(message, 'report') then
 		talkState[playerId] = 'report'
 		return npcHandler:say('What mission do you want to report about: recharging the ghost {pacifiers}, the {release} of the spiritual anger, about {tracking} an evil presence and the {killing} of demon skeletons?', npc, creature)
 	end
 
 	if talkState[playerId] == 'report' then
-		if msgcontains(message, 'pacifiers') then
+		if MsgContains(message, 'pacifiers') then
 			if player:getStorageValue(SPIKE_UPPER_PACIFIER_MAIN) == -1 then
 				npcHandler:say('You have not started that mission.', npc, creature)
 			elseif player:getStorageValue(SPIKE_UPPER_PACIFIER_MAIN) == 7 then
@@ -98,7 +98,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			else
 				npcHandler:say('Gnowful! Take the resonance charger and use it on seven of the pacifiers in the cave.', npc, creature)
 			end
-		elseif msgcontains(message, 'release') then
+		elseif MsgContains(message, 'release') then
 			if player:getStorageValue(SPIKE_UPPER_MOUND_MAIN) == -1 then
 				npcHandler:say('You have not started that mission.', npc, creature)
 			elseif player:getStorageValue(SPIKE_UPPER_MOUND_MAIN) == 4 then
@@ -110,7 +110,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			else
 				npcHandler:say('Gnowful! Take the spirit shovel use it on four graves in the cave system.', npc, creature)
 			end
-		elseif msgcontains(message, 'tracking') then
+		elseif MsgContains(message, 'tracking') then
 			if player:getStorageValue(SPIKE_UPPER_TRACK_MAIN) == -1 then
 				npcHandler:say('You have not started that mission.', npc, creature)
 			elseif player:getStorageValue(SPIKE_UPPER_TRACK_MAIN) == 3 then
@@ -122,7 +122,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			else
 				npcHandler:say('Gnowful! Take the tracking device in the caves and locate the residual spirit energy.', npc, creature)
 			end
-		elseif msgcontains(message, 'killing') then
+		elseif MsgContains(message, 'killing') then
 			if player:getStorageValue(SPIKE_UPPER_KILL_MAIN) == -1 then
 				npcHandler:say('You have not started that mission.', npc, creature)
 			elseif player:getStorageValue(SPIKE_UPPER_KILL_MAIN) == 7 then
@@ -144,7 +144,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	--[[///////////////////
 	////GHOST PACIFIERS////
 	/////////////////////]]
-	if msgcontains(message, 'pacifiers') then
+	if MsgContains(message, 'pacifiers') then
 		if player:getStorageValue(SPIKE_UPPER_PACIFIER_DAILY) >= os.time() then
 			return npcHandler:say('Sorry, you have to wait ' .. string.diff(player:getStorageValue(SPIKE_UPPER_PACIFIER_DAILY)-os.time()) .. ' before this task gets available again.', npc, creature)
 		end
@@ -162,12 +162,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if talkState[playerId] == 'pacifiers' then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			player:addItem(19204, 1)
 			player:setStorageValue(SPIKE_UPPER_PACIFIER_MAIN, 0)
 			npcHandler:say('Gnometastic! Take this resonance charger and use it on seven of the pacifiers in the cave. If you lose the charger, you\'ll have to bring your own. Gnomux sells all the equipment that is required for our missions.', npc, creature)
 			talkState[playerId] = nil
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Ok then.', npc, creature)
 			talkState[playerId] = nil
 		end
@@ -176,7 +176,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	--[[///////////////////
 	////SPIRIT RELEASE/////
 	/////////////////////]]
-	if msgcontains(message, 'release') then
+	if MsgContains(message, 'release') then
 		if player:getStorageValue(SPIKE_UPPER_MOUND_DAILY) >= os.time() then
 			return npcHandler:say('Sorry, you have to wait ' .. string.diff(player:getStorageValue(SPIKE_UPPER_MOUND_DAILY)-os.time()) .. ' before this task gets available again.', npc, creature)
 		end
@@ -194,12 +194,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if talkState[playerId] == 'release' then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			player:addItem(19203, 1)
 			player:setStorageValue(SPIKE_UPPER_MOUND_MAIN, 0)
 			npcHandler:say('Gnometastic! Take this spirit shovel and use it on four graves in the cave system. If you lose the shovel you\'ll have to bring your own. Gnomux sells all the equipment that is required for our missions.', npc, creature)
 			talkState[playerId] = nil
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Ok then.', npc, creature)
 			talkState[playerId] = nil
 		end
@@ -208,7 +208,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	--[[/////////////////
 	////TRACK GHOSTS/////
 	///////////////////]]
-	if msgcontains(message, 'track') then
+	if MsgContains(message, 'track') then
 		if player:getStorageValue(SPIKE_UPPER_TRACK_DAILY) >= os.time() then
 			return npcHandler:say('Sorry, you have to wait ' .. string.diff(player:getStorageValue(SPIKE_UPPER_TRACK_DAILY)-os.time()) .. ' before this task gets available again.', npc, creature)
 		end
@@ -226,13 +226,13 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if talkState[playerId] == 'track' then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			GHOST_DETECTOR_MAP[player:getGuid()] = Position.getFreeSand()
 			player:addItem(19205, 1)
 			player:setStorageValue(SPIKE_UPPER_TRACK_MAIN, 0)
 			npcHandler:say('Gnometastic! Use this tracking device in the caves and locate the residual spirit energy. If you lose the tracking device, you\'ll have to bring your own. Gnomux sells all the equipment that is required for our missions.', npc, creature)
 			talkState[playerId] = nil
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Ok then.', npc, creature)
 			talkState[playerId] = nil
 		end
@@ -241,7 +241,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	--[[/////////
 	////KILL/////
 	///////////]]
-	if msgcontains(message, 'kill') then
+	if MsgContains(message, 'kill') then
 		if player:getStorageValue(SPIKE_UPPER_KILL_DAILY) >= os.time() then
 			return npcHandler:say('Sorry, you have to wait ' .. string.diff(player:getStorageValue(SPIKE_UPPER_KILL_DAILY)-os.time()) .. ' before this task gets available again.', npc, creature)
 		end
@@ -259,11 +259,11 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if talkState[playerId] == 'kill' then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			player:setStorageValue(SPIKE_UPPER_KILL_MAIN, 0)
 			npcHandler:say('Gnometastic! Just go out and kill them. You should find more of them than you like.', npc, creature)
 			talkState[playerId] = nil
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Ok then.', npc, creature)
 			talkState[playerId] = nil
 		end

@@ -77,13 +77,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 1 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 1 then
 			npcHandler:say({"Could you help me do a ritual?"}, npc, creature)-- It needs to be revised, it's not the same as the global
 			npcHandler:setTopic(playerId, 1)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 1 then
 			player:addItem(31714, 1)
 			npcHandler:say({"Here is the list of ingredients that are missing to complete the ritual. "}, npc, creature)-- It needs to be revised, it's not the same as the global
@@ -94,13 +94,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"Sorry."}, npc, creature)-- It needs to be revised, it's not the same as the global
 		end
 	end
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 2 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 2 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 2 then
 			npcHandler:say({"Did you bring all the materials I informed you about?"}, npc, creature)-- It needs to be revised, it's not the same as the global
 			npcHandler:setTopic(playerId, 3)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 2 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 2 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 2 and player:getItemById(31335, 10) and player:getItemById(10279, 2) and player:getItemById(31332, 5) then
 			player:removeItem(31335, 10)
 			player:removeItem(10279, 2)

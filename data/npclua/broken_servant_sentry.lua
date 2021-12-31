@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if(msgcontains(message, "slime") or msgcontains(message, "mould") or msgcontains(message, "fungus") or msgcontains(message, "sample")) then
+	if(MsgContains(message, "slime") or MsgContains(message, "mould") or MsgContains(message, "fungus") or MsgContains(message, "sample")) then
 		if(getPlayerStorageValue(creature, Storage.ElementalistQuest1) < 1) then
 			npcHandler:say("If. You. Bring. Slime. Fungus. Samples. Fro-Fro-Fro-Frrrr*chhhhchrk*From. Other. Tower. You. Must. Be. The. Master. Are. You. There. Master?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -63,7 +63,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 3)
 		end
 
-	elseif(msgcontains(message, "cap") or msgcontains(message, "mage")) then
+	elseif(MsgContains(message, "cap") or MsgContains(message, "mage")) then
 		if(getPlayerItemCount(creature, 12599) >= 1 and getPlayerStorageValue(creature, Storage.ElementalistQuest1) == 2) and getPlayerStorageValue(creature, Storage.ElementalistQuest2) < 1 then
 			selfSay("Yo-Yo-Your*chhhrk*. Cap. Is. Slimed. I. Can. Clean. It. *chhhhrrrkchrk* ...", npc, creature)
 			npcHandler:say("Here. You. Are. *chhhrrrrkchrk*", npc, creature)
@@ -76,7 +76,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			selfSay("You already have this outfit!", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif(msgcontains(message, "staff") or msgcontains(message, "spike")) then
+	elseif(MsgContains(message, "staff") or MsgContains(message, "spike")) then
 		if(getPlayerItemCount(creature, 12803) >= 1 and getPlayerStorageValue(creature, Storage.ElementalistQuest1) == 2) and getPlayerStorageValue(creature, Storage.ElementalistQuest3) < 1 then
 			npcHandler:say({"Yo-Yo-Your*chhhrk*. Cap. Is. Slimed. I. Can. Clean. It. *chhhhrrrkchrk* ...",
 				"Here. You. Are. *chhhrrrrkchrk*"}, npc, creature, 4000)
@@ -90,7 +90,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 				npcHandler:say("I. Greet. You. Ma-Ma-Ma-ster! Did. You. Bring. Mo-Mo-Mo-M*chhhhrrrk*ore. Samples. For. Me. To-To-To. Analyse-lyse-lyse?", npc, creature)
 				npcHandler:setTopic(playerId, 2)

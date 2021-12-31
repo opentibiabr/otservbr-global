@@ -204,17 +204,17 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 	end
 	elseif player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 28 then
-		if(msgcontains(message, "wayfarer")) then
+		if(MsgContains(message, "wayfarer")) then
 			npcHandler:say("I call you the wayfarer. You travelled through my dreams. You ultimately freed my mind. My mind accepted you and so will I.", npc, creature)
 			npcHandler:setTopic(playerId, 40)
-		elseif(msgcontains(message, "mission") and npcHandler:getTopic(playerId) == 40) then
+		elseif(MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 40) then
 			npcHandler:say({
 				"Aaaah... free at last. Hmmm. ...",
 				"I assume you need to get through the gate to reach the evildoer. I can help you if you trust me, wayfarer. I will share a part of my mind with you which should enable you to step through the gate. ...",
 				"This procedure may be exhausting. Are you prepared to receive my key?"
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 41)
-		elseif(msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 41) then
+		elseif(MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 41) then
 			npcHandler:say({
 				"SAETHELON TORILUN GARNUM. ...",
 				"SLEEP. ...",

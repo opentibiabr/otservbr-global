@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "passage") or msgcontains(message, "sail") then
+	if MsgContains(message, "passage") or MsgContains(message, "sail") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"I see no reason to establish ship routes to other cities. There is nothing that would be worth the effort. ...",
@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		else return false
 		end
-	elseif msgcontains(message, "Ab\'Dendriel") then
+	elseif MsgContains(message, "Ab\'Dendriel") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.AbDendriel) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"I\'ve never been there. I doubt the elves there came up with something noteworthy. Or did you find something interesting there?",
@@ -105,7 +105,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 11)
 		else return false
 		end
-	elseif msgcontains(message, "Darashia") then
+	elseif MsgContains(message, "Darashia") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.Darashia) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"From all what I have heard, it is an unremarkable pile of huts in the desert. Or did you find something interesting there?",
@@ -118,7 +118,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 12)
 		else return false
 		end
-	elseif msgcontains(message, "Venore") then
+	elseif MsgContains(message, "Venore") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.Venore) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"Another port full of smelly humans, fittingly located in a swamp. Or did you find something interesting there?",
@@ -129,7 +129,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 13)
 		else return false
 		end
-	elseif msgcontains(message, "Ankrahmun") then
+	elseif MsgContains(message, "Ankrahmun") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.Ankrahmun) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"A city full of mad death worshippers, no thanks. Or did you find something interesting there?",
@@ -142,7 +142,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 14)
 		else return false
 		end
-	elseif msgcontains(message, "Port Hope") then
+	elseif MsgContains(message, "Port Hope") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.PortHope) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"Another pointless human settlement. Or did you find something interesting there?",
@@ -155,7 +155,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 15)
 		else return false
 		end
-	elseif msgcontains(message, "Thais") then
+	elseif MsgContains(message, "Thais") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.Thais) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"Thais must be a hell hole if only half of the stories we hear about it are true. Or did you find something interesting there?",
@@ -168,7 +168,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 16)
 		else return false
 		end
-	elseif msgcontains(message, "Liberty Bay") then
+	elseif MsgContains(message, "Liberty Bay") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.LibertyBay) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"Which sane captain would sail his ship to a pirate town? Or did you find something interesting there?",
@@ -181,7 +181,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 17)
 		else return false
 		end
-	elseif msgcontains(message, "Carlin") then
+	elseif MsgContains(message, "Carlin") then
 		if player:getStorageValue(Storage.SearoutesAroundYalahar.Carlin) ~= 1 and player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) < 5 then
 			npcHandler:say({
 				"An unremarkable town compared to the wonders of Yalahar. Or did you find something interesting there?",
@@ -194,7 +194,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 18)
 		else return false
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 and player:removeItem(8758,1) then
 			npcHandler:say("What's that? Bug milk? Hm, perhaps I can find some customers for that! ", npc, creature)
 			player:setStorageValue(Storage.SearoutesAroundYalahar.AbDendriel, 1)
@@ -319,7 +319,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Don\'t waste my time.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		npcHandler:say({"Then no.",}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

@@ -53,7 +53,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "silk") or msgcontains(message, "yarn") or msgcontains(message, "silk yarn") or msgcontains(message, "spool of yarn") then
+	if MsgContains(message, "silk") or MsgContains(message, "yarn") or MsgContains(message, "silk yarn") or MsgContains(message, "spool of yarn") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheMermaidMarina) < 1 then
 			npcHandler:say("Um. You mean, you really want me to touch that gooey spider silk just because you need yarn? Well... do you think that I'm pretty?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -61,18 +61,18 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Okay... a deal is a deal, would you like me to create a {spool of yarn} from {10 pieces of spider silk}?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "honey") or msgcontains(message, "honeycomb") or msgcontains(message, "50 honeycombs") then
+	elseif MsgContains(message, "honey") or MsgContains(message, "honeycomb") or MsgContains(message, "50 honeycombs") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheMermaidMarina) == 1 then
 			npcHandler:say("Did you bring me the 50 honeycombs I requested and do you absolutely admire my beauty?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "raymond striker") then
+	elseif MsgContains(message, "raymond striker") then
 		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) == 1 then
 			npcHandler:say("<giggles> I think he has a crush on me. Well, silly man, it is only for his own good. This way he can get accustomed to TRUE beauty. And I won't give him up anymore now that he is mine.", npc, creature)
 			player:setStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid, 2)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "date") then
+	elseif MsgContains(message, "date") then
 		if player:getStorageValue(Storage.TheShatteredIsles.ADjinnInLove) == 1 then
 			npcHandler:say("Is that the best you can do? A true Djinn would have done something more poetic.", npc, creature)
 			player:setStorageValue(Storage.TheShatteredIsles.ADjinnInLove, 2)
@@ -87,7 +87,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheShatteredIsles.AccessToLagunaIsland, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Well, everyone would say that in your position. Do you think that I'm really, absolutely the most stunning being that you have ever seen?", npc, creature)
 			npcHandler:setTopic(playerId, 2)

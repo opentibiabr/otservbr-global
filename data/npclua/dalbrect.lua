@@ -59,7 +59,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "brooch") then
+	if MsgContains(message, "brooch") then
 		if player:getStorageValue(Storage.WhiteRavenMonastery.Passage) == 1 then
 			npcHandler:say("You have recovered my brooch! I shall forever be in your debt, my friend!", npc, creature)
 			return true
@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 		npcHandler:say("What? You want me to examine a brooch?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:getItemCount(3205) == 0 then
 				npcHandler:say("What are you talking about? I am too poor to be interested in jewelry.", npc, creature)
@@ -90,7 +90,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.WhiteRavenMonastery.QuestLog, 1) -- Quest log
 			player:setStorageValue(Storage.WhiteRavenMonastery.Passage, 1)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Then stop being a fool. I am poor and I have to work the whole day through!", npc, creature)
 		elseif npcHandler:getTopic(playerId) == 2 then

@@ -63,28 +63,28 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "banana skin") then
+	if MsgContains(message, "banana skin") then
 		if player:getStorageValue(Storage.Postman.Mission06) == 7 then
 			if player:getItemCount(3104) > 0 then
 				npcHandler:say("<sniff><sniff>", npc, creature)
 				npcHandler:setTopic(playerId, 1)
 			end
 		end
-	elseif msgcontains(message, "dirty fur") then
+	elseif MsgContains(message, "dirty fur") then
 		if player:getStorageValue(Storage.Postman.Mission06) == 8 then
 			if player:getItemCount(3105) > 0 then
 				npcHandler:say("<sniff><sniff>", npc, creature)
 				npcHandler:setTopic(playerId, 2)
 			end
 		end
-	elseif msgcontains(message, "mouldy cheese") then
+	elseif MsgContains(message, "mouldy cheese") then
 		if player:getStorageValue(Storage.Postman.Mission06) == 9 then
 			if player:getItemCount(3120) > 0 then
 				npcHandler:say("<sniff><sniff>", npc, creature)
 				npcHandler:setTopic(playerId, 3)
 			end
 		end
-	elseif msgcontains(message, "like") then
+	elseif MsgContains(message, "like") then
 		if npcHandler:getTopic(playerId) == 1  then
 			npcHandler:say("Woof!", npc, creature)
 			player:setStorageValue(Storage.Postman.Mission06, 8)

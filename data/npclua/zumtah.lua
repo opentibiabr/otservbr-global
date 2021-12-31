@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "exit") then
+	if MsgContains(message, "exit") then
 		if player:getStorageValue(Storage.WrathoftheEmperor.ZumtahStatus) ~= 1 then
 			if npcHandler:getTopic(playerId) < 1 then
 				npcHandler:say("Oh of course, may I show you around a bit before? You want to go straight to the exit? Would you please follow me. Oh right, I am terribly sorry but THERE IS NONE. Will you finally give it up please?", npc, creature)
@@ -93,7 +93,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.WrathoftheEmperor.PrisonReleaseStatus, 1)
 			player:addCondition(condition)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("You are starting to get on my nerves. Is this the only topic you know?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -102,7 +102,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		elseif npcHandler:getTopic(playerId) == 7 then
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("Pesky, persistent human.", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -112,10 +112,10 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Muhahaha. Then I will give you a test. How many years do you think have I been here? {89}, {164} or {278}?", npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		end
-	elseif msgcontains(message, "278") and npcHandler:getTopic(playerId) == 9 then
+	elseif MsgContains(message, "278") and npcHandler:getTopic(playerId) == 9 then
 		npcHandler:say("Correct human, and that is not nearly how high you would need to count to tell all the lost souls I've seen dying here. I AM PERPETUAL. Muahahaha.", npc, creature)
 		npcHandler:setTopic(playerId, 10)
-	elseif (msgcontains(message, "164") or msgcontains(message, "89")) and npcHandler:getTopic(playerId) == 9 then
+	elseif (MsgContains(message, "164") or MsgContains(message, "89")) and npcHandler:getTopic(playerId) == 9 then
 		npcHandler:say("Wrong answer human! Muahahaha.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

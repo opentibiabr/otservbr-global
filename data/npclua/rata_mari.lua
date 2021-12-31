@@ -61,7 +61,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'spy report') then
+	if MsgContains(message, 'spy report') then
 		local reportProgress = player:getStorageValue(Storage.DjinnWar.MaridFaction.RataMari)
 		if reportProgress < 1 then
 			npcHandler:say({
@@ -81,7 +81,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not player:removeItem(3607, 1) then
 				npcHandler:say('No cheese - no report.', npc, creature)
 				return true

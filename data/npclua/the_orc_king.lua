@@ -73,7 +73,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	local efreet, marid = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03), player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission03)
 	-- Mission 3 - Orc Fortress
-	if msgcontains(message, 'lamp') then
+	if MsgContains(message, 'lamp') then
 		if efreet == 1 or marid == 1 then
 			if player:getStorageValue(Storage.DjinnWar.ReceivedLamp) ~= 1 then
 				npcHandler:say({
@@ -86,7 +86,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 
-	elseif msgcontains(message, 'cookie') then
+	elseif MsgContains(message, 'cookie') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31 and player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.OrcKing) ~= 1 then
 			npcHandler:say('You bring me a stinking cookie???', npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -94,7 +94,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Mission 3 - Orc Fortress
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'malor') then
+		if MsgContains(message, 'malor') then
 			if efreet == 1 then
 				player:setStorageValue(Storage.DjinnWar.EfreetFaction.DoorToLamp, 1)
 
@@ -111,7 +111,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not player:removeItem(130, 1) then
 				npcHandler:say('You have no cookie that I\'d like.', npc, creature)
 				npcHandler:setTopic(playerId, 0)
@@ -128,7 +128,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('I see.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end

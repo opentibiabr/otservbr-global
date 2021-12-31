@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "sam sent me") or msgcontains(message, "sam send me") then
+	if MsgContains(message, "sam sent me") or MsgContains(message, "sam send me") then
 		if player:getStorageValue(Storage.SamsOldBackpack) == 1 then
 			npcHandler:say({
 				"Oh, so its you, he wrote me about? Sadly I have no dwarven armor in stock. But I give you the permission to retrive one from the mines. ...",
@@ -66,7 +66,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.SamsOldBackpack, 2)
 			player:setStorageValue(Storage.SamsOldBackpackDoor, 1)
 		end
-	elseif msgcontains(message, "measurements") then
+	elseif MsgContains(message, "measurements") then
 		if player:getStorageValue(Storage.Postman.Mission07) >= 1 and	player:getStorageValue(Storage.Postman.MeasurementsKroox) ~= 1 then
 			npcHandler:say("Hm, well I guess its ok to tell you ... <tells you about Lokurs measurements> ", npc, creature)
 			player:setStorageValue(Storage.Postman.Mission07, player:getStorageValue(Storage.Postman.Mission07) + 1)

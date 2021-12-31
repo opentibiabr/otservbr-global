@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'cookbook') then
+	if MsgContains(message, 'cookbook') then
 		if player:getStorageValue(Storage.MaryzaCookbook) ~= 1 then
 			npcHandler:say('The cookbook of the famous dwarven kitchen. You\'re lucky. I have a few copies on sale. Do you like one for 150 gold?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not player:removeMoneyBank(150) then
 				npcHandler:say('No gold, no sale, that\'s it.', npc, creature)
 				return true
@@ -76,7 +76,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Here you are. Happy cooking!', npc, creature)
 			player:setStorageValue(Storage.MaryzaCookbook, 1)
 			player:addItem(3234, 1)
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('I have but a few copies, anyway.', npc, creature)
 		end
 	end

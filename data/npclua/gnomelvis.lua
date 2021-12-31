@@ -59,12 +59,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "looking") then
+	if MsgContains(message, "looking") then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 19 or player:getStorageValue(Storage.BigfootBurden.QuestLine) <= 22 then
 			npcHandler:say("I'm the gnomish {musical} supervisor!", npc, creature)
 		end
 
-	elseif msgcontains(message, "musical") then
+	elseif MsgContains(message, "musical") then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 19 then
 			npcHandler:say({
 				"Ah well. Everyone has a very personal melody in his soul. Only if you know your soul melody then you know yourself. And only if you know yourself will you be admitted to the Bigfoot company. ...",

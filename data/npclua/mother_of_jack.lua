@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "jack") then
+	if MsgContains(message, "jack") then
 		if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 5) then
 			if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.Mother) < 1) then
 				npcHandler:say(
@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 1)
 			end
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if (npcHandler:getTopic(playerId) == 2) then
 			npcHandler:say(
 				"Thought so. Of course he wouldn't do anything wrong. And he went where? Edron. Hm. I can \z
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if (npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say("What...? But he wasn't up to something, was he?", npc, creature)
 			npcHandler:setTopic(playerId, 2)

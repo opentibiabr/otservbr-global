@@ -103,7 +103,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "job") then
+	if MsgContains(message, "job") then
 		npcHandler:say(
 			{
 				"I was a carpenter, back on Main. Wanted my own little shop. Didn't sit with the old man. \z
@@ -112,7 +112,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			},
 		npc, creature, 10)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "rope") then
+	elseif MsgContains(message, "rope") then
 		npcHandler:say(
 			{
 				"Only the best quality, I assure you. A rope in need is a friend indeed! Imagine you stumble into a rat \z

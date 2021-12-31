@@ -57,10 +57,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "piece of draconian steel")) then
+	if(MsgContains(message, "piece of draconian steel")) then
 		npcHandler:say("You bringing me draconian steel and obsidian lance in exchange for obsidian knife?", npc, creature)
 		npcHandler:setTopic(playerId, 15)
-	elseif(msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 15) then
+	elseif(MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 15) then
 		if player:getItemCount(5889) >= 1 and player:getItemCount(3313) >= 1 then
 			if player:removeItem(5889, 1) and player:removeItem(3313, 1) then
 				npcHandler:say("Here you have it.", npc, creature)
@@ -73,27 +73,27 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	end
 
-	if(msgcontains(message, "pickaxe")) then
+	if(MsgContains(message, "pickaxe")) then
 		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) == 1 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 1 then
 			npcHandler:say("True dwarven pickaxes having to be maded by true weaponsmith! You wanting to get pickaxe for explorer society?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif(msgcontains(message, "crimson sword")) then
+	elseif(MsgContains(message, "crimson sword")) then
 		if player:getStorageValue(Storage.TravellingTrader.Mission05) == 1 then
 			npcHandler:say("Me don't sell crimson sword.", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif(msgcontains(message, "forge")) then
+	elseif(MsgContains(message, "forge")) then
 		if(npcHandler:getTopic(playerId) == 5) then
 			npcHandler:say("You telling me to forge one?! Especially for you? You making fun of me?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif(msgcontains(message, "brooch")) then
+	elseif(MsgContains(message, "brooch")) then
 		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) == 2 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 2 then
 			npcHandler:say("You got me brooch?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say("Me order book quite full is. But telling you what: You getting me something me lost and Uzgod seeing that your pickaxe comes first. Jawoll! You interested?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -127,7 +127,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				end
 			end
 		end
-	elseif(msgcontains(message, "no")) then
+	elseif(MsgContains(message, "no")) then
 		if(npcHandler:getTopic(playerId) == 6) then
 			npcHandler:say("Well. Thinking about it, me a smith, so why not. 1000 gold for your personal crimson sword. Ok?", npc, creature)
 			npcHandler:setTopic(playerId, 7)

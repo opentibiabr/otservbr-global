@@ -86,7 +86,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif message:lower() == 'percht' then
 		npcHandler:say('Nasty creatures especially their queen that sits frozzen on her throne beneath this island.', npc, creature)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if (talkState[playerId] >= Storage.Percht1 and talkState[playerId] <= Storage.Percht3) then
 			local items_number = 0
 			if table.maxn(sleightInfo[rtnt[playerId]].items) > 0 then
@@ -115,13 +115,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:resetNpc()
 			return true
 		end
-	elseif msgcontains(message, "mount") or msgcontains(message, "mounts") or msgcontains(message, "sleigh") or msgcontains(message, "sleighs") then
+	elseif MsgContains(message, "mount") or MsgContains(message, "mounts") or MsgContains(message, "sleigh") or MsgContains(message, "sleighs") then
 		npcHandler:say('I can give you one of the following sleighs: {' .. table.concat(monsterName, "}, {") .. '}.', npc, creature)
 		rtnt[playerId] = nil
 		talkState[playerId] = 0
 		npcHandler:resetNpc()
 		return true
-	elseif msgcontains(message, "help") then
+	elseif MsgContains(message, "help") then
 		npcHandler:say('Just tell me which {sleigh} you want to know more about.', npc, creature)
 		rtnt[playerId] = nil
 		talkState[playerId] = 0

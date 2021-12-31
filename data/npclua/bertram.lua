@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'key') then
+	if MsgContains(message, 'key') then
 		if player:getStorageValue(Storage.ThievesGuild.Mission06) == 1
 		and player:getSex() == PLAYERSEX_FEMALE then
 			local headItem = player:getSlotItem(CONST_SLOT_HEAD)

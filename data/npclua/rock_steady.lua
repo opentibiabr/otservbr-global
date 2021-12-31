@@ -54,13 +54,13 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "addon") or msgcontains(message, "help") then
+	if MsgContains(message, "addon") or MsgContains(message, "help") then
 		if player:getStorageValue(72326) < 1 then
 			selfSay("If you want anything, you should talk to Old Rock Boy over there. I do {collect} stuff, though. So just ask if you're interested in helping me.", npc, creature)
 			player:setStorageValue(72326, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "collect") then
+	elseif MsgContains(message, "collect") then
 		if player:getStorageValue(72326) == 1 then
 			selfSay("I collect everything that reflects light in strange ways. However, I am bored by my collection. And there wasn't anything new to add for years. ...", npc, creature)
 			selfSay("I like pearls for example - but I have already enough. I also like shells - but I can't even count how many I already own. ...", npc, creature)
@@ -81,7 +81,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(72326, 5)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			selfSay("Great! Let me see. Amazing! I will take this, thank you!", npc, creature)
 			player:setStorageValue(72326, 2)

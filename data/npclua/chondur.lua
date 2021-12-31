@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'stampor') or msgcontains(message, 'mount') then
+	if MsgContains(message, 'stampor') or MsgContains(message, 'mount') then
 		if not player:hasMount(11) then
 			npcHandler:say(
 				'You did bring all the items I requqested, cuild. Good. \
@@ -69,7 +69,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('You already have stampor mount.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'mission') then
+	elseif MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 8 then
 			npcHandler:say(
 				'The evil cult has placed a curse on one of the captains here. \
@@ -81,7 +81,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Did you bring five pirate voodoo dolls?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(12312, 50) and player:removeItem(12314, 30) and player:removeItem(12313, 100) then
 				npcHandler:say(
@@ -111,7 +111,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				end
 			end
 		end
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) > 2 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) > 2 then
 		npcHandler:say('Maybe next time.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

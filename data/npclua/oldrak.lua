@@ -105,7 +105,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 	-- Demon oak quest
-	if msgcontains(message, "mission") or msgcontains(message, "demon oak") then
+	if MsgContains(message, "mission") or MsgContains(message, "demon oak") then
 		if player:getStorageValue(Storage.DemonOak.Done) < 1 then
 			npcHandler:say("How do you know? Did you go into the infested area?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -119,7 +119,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(Storage.DemonOak.Done, 2)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
 		player:setStorageValue(Storage.DemonOak.Progress, 1)
 		if player:getStorageValue(Storage.DemonOak.Progress) == 1 then
 			npcHandler:say("A demon oak?!? <mumbles some blessings> May the gods be on our side. You'll need a {hallowed axe} to harm that tree. Bring me a simple {axe} and I'll prepare it for you.",creature)
@@ -129,7 +129,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("I don't believe a word of it! How rude to lie to a monk!",creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "axe") then
+	elseif MsgContains(message, "axe") then
 		if player:getStorageValue(Storage.DemonOak.Progress) == 2 then
 			npcHandler:say("Ahh, you've got an axe. Very good. I can make a hallowed axe out of it. It will cost you... er... a donation of 1,000 gold. Alright?",creature)
 			npcHandler:setTopic(playerId, 2)
@@ -137,7 +137,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You have to first talk about {demon oak} or the {mission} before we continue.",creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 2 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 2 then
 		if player:getStorageValue(Storage.DemonOak.Progress) == 2 then
 			if player:getMoney() + player:getBankBalance() >= 1000 then
 				if player:removeItem(3274, 1) and player:removeMoneyBank(1000) then
@@ -154,19 +154,19 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, "no") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say("What a pity! Let me know when you managed to get in there. Maybe I can help you when we know what we are dealing with.",creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "no") and npcHandler:getTopic(playerId) == 2 then
+	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) == 2 then
 		npcHandler:say("No then.",creature)
 		npcHandler:setTopic(playerId, 0)
 	end
 
 	-- The paradox tower quest
-	if msgcontains(message, "hugo") then
+	if MsgContains(message, "hugo") then
 		npcHandler:say("Ah, the curse of the Plains of Havoc, the hidden beast, the unbeatable foe. I've been living here for years and I'm sure this is only a myth.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "myth") then
+	elseif MsgContains(message, "myth") then
 		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) < 1 then
 			-- Questlog: The Paradox Tower
 			player:setStorageValue(Storage.Quest.TheParadoxTower.QuestLine, 1)
@@ -175,7 +175,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		npcHandler:say("There are many tales about the fearsome Hugo. It's said it's an abnormality, accidentally created by Yenny the Gentle. It's half demon, half something else and people say it's still alive after all these years.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "yenny the gentle") then
+	elseif MsgContains(message, "yenny the gentle") then
 		npcHandler:say("Yenny, known as the Gentle, was one of the most powerful wielders of magic in ancient times. She was known throughout the world for her mercy and kindness.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

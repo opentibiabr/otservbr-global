@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'supplies') then
+	if MsgContains(message, 'supplies') then
 		if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) == 1 then
 			npcHandler:say({
 				'What!? I bet, Baa\'leal sent you! ...',
@@ -69,7 +69,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('I won\'t talk about that.', npc, creature)
 		end
 
-	elseif msgcontains(message, 'ankrahmun') then
+	elseif MsgContains(message, 'ankrahmun') then
 		npcHandler:say({
 			'Yes, I\'ve lived in Ankrahmun for quite some time. Ahh, good old times! ...',
 			'Unfortunately I had to relocate. <sigh> ...',

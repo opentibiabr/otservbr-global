@@ -36,7 +36,7 @@ npcType.onDisappear = function(npc, creature)
 end
 
 npcType.onSay = function(npc, creature, type, message)
-	if not (msgcontains(message, 'hi') or msgcontains(message, 'hello')) then
+	if not (MsgContains(message, 'hi') or MsgContains(message, 'hello')) then
 		npcHandler:say('LEAVE THE DRAGONS\' CEMETERY AT ONCE!', npc, creature)
 	end
 	npcHandler:onSay(npc, creature, type, message)

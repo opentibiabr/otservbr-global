@@ -60,13 +60,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, 'parcel') then
+	if MsgContains(message, 'parcel') then
 		npcHandler:say('Do you want to buy a parcel for 15 gold?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'label') then
+	elseif MsgContains(message, 'label') then
 		npcHandler:say('Do you want to buy a label for 1 gold?', npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		local player = Player(creature)
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeMoneyBank(15) then
@@ -89,7 +89,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Fine.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if isInArray({1, 2}, npcHandler:getTopic(playerId)) then
 			npcHandler:say('I knew I would be stuck with that stuff.', npc, creature)
 			npcHandler:setTopic(playerId, 0)

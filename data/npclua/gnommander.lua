@@ -60,19 +60,19 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if msgcontains(message, 'commander') then
+	if MsgContains(message, 'commander') then
 		return npcHandler:say('I\'m responsible for the security and reward heroes to our cause. If you are looking for missions, talk to Gnomilly, Gnombold and Gnomagery.', npc, creature)
 	end
 
-	if msgcontains(message, 'reward') then
+	if MsgContains(message, 'reward') then
 		return npcHandler:say('I can sell special outfit parts. If your fame is high enough, you might be {worthy} of such a reward.', npc, creature)
 	end
 
-	if msgcontains(message, 'spike') then
+	if MsgContains(message, 'spike') then
 		return npcHandler:say(speech, npc, creature)
 	end
 
-	if msgcontains(message, 'worthy') then
+	if MsgContains(message, 'worthy') then
 		if player:getFamePoints() < 100 then
 			return npcHandler:say('You are not worthy of a special reward yet.', npc, creature)
 		end
@@ -82,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if talkState[playerId] == 'worthy' then
-		if msgcontains(message, 'basic') then
+		if MsgContains(message, 'basic') then
 			if getPlayerLevel(creature) < 25 then
 				talkState[playerId] = nil
 				return npcHandler:say('You do not have enough level yet.', npc, creature)
@@ -95,7 +95,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 			talkState[playerId] = 'basic'
 			return npcHandler:say('Do you want to buy the basic outfit for 1000 Gold?', npc, creature)
-		elseif msgcontains(message, 'first') then
+		elseif MsgContains(message, 'first') then
 			if getPlayerLevel(creature) < 50 then
 				talkState[playerId] = nil
 				return npcHandler:say('You do not have enough level yet.', npc, creature)
@@ -113,7 +113,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 			talkState[playerId] = 'first'
 			return npcHandler:say('Do you want to buy the first addon for 2000 Gold?', npc, creature)
-		elseif msgcontains(message, 'second') then
+		elseif MsgContains(message, 'second') then
 			if getPlayerLevel(creature) < 80 then
 				talkState[playerId] = nil
 				return npcHandler:say('You do not have enough level yet.', npc, creature)
@@ -135,7 +135,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if talkState[playerId] == 'basic' then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not player:removeMoney(1000) then
 				talkState[playerId] = nil
 				return npcHandler:say('You do not have that money.', npc, creature)
@@ -146,7 +146,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		talkState[playerId] = nil
 		return npcHandler:say('Here it is.', npc, creature)
 	elseif talkState[playerId] == 'first' then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not player:removeMoney(2000) then
 				talkState[playerId] = nil
 				return npcHandler:say('You do not have that money.', npc, creature)
@@ -157,7 +157,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		talkState[playerId] = nil
 		return npcHandler:say('Here it is.', npc, creature)
 	elseif talkState[playerId] == 'second' then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not player:removeMoney(3000) then
 				talkState[playerId] = nil
 				return npcHandler:say('You do not have that money.', npc, creature)

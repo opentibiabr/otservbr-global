@@ -99,7 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	if message then
 		for i = 1, #items do
-		  if msgcontains(message, items[i].name) then
+		  if MsgContains(message, items[i].name) then
 				if getPlayerItemCount(creature, 19083) >= 20 then
 					doPlayerRemoveItem(creature, 19083, 20)
 					doPlayerAddItem(creature, items[i].id, 1)

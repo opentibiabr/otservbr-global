@@ -58,12 +58,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "eleonore") then
+	if MsgContains(message, "eleonore") then
 		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) == 2 and player:getStorageValue(Storage.TheShatteredIsles.ADjinnInLove) < 1 then
 			npcHandler:say("I heard the birds sing about her beauty. But how could a human rival the enchanting beauty of a {mermaid}?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "mermaid") or msgcontains(message, "marina") then
+	elseif MsgContains(message, "mermaid") or MsgContains(message, "marina") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"Oh yes, I noticed that lovely mermaid. From afar of course. I would not dare to step into the eyes of such a lovely creature. ...",
@@ -74,12 +74,12 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Oh my. Its not easy to impress a mermaid I guess. Please get me a {love poem}. I think elves are the greatest poets so their city seems like a good place to look for one.", npc, creature)
 			player:setStorageValue(Storage.TheShatteredIsles.ADjinnInLove, 3)
 		end
-	elseif msgcontains(message, "date") then
+	elseif MsgContains(message, "date") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("Will you ask the mermaid Marina if she would date me?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say("Thank you. How ironic, a human granting a djinn a wish.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
@@ -95,7 +95,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say("You don't have it...", npc, creature)
 			end
 		end
-	elseif msgcontains(message, "love poem") then
+	elseif MsgContains(message, "love poem") then
 		if player:getStorageValue(Storage.TheShatteredIsles.ADjinnInLove) == 3 then
 			npcHandler:say("Did you get a love poem from Ab'Dendriel?", npc, creature)
 			npcHandler:setTopic(playerId, 4)

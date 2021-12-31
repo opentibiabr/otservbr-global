@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'mission') then
+	if MsgContains(message, 'mission') then
 		local qStorage = player:getStorageValue(Storage.SpiritHunters.Mission01)
 		if qStorage == 3 then
 			npcHandler:say("So, did you find anything worth examining? Did you actually catch a ghost?",creature)
@@ -94,7 +94,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Talk research with spectulus to take some mission.",creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({"Excellent. Now we need to concentrate on testing that thing. The spirit cage has been calibrated based on some tests we made - as well as your recent findings over at the graveyard. ...",
 						"Using the device on the remains of a ghost right after its defeat should capture it inside this trap. We could then transfer it into our spirit chamber which is in fact a magical barrier. ..",
@@ -148,7 +148,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, 'research') then
+	elseif MsgContains(message, 'research') then
 		local qStorage = player:getStorageValue(Storage.SpiritHunters.Mission01)
 		if qStorage == 4 then
 			npcHandler:say({"We are still in need of more research concerning environmental as well as psychic ecto-magical influences. Besides more common ghosts we also need some of the harder to come by nightstalkers and - if you're really hardboiled - souleaters. ...",

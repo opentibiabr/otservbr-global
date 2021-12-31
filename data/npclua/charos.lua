@@ -90,7 +90,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if npcHandler:getTopic(playerId) == 0 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say("Fine. You have ".. -player:getStorageValue(Storage.AdventurersGuild.CharosTrav)+7 .." \z
 			attunements left. What is the new city of your choice? Thais, Carlin, Ab'Dendriel, Kazordoon, Venore, \z
 			Ankrahmun, Edron, Darashia, Liberty Bay or Port Hope?", npc, creature)

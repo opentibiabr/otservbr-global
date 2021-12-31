@@ -53,12 +53,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "sniffler") then
+	if MsgContains(message, "sniffler") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 1 then
 			npcHandler:say("!", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "meat") then
+	elseif MsgContains(message, "meat") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(3577, 1) then
 				npcHandler:say("<munch>", npc, creature)

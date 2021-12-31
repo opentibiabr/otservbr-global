@@ -130,16 +130,16 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "cookie") then
+	if MsgContains(message, "cookie") then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31
 				and player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.SimonTheBeggar) ~= 1 then
 			npcHandler:say("Have you brought a cookie for the poor?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "help") then
+	elseif MsgContains(message, "help") then
 		npcHandler:say("I need gold. Can you spare 100 gold pieces for me?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeItem(130, 1) then
 				npcHandler:say("You have no cookie that I'd like.", npc, creature)
@@ -191,7 +191,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Now you own the hot key.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "no") and npcHandler:getTopic(playerId) ~= 0 then
+	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) ~= 0 then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("I see.", npc, creature)
 		elseif npcHandler:getTopic(playerId) == 2 then

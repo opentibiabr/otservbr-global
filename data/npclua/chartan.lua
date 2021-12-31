@@ -53,7 +53,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 2 then
 			npcHandler:say("Mhm, what are you doing here. Who zent you? ", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -64,7 +64,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Zo? Did you find a way to reztore ze teleporter? ", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "zalamon") then
+	elseif MsgContains(message, "zalamon") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"I zee. Zalamon zent word of ze arrival of a zoftzkin quite zome time ago. Zat muzt be you zen. ... ",
@@ -78,7 +78,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission01, 3) --Questlog, Wrath of the Emperor "Mission 01: Catering the Lions Den"
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"Alright. Well, az you might not be aware of it yet - we are on top of an old temple complex. It haz been abandoned and it haz crumbled over time. ...",

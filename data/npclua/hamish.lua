@@ -145,7 +145,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "dawnport") then
+	if MsgContains(message, "dawnport") then
 		npcHandler:say(
 			{
 				"Small and deceptively friendly-looking island. Well, I used to study the plants and herbs here for my potions.",
@@ -154,7 +154,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				If you need some potions, runes or other magic equipment, ask for a trade."
 			},
 		npc, creature, 200)
-	elseif msgcontains(message, "mainland") then
+	elseif MsgContains(message, "mainland") then
 		npcHandler:say(
 			{
 				"Dawnport is not far off from the coast of the Tibian Mainland. Lots of cities, monsters, bandits, \z
@@ -165,7 +165,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				which roam our lands!"
 			},
 		npc, creature, 200)
-	elseif msgcontains(message, "ser tybald") then
+	elseif MsgContains(message, "ser tybald") then
 		npcHandler:say(
 			{
 				"I wish I had thought of changing my name to that of a hero. Would have smoothed my way no end!",

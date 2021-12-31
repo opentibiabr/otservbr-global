@@ -68,7 +68,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif isInArray({"job", "items"}, message) then
 		npcHandler:say('I trade Enchanted Chicken Wing for Boots of Haste, Warrior Sweat for 4 Warrior Helmets, Fighting Spirit for 2 Royal Helmet Magic Sulphur for 3 Fire Swords', npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message,'yes') and npcHandler:getTopic(playerId) <= 4 and npcHandler:getTopic(playerId) >= 1 then
+	elseif MsgContains(message,'yes') and npcHandler:getTopic(playerId) <= 4 and npcHandler:getTopic(playerId) >= 1 then
 		local trade = {
 				{ NeedItem = 3079, Ncount = 1, GiveItem = 5891, Gcount = 1}, -- Enchanted Chicken Wing
 				{ NeedItem = 3369, Ncount = 4, GiveItem = 5885, Gcount = 1}, -- Flask of Warrior's Sweat
@@ -82,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say('Sorry but you don\'t have the item.', npc, creature)
 		end
-	elseif msgcontains(message,'no') and (npcHandler:getTopic(playerId) >= 1 and npcHandler:getTopic(playerId) <= 5) then
+	elseif MsgContains(message,'no') and (npcHandler:getTopic(playerId) >= 1 and npcHandler:getTopic(playerId) <= 5) then
 		npcHandler:say('Ok then.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 		npcHandler:removeInteraction(npc, creature)

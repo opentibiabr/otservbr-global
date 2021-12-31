@@ -59,7 +59,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- START TASK
-	if msgcontains(message, "food") then
+	if MsgContains(message, "food") then
 		if player:getStorageValue(Storage.Oramond.MissionToTakeRoots) <= 0 then
 			npcHandler:say({
 				"Hey there, just to let you know - I am not a man of many words. I prefer 'deeds', you see? The poor of this city will not feed themselves. ...",
@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 1)
 			end
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say("Spend it wisely, though, put in a word for the poor, will ye? Sure you will.", npc, creature)
 		player:setStorageValue(Storage.Oramond.VotingPoints,
 			player:getStorageValue(Storage.Oramond.VotingPoints) + 1)
@@ -92,12 +92,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		player:setStorageValue(Storage.Oramond.MissionToTakeRoots, 0)
 		player:setStorageValue(Storage.Oramond.DoorBeggarKing, 1)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "root") then
+	elseif MsgContains(message, "root") then
 		npcHandler:say("They are nutritious, cost nothing and are good for the body hair. If you can bring us bundles of five juicy roots each - we will make it worth your while for the {magistrate}.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "magistrate") then
+	elseif MsgContains(message, "magistrate") then
 		npcHandler:say("They act so important but it is us common people who keep things going. There is a lot you can do in this city to earn a right to vote in the magistrate, though. So keep an eye out for everyone who needs help.", npc, creature)
-	elseif msgcontains(message, "rathleton") then
+	elseif MsgContains(message, "rathleton") then
 		npcHandler:say({
 			"Don't be fooled, we have here masters and servants like everywhere else. The whole system is a scam to subdue the masses, to fool them about what is really happening. ...",
 			"The system only ensures that the rich have a better control and the labourers are only used."

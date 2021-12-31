@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "endurance") then
+	if MsgContains(message, "endurance") then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 15 then
 			npcHandler:say({
 				"Ah, the test is a piece of mushroomcake! Just take the teleporter over there in the south and follow the hallway. ...",

@@ -68,7 +68,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.Postman.Mission01) < 1 then
 			npcHandler:say("You are not a member of our guild yet! We have high standards for our members. To rise in our guild is a difficult but rewarding task. Are you interested in joining?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -149,7 +149,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("So are you ready for another mission?", npc, creature)
 			npcHandler:setTopic(playerId, 10)
 		end
-	elseif msgcontains(message, "dress pattern") then
+	elseif MsgContains(message, "dress pattern") then
 		if player:getStorageValue(Storage.Postman.Mission06) == 2 then
 			npcHandler:say("Oh yes, where did we get that from ...? Let's see, first ask the great technomancer in Kazordoon for the technical details. Return here afterwards.", npc, creature)
 			player:setStorageValue(Storage.Postman.Mission06, 3)
@@ -166,7 +166,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.Postman.Mission06, 11)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "advancement") then
+	elseif MsgContains(message, "advancement") then
 		if player:getStorageValue(Storage.Postman.Mission04) == 2 and player:getStorageValue(Storage.Postman.Rank) == 1 then
 			npcHandler:say("You are worthy indeed. Do you want to advance in our guild?", npc, creature)
 			npcHandler:setTopic(playerId, 14)
@@ -180,7 +180,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You are worthy indeed. Do you want to advance in our guild?", npc, creature)
 			npcHandler:setTopic(playerId, 27)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Hm, I might consider your proposal, but first you will have to prove your worth by doing some tasks for us. Are you willing to do that?", npc, creature)
 			npcHandler:setTopic(playerId, 2)

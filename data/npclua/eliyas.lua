@@ -59,7 +59,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'outfit') then
+	if MsgContains(message, 'outfit') then
 		if player:getSex() == PLAYERSEX_MALE then
 			npcHandler:say('My jewelled belt? <giggles> That\'s not very manly. Maybe you\'d prefer a scimitar like Habdel has.', npc, creature)
 			return true
@@ -69,7 +69,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('My jewelled belt? Of course I could make one for you, but I have a small request. Would you fulfil a task for me?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'comb') then
+	elseif MsgContains(message, 'comb') then
 		if player:getSex() == PLAYERSEX_MALE then
 			npcHandler:say('Comb? This is a jewellery shop.', npc, creature)
 			return true
@@ -79,7 +79,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Have you brought me a mermaid\'s comb?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				'Listen, um... I have been wanting a comb for a long time... not just any comb, but a mermaid\'s comb. Having a mermaid\'s comb means never having split ends again! ...',
@@ -105,7 +105,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Yeah! That\'s it! I can\'t wait to comb my hair! Oh - but first, I\'ll fulfil my promise: Here is your jewelled belt! Thanks again!', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
 		npcHandler:say('Oh... okay.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

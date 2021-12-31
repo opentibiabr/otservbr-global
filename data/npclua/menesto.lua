@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "ready") then
+	if MsgContains(message, "ready") then
 		if player:getStorageValue(Storage.Dawnport.Tutorial) == 1 then
 			npcHandler:say(
 				{

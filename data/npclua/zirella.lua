@@ -160,7 +160,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if storeTalkCid[playerId] == 7 then
 			npcHandler:say("Well then, I hope you find nice and dry branches for me! Good {bye}!", npc, creature)
 			npcHandler:removeInteraction(npc, creature)

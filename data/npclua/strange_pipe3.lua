@@ -72,32 +72,32 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "madman") then
+	if MsgContains(message, "madman") then
 		npcHandler:say({
 			"He is an old enemy of the city and I've battled him often in the past. ...",
 			"Now he has returned for vengeance, he reclaimed an old abandoned underground {laboratory} and he has acquired new powerful {allies}."
 		}, npc, creature)
 	end
-	if msgcontains(message, 'allies') then
+	if MsgContains(message, 'allies') then
 		npcHandler:say({
 			"His allies are an enigma even to me. It seems they belong to some unknown race that lives deep under the earth. ...",
 			"They seem to have supplied him with resources and workforce and a powerful {guardian} to prevent anyone from entering the passages to his lair."
 		}, npc, creature)
 	end
-	if msgcontains(message, 'guardian') then
+	if MsgContains(message, 'guardian') then
 		npcHandler:say({
 			"It's a fearsome subterranean beast like nothing I've ever encountered. It is dangerous and almost unbeatable because its main body is hidden beneath the ground ...",
 			"And it has an endless supply of tentacles. But not all is lost, as I have devised a {plan} to battle the beast."
 		}, npc, creature)
 	end
-	if msgcontains(message, 'enraged') then
+	if MsgContains(message, 'enraged') then
 		npcHandler:say({
 			"While it's buried, it only uses his tentacles to attack. If one is destroyed it will simply use another set of tentacles and its supply seems endless. ...",
 			"If you manage though to kill all the tentacles it is using within a few heartbeats, it will become confused by its momentary helplessness and will probably attack with its main body. ...",
 			"That is when you have a chance to destroy it. Pass through its chamber and look for another of my tubes to contact me. Please hurry! End of communication."
 		}, npc, creature)
 	end
-	if msgcontains(message, 'way') then
+	if MsgContains(message, 'way') then
 		npcHandler:say({
 			"You will have to leave the plant through the eastern door on the lowest level. I have arranged for it to be 'accidentally' open. ...",
 			"As in the past, our enemy still uses a series of machines to open the way to the next section of his lair. You have to turn them all on to proceed. ...",

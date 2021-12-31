@@ -59,17 +59,17 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'barrel') then
+	if MsgContains(message, 'barrel') then
 		if player:getStorageValue(Storage.SecretService.AVINMission03) == 2 then
 			npcHandler:say('Do you bring me a barrel of beer??', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'whisper beer') then
+	elseif MsgContains(message, 'whisper beer') then
 		if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 11 then
 			npcHandler:say('Do you want to buy a bottle of our finest whisper beer for 80 gold?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(404, 1) then
 				player:setStorageValue(Storage.SecretService.AVINMission03, 3)

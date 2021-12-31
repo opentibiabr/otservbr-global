@@ -67,13 +67,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		npcHandler:say({
 			"First, you will help us rebuilding this wretched {bridge} we cannot cross. We need mortar and there are several types of monsters who try to keep us away from it. ...",
 			"Then there is this enormous wall in the distance. Once we crossed the bridge, we will have to breach this monument. As I see it, you are working for the Inquisition now, I will hear no objection. You may even earn our gratitude."
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "bridge") then
+	elseif MsgContains(message, "bridge") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"Our brother Mortis is constantly working on keeping the bridge intact. We tried some simple wood planks first but it didn't work out that... well. ...",
@@ -81,7 +81,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "mortar") then
+	elseif MsgContains(message, "mortar") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"We scouted some caves beneath the island which hold plenty of chalk to mix some good mortar. The entrances are not very far from here in fact. ...",
@@ -94,10 +94,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	end
 
-	if msgcontains(message, "gratitude") then
+	if MsgContains(message, "gratitude") then
 		npcHandler:setTopic(playerId, 3)
 		npcHandler:say("Oh, so you want a reward, hm? Well... let's see. What did you do for us - helping Mortis with his {repairs} and defended him?", npc, creature)
-	elseif msgcontains(message, "repairs") then
+	elseif MsgContains(message, "repairs") then
 		if npcHandler:getTopic(playerId) == 3 then
 			if player:getInquisitionGold() > 0 then
 				npcHandler:setTopic(playerId, 4)
@@ -113,7 +113,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif npcHandler:getTopic(playerId) == 4 then
 		local v = math.max(0, player:getStorageValue(ROSHAMUUL_GOLD_RECORD))
-		if msgcontains(message, "book") or msgcontains(message, "books") then
+		if MsgContains(message, "book") or MsgContains(message, "books") then
 			npcHandler:setTopic(playerId, 5)
 			npcHandler:say({
 				"Of course, let's see. Hm, your recent endeavours would earn you ".. player:getInquisitionGold() .." of righteous inquisition gold. You have earned ".. v .." of gold in total. ...",
@@ -121,7 +121,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 		end
 	elseif npcHandler:getTopic(playerId) == 5 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say({
 				"Good. Registered as... ".. player:getName() .."... with... about ".. player:getInquisitionGold() .." of righteously earned inquisition gold added. There. Thanks for your help! ..",
 				"Good. Ask me any time in case you want to know your current {record}. If you have time, Remember you can also {trade} your earnings into some of these... probably far more valuable, ahem... cluster... things, yes.",
@@ -132,14 +132,14 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(ROSHAMUUL_KILLED_SILENCERS, 0)
 			npcHandler:setTopic(playerId, nil)
 		end
-	elseif msgcontains(message, "record") then
+	elseif MsgContains(message, "record") then
 		local v = player:getStorageValue(ROSHAMUUL_GOLD_RECORD)
 		if v > 0 then
 			npcHandler:say("You have ".. v .." inquisition gold registered in my book.", npc, creature)
 		else
 			npcHandler:say("I do not see inquisition gold registered in my book from you.", npc, creature)
 		end
-	elseif msgcontains(message, "trade") then
+	elseif MsgContains(message, "trade") then
 		local v = player:getStorageValue(ROSHAMUUL_GOLD_RECORD)
 		if v >= 100 then
 			npcHandler:setTopic(playerId, 6)
@@ -165,9 +165,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("There you are. Now I register ".. player:getStorageValue(ROSHAMUUL_GOLD_RECORD) .." inquisition gold of yours in my book.", npc, creature)
 	end
 
-	if msgcontains(message, "bucket") or msgcontains(message, "supplies") then
+	if MsgContains(message, "bucket") or MsgContains(message, "supplies") then
 		npcHandler:say("Head to brother Maun if you are in need of basic supplies. He will help you - for a small fee.", npc, creature)
-	elseif msgcontains(message, "maun") then
+	elseif MsgContains(message, "maun") then
 		npcHandler:say("Brother Maun is a valuable member of the Inquisition. He will help you out with supplies. Provided you can actually compensate of course.", npc, creature)
 	end
 	return true

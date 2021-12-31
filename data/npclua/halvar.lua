@@ -72,7 +72,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local arenaId = player:getStorageValue(Storage.SvargrondArena.Arena)
-	if msgcontains(message, 'fight') or msgcontains(message, 'pit') or msgcontains(message, 'challenge') or msgcontains(message, 'arena') then
+	if MsgContains(message, 'fight') or MsgContains(message, 'pit') or MsgContains(message, 'challenge') or MsgContains(message, 'arena') then
 		if player:getStorageValue(Storage.SvargrondArena.PitDoor) == 1 then
 			npcHandler:say('You already paid the fee, go and fight!', npc, creature)
 			return true
@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not ARENA[arenaId] then
 				npcHandler:setTopic(playerId, 0)
 				return true

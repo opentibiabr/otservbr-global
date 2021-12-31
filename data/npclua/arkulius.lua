@@ -82,26 +82,26 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "alverus") then
+	if MsgContains(message, "alverus") then
 		npcHandler:say({
 			"It happened while he carried out an experiment concerning the creation of the elemental {shrines}. I still get goose bumps just by thinking of it. ...",
 			"You need to know about the process of creating an elemental shrine to understand it completely, but I don't want to go into detail now. ...",
 			"Anyway, his spell had a different outcome than he had planned. He accidentally created an Ice Overlord, pure living elemental ice, who froze him in a blink of an eye."
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "shrine") then
+	elseif MsgContains(message, "shrine") then
 		npcHandler:say({
 			"The creation of the elemental shrines is a really complex matter. They are actually nodes, locations where the matching elemental sphere is very close. ...",
 			"The shrine itself is like a portal between our world and the elemental {sphere} and enables us to use the elemental energy emerging from it."
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "sphere") and player:getLevel() >= 80 then
+	elseif MsgContains(message, "sphere") and player:getLevel() >= 80 then
 		npcHandler:say({
 			"There are four spheres we know of: ice, fire, earth and energy. ....<mumbles> Hmmm, should I ask or not?....The heck with it! Now that you know about the spheres ...",
 			"I found a way to visit them. It's VERY dangerous and there is a decent chance that you won't come back BUT if you succeed you'll write history!!! Ask me about that {mission} if you're interested."
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "mission") or msgcontains(message, "quest") then
+	elseif MsgContains(message, "mission") or MsgContains(message, "quest") then
 		local value = player:getStorageValue(Storage.ElementalSphere.QuestLine)
 		if value < 1 then
 			if player:getLevel() >= 80 then
@@ -159,7 +159,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.ElementalSphere.QuestLine, 3)
 			end
 		end
-	elseif npcHandler:getTopic(playerId) == 1 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 1 and MsgContains(message, "yes") then
 		player:setStorageValue(Storage.ElementalSphere.QuestLine, 1)
 		npcHandler:say("Good, don't waste time! Come back here when you have the elemental object!", npc, creature)
 		npcHandler:setTopic(playerId, 0)

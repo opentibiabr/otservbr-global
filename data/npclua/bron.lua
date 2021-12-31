@@ -78,12 +78,12 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif(msgcontains(message, "fist")) then
+	elseif(MsgContains(message, "fist")) then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 3 then
 			npcHandler:say("Oh! He really said that? I am so proud of you, |PLAYERNAME|. These are really good news. Everything would be great... if only there wasn't this {person} near my house.", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif(msgcontains(message, "person")) then
+	elseif(MsgContains(message, "person")) then
 		if(npcHandler:getTopic(playerId) == 3) then
 			npcHandler:say({
 				"This... person... makes me want to... say something bad... must... control myself. <sweats> I really don't know what to do anymore. ...",
@@ -91,7 +91,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif(msgcontains(message, "fighting spirit")) then
+	elseif(MsgContains(message, "fighting spirit")) then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 5 then
 			if player:removeItem(5884, 1) then
 				player:setStorageValue(Storage.OutfitQuest.BarbarianAddon, 6)
@@ -99,22 +99,22 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif(msgcontains(message, "cloth")) then
+	elseif(MsgContains(message, "cloth")) then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 7 then
 			npcHandler:say("Have you really managed to fulfil the task and brought me 50 pieces of red cloth and 50 pieces of green cloth?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif(msgcontains(message, "silk")) then
+	elseif(MsgContains(message, "silk")) then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 8 then
 			npcHandler:say("Oh, did you bring 10 rolls of spider silk yarn for me?", npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		end
-	elseif(msgcontains(message, "sweat")) then
+	elseif(MsgContains(message, "sweat")) then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 9 then
 			npcHandler:say("Were you able to get hold of a flask with pure warrior's sweat?", npc, creature)
 			npcHandler:setTopic(playerId, 10)
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say({
 				"Really! That is such an incredibly nice offer! I already have a plan. You have to teach him that sometimes words are stronger than fists. ...",

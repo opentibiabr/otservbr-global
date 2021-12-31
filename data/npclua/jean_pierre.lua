@@ -100,12 +100,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "cook") then
+	if MsgContains(message, "cook") then
 		if player:getStorageValue(Storage.HotCuisineQuest.QuestStart) < 1 then
 			npcHandler:say("Well, I'm not a simple cook. I travel the whole Tibian continent for the most artfully seasoned {recipes} and constantly develop new ones.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "recipe") or msgcontains(message, "menu") then
+	elseif MsgContains(message, "recipe") or MsgContains(message, "menu") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("You're interested in my recipes? Well. They are not for sale, but if you want to become my {apprentice}, I'll share my knowledge with you.", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -213,12 +213,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		elseif player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("You can now cook any dish you want from this list: {Rotworm Stew, Hydra Tongue Salad, Roasted Dragon Wings, Tropical Fried Terrorbird, Banana Chocolate Shake, Veggie Casserole, Filled Jalapeno Peppers, Blessed Steak, Northern Fishburger, Carrot Cake, Coconut Shrimp Bake, Blackjack, Demonic Candy Balls, Sweet Mangonaise Elixir}.", npc, creature)
 		end
-	elseif msgcontains(message, "apprentice") then
+	elseif MsgContains(message, "apprentice") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("Hmm. You look quite promising. Can't hurt to give it a try, I guess. Would you like to become my apprentice, |PLAYERNAME|?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say("Fine, young human. Ask me for a {recipe} anytime and I'll teach you what I know.", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.QuestStart, 1)
@@ -461,91 +461,91 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 	--Dishes first time
-	elseif msgcontains(message, "rotworm stew") then
+	elseif MsgContains(message, "rotworm stew") then
 		if npcHandler:getTopic(playerId) == 4 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to cook Rotworm Stew with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 1)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "hydra tongue salad") then
+	elseif MsgContains(message, "hydra tongue salad") then
 		if npcHandler:getTopic(playerId) == 6 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to prepare a Hydra Tongue Salad with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 2)
 			npcHandler:setTopic(playerId, 7)
 		end
-	elseif msgcontains(message, "roasted dragon wings") then
+	elseif MsgContains(message, "roasted dragon wings") then
 		if npcHandler:getTopic(playerId) == 8 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to prepare Roasted Dragon Wings with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 3)
 			npcHandler:setTopic(playerId, 9)
 		end
-	elseif msgcontains(message, "tropical fried terrorbird") then
+	elseif MsgContains(message, "tropical fried terrorbird") then
 		if npcHandler:getTopic(playerId) == 10 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to prepare a Tropical Fried Terrorbird with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 4)
 			npcHandler:setTopic(playerId, 11)
 		end
-	elseif msgcontains(message, "banana chocolate shake") then
+	elseif MsgContains(message, "banana chocolate shake") then
 		if npcHandler:getTopic(playerId) == 12 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to make a Banana Chocolate Shake with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 5)
 			npcHandler:setTopic(playerId, 13)
 		end
-	elseif msgcontains(message, "veggie casserole") then
+	elseif MsgContains(message, "veggie casserole") then
 		if npcHandler:getTopic(playerId) == 14 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to cook a Veggie Casserole with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 6)
 			npcHandler:setTopic(playerId, 15)
 		end
-	elseif msgcontains(message, "filled jalapeño peppers") then
+	elseif MsgContains(message, "filled jalapeño peppers") then
 		if npcHandler:getTopic(playerId) == 16 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to prepare Filled Jalapeño Peppers with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 7)
 			npcHandler:setTopic(playerId, 17)
 		end
-	elseif msgcontains(message, "blessed steak") then
+	elseif MsgContains(message, "blessed steak") then
 		if npcHandler:getTopic(playerId) == 18 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to prepare a Blessed Steak with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 8)
 			npcHandler:setTopic(playerId, 19)
 		end
-	elseif msgcontains(message, "northern fishburger") then
+	elseif MsgContains(message, "northern fishburger") then
 		if npcHandler:getTopic(playerId) == 20 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to make a Northern Fishburger with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 9)
 			npcHandler:setTopic(playerId, 21)
 		end
-	elseif msgcontains(message, "carrot cake") then
+	elseif MsgContains(message, "carrot cake") then
 		if npcHandler:getTopic(playerId) == 22 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to bake a Carrot Cake with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 10)
 			npcHandler:setTopic(playerId, 23)
 		end
-	elseif msgcontains(message, "coconut shrimp bake") then
+	elseif MsgContains(message, "coconut shrimp bake") then
 		if npcHandler:getTopic(playerId) == 24 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to prepare a Coconut Shrimp Bake with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 11)
 			npcHandler:setTopic(playerId, 25)
 		end
-	elseif msgcontains(message, "blackjack") then
+	elseif MsgContains(message, "blackjack") then
 		if npcHandler:getTopic(playerId) == 26 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to cook a Blackjack with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 12)
 			npcHandler:setTopic(playerId, 27)
 		end
-	elseif msgcontains(message, "demonic candy ball") then
+	elseif MsgContains(message, "demonic candy ball") then
 		if npcHandler:getTopic(playerId) == 28 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 			npcHandler:say("Did you gather all necessary ingredients to make Demonic Candy Balls with me?", npc, creature)
 			player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 13)
 			npcHandler:setTopic(playerId, 29)
 		end
-	--elseif msgcontains(message, "sweet mangonaise elixir") then
+	--elseif MsgContains(message, "sweet mangonaise elixir") then
 	--	if npcHandler:getTopic(playerId) == 30 or player:getStorageValue(Storage.HotCuisineQuest.QuestStart) == 2 then
 		--	npcHandler:say("Did you gather all necessary ingredients to mix Sweet Mangonaise Elixir with me?", npc, creature)
 		--	player:setStorageValue(Storage.HotCuisineQuest.CurrentDish, 14)
 		--	npcHandler:setTopic(playerId, 31)
 		--end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		npcHandler:say("No?, come back when you are ready to cook.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

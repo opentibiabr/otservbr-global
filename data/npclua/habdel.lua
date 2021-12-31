@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'outfit') then
+	if MsgContains(message, 'outfit') then
 		if player:getSex() == PLAYERSEX_FEMALE then
 			npcHandler:say('My scimitar? Well, mylady, I do not want to sound rude, but I don\'t think a scimitar would fit to your beautiful outfit. If you are looking for an accessory, why don\'t you talk to Ishina?', npc, creature)
 			return true
@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('My scimitar? Yes, that is a true masterpiece. Of course I could make one for you, but I have a small request. Would you fulfil a task for me?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'comb') then
+	elseif MsgContains(message, 'comb') then
 		if player:getSex() == PLAYERSEX_FEMALE then
 			npcHandler:say('Comb? This is a weapon shop.', npc, creature)
 			return true
@@ -76,7 +76,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Have you brought a mermaid\'s comb for Ishina?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				'Listen, um... I know that Ishina has been wanting a comb for a long time... not just any comb, but a mermaid\'s comb. She said it prevents split ends... or something. ...',
@@ -101,7 +101,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Yeah! That\'s it! I can\'t wait to give it to her! Oh - but first, I\'ll fulfil my promise: Here is your scimitar! Thanks again!', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
 		npcHandler:say('Ah well. Doesn\'t matter.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

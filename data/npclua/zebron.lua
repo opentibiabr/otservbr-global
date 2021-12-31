@@ -64,7 +64,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'yes') then
+	if MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 0 then
 			npcHandler:say('Hmmm, would you like to play for {money} or for a chance to win your own {dice}?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -86,17 +86,17 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'game') then
+	elseif MsgContains(message, 'game') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('So you care for a civilized game of dice?', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'money') then
+	elseif MsgContains(message, 'money') then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say('I thought so. Okay, I will roll a dice. If it shows 6, you will get five times your bet. How much do you want to bet?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, 'dice') then
+	elseif MsgContains(message, 'dice') then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say('Hehe, good choice. Okay, the price for this game is 100 gold pieces. I will roll a dice. If I roll a 6, you can have my dice. Agreed?', npc, creature)
 			npcHandler:setTopic(playerId, 4)
@@ -124,7 +124,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addMoney(amount * 5)
 		end
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		npcHandler:say('Oh come on, don\'t be a child.', npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	end

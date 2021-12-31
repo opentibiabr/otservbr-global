@@ -58,13 +58,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'package for rashid') then
+	if MsgContains(message, 'package for rashid') then
 		if player:getStorageValue(Storage.TravellingTrader.Mission02) >= 1 and player:getStorageValue(Storage.TravellingTrader.Mission02) < 3 then
 			npcHandler:say('So you\'re the delivery boy? Go ahead, but I warn you, it\'s quite heavy. You can take it from the box over there.', npc, creature)
 			player:setStorageValue(Storage.TravellingTrader.Mission02, 3)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'documents') then
+	elseif MsgContains(message, 'documents') then
 		if player:getStorageValue(Storage.ThievesGuild.Mission04) == 1 then
 			player:setStorageValue(Storage.ThievesGuild.Mission04, 2)
 			npcHandler:say('Funny thing that everyone thinks we have forgers for fake documents here. But no, we don\'t. The best forger is old Ahmet in Ankrahmun.', npc, creature)

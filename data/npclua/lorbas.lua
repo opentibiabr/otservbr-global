@@ -59,13 +59,13 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'cookie') then
+	if MsgContains(message, 'cookie') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31
 				and player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.Lorbas) ~= 1 then
 			npcHandler:say('You want me to eat this cookie?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeItem(130, 1) then
 				npcHandler:say('You have no cookie that I\'d like.', npc, creature)
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('I see.', npc, creature)
 			npcHandler:setTopic(playerId, 0)

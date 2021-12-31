@@ -58,16 +58,16 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "trouble") and npcHandler:getTopic(playerId) ~= 3 and player:getStorageValue(Storage.TheInquisition.MilesGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
+	if MsgContains(message, "trouble") and npcHandler:getTopic(playerId) ~= 3 and player:getStorageValue(Storage.TheInquisition.MilesGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
 		npcHandler:say("I'm fine. There's no trouble at all.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "foresight of the authorities") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "foresight of the authorities") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say("Well, of course. We live in safety and peace.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "also for the gods") and npcHandler:getTopic(playerId) == 2 then
+	elseif MsgContains(message, "also for the gods") and npcHandler:getTopic(playerId) == 2 then
 		npcHandler:say("I think the gods are looking after us and their hands shield us from evil.", npc, creature)
 		npcHandler:setTopic(playerId, 3)
-	elseif msgcontains(message, "trouble will arise in the near future") and npcHandler:getTopic(playerId) == 3 then
+	elseif MsgContains(message, "trouble will arise in the near future") and npcHandler:getTopic(playerId) == 3 then
 		npcHandler:say("I think the gods and the government do their best to keep away harm from the citizens.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 		if player:getStorageValue(Storage.TheInquisition.MilesGuard) < 1 then

@@ -88,7 +88,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local tempo = 20*60*60
 
 	-- missão measurements
-	if msgcontains(message, "measurements") and npcHandler:getTopic(playerId) == 1 then
+	if MsgContains(message, "measurements") and npcHandler:getTopic(playerId) == 1 then
 		if player:getStorageValue(Storage.DangerousDepths.Gnomes.Measurements ) == 2 and player:getStorageValue(Storage.DangerousDepths.Gnomes.TimeTaskMeasurements) > 0 then -- Ainda não se passaram as 20h
 			npcHandler:say({"I don't need your help for now. Come back later."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -116,7 +116,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DangerousDepths.Gnomes.Measurements, 2)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif npcHandler:getTopic(playerId) == 2 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 2 and MsgContains(message, "yes") then
 		npcHandler:say({"How fortunate! There are some trignometres lying around next to that device behind me. Take one and hold it next to high temperature heat sources. ...",
 						"If you gathered enough data, you will actually smell it from the device. ...",
 						"Return to me with the results afterwards. Best of luck, we count on you!"}, npc, creature)
@@ -135,7 +135,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- missão ordnance
-	if msgcontains(message, "ordnance") and npcHandler:getTopic(playerId) == 1 then
+	if MsgContains(message, "ordnance") and npcHandler:getTopic(playerId) == 1 then
 		if player:getStorageValue(Storage.DangerousDepths.Gnomes.Ordnance) == 3 and player:getStorageValue(Storage.DangerousDepths.Gnomes.TimeTaskOrdnance) > 0 then -- Ainda não se passaram as 20h
 			npcHandler:say({"I don't need your help for now. Come back later."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -175,7 +175,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif npcHandler:getTopic(playerId) == 22 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 22 and MsgContains(message, "yes") then
 		npcHandler:say({"Excellent, just follow the path to east until you reach a dead end, there is a hole that leads to a small cave underneath which will bring you right to the old trail. ...",
 						"Help whoever you can and return them to the save cave exit - oh, and while you're at it... some of them will have pack animals. If you can rescue those as well, I'll hand you a bonus. Good luck!"}, npc, creature)
 		if player:getStorageValue(Storage.DangerousDepths.Questline) < 1 then
@@ -188,7 +188,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- missão charting
-	if msgcontains(message, "charting") and npcHandler:getTopic(playerId) == 1 then
+	if MsgContains(message, "charting") and npcHandler:getTopic(playerId) == 1 then
 		if player:getStorageValue(Storage.DangerousDepths.Gnomes.Charting) == 2 and player:getStorageValue(Storage.DangerousDepths.Gnomes.TimeTaskCharting) > 0 then -- Ainda não se passaram as 20h
 			npcHandler:say({"I don't need your help for now. Come back later."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -223,7 +223,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DangerousDepths.Gnomes.TimeTaskCharting, os.time() + tempo)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif npcHandler:getTopic(playerId) == 33 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 33 and MsgContains(message, "yes") then
 		npcHandler:say({"Very good. We prepared a lot of maps as the complete mapping of this system will probably take a lot of research. ...",
 						"Take one from the stack here next to me and map as many structures as possible. However, we need at least three locations to make any sense of this ancient layout at all. ...",
 						"If you manage to map one of each structure around these parts - I assume there must be at least two times as many around here - I will hand you a bonus!"}, npc, creature)
@@ -242,7 +242,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 1)
 	end
 	local plural = ""
-	if msgcontains(message, "suspicious devices") or msgcontains(message, "suspicious device") then
+	if MsgContains(message, "suspicious devices") or MsgContains(message, "suspicious device") then
 		npcHandler:say({"If you bring me any suspicious devices on creatures you slay down here, I'll make it worth your while by telling the others of your generosity. How many do you want to offer? "}, npc, creature)
 		npcHandler:setTopic(playerId, 55)
 	elseif npcHandler:getTopic(playerId) == 55 then
@@ -257,7 +257,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"Don't waste my time."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "gnomes") and npcHandler:getTopic(playerId) == 56 then
+	elseif MsgContains(message, "gnomes") and npcHandler:getTopic(playerId) == 56 then
 		if player:getItemCount(30888) >= quantidade[playerId] then
 			npcHandler:say({"Done."}, npc, creature)
 			if quantidade[playerId] > 1 then
@@ -270,7 +270,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"You don't have enough suspicious devices."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "dwarves") and npcHandler:getTopic(playerId) == 56 then
+	elseif MsgContains(message, "dwarves") and npcHandler:getTopic(playerId) == 56 then
 		if player:getItemCount(30888) >= quantidade[playerId] then
 			npcHandler:say({"Done."}, npc, creature)
 			if quantidade[playerId] > 1 then
@@ -283,7 +283,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"You don't have enough suspicious devices."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "scouts") and npcHandler:getTopic(playerId) == 56 then
+	elseif MsgContains(message, "scouts") and npcHandler:getTopic(playerId) == 56 then
 		if player:getItemCount(30888) >= quantidade[playerId] then
 			npcHandler:say({"Done."}, npc, creature)
 			if quantidade[playerId] > 1 then
@@ -299,14 +299,14 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 		-- Início checagem de pontos de tasks!!
-	if msgcontains(message, "status") then
+	if MsgContains(message, "status") then
 		npcHandler:say({"So you want to know what we all think about your deeds? What leader\'s opinion are you interested in, the {gnomes} (Gnomus), the {dwarves} (Klom Stonecutter) or the {scouts} (Lardoc Bashsmite)?"}, npc, creature)
 		npcHandler:setTopic(playerId, 5)
-	elseif msgcontains(message, "gnomes") and npcHandler:getTopic(playerId) == 5 then
+	elseif MsgContains(message, "gnomes") and npcHandler:getTopic(playerId) == 5 then
 		npcHandler:say({'The gnomes are still in need of your help, member of Bigfoot\'s Brigade. Prove your worth by answering their calls! (' .. math.max(player:getStorageValue(Storage.DangerousDepths.Gnomes.Status), 0) .. '/10)'}, npc, creature)
-	elseif msgcontains(message, "dwarves") and npcHandler:getTopic(playerId) == 5 then
+	elseif MsgContains(message, "dwarves") and npcHandler:getTopic(playerId) == 5 then
 		npcHandler:say({'The dwarves are still in need of your help, member of Bigfoot\'s Brigade. Prove your worth by answering their calls! (' .. math.max(player:getStorageValue(Storage.DangerousDepths.Dwarves.Status), 0) .. '/10)'}, npc, creature)
-	elseif msgcontains(message, "scouts") and npcHandler:getTopic(playerId) == 5 then
+	elseif MsgContains(message, "scouts") and npcHandler:getTopic(playerId) == 5 then
 		npcHandler:say({'The scouts are still in need of your help, member of Bigfoot\'s Brigade. Prove your worth by answering their calls! (' .. math.max(player:getStorageValue(Storage.DangerousDepths.Scouts.Status), 0) .. '/10)'}, npc, creature)
 	end
 	return true

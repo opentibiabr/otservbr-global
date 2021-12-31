@@ -3,7 +3,7 @@ function ParseAlesarSay(npc, creature, message, npcHandler)
 	local playerId = player:getId()
 
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission02)
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) == 3 then
 			if missionProgress < 1 then
 				npcHandler:say({
@@ -23,7 +23,7 @@ function ParseAlesarSay(npc, creature, message, npcHandler)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say({
 				"All right then, human. Have you ever heard of the {'Tears of Daraman'}? ...",
 				"They are precious gemstones made of some unknown blue mineral and possess enormous magical power. ...",
@@ -37,13 +37,13 @@ function ParseAlesarSay(npc, creature, message, npcHandler)
 			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission02, 1)
 			player:setStorageValue(Storage.DjinnWar.EfreetFaction.DoorToMaridTerritory, 1)
 
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Then not.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if player:getItemCount(3233) == 0 or missionProgress ~= 2 then
 				npcHandler:say("As I expected. You haven't got the stone. Shall I explain your mission again?", npc, creature)
 				npcHandler:setTopic(playerId, 1)
@@ -60,7 +60,7 @@ function ParseAlesarSay(npc, creature, message, npcHandler)
 				npcHandler:setTopic(playerId, 0)
 			end
 
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("As I expected. You haven't got the stone. Shall I explain your mission again?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end

@@ -53,7 +53,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 22 then
 			npcHandler:say({
 				"Ze rumour mill iz quite fazt. Ezpecially when zomeone unuzual az you enterz ze zity. Zoon zey will learn zat you have no reazon to be here and our raze will be buzted. ...",

@@ -64,9 +64,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'adorn')
-			or msgcontains(message, 'outfit')
-			or msgcontains(message, 'addon') then
+	if MsgContains(message, 'adorn')
+			or MsgContains(message, 'outfit')
+			or MsgContains(message, 'addon') then
 		local addonProgress = player:getStorageValue(Storage.OutfitQuest.Knight.AddonHelmet)
 		if addonProgress == 5 then
 			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 6)
@@ -91,13 +91,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Sorry, but without the permission of Gregor I cannot help you with this matter.', npc, creature)
 		end
 
-	elseif msgcontains(message, "old backpack") or msgcontains(message, "backpack") then
+	elseif MsgContains(message, "old backpack") or MsgContains(message, "backpack") then
 		if player:getStorageValue(Storage.SamsOldBackpack) < 1 then
 			npcHandler:say("What? Are you telling me you found my old adventurer's backpack that I lost years ago??", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
 
-	elseif msgcontains(message, '2000 steel shields') then
+	elseif MsgContains(message, '2000 steel shields') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) ~= 29
 				or player:getStorageValue(Storage.WhatAFoolish.Contract) == 2 then
 			npcHandler:say('My offers are weapons, armors, helmets, legs, and shields. If you\'d like to see my offers, ask me for a {trade}.', npc, creature)
@@ -107,13 +107,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say('What? You want to buy 2000 steel shields??', npc, creature)
 		npcHandler:setTopic(playerId, 2)
 
-	elseif msgcontains(message, 'contract') then
+	elseif MsgContains(message, 'contract') then
 		if player:getStorageValue(Storage.WhatAFoolish.Contract) == 0 then
 			npcHandler:say('Have you signed the contract?', npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
 
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(3244, 1) then
 				npcHandler:say({
@@ -146,7 +146,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Then no.", npc, creature)
 		elseif isInArray({2, 3, 4}, npcHandler:getTopic(playerId)) then

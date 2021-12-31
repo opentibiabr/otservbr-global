@@ -53,7 +53,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		local player = Player(creature)
 		if player:getStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue) == 4 and player:removeItem(9172, 1) then
 			player:setStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue, 5)

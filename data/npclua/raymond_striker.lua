@@ -58,12 +58,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "eleonore") then
+	if MsgContains(message, "eleonore") then
 		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) < 1 then
 			npcHandler:say("Eleonore ... Yes, I remember her... vaguely. She is a pretty girl ... but still only a girl and now I am in love with a beautiful and passionate woman. A true {mermaid} even.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) < 1 then
 			npcHandler:say("Don't ask about silly missions. All I can think about is this lovely {mermaid}.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -130,7 +130,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven, 21)
 			player:setStorageValue(Storage.TheShatteredIsles.RaysMission4, 5)
 		end
-	elseif msgcontains(message, "mermaid") then
+	elseif MsgContains(message, "mermaid") then
 		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) < 1 then
 			if npcHandler:getTopic(playerId) == 1 then
 				npcHandler:say("The mermaid is the most beautiful creature I have ever met. She is so wonderful. It was some kind of magic as we first met. A look in her eyes and I suddenly knew there would be never again another woman in my life but her.", npc, creature)
@@ -141,7 +141,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("I am deeply ashamed that I lacked the willpower to resist her spell. Thank you for your help in that matter. Now my head is once more free to think about our {mission}.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "pirate outfit") then
+	elseif MsgContains(message, "pirate outfit") then
 		if player:getStorageValue(Storage.TheShatteredIsles.AccessToLagunaIsland) == 1 and player:getStorageValue(Storage.OutfitQuest.PirateBaseOutfit) < 1 and player:getStorageValue(Storage.TheShatteredIsles.RaysMission4) == 5 then
 			npcHandler:say("Ah, right! The pirate outfit! Here you go, now you are truly one of us.", npc, creature)
 			player:addOutfit(151)

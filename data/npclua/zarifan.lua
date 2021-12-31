@@ -62,7 +62,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "magic") and player:getStorageValue(12902) < 1 then
+	if MsgContains(message, "magic") and player:getStorageValue(12902) < 1 then
 	npcHandler:say("...Tell me...the first... magic word.", npc, creature)
 	player:setStorageValue(12902, 1)
 	else npcHandler:say("...continue with your mission...", npc, creature)

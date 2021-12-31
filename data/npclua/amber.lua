@@ -69,9 +69,9 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local addonProgress = player:getStorageValue(Storage.OutfitQuest.Citizen.AddonBackpack)
-	if msgcontains(message, "addon") or msgcontains(message, "outfit")
-	or (addonProgress == 1 and msgcontains(message, "leather"))
-	or ((addonProgress == 1 or addonProgress == 2) and msgcontains(message, "backpack")) then
+	if MsgContains(message, "addon") or MsgContains(message, "outfit")
+	or (addonProgress == 1 and MsgContains(message, "leather"))
+	or ((addonProgress == 1 or addonProgress == 2) and MsgContains(message, "backpack")) then
 		if addonProgress < 1 then
 			npcHandler:say("Sorry, the backpack I wear is not for sale. It's handmade from rare minotaur leather.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -102,14 +102,14 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "backpack") or msgcontains(message, "minotaur") or msgcontains(message, "leather") then
+		if MsgContains(message, "backpack") or MsgContains(message, "minotaur") or MsgContains(message, "leather") then
 			npcHandler:say("Well, if you really like this backpack, I could make one for you, \z
 						   but minotaur leather is hard to come by these days. Are you willing to put some work into this?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.AddonBackpack, 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.MissionBackpack, 1)
@@ -122,7 +122,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if player:getItemCount(5878) < 100 then
 				npcHandler:say("Sorry, but that's not enough leather yet to make one of these backpacks. \z
 							   Would you rather like to buy a normal backpack for 10 gold?", npc, creature)

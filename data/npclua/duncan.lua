@@ -65,7 +65,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			"You're talking about my sabre? Well, even though you earned our trust, \
 			you'd have to fulfill a task first before you are granted to wear such a sabre.",
 		creature)
-	elseif msgcontains(message, 'mission') then
+	elseif MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 6 then
 			npcHandler:say(
 				'I need a new quality atlas for our captains. Only one of the best will do it. \
@@ -91,29 +91,29 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Did you rescue one of those poor soon-to-be baby tortoises from Nargor?', npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif msgcontains(message, 'task') then
+	elseif MsgContains(message, 'task') then
 		if player:getStorageValue(storage) < 1 then
 			npcHandler:say(
 				"Are you up to the task which I'm going to give you and willing to prove you're worthy of wearing such a sabre?",
 				creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'eye patches') then
+	elseif MsgContains(message, 'eye patches') then
 		if player:getStorageValue(storage) == 1 then
 			npcHandler:say('Have you gathered 100 eye patches?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, 'peg legs') then
+	elseif MsgContains(message, 'peg legs') then
 		if player:getStorageValue(storage) == 2 then
 			npcHandler:say('Have you gathered 100 peg legs?', npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, 'hooks') then
+	elseif MsgContains(message, 'hooks') then
 		if player:getStorageValue(storage) == 3 then
 			npcHandler:say('Have you gathered 100 hooks?', npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say(
 				{
@@ -198,7 +198,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				end
 			end
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) >= 1 then
 			npcHandler:say('Then no.', npc, creature)
 			npcHandler:setTopic(playerId, 0)

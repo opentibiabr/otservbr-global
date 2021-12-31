@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 5) then
 			npcHandler:say({
 				"One of my sisters, in the disguise of a nightingale, told me that Alkestios would send you. There is a problem which is not concerning me but a wolf mother on the small island Cormaya. ...",
@@ -75,14 +75,14 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say({
 				"Nature's blessings! You may find the desperate wolf mother in the south of Cormaya. You will know the place because there is a big stone that looks like a grumpy face. ...",
 				"At night it will weep bloody tears and only at night you will meet the ghost there. Take this talisman so you may be able to talk with animals and even plants and stones. Just don't expect that all of them will answer you."
 			}, npc, creature)
 			player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 6)
 			npcHandler:setTopic(playerId, 0)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Then not.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 17 then
 			npcHandler:say({
 				"With all the coming and going of strangers here, it would be quite tedious to explain everything again and again. So we have written a manifesto. ...",
@@ -247,7 +247,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(8818, 1) then
 				player:setStorageValue(Storage.InServiceofYalahar.BadSide, 1)
@@ -263,7 +263,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("I knew that you were smart enough to make the right decision! Your next mission will be a special one! ", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.InServiceofYalahar.GoodSide, 1)
 			player:setStorageValue(Storage.InServiceofYalahar.Questline, 22)

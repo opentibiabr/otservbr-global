@@ -96,25 +96,25 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif npcHandler:getTopic(playerId) == 3 and player:removeItem(2906, 1) then
 		npcHandler:say("Take some time to talk to me!", npc, creature)
 		npcHandler:setTopic(playerId, nil)
-	elseif npcHandler:getTopic(playerId) == 4 and (msgcontains(message, "spouse") or msgcontains(message, "girlfriend")) then
+	elseif npcHandler:getTopic(playerId) == 4 and (MsgContains(message, "spouse") or MsgContains(message, "girlfriend")) then
 		npcHandler:say("Well ... I have met him for a little while .. but this was nothing serious.", npc, creature)
 		npcHandler:setTopic(playerId, 5)
-	elseif npcHandler:getTopic(playerId) == 5 and msgcontains(message, "fruit") then
+	elseif npcHandler:getTopic(playerId) == 5 and MsgContains(message, "fruit") then
 		npcHandler:say("I remember that grapes were his favourites. He was almost addicted to them.", npc, creature)
 		npcHandler:setTopic(playerId, nil)
-	elseif msgcontains(message, "how") and msgcontains(message, "are") and msgcontains(message, "you") then
+	elseif MsgContains(message, "how") and MsgContains(message, "are") and MsgContains(message, "you") then
 		npcHandler:say("Thank you very much. How kind of you to care about me. I am fine, thank you.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "sell") then
+	elseif MsgContains(message, "sell") then
 		npcHandler:say("Sorry, I have nothing to sell.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "job") or msgcontains(message, "chat") then
+	elseif MsgContains(message, "job") or MsgContains(message, "chat") then
 		npcHandler:say("I do some work now and then. Nothing unusual, though. So I have plenty time to chat. If you are interested in any topic just ask me.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "name") then
+	elseif MsgContains(message, "name") then
 		if Sex == PLAYERSEX_FEMALE then
 			npcHandler:say("I am Aruda.", npc, creature)
 		else
@@ -122,7 +122,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "aruda") then
+	elseif MsgContains(message, "aruda") then
 		if Sex == PLAYERSEX_FEMALE then
 			npcHandler:say("Yes, that's me!", npc, creature)
 		else
@@ -130,30 +130,30 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "time") then
+	elseif MsgContains(message, "time") then
 		npcHandler:say("Please don't be so rude to look for the time if you are talking to me.", npc, creature)
 		npcHandler:setTopic(playerId, 3)
-	elseif msgcontains(message, "help") then
+	elseif MsgContains(message, "help") then
 		npcHandler:say("I am deeply sorry, I can't help you.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "monster") or msgcontains(message, "dungeon") then
+	elseif MsgContains(message, "monster") or MsgContains(message, "dungeon") then
 		npcHandler:say("UH! What a terrifying topic. Please let us speak about something more pleasant, I am a weak and small woman after all.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "sewer") then
+	elseif MsgContains(message, "sewer") then
 		npcHandler:say("What gives you the impression, I am the kind of women, you find in sewers?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "god") then
+	elseif MsgContains(message, "god") then
 		npcHandler:say("You should ask about that in one of the temples.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "king") then
+	elseif MsgContains(message, "king") then
 		npcHandler:say("The king, that lives in this fascinating castle? I think he does look kind of cute in his luxurious robes, doesn't he?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 10
-	elseif msgcontains(message, "sam") then
+	elseif MsgContains(message, "sam") then
 		if Sex == PLAYERSEX_FEMALE then
 			npcHandler:say("He is soooo strong! What muscles! What a body! Did you ask him for a date?", npc, creature)
 		else
@@ -161,89 +161,89 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "benjamin") then
+	elseif MsgContains(message, "benjamin") then
 		npcHandler:say("He is a little simple minded but always nice and well dressed.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "gorn") then
+	elseif MsgContains(message, "gorn") then
 		npcHandler:say("He should really sell some stylish gowns or something like that. We Tibians never get some clothing of the latest fashion. It's a shame.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "quentin") then
+	elseif MsgContains(message, "quentin") then
 		npcHandler:say("I don't understand this lonely monks. I love company too much to become one. Hehehe!", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "bozo") then
+	elseif MsgContains(message, "bozo") then
 		npcHandler:say("Oh, isn't he funny? I could listen to him the whole day.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "oswald") then
+	elseif MsgContains(message, "oswald") then
 		npcHandler:say("As far as I know, he is working in the castle.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "rumour") or msgcontains(message, "rumor") or msgcontains(message, "gossip") then
+	elseif MsgContains(message, "rumour") or MsgContains(message, "rumor") or MsgContains(message, "gossip") then
 		npcHandler:say("I am a little shy and so don't hear many rumors.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "kiss") and Sex == PLAYERSEX_MALE then
+	elseif MsgContains(message, "kiss") and Sex == PLAYERSEX_MALE then
 		npcHandler:say("Oh, you little devil, stop talking like that! <blush>", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 20
-	elseif msgcontains(message, "weapon") then
+	elseif MsgContains(message, "weapon") then
 		npcHandler:say("I know only little about weapons. Can you tell me something about them, please?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "magic") then
+	elseif MsgContains(message, "magic") then
 		npcHandler:say("I believe that love is stronger than magic, don't you agree?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "thief") or msgcontains(message, "theft") then
+	elseif MsgContains(message, "thief") or MsgContains(message, "theft") then
 		npcHandler:say("Oh, sorry, I have to hurry, bye!", npc, creature)
 		npcHandler:setTopic(playerId, nil)
 		price[playerId] = nil
 		npcHandler:removeInteraction(npc, creature)
 		npcHandler:resetNpc(creature)
-	elseif msgcontains(message, "tibia") then
+	elseif MsgContains(message, "tibia") then
 		npcHandler:say("I would like to visit the beach more often, but I guess it's too dangerous.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "castle") then
+	elseif MsgContains(message, "castle") then
 		npcHandler:say("I love this castle! It's so beautiful.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "muriel") then
+	elseif MsgContains(message, "muriel") then
 		npcHandler:say("Powerful sorcerers frighten me a little.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "elane") then
+	elseif MsgContains(message, "elane") then
 		npcHandler:say("I personally think it's inappropriate for a woman to become a warrior, what do you think about that?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "marvik") then
+	elseif MsgContains(message, "marvik") then
 		npcHandler:say("Druids seldom visit a town, what do you know about druids?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "gregor") then
+	elseif MsgContains(message, "gregor") then
 		npcHandler:say("I like brave fighters like him.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "noodles") then
+	elseif MsgContains(message, "noodles") then
 		npcHandler:say("Oh, he is sooooo cute!", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "dog") or msgcontains(message, "poodle") then
+	elseif MsgContains(message, "dog") or MsgContains(message, "poodle") then
 		npcHandler:say("I like dogs, the little ones at least. Do you like dogs, too?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 5
-	elseif msgcontains(message, "excalibug") then
+	elseif MsgContains(message, "excalibug") then
 		npcHandler:say("Oh, I am just a girl and know nothing about magic swords and such things.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 		price[playerId] = 10
-	elseif msgcontains(message, "partos") then
+	elseif MsgContains(message, "partos") then
 		npcHandler:say("I ... don't know someone named like that.", npc, creature)
 		npcHandler:setTopic(playerId, 4)
 		price[playerId] = nil
-	elseif msgcontains(message, "yenny") then
+	elseif MsgContains(message, "yenny") then
 		npcHandler:say("Yenny? I know no Yenny, nor have I ever used that name! You have mistook me with someone else.", npc, creature)
 		npcHandler:setTopic(playerId, nil)
 		price[playerId] = nil

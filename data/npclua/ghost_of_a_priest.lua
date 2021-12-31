@@ -53,7 +53,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 10 then
 			if player:getPosition().z == 12 and player:getStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest01) < 1 and npcHandler:getTopic(playerId) ~= 1 then
 				npcHandler:say({
@@ -82,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 4)
 			end
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			if player:getMoney() + player:getBankBalance() >= 5000 then
 				player:setStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest01, 1)
@@ -108,7 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, "no") and npcHandler:getTopic(playerId) then
+	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) then
 		npcHandler:say("No deal then.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

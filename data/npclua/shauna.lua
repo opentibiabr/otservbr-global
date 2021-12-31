@@ -59,12 +59,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 	local playerId = creature:getId()
 	-- Mission 1 - The Supply Thief
-	if msgcontains(message, "job") then
+	if MsgContains(message, "job") then
 		if Player(creature):getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) == 2 then
 			npcHandler:say("What do you think? I am the sheriff of Carlin.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "water pipe") then
+	elseif MsgContains(message, "water pipe") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"Oh, there's a waterpipe in one of my cells? ...",
@@ -72,7 +72,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "prisoner") then
+	elseif MsgContains(message, "prisoner") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"My last prisoner? Hmm. ...", "I think he was some guy from Darama. Can't remember his name. ...",

@@ -65,7 +65,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'pies') then
+	if MsgContains(message, 'pies') then
 		if player:getStorageValue(Storage.WhatAFoolish.PieBuying) == -1 then
 			npcHandler:say('Oh you\'ve heard about my excellent pies, didn\'t you? I am flattered. Unfortunately I\'m completely out of flour. I need 2 portions of flour for one pie. Just tell me when you have enough flour for your pies.', npc, creature)
 			return true
@@ -73,10 +73,10 @@ local function creatureSayCallback(npc, creature, type, message)
 
 		npcHandler:say('For 12 pies this is 240 gold. Do you want to buy them?', npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, 'flour') then
+	elseif MsgContains(message, 'flour') then
 		npcHandler:say('Do you bring me the flour needed for your pies?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeItem(3603, 24) then
 				npcHandler:say('I think you are confusing the dust in your pockets with flour. You certainly do not have enough flour for 12 pies.', npc, creature)
@@ -103,7 +103,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('Without flour I can\'t do anything, sorry.', npc, creature)
 		elseif npcHandler:getTopic(playerId) == 2 then

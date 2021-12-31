@@ -58,10 +58,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "outfit")) or (msgcontains(message, "addon")) then
+	if(MsgContains(message, "outfit")) or (MsgContains(message, "addon")) then
 		selfSay("In exchange for a truly generous donation, I will offer a special outfit. Do you want to make a donation?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		-- vamos tratar todas condições para YES aqui
 		if npcHandler:getTopic(playerId) == 1 then
 			-- para o primeiro Yes, o npc deve explicar como obter o outfit
@@ -156,13 +156,13 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 	--inicio das opções armor/helmet/boots
 	-- caso o player não diga YES, dirá alguma das seguintes palavras:
-	elseif(msgcontains(message, "armor")) and npcHandler:getTopic(playerId) == 2 then
+	elseif(MsgContains(message, "armor")) and npcHandler:getTopic(playerId) == 2 then
 		selfSay("So you wold like to donate 500.000.000 gold pieces which in return will entitle you to wear a unique armor?", npc, creature)
 		npcHandler:setTopic(playerId, 3) -- alterando o tópico para que no próximo YES ele faça o outfit
-	elseif(msgcontains(message, "helmet")) and npcHandler:getTopic(playerId) == 2 then
+	elseif(MsgContains(message, "helmet")) and npcHandler:getTopic(playerId) == 2 then
 		selfSay("So you would like to donate 250.000.000 gold pieces which in return will entitle you to wear unique helmet?", npc, creature)
 		npcHandler:setTopic(playerId, 4) -- alterando o tópico para que no próximo YES ele faça o helmet
-	elseif(msgcontains(message, "boots")) and npcHandler:getTopic(playerId) == 2 then
+	elseif(MsgContains(message, "boots")) and npcHandler:getTopic(playerId) == 2 then
 		selfSay("So you would like to donate 250.000.000 gold pieces which in return will entitle you to wear a unique boots?", npc, creature)
 		npcHandler:setTopic(playerId, 5) -- alterando o tópico para que no próximo YES ele faça a boots
 	end

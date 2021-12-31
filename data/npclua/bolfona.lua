@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "chocolate cake") then
+	if MsgContains(message, "chocolate cake") then
 		if player:getStorageValue(Storage.HiddenCityOfBeregar.SweetAsChocolateCake) == 1 and player:getItemCount(8019) >= 1 then
 			npcHandler:say("Is that for me?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -65,7 +65,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("So did you tell her that the cake came from me?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(8019, 1) then
 				npcHandler:say("Err, thanks. I doubt it's from you. Who sent it?", npc, creature)
@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, "Frafnar") then
+		if MsgContains(message, "Frafnar") then
 			npcHandler:say("Oh, Frafnar. That's so nice of him. I gotta invite him for a beer.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		else

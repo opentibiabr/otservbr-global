@@ -315,7 +315,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "magic") then
+	if MsgContains(message, "magic") then
 		npcHandler:say(
 			{
 			"Spells are very useful in combat - not only for mages, though of course we particularly \z
@@ -331,7 +331,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			"There, you can go to a spell teacher in a city to permanently learn a spell."
 			},
 		creature)
-	elseif msgcontains(message, "mainland") then
+	elseif MsgContains(message, "mainland") then
 		npcHandler:say(
 			{
 			"The Mainland offers many more adventures, dangers and quests than this small isle, \z
@@ -343,7 +343,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			valuable knowledge of a spell to a novice if they can pay the price."
 			},
 		creature)
-	elseif msgcontains(message, "tibian") then
+	elseif MsgContains(message, "tibian") then
 		npcHandler:say(
 			{
 			"Ah, the beauty of our world! It is vast and extraordinarily diverse. Strange islands, \z
@@ -352,7 +352,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			"Once you have reached level 8, you are ready to choose a vocation and go to the Tibian Mainland."
 			},
 		creature)
-	elseif msgcontains(message, "vocation") then
+	elseif MsgContains(message, "vocation") then
 		npcHandler:say(
 			{
 			"Your choice of vocation will determine your life in Tibia, and the skills and fighting techniques you may use. ...",
@@ -362,7 +362,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			whereas Tybald in the next room specialises in knight and paladin spells."
 			},
 		creature)
-	elseif msgcontains(message, "oressa") then
+	elseif MsgContains(message, "oressa") then
 		npcHandler:say(
 			{
 			"A very intelligent girl. Prefers to listen to wild animals' noises instead of humans', \z

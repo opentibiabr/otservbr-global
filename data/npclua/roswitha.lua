@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if(msgcontains(message, "Harsin")) then
+	if(MsgContains(message, "Harsin")) then
 		if(player:getStorageValue(Storage.DarkTrails.Mission13) == 1) then
 			npcHandler:say("I'm sorry, but Harsin no longer lives here. He ordered a local named Quandon to transport all his stuff somewhere. I don't know where he moved, but Quandon should be able to help you with this information.", npc, creature)
 			player:setStorageValue(Storage.DarkTrails.Mission14, 1)

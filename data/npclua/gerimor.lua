@@ -469,7 +469,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "missions") then
+	if MsgContains(message, "missions") then
 		-- Final boss check
 		if player:getStorageValue(Storage.CultsOfTibia.FinalBoss.Mission) > 2 then
 			npcHandler:say("You have already fulfilled your job to my full satisfaction. \z
@@ -547,7 +547,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 	-- Accept mission
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
 		if player:getStorageValue(storage[playerId]) < 1 then
 			npcHandler:say("Very nice! Come back if you have found what's going on in this cult.", npc, creature)
 			player:setStorageValue(storage[playerId], 1)
@@ -560,7 +560,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 2)
 		end
 	-- Recuse mission
-	elseif msgcontains(message, "no") and npcHandler:getTopic(playerId) == 3 then
+	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) == 3 then
 		npcHandler:say("What a pitty! You can come back, when ever you want, if you have changed your opinion.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

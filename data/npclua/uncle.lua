@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'yes') then
+	if MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.SecretService.Quest, 1)
 			npcHandler:say('Then welcome to the family.', npc, creature)
@@ -114,10 +114,10 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		npcHandler:say('As you wish.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'join') then
+	elseif MsgContains(message, 'join') then
 		if player:getStorageValue(Storage.SecretService.Quest) < 1 then
 			npcHandler:say({
 				'Well, well, well! As you might know, we are entrusted by the Venorean tradesmen to ensure the safety of their ventures ...',
@@ -127,7 +127,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'mission') then
+	elseif MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.SecretService.Quest) == 1 and player:getStorageValue(Storage.SecretService.TBIMission01) < 1 and player:getStorageValue(Storage.SecretService.CGBMission01) < 1 then
 			player:setStorageValue(Storage.SecretService.Quest, 2)
 			player:setStorageValue(Storage.SecretService.AVINMission01, 1)

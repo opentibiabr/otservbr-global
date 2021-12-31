@@ -114,12 +114,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "uniforms") then
+	if MsgContains(message, "uniforms") then
 		if player:getStorageValue(Storage.Postman.Mission06) == 1 then
 			npcHandler:say("A new uniform for the post officers? I am sorry but my dog ate the last dress pattern we used. You need to supply us with a new dress pattern.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "dress pattern") then
+	elseif MsgContains(message, "dress pattern") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("It was ... wonderous beyond wildest imaginations! I have no clue where Kevin Postner got it from. Better ask him.", npc, creature)
 			player:setStorageValue(Storage.Postman.Mission06, 2)
@@ -128,7 +128,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.Postman.Mission06, 12)
 		end
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'outfit') then
+	elseif MsgContains(message, 'outfit') then
 		if not player:isPremium() then
 			npcHandler:say('Sorry, but my time is currently reserved for premium matters.', npc, creature)
 			return true
@@ -163,7 +163,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say(targetMessage.messages.deliever, npc, creature)
 		npcHandler:setTopic(playerId, 4)
 		message[playerId] = targetMessage
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				'Good! Listen, I need the following material - first, 20 pieces of brown cloth, like the worn and ragged ghoul clothing. ...',
@@ -199,7 +199,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Here you go. Maybe you enjoy if after all.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say('Argh! I guess this awesome idea has to remain unimplemented. What a pity.', npc, creature)
 			npcHandler:setTopic(playerId, 0)

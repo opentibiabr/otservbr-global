@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'potion') then
+	if MsgContains(message, 'potion') then
 		if player:getStorageValue(Storage.OutfitQuest.AssassinBaseOutfit) < 1 then
 			npcHandler:say('It\'s so hard to know the exact time when to stop drinking. <hicks> C-could you help me to brew such a potion?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -105,7 +105,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say(config[message].text[2], npc, creature)
 		end
-	elseif msgcontains(message, 'secret') then
+	elseif MsgContains(message, 'secret') then
 		if player:getStorageValue(Storage.OutfitQuest.AssassinBaseOutfit) == 8 then
 			npcHandler:say('Right. <hicks> Since you helped me to b-brew that potion and thus ensured the high quality of my work <hicks>, I\'ll give you my old assassin costume. It lacks the head part, but it\'s almost like new. Don\'t pretend to be me though, \'kay? <hicks>', npc, creature)
 			player:addOutfit(156)
@@ -113,7 +113,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_GREEN)
 			player:setStorageValue(Storage.OutfitQuest.AssassinBaseOutfit, 9)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				'You\'re a true buddy. I promise I will t-try to avoid killing you even if someone asks me to. <hicks> ...',
@@ -143,7 +143,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say(targetMessage.text[3], npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) ~= 3 then
 			npcHandler:say('Then not <hicks>.', npc, creature)
 		elseif npcHandler:getTopic(playerId) == 3 then

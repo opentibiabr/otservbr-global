@@ -58,37 +58,37 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "addon") or msgcontains(message, "outfit") then
+	if MsgContains(message, "addon") or MsgContains(message, "outfit") then
 		if player:getStorageValue(Storage.OutfitQuest.HunterHatAddon) < 1 then
 			npcHandler:say("Oh, my winged tiara? Those are traditionally awarded after having completed a difficult {task} for our guild, only to female aspirants though. Male warriors will receive a hooded cloak.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "task") then
+	elseif MsgContains(message, "task") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("So you are saying that you would like to prove that you deserve to wear such a hooded cloak?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "crossbow") then
+	elseif MsgContains(message, "crossbow") then
 		if player:getStorageValue(Storage.OutfitQuest.HunterHatAddon) == 1 then
 			npcHandler:say("I'm so excited! Have you really found my crossbow?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "leather") then
+	elseif MsgContains(message, "leather") then
 		if player:getStorageValue(Storage.OutfitQuest.HunterHatAddon) == 2 then
 			npcHandler:say("Did you bring me 100 pieces of lizard leather and 100 pieces of red dragon leather?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "chicken wing") then
+	elseif MsgContains(message, "chicken wing") then
 		if player:getStorageValue(Storage.OutfitQuest.HunterHatAddon) == 3 then
 			npcHandler:say("Were you able to get hold of 5 enchanted chicken wings?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "steel") then
+	elseif MsgContains(message, "steel") then
 		if player:getStorageValue(Storage.OutfitQuest.HunterHatAddon) == 4 then
 			npcHandler:say("Ah, have you brought one piece of royal steel, draconian steel and hell steel each?", npc, creature)
 			npcHandler:setTopic(playerId, 7)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"Alright, I will give you a chance. Pay close attention to what I'm going to tell you now. ...",
@@ -146,7 +146,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say("You don't have it...", npc, creature)
 			end
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) > 1 then
 			npcHandler:say("Then no.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

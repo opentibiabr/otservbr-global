@@ -51,7 +51,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if (msgcontains(message, "fur")) then
+	if (MsgContains(message, "fur")) then
 		if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 8) then
 			npcHandler:say({
 				"A wolf whelp fur? Well, some months ago a hunter came here - a rather scruffy, smelly guy. I would have thrown him out instantly, but he had to offer some fine pelts. One of them was the fur of a very young wolf. ...",
@@ -63,7 +63,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You are not on that mission.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif(msgcontains(message, "addon")) then
+	elseif(MsgContains(message, "addon")) then
 		if(getPlayerStorageValue(creature, Storage.Irmana1) < 1) then
 			npcHandler:say("Currently we are offering accessories for the nobleman - and, of course, noblewoman - outfit. Would you like to hear more about our offer?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -73,7 +73,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say("You have already bought the two addons.", npc, creature)
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Especially for you, mylady, we are offering a pretty {hat} and a beautiful {dress} like the ones I wear. Which one are you interested in?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -137,25 +137,25 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say('Are you trying to mess with me?!', npc, creature)
 			end
 		end
-	elseif(msgcontains(message, "hat") or msgcontains(message, "accessory")) and (npcHandler:getTopic(playerId) == 2 and getPlayerStorageValue(creature, Storage.Irmana1) < 1) then
+	elseif(MsgContains(message, "hat") or MsgContains(message, "accessory")) and (npcHandler:getTopic(playerId) == 2 and getPlayerStorageValue(creature, Storage.Irmana1) < 1) then
 		selfSay("This accessory requires a small fee of 150000 gold pieces. Of course, we do not want to put you at any risk to be attacked while carrying this huge amount of money. ...", npc, creature)
 		selfSay("This is why we have established our brand-new instalment sale. You can choose to either pay the price at once, or if you want to be safe, by instalments of 10000 gold pieces. ...", npc, creature)
 		selfSay("I also have to inform you that once you started paying for one of the accessories, you have to finish the payment first before you can start paying for the other one, of course. ...", npc, creature)
 		npcHandler:say("Are you interested in purchasing this accessory?", npc, creature)
 		npcHandler:setTopic(playerId, 3)
-	elseif(msgcontains(message, "dress") or msgcontains(message, "coat")) and (npcHandler:getTopic(playerId) == 2 and getPlayerStorageValue(creature, Storage.Irmana2) < 1) then
+	elseif(MsgContains(message, "dress") or MsgContains(message, "coat")) and (npcHandler:getTopic(playerId) == 2 and getPlayerStorageValue(creature, Storage.Irmana2) < 1) then
 		selfSay("This accessory requires a small fee of 150000 gold pieces. Of course, we do not want to put you at any risk to be attacked while carrying this huge amount of money. ...", npc, creature)
 		selfSay("This is why we have established our brand-new instalment sale. You can choose to either pay the price at once, or if you want to be safe, by instalments of 10000 gold pieces. ...", npc, creature)
 		selfSay("I also have to inform you that once you started paying for one of the accessories, you have to finish the payment first before you can start paying for the other one, of course. ...", npc, creature)
 		npcHandler:say("Are you interested in purchasing this accessory?", npc, creature)
 		npcHandler:setTopic(playerId, 4)
-	elseif(msgcontains(message, "red robe")) then
+	elseif(MsgContains(message, "red robe")) then
 		npcHandler:say("Have you found a {Red Robe} for me?", npc, creature)
 		npcHandler:setTopic(playerId, 5)
-	elseif(msgcontains(message, "mystic turban")) then
+	elseif(MsgContains(message, "mystic turban")) then
 		npcHandler:say("Have you found a {Mystic Turban} for me?", npc, creature)
 		npcHandler:setTopic(playerId, 6)
-	elseif(msgcontains(message, "green tunic")) then
+	elseif(MsgContains(message, "green tunic")) then
 		npcHandler:say("Have you found {150 Green Tunic} for me?", npc, creature)
 		npcHandler:setTopic(playerId, 7)
 	end

@@ -191,7 +191,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		end
-	elseif msgcontains(message, "outfit") then
+	elseif MsgContains(message, "outfit") then
 		if storeTalkCid[playerId] == 1 then
 			npcHandler:say({
 				"Well, that's how trading with NPCs like me works. I think you are ready now to cross the bridge to Rookgaard, just follow the path to the northwest. Good luck, |PLAYERNAME|! ...",
@@ -202,7 +202,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.CarlosNpcGreetStorage, 8)
 			addEvent(releasePlayer, 1000, npc, creature)
 		end
-	elseif msgcontains(message, "ready") then
+	elseif MsgContains(message, "ready") then
 		if storeTalkCid[playerId] == 7 then
 			npcHandler:say({
 				"Well, that's how trading with NPCs like me works. I think you are ready now to cross the bridge to Rookgaard, just follow the path to the northwest. Good luck, |PLAYERNAME|! ...",

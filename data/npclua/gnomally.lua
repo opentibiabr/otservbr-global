@@ -111,17 +111,17 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, 'equipment') then
+	if MsgContains(message, 'equipment') then
 		npcHandler:say({
 			'You can buy different equipment for minor or for major tokens. So, which is the equipment you are interested in, the one for {minor} or {major} tokens? ...',
 			'By the way, if you want to have a look on the prismatic and gill items first, just head over to the depot and check the market.'
 		}, npc, creature)
-	elseif msgcontains(message, 'major') then
+	elseif MsgContains(message, 'major') then
 		npcHandler:say({
 			'For ten major tokens, I can offer you a {gill gugel}, a {gill coat}, {gill legs}, a {spellbook} of vigilance, a {prismatic helmet}, a {prismatic armor}, {prismatic legs}, {prismatic boots} or a {prismatic shield} ...',
 			'For twenty major tokens, I can offer you a {basic soil guardian outfit}, a {basic crystal warlord outfit}, an {iron loadstone} or a {glow wine}.'
 		}, npc, creature)
-	elseif msgcontains(message, 'minor') then
+	elseif MsgContains(message, 'minor') then
 		npcHandler:say({
 			'For two minor tokens, you can buy one gnomish {supply} package! For eight tokens, you can buy a {muck} remover! For ten tokens, you can buy a {mission} crystal. For fifteen tokens, you can buy a crystal {lamp} or a mushroom {backpack}. ...',
 			'For seventy tokens, I can offer you a voucher for an {addition to the soil guardian outfit}, or a voucher for an {addition to the crystal warlord armor outfit}.'
@@ -131,7 +131,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say(string.format('Do you want to trade %s %s for %d %s tokens?', (itemType:getArticle() ~= "" and itemType:getArticle() or ""), itemType:getName(), config[message].token.count, config[message].token.type), npc, creature)
 		npcHandler:setTopic(playerId, 1)
 		t[playerId] = message
-	elseif msgcontains(message, 'relations') then
+	elseif MsgContains(message, 'relations') then
 		local player = Player(creature)
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 25 then
 			npcHandler:say('Our relations improve with every mission you undertake on our behalf. Another way to improve your relations with us gnomes is to trade in minor crystal tokens. ...', npc, creature)
@@ -147,10 +147,10 @@ local function creatureSayCallback(npc, creature, type, message)
 			renown[playerId] = amount
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, 'items') then
+	elseif MsgContains(message, 'items') then
 		npcHandler:say('Do you need to buy any mission items?', npc, creature)
 		npcHandler:setTopic(playerId, 5)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			local player, targetTable = Player(creature), config[t[playerId]]
 			if player:getItemCount(targetTable.token.id) < targetTable.token.count then
@@ -194,7 +194,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Let us see if I have what you need.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') and isInArray({1, 3, 4, 5}, npcHandler:getTopic(playerId)) then
+	elseif MsgContains(message, 'no') and isInArray({1, 3, 4, 5}, npcHandler:getTopic(playerId)) then
 		npcHandler:say('As you like.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

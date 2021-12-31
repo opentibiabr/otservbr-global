@@ -82,12 +82,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "letter") then
+	if MsgContains(message, "letter") then
 		if player:getStorageValue(Storage.SecretService.AVINMission01) == 2 then
 			npcHandler:say("You have a letter for me?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(402, 1) then
 				player:setStorageValue(Storage.SecretService.AVINMission01, 3)

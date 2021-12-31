@@ -100,17 +100,17 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "control unit") then
+	if MsgContains(message, "control unit") then
 		npcHandler:say({
 			'That\'s an interesting one, nothing like I have ever seen myself. What you describe is a device of which I heard that it grants literally \'complete\' control over some sort of... artificial thing? ...',
 			'Well, if you ever happen to come about a stroke of luck and find such a thing - use it on an appropriate mount, it will probably be mechanical, driven by... something.'
 		}, npc, creature)
-	elseif msgcontains(message, "golden fir cone") then
+	elseif MsgContains(message, "golden fir cone") then
 		npcHandler:say({
 			'Did you know that you can also create those by yourself? Trade a gold ingot with the sweaty cyclops in Ab\'Dendriel for a cup of molten gold. If you use that on a fir tree, you have a small chance to get a golden fir cone. ...',
 			'Those are needed to impress the white deers that roam around Ab\'Dendriel sometimes, but I\'d wait until you are able to enrage one to make sure it has the necessary strength to carry you.'
 		}, npc, creature)
-	elseif msgcontains(message, "melting horn") then
+	elseif MsgContains(message, "melting horn") then
 		npcHandler:say({
 			'It is said that ferocious creatures once thrived on lush islands in the far northern sea. They died aeons ago when times of great cold came and formed the icy wastes of Svargrond as we know them today. ...',
 			'Travellers from the north have told stories of these creatures, watching them from within the ice in the deepest caves, still vigilant as if frozen in time. \'Ursagrodon\' they called them. ...',

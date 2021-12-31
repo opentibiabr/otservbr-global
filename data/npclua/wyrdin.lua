@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheWayToYalahar.QuestLine) < 1 and player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) >= 4 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) >= 4 then
 			npcHandler:say({
 				"There is indeed something that needs our attention. In the far north, a new city named Yalahar was discovered. It seems to be incredibly huge. ...",
@@ -82,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Did you bring the papers I asked you for?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(9171, 1) then
 				player:setStorageValue(Storage.TheWayToYalahar.QuestLine, 3)
@@ -92,12 +92,12 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 	--The New Frontier
-	elseif msgcontains(message, "farmine") then
+	elseif MsgContains(message, "farmine") then
 		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 15 then
 			npcHandler:say("I've heard some odd rumours about this new dwarven outpost. But tell me, what has the Edron academy to do with Farmine?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "plea") then
+	elseif MsgContains(message, "plea") then
 		if npcHandler:getTopic(playerId) == 2 then
 			if player:getStorageValue(Storage.TheNewFrontier.BribeWydrin) < 1 then
 				npcHandler:say("Hm, you are right, we are at the forefront of knowledge and innovation. Our dwarven friends could learn much from one of our representatives.", npc, creature)

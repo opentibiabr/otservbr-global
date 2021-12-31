@@ -70,7 +70,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "mission")) then
+	if(MsgContains(message, "mission")) then
 		if(player:getStorageValue(Storage.InServiceofYalahar.Questline) == 24) then
 			if(player:getStorageValue(Storage.InServiceofYalahar.MrWestDoor) == 1) then
 				npcHandler:say("Indeed, I can see the benefits of a mutual agreement. I will later read the details and send a letter to your superior. ", npc, creature)

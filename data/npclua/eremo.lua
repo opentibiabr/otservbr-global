@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'letter') then
+	if MsgContains(message, 'letter') then
 		if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 4 then
 			if player:getItemCount(3506) > 0 then
 				if player:removeItem(3506, 1) then

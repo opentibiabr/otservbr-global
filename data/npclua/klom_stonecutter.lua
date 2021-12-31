@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local tempo = 20*60*60
 
 	-- missão subterraneans
-	if msgcontains(message, "subterraneans") and npcHandler:getTopic(playerId) == 1 then
+	if MsgContains(message, "subterraneans") and npcHandler:getTopic(playerId) == 1 then
 		if player:getStorageValue(Storage.DangerousDepths.Dwarves.Subterranean) == 2 and player:getStorageValue(Storage.DangerousDepths.Dwarves.TimeTaskSubterranean) > 0 then
 			npcHandler:say({"I don't need your help for now. Come back later."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -118,7 +118,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Subterranean, 2)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif npcHandler:getTopic(playerId) == 2 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 2 and MsgContains(message, "yes") then
 		npcHandler:say({"Alright, good. Those things are strolling about and I ain't gonna have that. If it moves more than two legs, destroy it. If it moves legs and tentacles, destroy it again."}, npc, creature)
 		if player:getStorageValue(Storage.DangerousDepths.Questline) < 1 then
 			player:setStorageValue(Storage.DangerousDepths.Questline, 1)
@@ -130,7 +130,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- missão home
-	if msgcontains(message, "home") and npcHandler:getTopic(playerId) == 1 then
+	if MsgContains(message, "home") and npcHandler:getTopic(playerId) == 1 then
 		if player:getStorageValue(Storage.DangerousDepths.Dwarves.Home) == 2 and player:getStorageValue(Storage.DangerousDepths.Dwarves.TimeTaskHome) > 0 then
 			npcHandler:say({"I don't need your help for now. Come back later."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -169,7 +169,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Status, player:getStorageValue(Storage.DangerousDepths.Dwarves.Status) + 2) -- +1 ponto pela task bônus!
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif npcHandler:getTopic(playerId) == 22 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 22 and MsgContains(message, "yes") then
 		npcHandler:say({"Very well, now try to find some of their makeshift homes and tear'em down. There's bound to be some stragglers you can 'persuade' to surrender, eliminate any resistance. Get back here when you're done."}, npc, creature)
 			if player:getStorageValue(Storage.DangerousDepths.Questline) < 1 then
 				player:setStorageValue(Storage.DangerousDepths.Questline, 1)
@@ -182,7 +182,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local plural = ""
-	if msgcontains(message, "suspicious devices") or msgcontains(message, "suspicious device") then
+	if MsgContains(message, "suspicious devices") or MsgContains(message, "suspicious device") then
 		npcHandler:say({"If you bring me any suspicious devices on creatures you slay down here, I'll make it worth your while by telling the others of your generosity. How many do you want to offer? "}, npc, creature)
 		npcHandler:setTopic(playerId, 55)
 	elseif npcHandler:getTopic(playerId) == 55 then
@@ -197,7 +197,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"Don't waste my time."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "gnomes") and npcHandler:getTopic(playerId) == 56 then
+	elseif MsgContains(message, "gnomes") and npcHandler:getTopic(playerId) == 56 then
 		if player:getItemCount(30888) >= quantidade[playerId] then
 			npcHandler:say({"Done."}, npc, creature)
 			if quantidade[playerId] > 1 then
@@ -210,7 +210,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"You don't have enough suspicious devices."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "dwarves") and npcHandler:getTopic(playerId) == 56 then
+	elseif MsgContains(message, "dwarves") and npcHandler:getTopic(playerId) == 56 then
 		if player:getItemCount(30888) >= quantidade[playerId] then
 			npcHandler:say({"Done."}, npc, creature)
 			if quantidade[playerId] > 1 then
@@ -223,7 +223,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"You don't have enough suspicious devices."}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "scouts") and npcHandler:getTopic(playerId) == 56 then
+	elseif MsgContains(message, "scouts") and npcHandler:getTopic(playerId) == 56 then
 		if player:getItemCount(30888) >= quantidade[playerId] then
 			npcHandler:say({"Done."}, npc, creature)
 			if quantidade[playerId] > 1 then
@@ -239,15 +239,15 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 		-- Início checagem de pontos de tasks!!
-	if msgcontains(message, "status") then
+	if MsgContains(message, "status") then
 		npcHandler:say({"So you want to know what we all think about your deeds? What leader\'s opinion are you interested in, the {gnomes} (Gnomus), the {dwarves} (Klom Stonecutter) or the {scouts} (Lardoc Bashsmite)?"}, npc, creature)
 		npcHandler:setTopic(playerId, 5)
 		npcHandler:setTopic(playerId, 5)
-	elseif msgcontains(message, "gnomes") and npcHandler:getTopic(playerId) == 5 then
+	elseif MsgContains(message, "gnomes") and npcHandler:getTopic(playerId) == 5 then
 		npcHandler:say({'The gnomes are still in need of your help, member of Bigfoot\'s Brigade. Prove your worth by answering their calls! (' .. math.max(player:getStorageValue(Storage.DangerousDepths.Gnomes.Status), 0) .. '/10)'}, npc, creature)
-	elseif msgcontains(message, "dwarves") and npcHandler:getTopic(playerId) == 5 then
+	elseif MsgContains(message, "dwarves") and npcHandler:getTopic(playerId) == 5 then
 		npcHandler:say({'The dwarves are still in need of your help, member of Bigfoot\'s Brigade. Prove your worth by answering their calls! (' .. math.max(player:getStorageValue(Storage.DangerousDepths.Dwarves.Status), 0) .. '/10)'}, npc, creature)
-	elseif msgcontains(message, "scouts") and npcHandler:getTopic(playerId) == 5 then
+	elseif MsgContains(message, "scouts") and npcHandler:getTopic(playerId) == 5 then
 		npcHandler:say({'The scouts are still in need of your help, member of Bigfoot\'s Brigade. Prove your worth by answering their calls! (' .. math.max(player:getStorageValue(Storage.DangerousDepths.Scouts.Status), 0) .. '/10)'}, npc, creature)
 	end
 	return true

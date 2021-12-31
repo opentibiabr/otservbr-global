@@ -96,7 +96,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "research") then
+	if MsgContains(message, "research") then
 		local qStorage = player:getStorageValue(Storage.SpiritHunters.Mission01)
 		local tombsStorage = player:getStorageValue(Storage.SpiritHunters.TombUse)
 		if qStorage == -1 then
@@ -146,7 +146,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.SeaOfLight.Questline) == -1 then
 			npcHandler:say(
 				"Alright, you look bright enough to fulfil my requests - at least you do not fall asleep while standing there. \z
@@ -340,7 +340,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 10)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:addExperience(100, true)
 			player:setStorageValue(Storage.SeaOfLight.Questline, 1)
@@ -627,7 +627,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 7)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "jack") then
+	elseif MsgContains(message, "jack") then
 		if player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 10 then
 			npcHandler:say(
 				{
@@ -643,7 +643,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "collective apparitions") then
+	elseif MsgContains(message, "collective apparitions") then
 		local qStorage = player:getStorageValue(Storage.SpiritHunters.Mission01)
 		if qStorage == -1 then
 			if npcHandler:getTopic(playerId) == 15 then
@@ -654,7 +654,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 16)
 			end
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say(
 				"Yes, maybe it was the right decision. Astronomical research is \z
@@ -679,7 +679,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 	end
 
-	if msgcontains(message, "machine") and player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3 then
+	if MsgContains(message, "machine") and player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3 then
 		npcHandler:say(
 			{
 				"Ah, the machine you found at that island. Well, I built this thing to venture far beneath \z
@@ -700,7 +700,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		)
 		npcHandler:setTopic(playerId, 21)
 	elseif
-		msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 21 and
+		MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 21 and
 			player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3
 	 then
 		if player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3 then
@@ -727,7 +727,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 22)
 		end
 	elseif
-		msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 22 and
+		MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 22 and
 			player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3
 	 then
 		if player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3 then
@@ -754,7 +754,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 23)
 		end
 	elseif
-		msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 23 and
+		MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 23 and
 			player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3
 	 then
 		if player:getStorageValue(Storage.LiquidBlackQuest.Visitor) == 3 then
@@ -772,12 +772,12 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.LiquidBlackQuest.Visitor, 4)
 			npcHandler:setTopic(playerId, 24)
 		end
-	elseif msgcontains(message, "task") then
+	elseif MsgContains(message, "task") then
 		if player:getStorageValue(Storage.SeaOfLight.Mission3) == 4 then
 		end
 	end
 
-	if msgcontains(message, "rumours") then
+	if MsgContains(message, "rumours") then
 		npcHandler:say(
 			{
 				"There are rumours of aggressive fishmen in northern Tiquanda. We have to \z
@@ -792,7 +792,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			200
 		)
 		npcHandler:setTopic(playerId, 25)
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 25 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 25 then
 		if npcHandler:getTopic(playerId) == 25 then
 			npcHandler:say(
 				{

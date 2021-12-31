@@ -49,7 +49,7 @@ local function greetCallback(npc, creature, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if not msgcontains(message, 'djanni\'hah') and player:getStorageValue(Storage.DjinnWar.Faction.MaridDoor) ~= 1 then
+	if not MsgContains(message, 'djanni\'hah') and player:getStorageValue(Storage.DjinnWar.Faction.MaridDoor) ~= 1 then
 		npcHandler:say('Whoa! A human! This is no place for you, |PLAYERNAME|. Go and play somewhere else.', npc, creature)
 		return false
 	end
@@ -84,19 +84,19 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 	-- To Appease the Mighty Quest
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) == 1 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) == 1 then
 			npcHandler:say({
 				'I should go and tell Fa\'hradin. ...',
 				'I am impressed you know our address of welcome! I honour that. So tell me who sent you on a mission to our fortress?'}, npc, creature)
 			npcHandler:setTopic(playerId, 9)
-			elseif msgcontains(message, "kazzan") and npcHandler:getTopic(playerId) == 9 then
+			elseif MsgContains(message, "kazzan") and npcHandler:getTopic(playerId) == 9 then
 			npcHandler:say({
 				'How dare you lie to me?!? The caliph should choose his envoys more carefully. We will not accept his peace-offering ...',
 				'...but we are always looking for support in our fight against the evil Efreets. Tell me if you would like to join our fight.'}, npc, creature)
 			player:setStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest, player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) + 1)
 	end
 
-	if msgcontains(message, 'passage') then
+	if MsgContains(message, 'passage') then
 		if player:getStorageValue(Storage.DjinnWar.Faction.MaridDoor) ~= 1 then
 			npcHandler:say({
 				'If you want to enter our fortress you have to become one of us and fight the Efreet. ...',
@@ -108,7 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if player:getStorageValue(Storage.DjinnWar.Faction.EfreetDoor) ~= 1 then
 				npcHandler:say('Are you sure? You pledge loyalty to king Gabel, who is... you know. And you are willing to never ever set foot on Efreets\' territory, unless you want to kill them? Yes?', npc, creature)
 				npcHandler:setTopic(playerId, 2)
@@ -117,13 +117,13 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('This isn\'t your war anyway, human.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'Oh. Ok. Welcome then. You may pass. ...',
 				'And don\'t forget to kill some Efreets, now and then.'
@@ -131,7 +131,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DjinnWar.Faction.MaridDoor, 1)
 			player:setStorageValue(Storage.DjinnWar.Faction.Greeting, 0)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('This isn\'t your war anyway, human.', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

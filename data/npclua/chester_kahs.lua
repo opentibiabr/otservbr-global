@@ -73,10 +73,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'gamel') and msgcontains(message, 'rebel') then
+	if MsgContains(message, 'gamel') and MsgContains(message, 'rebel') then
 		npcHandler:say('Are you saying that Gamel is a member of the rebellion?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('Do you know what his plans are about?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -162,7 +162,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('Then don\'t bother me with it. I\'m a busy man.', npc, creature)
 		elseif npcHandler:getTopic(playerId) == 3 then
@@ -178,16 +178,16 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		npcHandler:setTopic(playerId, 0)
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'magic') and msgcontains(message, 'crystal') and msgcontains(message, 'lugri') and msgcontains(message, 'deathcurse') then
+		if MsgContains(message, 'magic') and MsgContains(message, 'crystal') and MsgContains(message, 'lugri') and MsgContains(message, 'deathcurse') then
 			npcHandler:say('That\'s terrible! Will you give me the crystal?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		else
 			npcHandler:say('Tell me precisely what he asked you to do! It\'s important!', npc, creature)
 		end
-	elseif msgcontains(message, 'heal') then
+	elseif MsgContains(message, 'heal') then
 		npcHandler:say('Do you need the healing now?', npc, creature)
 		npcHandler:setTopic(playerId, 4)
-	elseif msgcontains(message, 'join') then
+	elseif MsgContains(message, 'join') then
 		if player:getStorageValue(Storage.SecretService.Quest) < 1 then
 			npcHandler:say({
 				'Our bureau is an old and traditional branch of the Thaian government. It takes more than lip service to join our ranks ...',
@@ -196,7 +196,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, 'mission') then
+	elseif MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.SecretService.Quest) == 1 and player:getStorageValue(Storage.SecretService.AVINMission01) < 1 and player:getStorageValue(Storage.SecretService.CGBMission01) < 1 then
 			player:setStorageValue(Storage.SecretService.Quest, 2)
 			player:setStorageValue(Storage.SecretService.TBIMission01, 1)
@@ -292,7 +292,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Have you fulfilled your current mission?', npc, creature)
 			npcHandler:setTopic(playerId, 13)
 		end
-	elseif msgcontains(message, 'disguise') then
+	elseif MsgContains(message, 'disguise') then
 		if player:getStorageValue(Storage.SecretService.TBIMission06) == 1 then
 			npcHandler:say('If you lost or wasted your disguise kit I can replace it. It will cost you 1000 gold though since you lost royal property. Is that ok for you?', npc, creature)
 			npcHandler:setTopic(playerId, 12)

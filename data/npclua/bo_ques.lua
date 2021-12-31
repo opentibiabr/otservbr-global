@@ -60,7 +60,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission01)
-	if msgcontains(message, 'recipe') or msgcontains(message, 'mission') then
+	if MsgContains(message, 'recipe') or MsgContains(message, 'mission') then
 		if missionProgress < 1 then
 			npcHandler:say({
 				'My collection of recipes is almost complete. There are only but a few that are missing. ...',
@@ -71,7 +71,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('I already told you about the recipes I am missing, now please try to find a cookbook of the dwarven kitchen.', npc, creature)
 		end
 
-	elseif msgcontains(message, 'cookbook') then
+	elseif MsgContains(message, 'cookbook') then
 		if missionProgress == -1 then
 			npcHandler:say({
 				'I\'m preparing the food for all djinns in Ashta\'daramai. ...',
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'Fine! Even though I know so many recipes, I\'m looking for the description of some dwarven meals. ...',
 				'So, if you could bring me a cookbook of the dwarven kitchen, I\'ll reward you well.'
@@ -93,13 +93,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DjinnWar.MaridFaction.Start, 1)
 			player:setStorageValue(Storage.DjinnWar.MaridFaction.Mission01, 1)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Well, too bad.', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not player:removeItem(3234, 1) then
 				npcHandler:say('Too bad. I must have this book.', npc, creature)
 				return true
@@ -113,7 +113,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DjinnWar.MaridFaction.Mission01, 2)
 			player:addItem(3029, 3)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Too bad. I must have this book.', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

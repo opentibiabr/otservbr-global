@@ -92,12 +92,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'invitation') then
+	if MsgContains(message, 'invitation') then
 		if player:getStorageValue(Storage.ThievesGuild.Mission03) == 1 then
 			npcHandler:say('What? So why in the world should I give you an invitation? It\'s not as if you were someone important, are you?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('Well, rich and generous people are always welcome in the palace.If you donate 1000 gold to a fund I oversee, I\'ll give you an invitation, ok?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -111,7 +111,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'gold') then
+	elseif MsgContains(message, 'gold') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('Not that I am bribeable but I doubt that you own 1000 gold pieces. Or do you?', npc, creature)
 			npcHandler:setTopic(playerId, 2)

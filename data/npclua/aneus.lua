@@ -63,43 +63,43 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "story") then
+	if MsgContains(message, "story") then
 		npcHandler:say({
 			'Ok, sit down and listen. Back in the early days, one of the ancestors ... <press m for more>',
 			'... of our king Tibianus III wanted to build the best CITY in whole of Tibia.'
 		}, npc, creature)
-	elseif msgcontains(message, "city") then
+	elseif MsgContains(message, "city") then
 		npcHandler:say({
 			'The works on this new city began and the king sent his best ... <m>',
 			'... SOLDIERS to protect the workers from ORCS and to make them WORK HARDER.'
 		}, npc, creature)
-	elseif msgcontains(message, "works") then
+	elseif MsgContains(message, "works") then
 		npcHandler:say({
 			'The development of the city was fine. Also a giant castle was build ... <m>',
 			'... northeast of the city. But more and more workers started to REBEL because of the bad conditions.'
 		}, npc, creature)
-	elseif msgcontains(message, "rebel") then
+	elseif MsgContains(message, "rebel") then
 		npcHandler:say({
 			'All rebels were brought to the giant castle. Guarded by the Red Legion, ... <m>',
 			'... they had to work and live in even worser conditions. Also some FRIENDS of the king\'s sister were brought there.'
 		}, npc, creature)
-	elseif msgcontains(message, "friends") then
+	elseif MsgContains(message, "friends") then
 		npcHandler:say({
 			'The king\'s sister was pretty upset about the situation there but her brother ... <m>',
 			'... didn\'t want to do anything about this matter. So she made a PLAN to destroy the Red Legion for their CRUELTY forever.'
 		}, npc, creature)
-	elseif msgcontains(message, "plan") then
+	elseif MsgContains(message, "plan") then
 		npcHandler:say({
 			'She ordered her loyal druids and hunters to disguise themselves ... <m>',
 			'... as orcs from the near ISLAND and to ATTACK the Red Legion by night over and over again.'
 		}, npc, creature)
-	elseif msgcontains(message, "stroke") then
+	elseif MsgContains(message, "stroke") then
 		npcHandler:say({
 			'Most of the Red Legion went to the island by night. The orcs ... <m>',
 			'... were not prepared and the Red Legion killed hundreds of orcs ... <m>',
 			'... with nearly no loss. After they were satisfied they WALKED BACK to the castle.'
 		}, npc, creature)
-	elseif msgcontains(message, "walked back") then
+	elseif MsgContains(message, "walked back") then
 		npcHandler:say({
 			'It is said that the orcish shamans cursed the Red Legion. <m>',
 			'Nobody knows. But one third of the soldiers died by a disease on the way back. <m>',
@@ -108,13 +108,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			'... over Tibia came to avenge their friends, and they killed nearly all ... <m>',
 			'... workers and soldiers in the castle. The HELP of the king\'s sister came too late.'
 		}, npc, creature)
-	elseif msgcontains(message, "help") then
+	elseif MsgContains(message, "help") then
 		npcHandler:say({
 			'She tried to rescue the workers but it was too late. The orcs ... <m>',
 			'... started immediately to attack her troops, too. Her royal troops ... <m>',
 			'... went back to the city. A TRICK saved the city from DESTRUCTION.'
 		}, npc, creature)
-	elseif msgcontains(message, "destruction") then
+	elseif MsgContains(message, "destruction") then
 		npcHandler:say({
 			'They used the same trick as against the Red Legion and the orcs ... <m>',
 			'... started to fight their non-orcish-allies. After a bloody long fight ... <m>',

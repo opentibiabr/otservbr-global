@@ -62,7 +62,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "recruit") then
+	if MsgContains(message, "recruit") then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 6 then
 			npcHandler:say({
 				"Your examination is quite easy. Just step through the green crystal {apparatus} in the south! We will examine you with what we call g-rays. Where g stands for gnome of course ...",
@@ -71,7 +71,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.BigfootBurden.QuestLine, 8)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "apparatus") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "apparatus") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say("Don't be afraid. It won't hurt! Just step in!", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

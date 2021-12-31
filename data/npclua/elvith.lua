@@ -73,15 +73,15 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, 'songs of the forest') then
+	if MsgContains(message, 'songs of the forest') then
 		npcHandler:say({
 			'The last issue I had was bought by Randor Swiftfinger. He was banished through the hellgate and probably took the book with him ...',
 			'I would not recommend seeking him or the book there, but of course it is possible.'
 		}, npc, creature)
-	elseif msgcontains(message, 'love poem') then
+	elseif MsgContains(message, 'love poem') then
 		npcHandler:say('Do you want to buy a poem scroll for 200 gold?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:setTopic(playerId, 0)
 			local player = Player(creature)

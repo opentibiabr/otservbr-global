@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.toOutfoxAFoxQuest) < 1 then
 			npcHandler:say({
 				"Funny that you are asking me for a mission! There is indeed something you can do for me. Ever heard about The Horned Fox? Anyway, yesterday his gang has stolen my mining helmet during a raid. ...",
@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 			else npcHandler:say("Hum... what, {task}?", npc, creature)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.toOutfoxAFoxQuest, 1)
 			npcHandler:say("I knew you have the guts for that task! We presume the hideout of The Horned Fox somewhere in the south-west near the coast. Good luck!", npc, creature)
@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			else npcHandler:say("Zzz...", npc, creature)
 
 		end
-		elseif msgcontains(message, "task") then
+		elseif MsgContains(message, "task") then
 		-- AQUI
 		if player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinos) <= 0 then
 			npcHandler:say({
@@ -124,7 +124,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 		-- YES AQUI
 
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) > 1 then
 			npcHandler:say("Then no.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

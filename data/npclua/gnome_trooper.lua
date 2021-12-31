@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		DELIVERED_PARCELS[player:getGuid()] = {}
 	end
 
-	if msgcontains(message, 'something') and not isInArray({-1, 4}, status) then
+	if MsgContains(message, 'something') and not isInArray({-1, 4}, status) then
 		if isInArray(DELIVERED_PARCELS[player:getGuid()], npc:getId()) then
 			return true
 		end

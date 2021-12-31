@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'firebird') then
+	if MsgContains(message, 'firebird') then
 		if player:getStorageValue(Storage.OutfitQuest.PirateSabreAddon) == 4 then
 			player:setStorageValue(Storage.OutfitQuest.PirateSabreAddon, 5)
 			player:addOutfitAddon(151, 1)
@@ -69,7 +69,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				Okay, take this fine sabre from me, mate.',
 			creature)
 		end
-	elseif msgcontains(message, 'mission') then
+	elseif MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 3 then
 			npcHandler:say(
 				{
@@ -88,7 +88,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven, 6)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "warrior's sword") then
+	elseif MsgContains(message, "warrior's sword") then
 		if player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and 142 or 134, 2) then
 			npcHandler:say('You already have this outfit!', npc, creature)
 			return true
@@ -112,7 +112,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "knight's sword") then
+	elseif MsgContains(message, "knight's sword") then
 		if player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and 139 or 131, 1) then
 			npcHandler:say('You already have this outfit!', npc, creature)
 			return true
@@ -135,10 +135,10 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'forge') then
+	elseif MsgContains(message, 'forge') then
 		npcHandler:say("What would you like me to forge for you? A {knight's sword} or a {warrior's sword}?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 2 then
 			if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 3 then
 				npcHandler:say('Alright, we will see. Here, take this letter and deliver it safely to old Eremo on Cormaya.', npc, creature)

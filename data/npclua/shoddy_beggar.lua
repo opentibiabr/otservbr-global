@@ -68,19 +68,19 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'spare') then
+	if MsgContains(message, 'spare') then
 		npcHandler:say('Hmm, if you can spare a coin... we can talk. What do you say?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'device') then
+	elseif MsgContains(message, 'device') then
 		if player:getStorageValue(Storage.SeaOfLight.Questline) == 1 then
 			npcHandler:say('Persistent little nuisance, aren\'t we? Well, I like your spirit so I will tell you a secret. I may not look the part but I was once a {scientist}. The academy seemed to not like my... attitude and never actually invited me.', npc, creature)
 		end
-	elseif msgcontains(message, 'scientist') then
+	elseif MsgContains(message, 'scientist') then
 		if player:getStorageValue(Storage.SeaOfLight.Questline) == 1 then
 			npcHandler:say('Indeed, I was one myself a long time ago. I may seem a little... distracted by now, but I was working on many important projects. I even created a device to... well, it will cost you another gold coin if you want me to tell you the whole story. You\'re in?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeMoneyBank(1) then
 				npcHandler:say(player:getStorageValue(Storage.SeaOfLight.Questline) ~= 1 and 'Is that all you have? That would be less than I have... *mumbles*' or 'Mh, it seems you don\'t have any coins.', npc, creature)
@@ -130,7 +130,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Well, to be honest, I envy him a little. He can continue his research in his laboratory. He still has working equipment... I sometimes read his publications. He is an able man, but completely on the wrong track... give these plans to him.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('Mean, heartless... go and leave me be.', npc, creature)
 			npcHandler:setTopic(playerId, 0)

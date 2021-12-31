@@ -70,7 +70,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "Yes") then
+	if MsgContains(message, "Yes") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) < 1 then
 			npcHandler:say("I will tell you a small secret now. My friend Lynda in Thais can create a blessed wand. Greet her from me, maybe she will aid you.", npc, creature)
 			player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand, 1)

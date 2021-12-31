@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "jack") then
+	if MsgContains(message, "jack") then
 		if (player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 5) then
 			if
 				(player:getStorageValue(Storage.TibiaTales.JackFutureQuest.Mother == 1) and
@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 1)
 			end
 		end
-	elseif msgcontains(message, "spectulus") then
+	elseif MsgContains(message, "spectulus") then
 		if (npcHandler:getTopic(playerId) == 3) then
 			npcHandler:say(
 				"Spelltolust?! That sounds awfully nasty! What was he doing there - are you telling \z
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if (npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say(
 				{

@@ -54,12 +54,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if(msgcontains(message, "nargor")) then
+	if(MsgContains(message, "nargor")) then
 		if player:getStorageValue(Storage.TheShatteredIsles.AccessToNargor) == 1 then
 			npcHandler:say("Do you want to sail Nargor for 50 gold coins?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			if player:getStorageValue(Storage.TheShatteredIsles.AccessToNargor) == 1 then
 				if player:removeMoneyBank(50) then

@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "research notes")) then
+	if(MsgContains(message, "research notes")) then
 		if player:getStorageValue(Storage.TheWayToYalahar.QuestLine) == 1 then
 			npcHandler:say({
 				"Oh, you are the contact person of the academy? Here are the notes that contain everything I have found out so far. ...",
@@ -68,7 +68,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			player:setStorageValue(Storage.TheWayToYalahar.QuestLine, 2)
 			npcHandler:say("Excellent! You will find Palimuth near the entrance of the city centre. Just ask him if you can assist him in a few missions.", npc, creature)

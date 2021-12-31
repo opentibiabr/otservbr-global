@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "dress pattern") then
+	if MsgContains(message, "dress pattern") then
 		if player:getStorageValue(Storage.Postman.Mission06) == 3 then
 			if npcHandler:getTopic(playerId) < 1 then
 				npcHandler:say("DRESS FLATTEN? WHO WANTS ME TO FLATTEN A DRESS?", npc, creature)

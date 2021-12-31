@@ -51,7 +51,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if(msgcontains(message, "mission") or msgcontains(message, "task")) then
+	if(MsgContains(message, "mission") or MsgContains(message, "task")) then
 		if(getPlayerStorageValue(creature, Storage.RottinWoodAndMaried.Mission03) < 1) and getPlayerStorageValue(creature, Storage.RottinWoodAndMaried.Time) <= os.time() then
 			npcHandler:say("Oh, you want some work? You can help us, alright. Did you know that the people of the city think those rabbit feet are actually lucky charms?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -103,7 +103,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	end
 	------------------------ FINISH MISSION 03 ------------------------
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say("Good, because that is exactly what you will help us with - getting more 'lucky charms'. If we won't get our hands on new charms in time, we will surely have to starve... during the autumn. That would be a hard time for all of us. So... you in?", npc, creature)
 			npcHandler:setTopic(playerId, 2)

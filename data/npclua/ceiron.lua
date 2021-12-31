@@ -63,7 +63,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("What are you thinking! I would never allow you to slay my beloved friends for the sake of your narcism. Only {Faolan} can grant you a fur like this one.", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "faolan") then
+	elseif MsgContains(message, "faolan") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("I know where the great wolf mother lives, but I will not tell that to just anyone. You have to earn my respect first. Are you willing to help me?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Were you able to obtain a sample of the Griffinclaw?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "task") then
+	elseif MsgContains(message, "task") then
 		if player:getStorageValue(Storage.OutfitQuest.DruidHatAddon) == 2 then
 			npcHandler:say({
 				"Listen, my next task for you is not exactly easy either. ...",
@@ -109,27 +109,27 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 10)
 		end
-	elseif msgcontains(message, "waterskin") or msgcontains(message, "water skin") then
+	elseif MsgContains(message, "waterskin") or MsgContains(message, "water skin") then
 		if player:getStorageValue(Storage.OutfitQuest.DruidHatAddon) == 3 then
 			npcHandler:say("Did you bring me a sample of water from the hydra cave?", npc, creature)
 			npcHandler:setTopic(playerId, 7)
 		end
-	elseif msgcontains(message, "dust") or msgcontains(message, "demon dust") then
+	elseif MsgContains(message, "dust") or MsgContains(message, "demon dust") then
 		if player:getStorageValue(Storage.OutfitQuest.DruidHatAddon) == 5 then
 			npcHandler:say("Were you really able to collect 100 ounces of demon dust?", npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		end
-	elseif msgcontains(message, "chain") or msgcontains(message, "wolf tooth chain") then
+	elseif MsgContains(message, "chain") or MsgContains(message, "wolf tooth chain") then
 		if player:getStorageValue(Storage.OutfitQuest.DruidHatAddon) == 7 then
 			npcHandler:say("Have you really found my wolf tooth chain??", npc, creature)
 			npcHandler:setTopic(playerId, 11)
 		end
-	elseif msgcontains(message, "ceiron's waterskin") then
+	elseif MsgContains(message, "ceiron's waterskin") then
 		if player:getStorageValue(Storage.OutfitQuest.DruidHatAddon) == 3 then
 			npcHandler:say("Have you lost my waterskin?", npc, creature)
 			npcHandler:setTopic(playerId, 12)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say({
 				"I hope that I am not asking too much of you with this task. I heard of a flower which is currently unique in Tibia and can survive at only one place. ...",

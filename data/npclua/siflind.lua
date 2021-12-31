@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 5 then
 			npcHandler:say("I heard you have already helped our cause. Are you interested in another mission, even when it requires you to travel to a distant land?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -113,10 +113,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("I have now no mission for you.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "jug") then
+	elseif MsgContains(message, "jug") then
 		npcHandler:say("Do you want to buy a jug for 1000 gold?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"I am pleased to hear that. On the isle of Tyrsung foreign hunters have set up camp. They are hunting the animals there with no mercy. We will haveto find something that distracts them from hunting ...",
@@ -191,14 +191,14 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	end
-	if msgcontains(message, "buy animal cure") or msgcontains(message, "animal cure") then -- animal cure for in service of yalahar
+	if MsgContains(message, "buy animal cure") or MsgContains(message, "animal cure") then -- animal cure for in service of yalahar
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) >= 30 and player:getStorageValue(Storage.InServiceofYalahar.Questline) <= 54 then
 			npcHandler:say("You want to buy animal cure for 400 gold coins?", npc, creature)
 			npcHandler:setTopic(playerId, 13)
 		else
 			npcHandler:say("Im out of stock.", npc, creature)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 13 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 13 then
 		if npcHandler:getTopic(playerId) == 13 and player:removeMoneyBank(400) then
 			player:addItem(8819, 1)
 			npcHandler:say("Here you go.", npc, creature)

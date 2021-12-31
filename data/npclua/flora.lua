@@ -65,10 +65,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if(msgcontains(message, "fight")) then
+	if(MsgContains(message, "fight")) then
 		npcHandler:say("Do you really want to enter the Glooth Fairy\'s hideout. There is no chickening out and I also have to charge one voting right! {Yes} or {no}?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say("Here you go!", npc, creature)
 			local pos = {x=33660, y=31936, z=9}
@@ -76,7 +76,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			doSendMagicEffect(pos, CONST_ME_TELEPORT)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif(msgcontains(message, "no")) then
+	elseif(MsgContains(message, "no")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say("Okay...", npc, creature)
 			npcHandler:setTopic(playerId, 0)

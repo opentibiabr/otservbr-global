@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.DarkTrails.Mission01) == -1 then
 			npcHandler:say("Well, there is little where we need help beyond the normal tasks you can do for the city. However, there is one thing out of the ordinary where some {assistance} would be appreciated.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -66,18 +66,18 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You already asked for a mission, go to the next.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "assistance") then
+	elseif MsgContains(message, "assistance") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say(" It's nothing really important, so no one has yet found the time to look it up. It concerns the towns beggars that have started to behave {strange} lately.", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "strange") then
+	elseif MsgContains(message, "strange") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("They usually know better than to show up in the streets and harass our citizens, but lately they've grown more bold or desperate or whatever. I ask you to investigate what they are up to. If necessary, you may scare them away a bit.", npc, creature)
 			player:setStorageValue(Storage.DarkTrails.Mission01, 1) -- Mission 1 start
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "outfit") then
+	elseif MsgContains(message, "outfit") then
 		if player:getStorageValue(Storage.DarkTrails.Mission18) == 1 then
 			npcHandler:say("Nice work, take your outfit.", npc, creature)
 			player:setStorageValue(Storage.DarkTrails.Outfit, 1)

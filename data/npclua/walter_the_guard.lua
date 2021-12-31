@@ -58,20 +58,20 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "trouble") and player:getStorageValue(Storage.TheInquisition.WalterGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1) then
+	if(MsgContains(message, "trouble") and player:getStorageValue(Storage.TheInquisition.WalterGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1) then
 		npcHandler:say("I think there is a pickpocket in town.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif(msgcontains(message, "authorities")) then
+	elseif(MsgContains(message, "authorities")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say("Well, sooner or later we will get hold of that delinquent. That's for sure.", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif(msgcontains(message, "avoided")) then
+	elseif(MsgContains(message, "avoided")) then
 		if(npcHandler:getTopic(playerId) == 2) then
 			npcHandler:say("You can't tell by a person's appearance who is a pickpocket and who isn't. You simply can't close the city gates for everyone.", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif(msgcontains(message, "gods would allow")) then
+	elseif(MsgContains(message, "gods would allow")) then
 		if(npcHandler:getTopic(playerId) == 3) then
 			npcHandler:say("If the gods had created the world a paradise, no one had to steal at all.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

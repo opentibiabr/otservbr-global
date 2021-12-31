@@ -53,7 +53,7 @@ local function greetCallback(npc, creature, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if not player:getCondition(CONDITION_FIRE) and not msgcontains(message, "djanni'hah") then
+	if not player:getCondition(CONDITION_FIRE) and not MsgContains(message, "djanni'hah") then
 		player:getPosition():sendMagicEffect(CONST_ME_EXPLOSIONAREA)
 		player:addCondition(condition)
 		npcHandler:say('Take this!', npc, creature)
@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01)
-	if msgcontains(message, 'mission') then
+	if MsgContains(message, 'mission') then
 		if missionProgress < 1 then
 			npcHandler:say({
 				'Each mission and operation is a crucial step towards our victory! ...',
@@ -94,7 +94,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'Well ... All right. You may only be a human, but you do seem to have the right spirit. ...',
 				'Listen! Since our base of operations is set in this isolated spot we depend on supplies from outside. These supplies are crucial for us to win the war. ...',
@@ -106,23 +106,23 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Start, 1)
 			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission01, 1)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('After all, you\'re just a human.', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say('Finally! What is his name then?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Then go to Carlin and search for him! Look for something that might give you a clue!', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, 'partos') then
+		if MsgContains(message, 'partos') then
 			if missionProgress ~= 2 then
 				npcHandler:say('Hmmm... I don\'t think so. Return to Thais and continue your search!', npc, creature)
 			else

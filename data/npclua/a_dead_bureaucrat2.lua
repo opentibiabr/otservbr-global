@@ -66,7 +66,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "287") then
+	if MsgContains(message, "287") then
 		local player = Player(creature)
 		if player:getStorageValue(Storage.PitsOfInferno.ThronePumin) == 4 then
 			player:setStorageValue(Storage.PitsOfInferno.ThronePumin, 5)

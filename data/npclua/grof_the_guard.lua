@@ -58,10 +58,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "trouble") and player:getStorageValue(Storage.TheInquisition.GrofGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
+	if MsgContains(message, "trouble") and player:getStorageValue(Storage.TheInquisition.GrofGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
 		npcHandler:say("I think it'll rain soon and I left some laundry out for drying.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "authorities") then
+	elseif MsgContains(message, "authorities") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Yes I'm pretty sure they have failed to send the laundry police to take care of it, you fool.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

@@ -59,7 +59,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 3 then
 			if player:getStorageValue(Storage.TheIceIslands.Mission02) < 1 then
 			npcHandler:say({
@@ -131,7 +131,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("I have now no mission for you.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "shard") then
+	elseif MsgContains(message, "shard") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 40 then
 			npcHandler:say("Do you bring frostheart shards for our spell?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -142,7 +142,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to sell all your shards for 2000 gold coins per each? ", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "reward") then
+	elseif MsgContains(message, "reward") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 41 then
 			npcHandler:say("Take this. It might suit your Nordic outfit fine. ", npc, creature)
 			player:addOutfitAddon(252, 1)
@@ -160,7 +160,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.OutfitQuest.NorsemanAddon, 3) -- Questlog Norseman Outfit Quest
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "tylaf") then
+	elseif MsgContains(message, "tylaf") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 36 then
 			npcHandler:say({
 				"You encountered the restless ghost of my apprentice Tylaf in the old mines? We must find out what has happened to him. I enable you to talk to his spirit ...",
@@ -170,13 +170,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheIceIslands.Mission10, 1) -- Questlog The Ice Islands Quest, Formorgar Mines 2: Ghostwhisperer
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'cookie') then
+	elseif MsgContains(message, 'cookie') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31
 				and player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.Hjaern) ~= 1 then
 			npcHandler:say('You want to sacrifice a cookie to the spirits?', npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("This is good news. As I explained, travel to Helheim, seek the reason for the unrest there and then report to me about your mission. ", npc, creature)
 			player:setStorageValue(Storage.TheIceIslands.Questline, 30)
@@ -228,7 +228,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 6 then
 			npcHandler:say('I see.', npc, creature)
 			npcHandler:setTopic(playerId, 0)

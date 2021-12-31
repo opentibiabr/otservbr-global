@@ -78,10 +78,10 @@ local function creatureSayCallback(npc, creature, type, message)
 
 -- Começou a quest
 	if player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) < 2 then
-		if msgcontains(message, "support") and npcHandler:getTopic(playerId) == 1 then
+		if MsgContains(message, "support") and npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({"If you like to, you can pay some gold to become a patron of the arts for this wonderful museum. The price is 10,000 gold. Your personal gain will be priceless. Do you want to pay?"}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
-		elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 2 then
+		elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 2 then
 			if (player:getMoney() + player:getBankBalance()) >= valor then
 				npcHandler:say({"This is a very wise decision. You won't regret it. Congratulations! As your first task I like you to investigate the crime scene of a theft wich occurred last night. ...",
 				"A very varuable artefact has been stolen. I open the door for you. You can find the room on the same floor as we are right now."}, npc, creature)
@@ -100,13 +100,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	-- Reportando sobre o document
-	elseif msgcontains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 3 then
+	elseif MsgContains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 3 then
 		npcHandler:say({"They want us to buy the picture back. Unfortunately this artefact is so important that I don't see an alternative. Please got to Iwar in Kazordoon and pay the money."}, npc, creature)
 		player:setStorageValue(Storage.CultsOfTibia.MotA.Mission, 4)
 		npcHandler:setTopic(playerId, 1)
 
 	-- Depois de ter pago o Iwar
-	elseif msgcontains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 5 then
+	elseif MsgContains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 5 then
 		npcHandler:say({"Nice! I'm really happy to have the picture back. First of all I have to check if everything's fine. Then I'll put it back on its place. For now, I'd like you to find out if some rumours about fake pictures in the MOTA are true. ...",
 			"Some say one of the small pictures in the entrance hall here is fake. For this reason you have to go to my friend {Angelo} and ask him to get a {magnifier} for the investigation.",
 		"Then do your job here in the museum and come back."}, npc, creature)
@@ -114,11 +114,11 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 1)
 
 	-- Depois de ter visto a pintura falsa
-	elseif msgcontains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 9 then
+	elseif MsgContains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 9 then
 		npcHandler:say({"So the rumours are true. How could this happen? I'll keep the picture at its place until we've got a replacement. Please fo to {Angelo} and ask him if he has a new artefact for our museum."}, npc, creature)
 		player:setStorageValue(Storage.CultsOfTibia.MotA.Mission, 10)
 
-	elseif msgcontains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 11 then
+	elseif MsgContains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 11 then
 		npcHandler:say({"You're back, nice. Angelo's team hasn't found an artefact yet? I thought the progress would be faster. Anyway thanks for you efforts. ...",
 		"I have no work for you right now. If you like to, you can have a look at the last floor. I open the door for you."}, npc, creature)
 		player:setStorageValue(Storage.CultsOfTibia.MotA.Mission, 12)
@@ -126,23 +126,23 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	--------------------------------------- FALHAS ----------------------------------------------------------
 	-- Se ainda não tiver visto a pintura falsa
-	elseif msgcontains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 8 then
+	elseif MsgContains(message, "mission") and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 8 then
 		npcHandler:say({"You didn't investigate the pictures yet. Do your job and then come back."}, npc, creature)
 	end
 
-	if msgcontains(message, "extension") and player:getStorageValue(Storage.TheSecretLibrary.LiquidDeath) == 11 then
+	if MsgContains(message, "extension") and player:getStorageValue(Storage.TheSecretLibrary.LiquidDeath) == 11 then
 		if player:getStorageValue(Storage.TheSecretLibrary.LiquidDeath) == 11 then
 			npcHandler:say({"It is planned to extend the MOTA. But this will take time, because our workers have faced a little problem."}, npc, creature)
 			npcHandler:setTopic(playerId, 11)
 		end
-	elseif msgcontains(message, "problem") and npcHandler:getTopic(playerId) == 11 then
+	elseif MsgContains(message, "problem") and npcHandler:getTopic(playerId) == 11 then
 		if npcHandler:getTopic(playerId) == 11 then
 			npcHandler:say({"Well, the situation is this: We have explored a portal, I would say a very aggressive, capriciously and dangerous one. Through this gate monsters entered the construction site and attacked our workers. ...",
 			"With enormous effort they could have been dispersed. When my fellows tried to fill up the portal, it appeared again and again. So the only thing they could do was to stop working for the moment. Are you eventually interested in further investigations?"}, npc, creature)
 			npcHandler:setTopic(playerId, 12)
 		end
 
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 12 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 12 then
 		if npcHandler:getTopic(playerId) == 12 then
 			npcHandler:say({"You are a true patron of the arts! I have opened the construction site for you. Start your work right now!"}, npc, creature)
 			player:setStorageValue(Storage.TheSecretLibrary.Mota, 1)
@@ -151,14 +151,14 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	end
 
-	if msgcontains(message, "bone") and player:getStorageValue(Storage.TheSecretLibrary.Mota) == 2 then
+	if MsgContains(message, "bone") and player:getStorageValue(Storage.TheSecretLibrary.Mota) == 2 then
 		npcHandler:say({"Hmm, interesting. Several years ago I have read some books dealing with strange locking mechanisms. I think what you have found here is a bone lever of category 3. ...",
 		"Normally this is not used because it is not secure. The production failed and the lever can always be activated as follows: back, back, up, right, left. Just have a try, it should work."}, npc, creature)
 		player:setStorageValue(Storage.TheSecretLibrary.Mota, 3)
 		npcHandler:setTopic(playerId, 14)
 	end
 
-	if msgcontains(message, "extension") and player:getStorageValue(Storage.TheSecretLibrary.Mota) == 11 then
+	if MsgContains(message, "extension") and player:getStorageValue(Storage.TheSecretLibrary.Mota) == 11 then
 		npcHandler:say({"You have found an inscription I would like to translate for you. The tibianus cipher was used: ...",
 			"Those who are accorded the honour to visit this exclusive place will smash their blindness and face the truth. ...",
 		"Astonishingly, Dedoras from Cormaya has recently asked me for these kinds of inscriptions. For sure he is able to bring light into the darkness. You should visit him. "}, npc, creature)

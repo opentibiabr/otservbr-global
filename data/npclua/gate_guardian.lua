@@ -53,12 +53,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") or msgcontains(message, "pass") then
+	if MsgContains(message, "mission") or MsgContains(message, "pass") then
 		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 13 then
 			npcHandler:say("You want entranzzze to zzze zzzity?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Mh, zzzezzze paperzzz zzzeem legit, I have orderzzz to let you pazzz. Zzzo be it.", npc, creature)
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 22)

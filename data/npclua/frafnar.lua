@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.HiddenCityOfBeregar.SweetAsChocolateCake) < 1 then
 			npcHandler:say("There is indeed something you could do for me. You must know, I'm in love with Bolfana. I'm sure she'd have a beer with me if I got her a chocolate cake. Problem is that I can't leave this door as I'm on duty. Would you be so kind and help me?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -65,7 +65,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("So did you tell her that the cake came from me?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.HiddenCityOfBeregar.SweetAsChocolateCake, 1)
 			player:setStorageValue(Storage.HiddenCityOfBeregar.DefaultStart, 1)

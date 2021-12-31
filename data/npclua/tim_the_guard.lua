@@ -58,20 +58,20 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "trouble") and player:getStorageValue(Storage.TheInquisition.TimGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
+	if MsgContains(message, "trouble") and player:getStorageValue(Storage.TheInquisition.TimGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
 		npcHandler:say("Ah, well. Just this morning my new toothbrush fell into the toilet.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "authorities") then
+	elseif MsgContains(message, "authorities") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("What do you mean? Of course they will immediately send someone with extra long and thin arms to retrieve it! ", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "avoided") then
+	elseif MsgContains(message, "avoided") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("Your humour might let end you up beaten in some dark alley, you know? No, I don't think someone could have prevented that accident! ", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "gods would allow") then
+	elseif MsgContains(message, "gods would allow") then
 		if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say("It's not a drama!! I think there is just no god who's responsible for toothbrush safety, that's all ... ", npc, creature)
 			npcHandler:setTopic(playerId, 0)

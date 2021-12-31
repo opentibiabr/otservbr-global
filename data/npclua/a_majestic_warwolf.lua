@@ -67,7 +67,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('I can see in your eyes that you are a honest and friendly person, |PLAYERNAME|. You were patient enough to learn our language and I will grant you a special gift. Will you accept it?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'yes') and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, 'yes') and npcHandler:getTopic(playerId) == 1 then
 		player:setStorageValue(Storage.OutfitQuest.DruidHatAddon, 10)
 		player:addOutfitAddon(148, 2)
 		player:addOutfitAddon(144, 2)

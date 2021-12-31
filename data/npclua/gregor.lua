@@ -66,7 +66,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local addonProgress = player:getStorageValue(Storage.OutfitQuest.Knight.AddonHelmet)
-	if msgcontains(message, "task") then
+	if MsgContains(message, "task") then
 		if not player:isPremium() then
 			npcHandler:say("Sorry, but our tasks are only for premium warriors.", npc, creature)
 			return true
@@ -90,7 +90,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You've already completed the task and can consider yourself a mighty warrior, |PLAYERNAME|.", npc, creature)
 		end
 
-	elseif msgcontains(message, "behemoth fang") then
+	elseif MsgContains(message, "behemoth fang") then
 		if addonProgress == 1 then
 			npcHandler:say("Have you really managed to fulfil the task and brought me 100 perfect behemoth fangs?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -99,7 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				Unless there are behemoth rabbits. Duh.", npc, creature)
 		end
 
-	elseif msgcontains(message, "ramsay") then
+	elseif MsgContains(message, "ramsay") then
 		if addonProgress == 2 then
 			npcHandler:say("Did you recover the helmet of Ramsay the Reckless?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
@@ -107,7 +107,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("These pesky apes steal everything they can get their dirty hands on.", npc, creature)
 		end
 
-	elseif msgcontains(message, "sweat") then
+	elseif MsgContains(message, "sweat") then
 		if addonProgress == 3 then
 			npcHandler:say("Were you able to get hold of a flask with pure warrior's sweat?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
@@ -116,7 +116,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				but only in small amounts. Djinns are said to be good at magical extractions.", npc, creature)
 		end
 
-	elseif msgcontains(message, "royal steel") then
+	elseif MsgContains(message, "royal steel") then
 		if addonProgress == 4 then
 			npcHandler:say("Ah, have you brought the royal steel?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
@@ -125,7 +125,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say(
 				{
 					"Well then, listen closely. First, you will have to prove that you are a fierce and \z
@@ -139,26 +139,26 @@ local function creatureSayCallback(npc, creature, type, message)
 				},
 			npc, creature, 100)
 			npcHandler:setTopic(playerId, 2)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Bah. Then you will have to wait for the day these helmets are sold in shops, \z
 				but that will not happen before hell freezes over.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1)
 			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 1)
 			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 1)
 			npcHandler:say("Alright then. Come back to me once you have collected 100 perfect behemoth fangs.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Would you like me to repeat the task requirements then?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if not player:removeItem(5893, 100) then
 				npcHandler:say("Lying is not exactly honourable, |PLAYERNAME|. Shame on you.", npc, creature)
 				return true
@@ -169,13 +169,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.OutfitQuest.Knight.RamsaysHelmetDoor, 1)
 			npcHandler:say("I'm deeply impressed, brave Knight |PLAYERNAME|. I expected nothing less from you. \z
 				Now, please retrieve Ramsay's helmet.", npc, creature)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("There is no need to rush anyway.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 4 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if not player:removeItem(3351, 1) then
 				npcHandler:say("Lying is not exactly honourable, |PLAYERNAME|. Shame on you.", npc, creature)
 				return true
@@ -185,13 +185,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 3)
 			npcHandler:say("Good work, brave Knight |PLAYERNAME|! Even though it is damaged, \z
 				it has a lot of sentimental value. Now, please bring me warrior's sweat.", npc, creature)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("There is no need to rush anyway.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 5 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if not player:removeItem(5885, 1) then
 				npcHandler:say("Lying is not exactly honourable, |PLAYERNAME|. Shame on you.", npc, creature)
 				return true
@@ -201,13 +201,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 4)
 			npcHandler:say("Now that is a pleasant surprise, brave Knight |PLAYERNAME|! \z
 				There is only one task left now: Obtain royal steel to have your helmet refined.", npc, creature)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("There is no need to rush anyway.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 6 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if not player:removeItem(5887, 1) then
 				npcHandler:say("Lying is not exactly honourable, |PLAYERNAME|. Shame on you.", npc, creature)
 				return true
@@ -217,7 +217,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 5)
 			npcHandler:say("You truly deserve to wear an adorned helmet, brave Knight |PLAYERNAME|. \z
 				Please talk to Sam and tell him I sent you. I'm sure he will be glad to refine your helmet.", npc, creature)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("There is no need to rush anyway.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

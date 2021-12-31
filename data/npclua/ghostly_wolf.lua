@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 6) then
 			npcHandler:say({
 				"I'm heartbroken, traveler. Some months ago, I was taking care of my three newborn whelps. They just opened their eyes and started exploring the wilderness as a hunter came by. ...",
@@ -74,14 +74,14 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say({
 				"I didn't dare hope for it! The man told something about selling my babies to the orcs so they could train them as war wolves. ...",
 				"I guess he mentioned Ulderek's Rock. Please search for them and - be they alive or not - return and tell me what happened to them."
 			}, npc, creature)
 			player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 7)
 			npcHandler:setTopic(playerId, 0)
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Then not.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end

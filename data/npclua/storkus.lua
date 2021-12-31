@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "mission")) then
+	if(MsgContains(message, "mission")) then
 		if(player:getStorageValue(Storage.TheInquisition.Questline) == 6) then
 			if(player:getStorageValue(Storage.TheInquisition.StorkusVampiredust) < 0) then
 				player:setStorageValue(Storage.TheInquisition.StorkusVampiredust, 0)
@@ -97,7 +97,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif(msgcontains(message, "vampire lord token") and player:getStorageValue(Storage.TheInquisition.Questline) == 10) then
+	elseif(MsgContains(message, "vampire lord token") and player:getStorageValue(Storage.TheInquisition.Questline) == 10) then
 		if(player:getStorageValue(Storage.VampireHunter.Rank) < 1) then
 			npcHandler:say("Would ye' like to give me vampire tokens?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -117,7 +117,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Would ye' like to give me vampire tokens?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			local count = player:getItemCount(5905)
 			local requiredCount = 20 - player:getStorageValue(Storage.TheInquisition.StorkusVampiredust)

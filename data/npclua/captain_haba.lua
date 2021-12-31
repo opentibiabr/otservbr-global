@@ -58,12 +58,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheHuntForTheSeaSerpent.CaptainHaba) <= 1 then
 			npcHandler:say("Ya wanna join the hunt fo' the sea serpent? Be warned ya may pay with ya life! Are ya in to it?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("A'right, we are here to resupply our stock of baits to catch the sea serpent. Your first task is to bring me 5 fish they are easy to catch. When you got them ask me for the bait again.", npc, creature)
 			player:setStorageValue(Storage.TheHuntForTheSeaSerpent.CaptainHaba, 2)
@@ -75,7 +75,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif msgcontains(message, "bait") then
+	elseif MsgContains(message, "bait") then
 		if player:getStorageValue(Storage.TheHuntForTheSeaSerpent.CaptainHaba) == 2 then
 			if player:removeItem(3578, 5) then
 				npcHandler:say("Excellent, now bring me 5 northern pike.", npc, creature)
@@ -101,7 +101,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 6)
 			end
 		end
-	elseif msgcontains(message, "hunt") then
+	elseif MsgContains(message, "hunt") then
 		if player:getStorageValue(Storage.TheHuntForTheSeaSerpent.CaptainHaba) == 6 then
 			npcHandler:say("A'right, wanna put out to sea?", npc, creature)
 			npcHandler:setTopic(playerId, 7)

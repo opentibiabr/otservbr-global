@@ -105,7 +105,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if npcHandler:getTopic(playerId) == 0 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say("IN WHICH TOWN DO YOU WANT TO LIVE: {CARLIN}, {THAIS}, OR {VENORE}?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
@@ -129,7 +129,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("{KNIGHT}, {PALADIN}, {SORCERER}, OR {DRUID}?", npc, creature)
 		end
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			npcHandler:say("SO BE IT!", npc, creature)
 			player:setVocation(Vocation(vocation[playerId]))
 			player:setTown(Town(town[playerId]))

@@ -254,11 +254,11 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "key") then
+	if MsgContains(message, "key") then
 		npcHandler:say("If you are that curious, do you want to buy a key for 5000 gold? \z
 						Don't blame me if you get sucked in.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			local player = Player(creature)
 			if player:removeMoneyBank(5000) then
@@ -272,7 +272,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Believe me, it's better for you that way.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

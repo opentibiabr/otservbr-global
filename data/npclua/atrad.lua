@@ -64,12 +64,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if(msgcontains(message, "addon") or msgcontains(message, "outfit")) then
+	if(MsgContains(message, "addon") or MsgContains(message, "outfit")) then
 		if(getPlayerStorageValue(creature, Storage.Atrad) < 1) then
 			npcHandler:say("You managed to deceive Erayo? Impressive. Well, I guess, since you have come that far, I might as well give you a task too, eh?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif(msgcontains(message, "nose ring") or msgcontains(message, "ring")) then
+	elseif(MsgContains(message, "nose ring") or MsgContains(message, "ring")) then
 		if(getPlayerStorageValue(creature, Storage.Atrad) == 1) then
 			if(getPlayerItemCount(creature, 5804) >= 1) and getPlayerItemCount(creature, 5930) >= 1 then
 				npcHandler:say("I see you brought my stuff. Good. I'll keep my promise: Here's katana in return.", npc, creature)
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 2) then
 			npcHandler:say("Okay, listen up. I don't have a list of stupid objects, I just want two things. A behemoth claw and a nose ring. Got that?", npc, creature)
 			npcHandler:setTopic(playerId, 3)

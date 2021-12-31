@@ -75,7 +75,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Do you want to travel back to Liberty Bay?', npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"Thank you. Luckily the damage my ship has taken looks more severe than it is, so I will only need a few wooden boards. ...",

@@ -77,13 +77,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 1 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 1 then
 			npcHandler:say({"Could you help me do a ritual?"}, npc, creature)-- It needs to be revised, it's not the same as the global
 			npcHandler:setTopic(playerId, 1)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 1 then	
 			player:addItem(31715, 1)
 			npcHandler:say({"Here is the list with the missing ingredients to complete the ritual."}, npc, creature)-- It needs to be revised, it's not the same as the global
@@ -94,13 +94,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"Sorry."}, npc, creature)-- It needs to be revised, it's not the same as the global
 		end
 	end
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 2 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 2 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 2 then
 			npcHandler:say({"Did you bring all the materials I informed you about? "}, npc, creature)-- It needs to be revised, it's not the same as the global
 			npcHandler:setTopic(playerId, 3)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 2 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 2 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 2 and player:getItemById(31340, 1) and player:getItemById(31336, 12) and player:getItemById(2874, 5) then	
 			player:removeItem(31340, 1)
 			player:removeItem(31336, 12)

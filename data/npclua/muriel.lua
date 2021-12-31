@@ -68,7 +68,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'mission') then
+	if MsgContains(message, 'mission') then
 		if player:getLevel() < 35 then
 			npcHandler:say('Indeed there is something to be done, but I need someone more experienced. Come back later if you want to.', npc, creature)
 			addEvent(releasePlayer, 1000, npc, creature)
@@ -104,7 +104,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('I am very glad you helped me, but I am very busy at the moment.', npc, creature)
 			addEvent(releasePlayer, 1000, npc, creature)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:addItem(4852, 1)
 			player:setStorageValue(Storage.TibiaTales.IntoTheBonePit, 1)
@@ -114,7 +114,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			addEvent(releasePlayer, 1000, npc, creature)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('Ohh, then I need to find another adventurer who wants to earn a great reward. Bye!', npc, creature)
 			addEvent(releasePlayer, 1000, npc, creature)

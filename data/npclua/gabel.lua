@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission03)
-	if msgcontains(message, 'mission') then
+	if MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission02) ~= 2 then
 			npcHandler:say({
 				'So you would like to fight for us, would you. Hmm. ...',
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'All right. Listen! Thanks to Rata\'mari\'s report we now know what Malor is up to: he wants to do to me what I have done to him - he wants to imprison me in Fa\'hradin\'s lamp! ...',
 				'Of course, that won\'t happen. Now, we know his plans. ...',
@@ -94,13 +94,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(Storage.DjinnWar.MaridFaction.Mission03, 1)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('As you wish.', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'Daraman shall bless you and all humans! You have done us all a huge service! Soon, this awful war will be over! ...',
 				'Know, that from now on you are considered one of us and are welcome to trade with Haroun and Nah\'bob whenever you want to!'
@@ -109,7 +109,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DjinnWar.MaridFaction.DoorToEfreetTerritory, 1)
 			player:addAchievement('Marid Ally')
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Don\'t give up! May Daraman watch over you!', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

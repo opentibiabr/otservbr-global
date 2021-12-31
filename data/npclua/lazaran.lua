@@ -58,27 +58,27 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.TheNewFrontier.Questline) == 9 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.TheNewFrontier.Questline) == 9 then
 		if npcHandler:getTopic(playerId) == 0 then
 			npcHandler:say("Me people wanting {peace}. No war with others. No war with {little men}. We few. We weak. Need {help}. We not wanting make {war}. No hurt.", npc, creature)
 			npcHandler:setTopic(playerId, 10)
 		end
-	elseif msgcontains(message, "peace") and npcHandler:getTopic(playerId) == 10 and player:getStorageValue(Storage.TheNewFrontier.Questline) == 9 then
+	elseif MsgContains(message, "peace") and npcHandler:getTopic(playerId) == 10 and player:getStorageValue(Storage.TheNewFrontier.Questline) == 9 then
 		npcHandler:say("Me people wanting peace. No war with others. No war with little men.", npc, creature)
 		player:setStorageValue(Storage.TheNewFrontier.Questline, 10)
 		player:setStorageValue(Storage.TheNewFrontier.Mission03, 2) --Questlog, The New Frontier Quest "Mission 03: Strangers in the Night"
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "help") then
+	elseif MsgContains(message, "help") then
 		npcHandler:say("You mean you want help us?", npc, creature)
 		npcHandler:setTopic(playerId, 11)
-	elseif msgcontains(message, "mission") and npcHandler:getTopic(playerId) == 12 and player:getStorageValue(Storage.UnnaturalSelection.Questline) < 1 
+	elseif MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 12 and player:getStorageValue(Storage.UnnaturalSelection.Questline) < 1 
 	and player:getStorageValue(Storage.TheNewFrontier.Mission03) == 3 then
 		npcHandler:say({
 				"Big problem we have! Skull of first leader gone. He ancestor of whole tribe but died long ago in war. We have keep his skull on our sacred place. ...",
 				"Then one night, green men came with wolves... and one of wolves took skull and ran off chewing on it! We need back - many wisdom and power is in skull. Maybe they took to north fortress. But can be hard getting in. You try get our holy skull back?"
 			}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "mission") and player:getStorageValue(Storage.UnnaturalSelection.Questline) >= 1 then
+	elseif MsgContains(message, "mission") and player:getStorageValue(Storage.UnnaturalSelection.Questline) >= 1 then
 		if player:getStorageValue(Storage.UnnaturalSelection.Questline) == 1 then
 			npcHandler:say("Oh! You found holy skull? In bone pile you found?! Thank Pandor you brought! Me can have it back?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -108,7 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You bring us big pot of strange water from little men?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("You hero of our tribe if bring back holy skull!", npc, creature)
 			player:setStorageValue(Storage.UnnaturalSelection.Questline, 1)
@@ -161,9 +161,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Me have many small task, but also big {mission}. You say what want.", npc, creature)
 			npcHandler:setTopic(playerId, 12)
 		end
-	elseif msgcontains(message, "war") then
+	elseif MsgContains(message, "war") then
 		npcHandler:say("Many mighty monster rule land. We fight. We lose. We flee to mountain to hide.", npc, creature)
-	elseif msgcontains(message, "little men") then
+	elseif MsgContains(message, "little men") then
 		npcHandler:say("We come and see little men. They like us, only very little. They having good weapon and armor, like the greens.", npc, creature)
 	end
 	return true

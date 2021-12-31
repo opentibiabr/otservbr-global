@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "battle") then
+	if MsgContains(message, "battle") then
 		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 24 then
 			npcHandler:say({
 				"Zo you want to enter ze arena, you know ze rulez and zat zere will be no ozer option zan deaz or victory? ...",
@@ -63,7 +63,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 26 then
 			npcHandler:say({
 				"You have done ze impozzible and beaten ze champion. Your mazter will be pleazed. Hereby I cleanze ze poizon from your body. You are now allowed to leave. ...",
@@ -74,7 +74,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheNewFrontier.Mission09, 3) --Questlog, The New Frontier Quest "Mission 09: Mortal Combat"
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Asss you wishzz.", npc, creature)
 			player:setStorageValue(Storage.TheNewFrontier.Questline, 25)

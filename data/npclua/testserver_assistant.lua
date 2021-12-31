@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'money') then
+	if MsgContains(message, 'money') then
 		npcHandler:say('There you have', npc, creature)
 		player:addMoney(100000)
 	end

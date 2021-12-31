@@ -58,12 +58,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "do for you") then
+	if MsgContains(message, "do for you") then
 			npcHandler:say("I run the dog sled service from this city to {Nibelor}.", npc, creature)
-	elseif msgcontains(message, "Nibelor") or msgcontains(message, "passage") then
+	elseif MsgContains(message, "Nibelor") or MsgContains(message, "passage") then
 			npcHandler:say("Do you want to Nibelor?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.BarbarianTest.Questline) >= 8 then -- if Barbarian Test absolved
 			if player:getStorageValue(Storage.TheIceIslands.Questline) < 1 then
 				npcHandler:say({
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say("Sorry but I only give missions to those who are considered a true Barbarian. ", npc, creature)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"That's surprising. Take a piece of meat. If you find the boy, feed it to him. That will give him enough strength and incentive to return to his pack ...",

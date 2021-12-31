@@ -65,19 +65,19 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 	-- Pegando a quest
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) < 1 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) < 1 then
 			if player:getStorageValue(Storage.DjinnWar.Faction.MaridDoor) < 1 and player:getStorageValue(Storage.DjinnWar.Faction.EfreetDoor) < 1 then
 			npcHandler:say({
 				'Do you know the location of the djinn fortresses in the mountains south of here?'}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif npcHandler:getTopic(playerId) == 1 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 1 and MsgContains(message, "yes") then
 			npcHandler:say({
 				'Alright. The problem is that I want to know at least one of them on my side. You never know. I don\'t mind if it\'s the evil Efreet or the Marid. ...',
 				'Your mission will be to visit one kind of the djinns and bring them a peace-offering. Are you interested in that mission?'
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
-	elseif npcHandler:getTopic(playerId) == 2 and msgcontains(message, "yes") then
+	elseif npcHandler:getTopic(playerId) == 2 and MsgContains(message, "yes") then
 			npcHandler:say({
 				'Very good. I hope you are able to convince one of the fractions to stand on our side. If you haven\'t done yet, you should first go and look for old Melchior in Ankrahmun. ...',
 				'He knows many things about the djinn race and he may have some hints for you.'

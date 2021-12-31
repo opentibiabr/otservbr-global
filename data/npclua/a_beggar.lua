@@ -57,12 +57,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	if msgcontains(message, "want") then
+	if MsgContains(message, "want") then
 		if player:getStorageValue(Storage.DarkTrails.Mission01) == 1 then
 			npcHandler:setTopic(playerId, 1)
 		end
 		npcHandler:say("The guys from the magistrate sent you here, didn't they?", npc, creature)
-	elseif msgcontains(message, "yes")  then
+	elseif MsgContains(message, "yes")  then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"Thought so. You'll have to talk to the king though. The beggar king that is. The king does not grant an audience to just everyone. You know how those kings are, don't you? ... ",

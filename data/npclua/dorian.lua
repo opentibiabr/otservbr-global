@@ -59,7 +59,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.ThievesGuild.Quest) == 1 and player:getStorageValue(Storage.ThievesGuild.Mission01) < 1 then
 			player:setStorageValue(Storage.ThievesGuild.Mission01, 1)
 			npcHandler:say({
@@ -142,7 +142,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Have you finished your mission?', npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.ThievesGuild.Quest, 1)
 			npcHandler:say({
@@ -215,12 +215,12 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'thieves') or msgcontains(message, 'join') then
+	elseif MsgContains(message, 'thieves') or MsgContains(message, 'join') then
 		if player:getStorageValue(Storage.ThievesGuild.Quest) < 1 then
 			npcHandler:say('Hm. Well, we could use some fresh blood. Ahum. Do you want to join the thieves guild, |PLAYERNAME|?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'lock pick') then
+	elseif MsgContains(message, 'lock pick') then
 		npcHandler:say('Yes, I sell lock picks. Ask me for a trade.', npc, creature)
 	end
 	return true

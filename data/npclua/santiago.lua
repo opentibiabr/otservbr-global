@@ -209,7 +209,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		end
-	elseif msgcontains(message, "hurt") then
+	elseif MsgContains(message, "hurt") then
 		if storeTalkCid[playerId] == 6 then
 			npcHandler:say("This is an important lesson from me - an experienced veteran fighter. Take this! Look at your status bar again. As you can see, you've lost health. Now I'll tell you how to heal that, {yes}?", npc, creature)
 			player:getPosition():sendMagicEffect(CONST_ME_MORTAREA)
@@ -219,7 +219,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:sendTutorial(19)
 			storeTalkCid[playerId] = 7
 		end
-	elseif msgcontains(message, "action") then
+	elseif MsgContains(message, "action") then
 		if storeTalkCid[playerId] == 3 then
 			npcHandler:say("I knew I could count on you. Here, take this good and sturdy weapon in your hand. Then go back to my house and down the ladder. Good luck, and {bye} for now!", npc, creature)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoQuestLog, 4)
@@ -229,7 +229,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		end
-	elseif msgcontains(message, "easy") then
+	elseif MsgContains(message, "easy") then
 		if storeTalkCid[playerId] == 8 then
 			npcHandler:say("I knew you'd get it right away. You can loot food from many creatures, such as deer and rabbits. You can find them in the forest nearby. By the way... have you seen {Zirella}?", npc, creature)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 11)

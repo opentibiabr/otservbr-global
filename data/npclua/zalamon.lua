@@ -66,7 +66,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		-- CHILDREN OF REVOLUTION QUEST
 		if player:getStorageValue(Storage.ChildrenoftheRevolution.Questline) < 1 then
 			npcHandler:say({
@@ -219,7 +219,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	-- WRATH OF THE EMPEROR QUEST
-	elseif msgcontains(message, "crate") then
+	elseif MsgContains(message, "crate") then
 		if npcHandler:getTopic(playerId) == 17 then
 			npcHandler:say("Ah I zzee. You are ready for your mizzion and waiting for me to create and mark zze crate? ", npc, creature)
 			npcHandler:setTopic(playerId, 18)
@@ -227,7 +227,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	-- WRATH OF THE EMPEROR QUEST
 
 	-- CHILDREN OF REVOLUTION QUEST
-	elseif msgcontains(message, "symbols") then
+	elseif MsgContains(message, "symbols") then
 		if player:getStorageValue(Storage.ChildrenoftheRevolution.StrangeSymbols) == 1 then
 			npcHandler:say({
 				"Mh, zze zzymbolzz of zze chamber you dezzcribe are very common in our culture, palezzkin. You should have come accrozz zzem in many a plazze already. ...",
@@ -236,13 +236,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 11)
 		end
 	-- CHILDREN OF REVOLUTION QUEST
-	elseif msgcontains(message, "poison") or msgcontains(message, "poizzon") then
+	elseif MsgContains(message, "poison") or MsgContains(message, "poizzon") then
 		if player:getStorageValue(Storage.ChildrenoftheRevolution.Questline) == 9 then
 			npcHandler:say("Zze emperor of zze dragonzz hazz tranzzformed himzzelf into an undead creature to lazzt for all eternity, to cheat deazz. Hizz corruption flowzz to zzozze he bound, and from zzem to zzozze zzey bound, and from zzem into zze land.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 	-- CHILDREN OF REVOLUTION QUEST
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		-- CHILDREN OF REVOLUTION QUEST
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({

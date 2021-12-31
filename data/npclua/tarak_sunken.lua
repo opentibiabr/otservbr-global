@@ -58,10 +58,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "passage") then
+	if MsgContains(message, "passage") then
 		npcHandler:say("Do you want to go back to {Yalahar}?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			local destination = Position(32916, 31199, 7)
 			Player(creature):teleportTo(destination)

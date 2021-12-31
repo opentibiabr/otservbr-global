@@ -64,13 +64,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Fourteen.Remains) == 1 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Fourteen.Remains) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Fourteen.Remains) == 1 then
 			npcHandler:say({" I would like you to visit the grave of our beloved hero Dayyan. His remains have to be reburied, because a horde of ogres controls this place. Do you want to start this holy mission?"}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.Kilmaresh.Fourteen.Remains) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.Kilmaresh.Fourteen.Remains) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Fourteen.Remains) == 1 then
 			npcHandler:say({"Well, I appreciate that. Good luck!"}, npc, creature)
 			player:setStorageValue(Storage.Kilmaresh.Fourteen.Remains, 2)

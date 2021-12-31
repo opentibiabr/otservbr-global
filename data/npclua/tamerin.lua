@@ -72,7 +72,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 29 then
 			npcHandler:say({
 				"Why should I do something for another human being? I have been on my own for all those years. Hmm, but actually there is something I could need some assistance with. ... ",
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You have kept your promise. Now, it's time to fulfil my part of the bargain. What kind of animals shall I raise? {Warbeasts} or {cattle}?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "animal cure") then
+	elseif MsgContains(message, "animal cure") then
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 30 and player:removeItem(8819, 1) then
 			player:setStorageValue(Storage.InServiceofYalahar.Questline, 31)
 			player:setStorageValue(Storage.InServiceofYalahar.MorikSummon, 0)
@@ -93,21 +93,21 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say("Come back when you have the cure.", npc, creature)
 		end
-	elseif msgcontains(message, "cattle") then
+	elseif MsgContains(message, "cattle") then
 		if npcHandler:getTopic(playerId) == 2 then
 			player:setStorageValue(Storage.InServiceofYalahar.TamerinStatus, 1)
 			player:setStorageValue(Storage.InServiceofYalahar.Mission05, 6) -- StorageValue for Questlog "Mission 05: Food or Fight"
 			npcHandler:say("So be it!", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "warbeast") then
+	elseif MsgContains(message, "warbeast") then
 		if npcHandler:getTopic(playerId) == 2 then
 			player:setStorageValue(Storage.InServiceofYalahar.TamerinStatus, 2)
 			player:setStorageValue(Storage.InServiceofYalahar.Mission05, 7) -- StorageValue for Questlog "Mission 05: Food or Fight"
 			npcHandler:say("So be it!", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "morik") then
+	elseif MsgContains(message, "morik") then
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 31 and player:removeItem(8820, 1) then
 			player:setStorageValue(Storage.InServiceofYalahar.Questline, 32)
 			player:setStorageValue(Storage.InServiceofYalahar.Mission05, 5) -- StorageValue for Questlog "Mission 05: Food or Fight"
@@ -116,7 +116,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say("Come back when you got rid with Morik.", npc, creature)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.InServiceofYalahar.Questline, 30)
 			player:setStorageValue(Storage.InServiceofYalahar.Mission05, 3) -- StorageValue for Questlog "Mission 05: Food or Fight"

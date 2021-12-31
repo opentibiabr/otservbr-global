@@ -60,7 +60,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "project") and player:getStorageValue(Storage.TheNewFrontier.Questline) < 1 then
+	if MsgContains(message, "project") and player:getStorageValue(Storage.TheNewFrontier.Questline) < 1 then
 		if npcHandler:getTopic(playerId) == 0 then
 			npcHandler:say({
 				"Well, it's a long story but you really should listen to understand what is going on here. You can also hear a short version of the story, but then don't blame me if you mess something up due to your undwarfish impatience. ...",
@@ -68,7 +68,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "long") then
+	elseif MsgContains(message, "long") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"After centuries the resources beneath and around the Big Old One became alarmingly short. Some decades ago, the imperial mining guild financed a project to search and establish new mines far away from Kazordoon. ...",
@@ -88,7 +88,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "short") then
+	elseif MsgContains(message, "short") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"<grumbles> Well, we have found this place here full of promising resources and plan to create a new mining outpost. Of course this takes a lot of effort and organisation. ...",
@@ -101,7 +101,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheNewFrontier.Mission01, 1) --Questlog, The New Frontier Quest "Mission 01: New Land"
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheNewFrontier.Questline) < 1 and npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"Listen, I can handle the organisation down here and my boys will handle the construction of the base fine enough. Actually, all you do down here is to stand in the workers' way. ...",

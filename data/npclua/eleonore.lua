@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "ring") or msgcontains(message, "mission") then
+	if MsgContains(message, "ring") or MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheShatteredIsles.TheGovernorDaughter) < 1 then
 			npcHandler:say({
 				"My ring was stolen by a parrot, directly from my dressing table near the window. It flew to the nearby mountains and I fear my ring will be lost forever. Whoever returns it to me will be rewarded generously. ...",
@@ -74,29 +74,29 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("I would need some help in another matter. It is only a small errand. Are you interested?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "errand") then
+	elseif MsgContains(message, "errand") then
 		if player:getStorageValue(Storage.TheShatteredIsles.TheErrand) == 2 then
 			npcHandler:say("Great, thank you! As promised, here are your 5 gold pieces. Is there ... anything left that you might want to discuss with me?", npc, creature)
 			player:addMoney(5)
 			player:setStorageValue(Storage.TheShatteredIsles.TheErrand, 3)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "peg leg") then
+	elseif MsgContains(message, "peg leg") then
 		if player:getStorageValue(Storage.TheShatteredIsles.TheErrand) == 3 then
 			npcHandler:say("You have returned my ring and proven yourself as trustworthy. There is something I have to discuss with you. Are you willing to listen?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "raymond striker") then
+	elseif MsgContains(message, "raymond striker") then
 		if player:getStorageValue(Storage.TheShatteredIsles.AccessToLagunaIsland) == 1 then
 			npcHandler:say("<blushes> Oh, he is so wonderful. A very special man with a special place in my heart.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "mermaid") then
+	elseif MsgContains(message, "mermaid") then
 		if player:getStorageValue(Storage.TheShatteredIsles.AccessToLagunaIsland) == 1 then
 			npcHandler:say("I can't thank you enough for freeing my beloved Ray from that evil spell. I am still shocked that a mermaid could steal his love that easily.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeItem(6093, 1) then
 				player:addMoney(150)
@@ -133,7 +133,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheShatteredIsles.AccessToMeriana, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) >= 1 then
 			npcHandler:say("Then no.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

@@ -54,14 +54,14 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 	local playerId = creature:getId()
 --[[
-	if msgcontains(message, "fight") then
+	if MsgContains(message, "fight") then
 		npcHandler:say("You can help in the fight against the hive. There are several missions available to destabilise the hive. Just ask for them if you want to learn more. After completing many missions you might be worthy to get a reward.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		npcHandler:say("You could try to blind the hive, you might disrupt its digestion, you could gather acid or you can disable the swarm pores. ...", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("So be it. Now you are a member of the inquisition. You might ask me for a mission to raise in my esteem.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

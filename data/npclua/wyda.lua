@@ -62,19 +62,19 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'cookie') then
+	if MsgContains(message, 'cookie') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31
 				and player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.Wyda) ~= 1 then
 			npcHandler:say('You brought me a cookie?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'mission') or msgcontains(message, 'quest') then
+	elseif MsgContains(message, 'mission') or MsgContains(message, 'quest') then
 		npcHandler:say({
 			"A quest? Well, if you\'re so keen on doing me a favour... Why don\'t you try to find a {blood herb}?",
 			"To be honest, I\'m drowning in blood herbs by now."
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'bloodherb') or msgcontains(message, 'blood herb') then
+	elseif MsgContains(message, 'bloodherb') or MsgContains(message, 'blood herb') then
 		if player:getStorageValue(Storage.BloodHerbQuest) == 1  then
 			npcHandler:say('Arrr... here we go again.... do you have a #$*§# blood herb for me?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeItem(130, 1) then
 				npcHandler:say('You have no cookie that I\'d like.', npc, creature)
@@ -122,7 +122,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 1 or npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say('I see.', npc, creature)
 			npcHandler:setTopic(playerId, 0)

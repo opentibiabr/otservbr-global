@@ -59,7 +59,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "angelina") then
+	if MsgContains(message, "angelina") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) == 1 then
 			npcHandler:say({
 				"Angelina had been imprisoned? My, these are horrible news, but I am so glad to hear that she is safe now. ...",
@@ -68,27 +68,27 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "wand") or msgcontains(message, "rod") then
+	elseif MsgContains(message, "wand") or MsgContains(message, "rod") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) == 2 then
 			npcHandler:say("Did you bring a sample of each wand and each rod with you?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "sulphur") then
+	elseif MsgContains(message, "sulphur") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) == 3 then
 			npcHandler:say("Did you obtain 10 ounces of magic sulphur?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "soul stone") then
+	elseif MsgContains(message, "soul stone") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) == 4 then
 			npcHandler:say("Were you actually able to retrieve the Necromancer's soul stone?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "ankh") then
+	elseif MsgContains(message, "ankh") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) == 5 then
 			npcHandler:say("Am I sensing enough holy energy from ankhs here?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "ritual") then
+	elseif MsgContains(message, "ritual") then
 		if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand) == 6 then
 			if player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonWandTimer) < os.time() then
 				player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonWand, 7)
@@ -101,7 +101,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say('Please let me focus for a while, |PLAYERNAME|.', npc, creature)
 			end
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"Thank you, I promise that your efforts won't be in vain! Listen closely now: First, I need a sample of five druid rods and five sorcerer wands. ...",

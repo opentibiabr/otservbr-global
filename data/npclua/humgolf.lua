@@ -54,12 +54,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "farmine")) then
+	if(MsgContains(message, "farmine")) then
 		if(player:getStorageValue(Storage.TheNewFrontier.Questline) == 15) then
 			npcHandler:say("Bah, Farmine here, Farmine there. Is there nothing else than Farmine to talk about these days? Hrmpf, whatever. So what do you want?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif(msgcontains(message, "flatter")) then
+	elseif(MsgContains(message, "flatter")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			if(player:getStorageValue(Storage.TheNewFrontier.BribeHumgolf) < 1) then
 				npcHandler:say("Yeah, of course they can't do without my worms. Mining and worms go hand in hand. Well, in the case of the worms it is only an imaginary hand of course. I'll send them some of my finest worms.", npc, creature)

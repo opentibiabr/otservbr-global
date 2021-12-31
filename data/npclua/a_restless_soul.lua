@@ -64,7 +64,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "story") then
+	if MsgContains(message, "story") then
 		local player = Player(creature)
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 37 then
 			npcHandler:say({

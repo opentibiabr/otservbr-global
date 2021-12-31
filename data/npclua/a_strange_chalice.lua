@@ -57,14 +57,14 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "chalice") and player:getStorageValue(Storage.ForgottenKnowledge.Chalice) == 1 then
+	if MsgContains(message, "chalice") and player:getStorageValue(Storage.ForgottenKnowledge.Chalice) == 1 then
 		npcHandler:say({
 			"Finally. That's what I... oh wait, you're still talking to me - you will blow my cover! What do you want? Oh wait, did my {daughter} send you? It has been some time now, indeed."
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	end
 
-	if msgcontains(message, "daughter") and npcHandler:getTopic(playerId) == 1 then
+	if MsgContains(message, "daughter") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say({
 			"Well, besides being a renowned sorcerer and scholar at the magic academy in Edron, I am also the proud father of a beautiful daughter, Ivalisse. My little endeavour here must have troubled the poor thing all the time since I left. ...",
 			"Tell her I love her and that I will take care. I have to press on! My research is most valuable to the 'Edron-Zaoan Exploration Division'. You don't happen to have some water, do you? Ah nevermind. It's a long {story}."
@@ -72,7 +72,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 2)
 	end
 
-	if msgcontains(message, "story") and npcHandler:getTopic(playerId) == 2 then
+	if MsgContains(message, "story") and npcHandler:getTopic(playerId) == 2 then
 		npcHandler:say({
 			"No water then? Ah drat - er, don't worry, no problem. So, from the day I received news of the discovery of Zao, I wanted to study its inhabitants, wildlife, plants and geography. ...",
 			"The academy instated the 'Edron-Zaoan Exploration Division' shortly after. I was a founding member and head of the 'Draken' research branch. ...",
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 3)
 	end
 
-	if msgcontains(message, "disguised") and npcHandler:getTopic(playerId) == 3 then
+	if MsgContains(message, "disguised") and npcHandler:getTopic(playerId) == 3 then
 		npcHandler:say({
 			"Oh yes, so since I wanted to study the Draken up close, I came up with an idea. Based on my research, and some slight bruises and a scar, the perfect hiding place is often right in the middle of subjects. ...",
 			"If I could enter their lair unseen and establish a forward camp, I would be able to study the draken in peace - or so I thought. Turns out the whole place was empty. I set up my camp and waited. ...",
@@ -95,7 +95,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 4)
 	end
 
-	if msgcontains(message, "thirsty") and npcHandler:getTopic(playerId) == 4 then
+	if MsgContains(message, "thirsty") and npcHandler:getTopic(playerId) == 4 then
 		npcHandler:say({
 			"Ah did I say that? Nevermind, I'm not really thirsty. It's part of this illusion. Somehow, I've been in hiding for so long, I started to... become... a vessel. ...",
 			"I don't know, I have that constant urge to drink but in this form I would not need to, there is no mouth, no stomach, no flesh and no actual need to eat, drink or sleep. ...",
@@ -105,7 +105,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 5)
 	end
 
-	if msgcontains(message, "learned") and npcHandler:getTopic(playerId) == 5 then
+	if MsgContains(message, "learned") and npcHandler:getTopic(playerId) == 5 then
 		npcHandler:say({
 			"Yes, well for instance I tried for some time to figure out how to enter the fiery portal in this complex. Most of the draken never come up here. They rather hide somewhere down there, planning and plotting. ...",
 			" I already know how to enter it, you need to step in and yell 'zzubaran'. Unfortunately they never took me with them. ...",

@@ -58,15 +58,15 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'precious necklace') then
+	if MsgContains(message, 'precious necklace') then
 		if player:getItemCount(7940) > 0 then
 			npcHandler:say('Would you like to buy my precious necklace for 5000 gold?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'mouse') then
+	elseif MsgContains(message, 'mouse') then
 		npcHandler:say('Wha ... What??? Are you saying you\'ve seen a mouse here??', npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeMoneyBank(5000) then
 				player:removeItem(7940, 1)
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('IIIEEEEEK!', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say('Thank goodness!', npc, creature)
 			npcHandler:setTopic(playerId, 0)

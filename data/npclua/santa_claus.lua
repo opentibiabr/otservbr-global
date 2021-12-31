@@ -100,7 +100,7 @@ end
 local function creatureSayCallback(npc, creature, type, message)
 	local talkUser = NPCHANDLER_CONVBEHAVIOR == CONVERSATION_DEFAULT and 0 or creature
 	
-	if msgcontains(message, 'present') then
+	if MsgContains(message, 'present') then
 		local player = Player(creature)
 		if (player:getStorageValue(840293) == 1) then
 			npcHandler:say("You can't get other present.", npc, creature)

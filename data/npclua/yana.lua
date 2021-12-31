@@ -182,17 +182,17 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, "information") then
+	if MsgContains(message, "information") then
 		npcHandler:say({"{Tokens} are small objects made of metal or other materials. You can use them to buy superior equipment from token traders like me.",
 						"There are several ways to obtain the tokens I'm interested in - killing certain bosses, for example. In exchange for a certain amount of tokens, I can offer you some first-class items."}, npc, creature)
-	elseif msgcontains(message, "worth") then
+	elseif MsgContains(message, "worth") then
 	-- to do: check if Heart of Destruction was killed
 	-- after kill message: 'You disrupted the Heart of Destruction, defeated the World Devourer and bought our world some time. You have proven your worth.'
 	npcHandler:say({"Disrupt the Heart of Destruction, fell the World Devourer to prove your worth and you will be granted the power to imbue 'Powerful Strike', 'Powerful Void' and --'Powerful Vampirism'."}, npc, creature)
-	elseif msgcontains(message, "tokens") then
+	elseif MsgContains(message, "tokens") then
 		npc:openShopWindow(creature)
 		npcHandler:say("If you have any gold tokens with you, let's have a look! These are my offers.", npc, creature)
-	elseif msgcontains(message, "ofert") then
+	elseif MsgContains(message, "ofert") then
 		npcHandler:say({"I have creature products for the imbuements {strike}, {vampirism} and {void}. Make your choice, please!"}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif npcHandler:getTopic(playerId) == 1 then
@@ -215,7 +215,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 3)
 		end
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			local neededCap = 0
 			for i = 1, #products[answerType[playerId]][answerLevel[playerId]].itens do
 				neededCap = neededCap + ItemType(products[answerType[playerId]][answerLevel[playerId]].itens[i].id):getWeight() * products[answerType[playerId]][answerLevel[playerId]].itens[i].amount
@@ -234,7 +234,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			else
 				npcHandler:say("You don\'t have enough capacity. You must have "..neededCap.." oz.", npc, creature)
 			end
-		elseif msgcontains(message, "no") then
+		elseif MsgContains(message, "no") then
 			npcHandler:say("Your decision. Come back if you have changed your mind.",creature)
 		end
 		npcHandler:setTopic(playerId, 0)

@@ -72,7 +72,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'addon') then
+	if MsgContains(message, 'addon') then
 		if player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and 156 or 152) and player:getStorageValue(Storage.OutfitQuest.AssassinFirstAddon) < 1 then
 			npcHandler:say('Vescu gave you an assassin outfit? Haha. Noticed it lacks the head piece? You look a bit silly. Want my old head piece?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 3)
 			message[playerId] = message
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				'Thought so. Could use some help anyway. Listen, I need stuff. Someone gave me a strange assignment - sneak into Thais castle at night and shroud it with cloth without anyone noticing it. ...',
@@ -116,7 +116,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say(targetMessage.text[2], npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) > 0 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) > 0 then
 		npcHandler:say('Maybe another time.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

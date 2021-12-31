@@ -60,10 +60,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "melt") then
+	if MsgContains(message, "melt") then
 		npcHandler:say("Can melt gold ingot for lil' one. You want?", npc, creature)
 		npcHandler:setTopic(playerId, 10)
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 10 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 10 then
 		if player:removeItem(9058,1) then
 			npcHandler:say("whoooosh There!", npc, creature)
 			player:addItem(12804, 1)
@@ -73,7 +73,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 	end
 
-	if msgcontains(message, "amulet") then
+	if MsgContains(message, "amulet") then
 		if player:getStorageValue(Storage.SweetyCyclops.AmuletStatus) < 1 then
 			npcHandler:say("Me can do unbroken but Big Ben want gold 5000 and Big Ben need a lil' time to make it unbroken. Yes or no??", npc, creature)
 			npcHandler:setTopic(playerId, 9)
@@ -83,7 +83,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.SweetyCyclops.AmuletStatus, 2)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Wait. Me work no cheap is. Do favour for me first, yes?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -170,7 +170,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	-- Crown Armor
-	elseif msgcontains(message, "uth'kean") then
+	elseif MsgContains(message, "uth'kean") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Very noble. Shiny. Me like. But breaks so fast. Me can make from shiny armour. Lil' one want to trade?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -182,7 +182,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 4)
 		end
 	-- Dragon Shield
-	elseif msgcontains(message, "uth'lokr") then
+	elseif MsgContains(message, "uth'lokr") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Firy steel it is. Need green ones' breath to melt. Or red even better. Me can make from shield. Lil' one want to trade?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -194,7 +194,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 5)
 		end
 	-- Devil Helmet
-	elseif msgcontains(message, "za'ralator") then
+	elseif MsgContains(message, "za'ralator") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Hellsteel is. Cursed and evil. Dangerous to work with. Me can make from evil helmet. Lil' one want to trade?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -206,7 +206,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 6)
 		end
 	-- Giant Sword
-	elseif msgcontains(message, "uth'prta") then
+	elseif MsgContains(message, "uth'prta") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Good iron is. Me friends use it much for fight. Me can make from weapon. Lil' one want to trade?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -218,7 +218,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 7)
 		end
 	-- Soul Orb
-	elseif msgcontains(message, "soul orb") then
+	elseif MsgContains(message, "soul orb") then
 		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Uh. Me can make some nasty lil' bolt from soul orbs. Lil' one want to trade all?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -229,7 +229,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Uh. Me can make some nasty lil' bolt from soul orbs. Lil' one want to trade all?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif msgcontains(message, "gear wheel") then
+	elseif MsgContains(message, "gear wheel") then
 		if player:getStorageValue(Storage.HiddenCityOfBeregar.GoingDown) > 0 and player:getStorageValue(Storage.HiddenCityOfBeregar.GearWheel) > 3 then
 			npcHandler:say("Uh. Me can make some gear wheel from iron ores. Lil' one want to trade?", npc, creature)
 			npcHandler:setTopic(playerId, 11)

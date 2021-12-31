@@ -72,12 +72,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- PREQUEST
-	if msgcontains(message, "mine") then
+	if MsgContains(message, "mine") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 1 then
 			npcHandler:say("YOURS? WHAT IS YOURS! NOTHING IS YOURS! IS MINE! GO AWAY, YES?!", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("YOU STUPID! STUBBORN! I KILL YOU! WILL LEAVE NOW?!", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -88,49 +88,49 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("I GIVE YOU NO!", npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "please") then
+	elseif MsgContains(message, "please") then
 		if npcHandler:getTopic(playerId) == 4 then
 			npcHandler:say("Please? What you mean please? Like I say please you say bye? Please?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
 	-- OUTFIT
-	elseif msgcontains(message, "gelagos") then
+	elseif MsgContains(message, "gelagos") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 4 then
 			npcHandler:say("Annoying kid. Bro hates him, but talking no help. Bro needs {fighting spirit}!", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "fighting spirit") then
+	elseif MsgContains(message, "fighting spirit") then
 		if npcHandler:getTopic(playerId) == 6 then
 			npcHandler:say("If you want to help bro, bring him fighting spirit. Magic fighting spirit. Ask Djinn.", npc, creature)
 			player:setStorageValue(Storage.OutfitQuest.BarbarianAddon, 5)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "present") then
+	elseif MsgContains(message, "present") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 11 then
 			npcHandler:say("Bron gave me present. Ugly, but nice from him. Me want to give present too. You help me?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "ore") then
+	elseif MsgContains(message, "ore") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 12 then
 			npcHandler:say("You bring 100 iron ore?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif msgcontains(message, "iron") then
+	elseif MsgContains(message, "iron") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 13 then
 			npcHandler:say("You bring crude iron?", npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		end
-	elseif msgcontains(message, "fangs") then
+	elseif MsgContains(message, "fangs") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 14 then
 			npcHandler:say("You bring 50 behemoth fangs?", npc, creature)
 			npcHandler:setTopic(playerId, 10)
 		end
-	elseif msgcontains(message, "leather") then
+	elseif MsgContains(message, "leather") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 15 then
 			npcHandler:say("You bring 50 lizard leather?", npc, creature)
 			npcHandler:setTopic(playerId, 11)
 		end
-	elseif msgcontains(message, "axe") then
+	elseif MsgContains(message, "axe") then
 		if player:getStorageValue(Storage.OutfitQuest.BarbarianAddon) == 16 and player:getStorageValue(Storage.OutfitQuest.BarbarianAddonWaitTimer) < os.time() then
 			npcHandler:say("Axe is done! For you. Take. Wear like me.", npc, creature)
 			player:setStorageValue(Storage.OutfitQuest.BarbarianAddon, 17)
@@ -142,7 +142,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Axe is not done yet!", npc, creature)
 		end
 	-- OUTFIT
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 5 then
 			npcHandler:say("Oh. Easy. Okay. Please is good. Now don't say anything. Head aches. ", npc, creature)
 			local condition = Condition(CONDITION_FIRE)

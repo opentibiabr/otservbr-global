@@ -58,7 +58,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.ExplorerSociety.CalassaQuest) == 2 then
 			npcHandler:say("OH! So you have safely returned from Calassa! Congratulations, were you able to retrieve the logbook?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
@@ -66,7 +66,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("The most important mission we currently have is an expedition to {Calassa}.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "calassa") then
+	elseif MsgContains(message, "calassa") then
 		if npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.ExplorerSociety.CalassaQuest) < 1 then
 			npcHandler:say("Ah! So you have heard about our special mission to investigate the Quara race in their natural surrounding! Would you like to know more about it?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -79,7 +79,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("OH! So you have safely returned from Calassa! Congratulations, were you able to retrieve the logbook?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"Since you have already proved to be a valuable member of our society, I will happily entrust you with this mission, but there are a few things which you need to know, so listen carefully. ...",

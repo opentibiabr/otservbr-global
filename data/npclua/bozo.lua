@@ -623,7 +623,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'join') then
+	if MsgContains(message, 'join') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) ~= -1 then
 			npcHandler:say('Wow, your stupidity would be pride and joy for every fool. You\'ve already applied as a member. Let\'s rather talk about your current mission.', npc, creature)
 			return true
@@ -631,7 +631,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 		npcHandler:say('Do you wish to become a jester and join the fools guild?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'mission') then
+	elseif MsgContains(message, 'mission') then
 		local targetValue = config[player:getStorageValue(Storage.WhatAFoolish.Questline)]
 		if not targetValue then
 			return true
@@ -655,7 +655,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 3)
 			value[playerId] = targetValue
 		end
-	elseif msgcontains(message, 'jester outfit') then
+	elseif MsgContains(message, 'jester outfit') then
 		if player:getStorageValue(Storage.WhatAFoolish.Questline) == 12 then
 			local targetValue = jesterOutfit[player:getStorageValue(Storage.WhatAFoolish.JesterOutfit)]
 			if not targetValue then
@@ -668,7 +668,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say('I\'m sure it suits you well.', npc, creature)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				'So you want to make a total fool of yourself? Fine with me, but note that becoming a real fool means more than being just an ordinary fool ...',
@@ -780,7 +780,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
 		if isInArray({1, 2}, npcHandler:getTopic(playerId)) then
 			npcHandler:say('Too bad, I\'m convinced you have it in you.', npc, creature)
 		elseif isInArray({3, 4}, npcHandler:getTopic(playerId)) then

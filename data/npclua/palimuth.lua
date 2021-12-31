@@ -62,14 +62,14 @@ local function creatureSayCallback(npc, creature, type, message)
 		player:setStorageValue(Storage.InServiceofYalahar.Questline, 3)
 	end
 
-	if msgcontains(message, "job") and not player:getStorageValue(Storage.InServiceofYalahar.Questline) == 54 then
+	if MsgContains(message, "job") and not player:getStorageValue(Storage.InServiceofYalahar.Questline) == 54 then
 		npcHandler:say("I'm an Augur of the city of Yalahar. My special duty consists of coordinating the efforts to keep the city and its services running.", npc, creature)
-	elseif msgcontains(message, "job") then
+	elseif MsgContains(message, "job") then
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 54 then
 			npcHandler:say("Did you bring me the vampiric crest?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "mission") then
+	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.InServiceofYalahar.Questline) == 3 then
 			npcHandler:say({
 				"You probably heard that we have numerous problems in different quarters of our city. Our forces are limited, so we really could need some help from outsiders. ...",
@@ -253,7 +253,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.InServiceofYalahar.Questline, 4)
 			npcHandler:say({

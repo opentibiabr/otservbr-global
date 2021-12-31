@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if npcHandler:getTopic(playerId) == 0 then
-		if msgcontains(message, 'outfit') then
+		if MsgContains(message, 'outfit') then
 			npcHandler:say({
 				'I\'m tired of all these young unskilled wannabe heroes. Every Tibian can show his skills or actions by wearing a special outfit. To prove oneself worthy of the demon outfit, this is how it goes: ...',
 				'The base outfit will be granted for completing the annihilator quest, which isn\'t much of a challenge nowadays, in my opinion. Anyway ...',
@@ -63,14 +63,14 @@ local function creatureSayCallback(npc, creature, type, message)
 				'Are you interested?'
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
-		elseif msgcontains(message, 'cookie') then
+		elseif MsgContains(message, 'cookie') then
 			if player:getStorageValue(Storage.WhatAFoolish.Questline) == 31
 			and player:getStorageValue(Storage.WhatAFoolish.CookieDelivery.AvarTar) ~= 1 then
 				npcHandler:say('Do you really think you could bribe a hero like me with a meagre cookie?', npc, creature)
 				npcHandler:setTopic(playerId, 3)
 			end
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say('So you want to have the demon outfit, hah! Let\'s have a look first if you really deserve it. Tell me: {base}, {shield} or {helmet}?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -91,13 +91,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		end
-	elseif msgcontains(message, 'no') then
+	elseif MsgContains(message, 'no') then
 		if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say('I see.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'base') then
+		if MsgContains(message, 'base') then
 			if player:getStorageValue(Storage.Quest.TheAnnihilator.Reward) == 1 then
 				player:addOutfit(541)
 				player:addOutfit(542)
@@ -108,7 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say('You need to complete annihilator quest first, |PLAYERNAME|.', npc, creature)
 				npcHandler:setTopic(playerId, 2)
 			end
-		elseif msgcontains(message, 'shield') then
+		elseif MsgContains(message, 'shield') then
 			if player:getStorageValue(Storage.Quest.TheAnnihilator.Reward) == 2
 			and player:getStorageValue(Storage.Quest.DemonHelmet.DemonHelmet) == 1 then
 				player:addOutfitAddon(541, 1)
@@ -120,7 +120,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say('The shield will only be granted to those adventurers who have finished the demon helmet quest, |PLAYERNAME|.', npc, creature)
 				npcHandler:setTopic(playerId, 2)
 			end
-		elseif msgcontains(message, 'helmet') then
+		elseif MsgContains(message, 'helmet') then
 			if player:getStorageValue(Storage.Quest.TheAnnihilator.Reward) == 2
 			and player:getStorageValue(Storage.DemonOak.Done) == 3 then
 				player:addOutfitAddon(541, 2)

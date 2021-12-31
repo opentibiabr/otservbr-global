@@ -60,10 +60,10 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 	-- The paradox tower quest
-	if msgcontains(message, "yenny the gentle") then
+	if MsgContains(message, "yenny the gentle") then
 		npcHandler:say("Ah, Yenny the Gentle was one of the founders of the druid order called Crunor's Caress, that has been originated in her hometown Carlin.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "crunors caress") then
+	elseif MsgContains(message, "crunors caress") then
 		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) == 1 then
 			-- Questlog: The Feared Hugo (Padreia)
 			player:setStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo, 2)

@@ -211,19 +211,19 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "create") then
+	if MsgContains(message, "create") then
 		npcHandler:say("You can try to create {sword}s, {axe}s, {club}s, {bow}s, {crossbow}s and {spellbook}s.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 		action[playerId] = ACTION.CREATE
-	elseif msgcontains(message, "improve") then
+	elseif MsgContains(message, "improve") then
 		npcHandler:say("The raw object is nothing but a pale of shadow of its potential. As unsafe and unpredictable the imporvement is, it might boot the powers of your item immensely. You can try to improve {sword}s, {axe}s, {club}s, {bow}s, {crossbow}s and {spellbook}s.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 		action[playerId] = ACTION.IMPROVE
-	elseif msgcontains(message, "transform") then
+	elseif MsgContains(message, "transform") then
 		npcHandler:say("From time to time fate smiles upon those who take great risks and have strong dreams! If you have the {ingredients}, we can try to give the ultimate refinement to {sword}s, {axe}s, {club}s, {bow}s, {crossbow}s and {spellbook}s.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 		action[playerId] = ACTION.TRANSFORM
-	elseif msgcontains(message, "sword") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "sword") and npcHandler:getTopic(playerId) == 1 then
 		weapon[playerId] = TYPES.SWORD
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to create a crude umbral {blade} or crude umbral {slayer}?", npc, creature)
@@ -235,8 +235,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to transform an umbral {blade} or umbral {slayer}?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "blade") or msgcontains(message, "slayer") and npcHandler:getTopic(playerId) == 2 then
-		weapon_sub[playerId] = (msgcontains(message, "blade") and SUB_TYPES.BLADE or SUB_TYPES.SLAYER)
+	elseif MsgContains(message, "blade") or MsgContains(message, "slayer") and npcHandler:getTopic(playerId) == 2 then
+		weapon_sub[playerId] = (MsgContains(message, "blade") and SUB_TYPES.BLADE or SUB_TYPES.SLAYER)
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to spend " .. (Config.Create.DreamMatter == 1 and "your" or Config.Create.DreamMatter) .. " dream matter with " .. (Config.Create.Clusters > 1 and "those" or "your") .. " " .. Config.Create.Clusters .. " clusters of {solace} and give a shot. {Yes} or {no}", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -247,7 +247,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to spend your umbral " .. (weapon_sub[playerId] == SUB_TYPES.BLADE and "blade" or "slayer") .. " with " .. (Config.Transform.Clusters > 1 and "those" or "your") .. " " .. Config.Transform.Clusters .. " clusters of {solace} and give it a shot. {Yes} or {no}?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "axe") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "axe") and npcHandler:getTopic(playerId) == 1 then
 		weapon[playerId] = TYPES.AXE
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to create a crude umbral {axe} or crude umbral {chopper}?", npc, creature)
@@ -259,8 +259,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to transform an umbral {axe} or umbral {chopper}?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "axe") or msgcontains(message, "chopper") and npcHandler:getTopic(playerId) == 2 then
-		weapon_sub[playerId] = (msgcontains(message, "axe") and SUB_TYPES.AXE or SUB_TYPES.CHOPPER)
+	elseif MsgContains(message, "axe") or MsgContains(message, "chopper") and npcHandler:getTopic(playerId) == 2 then
+		weapon_sub[playerId] = (MsgContains(message, "axe") and SUB_TYPES.AXE or SUB_TYPES.CHOPPER)
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to spend your dream matter with those 25 clusters of {solace} and give a shot. {Yes} or {no}", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -271,7 +271,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to spend your umbral " .. (weapon_sub[playerId] == SUB_TYPES.AXE and "axe" or "chopper") .. " with " .. (Config.Transform.Clusters > 1 and "those" or "your") .. " " .. Config.Transform.Clusters .. " clusters of {solace} and give it a shot. {Yes} or {no}?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "club") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "club") and npcHandler:getTopic(playerId) == 1 then
 		weapon[playerId] = TYPES.CLUB
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to create a crude umbral {mace} or crude umbral {hammer}?", npc, creature)
@@ -284,7 +284,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 2)
 		end
 	elseif isInArray({"mace", "hammer"}, message) and npcHandler:getTopic(playerId) == 2 then
-		weapon_sub[playerId] = (msgcontains(message, "mace") and SUB_TYPES.MACE or SUB_TYPES.HAMMER)
+		weapon_sub[playerId] = (MsgContains(message, "mace") and SUB_TYPES.MACE or SUB_TYPES.HAMMER)
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to spend your dream matter with " .. (Config.Create.Clusters > 1 and "those" or "your") .. " " .. Config.Create.Clusters .. " clusters of {solace} and give a shot. {Yes} or {no}", npc, creature)
 			npcHandler:setTopic(playerId, 3)
@@ -295,7 +295,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to spend your umbral " .. (weapon_sub[playerId] == SUB_TYPES.MACE and "mace" or "hammer") .. " with " .. (Config.Transform.Clusters > 1 and "those" or "your") .. " " .. Config.Transform.Clusters .. " clusters of {solace} and give it a shot. {Yes} or {no}?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "bow") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "bow") and npcHandler:getTopic(playerId) == 1 then
 		weapon[playerId] = TYPES.BOW
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to spend your dream matter with " .. (Config.Create.Clusters > 1 and "those" or "your") .. " " .. Config.Create.Clusters .. " clusters of {solace} and give a shot. {Yes} or {no}", npc, creature)
@@ -307,7 +307,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to spend your umbral bow with " .. (Config.Transform.Clusters > 1 and "those" or "your") .. " " .. Config.Transform.Clusters .. " clusters of {solace} and give it a shot. {Yes} or {no}?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "crossbow") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "crossbow") and npcHandler:getTopic(playerId) == 1 then
 		weapon[playerId] = TYPES.CROSSBOW
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to spend your dream matter with " .. (Config.Create.Clusters > 1 and "those" or "your") .. " " .. Config.Create.Clusters .. " clusters of {solace} and give a shot. {Yes} or {no}", npc, creature)
@@ -319,7 +319,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to spend your umbral crossbow with " .. (Config.Transform.Clusters > 1 and "those" or "your") .. " " .. Config.Transform.Clusters .. " clusters of {solace} and give it a shot. {Yes} or {no}?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "spellbook") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "spellbook") and npcHandler:getTopic(playerId) == 1 then
 		weapon[playerId] = TYPES.SPELLBOOK
 		if action[playerId] == ACTION.CREATE then
 			npcHandler:say("Do you want to spend your dream matter with " .. (Config.Create.Clusters > 1 and "those" or "your") .. " " .. Config.Create.Clusters .. " clusters of {solace} and give a shot. {Yes} or {no}", npc, creature)
@@ -331,7 +331,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want to spend your umbral spellbook with " .. (Config.Transform.Clusters > 1 and "those" or "your") .. " " .. Config.Transform.Clusters .. " clusters of {solace} and give it a shot. {Yes} or {no}?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
 
 		if action[playerId] == ACTION.CREATE then --create
 			if player:getItemCount(IDS.DREAM_MATTER) >= 1 and player:getItemCount(IDS.CLUSTER_OF_SOLACE) >= Config.Create.Clusters then

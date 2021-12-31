@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if (msgcontains(message, "offers")) then
+	if (MsgContains(message, "offers")) then
 		local text = "I have these offers: "
 		for i, v in pairs(itemsTable) do
 			text = text.. "{" ..i.. "}, "
@@ -107,7 +107,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, "yes") then
+		if MsgContains(message, "yes") then
 			if (tonumber(storeTable[playerId]) == 6526) then
 				if (player:removeItem(6496, 1)) then
 					npcHandler:say("Thank you, here is your 1 christmas token.", npc, creature)
@@ -129,11 +129,11 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 	elseif npcHandler:getTopic(playerId) > 0 then
-		if msgcontains(message, "no") then
+		if MsgContains(message, "no") then
 			npcHandler:say("Come back when you are ready to trade some tokens!", npc, creature)
 		end
 	end
-	if msgcontains(message, "santa claus") then
+	if MsgContains(message, "santa claus") then
 		npcHandler:say({
 			"Well, he does not really like it if someone tells his story ... but I do! A long, long time ago Santa was nothing but a greedy little dwarf. A real miser, I tell ya ...",
 			"He was greedy even by dwarven standards. He would never share anything or give away the cheapest thing in his possession ...",

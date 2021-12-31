@@ -64,7 +64,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "seamonster") then
+	if MsgContains(message, "seamonster") then
 		npcHandler:say({
 			'Only some days ago I was at the docks late in the night and was looking for my husband\'s ship when suddenly a known noise appeared near the docks. ...',
 			'I know this noise very well because it is the noise of a ship sailing very fast. I searched the horizon in hope to see my husbands ship. ...',
@@ -74,7 +74,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			'I told him about what I saw but he didn\'t believe me because he never saw anything like that in all the years before. But you believe me right? Go and convince yourself. ...',
 			'Just go to the docks at exactly midnight and be very quiet. Look at the horizon and maybe you will hear and see it, too!'
 		}, npc, creature)
-	elseif msgcontains(message, "aneus") then
+	elseif MsgContains(message, "aneus") then
 		npcHandler:say({
 			'A very nice person. He has a great story to tell with big fights and much magic. Just ask him for his story. ...',
 			'I heard that he came from far, far away. He must have seen soooo many countries, cities, different races. ...',
@@ -82,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			'I would try to visit as many cities and meet as many beings as possible. Who knows what strange races I will meet? ...',
 			'Maybe I can also find a lovely new dress for me. I have been looking for one for months now but never found a good one. Maybe... *keeps on babbling*'
 		}, npc, creature)
-	elseif msgcontains(message, "rumours") then
+	elseif MsgContains(message, "rumours") then
 		npcHandler:say({
 			'Well, I heard about evil beings living in a dungeon below us. So once I tried to find them and went down the hole far to the southwest. ...',
 			'I\'m pretty curious, you know. *smiles* So I took the coat of invisibility from my husband and went down there. At first I only found some spiders, snakes, and wolves. ...',

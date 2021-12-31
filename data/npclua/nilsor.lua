@@ -58,10 +58,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "svargrond") or msgcontains(message, "passage") then
+	if MsgContains(message, "svargrond") or MsgContains(message, "passage") then
 		npcHandler:say("Do you want to go back to Svargrond?", npc, creature)
 		npcHandler:setTopic(playerId, 10)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 10 then
 			player:teleportTo(Position(32306, 31082, 7))
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
@@ -69,7 +69,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 20 then
 			npcHandler:say({
 				"I am in dire need of help. A plague has befallen my dogs. I even called a druid of Carlin for help but all he could do was to recommend some strong medicine ...",
@@ -92,16 +92,16 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("I have now no mission for you.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "waterskin") then
+	elseif MsgContains(message, "waterskin") then
 		npcHandler:say("Do you want to buy a waterskin for 25 gold?", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 
-	elseif msgcontains(message, "cactus") then
+	elseif MsgContains(message, "cactus") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 21 then
 			npcHandler:say("You will find this kind of cactus at places that are called deserts. Only an ordinary kitchen knife will be precise enough to produce the ingredient weneed. Do you have a part of that cactus with you?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "water") then
+	elseif MsgContains(message, "water") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 22 then
 			npcHandler:say({
 				"You will need a specially prepared waterskin to collect the water. You can buy one from me ...",
@@ -109,33 +109,33 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "sulphur") then
+	elseif MsgContains(message, "sulphur") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 23 then
 			npcHandler:say("I need fine sulphur of an inactive lava hole. No other sulphur will do. Use an ordinary kitchen spoon on an inactive lava hole. Do you have fine sulphur with you?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "herb") then
+	elseif MsgContains(message, "herb") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 24 then
 			npcHandler:say("The frostbite herb is a local plant but its quite rare. You can find it on mountain peaks. You will need to cut it with a fine kitchen knife. Do you have a frostbite herb with you?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "blossom") then
+	elseif MsgContains(message, "blossom") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 25 then
 			npcHandler:say("The purple kiss is a plant that grows in a place called jungle. You will have to use a kitchen knife to harvest its blossom. Do you have a blossom of a purple kiss with you?", npc, creature)
 			npcHandler:setTopic(playerId, 7)
 		end
-	elseif msgcontains(message, "hydra tongue") then
+	elseif MsgContains(message, "hydra tongue") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 26 then
 			npcHandler:say("The hydra tongue is a common pest plant in warmer regions. You might find one in a shop. Do you have a hydra tongue with you?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif msgcontains(message, "spores") then
+	elseif MsgContains(message, "spores") then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 27 then
 			npcHandler:say("The giant glimmercap mushroom exists in caves and other preferably warm and humid places. Use an ordinary kitchen spoon on a mushroom to collectits spores. Do you have the glimmercap spores?", npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		end
 
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"A thousand thanks in advance. I need no less than 7 ingredients for the cure. You can ask me about each specifically ...",
@@ -219,7 +219,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) >= 2 then
 			npcHandler:say("Then come back when you have the ingredient.", npc, creature)
 		end

@@ -59,12 +59,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "seventh seal") then
+	if MsgContains(message, "seventh seal") then
 		npcHandler:say("If you have passed the first six seals and entered the blue fires that lead to \z
 				the chamber of the seal you might receive my {kiss} ... It will open the last seal. \z
 				Do you think you are ready?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "kiss") and npcHandler:getTopic(playerId) == 7 then
+	elseif MsgContains(message, "kiss") and npcHandler:getTopic(playerId) == 7 then
 		if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.LastSeal) < 1 then
 			npcHandler:say("Are you prepared to receive my kiss, even though this will mean that your \z
 					death as well as a part of your soul will forever belong to me, my dear?", npc, creature)
@@ -73,25 +73,25 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You have already received my kiss. You should know better then to ask for it.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "spectral dress") then
+	elseif MsgContains(message, "spectral dress") then
 		if player:getStorageValue(Storage.ExplorerSociety.TheSpectralDress) == 48 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 48 and player:getStorageValue(Storage.ExplorerSociety.BansheeDoor) < 1 then
 			npcHandler:say("Your wish for a spectral dress is silly. \z
 					Although I will grant you the permission to take one. \z
 					My maidens left one in a box in a room, directly south of here.", npc, creature)
 			player:setStorageValue(Storage.ExplorerSociety.BansheeDoor, 1)
 		end
-	elseif msgcontains(message, "addon") then
+	elseif MsgContains(message, "addon") then
 		if player:getStorageValue(Storage.OutfitQuest.WizardAddon) == 5 then
 			npcHandler:say("Say... I have been longing for something for an eternity now... \z
 					if you help me retrieve it, I will reward you. Do you consent to this arrangement?", npc, creature)
 			npcHandler:setTopic(playerId, 9)
 		end
-	elseif msgcontains(message, "orchid") or msgcontains(message, "holy orchid") then
+	elseif MsgContains(message, "orchid") or MsgContains(message, "holy orchid") then
 		if player:getStorageValue(Storage.OutfitQuest.WizardAddon) == 6 then
 			npcHandler:say("Have you really brought me 50 holy orchids?", npc, creature)
 			npcHandler:setTopic(playerId, 11)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.FourthSeal) == 1 then
 				npcHandler:say("The Queen of the Banshee: Yessss, I can sense you have passed the seal of sacrifice. \z
@@ -186,7 +186,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) >= 1 and npcHandler:getTopic(playerId) <= 7 then
 			npcHandler:say("Then try to be better prepared next time we meet.", npc, creature)
 		elseif npcHandler:getTopic(playerId) == 8 then

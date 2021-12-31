@@ -63,7 +63,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03)
-	if msgcontains(message, 'mission') then
+	if MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission02) == 3 then
 			if missionProgress < 1 then
 				npcHandler:say({
@@ -91,7 +91,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'Well, listen. We are trying to acquire the ultimate weapon to defeat Gabel: Fa\'hradin\'s lamp! ...',
 				'At the moment it is still in the possession of that good old friend of mine, the Orc King, who kindly released me from it. ...',
@@ -101,13 +101,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission03, 1)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Your choice.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'Well well, human. So you really have made it - you have smuggled the modified lamp into Gabel\'s bedroom! ...',
 				'I never thought I would say this to a human, but I must confess I am impressed. ...',
@@ -121,7 +121,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addAchievement('Efreet Ally')
 			addEvent(releasePlayer, 1000, npc, creature)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Just do it!', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

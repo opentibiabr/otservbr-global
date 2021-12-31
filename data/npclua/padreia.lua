@@ -60,10 +60,10 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 	-- Tibia tales quest
-	if msgcontains(message, "cough syrup") then
+	if MsgContains(message, "cough syrup") then
 		npcHandler:say("Do you want to buy a bottle of cough syrup for 50 gold?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, 'mission') then
+	elseif MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.TibiaTales.TheExterminator) == -1 then
 			npcHandler:say({
 				'Oh |PLAYERNAME|, thank god you came to me. Last night, I had a vision about an upcoming plague here in Carlin. ...',
@@ -82,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say('Maybe the guards have something to do for you or know someone who could need some help.', npc, creature)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if not player:removeMoneyBank(50) then
 				npcHandler:say("You don't have enough money.", npc, creature)
@@ -100,7 +100,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Then no.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
@@ -111,10 +111,10 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- The paradox tower quest
-	if msgcontains(message, "crunor's caress") then
+	if MsgContains(message, "crunor's caress") then
 		npcHandler:say("Don't ask. They were only an unimportant footnote of history.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "footnote") then
+	elseif MsgContains(message, "footnote") then
 		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) == 2 then
 			-- Questlog: The Feared Hugo (Lubo)
 			player:setStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo, 3)

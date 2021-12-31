@@ -112,7 +112,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'documents') then
+	if MsgContains(message, 'documents') then
 		if player:getStorageValue(Storage.ThievesGuild.Mission04) == 2 then
 			player:setStorageValue(Storage.ThievesGuild.Mission04, 3)
 			npcHandler:say({
@@ -123,7 +123,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('The slayer of my enemies is my friend! For a mere 1000 gold I will create the documents you need. Are you interested?', npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'mission') or msgcontains(message, 'quest') then
+	elseif MsgContains(message, 'mission') or MsgContains(message, 'quest') then
 		if player:getStorageValue(Storage.QuestChests.StealFromThieves) < 1 then
 			npcHandler:say({
 				"What are you talking about?? I was robbed!!!! Someone catch those filthy thieves!!!!! GUARDS! ...",
@@ -134,10 +134,10 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Did you find my stuff?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, 'book') then
+	elseif MsgContains(message, 'book') then
 		npcHandler:say('I see: You want me to add an additional story to this book. A legend about how it brings ill luck to kill a white deer. I could do that, yes. It costs 5000 gold, however. Are you still interested?', npc, creature)
 		npcHandler:setTopic(playerId, 5)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:removeMoneyBank(1000) then
 				player:addItem(7866, 1)

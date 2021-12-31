@@ -51,17 +51,17 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if(msgcontains(message, "flou")) then
+	if(MsgContains(message, "flou")) then
 		if(getPlayerStorageValue(creature, Storage.Navigator) < 1) then
 			npcHandler:say("Lhnjei gouthn naumpi! I know why you are here. I can {explain} everything.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif(msgcontains(message, "explain")) then
+	elseif(MsgContains(message, "explain")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say("By entering this place, you have earned the right to learn what this is all about. This is a long story. Are you sure you want to hear this, {yes}?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif(msgcontains(message, "helmet")) then
+	elseif(MsgContains(message, "helmet")) then
 		if(npcHandler:getTopic(playerId) == 7) then
 			selfSay("NAAAAARGH. If you promise to leave me alone and NOT TO TELL MY SECRET to anyone - you can have one. ...", npc, creature)
 			selfSay("NO! Not the one I'm wearing. I am BOUND to this device. This suit has granted me a longer life. However, once you have spent a certain time with this - there is no turning back if you know what I mean. ...", npc, creature)
@@ -69,7 +69,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Using Deepling craft and various components from down here, I created several spare helmets - just in case this one gets damaged. If you return that small golden anchor to me, you can have one. Will you?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
-	elseif(msgcontains(message, "no")) then
+	elseif(MsgContains(message, "no")) then
 		if(npcHandler:getTopic(playerId) == 3) then
 			selfSay("When none of my men returned, I forced myself to make a decision. Either dying on this dead ship or plunging into the liquid black beneath. ...", npc, creature)
 			selfSay("In my desperation my thoughts fell onto a strange armor - a gift from a trader we dealt with just before the storm. Strange ornaments and fish-like elements decorated this armor. We thought it would fit just perfectly into the captain's cabin. ...", npc, creature)
@@ -78,7 +78,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you want me to go on?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 2) then
 			selfSay("I was once captain of a ship, the Skyflare. We were traders for King Tibianus and on our way home when we got into a storm. We fought hard to escape the cold grip of the sea. ...", npc, creature)
 			selfSay("I myself did what I could to navigate the Skyflare out of this mess. They depended on me. Me, the navigator. And I succeeded. ...", npc, creature)

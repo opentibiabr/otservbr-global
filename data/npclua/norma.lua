@@ -78,7 +78,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "addon") or msgcontains(message, "outfit") or msgcontains(message, "hat") then
+	if MsgContains(message, "addon") or MsgContains(message, "outfit") or MsgContains(message, "hat") then
 		local addonProgress = player:getStorageValue(Storage.OutfitQuest.Citizen.AddonHat)
 		if addonProgress < 1 then
 			npcHandler:say("Pretty, isn't it? My friend Amber taught me how to make it, but I could help you with one if you like. What do you say?", npc, creature)
@@ -93,7 +93,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.AddonHat, 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.MissionHat, 1)
@@ -104,7 +104,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if player:getItemCount(3374) < 1 then
 				npcHandler:say('Sorry, but I can\'t see a legion helmet.', npc, creature)
 			elseif player:getItemCount(5890) < 100 then

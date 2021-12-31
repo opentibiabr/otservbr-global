@@ -59,18 +59,18 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- Mad mage room quest
-	if msgcontains(message, "riddle") then
+	if MsgContains(message, "riddle") then
 		if player:getStorageValue(Storage.Quest.MadMageRoom.APrisoner) ~= 1 then
 			npcHandler:say("Great riddle, isn't it? If you can tell me the correct answer, \z
 				I will give you something. Hehehe!", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "PD-D-KS-P-PD") then
+	elseif MsgContains(message, "PD-D-KS-P-PD") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Hurray! For that I will give you my key for - hmm - let's say ... some apples. Interested?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			if player:removeItem(3585, 7) then
 				npcHandler:say("Mnjam - excellent apples. Now - about that key. You are sure want it?", npc, creature)
@@ -94,11 +94,11 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		npcHandler:say("Then go away!", npc, creature)
 	end
 	-- The paradox tower quest
-	if msgcontains(message, "math") then
+	if MsgContains(message, "math") then
 		if  player:getStorageValue(Storage.Quest.TheParadoxTower.Mathemagics) < 1 then
 			npcHandler:say("My surreal numbers are based on astonishing facts. \z
 				Are you interested in learning the secret of mathemagics?", npc, creature)
@@ -107,13 +107,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You already know the secrets of mathemagics! Now go and use them to learn.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 6 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 6 then
 		npcHandler:say("But first tell me your favourite colour please!", npc, creature)
 		npcHandler:setTopic(playerId, 7)
-	elseif msgcontains(message, "green") and npcHandler:getTopic(playerId) == 7 then
+	elseif MsgContains(message, "green") and npcHandler:getTopic(playerId) == 7 then
 		npcHandler:say("Very interesting. So are you ready to proceed in your lesson in mathemagics?", npc, creature)
 		npcHandler:setTopic(playerId, 8)
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 8 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 8 then
 		if player:getStorageValue(Storage.Quest.TheParadoxTower.Mathemagics) < 1 then
 			player:setStorageValue(Storage.Quest.TheParadoxTower.Mathemagics, 1)
 			player:addAchievement("Mathemagician")

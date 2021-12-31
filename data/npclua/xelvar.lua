@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "adventures") or msgcontains(message, "join") then
+	if MsgContains(message, "adventures") or MsgContains(message, "join") then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) < 1 then
 			npcHandler:say({
 				"I am glad to hear that. In the spirit of our own foreign legion we suggested the gnomes might hire heroes like you to build some kind of troop. They gave me that strange crystal to allow people passage to their realm. ...",
@@ -75,17 +75,17 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 1)
 			else npcHandler:say("You already talked with me.", npc, creature)
 		end
-	elseif msgcontains(message, "recruiting") then
+	elseif MsgContains(message, "recruiting") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Ok, so listen. Your help is needed. That is if you're the hero type. Our ... {partners} need some help in urgent matters.", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "partners") then
+	elseif MsgContains(message, "partners") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("I guess the time of secrecy is over now. Well, we have an old alliance with another underground dwelling race, the {gnomes}.", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "gnomes") then
+	elseif MsgContains(message, "gnomes") then
 		if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say({
 				"The gnomes preferred to keep our alliance and their whole {existence} a secret. They are a bit distrustful of others. ...",
@@ -93,7 +93,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "help") then
+	elseif MsgContains(message, "help") then
 		if npcHandler:getTopic(playerId) == 4 then
 			npcHandler:say({
 				"The gnomes are locked in a war with an enemy that thins out their resources but foremost their manpower. We have suggested that people like you could be just the specialists they are looking for. ...",
@@ -101,7 +101,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "join") then
+	elseif MsgContains(message, "join") then
 		if npcHandler:getTopic(playerId) == 5 then
 			npcHandler:say({
 				"I am glad to hear that. In the spirit of our own foreign legion we suggested the gnomes might hire heroes like you to build some kind of troop. They gave me that strange crystal to allow people passage to their realm. ...",

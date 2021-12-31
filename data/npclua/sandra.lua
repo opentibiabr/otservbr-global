@@ -77,15 +77,15 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Would you like to get a lottery ticket instead of the deposit for your vials?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "prize") then
+	elseif MsgContains(message, "prize") then
 		npcHandler:say("Are you here to claim a prize?", npc, creature)
 		npcHandler:setTopic(playerId, 4)
-	elseif msgcontains(message, "fafnar fire") then
+	elseif MsgContains(message, "fafnar fire") then
 		if player:getStorageValue(Storage.TheShatteredIsles.RaysMission1) == 1 then
 			npcHandler:say("Pssht, not that loud. So they have sent you to get... the stuff?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
-	elseif msgcontains(message, "your continued existence is payment enough") then
+	elseif MsgContains(message, "your continued existence is payment enough") then
 		if npcHandler:getTopic(playerId) == 6 then
 			if player:getStorageValue(Storage.TheShatteredIsles.RaysMission1) == 1 then
 				npcHandler:say(
@@ -97,7 +97,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say(
 				{

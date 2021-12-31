@@ -58,18 +58,18 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "barbarian") then
+	if MsgContains(message, "barbarian") then
 		if player:getStorageValue(Storage.BarbarianTest.Questline) < 1 then
 			npcHandler:say("A true barbarian is something special among our people. Everyone who wants to become a barbarian will have to pass the barbarian {test}.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, "test") then
+	elseif MsgContains(message, "test") then
 		npcHandler:say({
 			"All of our juveniles have to take the barbarian test to become a true member of our community. Foreigners who manage to master the test are granted the title of an honorary barbarian and the respect of our people ...",
 			"Are you willing to take the barbarian test?"
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "mead") then
+	elseif MsgContains(message, "mead") then
 		if player:getStorageValue(Storage.BarbarianTest.Questline) == 1 then
 			npcHandler:say("Do you have some honey with you?", npc, creature)
 			npcHandler:setTopic(playerId, 4)
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addItem(7140, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "hug") then
+	elseif MsgContains(message, "hug") then
 		if player:getStorageValue(Storage.BarbarianTest.Questline) == 5 then
 			npcHandler:say({
 				"Amazing. That was as clever and brave as a barbarian is supposed to be. But a barbarian also has to be strong and fearless. To prove that you will have to knock over a mammoth ...",
@@ -97,7 +97,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.BarbarianTest.Mission03, 1) -- Questlog Barbarian Test Quest Barbarian Test 3: The Mammoth Pushing
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "mammoth") then
+	elseif MsgContains(message, "mammoth") then
 		if player:getStorageValue(Storage.BarbarianTest.Questline) == 7 then
 			npcHandler:say({
 				"As you have passed all three tests, I welcome you in our town as an honorary barbarian. You can now become a citizen. Don't forget to talk to the people here. Some of them might need some help ...",
@@ -108,7 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addAchievement('Honorary Barbarian')
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"That's the spirit! The barbarian test consists of a few tasks you will have to fulfill. All are rather simple - for a barbarian that is...",

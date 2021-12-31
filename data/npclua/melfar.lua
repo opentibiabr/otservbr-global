@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "mission")) then
+	if(MsgContains(message, "mission")) then
 		if(player:getStorageValue(Storage.TheNewFrontier.Questline) == 4) then
 			npcHandler:say({
 				"Ha! Men and wood you say? Well, I might be able to relocate some of our miners to the base. Acquiring wood is an entirely different matter though. ... ",
@@ -96,7 +96,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheNewFrontier.Questline, 7)
 			player:setStorageValue(Storage.TheNewFrontier.Mission02, 6) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
 		end
-	elseif(msgcontains(message, "yes")) then
+	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			npcHandler:say({
 				"So take this beaver bait. It will work best on dwarf trees. I'll mark the three trees on your map. Here .. here .. and here! So now mark those trees with the beaver bait. ... ",
@@ -119,7 +119,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
-	elseif msgcontains(message, "buy flask") or msgcontains(message, "flask") then
+	elseif MsgContains(message, "buy flask") or MsgContains(message, "flask") then
 		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 5 then
 			npcHandler:say("You want to buy a Flask with Beaver Bait for 100 gold coins?", npc, creature)
 			npcHandler:setTopic(playerId, 2)

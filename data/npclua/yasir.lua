@@ -637,11 +637,11 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, "name") then
+	if MsgContains(message, "name") then
 		return npcHandler:say("Me Yasir.", npc, creature)
-	elseif msgcontains(message, "job") then
+	elseif MsgContains(message, "job") then
 		return npcHandler:say("Tje hari ku ne finjala. {Ariki}?", npc, creature)
-	elseif msgcontains(message, "passage") then
+	elseif MsgContains(message, "passage") then
 		return npcHandler:say("Soso yana. <shakes his head>", npc, creature)
 	end
 	return true

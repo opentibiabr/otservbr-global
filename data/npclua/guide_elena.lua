@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if isInArray({"map", "marks"}, message) then
 		npcHandler:say("Would you like me to mark locations like - for example - the depot, bank and shops on your map?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say("Here you go.", npc, creature)
 		local mark
 		for i = 1, #configMarks do
@@ -88,7 +88,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addMapMark(mark.position, mark.markId, mark.description)
 		end
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "no") and npcHandler:getTopic(playerId) >= 1 then
+	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) >= 1 then
 		npcHandler:say("Well, nothing wrong about exploring the town on your own. Let me know if you need something!", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

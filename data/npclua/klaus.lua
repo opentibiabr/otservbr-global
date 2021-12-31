@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'mission') then
+	if MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.TheShatteredIsles.RaysMission4) == 1 then
 			npcHandler:say(
 				'Hmm, you look like a seasoned seadog. Kill Captain Ray Striker, \
@@ -68,7 +68,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Do you have Striker's pillow?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if player:getStorageValue(Storage.TheShatteredIsles.RaysMission4) == 3 then
 			if npcHandler:getTopic(playerId) == 1 then
 				if player:removeItem(6105, 1) then

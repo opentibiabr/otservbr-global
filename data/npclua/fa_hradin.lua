@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	local missionProgress = player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission02)
-	if msgcontains(message, 'spy report') or msgcontains(message, 'mission') then
+	if MsgContains(message, 'spy report') or MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission01) ~= 2 then
 			npcHandler:say('Looking for work, are you? Well, it\'s very tempting, you know, but I\'m afraid we do not really employ beginners. Perhaps our cook could need a helping hand in the kitchen.', npc, creature)
 
@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if player:getStorageValue(Storage.DjinnWar.MaridFaction.RataMari) ~= 2 or not player:removeItem(3232, 1) then
 				npcHandler:say({
 					'Don\'t waste any more time. We need the spyreport of our man in Mal\'ouquah as soon as possible! ...',
@@ -95,7 +95,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.DjinnWar.MaridFaction.Mission02, 2)
 			end
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say({
 				'Don\'t waste any more time. We need the spyreport of our man in Mal\'ouquah as soon as possible! ...',
 				'Also don\'t forget the password to contact our man: PIEDPIPER!'

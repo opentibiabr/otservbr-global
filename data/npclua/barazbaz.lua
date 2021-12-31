@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if msgcontains(message, "ritual") and player:getStorageValue(Storage.DarkTrails.Mission06) == 1 then
+	if MsgContains(message, "ritual") and player:getStorageValue(Storage.DarkTrails.Mission06) == 1 then
 		npcHandler:say({
 			"Ancient structures in the sewers you say? Well, our city has had a certain bloody past, even before it has \z
 				been city at all. But to investigate the archives for what you may have found is a time-consuming process. ...",
@@ -64,7 +64,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			"Just go to Marvin in the magistrate and vote for a greater funding of the archives. Afterwards, I might be able to present you with some first results of my investigations on your behalf."
 		}, npc, creature, 10)
 		player:setStorageValue(Storage.DarkTrails.Mission07, 1)
-	elseif msgcontains(message, "abandoned sewers") and player:getStorageValue(Storage.DarkTrails.Mission08) == 1 then
+	elseif MsgContains(message, "abandoned sewers") and player:getStorageValue(Storage.DarkTrails.Mission08) == 1 then
 		npcHandler:say({
 			"Excellent! Concerning the ancient ruins that you have found, well, if you are not familiar with the city's history, feel free to browse a few books here. I will only refer to some basics here, so I don't waste your time. ...",
 			"The first humans that lived here and that we have any records of lived in slavery of an ancient evil. ...",
@@ -74,7 +74,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			"Today, we have advanced far more and could have the ruins investigated in a far more efficient way. And that is what I would just recommend you to do: get a necrometer from magistrate Jondrin upstairs and investigate the ruins thoroughly."
 		}, npc, creature, 10)
 		player:setStorageValue(Storage.DarkTrails.Mission09, 1)
-	elseif(msgcontains(message, "notebook")) and (player:getStorageValue(Storage.DarkTrails.Mission11) == 1 and getPlayerItemCount(creature, 11450) == 1) then
+	elseif(MsgContains(message, "notebook")) and (player:getStorageValue(Storage.DarkTrails.Mission11) == 1 and getPlayerItemCount(creature, 11450) == 1) then
 		npcHandler:say({
 			" I know that handwriting you describe! It belongs to a traveller from far away. Magistrate Sholley introduced him 	to me and she was quite excited to learn more about our city's past. ...",
 			"I should have thought of him right in the beginning when I heard the stuff you mentioned. But I haven't seen him for a while. You should ask Sholley about her friend to learn about his whereabouts."

@@ -119,19 +119,19 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'token') or msgcontains(message, 'tokens') then
+	if MsgContains(message, 'token') or MsgContains(message, 'tokens') then
 		npcHandler:say("If you have any {silver} tokens with you, let's have a look! Maybe I can offer you something in exchange.", npc, creature)
-	elseif msgcontains(message, 'information') then
+	elseif MsgContains(message, 'information') then
 		npcHandler:say("With pleasure. <bows> I trade {token}s. There are several ways to obtain the {token}s I am interested in - killing certain bosses, for example. In exchange for a certain amount of tokens, I can offer you some first-class items.", npc, creature)
-	elseif msgcontains(message, 'talk') then
+	elseif MsgContains(message, 'talk') then
 		npcHandler:say({"Why, certainly! I'm always up for some small talk. ...",
 						 "The weather continues just fine here, don't you think? Just the day for a little walk around the town! ...",
 						 "Actually, I haven't been around much yet, but I'm looking forward to exploring the city once I've finished trading {token}s."}, npc, creature)
-	elseif msgcontains(message, 'silver') then
+	elseif MsgContains(message, 'silver') then
 		npc:openShopWindow(creature)
 		npcHandler:say({"Here's the deal, " .. player:getName() .. ". For 100 of your silver tokens, I can offer you some first-class torso armor. These armors provide a solid boost to your main attack skill, as well as ...",
 		"some elemental protection of your choice! I also sell a magic shield potion for one silver token. So these are my offers."}, npc, creature)
-	elseif msgcontains(message, 'enchant') then
+	elseif MsgContains(message, 'enchant') then
 		npcHandler:say("The following items can be enchanted: {pendulet}, {sleep shawl}, {blister ring}, {theurgic amulet}. Make you choice!", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif isInArray({'pendulet', 'sleep shawl', 'blister ring', 'theurgic amulet'}, message:lower()) and npcHandler:getTopic(playerId) == 1 then
@@ -139,7 +139,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		charge = message:lower()
 		npcHandler:setTopic(playerId, 2)
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if not chargeItem[charge] then
 				npcHandler:say("Sorry, you don't have an unenchanted ".. charge ..".",creature)
 			else
@@ -153,11 +153,11 @@ local function creatureSayCallback(npc, creature, type, message)
 				end
 				npcHandler:setTopic(playerId, 0)
 			end
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say("Alright, come back if you have changed your mind.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'addon') then
+	elseif MsgContains(message, 'addon') then
 		if player:hasOutfit(846, 0) or player:hasOutfit(845, 0) then
 			npcHandler:say("Ah, very good. Now choose your addon: {first} or {second}.", npc, creature)
 			npcHandler:setTopic(playerId, 3)

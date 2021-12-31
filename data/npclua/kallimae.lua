@@ -77,13 +77,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Sixth.Favor) == 11 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Sixth.Favor) == 11 then
 		if player:getStorageValue(Storage.Kilmaresh.Sixth.Favor) == 11 then
 			npcHandler:say({"Some residents are in need of ingredients to finish a ritual. You can help?"}, npc, creature)-- It needs to be revised, it's not the same as the global
 			npcHandler:setTopic(playerId, 1)
 			npcHandler:setTopic(playerId, 1)
 		end	
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Sixth.Favor) == 11 then
 			npcHandler:say({"Search for the NPCs Yonan, Narsai, Shimun and Tefrit."}, npc, creature)-- It needs to be revised, it's not the same as the global
 			player:setStorageValue(Storage.Kilmaresh.Set.Ritual, 1)
@@ -98,13 +98,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"Sorry."}, npc, creature)-- It needs to be revised, it's not the same as the global
 		end
 	end
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Yonan) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Tefrit) == 3 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eighth.Yonan) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Tefrit) == 3 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Yonan) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Tefrit) == 3 then
 			npcHandler:say({"Did you help some residents with ingredients?"}, npc, creature)-- It needs to be revised, it's not the same as the global
 			npcHandler:setTopic(playerId, 3)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Yonan) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Tefrit) == 3 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Yonan) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Tefrit) == 3 then
 		if player:getStorageValue(Storage.Kilmaresh.Eighth.Yonan) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Narsai) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Shimun) == 3 and player:getStorageValue(Storage.Kilmaresh.Eighth.Tefrit) == 3 then
 			npcHandler:say({"Thanks. I need you to go to 4 places indicated by Goddess Bastesh."}, npc, creature)-- It needs to be revised, it's not the same as the global
 			player:setStorageValue(Storage.Kilmaresh.Nine.Owl, 1)
@@ -114,13 +114,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"Sorry."}, npc, creature)-- It needs to be revised, it's not the same as the global
 		end
 	end
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eleven.Basin) == 1 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Kilmaresh.Eleven.Basin) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Eleven.Basin) == 1 then
 			npcHandler:say({"Did you check all the points and bring the Symbol of Sun and Sea?"}, npc, creature)-- It needs to be revised, it's not the same as the global
 			npcHandler:setTopic(playerId, 5)
 			npcHandler:setTopic(playerId, 5)
 		end	
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 5 and player:getStorageValue(Storage.Kilmaresh.Eleven.Basin) == 1 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 5 and player:getStorageValue(Storage.Kilmaresh.Eleven.Basin) == 1 then
 		if player:getStorageValue(Storage.Kilmaresh.Eleven.Basin) == 1 and player:getItemById(31431, 1) then
 			player:addItem(31572, 1)
 			npcHandler:say({"Thanks. Here is your reward."}, npc, creature)-- It needs to be revised, it's not the same as the global

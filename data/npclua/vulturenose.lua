@@ -53,7 +53,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'enter') then
+	if MsgContains(message, 'enter') then
 		if player:getStorageValue(Storage.TheShatteredIsles.RaysMission3) == 1
 		and player:getStorageValue(Storage.TheShatteredIsles.YavernDoor) < 0 then
 			local headItem = player:getSlotItem(CONST_SLOT_HEAD)

@@ -57,13 +57,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 	local playerId = creature:getId()
-	if msgcontains(message, 'transport') then
+	if MsgContains(message, 'transport') then
 		npcHandler:say('We can bring you to Thais with one of our coaches for 125 gold. Are you interested?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif isInArray({'rent', 'horses'}, message) then
 		npcHandler:say('Do you want to rent a horse for one day at a price of 500 gold?', npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		local player = Player(creature)
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:isPzLocked() then
@@ -99,7 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('I\'ll give you one of our experienced ones. Take care! Look out for low hanging branches.', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) > 0 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) > 0 then
 		npcHandler:say('Then not.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

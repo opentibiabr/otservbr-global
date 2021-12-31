@@ -158,9 +158,9 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	message = message:gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end)
 
-	if msgcontains("trade", message) then
+	if MsgContains("trade", message) then
 		startTrade(creature, player)
-	elseif (msgcontains("join", message) or msgcontains("yes", message))
+	elseif (MsgContains("join", message) or MsgContains("yes", message))
 			and npcHandler:getTopic(playerId) == 0
 			and player:getStorageValue(JOIN_STOR) ~= 1 then
 		player:setStorageValue(JOIN_STOR, 1)
@@ -218,7 +218,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					" ".."Also you can {cancel} tasks to.", npc, creature)
 		choose[playerId] = nil
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains("status", message) then
+	elseif MsgContains("status", message) then
 		local started = player:getStartedTasks()
 		if started and #started > 0 then
 			local text = ""
@@ -235,7 +235,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say("You haven't started any task yet.", npc, creature)
 		end
-	elseif msgcontains("report", message) then
+	elseif MsgContains("report", message) then
 		local started = player:getStartedTasks()
 		local finishedAtLeastOne = false
 		local finished = 0

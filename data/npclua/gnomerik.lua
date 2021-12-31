@@ -70,13 +70,13 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 	if player:getStorageValue(Storage.BigfootBurden.NeedsBeer) == 1 then
-		if msgcontains(message, "recruit") or msgcontains(message, "test") or msgcontains(message, "result") then
+		if MsgContains(message, "recruit") or MsgContains(message, "test") or MsgContains(message, "result") then
 			npcHandler:say({"I suggest you relax a bit with a fresh mushroom beer and we can talk after that. ...", "Gnominus... He is the one you need right now, find him."}, npc, creature)
 		end
 		return
 	end
 
-	if msgcontains(message, "recruit") then
+	if MsgContains(message, "recruit") then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 5 then
 			npcHandler:say("Yes... Yes... <sigh>. We already talked about that. I can't remember if you have already tried the {test}, so lets get going.", npc, creature)
 		elseif player:getStorageValue(Storage.BigfootBurden.QuestLine) == 3 then
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	-- TEST
-	elseif msgcontains(message, "test") then
+	elseif MsgContains(message, "test") then
 		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 5 then
 			if npcHandler:getTopic(playerId) < 1 then
 				player:setStorageValue(Storage.BigfootBurden.Test, 0)
@@ -288,7 +288,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	-- TEST
 
-	elseif msgcontains(message, "result") then
+	elseif MsgContains(message, "result") then
 		if npcHandler:getTopic(playerId) == 33 then
 			if player:getStorageValue(Storage.BigfootBurden.Test) < 100 then
 				player:setStorageValue(Storage.BigfootBurden.NeedsBeer, 1)
@@ -301,7 +301,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.BigfootBurden.QuestLine, 6)
 			end
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 				npcHandler:say("Excellent! Now let us begin with the gnomish aptitude test. Just tell me when you feel ready for the {test}!", npc, creature)
 				player:setStorageValue(Storage.BigfootBurden.QuestLine, 5)

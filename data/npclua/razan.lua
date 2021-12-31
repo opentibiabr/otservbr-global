@@ -104,9 +104,9 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if msgcontains(message, 'outfit') then
+	if MsgContains(message, 'outfit') then
 		npcHandler:say(player:getSex() == PLAYERSEX_FEMALE and 'My turban? I know something better for a pretty girl like you. Why don\'t you go talk to Miraia?' or 'My turban? Eh no, you can\'t have it. Only oriental weaponmasters may wear it after having completed a difficult task.', npc, creature)
-	elseif msgcontains(message, 'task') then
+	elseif MsgContains(message, 'task') then
 		if player:getSex() == PLAYERSEX_FEMALE then
 			npcHandler:say('I really don\'t want to make girls work for me. If you are looking for a job, ask Miraia.', npc, creature)
 			return true
@@ -124,7 +124,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		else
 			npcHandler:say(config[message].text[2], npc, creature)
 		end
-	elseif msgcontains(message, 'yes') then
+	elseif MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				'Alright, then listen to the following requirements. We are currently in dire need of ape fur since the Caliph has requested a new bathroom carpet. ...',
@@ -159,7 +159,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say(targetMessage.text[3], npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
+	elseif MsgContains(message, 'no') and npcHandler:getTopic(playerId) ~= 0 then
 		npcHandler:say('What a pity.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end

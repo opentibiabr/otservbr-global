@@ -49,7 +49,7 @@ local function greetCallback(npc, creature, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if not msgcontains(message, "djanni'hah") and player:getStorageValue(Storage.DjinnWar.Faction.EfreetDoor) ~= 1 then
+	if not MsgContains(message, "djanni'hah") and player:getStorageValue(Storage.DjinnWar.Faction.EfreetDoor) ~= 1 then
 		npcHandler:say('Shove off, little one! Humans are not welcome here, |PLAYERNAME|!', npc, creature)
 		return false
 	end
@@ -80,18 +80,18 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 	-- To Appease the Mighty Quest
-	if msgcontains(message, "mission") and player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) == 2 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) == 2 then
 			npcHandler:say({
 				'You have the smell of the Marid on you. Tell me who sent you?'}, npc, creature)
 			npcHandler:setTopic(playerId, 9)
-			elseif msgcontains(message, "kazzan") and npcHandler:getTopic(playerId) == 9 then
+			elseif MsgContains(message, "kazzan") and npcHandler:getTopic(playerId) == 9 then
 			npcHandler:say({
 				'And he is sending a worm like you to us!?! The mighty Efreet!! Tell him that we won\'t be part in his \'great\' plans and now LEAVE!! ...',
 				'...or do you want to join us and fight those stinking Marid who claim themselves to be noble and righteous?!? Just let me know.'}, npc, creature)
 			player:setStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest, player:getStorageValue(Storage.TibiaTales.ToAppeaseTheMightyQuest) + 1)
 	end
 
-	if msgcontains(message, 'passage') then
+	if MsgContains(message, 'passage') then
 		if player:getStorageValue(Storage.DjinnWar.Faction.EfreetDoor) ~= 1 then
 			npcHandler:say({
 				'Only the mighty Efreet, the true djinn of Tibia, may enter Mal\'ouquah! ...',
@@ -102,7 +102,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('You already pledged loyalty to king Malor!', npc, creature)
 		end
 
-	elseif msgcontains(message, 'here') then
+	elseif MsgContains(message, 'here') then
 			npcHandler:say({
 				'Only the mighty Efreet, the true djinn of Tibia, may enter Mal\'ouquah! ...',
 				'All Marid and little worms like yourself should leave now or something bad may happen. Am I right?'
@@ -110,11 +110,11 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 1)
 
 	elseif npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say('Of course. Then don\'t waste my time and shove off.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			if player:getStorageValue(Storage.DjinnWar.Faction.MaridDoor) == 1 then
 				npcHandler:say('Who do you think you are? A Marid? Shove off you worm!', npc, creature)
 				npcHandler:setTopic(playerId, 0)
@@ -129,17 +129,17 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say('So you pledge loyalty to king Malor and you are willing to never ever set foot on Marid\'s territory, unless you want to kill them? Yes?', npc, creature)
 			npcHandler:setTopic(playerId, 3)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Of course. Then don\'t waste my time and shove off.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			npcHandler:say({
 				'Well then - welcome to Mal\'ouquah. ...',
 				'Go now to general Baa\'leal and don\'t forget to greet him correctly! ...',
@@ -148,7 +148,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DjinnWar.Faction.EfreetDoor, 1)
 			player:setStorageValue(Storage.DjinnWar.Faction.Greeting, 0)
 
-		elseif msgcontains(message, 'no') then
+		elseif MsgContains(message, 'no') then
 			npcHandler:say('Of course. Then don\'t waste my time and shove off.', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)

@@ -57,7 +57,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "mission") then
+	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.UnnaturalSelection.Questline) == 5 then
 			npcHandler:say({
 				"The great hunt! About to begin, but gods are not in favour of us yet. We need all help we get. We please Krunus with special nature dance. ...",
@@ -106,7 +106,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.UnnaturalSelection.Mission06, 1) --Questlog, Unnatural Selection Quest "Mission 6: Firewater Burn"
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "krunus") then
+	elseif MsgContains(message, "krunus") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Krunus is God for plants and birth. He hidden in all that grows.", npc, creature)
 			player:setStorageValue(Storage.UnnaturalSelection.Questline, 6)
@@ -114,7 +114,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.UnnaturalSelection.DanceStatus, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			if player:getItemCount(10196) >= 5 and player:getItemCount(5878) >= 5 and player:getItemCount(5876) >= 5 then
 				player:removeItem(10196, 5)

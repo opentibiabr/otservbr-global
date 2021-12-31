@@ -87,13 +87,13 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- Start quest
-	if msgcontains(message, "mystery") and npcHandler:getTopic(playerId) == 1 then
+	if MsgContains(message, "mystery") and npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({"The minotaurs I faced in the cave are much stronger than the normal ones. What I were able to see before I had to flee: all of them seem to belong to a cult worshipping their god. Could you do me a {favour}?"}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "favour") and npcHandler:getTopic(playerId) == 2 then
+	elseif MsgContains(message, "favour") and npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({"I'd like to work in this cave researching the minotaurs. But right now there are too many of hem and what is more, they are too powerful for me. Could you enter the cave and kill at least 50 of these creatures?"}, npc, creature)
 			npcHandler:setTopic(playerId, 3)
-	elseif msgcontains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
 		if player:getStorageValue(Storage.CultsOfTibia.Questline) < 1 then
 			player:setStorageValue(Storage.CultsOfTibia.Questline, 1)
 		end
@@ -103,7 +103,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		player:setStorageValue(Storage.CultsOfTibia.Minotaurs.EntranceAccessDoor, 1)
 		npcHandler:setTopic(playerId, 0)
 	-- Delivering the quest
-	elseif msgcontains(message, "mission") and npcHandler:getTopic(playerId) == 5 then
+	elseif MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 5 then
 		if player:getStorageValue(Storage.CultsOfTibia.Minotaurs.JamesfrancisTask) >= 50 then
 			npcHandler:say({"Great job! You have killed at least 50 of these monsters. I give this key to you to open the door to the inner area. Go there and find out what's going on."}, npc, creature)
 			player:setStorageValue(Storage.CultsOfTibia.Minotaurs.Mission, 3)

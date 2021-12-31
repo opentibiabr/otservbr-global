@@ -67,9 +67,9 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Citizen outfit addon
 	local addonProgress = player:getStorageValue(Storage.OutfitQuest.Citizen.AddonBackpack)
-	if msgcontains(message, 'addon') or msgcontains(message, 'outfit')
-			or (addonProgress == 1 and msgcontains(message, 'leather'))
-			or ((addonProgress == 1 or addonProgress == 2) and msgcontains(message, 'backpack')) then
+	if MsgContains(message, 'addon') or MsgContains(message, 'outfit')
+			or (addonProgress == 1 and MsgContains(message, 'leather'))
+			or ((addonProgress == 1 or addonProgress == 2) and MsgContains(message, 'backpack')) then
 		if addonProgress < 1 then
 			npcHandler:say('Sorry, the backpack I wear is not for sale. It\'s handmade from rare minotaur leather.', npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -95,12 +95,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return true
 	end
 	if npcHandler:getTopic(playerId) == 1 then
-		if msgcontains(message, 'backpack') or msgcontains(message, 'minotaur') or msgcontains(message, 'leather') then
+		if MsgContains(message, 'backpack') or MsgContains(message, 'minotaur') or MsgContains(message, 'leather') then
 			npcHandler:say('Well, if you really like this backpack, I could make one for you, but minotaur leather is hard to come by these days. Are you willing to put some work into this?', npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
 	elseif npcHandler:getTopic(playerId) == 2 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.AddonBackpack, 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.MissionBackpack, 1)
@@ -111,7 +111,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		npcHandler:setTopic(playerId, 0)
 	elseif npcHandler:getTopic(playerId) == 3 then
-		if msgcontains(message, 'yes') then
+		if MsgContains(message, 'yes') then
 			if player:getItemCount(5878) < 100 then
 				npcHandler:say('Sorry, but that\'s not enough leather yet to make one of these backpacks. Would you rather like to buy a normal backpack for 10 gold?', npc, creature)
 			else
@@ -130,16 +130,16 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	-- The paradox tower quest
-	if msgcontains(message, "crunor's cottage") then
+	if MsgContains(message, "crunor's cottage") then
 		npcHandler:say("Ah yes, I remember my grandfather talking about that name. This house used to be an inn a long time ago. My family bought it from some of these flower guys.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "flower guys") then
+	elseif MsgContains(message, "flower guys") then
 		npcHandler:say("Oh, I mean druids of course. They sold the cottage to my family after some of them died in an accident or something like that.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "accident") then
+	elseif MsgContains(message, "accident") then
 		npcHandler:say("As far as I can remember the story, a pet escaped its stable behind the inn. It got somehow involved with powerful magic at a ritual and was transformed in some way.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "stable") then
+	elseif MsgContains(message, "stable") then
 		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) == 3 then
 			-- Questlog: The Feared Hugo (Completed)
 			player:setStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo, 4)

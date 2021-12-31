@@ -64,7 +64,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, 'greeting') then
+	if MsgContains(message, 'greeting') then
 		if player:getStorageValue(Storage.DjinnWar.Faction.Greeting) ~= 0 then
 			npcHandler:say({
 				'The djinns have an ancient code of honour. This code includes a special concept of hospitality. Anybody who utters the word of greeting must not be attacked even if he is an enemy. Well, at least that is what the code says. ...',

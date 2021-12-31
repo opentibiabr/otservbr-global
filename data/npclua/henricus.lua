@@ -62,14 +62,14 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	local missing, totalBlessPrice = Blessings.getInquisitionPrice(player)
 
-	if msgcontains(message, "inquisitor") then
+	if MsgContains(message, "inquisitor") then
 		npcHandler:say("The churches of the gods entrusted me with the enormous and responsible task to lead the inquisition. I leave the field work to inquisitors who I recruit from fitting people that cross my way.", npc, creature)
-	elseif msgcontains(message, "join") then
+	elseif MsgContains(message, "join") then
 		if player:getStorageValue(Storage.TheInquisition.Questline) < 1 then
 			npcHandler:say("Do you want to join the inquisition?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, "blessing") or msgcontains(message, "bless") then
+	elseif MsgContains(message, "blessing") or MsgContains(message, "bless") then
 		if player:getStorageValue(Storage.TheInquisition.Questline) == 25 then --if quest is done
 			npcHandler:say("Do you want to receive the blessing of the inquisition - which means ".. (missing == 5 and "all five available" or missing ) .." blessings - for " .. totalBlessPrice .. " gold?", npc, creature)
 			npcHandler:setTopic(playerId, 7)
@@ -77,7 +77,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You cannot get this blessing unless you have completed The Inquisition Quest.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "flask") or msgcontains(message, "special flask") then
+	elseif MsgContains(message, "flask") or MsgContains(message, "special flask") then
 		if player:getStorageValue(Storage.TheInquisition.Questline) >= 12 then -- give player the ability to purchase the flask.
 		npcHandler:say("Do you want to buy the special flask of holy water for " .. flaskCost .. " gold?" , npc, creature)
 		npcHandler:setTopic(playerId, 8)
@@ -85,7 +85,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You do not need this flask right now.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "mission") or msgcontains(message, "report") then
+	elseif MsgContains(message, "mission") or MsgContains(message, "report") then
 		if player:getStorageValue(Storage.TheInquisition.Questline) < 1 then
 			npcHandler:say("Do you want to join the inquisition?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
@@ -191,7 +191,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Your current mission is to destroy the shadow nexus in the Demon Forge. Are you done with that mission?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
 		end
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("So be it. Now you are a member of the inquisition. You might ask me for a {mission} to raise in my esteem.", npc, creature)
 			player:setStorageValue(Storage.TheInquisition.Questline, 1)
@@ -259,12 +259,12 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) > 0 then
 			npcHandler:say("Then no.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, "outfit") then
+	elseif MsgContains(message, "outfit") then
 		if player:getStorageValue(Storage.TheInquisition.Questline) == 16 then
 			npcHandler:say("Here is your demon hunter outfit. You deserve it. Unlock more addons by completing more missions.", npc, creature)
 			player:setStorageValue(Storage.TheInquisition.Questline, 17)
@@ -286,29 +286,29 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addAchievement('Demonbane')
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif msgcontains(message, 'dark') then
+	elseif MsgContains(message, 'dark') then
 		npcHandler:say({
 			'The dark powers are always present. If a human shows only the slightest weakness, they try to corrupt him and to lure him into their service. ...',
 			'We must be constantly aware of evil that comes in many disguises.'
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'king') then
+	elseif MsgContains(message, 'king') then
 		npcHandler:say({
 			'The Thaian kings are crowned by a representative of the churches. This means they reign in the name of the gods of good and are part of the godly plan for humanity. ...',
 			'As nominal head of the church of Banor, the kings aren\'t only worldly but also spiritual authorities. ...',
 			'The kings fund the inquisition and sometimes provide manpower in matters of utmost importance. The inquisition, in return, protects the realm from heretics and individuals that aim to undermine the holy reign of the kings.'
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'banor') then
+	elseif MsgContains(message, 'banor') then
 		npcHandler:say({
 			'In the past, the order of Banor was the only order of knighthood in existence. In the course of time, the order concentrated more and more on spiritual matters rather than on worldly ones. ...',
 			'Nowadays, the order of Banor sanctions new orders and offers spiritual guidance to the fighters of good.'
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'fardos') then
+	elseif MsgContains(message, 'fardos') then
 		npcHandler:say('The priests of Fardos are often mystics who have secluded themselves from worldly matters. Others provide guidance and healing to people in need in the temples.', npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'uman') then
+	elseif MsgContains(message, 'uman') then
 		npcHandler:say({
 			'The church of Uman oversees the education of the masses as well as the doings of the sorcerer and druid guilds. It decides which lines of research are in accordance with the will of Uman and which are not. ...',
 			'Concerned, the inquisition watches the attempts of these guilds to become more and more independent and to make own decisions. ...',
@@ -317,13 +317,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			'The spiritual centre of the druids switched to Carlin where they have much influence and cannot be supervised by the inquisition.'
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'fafnar') then
+	elseif MsgContains(message, 'fafnar') then
 		npcHandler:say({
 			'Fafnar is mostly worshipped by the peasants and farmers in rural areas. ...',
 			'The inquisition has a close eye on these activities. Simply people tend to mix local superstitions with the teachings of the gods. This again may lead to heretical subcults.'
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'edron') then
+	elseif MsgContains(message, 'edron') then
 		npcHandler:say({
 			'Edron illustrates perfectly why the inquisition is needed and why we need more funds and manpower. ...',
 			'Our agents were on their way to investigate certain occurrences there when some faithless knights fled to some unholy ruins. ...',
@@ -331,7 +331,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			'It\'s almost sure that something dangerous is going on there, so we have to continue our efforts.'
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif msgcontains(message, 'ankrahmun') then
+	elseif MsgContains(message, 'ankrahmun') then
 		npcHandler:say({
 			'Even though they claim differently, this city is in the firm grip of Zathroth and his evil minions. Their whole twisted religion is a mockery of the teachings of our gods ...',
 			'As soon as we have gathered the strength, we should crush this city once and for all.'

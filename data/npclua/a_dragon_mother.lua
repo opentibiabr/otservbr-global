@@ -76,12 +76,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "help") then
+	if MsgContains(message, "help") then
 		npcHandler:say({
 			"I'm aware what you are looking for. Usually I would rather devour you, but due to unfortunate circumstances, I need your {assistance}.",
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif msgcontains(message, "assistance") then
+	elseif MsgContains(message, "assistance") then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"Wretched creatures of ice have stolen my egg that was close to hatching. ...",
@@ -91,7 +91,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	end
 
-	if msgcontains(message, "yes") then
+	if MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say({
 				"So return to the upper tunnels where cultists and ice golems dwell. Somewhere in these tunnels you will find a small prison haunted by a ghost. South of this prison cell there is a tunnel that will lead you eastwards. ...",
@@ -100,7 +100,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.ForgottenKnowledge.BabyDragon, 1)
 			npcHandler:setTopic(playerId, 4)
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 			if npcHandler:getTopic(playerId) == 3 then
 			npcHandler:say({
 				"Grrr."
@@ -109,7 +109,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	end
 
-	if msgcontains(message, "egg") then
+	if MsgContains(message, "egg") then
 			if npcHandler:getTopic(playerId) == 4 then
 			npcHandler:say({
 				"As I told you, fiendish ice creatures dragged my egg into the lower caves. ...",

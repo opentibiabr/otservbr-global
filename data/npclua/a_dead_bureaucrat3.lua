@@ -68,22 +68,22 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	local vocation = Vocation(player:getVocation():getBase():getId())
 
-	if msgcontains(message, "pumin") then
+	if MsgContains(message, "pumin") then
 		if player:getStorageValue(Storage.PitsOfInferno.ThronePumin) == 2 then
 			npcHandler:say("Tell me if you liked it when you come back. What is your name?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif msgcontains(message, player:getName()) then
+	elseif MsgContains(message, player:getName()) then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Alright |PLAYERNAME|. Vocation?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif msgcontains(message, vocation:getName()) then
+	elseif MsgContains(message, vocation:getName()) then
 		if npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("I was a " .. vocation:getName() .. ", too, before I died!! What do you want from me?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end
-	elseif msgcontains(message, "145") then
+	elseif MsgContains(message, "145") then
 		if npcHandler:getTopic(playerId) == 3 then
 			player:setStorageValue(Storage.PitsOfInferno.ThronePumin, 3)
 			npcHandler:say("That's right, you can get Form 145 from me. However, I need Form 411 first. Come back when you have it.", npc, creature)

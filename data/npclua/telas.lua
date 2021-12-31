@@ -59,12 +59,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(msgcontains(message, "farmine")) then
+	if(MsgContains(message, "farmine")) then
 		if(player:getStorageValue(Storage.TheNewFrontier.Questline) == 15) then
 			npcHandler:say("I have heard only little about this mine. I am a bit absorbed in my studies. But what does this mine have to do with me?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif(msgcontains(message, "reason")) then
+	elseif(MsgContains(message, "reason")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			if(player:getStorageValue(Storage.TheNewFrontier.BribeTelas) < 1) then
 				npcHandler:say("Well it sounds like a good idea to test my golems in some real environment. I think it is acceptable to send some of them to Farmine.", npc, creature)

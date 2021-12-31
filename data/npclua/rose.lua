@@ -58,10 +58,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if msgcontains(message, "Hydra Tongue") then
+	if MsgContains(message, "Hydra Tongue") then
 		npcHandler:say("Do you want to buy a Hydra Tongue for 100 gold?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif msgcontains(message, "yes") then
+	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			if player:getMoney() + player:getBankBalance() >= 100 then
 				player:removeMoneyBank(100)
@@ -72,7 +72,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say("You don't have enough money.", npc, creature)
 			end
 		end
-	elseif msgcontains(message, "no") then
+	elseif MsgContains(message, "no") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Then not.", npc, creature)
 			npcHandler:setTopic(playerId, 0)

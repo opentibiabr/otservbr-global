@@ -10,7 +10,7 @@ local sayFunction = function(npc, text, type, eventDelay, playerId)
 	eventDelay.done = true
 end
 
-function msgcontains(message, keyword)
+function MsgContains(message, keyword)
 	local lowerMessage, lowerKeyword = message:lower(), keyword:lower()
 	if lowerMessage == lowerKeyword then
 		return true

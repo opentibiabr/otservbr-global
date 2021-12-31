@@ -78,14 +78,14 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	
-	if msgcontains(message, "report") and player:getStorageValue(Storage.TheSecretLibrary.PinkTel) == 1 then
+	if MsgContains(message, "report") and player:getStorageValue(Storage.TheSecretLibrary.PinkTel) == 1 then
 		npcHandler:say({"Talk to Captain Charles in Port Hope. He told me that he once ran ashore on a small island where he discovered a small ruin. The architecture was like nothing he had seen before."}, npc, creature)
 		player:setStorageValue(Storage.TheSecretLibrary.PinkTel, 2)
 		npcHandler:setTopic(playerId, 1)
 		npcHandler:setTopic(playerId, 1)
 	end
 	
-	if msgcontains(message, "check") and player:getStorageValue(Storage.TheSecretLibrary.HighDry) == 5 then
+	if MsgContains(message, "check") and player:getStorageValue(Storage.TheSecretLibrary.HighDry) == 5 then
 		npcHandler:say({"Marvellous! With this information combined we have all that's needed! ...",
 			"So let me see. ...",
 			"Hmm, interesting. And we shouldn't forget about the chant! Yes, excellent! ...",
