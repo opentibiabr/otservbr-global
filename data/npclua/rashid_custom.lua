@@ -1,9 +1,11 @@
+local toggleRashidStorage = false
+
 local internalNpcName = "Rashid of Island"
 local npcType = Game.createNpcType(internalNpcName)
 local npcConfig = {}
 
-npcConfig.name = internalNpcName
-npcConfig.description = internalNpcName
+npcConfig.name = "Rashid"
+npcConfig.description = "Rashid"
 
 npcConfig.health = 100
 npcConfig.maxHealth = npcConfig.health
@@ -262,7 +264,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Come back soon!")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Take all the time you need to decide what you want!")
 
 local function onTradeRequest(npc, creature)
-	if Player(creature):getStorageValue(Storage.TravellingTrader.Mission07) ~= 1 then
+	if toggleRashidStorage and Player(creature):getStorageValue(Storage.TravellingTrader.Mission07) ~= 1 then
 		npcHandler:say('Sorry, but you do not belong to my exclusive customers. I have to make sure that I can trust in the quality of your wares.', npc, creature)
 		return false
 	end
