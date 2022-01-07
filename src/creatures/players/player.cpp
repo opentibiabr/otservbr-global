@@ -1215,7 +1215,8 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 	const auto& items = imbuement->getItems();
 	for (auto& [key, value] : items)
 	{
-		if (this->getItemTypeCount(key) + this->getStashItemCount(key) < value)
+		const ItemType& itemType = Item::items[key];
+		if (this->getItemTypeCount(key) + this->getStashItemCount(itemType.clientId) < value)
 		{
 			this->sendImbuementResult("You don't have all necessary items.");
 			return;
@@ -1250,17 +1251,17 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 
 	for (auto& [key, value] : items)
 	{
-		uint32_t invertoryItemCount = getItemTypeCount(key);
-		if (invertoryItemCount >= value)
+		uint32_t inventoryItemCount = getItemTypeCount(key);
+		if (inventoryItemCount >= value)
 		{
 			removeItemOfType(key, value, -1, true);
 			continue;
 		}
 
 		uint32_t mathItemCount = value;
-		if (invertoryItemCount > 0 && removeItemOfType(key, invertoryItemCount, -1, false))
+		if (inventoryItemCount > 0 && removeItemOfType(key, inventoryItemCount, -1, false))
 		{
-			mathItemCount = mathItemCount - invertoryItemCount;
+			mathItemCount = mathItemCount - inventoryItemCount;
 		}
 
 		withdrawItem(key, mathItemCount);
