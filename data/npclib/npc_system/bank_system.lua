@@ -167,7 +167,7 @@ function Npc:parseBank(message, npc, creature, npcHandler)
 			return true
 		end
 		if isValidMoney(count[playerId]) then
-			npcHandler:say("Who would you like transfer %d gold to?", npc, creature)
+			npcHandler:say(string.format("Who would you like transfer %d gold to?", count[playerId]), npc, creature)
 			npcHandler:setTopic(playerId, 12)
 		else
 			npcHandler:say("There is not enough gold on your account.", npc, creature)
