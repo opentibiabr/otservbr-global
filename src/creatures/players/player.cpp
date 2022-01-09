@@ -1249,6 +1249,8 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 		return;
 	}
 
+	std::stringstream withdrawItemMessage;
+	withdrawItemMessage << "Using ";
 	for (auto& [key, value] : items)
 	{
 		uint32_t inventoryItemCount = getItemTypeCount(key);
@@ -1264,8 +1266,13 @@ void Player::onApplyImbuement(Imbuement *imbuement, Item *item, uint8_t slot, bo
 			mathItemCount = mathItemCount - inventoryItemCount;
 		}
 
+		const ItemType& itemType = Item::items[key];
+
+		withdrawItemMessage << mathItemCount << "x "<< itemType.name <<" from your supply stash. ";
 		withdrawItem(key, mathItemCount);
 	}
+
+	sendTextMessage(MESSAGE_STATUS, withdrawItemMessage.str());
 
 	if (!protectionCharm && uniform_random(1, 100) > baseImbuement->percent)
 	{
