@@ -131,7 +131,7 @@ bool ConfigManager::load()
 		string[MYSQL_PASS] = getGlobalString(L, "mysqlPass", "");
 		string[MYSQL_DB] = getGlobalString(L, "mysqlDatabase", "otservbr-global");
 		string[MYSQL_SOCK] = getGlobalString(L, "mysqlSock", "");
-		string[CLIENT_VERSION_STR] = getGlobalString(L, "clientVersionStr", "12.64");
+		string[CLIENT_VERSION_STR] = getGlobalString(L, "clientVersionStr", "12.72");
 
 		integer[SQL_PORT] = getGlobalNumber(L, "mysqlPort", 3306);
 		integer[GAME_PORT] = getGlobalNumber(L, "gameProtocolPort", 7172);
@@ -140,7 +140,7 @@ bool ConfigManager::load()
 
 		integer[MARKET_OFFER_DURATION] = getGlobalNumber(L, "marketOfferDuration", 30 * 24 * 60 * 60);
 
-		integer[CLIENT_VERSION] = getGlobalNumber(L, "clientVersion", 1264);
+		integer[CLIENT_VERSION] = getGlobalNumber(L, "clientVersion", 1272);
 		integer[FREE_DEPOT_LIMIT] = getGlobalNumber(L, "freeDepotLimit", 2000);
 		integer[PREMIUM_DEPOT_LIMIT] = getGlobalNumber(L, "premiumDepotLimit", 8000);
 		integer[DEPOT_BOXES] = getGlobalNumber(L, "depotBoxes", 19);
@@ -189,6 +189,7 @@ bool ConfigManager::load()
 	boolean[SAVE_INTERVAL_CLEAN_MAP] = getGlobalBoolean(L, "saveIntervalCleanMap", false);
 	boolean[STAMINA_TRAINER] = getGlobalBoolean(L, "staminaTrainer", false);
 	boolean[STAMINA_PZ] = getGlobalBoolean(L, "staminaPz", false);
+	boolean[TOGLE_IMBUEMENT_SHRINE_STORAGE] = getGlobalBoolean(L, "togleImbuementShrineStorage", true);
 
 	string[DEFAULT_PRIORITY] = getGlobalString(L, "defaultPriority", "high");
 	string[SERVER_NAME] = getGlobalString(L, "serverName", "");

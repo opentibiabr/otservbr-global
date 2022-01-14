@@ -33,7 +33,7 @@ class Decay
 	private:
 		void checkDecay();
 
-		uint32_t eventId {0};
+		uint64_t eventId {0};
 		std::map<int64_t, std::vector<Item*>> decayMap;
 };
 

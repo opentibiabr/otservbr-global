@@ -33,10 +33,12 @@
 #include "lua/creature/actions.h"
 #include "creatures/combat/spells.h"
 
+#define IMBUEMENT_SLOT 500
+
 extern Game g_game;
 extern Spells* g_spells;
 extern Vocations g_vocations;
-extern Imbuements g_imbuements;
+extern Imbuements* g_imbuements;
 
 Items Item::items;
 
@@ -94,25 +96,34 @@ Item* Item::CreateItem(const uint16_t type, uint16_t count /*= 0*/)
 	return newItem;
 }
 
-uint32_t Item::getImbuement(uint8_t slot) {
-	int64_t slotid = IMBUEMENT_SLOT + slot;
-	const ItemAttributes::CustomAttribute* attr = getCustomAttribute(slotid);
-	if (attr) {
-		uint32_t info = static_cast<uint32_t>(boost::get<int64_t>(attr->value));
-		if(info << 8)
-			return info;
-	}
-
-	return 0;
+bool Item::getImbuementInfo(uint8_t slot, ImbuementInfo *imbuementInfo)
+{
+	const ItemAttributes::CustomAttribute* attribute = getCustomAttribute(IMBUEMENT_SLOT + slot);
+	uint32_t info = attribute ? static_cast<uint32_t>(attribute->getInt()) : 0;
+	imbuementInfo->imbuement = g_imbuements->getImbuement(info & 0xFF);
+	imbuementInfo->duration = info >> 8;
+	return imbuementInfo->duration && imbuementInfo->imbuement;
 }
 
-void Item::setImbuement(uint8_t slot, int64_t info) {
-	int64_t slotid = IMBUEMENT_SLOT + slot;
-	std::string key = boost::lexical_cast<std::string>(slotid);
-	ItemAttributes::CustomAttribute val;
-	val.set<int64_t>(info);
-	setCustomAttribute(key, val);
-	return;
+void Item::setImbuement(uint8_t slot, uint16_t id, int32_t duration)
+{
+	std::string key = boost::lexical_cast<std::string>(IMBUEMENT_SLOT + slot);
+	ItemAttributes::CustomAttribute value;
+	value.set<int64_t>(duration > 0 ? (duration << 8) | id : 0);
+	setCustomAttribute(key, value);
+}
+
+bool Item::hasImbuementCategoryId(uint16_t categoryId) {
+	for (uint8_t slotid = 0; slotid < getImbuementSlot(); slotid++) {
+		ImbuementInfo imbuementInfo;
+		if (getImbuementInfo(slotid, &imbuementInfo)) {
+			const CategoryImbuement* categoryImbuement = g_imbuements->getCategoryByID(imbuementInfo.imbuement->getCategory());
+			if (categoryImbuement->id == categoryId) {
+				return true;
+			}
+		}
+	}
+	return false;
 }
 
 Container* Item::CreateItemAsContainer(const uint16_t type, uint16_t size)
@@ -217,8 +228,8 @@ bool Item::equals(const Item* otherItem) const
 		return false;
 	}
 
-	if (!attributes) {
-		return !otherItem->attributes;
+	if (!attributes || attributes->attributeBits == 0) {
+		return (!otherItem->attributes || otherItem->attributes->attributeBits == 0);
 	}
 
 	const auto& otherAttributes = otherItem->attributes;
@@ -576,13 +587,13 @@ Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 			break;
 		}
 
-		case ATTR_IMBUINGSLOTS: {
-			int32_t imbuingSlots;
-			if (!propStream.read<int32_t>(imbuingSlots)) {
+		case ATTR_IMBUEMENT_SLOT: {
+			int32_t imbuementSlot;
+			if (!propStream.read<int32_t>(imbuementSlot)) {
 				return ATTR_READ_ERROR;
 			}
 
-			setIntAttr(ITEM_ATTRIBUTE_IMBUINGSLOTS, imbuingSlots);
+			setIntAttr(ITEM_ATTRIBUTE_IMBUEMENT_SLOT, imbuementSlot);
 			break;
 		}
 
@@ -718,6 +729,16 @@ Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 			break;
 		}
 
+		case ATTR_IMBUEMENT_TYPE: {
+			std::string imbuementType;
+			if (!propStream.readString(imbuementType)) {
+				return ATTR_READ_ERROR;
+			}
+
+			setStrAttr(ITEM_ATTRIBUTE_IMBUEMENT_TYPE, imbuementType);
+			break;
+		}
+
 		default:
 			return ATTR_READ_ERROR;
 	}
@@ -836,9 +857,9 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 		propWriteStream.write<int32_t>(getIntAttr(ITEM_ATTRIBUTE_EXTRADEFENSE));
 	}
 
-	if (hasAttribute(ITEM_ATTRIBUTE_IMBUINGSLOTS)) {
-		propWriteStream.write<uint8_t>(ATTR_IMBUINGSLOTS);
-		propWriteStream.write<int32_t>(getIntAttr(ITEM_ATTRIBUTE_IMBUINGSLOTS));
+	if (hasAttribute(ITEM_ATTRIBUTE_IMBUEMENT_SLOT)) {
+		propWriteStream.write<uint8_t>(ATTR_IMBUEMENT_SLOT);
+		propWriteStream.write<int32_t>(getIntAttr(ITEM_ATTRIBUTE_IMBUEMENT_SLOT));
 	}
 
 	if (hasAttribute(ITEM_ATTRIBUTE_OPENCONTAINER)) {
@@ -869,7 +890,7 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 	if (hasAttribute(ITEM_ATTRIBUTE_CUSTOM)) {
 		const ItemAttributes::CustomAttributeMap* customAttrMap = attributes->getCustomAttributeMap();
 		propWriteStream.write<uint8_t>(ATTR_CUSTOM_ATTRIBUTES);
-		propWriteStream.write<uint64_t>(customAttrMap->size());
+		propWriteStream.write<uint64_t>(static_cast<uint64_t>(customAttrMap->size()));
 		for (const auto &entry : *customAttrMap) {
 			// Serializing key type and value
 			propWriteStream.writeString(entry.first);
@@ -882,6 +903,11 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 	if (hasAttribute(ITEM_ATTRIBUTE_QUICKLOOTCONTAINER)) {
 		propWriteStream.write<uint8_t>(ATTR_QUICKLOOTCONTAINER);
 		propWriteStream.write<uint32_t>(getQuicklootAttr());
+	}
+
+	if (hasAttribute(ITEM_ATTRIBUTE_IMBUEMENT_TYPE)) {
+		propWriteStream.write<uint8_t>(ATTR_IMBUEMENT_TYPE);
+		propWriteStream.writeString(getStrAttr(ITEM_ATTRIBUTE_IMBUEMENT_TYPE));
 	}
 }
 
@@ -983,7 +1009,16 @@ std::vector<std::pair<std::string, std::string>>
 				}
 
 				ss.str("");
-				ss << std::showpos << it.abilities->skills[i] << '%' << std::noshowpos;
+
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
+					ss << std::showpos;
+				}
+
+				ss << it.abilities->skills[i] << '%';
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
+					ss << std::noshowpos;
+				}
+
 				descriptions.emplace_back(getSkillName(i), ss.str());
 			}
 
@@ -1231,7 +1266,15 @@ std::vector<std::pair<std::string, std::string>>
 				}
 
 				ss.str("");
-				ss << std::showpos << it.abilities->skills[i] << '%' << std::noshowpos;
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
+					ss << std::showpos;
+				}
+				ss << it.abilities->skills[i] << '%';
+
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
+					ss << std::noshowpos;
+				}
+	
 				descriptions.emplace_back(getSkillName(i), ss.str());
 			}
 
@@ -1384,8 +1427,55 @@ std::vector<std::pair<std::string, std::string>>
 	return descriptions;
 }
 
+std::string Item::parseImbuementDescription(const Item* item)
+{
+	std::ostringstream s;
+	if (item && item->getImbuementSlot() >= 1)
+	{
+		s << std::endl << "Imbuements: (";
+
+		for (uint8_t slotid = 0; slotid < item->getImbuementSlot(); slotid++)
+		{
+			if (slotid >= 1)
+			{
+				s << ", ";
+			}
+
+			Item* castItem = const_cast<Item*>(item);
+			if (!castItem)
+			{
+				continue;
+			}
+
+			ImbuementInfo imbuementInfo;
+			if (!castItem->getImbuementInfo(slotid, &imbuementInfo))
+			{
+				s << "Empty Slot";
+				continue;
+			}
+
+			const BaseImbuement *baseImbuement = g_imbuements->getBaseByID(imbuementInfo.imbuement->getBaseID());
+			if (!baseImbuement)
+			{
+				continue;
+			}
+
+			int minutes = imbuementInfo.duration / 60;
+			int hours = minutes / 60;
+			s << baseImbuement->name << " "
+			  << imbuementInfo.imbuement->getName() << " "
+			  << std::setw(2) << std::setfill('0') << hours << ":"
+			  << std::setw(2) << std::setfill('0') << (minutes % 60) << "h";
+		}
+		s << ").";
+	}
+
+	return s.str();
+}
+
 std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
-								 const Item* item /*= nullptr*/, int32_t subType /*= -1*/, bool addArticle /*= true*/)
+                                 const Item* item /*= nullptr*/,
+                                 int32_t subType /*= -1*/, bool addArticle /*= true*/)
 {
 	const std::string* text = nullptr;
 
@@ -1501,7 +1591,15 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 					else {
 						s << ", ";
 					}
-					s << getSkillName(i) << ' ' << std::showpos << it.abilities->skills[i] << std::noshowpos;
+					s << getSkillName(i) << ' ';
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
+						s << std::showpos;
+					}
+					s << it.abilities->skills[i];
+
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
+						s << std::noshowpos;
+					}
 				}
 
 				if (it.abilities->stats[STAT_MAGICPOINTS]) {
@@ -1687,7 +1785,16 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 					else {
 						s << ", ";
 					}
-					s << getSkillName(i) << ' ' << std::showpos << it.abilities->skills[i] << std::noshowpos << '%';
+					s << getSkillName(i) << ' ';
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
+						s << std::showpos;
+					}
+					s << it.abilities->skills[i];
+
+					if (i != SKILL_CRITICAL_HIT_CHANCE) {
+						s << std::noshowpos;
+					}
+					s << '%';
 				}
 
 				if (it.abilities->stats[STAT_MAGICPOINTS]) {
@@ -1847,7 +1954,16 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 					s << ", ";
 				}
 
-				s << getSkillName(i) << ' ' << std::showpos << it.abilities->skills[i] << std::noshowpos << '%';
+				s << getSkillName(i) << ' ';
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
+					s << std::showpos;
+				}
+				s << it.abilities->skills[i];
+
+				if (i != SKILL_CRITICAL_HIT_CHANCE) {
+					s << std::noshowpos;
+				}
+				s << '%';
 			}
 
 			if (it.abilities->stats[STAT_MAGICPOINTS]) {
@@ -2143,6 +2259,8 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 		s << '.';
 	}
 
+	s << parseImbuementDescription(item);
+
 	if (lookDistance <= 1) {
 		if (item) {
 			const uint32_t weight = item->getWeight();
@@ -2350,17 +2468,11 @@ void ItemAttributes::removeAttribute(itemAttrTypes type)
 		return;
 	}
 
-	auto prev_it = attributes.cbegin();
-	if ((*prev_it).type == type) {
-		attributes.pop_front();
-	} else {
-		auto it = prev_it, end = attributes.cend();
-		while (++it != end) {
-			if ((*it).type == type) {
-				attributes.erase_after(prev_it);
-				break;
-			}
-			prev_it = it;
+	for (auto it = attributes.begin(), end = attributes.end(); it != end; ++it) {
+		if ((*it).type == type) {
+			(*it) = std::move(attributes.back());
+			attributes.pop_back();
+			break;
 		}
 	}
 	attributeBits &= ~type;
@@ -2420,8 +2532,8 @@ ItemAttributes::Attribute& ItemAttributes::getAttr(itemAttrTypes type)
 	}
 
 	attributeBits |= type;
-	attributes.emplace_front(type);
-	return attributes.front();
+	attributes.emplace_back(type);
+	return attributes.back();
 }
 
 void Item::startDecaying()
@@ -2434,71 +2546,25 @@ void Item::stopDecaying()
 	g_game.stopDecay(this);
 }
 
-bool Item::hasMarketAttributes() const
+bool Item::hasMarketAttributes()
 {
-	if (attributes == nullptr) {
+	if (!attributes) {
 		return true;
 	}
 
-	for (const auto& attr : attributes->getList()) {
-		if (attr.type == ITEM_ATTRIBUTE_CHARGES) {
-			uint16_t charges = static_cast<uint16_t>(attr.value.integer);
-			if (charges != items[id].charges) {
-				return false;
-			}
-		} else if (attr.type == ITEM_ATTRIBUTE_DURATION) {
-			uint32_t duration = static_cast<uint32_t>(attr.value.integer);
-			if (duration != getDefaultDuration()) {
-				return false;
-			}
+	for (const auto& attribute : attributes->getList()) {
+		if (attribute.type == ITEM_ATTRIBUTE_CHARGES && static_cast<uint16_t>(attribute.value.integer) != items[id].charges) {
+			return false;
 		}
-	}
 
-	if (items[id].imbuingSlots > 0) {
-		for (uint8_t slot = 0; slot < items[id].imbuingSlots; slot++) {
-			Item* item = const_cast<Item*>(this);
-			uint32_t info = item->getImbuement(slot);
-			if (info) {
-				return false;
-			}
+		if (attribute.type == ITEM_ATTRIBUTE_DURATION && static_cast<uint32_t>(attribute.value.integer) != getDefaultDuration()) {
+			return false;
+		}
+
+		if (attribute.type == ITEM_ATTRIBUTE_IMBUEMENT_TYPE && !hasImbuements()) {
+			return false;
 		}
 	}
 
 	return true;
-}
-
-template<>
-const std::string& ItemAttributes::CustomAttribute::get<std::string>() {
-	if (value.type() == typeid(std::string)) {
-		return boost::get<std::string>(value);
-	}
-
-	return emptyString;
-}
-
-template<>
-const int64_t& ItemAttributes::CustomAttribute::get<int64_t>() {
-	if (value.type() == typeid(int64_t)) {
-		return boost::get<int64_t>(value);
-	}
-
-	return emptyInt;
-}
-
-template<>
-const double& ItemAttributes::CustomAttribute::get<double>() {
-	if (value.type() == typeid(double)) {
-		return boost::get<double>(value);
-	}
-
-	return emptyDouble;
-}
-
-template<>
-const bool& ItemAttributes::CustomAttribute::get<bool>() {
-	if (value.type() == typeid(bool)) {
-		return boost::get<bool>(value);
-	}
-
-	return emptyBool;
 }
