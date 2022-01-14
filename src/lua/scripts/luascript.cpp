@@ -3142,7 +3142,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("MonsterType", "isHealthHidden", LuaScriptInterface::luaMonsterTypeIsHealthHidden);
 	registerMethod("MonsterType", "isBlockable", LuaScriptInterface::luaMonsterTypeIsBlockable);
 
-	registerMethod("MonsterType", "isPet", LuaScriptInterface::luaMonsterTypeIsPet);
+	registerMethod("MonsterType", "familiar", LuaScriptInterface::luaMonsterTypeFamiliar);
 	registerMethod("MonsterType", "isRewardBoss", LuaScriptInterface::luaMonsterTypeIsRewardBoss);
 
 	registerMethod("MonsterType", "canSpawn", LuaScriptInterface::luaMonsterTypeCanSpawn);
@@ -15370,15 +15370,15 @@ int LuaScriptInterface::luaMonsterTypeIsHostile(lua_State* L)
 	return 1;
 }
 
-int LuaScriptInterface::luaMonsterTypeIsPet(lua_State* L)
+int LuaScriptInterface::luaMonsterTypeFamiliar(lua_State* L)
 {
-	// get: monsterType:isPet() set: monsterType:isPet(bool)
+	// get: monsterType:isFamiliar() set: monsterType:isFamiliar(bool)
 	MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
 	if (monsterType) {
 		if (lua_gettop(L) == 1) {
-			pushBoolean(L, monsterType->info.isPet);
+			pushBoolean(L, monsterType->info.isFamiliar);
 		} else {
-			monsterType->info.isPet = getBoolean(L, 2);
+			monsterType->info.isFamiliar = getBoolean(L, 2);
 			pushBoolean(L, true);
 		}
 	} else {

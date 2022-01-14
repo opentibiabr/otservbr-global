@@ -1144,8 +1144,12 @@ class Item : virtual public Thing
 		 */
 		bool getImbuementInfo(uint8_t slot, ImbuementInfo *imbuementInfo);
 		void setImbuement(uint8_t slot, uint16_t id, int32_t duration);
-		bool hasImbuementType(ImbuementTypes_t imbuementType) {
-			return items[id].imbuementTypes.find(imbuementType) != items[id].imbuementTypes.end();
+		bool hasImbuementType(ImbuementTypes_t imbuementType, uint16_t imbuementTier) {
+			auto it = items[id].imbuementTypes.find(imbuementType);
+			if (it != items[id].imbuementTypes.end()) {
+				return (it->second >= imbuementTier);
+			}
+			return false;
 		}
 		bool hasImbuementCategoryId(uint16_t categoryId);
 		bool hasImbuements() {

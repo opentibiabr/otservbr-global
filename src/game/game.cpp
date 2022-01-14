@@ -1236,12 +1236,12 @@ void Game::playerMoveCreature(Player* player, Creature* movingCreature, const Po
 
 	player->pushEvent(false);
 	const Monster* monster = movingCreature->getMonster();
-	bool isPet = false;
+	bool isFamiliar = false;
 	if (monster) {
-		isPet = monster->isPet();
+		isFamiliar = monster->isFamiliar();
 	}
 
-	if (!isPet && ((!movingCreature->isPushable() && !player->hasFlag(PlayerFlag_CanPushAllCreatures)) ||
+	if (!isFamiliar && ((!movingCreature->isPushable() && !player->hasFlag(PlayerFlag_CanPushAllCreatures)) ||
 				(movingCreature->isInGhostMode() && !player->isAccessPlayer()))) {
 		player->sendCancelMessage(RETURNVALUE_NOTMOVEABLE);
 		return;
@@ -2090,10 +2090,10 @@ bool Game::removeMoney(Cylinder* cylinder, uint64_t money, uint32_t flags /*= 0*
 			const uint32_t removeCount = std::ceil(money / static_cast<double>(worth));
 			addMoney(cylinder, (worth * removeCount) - money, flags);
 			internalRemoveItem(item, removeCount);
-			break;
+			return true;
 		} else {
 			internalRemoveItem(item);
-			break;
+			return true;
 		}
 	}
 
@@ -6496,14 +6496,20 @@ void Game::checkImbuements()
 {
 	g_scheduler.addEvent(createSchedulerTask(EVENT_IMBUEMENT_INTERVAL, std::bind(&Game::checkImbuements, this)));
 
+	std::vector<uint32_t> toErase;
+
 	for (const auto& [key, value] : playersActiveImbuements) {
 		Player* player = getPlayerByID(key);
 		if (!player) {
-			setPlayerActiveImbuements(key, 0);
+			toErase.push_back(key);
 			continue;
 		}
 
 		player->updateInventoryImbuement();
+	}
+
+	for (uint32_t playerId : toErase) {
+		setPlayerActiveImbuements(playerId, 0);
 	}
 }
 
