@@ -1024,7 +1024,7 @@ void Monster::onThinkDefense(uint32_t interval)
 				}
 			}
 
-			if (summonCount >= summonBlock.max) {
+			if (summonCount >= summonBlock.max || summonCount >= mType->info.maxSummons) {
 				continue;
 			}
 
