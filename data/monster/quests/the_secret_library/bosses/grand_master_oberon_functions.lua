@@ -1,4 +1,4 @@
-local asking = {
+GrandMasterOberonAsking = {
 	[1] = {msg = "You appear like a worm among men!"},
 	[2] = {msg = "The world will suffer for its iddle laziness!"},
 	[3] = {msg = "People fall at my feet when they see me coming!"},
@@ -10,7 +10,7 @@ local asking = {
 	[9] = {msg = "ULTAH SALID'AR, ESDO LO!"},
 }
 
-local responses = {
+GrandMasterOberonResponses = {
 	[1] = {msg = "How appropriate, you look like something worms already got the better of!"},
 	[2] = {msg = "Are you ever going to fight or do you prefer talking!"},
 	[3] = {msg = "Even before they smell your breath?"},
@@ -22,31 +22,33 @@ local responses = {
 	[9] = {msg = "SEHWO ASIMO, TOLIDO ESD!"},
 }
 
-local config = {
-	storage = {
-		asking = 1,
-		life = 2,
-		exhaust = 3,
+GrandMasterOberonConfig = {
+	Storage = {
+		Asking = 1,
+		Life = 2,
+		Exhaust = 3,
 	},
-	monster = {
+	Monster = {
 		"Falcon Knight",
 		"Falcon Paladin"
 	},
-	amount_life = 3
+	AmountLife = 3
 }
 
-local function heal(monster)
-	local storage = monster:getStorageValue(config.storage.life)
-	monster:setStorageValue(config.storage.life, storage + 1)
+local function healOberon(monster)
+	local storage = monster:getStorageValue(GrandMasterOberonConfig.Storage.Life)
+	monster:setStorageValue(GrandMasterOberonConfig.Storage.Life, storage + 1)
 	monster:addHealth(monster:getMaxHealth())
 
 end
 
-local function sendAsking(monster)
+function SendOberonAsking(monster)
 	monster:registerEvent('OberonImmunity')
 	local random = math.random(#asking)
 	monster:say(asking[random].msg, TALKTYPE_MONSTER_SAY)
-	monster:setStorageValue(config.storage.asking, random)
-	heal(monster)
-	Game.createMonster(config.monster[math.random(#config.monster)], monster:getPosition(), true, true)
+	monster:setStorageValue(GrandMasterOberonConfig.Storage.Asking, random)
+
+	healOberon(monster)
+
+	Game.createMonster(GrandMasterOberonConfig.Monster[math.random(#GrandMasterOberonConfig.Monster)], monster:getPosition(), true, true)
 end

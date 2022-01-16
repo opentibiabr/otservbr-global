@@ -115,18 +115,18 @@ monster.immunities = {
 }
 
 mType.onThink = function(monster, interval)
-	if monster:getStorageValue(config.storage.life) <= config.amount_life then
+	if monster:getStorageValue(GrandMasterOberonConfig.Storage.Life) <= GrandMasterOberonConfig.AmountLife then
 		local percentageHealth = (monster:getHealth()*100)/monster:getMaxHealth()
 		if percentageHealth <= 20 then
-			sendAsking(monster)
+			SendOberonAsking(monster)
 		end
 	end
 end
 
 mType.onAppear = function(monster, creature)
 	if monster:getId() == creature:getId() then
-		monster:setStorageValue(config.storage.asking, 1)
-		monster:setStorageValue(config.storage.life, 1)
+		monster:setStorageValue(GrandMasterOberonConfig.Storage.Asking, 1)
+		monster:setStorageValue(GrandMasterOberonConfig.Storage.Life, 1)
 	end
 	if monster:getType():isRewardBoss() then
 		monster:setReward(true)
@@ -140,14 +140,14 @@ mType.onMove = function(monster, creature, fromPosition, toPosition)
 end
 
 mType.onSay = function(monster, creature, type, message)
-	local exhaust = config.storage.exhaust
+	local exhaust = GrandMasterOberonConfig.Storage.Exhaust
 	if creature:isPlayer() and monster:getStorageValue(exhaust) <= os.time() then
 		message = message:lower()
 		monster:setStorageValue(exhaust, os.time() + 1)
 		for i, v in pairs(responses) do
 			if message == v.msg:lower() then
-				local asking_storage = monster:getStorageValue(config.storage.asking)
-				if asking[i].msg:lower() == asking[asking_storage].msg:lower() then
+				local asking_storage = monster:getStorageValue(GrandMasterOberonConfig.Storage.Asking)
+				if GrandMasterOberonAsking[i].msg:lower() == GrandMasterOberonAsking[asking_storage].msg:lower() then
 					monster:unregisterEvent('OberonImmunity')
 				end
 			end
