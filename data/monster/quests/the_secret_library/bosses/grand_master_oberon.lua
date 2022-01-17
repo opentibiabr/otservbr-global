@@ -144,7 +144,7 @@ mType.onSay = function(monster, creature, type, message)
 	if creature:isPlayer() and monster:getStorageValue(exhaust) <= os.time() then
 		message = message:lower()
 		monster:setStorageValue(exhaust, os.time() + 1)
-		for i, v in pairs(responses) do
+		for i, v in pairs(GrandMasterOberonResponses) do
 			if message == v.msg:lower() then
 				local asking_storage = monster:getStorageValue(GrandMasterOberonConfig.Storage.Asking)
 				if GrandMasterOberonAsking[i].msg:lower() == GrandMasterOberonAsking[asking_storage].msg:lower() then
