@@ -16337,7 +16337,7 @@ int LuaScriptInterface::luaMonsterTypeAddSummon(lua_State* L)
 		summonBlock_t summon;
 		summon.name = getString(L, 2);
 		summon.speed = getNumber<int32_t>(L, 3);
-		summon.max = getNumber<int32_t>(L, 5, 1);
+		summon.count = getNumber<int32_t>(L, 5, 1);
 		summon.chance = getNumber<int32_t>(L, 4);
 		monsterType->info.summons.push_back(summon);
 		pushBoolean(L, true);
