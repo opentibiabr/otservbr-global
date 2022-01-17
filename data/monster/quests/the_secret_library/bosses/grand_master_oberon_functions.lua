@@ -44,8 +44,8 @@ end
 
 function SendOberonAsking(monster)
 	monster:registerEvent('OberonImmunity')
-	local random = math.random(#asking)
-	monster:say(asking[random].msg, TALKTYPE_MONSTER_SAY)
+	local random = math.random(#Asking)
+	monster:say(Asking[random].msg, TALKTYPE_MONSTER_SAY)
 	monster:setStorageValue(GrandMasterOberonConfig.Storage.Asking, random)
 
 	healOberon(monster)
