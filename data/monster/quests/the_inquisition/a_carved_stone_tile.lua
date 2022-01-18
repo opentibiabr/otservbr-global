@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 5
 
 monster.changeTarget = {
 	interval = 5000,
@@ -49,8 +48,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Dreadbeast", chance = 25, interval = 2000}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "Dreadbeast", chance = 25, interval = 2000, count = 5}
+	}
 }
 
 monster.voices = {

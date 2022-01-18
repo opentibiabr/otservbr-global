@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6336
 monster.speed = 350
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Acid Blob", chance = 40, interval = 4000, max = 3}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Acid Blob", chance = 40, interval = 4000, count = 3}
+	}
 }
 
 monster.voices = {

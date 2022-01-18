@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 21291
 monster.speed = 256
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 2000,
@@ -58,9 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "egg2", chance = 16, interval = 2000},
-	{name = "spawn of the welter", chance = 16, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "spawn of the welter", chance = 16, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {

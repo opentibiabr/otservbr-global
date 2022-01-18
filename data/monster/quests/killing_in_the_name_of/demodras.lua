@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5984
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Dragon", chance = 17, interval = 1000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Dragon", chance = 17, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {

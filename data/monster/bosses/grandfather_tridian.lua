@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 20391
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,9 +57,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Crypt Shambler", chance = 10, interval = 2000},
-	{name = "Ghost", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Crypt Shambler", chance = 10, interval = 2000, count = 1},
+		{name = "Ghost", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {

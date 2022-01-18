@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 355
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -49,10 +48,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Lesser Swarmer", chance = 100, interval = 30000},
-	{name = "Lesser Swarmer", chance = 100, interval = 30000},
-	{name = "Lesser Swarmer", chance = 100, interval = 30000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Lesser Swarmer", chance = 100, interval = 30000, count = 3}
+	}
 }
 
 monster.voices = {

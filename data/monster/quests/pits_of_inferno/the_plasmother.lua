@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6532
 monster.speed = 310
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5500,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Defiler", chance = 20, interval = 4000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Defiler", chance = 20, interval = 4000, count = 2}
+	}
 }
 
 monster.voices = {

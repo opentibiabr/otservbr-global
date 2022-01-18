@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 7349
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 0,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Green Djinn", chance = 20, interval = 5000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Green Djinn", chance = 20, interval = 5000, count = 2}
+	}
 }
 
 monster.voices = {

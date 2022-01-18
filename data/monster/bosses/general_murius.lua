@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 23462
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,9 +56,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Minotaur Archer", chance = 15, interval = 1000, max = 2},
-	{name = "Minotaur Guard", chance = 12, interval = 1000, max = 2}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Minotaur Archer", chance = 15, interval = 1000, count = 2},
+		{name = "Minotaur Guard", chance = 12, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {

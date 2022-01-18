@@ -259,7 +259,6 @@ registerMonsterType.summon = function(mtype, mask)
 	if mask.summon then
 		if mask.summon.maxSummons then
 			mtype:maxSummons(mask.summon.maxSummons)
-			print(mask.summon.maxSummons)
 		end
 		if type(mask.summon.summons) == "table" then
 			for k, v in pairs(mask.summon.summons) do

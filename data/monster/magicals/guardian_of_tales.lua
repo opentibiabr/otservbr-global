@@ -32,7 +32,6 @@ monster.race = "undead"
 monster.corpse = 32470
 monster.speed = 420
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

@@ -12,8 +12,6 @@ monster.maxHealth = 10000
 monster.race = "blood"
 monster.corpse = 0
 monster.speed = 0
-monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,9 +45,6 @@ monster.flags = {
 monster.light = {
 	level = 0,
 	color = 0
-}
-
-monster.summons = {
 }
 
 monster.voices = {

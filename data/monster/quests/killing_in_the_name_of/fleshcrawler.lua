@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6021
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Larva", chance = 10, interval = 2000, max = 3}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Larva", chance = 10, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {

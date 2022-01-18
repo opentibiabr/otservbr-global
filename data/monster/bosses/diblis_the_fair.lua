@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 8937
 monster.speed = 280
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Banshee", chance = 50, interval = 4500}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Banshee", chance = 50, interval = 4500, count = 3}
+	}
 }
 
 monster.voices = {

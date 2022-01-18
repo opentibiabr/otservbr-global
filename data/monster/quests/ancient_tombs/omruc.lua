@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6025
 monster.speed = 370
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Stalker", chance = 100, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Stalker", chance = 100, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {

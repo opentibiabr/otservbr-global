@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 29094
 monster.speed = 228
 monster.manaCost = 450
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,

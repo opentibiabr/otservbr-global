@@ -19,7 +19,6 @@ monster.race = "fire"
 monster.corpse = 5995
 monster.speed = 380
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 2000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "demon", chance = 10, interval = 1000, max = 4}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "demon", chance = 10, interval = 1000, count = 4}
+	}
 }
 
 monster.voices = {

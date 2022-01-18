@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 12317
 monster.speed = 450
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Draken Warmaster", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Draken Warmaster", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
