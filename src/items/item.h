@@ -1081,7 +1081,6 @@ class Item : virtual public Thing
 		uint32_t getDefaultDuration() const {
 			return items[id].decayTime * 1000;
 		}
-		bool hasDecayTo() const;
 		bool canDecay() const;
 
 		virtual bool canRemove() const {

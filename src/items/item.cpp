@@ -2388,12 +2388,6 @@ void Item::setUniqueId(uint16_t n)
 	}
 }
 
-bool Item::hasDecayTo() const
-{
-	const ItemType& it = Item::items[id];
-	return it.decayTo >= 0;
-}
-
 bool Item::canDecay() const
 {
 	if (isRemoved()) {
