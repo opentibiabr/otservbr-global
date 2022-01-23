@@ -77,7 +77,7 @@ local foods = {
 	[8841] = {1, 'Urgh.'}, -- lemon
 	[8842] = {7, 'Munch.'}, -- cucumber
 	[8843] = {5, 'Crunch.'}, -- onion
-	[8844] = {1, 'Gulp.'}, -- jalapeño pepper
+	[8844] = {1, 'Gulp.'}, -- jalapeÃ±o pepper
 	[8845] = {5, 'Munch.'}, -- beetroot
 	[8847] = {11, 'Yum.'}, -- chocolate cake
 	[9005] = {7, 'Slurp.'}, -- yummy gummy worm
@@ -112,7 +112,9 @@ local foods = {
 	[27616] = {10, 'Slurp.'}, -- bottle of tibian wine
 	[28997] = {15, 'Mmmmm!'}, -- fresh fruit
 	[35057] = {40, 'Mmmmm!'}, -- meringue cake
-	[35060] = {15, 'Slurp.'} -- winterberry liquor
+	[35060] = {15, 'Slurp.'}, -- winterberry liquor
+	[36395] = {40, 'Slurp.'}, -- goanna meat 
+	[36904 ] = {15, 'Slurp.'} -- candy floss
 }
 
 local food = Action()
