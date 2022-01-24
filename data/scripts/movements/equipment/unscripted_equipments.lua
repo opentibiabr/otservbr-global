@@ -5227,12 +5227,12 @@ if not equipmentsTable then
             itemid = 24717,
             type = "equip",
             slot = "necklace"
-        }, -- enchanted werewolf amulet
-        {
+		}, -- enchanted werewolf amulet
+		{
             itemid = 24717,
             type = "deequip",
             slot = "necklace"
-        }, -- enchanted werewolf amulet
+		}, -- enchanted werewolf amulet
 		{
 			itemid = 24637,
 			type = "equip",
