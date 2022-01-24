@@ -6,6 +6,7 @@ muted:setParameter(CONDITION_PARAM_SUBID, CHANNEL_HELP)
 muted:setParameter(CONDITION_PARAM_TICKS, 3600000)
 
 function onSpeak(player, type, message)
+	local playerAccountType = player:getAccountType()
 	if player:getStorageValue(storage) > os.time() then
 		player:sendCancelMessage("You are muted from the Help channel for using it inappropriately.")
 		return false
