@@ -15372,7 +15372,7 @@ int LuaScriptInterface::luaMonsterTypeIsHostile(lua_State* L)
 
 int LuaScriptInterface::luaMonsterTypeFamiliar(lua_State* L)
 {
-	// get: monsterType:isFamiliar() set: monsterType:isFamiliar(bool)
+	// get: monsterType:familiar() set: monsterType:familiar(bool)
 	MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
 	if (monsterType) {
 		if (lua_gettop(L) == 1) {

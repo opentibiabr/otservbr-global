@@ -5,7 +5,7 @@ FAMILIAR_ID = {
 	[VOCATION.BASE_ID.KNIGHT] = {id = 991, name = "Knight familiar"}
 }
 
-FAMILIAR_TIMER = {
+FAMILIAR_FAMILIAR_TIMER = {
 	[1] = {storage=Storage.FamiliarSummonEvent10, countdown=10, message = "10 seconds"},
 	[2] = {storage=Storage.FamiliarSummonEvent60, countdown=60, message = "one minute"}
 }
@@ -23,7 +23,7 @@ function removeFamiliar(creatureId, playerId)
 		return true
 	end
 	creature:remove()
-	for sendMessage = 1, #timer do
-		player:setStorageValue(timer[sendMessage].storage, -1)
+	for sendMessage = 1, #FAMILIAR_TIMER do
+		player:setStorageValue(FAMILIAR_TIMER[sendMessage].storage, -1)
 	end
 end
