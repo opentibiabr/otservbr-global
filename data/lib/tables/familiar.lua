@@ -5,7 +5,7 @@ FAMILIAR_ID = {
 	[VOCATION.BASE_ID.KNIGHT] = {id = 991, name = "Knight familiar"}
 }
 
-FAMILIAR_FAMILIAR_TIMER = {
+FAMILIAR_TIMER = {
 	[1] = {storage=Storage.FamiliarSummonEvent10, countdown=10, message = "10 seconds"},
 	[2] = {storage=Storage.FamiliarSummonEvent60, countdown=60, message = "one minute"}
 }
