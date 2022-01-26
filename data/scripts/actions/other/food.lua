@@ -114,7 +114,7 @@ local foods = {
 	[35057] = {40, 'Mmmmm!'}, -- meringue cake
 	[35060] = {15, 'Slurp.'}, -- winterberry liquor
 	[36395] = {40, 'Slurp.'}, -- goanna meat 
-	[36904 ] = {15, 'Slurp.'} -- candy floss
+	[36904] = {15, 'Slurp.'} -- candy floss
 }
 
 local food = Action()
