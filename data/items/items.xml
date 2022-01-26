@@ -37191,7 +37191,6 @@
 		<attribute key="transformEquipTo" value="24770" />
 		<attribute key="loottype" value="helmet" />
 		<attribute key="absorbPercentPhysical" value="4" />
-		<attribute key="skillSword" value="1" />
 		<attribute key="armor" value="9" />
 		<attribute key="showduration" value="1" />
 		<attribute key="stopduration" value="1" />
