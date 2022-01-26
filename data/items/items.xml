@@ -36876,9 +36876,6 @@
 		<attribute key="transformEquipTo" value="24790" />
 		<attribute key="showduration" value="1" />
 		<attribute key="stopduration" value="1" />
-		<attribute key="armor" value="3" />
-		<attribute key="absorbPercentPhysical" value="6" />
-		<attribute key="showattributes" value="1" />
 	</item>
 	<item id="24718" article="a" name="werewolf helmet">
 		<attribute key="weight" value="2500" />
@@ -37194,7 +37191,6 @@
 		<attribute key="transformEquipTo" value="24770" />
 		<attribute key="loottype" value="helmet" />
 		<attribute key="absorbPercentPhysical" value="4" />
-		<attribute key="skillSword" value="1" />
 		<attribute key="armor" value="9" />
 		<attribute key="showduration" value="1" />
 		<attribute key="stopduration" value="1" />
@@ -37239,7 +37235,7 @@
 		<attribute key="weight" value="550" />
 		<attribute key="slotType" value="necklace" />
 		<attribute key="loottype" value="amulet" />
-		<attribute key="decayTo" value="0" />
+		<attribute key="decayTo" value="24716" />
 		<attribute key="transformDeEquipTo" value="24717" />
 		<attribute key="armor" value="3" />
 		<attribute key="absorbPercentPhysical" value="6" />
@@ -47713,7 +47709,6 @@
 		<attribute key="loottype" value="amulet" />
 		<attribute key="transformEquipTo" value="34980" />
 		<attribute key="stopduration" value="1" />
-		<attribute key="duration" value="3600" />
 		<attribute key="showduration" value="1" />
 	</item>
 	<item id="34982" article="an" name="enchanted pendulet">
