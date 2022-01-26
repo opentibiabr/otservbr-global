@@ -6413,7 +6413,7 @@ void Game::startDecay(Item* item)
 	}
 
 	int32_t duration = item->getIntAttr(ITEM_ATTRIBUTE_DURATION);
-	if (duration <= 0) {
+	if (duration <= 0 && item->hasAttribute(ITEM_ATTRIBUTE_DURATION)) {
 		internalDecayItem(item);
 		return;
 	}
