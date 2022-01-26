@@ -6412,6 +6412,12 @@ void Game::startDecay(Item* item)
 		return;
 	}
 
+	int32_t duration = item->getIntAttr(ITEM_ATTRIBUTE_DURATION);
+	if (duration <= 0) {
+		internalDecayItem(item);
+		return;
+	}
+
 	ItemDecayState_t decayState = item->getDecaying();
 	if (decayState == DECAYING_STOPPING || (!item->canDecay() && decayState == DECAYING_TRUE)) {
 		stopDecay(item);
@@ -6422,11 +6428,8 @@ void Game::startDecay(Item* item)
 		return;
 	}
 
-	int32_t duration = item->getIntAttr(ITEM_ATTRIBUTE_DURATION);
 	if (duration > 0) {
 		g_decay.startDecay(item, duration);
-	} else {
-		internalDecayItem(item);
 	}
 }
 
