@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 26209
 monster.speed = 290
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,

@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 20546
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 2000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Ice Golem", chance = 13, interval = 1000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Ice Golem", chance = 13, interval = 1000, count = 4}
+	}
 }
 
 monster.voices = {

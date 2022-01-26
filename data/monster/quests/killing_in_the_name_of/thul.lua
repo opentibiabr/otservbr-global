@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6065
 monster.speed = 520
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Massive Water Elemental", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Massive Water Elemental", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {

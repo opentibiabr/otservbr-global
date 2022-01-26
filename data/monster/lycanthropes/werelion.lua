@@ -25,14 +25,13 @@ monster.Bestiary = {
 	Occurrence = 0,
 	Locations = "This monster you can find in Hyaena Lairs."
 	}
-	
+
 monster.health = 2800
 monster.maxHealth = 2800
 monster.race = "blood"
 monster.corpse = 38660
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,

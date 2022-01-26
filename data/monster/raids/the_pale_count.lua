@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 21270
 monster.speed = 500
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Nightfiend", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Nightfiend", chance = 10, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {

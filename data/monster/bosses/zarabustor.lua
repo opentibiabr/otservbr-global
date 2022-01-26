@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 20554
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,9 +57,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Warlock", chance = 10, interval = 2000, max = 2},
-	{name = "Green Djinn", chance = 10, interval = 2000, max = 3}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "Warlock", chance = 10, interval = 2000, count = 2},
+		{name = "Green Djinn", chance = 10, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {

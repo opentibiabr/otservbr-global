@@ -19,7 +19,6 @@ monster.race = "fire"
 monster.corpse = 25151
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

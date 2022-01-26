@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 5994
 monster.speed = 178
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 2000,
@@ -68,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Evil Sheep", chance = 30, interval = 2000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Evil Sheep", chance = 30, interval = 2000, count = X}
+	}
 }
 
 monster.voices = {

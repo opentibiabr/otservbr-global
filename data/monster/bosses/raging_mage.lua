@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 13834
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Golden Servant", chance = 50, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Golden Servant", chance = 50, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
