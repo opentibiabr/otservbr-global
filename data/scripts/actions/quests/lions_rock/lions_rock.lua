@@ -127,7 +127,7 @@ local lionsGetLionsMane = Action()
 
 function lionsGetLionsMane.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 23759 then
-		if player:getStorageValue(Storage.LionsRock.Questline) > 0 then
+		if player:getStorageValue(Storage.LionsRock.Questline) < 0 then
 			if player:getStorageValue(Storage.LionsRock.GetLionsMane) < 0 then
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You picked a beautiful lion's mane flower.")
 				player:addItem(23760, 1)
@@ -150,7 +150,7 @@ function lionsGetHolyWater.onUse(player, item, fromPosition, target, toPosition,
 		return true
 	end
 
-	if player:getStorageValue(Storage.LionsRock.Questline) > 0 then
+	if player:getStorageValue(Storage.LionsRock.GetLionsMane) > 0 then
 		if player:getStorageValue(Storage.LionsRock.GetHolyWater) < 0 then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You took some holy water from the sacred well.')
 			player:addItem(23835, 1)
@@ -219,7 +219,7 @@ function lionsRockFountain.onUse(player, item, fromPosition, target, toPosition,
 
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE,
 			"Something sparkles in the fountain's water. You draw out a " .. rewards[reward] .. '.')
-		player:sendMagicEffect(CONST_ME_HOLYAREA)
+		player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
 		player:addAchievement("Lion's Den Explorer")
 		item:transform(lionsRockSanctuaryRockId)
 		player:addItem(rewards[reward], 1)
