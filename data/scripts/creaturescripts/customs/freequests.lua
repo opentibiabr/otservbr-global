@@ -326,7 +326,7 @@ end
 local freeQuests = CreatureEvent("FreeQuests")
 
 function freeQuests.onLogin(player)
-	if configManager.getBoolean(configKeys.FREE_QUESTS) and
+	if not configManager.getBoolean(configKeys.FREE_QUESTS) or
 	player:getStorageValue(Storage.FreeQuests) == upperLimit then
 		return true
 	end
