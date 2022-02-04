@@ -1,4 +1,4 @@
-local upperLimit = 1 -- change upperLimit to a higher one after adding a new quest to questTable
+local upperLimit = configManager.getNumber(configKeys.TOGGLE_FREE_QUEST) -- change upperLimit to a higher one after adding a new quest to questTable
 
 local questTable = {
 	{storage = Storage.BigfootBurden.QuestLine, storageValue = 2},
@@ -326,7 +326,7 @@ end
 local freeQuests = CreatureEvent("FreeQuests")
 
 function freeQuests.onLogin(player)
-	if not configManager.getBoolean(configKeys.FREE_QUESTS) or
+	if not configManager.getBoolean(configKeys.TOGGLE_FREE_QUEST) or
 	player:getStorageValue(Storage.FreeQuests) == upperLimit then
 		return true
 	end
