@@ -1,4 +1,4 @@
-local upperLimit = configManager.getNumber(configKeys.TOGGLE_FREE_QUEST) -- change upperLimit to a higher one after adding a new quest to questTable
+local upperLimit = configManager.getNumber(configKeys.FREE_QUEST_STAGE) -- change upperLimit to a higher one after adding a new quest to questTable
 
 local questTable = {
 	{storage = Storage.BigfootBurden.QuestLine, storageValue = 2},
