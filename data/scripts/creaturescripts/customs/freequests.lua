@@ -1,3 +1,5 @@
+local stage = configManager.getNumber(configKeys.FREE_QUEST_STAGE)
+
 local questTable = {
 	{storage = Storage.BigfootBurden.QuestLine, storageValue = 2},
 	{storage = Storage.BigfootBurden.QuestLine, storageValue = 4},
@@ -309,7 +311,7 @@ local function playerFreeQuestStart(playerId, index)
 		index = index + 1
 		if not questTable[index] then
 			player:sendTextMessage(MESSAGE_INFO_DESCR, "Player FreeQuest is complete.")
-			player:setStorageValue(Storage.FreeQuests, upperLimit)
+			player:setStorageValue(Storage.FreeQuests, stage)
 			return
 		end
 
@@ -325,7 +327,7 @@ local freeQuests = CreatureEvent("FreeQuests")
 
 function freeQuests.onLogin(player)
 	if not configManager.getBoolean(configKeys.TOGGLE_FREE_QUEST) or
-	player:getStorageValue(Storage.FreeQuests) == configManager.getNumber(configKeys.FREE_QUEST_STAGE) then
+	player:getStorageValue(Storage.FreeQuests) == stage then
 		return true
 	end
 
