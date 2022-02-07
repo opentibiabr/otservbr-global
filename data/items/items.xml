@@ -35184,7 +35184,6 @@
 	<item id="22132" article="an" name="enchanted werewolf helmet">
 		<attribute key="armor" value="9"/>
 		<attribute key="absorbPercentPhysical" value="4"/>
-		<attribute key="skillsword" value="1"/>
 		<attribute key="duration" value="3600"/>
 		<attribute key="decayTo" value="22060"/>
 		<attribute key="slotType" value="necklace"/>
@@ -35199,12 +35198,9 @@
 	</item>
 	<!-- axe -->
 	<item id="22134" article="an" name="enchanted werewolf amulet">
-		<attribute key="armor" value="3"/>
-		<attribute key="absorbPercentPhysical" value="6"/>
 		<attribute key="duration" value="3600"/>
-		<attribute key="decayTo" value="0"/>
+		<attribute key="decayTo" value="22060"/>
 		<attribute key="slotType" value="necklace"/>
-		<attribute key="showAttributes" value="1"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="weight" value="550"/>
 	</item>
@@ -45523,7 +45519,6 @@
 		<attribute key="absorbPercentPhysical" value="7"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="decayTo" value="30343"/>
-		<attribute key="duration" value="3600"/>
 		<attribute key="slotType" value="necklace"/>
 		<attribute key="skilldist" value="3"/>
 		<attribute key="showduration" value="1"/>
