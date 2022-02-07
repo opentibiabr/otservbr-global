@@ -199,6 +199,11 @@ function Player:onLook(thing, position, distance)
 			end
 		end
 	end
+		if LOOK_MARRIAGE_DESCR and thing:isCreature() then
+        if thing:isPlayer() then
+            description = description .. self:getMarriageDescription(thing)
+        end
+    end
 	self:sendTextMessage(MESSAGE_LOOK, description)
 end
 
