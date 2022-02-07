@@ -168,7 +168,11 @@ local function tryEngage(cid, message, keywords, parameters, node)
                     npcHandler:say('{' .. getPlayerNameById(candidate) .. '} is already married to {' .. getPlayerNameById(candidateSpouse) .. '}.', cid)
                 elseif candidateStatus == PROPOSED_STATUS then
                     if candidateSpouse == player:getGuid() then
-                        npcHandler:say('Since both young souls are willing to marry, I now pronounce you and {' .. getPlayerNameById(candidate) .. '} married. {' .. player:getName() .. '}, take these two engraved wedding rings and give one of them to your spouse.', cid)
+		        delayedSay('Dear friends and family, we are gathered here today to witness and celebrate the union of ' .. getPlayerNameById(candidate) .. ' and ' .. player:getName() .. ' in marriage.')
+        	        delayedSay('Through their time together, they have come to realize that their personal dreams, hopes, and goals are more attainable and more meaningful through the combined effort and mutual support provided in love, commitment, and family;',5000)
+        	        delayedSay('and so they have decided to live together as husband and wife. And now, by the power vested in me by the Gods of Tibia, I hereby pronounce you husband and wife.',15000)
+        	        delayedSay('*After a whispered blessing opens an hand towards ' .. player:getName() .. '* Take these two engraved wedding rings and give one of them to your spouse.',22000)
+        	        delayedSay('You may now kiss your bride.',28000)
                         player:removeItem(ITEM_WEDDING_RING,1)
 			player:removeItem(10503,1)
                         local item1 = Item(doPlayerAddItem(cid,ITEM_ENGRAVED_WEDDING_RING,1))
