@@ -35,7 +35,6 @@ monster.race = "fire"
 monster.corpse = 5995
 monster.speed = 256
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -66,8 +65,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -75,8 +73,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "fire elemental", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "fire elemental", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {

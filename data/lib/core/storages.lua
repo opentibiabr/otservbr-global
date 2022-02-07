@@ -105,7 +105,7 @@ Storage = {
 	combatProtectionStorage = 30023,
 	Factions = 30024,
 	blockMovementStorage = 30025,
-	PetSummon = 30026,
+	FamiliarSummon = 30026,
 	TrainerRoom = 30027,
 	NpcSpawn = 30028,
 	ExerciseDummyExhaust = 30029,
@@ -133,11 +133,11 @@ Storage = {
 	StoreExaust = 30051,
 	LemonCupcake = 30052,
 	BlueberryCupcake = 30053,
-	PetSummonEvent10 = 30054,
-	PetSummonEvent60 = 30055,
+	FamiliarSummonEvent10 = 30054,
+	FamiliarSummonEvent60 = 30055,
 	ChayenneKeyTime = 30056,
-	FreeQuests = 990000,
-	PremiumAccount = 998899,
+	FreeQuests = 30057,
+	PremiumAccount = 30058,
 
 	--[[
 	Old storages
