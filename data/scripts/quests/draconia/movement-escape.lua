@@ -6,7 +6,7 @@ function escape.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	local sacrificeItem = Tile({x = 32816, y = 31601, z = 9}):getItemById(2319)
+	local sacrificeItem = Tile({x = 32816, y = 31601, z = 9}):getItemById(3206)
 	if not sacrificeItem then
 		player:teleportTo({x = 32818, y = 31599, z = 9})
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)

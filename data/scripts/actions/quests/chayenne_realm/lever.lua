@@ -1,20 +1,27 @@
 local chayenneLever = Action()
-function chayenneLever.onUse(cid, item, fromPosition, itemEx, toPosition)
-	if item.itemid == 1945 then
-		if getGlobalStorageValue(71543) <= os.time() then
-			if getPlayerItemCount(cid, 16015) >= 1 then
-			doTransformItem(getTileItemById({x = 33080, y = 32582, z = 3},1945).uid,1946)
-			doRemoveItem(getTileItemById({x = 33075, y = 32591, z = 3}, 1498).uid, 1)
-			setGlobalStorageValue(71543, os.time()+5*60)
-			addEvent(Game.createItem, 60*1000, 1498, {x = 33075, y = 32591, z = 3})
-		else
-			doPlayerSendTextMessage(cid, 19, "You do not have the Chayenne's magical key.")
-			end
-		else
-			doPlayerSendTextMessage(cid, 19, "You need to wait few minutes to use again.")
+
+function chayenneLever.onUse(player, item, fromPosition, itemEx, toPosition)
+	if item.itemid == 2772 then
+		if Game.getStorageValue(Storage.ChayenneKeyTime) > os.time() then
+			player:sendTendTextMessage(MESSAGE_EVENT_ADVANCE, "You need to wait few minutes to use again.")
+			return true
 		end
-	elseif item.itemid == 1946 then
-		doTransformItem(getTileItemById({x = 33080, y = 32582, z = 3},1946).uid,1945)
+
+		if player:getItemCount(14682) < 1 then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You do not have the Chayenne's magical key.")
+			return true
+		end
+
+		local tile = Tile({x = 33075, y = 32591, z = 3})
+		local item = tile:getItemById(2129)
+		if item then
+			item:remove(1)
+		end
+		Game.setStorageValue(Storage.ChayenneKeyTime, os.time() + 5 * 60)
+		addEvent(Game.createItem, 60 * 1000, 2129, {x = 33075, y = 32591, z = 3})
+		item:transform(2773)
+	elseif item.itemid == 2773 then
+		item:transform(2772)
 	end
 end
 

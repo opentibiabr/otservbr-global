@@ -60,6 +60,7 @@ local function spawnYasir(position)
 end
 
 local yasir = GlobalEvent("yasir")
+
 function yasir.onStartup()
 	if yasirEnabled then
 		if math.random(100) <= yasirChance then
@@ -90,7 +91,10 @@ function yasir.onStartup()
 			if randTown.removeItems then
 				local item
 				for i = 1, #randTown.removeItems do
-					item = Tile(randTown.removeItems[i].position):getItemById(randTown.removeItems[i].itemId)
+					local tile = Tile(randTown.removeItems[i].position)
+					if tile then
+						item = tile:getItemById(randTown.removeItems[i].itemId)
+					end
 					if item then
 						item:remove()
 					end
@@ -109,4 +113,5 @@ function yasir.onStartup()
 		end
 	end
 end
+
 yasir:register()

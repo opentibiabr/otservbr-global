@@ -29,7 +29,7 @@ monster.Bestiary = {
 monster.health = 9500
 monster.maxHealth = 9500
 monster.race = "undead"
-monster.corpse = 25436
+monster.corpse = 22780
 monster.speed = 340
 monster.manaCost = 0
 
@@ -93,7 +93,7 @@ monster.loot = {
 	{name = "small amethyst", chance = 9640, maxCount = 5},
 	{name = "underworld rod", chance = 6890},
 	{name = "wand of voodoo", chance = 4810},
-	{name = "red gem", chance = 3930},
+	{id= 3039, chance = 3930},
 	{name = "yellow gem", chance = 2900},
 	{name = "devil helmet", chance = 1360},
 	{name = "magma legs", chance = 1150},

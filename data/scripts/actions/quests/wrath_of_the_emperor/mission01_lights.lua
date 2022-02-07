@@ -16,8 +16,8 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 				Position(33372, 31075, 8)
 			}
 			for i = 1, #pos do
-				transformLamp(pos[i], 11447, 11446)
-				addEvent(transformLamp, 20 * 1000, pos[i], 11446, 11447)
+				transformLamp(pos[i], 10491, 10490)
+				addEvent(transformLamp, 20 * 1000, pos[i], 10490, 10491)
 			end
 		end
 	elseif(item.uid == 3172) then
@@ -25,16 +25,16 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light02, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light02, 0)
 			local pos = Position(33360, 31079, 8)
-			transformLamp(pos, 11449, 11463)
-			addEvent(transformLamp, 20 * 1000, pos, 11463, 11449)
+			transformLamp(pos, 10493, 10507)
+			addEvent(transformLamp, 20 * 1000, pos, 10507, 10493)
 		end
 	elseif(item.uid == 3173) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light03) ~= 1 then
 			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light03, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light03, 0)
 			local pos = Position(33346, 31074, 8)
-			transformLamp(pos, 11449, 11463)
-			addEvent(transformLamp, 20 * 1000, pos, 11463, 11449)
+			transformLamp(pos, 10493, 10507)
+			addEvent(transformLamp, 20 * 1000, pos, 10507, 10493)
 		end
 	elseif(item.uid == 3174) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light04) ~= 1 then
@@ -43,7 +43,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 			local wallItem, pos
 			for i = 1, 4 do
 				pos = Position(33355, 31067 + i, 9)
-				wallItem = Tile(pos):getItemById(9264)
+				wallItem = Tile(pos):getItemById(8348)
 				if wallItem then
 					wallItem:remove()
 					addEvent(Game.createItem, 20 * 1000, 9264, 1, pos)
@@ -54,5 +54,5 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 	return true
 end
 
-wrathEmperorMiss1Light:uid(3171,3172,3173,3174)
+wrathEmperorMiss1Light:uid(3171,519,520,521)
 wrathEmperorMiss1Light:register()

@@ -16,7 +16,7 @@ monster.outfit = {
 monster.health = 15000
 monster.maxHealth = 15000
 monster.race = "blood"
-monster.corpse = 33384
+monster.corpse = 28643
 monster.speed = 210
 monster.manaCost = 0
 
@@ -65,7 +65,7 @@ monster.loot = {
 	{name = "platinum coin", chance = 100000, maxCount = 3},
 	{name = "great mana potion", chance = 100000, maxCount = 3},
 	{name = "demonic essence", chance = 100000, maxCount = 5},
-	{name = "red gem", chance = 700, maxCount = 3},
+	{id= 3039, chance = 700, maxCount = 3},
 	{name = "assassin star", chance = 100000, maxCount = 5},
 	{name = "concentrated demonic blood", chance = 100000, maxCount = 3},
 	{name = "ham", chance = 100000, maxCount = 2},
