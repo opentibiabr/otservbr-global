@@ -55028,6 +55028,62 @@
 	<item id="36749" name="many faces trophy"/>
 	<item fromid="36750" toid="36754" name="falcon pet"/>
 	<item id="36756" name="falcon pet"/>
+	<item id="36761" article="a" name="dead lavafungus">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36762" article="a" name="dead lavafungus">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36761" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36763" article="a" name="dead lavafungus">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36762" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36764" article="a" name="dead lavafungus">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36763" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36765" article="a" name="dead cave chimera">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36766" article="a" name="dead cave chimera">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36765" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36767" article="a" name="dead cave chimera">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36766" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36768" article="a" name="dead cave chimera">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36767" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
 	<item id="36769" name="lavaworm spike roots">
 		<attribute key="weight" value="70"/>
 	</item>
@@ -55182,6 +55238,30 @@
 	<item id="36838" name="folded eldritch carpet">
 		<attribute key="weight" value="1100"/>
 	</item>
+	<item id="36844" article="a" name="dead the mega magmaoid">
+		<attribute key="containerSize" value="25" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+	</item>
+	<item id="36845" article="a" name="dead the mega magmaoid">
+		<attribute key="containerSize" value="25" />
+		<attribute key="decayTo" value="36844" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+	</item>
+	<item id="36846" article="a" name="dead the mega magmaoid">
+		<attribute key="containerSize" value="25" />
+		<attribute key="decayTo" value="36845" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+	</item>
+	<item id="36847" article="a" name="dead the mega magmaoid">
+		<attribute key="containerSize" value="25" />
+		<attribute key="decayTo" value="36846" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+	</item>
 	<item id="36865" name="plushie of a murmillion"/>
 	<item id="36866" name="plushie of a scissorion"/>
 	<item id="36867" name="plushie of a hoodinion"/>
@@ -55194,6 +55274,181 @@
 	<item id="36876" name="blackened hand mirror">
 		<attribute key="description" value="It is blackened with soot"/>
 		<attribute key="weight" value="660"/>
+	</item>
+	<item id="36876" article="a" name="blackened hand mirror">
+		<attribute key="loottype" value="creatureproduct" />
+		<attribute key="weight" value="660" />
+	</item>
+	<item id="36877" article="a" name="strange idol">
+		<attribute key="loottype" value="creatureproduct" />
+	</item>
+	<item id="36879" article="a" name="dead hulking carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36880" article="a" name="dead hulking carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36879" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36881" article="a" name="dead hulking carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36880" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36882" article="a" name="dead carnisylvan sapling">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36883" article="a" name="dead carnisylvan sapling">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36882" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36884" article="a" name="dead carnisylvan sapling">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36883" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36885" article="a" name="dead carnisylvan sapling">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36884" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36888" article="a" name="dead poisonous carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36889" article="a" name="dead poisonous carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36888" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36890" article="a" name="dead poisonous carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36889" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36892" article="a" name="dead dark carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36893" article="a" name="dead dark carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36892" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36894" article="a" name="dead dark carnisylvan">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36893" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36895" article="a" name="dead murmillion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36896" article="a" name="dead murmillion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36895" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36897" article="a" name="dead murmillion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36896" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36898" article="a" name="dead murmillion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36897" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36903" article="a" name="dead hoodinion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36904" article="a" name="dead hoodinion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36903" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36905" article="a" name="dead hoodinion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36904" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36906" article="a" name="dead hoodinion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36905" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36912" article="a" name="dead domestikion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36913" article="a" name="dead domestikion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36912" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36914" article="a" name="dead domestikion">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36913" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="36915" name="sun mosaic"/>
 	<item id="36916" name="sun mosaic"/>
