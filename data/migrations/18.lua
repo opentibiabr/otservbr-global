@@ -1,3 +1,9 @@
 function onUpdateDatabase()
-    return false -- true = There are others migrations file | false = this is the last migration file
+    Spdlog.info("Updating database to version 0 (secret token)")
+
+    db.query([[
+        ALTER TABLE `accounts`
+            ADD `secret` char(16) DEFAULT NULL;
+    ]])
+    return true
 end
