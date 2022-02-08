@@ -40,7 +40,7 @@ npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = "Alms! Alms for the poor!" },
 	{ text = "Sir, Ma'am, have a gold coin to spare?" },

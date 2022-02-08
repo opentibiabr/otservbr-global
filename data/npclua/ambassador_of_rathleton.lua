@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "What a beautiful palace. The Kilmareshians are highly skilful architects."},
 	{text = "The new treaty of amity and commerce with Kilmaresh is of utmost importance."},

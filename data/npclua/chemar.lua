@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Ask me if you need letters or parcels. I\'ll deliver them via airmail, of course!' },
 	{ text = 'Feel the wind in your hair during one of my carpet rides!' }

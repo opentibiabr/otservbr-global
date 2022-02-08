@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'A... aargh. I wish I had some e... earmuffs to put over this useless t... turban.' },
 	{ text = 'Oh p.. please. P... lease let me fly us out of this c... cold.' }

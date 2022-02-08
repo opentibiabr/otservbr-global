@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'I am a MAN! Get me out you drunken fools!' },
 	{ text = 'GET ME OUT OF HERE!' },

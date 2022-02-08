@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "Where did I put my broom? Mother?"},
 	{text = "Mother?! Oh no, now I have to do this all over again"},

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Are you looking for the best trades? Come to my shop!' },
 	{ text = 'Feeling lost? You can always ask me about general hints!' },

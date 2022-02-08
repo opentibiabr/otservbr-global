@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Welcome to the post office!' },
 	{ text = 'If you need help with letters or parcels, just ask me. I can explain everything.' },

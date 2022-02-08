@@ -23,7 +23,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Fine elven armor and weapons. Have a look.' },
 	{ text = 'Looking for protective spells for druids? I can teach you.' }

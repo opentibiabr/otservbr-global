@@ -23,7 +23,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = 'Welcome to Ab\'Dendriel\'s store for general goods.'}
 }

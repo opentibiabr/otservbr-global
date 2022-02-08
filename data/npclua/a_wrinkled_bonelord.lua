@@ -19,7 +19,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = '485611800364197.' },
 	{ text = '78572611857643646724.' }

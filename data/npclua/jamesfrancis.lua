@@ -45,7 +45,7 @@ local function greetCallback(npc, creature)
 	return true
 end
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Don\'t enter this area if you are an inexperienced fighter! It would be your end!' }
 }

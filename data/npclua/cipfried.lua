@@ -19,7 +19,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Feeling lost, my child? Ask me for hints or help!' },
 	{ text = 'Come to me if you need healing!' },

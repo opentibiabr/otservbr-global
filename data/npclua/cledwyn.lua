@@ -63,7 +63,7 @@ npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Trading tokens! First-class bargains!' },
 	{ text = 'Bespoke armor for all vocations! For the cost of some tokens only!' },

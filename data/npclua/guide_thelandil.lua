@@ -23,7 +23,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Hello, is this your first visit to Ab\'Dendriel? I can show you around a little.' },
 	{ text = 'Talk to me if you need directions.' },

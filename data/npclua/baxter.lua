@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'People of Thais, bring honour to your king by fighting in the orc war!' },
 	{ text = 'The orcs are preparing for war!!!' }

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Buying fresh corpses of rats, rabbits and wolves.' },
 	{ text = 'Oh yeah, I\'m also interested in wolf paws and bear paws.' },

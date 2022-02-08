@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = "Not enough purple nightshade ... not enough liquid silver. *sigh*" },
 	{ text = "You think the full moon is a romantic affair? Think again!" },

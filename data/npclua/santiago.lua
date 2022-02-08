@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Evil little beasts... I hope someone helps me fight them.' },
 	{ text = 'Nasty creepy crawlies!' },

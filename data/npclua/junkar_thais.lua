@@ -19,7 +19,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'So much to do. So many things to be fixed.' },
 	{ text = 'Still so much work.' }

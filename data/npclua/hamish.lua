@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "Health potions to refill your health in combat!"},
 	{text = "Potions! Wand! Runes! Get them here!"},

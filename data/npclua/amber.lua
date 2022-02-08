@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = "I wish I could eat some salmon right now... best prepared in Liberty Bay style... yummy." },
 	{ text = "Wow, I'm tired. I really should get some sleep... zzzz." },

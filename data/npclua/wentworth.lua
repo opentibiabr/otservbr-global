@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "Waste not, want not!"},
 	{text = "Don't burden yourself with too much cash - store it here!"},

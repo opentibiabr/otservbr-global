@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = 'By direct edict of the honorable Henricus, we are ordered to give passage for all recruits to Thais.'}
 }

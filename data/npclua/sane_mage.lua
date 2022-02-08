@@ -19,7 +19,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Hm? What is the meaning of all this?' },
 	{ text = 'What have I become? What is slime if it\'s not for everyone?' },
