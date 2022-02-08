@@ -194,7 +194,7 @@ local function creatureSayCallback(npc, creature, type, message)
 end
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "Now I need to clean up everything again."},
 	{text = "So much to do, so little time, they say..."},

@@ -92,7 +92,7 @@ local hints = {
 	[35] = "There is nothing more I can tell you. If you are still in need of some {hints}, I can repeat them for you."
 }
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "I know the ways and lays of Dawnport. Talk to me if you want to know more!"},
 	{text = "Troll hair, wolf fur, lumps of dirt - bring them to me!"},

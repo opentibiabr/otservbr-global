@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "No smuggling aboard this ship! Only 20 pieces of any creature product allowed!"},
 	{text = "No fear! The Sea Cat will ship you safely to the mainland!"},

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = 'Stop by and rest a while, tired adventurer! Have a look at my wares!'}
 }

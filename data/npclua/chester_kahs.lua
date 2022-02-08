@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Too many possibilities to become a servant of darkness to trust ANYONE!' },
 	{ text = 'Don\'t tell me I didn\'t warn you.' },

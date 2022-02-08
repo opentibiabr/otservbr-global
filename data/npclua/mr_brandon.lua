@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = '<grumble> Maybe I should rearrange some warm currents to get rid of this horrible fog.' },
 	{ text = 'All these treasures I cannot reach... what a pity.' }

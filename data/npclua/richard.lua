@@ -57,7 +57,7 @@ npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "Don't forget to always have a rope with you! Buy one here, only the best quality!"},
 	{text = "Don't complain to ME when you fell down a hole without a rope to get you out! You can buy one here now!"},

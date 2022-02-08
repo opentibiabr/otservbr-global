@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Ask me if you need help!' },
 	{ text = 'Buy and sell everything you want here!' },

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = 'Stop by before embarking on your great adventure! Distance weapons and general equipment on sale today!'}
 }

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = 'Come chat with ol\' Bozo!'},
 	{text = 'Do you know the one with the dragon? Where - and then ... hahahaha! Oh no, I guess I ruined it.'},

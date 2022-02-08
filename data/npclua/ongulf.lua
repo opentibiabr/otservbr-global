@@ -19,7 +19,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Great, another supply ship is due. How is a dwarf supposed to work under these conditions?' },
 	{ text = 'Ah, there\'s nothing like the sound of hammers in the morning.' }

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'The most dangerous monsters of Rookgaard are on the other side of this bridge.' },
 	{ text = 'Want to know what monsters are good for you at your level? Just ask me!' },

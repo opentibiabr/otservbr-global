@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Only quality steel and wood used for my weapons!' },
 	{ text = 'Buy your weapons here!' },

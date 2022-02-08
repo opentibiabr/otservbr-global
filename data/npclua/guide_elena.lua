@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'I can inform you about the status of this world, if you\'re interested.' },
 	{ text = 'Hello, is this your first visit to Venore? I can show you around a little.' },

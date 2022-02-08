@@ -19,7 +19,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Typical. Easy come, easy go.' },
 	{ text = 'He will PAY for this... They will ALL pay!' },

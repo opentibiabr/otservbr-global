@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Great drinks and snacks at fair prices!' },
 	{ text = 'You know you want a party after all that tiring hunting!' },

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Orshabaal was out of his maze to make us suffer for many days. In Calmera, a knight with blue beard from his hideout appeared. He fought bravely supported by mages, the demon ran and is gone for ages.' },
 	{ text = 'A knight from Guardia needed Chayenne\'s key. His friend dropped the item on the floor, hoping no one would see. But, at the same moment, a man crossed their way and all the knight\'s dreams faded away.' },

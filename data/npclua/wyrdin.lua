@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = "<mumbles> So where was I again?" },
 	{ text = "<mumbles> Typical - you can never find a hero when you need one!" },

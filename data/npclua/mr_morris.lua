@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "I have a quest that needs doing. Interested?"},
 	{text = "Hmmm. Interesting. If only someone could help investigate this."},

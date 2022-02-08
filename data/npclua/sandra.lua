@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "Great spirit potions as well as health and mana potions in different sizes!"},
 	{text = "If you need alchemical fluids like slime and blood, get them here."}

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = 'I enjoy the peace and solitude out here. You\'re welcome to be my guest as long as you behave in a quiet and tolerable manner.'}
 }

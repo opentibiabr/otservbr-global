@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = '<clears throat> Get your armor and shields heeeeeeere! Upstairs!', yell = true },
 	{ text = 'Need some help? Just ask me, I can show you around!' },

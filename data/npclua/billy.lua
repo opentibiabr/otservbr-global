@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Add one fresh dead rat and stir it well... ' },
 	{ text = 'Argh, if I only had a pan!' },

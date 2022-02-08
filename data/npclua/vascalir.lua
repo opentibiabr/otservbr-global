@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = 'Talk to me if you want to help protecting the village.'},
 	{text = 'Rookgaard needs your help more than ever.'}

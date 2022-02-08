@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Are you injured or poisoned? Get your potions here! All natural, no artificial ingredients!' },
 	{ text = 'Hey you, over there! Let\'s have a little chat, shall we?' },

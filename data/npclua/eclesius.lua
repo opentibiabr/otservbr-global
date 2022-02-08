@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = "I'm looking for a new assistant!" },
 	{ text = "Err, what was it again that I wanted...?" },

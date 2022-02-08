@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{text = "Team up with others to defeat monsters!"},
 	{text = "Get your gear and help us defend Dawnport against the monsters!"},

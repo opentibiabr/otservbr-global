@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'I\'m informed about the status the world is in. If you have questions, let me know.' },
 	{ text = 'Need some help finding your way through Liberty Bay? Let me assist you.' },

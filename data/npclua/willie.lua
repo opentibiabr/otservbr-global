@@ -46,7 +46,7 @@ npcType.onCheckItem = function(npc, player, clientId, subType)
 end
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = "Ah, what the heck.Make sure you know what you want before you bug me." },
 	{ text = "Buying and selling food!" },

@@ -24,7 +24,7 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 5000,
+	interval = 15000,
 	chance = 50,
 	{ text = 'Talk to me if you need directions.' },
 	{ text = 'Hello, is this your first visit to Rathleton? I can show you around a little.' },
