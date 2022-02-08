@@ -1,5 +1,5 @@
 function onUpdateDatabase()
-    Spdlog.info("Updating database to version 0 (secret token)")
+    Spdlog.info("Updating database to version 19 (secret token)")
 
     db.query([[
         ALTER TABLE `accounts`
