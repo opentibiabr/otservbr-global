@@ -14,7 +14,7 @@ function loadLuaMapAction(tablename)
 					break
 				end
 
-				if value.itemId ~= false and tile:getItemCountById(value.itemId) == 1 then
+				if value.itemId ~= false and tile:getItemCountById(value.itemId) > 0 then
 					item = tile:getItemById(value.itemId)
 				end
 				
