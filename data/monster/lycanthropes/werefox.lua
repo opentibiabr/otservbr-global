@@ -98,7 +98,7 @@ monster.loot = {
 	{name = "Troll Green", chance = 500, maxCount = 2},
 	{name = "Assassin Star", chance = 300, maxCount = 5},
 	{name = "Platinum Amulet", chance = 130},
-	{name = "Ring of Healing", chance = 200},
+	{id = 3098, chance = 200}, -- Ring of healing
 	{name = "Werewolf Amulet", chance = 50},
 	{id = 27706, chance = 30}
 }

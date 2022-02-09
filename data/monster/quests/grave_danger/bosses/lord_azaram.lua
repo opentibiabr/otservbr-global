@@ -81,7 +81,7 @@ monster.loot = {
 	{name = "ancient liche bone", chance = 5200},
 	{id = 23542, chance = 5200},-- collar of blue plasma
 	{id = 23544, chance = 5200},-- collar of red plasma
-	{name = "collar of green plasma", chance = 5200},
+	{id = 23543, chance = 5200}, -- Collar of green plasma
 	{name = "giant sapphire", chance = 7000},
 	{name = "haunted blade", chance = 9000},
 	{name = "huge chunk of crude iron", chance = 4500},

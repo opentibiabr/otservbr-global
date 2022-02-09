@@ -94,7 +94,7 @@ monster.loot = {
 	{name = "bonecarving knife", chance = 8100},
 	{name = "basalt figurine", chance = 8100},
 	{name = "bone fetish", chance = 8881},
-	{name = "dwarven ring", chance = 1043},
+	{id = 3097, chance = 1043}, -- Dwarven ring
 	{name = "guardian shield", chance = 1430},
 	{name = "buckle", chance = 1900},
 	{name = "clay lump", chance = 710},

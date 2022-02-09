@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "yellow gem", chance = 5485},
 	{name = "violet gem", chance = 6485},
 	{id = 23544, chance = 7848},
-	{id = 23543, chance = 5485},
+	{id = 23543, chance = 5485}, -- Collar of green plasma
 	{name = "green gem", chance = 5485},
 	{name = "blue gem", chance = 5845},
 	{name = "frozen chain", chance = 5485},

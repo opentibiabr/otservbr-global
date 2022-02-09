@@ -100,10 +100,10 @@ monster.loot = {
 	{name = "fire axe", chance = 3520},
 	{name = "might ring", chance = 2250},
 	{name = "giant sword", chance = 1880},
-	{name = "stealth ring", chance = 1790},
-	{name = "energy ring", chance = 1790},
+	{id = 3049, chance = 1790}, -- Stealth ring
+	{id = 3051, chance = 1790}, -- Energy ring
 	{name = "rift lance", chance = 1360},
-	{name = "ring of healing", chance = 1320},
+	{id = 3098, chance = 1320}, -- Ring of healing
 	{name = "platinum amulet", chance = 940},
 	{name = "devil helmet", chance = 520},
 	{name = "rift crossbow", chance = 370},

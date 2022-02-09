@@ -84,7 +84,7 @@ monster.loot = {
 	{name = "ultimate spirit potion", chance = 13600000, maxCount = 2},
 	{name = "fox paw", chance = 13600000, maxCount = 2},
 	{name = "moonlight rod", chance = 13600000},
-	{name = "stealth ring", chance = 13600000},
+	{id = 3049, chance = 13600000}, -- Stealth ring
 	{name = "werefox tail", chance = 13600000},
 	{name = "green gem", chance = 400},
 	{name = "troll green", chance = 400},

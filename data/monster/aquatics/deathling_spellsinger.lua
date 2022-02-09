@@ -91,7 +91,7 @@ monster.loot = {
 	{name = "Fish Fin", chance = 2990},
 	{name = "Warrior's Axe", chance = 2950},
 	{name = "Small Enchanted Sapphire", chance = 2220, maxCount = 4},
-	{name = "Life Ring", chance = 2010},
+	{id = 3052, chance = 2010}, -- Life ring
 	{name = "Necklace of the Deep", chance = 200}
 }
 

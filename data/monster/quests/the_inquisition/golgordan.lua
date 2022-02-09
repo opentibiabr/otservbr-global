@@ -69,7 +69,7 @@ monster.loot = {
 	{id = 239, chance = 55000},
 	{id = 3275, chance = 30000},
 	{id = 6299, chance = 25000},
-	{id = 3098, chance = 25000},
+	{id = 3098, chance = 25000}, -- Ring of healing
 	{id = 3027, chance = 20000, maxCount = 13},
 	{id = 3032, chance = 20000, maxCount = 10},
 	{id = 3284, chance = 15000},
@@ -79,7 +79,7 @@ monster.loot = {
 	{id = 3026, chance = 15000, maxCount = 13},
 	{id = 3420, chance = 10000},
 	{id = 6499, chance = 10000},
-	{id = 3051, chance = 10000},
+	{id = 3051, chance = 10000}, -- Energy ring
 	{id = 3281, chance = 10000},
 	{id = 9058, chance = 10000},
 	{id = 3063, chance = 10000},
@@ -92,7 +92,7 @@ monster.loot = {
 	{id = 3290, chance = 5000},
 	{id = 3033, chance = 15000, maxCount = 12},
 	{id = 3066, chance = 5000},
-	{id = 3049, chance = 5000},
+	{id = 3049, chance = 5000}, -- Stealth ring
 	{id = 3081, chance = 5000}
 }
 

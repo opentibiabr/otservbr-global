@@ -83,7 +83,7 @@ monster.loot = {
 	{name = "Piggy Bank", chance = 100000},
 	{name = "Mysterious Remains", chance = 100000},
 	{name = "Energy Bar", chance = 100000},
-	{id = 23543, chance = 50000},
+	{id = 23543, chance = 50000}, -- Collar of green plasma
 	{name = "Ring of the Sky", chance = 100000},
 	{name = "Crunor Idol", chance = 100000},
 	{name = "Resizer", chance = 100000},

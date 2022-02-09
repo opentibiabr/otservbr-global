@@ -95,7 +95,7 @@ monster.loot = {
 	{id = 16096, chance = 1000},
 	{id = 22721, chance = 100000},
 	{id = 22516, chance = 100000},
-	{id = 3341, chance = 200},
+	{id = 3341, chance = 200}, -- Arcane staff
 	{id = 24973, chance = 200},
 	{id = 24974, chance = 200},
 	{id = 22755, chance = 200},

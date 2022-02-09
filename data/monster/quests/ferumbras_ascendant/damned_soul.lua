@@ -78,7 +78,7 @@ monster.loot = {
 	{id = 3026, chance = 10800, maxCount = 3},
 	{id = 8895, chance = 6200},
 	{id = 8896, chance = 3350},
-	{id = 5806, chance = 4940},
+	{id = 5806, chance = 4940}, -- Silver goblet
 	{id = 3016, chance = 1590},
 	{id = 3081, chance = 2560},
 	{id = 3039, chance = 2050},

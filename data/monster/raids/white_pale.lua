@@ -68,7 +68,7 @@ monster.loot = {
 	{id = 3031, chance = 70000, maxCount = 100},
 	{id = 19359, chance = 500},
 	{id = 19358, chance = 500},
-	{id = 3052, chance = 1000},
+	{id = 3052, chance = 1000}, -- Life ring
 	{id = 3028, chance = 7000},
 	{id = 3577, chance = 70000, maxCount = 4},
 	{id = 9692, chance = 70000},

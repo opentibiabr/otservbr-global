@@ -74,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3025, chance = 3500},
+	{id = 3025, chance = 3500}, -- Ancient amulet
 	{id = 3116, chance = 9000},
 	{id = 3027, chance = 15000, maxCount = 15},
 	{id = 3041, chance = 1500},
@@ -87,7 +87,7 @@ monster.loot = {
 	{id = 3356, chance = 11000},
 	{id = 3275, chance = 20000},
 	{id = 3322, chance = 4500},
-	{id = 3051, chance = 13500},
+	{id = 3051, chance = 13500}, -- Energy ring
 	{id = 3320, chance = 17000},
 	{id = 3281, chance = 12500},
 	{id = 3031, chance = 99900, maxCount = 100},
@@ -112,7 +112,7 @@ monster.loot = {
 	{id = 3055, chance = 4500},
 	{id = 3084, chance = 4500},
 	{id = 2848, chance = 2600},
-	{id = 3098, chance = 13000},
+	{id = 3098, chance = 13000}, -- Ring of healing
 	{id = 3006, chance = 3500},
 	{id = 3054, chance = 13000},
 	{id = 3290, chance = 15500},
@@ -121,7 +121,7 @@ monster.loot = {
 	{id = 3028, chance = 9500, maxCount = 5},
 	{id = 3032, chance = 15500, maxCount = 10},
 	{id = 3029, chance = 13500, maxCount = 10},
-	{id = 3049, chance = 9500},
+	{id = 3049, chance = 9500}, -- Stealth ring
 	{id = 3081, chance = 4000},
 	{id = 3058, chance = 2500},
 	{id = 3034, chance = 14000, maxCount = 7},

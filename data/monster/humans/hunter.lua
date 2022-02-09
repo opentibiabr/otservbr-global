@@ -87,7 +87,7 @@ monster.loot = {
 	{name = "brass armor", chance = 5070},
 	{name = "arrow", chance = 82000, maxCount = 22},
 	{name = "poison arrow", chance = 4500, maxCount = 4},
-	{name = "burst arrow", chance = 5360, maxCount = 3},
+	{id = 3449, chance = 5360, maxCount = 3}, -- Burst arrow
 	{name = "orange", chance = 20300, maxCount = 2},
 	{name = "roll", chance = 11370, maxCount = 2},
 	{name = "sniper gloves", chance = 610},

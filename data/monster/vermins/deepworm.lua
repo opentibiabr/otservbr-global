@@ -79,7 +79,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "Deepworm Jaws", chance = 24010},
-	{name = "Life Ring", chance = 7320},
+	{id = 3052, chance = 7320}, -- Life ring
 	{name = "Meat", chance = 19660, maxCount = 4},
 	{name = "Ham", chance = 19660, maxCount = 4},
 	{name = "Wood Mushroom", chance = 22280},
