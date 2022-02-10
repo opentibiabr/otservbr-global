@@ -64,7 +64,7 @@ monster.voices = {
 
 monster.loot = {
 	{id = 5894, chance = 100000, maxCount = 2},
-	{id = 3051, chance = 100000},
+	{id = 3051, chance = 100000}, -- Energy ring
 	{id = 3031, chance = 100000, maxCount = 99},
 	{id = 9662, chance = 100000},
 	{id = 3033, chance = 100000, maxCount = 5},

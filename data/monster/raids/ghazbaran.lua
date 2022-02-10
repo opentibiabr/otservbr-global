@@ -88,12 +88,12 @@ monster.loot = {
 	{name = "green gem", chance = 20000},
 	{name = "blue gem", chance = 14285},
 	{name = "might ring", chance = 12500},
-	{name = "stealth ring", chance = 12500},
+	{id = 3049, chance = 12500}, -- Stealth ring
 	{name = "strange symbol", chance = 11111},
 	{name = "life crystal", chance = 12500},
 	{name = "mind stone", chance = 20000},
 	{name = "gold ring", chance = 20000},
-	{name = "ring of healing", chance = 20000},
+	{id = 3098, chance = 20000}, -- Ring of healing
 	{name = "twin axe", chance = 11111},
 	{name = "golden armor", chance = 8333},
 	{name = "magic plate armor", chance = 8333},

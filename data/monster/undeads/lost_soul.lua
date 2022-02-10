@@ -88,7 +88,7 @@ monster.loot = {
 	{name = "skull staff", chance = 850},
 	{name = "tower shield", chance = 740},
 	{name = "skull helmet", chance = 170},
-	{name = "silver goblet", chance = 4950},
+	{id = 5806, chance = 4950}, -- Silver goblet
 	{name = "soul orb", chance = 15000},
 	{id = 6299, chance = 2170},
 	{name = "demonic essence", chance = 7500},

@@ -74,7 +74,7 @@ monster.loot = {
 	{id = 5909, chance = 1940},
 	{id = 9690, chance = 1870},
 	{id = 3432, chance = 860},
-	{id = 3049, chance = 180}
+	{id = 3049, chance = 180} -- Stealth ring
 }
 
 monster.attacks = {

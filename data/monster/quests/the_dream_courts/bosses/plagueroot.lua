@@ -82,7 +82,7 @@ monster.loot = {
 	{name = "Skull Staff", chance = 7650},
 	{name = "Chaos Mace", chance = 2200},
 	{name = "Gold Ingot", chance = 2800},
-	{id = 23543, chance = 2500},
+	{id = 23543, chance = 2500}, -- Collar of green plasma
 	{id = 281, chance = 2600},
 	{name = "Blue Gem", chance = 2500},
 	{name = "Violet Gem", chance = 2300, maxCount = 2},

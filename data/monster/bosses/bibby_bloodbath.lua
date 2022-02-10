@@ -76,7 +76,7 @@ monster.loot = {
 	{id = 3578, chance = 10300, maxCount = 1},-- fish
 	{name = "meat", chance = 10300},
 	{name = "plate legs", chance = 8100},
-	{name = "stealth ring", chance = 6960},
+	{id = 3049, chance = 6960}, -- Stealth ring
 	{name = "magma amulet", chance = 5700},
 	{name = "giant sword", chance = 3160},
 	{name = "crusader helmet", chance = 1900},

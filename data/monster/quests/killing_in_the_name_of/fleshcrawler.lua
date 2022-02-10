@@ -75,7 +75,7 @@ monster.loot = {
 	{id = 3032, chance = 88890, maxCount = 3},
 	{id = 3033, chance = 87220, maxCount = 4},
 	{id = 9631, chance = 100000},
-	{id = 3025, chance = 45560},
+	{id = 3025, chance = 45560}, -- Ancient amulet
 	{id = 3018, chance = 52220},
 	{id = 811, chance = 11110},
 	{id = 236, chance = 43330},

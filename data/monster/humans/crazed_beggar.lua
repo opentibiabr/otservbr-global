@@ -83,7 +83,7 @@ monster.loot = {
 	{name = "small blue pillow", chance = 420},
 	{id = 2950, chance = 360},
 	{name = "gold coin", chance = 99000, maxCount = 9},
-	{name = "dwarven ring", chance = 120},
+	{id = 3097, chance = 120}, -- Dwarven ring
 	{id = 3122, chance = 55000},
 	{name = "wooden hammer", chance = 6500},
 	{name = "wooden spoon", chance = 9750},

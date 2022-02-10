@@ -91,7 +91,7 @@ monster.loot = {
 	{name = "crowbar", chance = 14285},
 	{name = "plate armor", chance = 4347},
 	{name = "dark armor", chance = 10000},
-	{name = "burst arrow", chance = 12500, maxCount = 12},
+	{id = 3449, chance = 12500, maxCount = 12}, -- Burst arrow
 	{id = 3456, chance = 6250},
 	{name = "steel boots", chance = 992},
 	{name = "meat", chance = 50000, maxCount = 6},

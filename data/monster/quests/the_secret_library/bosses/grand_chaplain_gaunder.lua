@@ -60,7 +60,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "concentrated demonic blood", chance = 50000, maxCount = 2},
+	{name = "flask of demonic blood", chance = 50000, maxCount = 2},
 	{name = "ham", chance = 50000, maxCount = 2},
 	{name = "onyx arrow", chance = 35000, maxCount = 3},
 	{name = "small diamond", chance = 30000, maxCount = 3},

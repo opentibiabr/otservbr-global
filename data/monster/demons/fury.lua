@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "soul orb", chance = 50},
 	{id = 6300, chance = 60},
 	{name = "demonic essence", chance = 22500},
-	{name = "concentrated demonic blood", chance = 35000, maxCount = 3},
+	{name = "flask of demonic blood", chance = 35000, maxCount = 3},
 	{name = "assassin dagger", chance = 660},
 	{name = "noble axe", chance = 2000},
 	{name = "great health potion", chance = 10500},

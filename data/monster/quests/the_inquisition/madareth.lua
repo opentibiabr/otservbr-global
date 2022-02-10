@@ -82,10 +82,10 @@ monster.loot = {
 	{id = 3035, chance = 19000, maxCount = 26},
 	{id = 3265, chance = 19000},
 	{id = 7404, chance = 16000},
-	{id = 3092, chance = 16000},
+	{id = 3092, chance = 16000}, -- Axe ring
 	{id = 7643, chance = 16000},
 	{id = 8082, chance = 16000},
-	{id = 3093, chance = 14000},
+	{id = 3093, chance = 14000}, -- Club ring
 	{id = 6499, chance = 14000},
 	{id = 7407, chance = 14000},
 	{id = 2949, chance = 14000},
@@ -96,19 +96,19 @@ monster.loot = {
 	{id = 8094, chance = 11000},
 	{id = 7416, chance = 9500},
 	{id = 7449, chance = 9500},
-	{id = 3098, chance = 9500},
+	{id = 3098, chance = 9500}, -- Ring of healing
 	{id = 5954, chance = 7000, maxCount = 2},
-	{id = 3052, chance = 7000},
+	{id = 3052, chance = 7000}, -- Life ring
 	{id = 7383, chance = 7000},
 	{id = 3053, chance = 7000},
 	{id = 8092, chance = 7000},
 	{id = 2958, chance = 7000},
 	{id = 2948, chance = 7000},
 	{id = 2965, chance = 4700},
-	{id = 3097, chance = 4700},
+	{id = 3097, chance = 4700}, -- Dwarven ring
 	{id = 3284, chance = 4700},
 	{id = 7386, chance = 4700},
-	{id = 3091, chance = 4700}
+	{id = 3091, chance = 4700} -- Sword ring
 }
 
 monster.attacks = {

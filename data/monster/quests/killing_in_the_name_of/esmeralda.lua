@@ -66,7 +66,7 @@ monster.voices = {
 monster.loot = {
 	{id = 3031, chance = 100000, maxCount = 170},
 	{id = 9668, chance = 100000},
-	{id = 3098, chance = 100000},
+	{id = 3098, chance = 100000}, -- Ring of healing
 	{id = 3035, chance = 95000, maxCount = 4},
 	{id = 3030, chance = 68000, maxCount = 3},
 	{id = 3370, chance = 54000},

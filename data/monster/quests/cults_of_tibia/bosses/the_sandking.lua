@@ -85,7 +85,7 @@ monster.loot = {
 	{id = 20062, chance = 2000, maxCount = 2},
 	{name = "Hailstorm Rod", chance = 3470},
 	{id = 3036, chance = 1000},
-	{name = "ring of healing", chance = 20000},
+	{id = 3098, chance = 20000}, -- Ring of healing
 	{id = 3030, chance = 7360, maxCount = 10},
 	{id = 281, chance = 28540},
 	{name = "Skull Staff", chance = 13790},
@@ -99,7 +99,7 @@ monster.loot = {
 	{id = 16119, chance = 10000, maxCount = 3},
 	{id = 7642, chance = 4800},
 	{id = 16161, chance = 7030},
-	{id = 3341, chance = 200},
+	{id = 3341, chance = 200}, -- Arcane staff
 	{name = "heart of the mountain", chance = 400}
 }
 

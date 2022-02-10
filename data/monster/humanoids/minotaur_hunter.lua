@@ -91,7 +91,7 @@ monster.loot = {
 	{id = 11472, chance = 4720, maxCount = 2},
 	{id = 3030, chance = 2640, maxCount = 3},
 	{id = 3033, chance = 2580, maxCount = 3},
-	{id = 3049, chance = 2220},
+	{id = 3049, chance = 2220}, -- Stealth ring
 	{id = 5912, chance = 1670},
 	{id = 5910, chance = 1420},
 	{id = 5911, chance = 1360},

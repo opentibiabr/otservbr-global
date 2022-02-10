@@ -99,8 +99,8 @@ monster.loot = {
 	{id = 7439, chance = 900},
 	{id = 3326, chance = 6400},
 	{id = 8895, chance = 260},
-	{id = 3093, chance = 810},
-	{id = 3097, chance = 1210},
+	{id = 3093, chance = 810}, -- Club ring
+	{id = 3097, chance = 1210}, -- Dwarven ring
 	{id = 9067, chance = 130},
 	{id = 9065, chance = 1080},
 	{id = 820, chance = 90},

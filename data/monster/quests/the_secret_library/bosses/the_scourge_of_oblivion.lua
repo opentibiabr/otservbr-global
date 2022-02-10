@@ -99,7 +99,7 @@ monster.loot = {
 	{name = "small emerald", chance = 15000, maxCount = 12},
 	{name = "rift shield", chance = 5000},
 	{id = 281, chance = 5000},
-	{name = "arcane staff", chance = 5000},
+	{id = 3341, chance = 5000}, -- Arcane staff
 	{name = "skullcracker armor", chance = 5000},
 	{name = "chaos mace", chance = 5000},
 	{name = "cat's paw", chance = 5000},
