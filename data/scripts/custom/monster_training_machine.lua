@@ -11,7 +11,6 @@ monster.maxHealth = monster.health
 monster.race = "energy"
 monster.corpse = 0
 monster.speed = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 1*1000,
@@ -30,7 +29,11 @@ monster.flags = {
 	staticAttackChance = 100,
 }
 
-monster.summons = {
+monster.summon = {
+	maxSummons = 0,
+	summons = {
+		{name = "", chance = 0, interval = 0, count = 0}
+	}
 }
 
 monster.voices = {
