@@ -98,7 +98,7 @@ monster.loot = {
 	{id = 23531, chance = 370},
 	{id = 23533, chance = 370},
 	{id = 23529, chance = 240},
-	{id = 23543, chance = 240},
+	{id = 23543, chance = 240}, -- Collar of green plasma
 	{id = 23542, chance = 240},-- collar of blue plasma
 	{id = 23544, chance = 200}
 }

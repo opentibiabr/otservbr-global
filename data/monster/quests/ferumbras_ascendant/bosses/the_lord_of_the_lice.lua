@@ -69,7 +69,7 @@ monster.loot = {
 	{id = 7643, chance = 94830, maxCount = 10},
 	{id = 238, chance = 94830, maxCount = 10},
 	{id = 239, chance = 94830, maxCount = 10},
-	{id = 3098, chance = 100000},
+	{id = 3098, chance = 100000}, -- Ring of healing
 	{id = 3326, chance = 25860},
 	{id = 811, chance = 86200}
 }

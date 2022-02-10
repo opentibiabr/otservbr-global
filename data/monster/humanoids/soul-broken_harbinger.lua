@@ -89,7 +89,7 @@ monster.loot = {
 	{name = "Wood Cape", chance = 1710},
 	{id = 23529, chance = 1370},
 	{name = "Tower Shield", chance = 680},
-	{id = 23543, chance = 680}
+	{id = 23543, chance = 680} -- Collar of green plasma
 }
 
 monster.attacks = {

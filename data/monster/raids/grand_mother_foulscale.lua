@@ -73,7 +73,7 @@ monster.voices = {
 monster.loot = {
 	{id = 3031, chance = 37500, maxCount = 70},
 	{id = 3031, chance = 37500, maxCount = 50},
-	{id = 3449, chance = 4000, maxCount = 12},
+	{id = 3449, chance = 4000, maxCount = 12}, -- Burst arrow
 	{id = 3583, chance = 15500, maxCount = 3},
 	{id = 3294, chance = 25000},
 	{id = 3286, chance = 21500},

@@ -85,7 +85,7 @@ monster.loot = {
 	{name = "Pomegranate", chance = 24140},
 	{name = "Chaos Mace", chance = 6900},
 	{id = 23528, chance = 17240},
-	{id = 23543, chance = 13790},
+	{id = 23543, chance = 13790}, -- Collar of green plasma
 	{name = "Green Gem", chance = 31030},
 	{name = "Yellow Gem", chance = 31030},
 	{name = "Violet Gem", chance = 6900},

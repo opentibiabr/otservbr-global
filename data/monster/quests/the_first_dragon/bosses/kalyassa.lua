@@ -82,7 +82,7 @@ monster.loot = {
 	{id = 3450, chance = 17430},
 	{id = 7365, chance = 26610, maxCount = 10},
 	{id = 3280, chance = 25000},
-	{id = 3051, chance = 25000},
+	{id = 3051, chance = 25000}, -- Energy ring
 	{id = 5948, chance = 25000}
 }
 

@@ -70,7 +70,7 @@ monster.loot = {
 	{id = 3410, chance = 10000},
 	{id = 3298, chance = 9850, maxCount = 4},
 	{id = 3725, chance = 9650},
-	{id = 3091, chance = 3920},
+	{id = 3091, chance = 3920}, -- Sword ring
 	{id = 3285, chance = 2800},
 	{id = 7378, chance = 2600},
 	{id = 3307, chance = 2100},

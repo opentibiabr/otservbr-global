@@ -96,7 +96,7 @@ monster.loot = {
 	{name = "Slime Heart", chance = 1200, maxCount = 4},
 	{id = 23544, chance = 560},
 	{id = 23542, chance = 560},-- collar of blue plasma
-	{id = 23543, chance = 560},
+	{id = 23543, chance = 560}, -- Collar of green plasma
 	{id = 23533, chance = 560},
 	{id = 23529, chance = 560},
 	{id = 23531, chance = 560}

@@ -78,7 +78,7 @@ monster.loot = {
 	{name = "Soul Orb", chance = 35000},
 	{name = "Great Mana Potion", chance = 33000, maxCount = 3},
 	{name = "Great Health Potion", chance = 33000, maxCount = 3},
-	{name = "Concentrated Demonic Blood", chance = 30000, maxCount = 4},
+	{name = "flask of demonic blood", chance = 30000, maxCount = 4},
 	{name = "Small Amethyst", chance = 24950, maxCount = 3},
 	{name = "Assassin Star", chance = 24670, maxCount = 10},
 	{name = "Small Diamond", chance = 15700, maxCount = 3},

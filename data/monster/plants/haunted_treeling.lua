@@ -88,7 +88,7 @@ monster.loot = {
 	{name = "haunted piece of wood", chance = 4950},
 	{name = "orange mushroom", chance = 1800},
 	{name = "strong health potion", chance = 1040},
-	{name = "dwarven ring", chance = 660},
+	{id = 3097, chance = 660}, -- Dwarven ring
 	{name = "small emerald", chance = 620},
 	{name = "bullseye potion", chance = 100}
 }

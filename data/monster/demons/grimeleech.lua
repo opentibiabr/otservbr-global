@@ -82,7 +82,7 @@ monster.loot = {
 	{name = "great mana potion", chance = 34850, maxCount = 3},
 	{name = "great health potion", chance = 34290, maxCount = 3},
 	{name = "great spirit potion", chance = 30860, maxCount = 3},
-	{name = "concentrated demonic blood", chance = 23400, maxCount = 3},
+	{name = "flask of demonic blood", chance = 23400, maxCount = 3},
 	{name = "demonic essence", chance = 19240},
 	{name = "some grimeleech wings", chance = 19080},
 	{name = "fire mushroom", chance = 15360, maxCount = 5},

@@ -91,7 +91,7 @@ monster.loot = {
 	{id = 23542, chance = 9350},-- collar of blue plasma
 	{id = 23531, chance = 8630},
 	{name = "ring of the sky", chance = 8630},
-	{id = 23543, chance = 7910},
+	{id = 23543, chance = 7910}, -- Collar of green plasma
 	{name = "beast's nightmare-cushion", chance = 6470},
 	{name = "violet gem", chance = 6470},
 	{name = "magic sulphur", chance = 6470},
@@ -104,7 +104,7 @@ monster.loot = {
 	{name = "giant emerald", chance = 4320},
 	{name = "turquoise tendril lantern", chance = 2880},
 	{name = "dark whispers", chance = 2880},
-	{name = "arcane staff", chance = 2880},
+	{id = 3341, chance = 2880}, -- Arcane staff
 	{name = "giant ruby", chance = 2880},
 	{name = "abyss hammer", chance = 2160},
 	{id = 30343, chance = 2160},

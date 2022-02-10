@@ -88,7 +88,7 @@ monster.loot = {
 	{name = "orichalcum pearl", chance = 1400, maxCount = 4},
 	{id = 6299, chance = 330},
 	{name = "demonic essence", chance = 10600},
-	{name = "concentrated demonic blood", chance = 35000},
+	{name = "flask of demonic blood", chance = 35000},
 	{name = "nightmare blade", chance = 880},
 	{name = "great mana potion", chance = 10000},
 	{name = "glacier kilt", chance = 330},

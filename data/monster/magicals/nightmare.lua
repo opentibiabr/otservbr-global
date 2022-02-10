@@ -97,7 +97,7 @@ monster.loot = {
 	{id = 6299, chance = 1298},
 	{name = "demonic essence", chance = 10000},
 	{name = "skeleton decoration", chance = 337},
-	{name = "concentrated demonic blood", chance = 19666, maxCount = 2},
+	{name = "flask of demonic blood", chance = 19666, maxCount = 2},
 	{name = "essence of a bad dream", chance = 15240},
 	{name = "scythe leg", chance = 9090}
 }

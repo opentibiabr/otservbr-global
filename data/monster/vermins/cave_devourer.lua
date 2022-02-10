@@ -89,7 +89,7 @@ monster.loot = {
 	{name = "Cyan Crystal Fragment", chance = 5720},
 	{name = "Slime Heart", chance = 13770, maxCount = 4},
 	{name = "Cave Devourer Legs", chance = 17160},
-	{name = "Stealth Ring", chance = 2540},
+	{id = 3049, chance = 2540}, -- Stealth ring
 	{name = "Suspicious Device", chance = 420}
 }
 

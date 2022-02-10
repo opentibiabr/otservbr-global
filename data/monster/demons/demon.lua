@@ -103,11 +103,11 @@ monster.loot = {
 	{name = "talon", chance = 3430},
 	{name = "platinum coin", chance = 90540, maxCount = 8},
 	{name = "might ring", chance = 1890},
-	{name = "stealth ring", chance = 2170},
+	{id = 3049, chance = 2170}, -- Stealth ring
 	{name = "platinum amulet", chance = 680},
 	{name = "orb", chance = 2854},
 	{name = "gold ring", chance = 1050},
-	{name = "ring of healing", chance = 1990},
+	{id = 3098, chance = 1990}, -- Ring of healing
 	{name = "giant sword", chance = 1980},
 	{name = "ice rapier", chance = 1550},
 	{name = "golden sickle", chance = 1440},

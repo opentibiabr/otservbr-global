@@ -86,7 +86,7 @@ monster.loot = {
 	{id = 281, chance = 14520}, -- giant shimmering pearl
 	{name = "gold ingot", chance = 14500},
 	{name = "spellbook of warding", chance = 6500},
-	{name = "ring of healing", chance = 5400},
+	{id = 3098, chance = 5400}, -- Ring of healing
 	{name = "terra hood", chance = 1600},
 	{name = "amulet of loss", chance = 3400},
 	{name = "wand of everblazing", chance = 2900},
