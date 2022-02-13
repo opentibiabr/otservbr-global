@@ -1,3 +1,20 @@
+-- This function load the table "CreateItemOnMap"from script "create_item.lua"
+-- Basically it works to create items on the map without the need to edit the map
+function CreateMapItem(tablename)
+	for index, value in pairs(tablename) do
+		for i = 1, #value.itemPos do
+			local tile = Tile(value.itemPos[i])
+			-- Checks if the position is valid
+			if tile then
+				if tile:getItemCountById(index) == 0 then
+					Game.createItem(index, 1, value.itemPos[i])
+				end
+			end
+		end
+	end
+	Spdlog.info("Created all items in the map")
+end
+
 -- These functions load the action/unique tables on the map
 function loadLuaMapAction(tablename)
 	-- It load actions
