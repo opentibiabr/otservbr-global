@@ -53,7 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "blue bed kit", clientId = 834, buy = 80 },
 	{ itemName = "canopy bed kit", clientId = 17972, buy = 200 },
 	{ itemName = "green bed kit", clientId = 831, buy = 80 },

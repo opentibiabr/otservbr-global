@@ -85,7 +85,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "exotic flowers", clientId = 2988, buy = 300 },
 	{ itemName = "flower bowl", clientId = 2983, buy = 6 },
 	{ itemName = "god flowers", clientId = 2981, buy = 5 },

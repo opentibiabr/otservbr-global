@@ -23,7 +23,6 @@ npcConfig.flags = {
 	floorchange = false
 }
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "amphora", clientId = 2893, buy = 4 },
 	{ itemName = "armor rack kit", clientId = 6114, buy = 90 },
 	{ itemName = "barrel kit", clientId = 2793, buy = 12 },
@@ -62,8 +61,6 @@ npcConfig.shop = {
 	{ itemName = "oven kit", clientId = 6371, buy = 80 },
 	{ itemName = "pendulum clock kit", clientId = 2801, buy = 75 },
 	{ itemName = "piano kit", clientId = 2807, buy = 200 },
-	{ itemName = "picture", clientId = 2639, buy = 50 },
-	{ itemName = "picture", clientId = 2641, buy = 50 },
 	{ itemName = "picture", clientId = 2640, buy = 50 },
 	{ itemName = "potted flower", clientId = 2985, buy = 5 },
 	{ itemName = "purple tapestry", clientId = 2644, buy = 25 },
@@ -98,8 +95,6 @@ npcConfig.shop = {
 	{ itemName = "venorean cabinet kit", clientId = 17974, buy = 90 },
 	{ itemName = "venorean drawer kit", clientId = 17977, buy = 40 },
 	{ itemName = "venorean wardrobe kit", clientId = 17975, buy = 50 },
-	{ itemName = "wall mirror", clientId = 2638, buy = 40 },
-	{ itemName = "wall mirror", clientId = 2635, buy = 40 },
 	{ itemName = "wall mirror", clientId = 2632, buy = 40 },
 	{ itemName = "water pipe", clientId = 2980, buy = 40 },
 	{ itemName = "weapon rack kit", clientId = 6115, buy = 90 },

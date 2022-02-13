@@ -35,8 +35,8 @@ npcConfig.voices = {
 
 -- Npc shop
 npcConfig.shop = {
-	{ itemName = "meat", clientId = 3577, buy = 0, sell = 2, count = 1 },
-	{ itemName = "ham", clientId = 3582, buy = 0, sell = 2, count = 1 }
+	{ itemName = "ham", clientId = 3582, sell = 2, count = 1 },
+	{ itemName = "meat", clientId = 3577, sell = 2, count = 1 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

@@ -51,7 +51,6 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "acorn", clientId = 10296, sell = 10 },
 	{ itemName = "alptramun's toothbrush", clientId = 29943, sell = 270000 },
 	{ itemName = "ancient belt buckle", clientId = 24384, sell = 260 },
@@ -135,7 +134,6 @@ npcConfig.shop = {
 	{ itemName = "cheesy figurine", clientId = 17818, sell = 150 },
 	{ itemName = "cheesy membership card", clientId = 35614, sell = 120000 },
 	{ itemName = "chicken feather", clientId = 5890, sell = 30 },
-	{ itemName = "chitinous mouth", clientId = 27622, sell = 10000 },
 	{ itemName = "chitinous mouth", clientId = 27626, sell = 10000 },
 	{ itemName = "cliff strider claw", clientId = 16134, sell = 800 },
 	{ itemName = "cobra crest", clientId = 31678, sell = 650 },
@@ -171,7 +169,6 @@ npcConfig.shop = {
 	{ itemName = "damselfly wing", clientId = 17458, sell = 20 },
 	{ itemName = "dandelion seeds", clientId = 25695, sell = 200 },
 	{ itemName = "dangerous proto matter", clientId = 23515, sell = 300 },
-	{ itemName = "dark bell", clientId = 30325, sell = 250 },
 	{ itemName = "dark bell", clientId = 32596, sell = 310000 },
 	{ itemName = "dark rosary", clientId = 10303, sell = 48 },
 	{ itemName = "dead weight", clientId = 20202, sell = 450 },
@@ -296,7 +293,6 @@ npcConfig.shop = {
 	{ itemName = "haunted piece of wood", clientId = 9683, sell = 115 },
 	{ itemName = "hazardous heart", clientId = 34140, sell = 5000 },
 	{ itemName = "hazardous robe", clientId = 34147, sell = 3000 },
-	{ itemName = "head", clientId = 33932, sell = 3200 },
 	{ itemName = "head", clientId = 33937, sell = 3500 },
 	{ itemName = "heaven blossom", clientId = 3657, sell = 50 },
 	{ itemName = "hellhound slobber", clientId = 9637, sell = 500 },
@@ -418,8 +414,8 @@ npcConfig.shop = {
 	{ itemName = "pieces of magic chalk", clientId = 18930, sell = 210 },
 	{ itemName = "pig foot", clientId = 9693, sell = 10 },
 	{ itemName = "pile of grave earth", clientId = 11484, sell = 25 },
-	{ itemName = "pirate coin", clientId = 35572, sell = 110 },
 	{ itemName = "pirat's tail", clientId = 35573, sell = 180 },
+	{ itemName = "pirate coin", clientId = 35572, sell = 110 },
 	{ itemName = "plagueroot offshoot", clientId = 30087, sell = 280000 },
 	{ itemName = "plasma pearls", clientId = 23506, sell = 250 },
 	{ itemName = "plasmatic lightning", clientId = 23520, sell = 270 },
@@ -448,8 +444,8 @@ npcConfig.shop = {
 	{ itemName = "red hair dye", clientId = 17855, sell = 40 },
 	{ itemName = "red piece of cloth", clientId = 5911, sell = 300 },
 	{ itemName = "rhino hide", clientId = 24388, sell = 175 },
-	{ itemName = "rhino horn carving", clientId = 24386, sell = 300 },
 	{ itemName = "rhino horn", clientId = 24389, sell = 265 },
+	{ itemName = "rhino horn carving", clientId = 24386, sell = 300 },
 	{ itemName = "rod", clientId = 33929, sell = 2200 },
 	{ itemName = "roots", clientId = 33938, sell = 1200 },
 	{ itemName = "rope belt", clientId = 11492, sell = 66 },

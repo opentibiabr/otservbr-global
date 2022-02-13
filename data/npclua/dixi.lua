@@ -144,35 +144,25 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, 'Here, take a look and choose something
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "brass helmet", clientId = 3354, sell = 22 },
 	{ itemName = "brass shield", clientId = 3411, sell = 25 },
 	{ itemName = "chain armor", clientId = 3358, sell = 40 },
-	{ itemName = "chain helmet", clientId = 3352, sell = 12 },
+	{ itemName = "chain helmet", clientId = 3352, buy = 52, sell = 12 },
+	{ itemName = "coat", clientId = 3562, buy = 8 },
 	{ itemName = "copper shield", clientId = 3430, sell = 50 },
-	{ itemName = "doublet", clientId = 3379, sell = 3 },
-	{ itemName = "leather armor", clientId = 3361, sell = 5 },
+	{ itemName = "doublet", clientId = 3379, buy = 16, sell = 3 },
+	{ itemName = "jacket", clientId = 3561, buy = 10 },
+	{ itemName = "leather armor", clientId = 3361, buy = 25, sell = 5 },
 	{ itemName = "leather boots", clientId = 3552, sell = 2 },
-	{ itemName = "leather helmet", clientId = 3355, sell = 3 },
-	{ itemName = "leather legs", clientId = 3559, sell = 2 },
+	{ itemName = "leather helmet", clientId = 3355, buy = 12, sell = 3 },
+	{ itemName = "leather legs", clientId = 3559, buy = 10, sell = 2 },
 	{ itemName = "legion helmet", clientId = 3374, sell = 22 },
 	{ itemName = "plate shield", clientId = 3410, sell = 40 },
 	{ itemName = "studded armor", clientId = 3378, sell = 10 },
-	{ itemName = "studded helmet", clientId = 3376, sell = 20 },
+	{ itemName = "studded helmet", clientId = 3376, buy = 63, sell = 20 },
 	{ itemName = "studded legs", clientId = 3362, sell = 15 },
-	{ itemName = "studded shield", clientId = 3426, sell = 16 },
+	{ itemName = "studded shield", clientId = 3426, buy = 50, sell = 16 },
 	{ itemName = "viking helmet", clientId = 3367, sell = 25 },
-	{ itemName = "wooden shield", clientId = 3412, sell = 3 },
-	-- Buyable items
-	{ itemName = "chain helmet", clientId = 3352, buy = 52 },
-	{ itemName = "coat", clientId = 3562, buy = 8 },
-	{ itemName = "doublet", clientId = 3379, buy = 16 },
-	{ itemName = "jacket", clientId = 3561, buy = 10 },
-	{ itemName = "leather armor", clientId = 3361, buy = 25 },
-	{ itemName = "leather helmet", clientId = 3355, buy = 12 },
-	{ itemName = "leather legs", clientId = 3559, buy = 10 },
-	{ itemName = "studded helmet", clientId = 3376, buy = 63 },
-	{ itemName = "studded shield", clientId = 3426, buy = 50 },
 	{ itemName = "wooden shield", clientId = 3412, buy = 15 }
 }
 -- On buy npc shop message

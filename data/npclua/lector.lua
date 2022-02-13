@@ -58,7 +58,6 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, take a good look at my meat
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "ham", clientId = 3582, buy = 6 },
 	{ itemName = "meat", clientId = 3577, buy = 3 }
 }

@@ -74,9 +74,8 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Asha Thrazi.")
 
 npcHandler:addModule(FocusModule:new())
 npcConfig.shop = {
-	-- Buyable items
-	{ itemName = "meat", clientId = 3577, buy = 4 },
-	{ itemName = "ham", clientId = 3582, buy = 6 }
+	{ itemName = "ham", clientId = 3582, buy = 6 },
+	{ itemName = "meat", clientId = 3577, buy = 4 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

@@ -71,9 +71,8 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Wait... will you take me a diamond when
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
-	{ itemName = "letter", clientId = 3505, buy = 1 },
-	{ itemName = "cake", clientId = 6277, buy = 1 }
+	{ itemName = "cake", clientId = 6277, buy = 1 },
+	{ itemName = "letter", clientId = 3505, buy = 1 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

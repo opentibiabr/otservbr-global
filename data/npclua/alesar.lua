@@ -21,16 +21,16 @@ npcConfig.flags = {
 }
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "ancient shield", clientId = 3432, sell = 900 },
+	{ itemName = "ancient shield", clientId = 3432, buy = 5000, sell = 900 },
 	{ itemName = "black shield", clientId = 3429, sell = 800 },
 	{ itemName = "bonebreaker", clientId = 7428, sell = 10000 },
-	{ itemName = "dark armor", clientId = 3383, sell = 400 },
-	{ itemName = "dark helmet", clientId = 3384, sell = 250 },
+	{ itemName = "dark armor", clientId = 3383, buy = 1500, sell = 400 },
+	{ itemName = "dark helmet", clientId = 3384, buy = 1000, sell = 250 },
 	{ itemName = "dragon hammer", clientId = 3322, sell = 2000 },
 	{ itemName = "dreaded cleaver", clientId = 7419, sell = 15000 },
 	{ itemName = "giant sword", clientId = 3281, sell = 17000 },
 	{ itemName = "haunted blade", clientId = 7407, sell = 8000 },
+	{ itemName = "ice rapier", clientId = 3284, buy = 5000 },
 	{ itemName = "knight armor", clientId = 3370, sell = 5000 },
 	{ itemName = "knight axe", clientId = 3318, sell = 2000 },
 	{ itemName = "knight legs", clientId = 3371, sell = 5000 },
@@ -39,19 +39,13 @@ npcConfig.shop = {
 	{ itemName = "ornamented axe", clientId = 7411, sell = 20000 },
 	{ itemName = "poison dagger", clientId = 3299, sell = 50 },
 	{ itemName = "scimitar", clientId = 3307, sell = 150 },
-	{ itemName = "serpent sword", clientId = 3297, sell = 900 },
+	{ itemName = "serpent sword", clientId = 3297, buy = 6000, sell = 900 },
 	{ itemName = "skull staff", clientId = 3324, sell = 6000 },
 	{ itemName = "strange helmet", clientId = 3373, sell = 500 },
 	{ itemName = "titan axe", clientId = 7413, sell = 4000 },
 	{ itemName = "tower shield", clientId = 3428, sell = 8000 },
 	{ itemName = "vampire shield", clientId = 3434, sell = 15000 },
-	{ itemName = "warrior helmet", clientId = 3369, sell = 5000 },
-	-- Buyable items
-	{ itemName = "ancient shield", clientId = 3432, buy = 5000 },
-	{ itemName = "dark armor", clientId = 3383, buy = 1500 },
-	{ itemName = "dark helmet", clientId = 3384, buy = 1000 },
-	{ itemName = "ice rapier", clientId = 3284, buy = 5000 },
-	{ itemName = "serpent sword", clientId = 3297, buy = 6000 }
+	{ itemName = "warrior helmet", clientId = 3369, sell = 5000 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

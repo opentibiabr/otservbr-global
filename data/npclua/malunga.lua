@@ -59,7 +59,6 @@ npcHandler:setMessage(MESSAGE_GREET, "Greetings. I have only little time to {spa
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "boggy dreads", clientId = 9667, sell = 200 },
 	{ itemName = "bonecarving knife", clientId = 17830, sell = 140 },
 	{ itemName = "centipede leg", clientId = 10301, sell = 28 },

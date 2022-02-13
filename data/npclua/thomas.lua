@@ -53,21 +53,17 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "blue book", clientId = 2844, sell = 20 },
-	{ itemName = "gemmed book", clientId = 2842, sell = 100 },
-	{ itemName = "green book", clientId = 2846, sell = 15 },
-	{ itemName = "inkwell", clientId = 3509, sell = 8 },
-	{ itemName = "orange book", clientId = 2843, sell = 30 },
-	{ itemName = "parchment", clientId = 2814, sell = 5 },
-	-- Buyable items
 	{ itemName = "black book", clientId = 2838, buy = 15 },
+	{ itemName = "blue book", clientId = 2844, sell = 20 },
 	{ itemName = "brown book", clientId = 2837, buy = 15 },
 	{ itemName = "document", clientId = 2818, buy = 12 },
+	{ itemName = "gemmed book", clientId = 2842, sell = 100 },
+	{ itemName = "green book", clientId = 2846, sell = 15 },
 	{ itemName = "greeting card", clientId = 6386, buy = 30 },
 	{ itemName = "grey small book", clientId = 2839, buy = 15 },
-	{ itemName = "inkwell", clientId = 3509, buy = 10 },
-	{ itemName = "parchment", clientId = 2814, buy = 8 },
+	{ itemName = "inkwell", clientId = 3509, buy = 10, sell = 8 },
+	{ itemName = "orange book", clientId = 2843, sell = 30 },
+	{ itemName = "parchment", clientId = 2814, buy = 8, sell = 5 },
 	{ itemName = "parchment", clientId = 2817, buy = 8 },
 	{ itemName = "scroll", clientId = 2815, buy = 5 },
 	{ itemName = "spellbook", clientId = 3059, buy = 150 },

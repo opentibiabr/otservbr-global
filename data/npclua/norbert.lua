@@ -53,18 +53,11 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "coat", clientId = 3562, sell = 1 },
-	{ itemName = "doublet", clientId = 3379, sell = 3 },
-	{ itemName = "jacket", clientId = 3561, sell = 1 },
-	{ itemName = "leather armor", clientId = 3361, sell = 12 },
-	{ itemName = "studded armor", clientId = 3378, sell = 25 },
-	-- Buyable items
-	{ itemName = "coat", clientId = 3562, buy = 8 },
-	{ itemName = "doublet", clientId = 3379, buy = 16 },
-	{ itemName = "jacket", clientId = 3561, buy = 12 },
-	{ itemName = "leather armor", clientId = 3361, buy = 35 },
-	{ itemName = "studded armor", clientId = 3378, buy = 90 },
+	{ itemName = "coat", clientId = 3562, buy = 8, sell = 1 },
+	{ itemName = "doublet", clientId = 3379, buy = 16, sell = 3 },
+	{ itemName = "jacket", clientId = 3561, buy = 12, sell = 1 },
+	{ itemName = "leather armor", clientId = 3361, buy = 35, sell = 12 },
+	{ itemName = "studded armor", clientId = 3378, buy = 90, sell = 25 },
 	{ itemName = "wedding outfit box", clientId = 9586, buy = 5000 }
 }
 -- On buy npc shop message

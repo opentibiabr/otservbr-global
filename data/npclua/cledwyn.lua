@@ -26,27 +26,27 @@ npcConfig.flags = {
 npcConfig.currency = 22516
 
 npcConfig.shop = {
-	{ clientId= 22521, buy = 100, itemName = "earthheart cuirass"},
-	{ clientId= 22522, buy = 100, itemName = "earthheart hauberk"},
-	{ clientId= 22523, buy = 100, itemName = "earthheart platemail"},
-	{ clientId= 22535, buy = 100, itemName = "earthmind raiment"},
-	{ clientId= 22531, buy = 100, itemName = "earthsoul tabard"},
-	{ clientId= 22518, buy = 100, itemName = "fireheart cuirass"},
-	{ clientId= 22519, buy = 100, itemName = "fireheart hauberk"},
-	{ clientId= 22520, buy = 100, itemName = "fireheart platemail"},
-	{ clientId= 22534, buy = 100, itemName = "firemind raiment"},
-	{ clientId= 22530, buy = 100, itemName = "firesoul tabard"},
-	{ clientId= 22527, buy = 100, itemName = "frostheart cuirass"},
-	{ clientId= 22528, buy = 100, itemName = "frostheart hauberk"},
-	{ clientId= 22529, buy = 100, itemName = "frostheart platemail"},
-	{ clientId= 22537, buy = 100, itemName = "frostmind raiment"},
-	{ clientId= 22533, buy = 100, itemName = "frostsoul tabard"},
-	{ clientId= 35563, buy = 1, itemName = "magic shield potion"},
-	{ clientId= 22524, buy = 100, itemName = "thunderheart cuirass"},
-	{ clientId= 22525, buy = 100, itemName = "thunderheart hauberk"},
-	{ clientId= 22526, buy = 100, itemName = "thunderheart platemail"},
-	{ clientId= 22536, buy = 100, itemName = "thundermind raiment"},
-	{ clientId= 22532, buy = 100, itemName = "thundersoul tabard"}
+	{ itemName = "earthheart cuirass", clientId = 22521, buy = 100},
+	{ itemName = "earthheart hauberk", clientId = 22522, buy = 100, },
+	{ itemName = "earthheart platemail", clientId = 22523, buy = 100, },
+	{ itemName = "earthmind raiment", clientId = 22535, buy = 100, },
+	{ itemName = "earthsoul tabard", clientId = 22531, buy = 100, },
+	{ itemName = "fireheart cuirass", clientId = 22518, buy = 100, },
+	{ itemName = "fireheart hauberk", clientId = 22519, buy = 100, },
+	{ itemName = "fireheart platemail", clientId = 22520, buy = 100 },
+	{ itemName = "firemind raiment", clientId = 22534, buy = 100 },
+	{ itemName = "firesoul tabard", clientId = 22530, buy = 100},
+	{ itemName = "frostheart cuirass", clientId = 22527, buy = 100},
+	{ itemName = "frostheart hauberk", clientId = 22528, buy = 100, },
+	{ itemName = "frostheart platemail", clientId = 22529, buy = 100 },
+	{ itemName = "frostmind raiment", clientId = 22537, buy = 100 },
+	{ itemName = "frostsoul tabard", clientId = 22533, buy = 100 },
+	{ itemName = "magic shield potion", clientId = 35563, buy = 1 },
+	{ itemName = "thunderheart cuirass", clientId = 22524, buy = 100 },
+	{ itemName = "thunderheart hauberk", clientId = 22525, buy = 100 },
+	{ itemName = "thunderheart platemail", clientId = 22526, buy = 100 },
+	{ itemName = "thundermind raiment", clientId = 22536, buy = 100 },
+	{ itemName = "thundersoul tabard", clientId = 22532, buy = 100 }
 }
 
 -- On buy npc shop message

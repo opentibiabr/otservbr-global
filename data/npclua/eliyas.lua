@@ -125,16 +125,11 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "bow", clientId = 3350, sell = 100 },
-	{ itemName = "crossbow", clientId = 3349, sell = 120 },
-	{ itemName = "spear", clientId = 3277, sell = 3 },
-	-- Buyable items
 	{ itemName = "arrow", clientId = 3447, buy = 3 },
 	{ itemName = "blue quiver", clientId = 35848, buy = 400 },
 	{ itemName = "bolt", clientId = 3446, buy = 4 },
-	{ itemName = "bow", clientId = 3350, buy = 400 },
-	{ itemName = "crossbow", clientId = 3349, buy = 500 },
+	{ itemName = "bow", clientId = 3350, buy = 400, sell = 100 },
+	{ itemName = "crossbow", clientId = 3349, buy = 500, sell = 120 },
 	{ itemName = "crystalline arrow", clientId = 15793, buy = 20 },
 	{ itemName = "diamond arrow", clientId = 35901, buy = 100 },
 	{ itemName = "drill bolt", clientId = 16142, buy = 12 },
@@ -151,7 +146,7 @@ npcConfig.shop = {
 	{ itemName = "royal spear", clientId = 7378, buy = 15 },
 	{ itemName = "shiver arrow", clientId = 762, buy = 5 },
 	{ itemName = "sniper arrow", clientId = 7364, buy = 5 },
-	{ itemName = "spear", clientId = 3277, buy = 9 },
+	{ itemName = "spear", clientId = 3277, buy = 9, sell = 3 },
 	{ itemName = "spectral bolt", clientId = 35902, buy = 70 },
 	{ itemName = "tarsal arrow", clientId = 14251, buy = 6 },
 	{ itemName = "throwing star", clientId = 3287, buy = 42 },

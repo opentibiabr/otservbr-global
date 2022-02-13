@@ -112,20 +112,20 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "axe ring", clientId = 3092, sell = 100 },
-	{ itemName = "bronze amulet", clientId = 3056, sell = 50 },
-	{ itemName = "club ring", clientId = 3093, sell = 100 },
-	{ itemName = "elven amulet", clientId = 3082, sell = 100 },
-	{ itemName = "garlic necklace", clientId = 3083, sell = 50 },
+	{ itemName = "axe ring", clientId = 3092, buy = 500, sell = 100 },
+	{ itemName = "bronze amulet", clientId = 3056, buy = 100, sell = 50, count = 200 },
+	{ itemName = "club ring", clientId = 3093, buy = 500, sell = 100 },
+	{ itemName = "elven amulet", clientId = 3082, buy = 500, sell = 100, count = 50 },
+	{ itemName = "garlic necklace", clientId = 3083, buy = 100, sell = 50 },
 	{ itemName = "life crystal", clientId = 4840, sell = 50 },
-	{ itemName = "magic light wand", clientId = 3046, sell = 35 },
+	{ itemName = "magic light wand", clientId = 3046, buy = 120, sell = 35 },
 	{ itemName = "mind stone", clientId = 3062, sell = 100 },
 	{ itemName = "orb", clientId = 3060, sell = 750 },
-	{ itemName = "power ring", clientId = 3050, sell = 50 },
-	{ itemName = "stealth ring", clientId = 3049, sell = 200 },
-	{ itemName = "stone skin amulet", clientId = 3081, sell = 500 },
-	{ itemName = "sword ring", clientId = 3091, sell = 100 },
+	{ itemName = "power ring", clientId = 3050, buy = 100, sell = 50 },
+	{ itemName = "stealth ring", clientId = 3049, buy = 5000, sell = 200 },
+	{ itemName = "stone skin amulet", clientId = 3081, buy = 5000, sell = 500, count = 5 },
+	{ itemName = "sword ring", clientId = 3091, buy = 500, sell = 100 },
+	{ itemName = "wand of cosmic energy", clientId = 3073, sell = 2000 },
 	{ itemName = "wand of cosmic energy", clientId = 3073, sell = 2000 },
 	{ itemName = "wand of decay", clientId = 3072, sell = 1000 },
 	{ itemName = "wand of defiance", clientId = 16096, sell = 6500 },
@@ -135,18 +135,7 @@ npcConfig.shop = {
 	{ itemName = "wand of inferno", clientId = 3071, sell = 3000 },
 	{ itemName = "wand of starstorm", clientId = 8092, sell = 3600 },
 	{ itemName = "wand of voodoo", clientId = 8094, sell = 4400 },
-	{ itemName = "wand of vortex", clientId = 3074, sell = 100 },
-	-- Buyable items
-	{ itemName = "axe ring", clientId = 3092, buy = 500 },
-	{ itemName = "bronze amulet", clientId = 3056, buy = 100, count = 200 },
-	{ itemName = "club ring", clientId = 3093, buy = 500 },
-	{ itemName = "elven amulet", clientId = 3082, buy = 500, count = 50 },
-	{ itemName = "garlic necklace", clientId = 3083, buy = 100 },
-	{ itemName = "magic light wand", clientId = 3046, buy = 120 },
-	{ itemName = "power ring", clientId = 3050, buy = 100 },
-	{ itemName = "stealth ring", clientId = 3049, buy = 5000 },
-	{ itemName = "stone skin amulet", clientId = 3081, buy = 5000, count = 5 },
-	{ itemName = "sword ring", clientId = 3091, buy = 500 }
+	{ itemName = "wand of vortex", clientId = 3074, sell = 100 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

@@ -20,8 +20,8 @@ npcConfig.flags = {
 
 -- Npc shop
 npcConfig.shop = {
-	{ itemName = "didgeridoo", clientId = 2965, buy = 5, sell = 0, count = 1 },
-	{ itemName = "war drum", clientId = 2966, buy = 1, sell = 0, count = 1 }
+	{ itemName = "didgeridoo", clientId = 2965, count = 1 },
+	{ itemName = "war drum", clientId = 2966, count = 1 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

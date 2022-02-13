@@ -67,7 +67,6 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Please come back from time to time.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "royal spear", clientId = 7378, buy = 100 }
 }
 -- On buy npc shop message

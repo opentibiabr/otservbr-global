@@ -32,16 +32,13 @@ npcConfig.voices = {
 	{ text = 'Don\'t head for adventure without a rope and torches! Buy your supplies here!' }
 }
 npcConfig.shop = {	-- Sellable items
-	{ itemName = "fishing rod", clientId = 3483, sell = 30 },
-	{ itemName = "rope", clientId = 3003, sell = 8 },
-	{ itemName = "shovel", clientId = 3457, sell = 2 },	-- Buyable items
 	{ itemName = "backpack", clientId = 2854, buy = 10 },
 	{ itemName = "bag", clientId = 2853, buy = 4 },
-	{ itemName = "fishing rod", clientId = 3483, buy = 150 },
-	{ itemName = "rope", clientId = 3003, buy = 50 },
+	{ itemName = "fishing rod", clientId = 3483, buy = 150, sell = 30 },
+	{ itemName = "rope", clientId = 3003, buy = 50, sell = 8 },
 	{ itemName = "scroll", clientId = 2815, buy = 5 },
 	{ itemName = "scythe", clientId = 3453, buy = 12 },
-	{ itemName = "shovel", clientId = 3457, buy = 10 },
+	{ itemName = "shovel", clientId = 3457, buy = 10, sell = 2 },
 	{ itemName = "torch", clientId = 2920, buy = 2 },
 	{ itemName = "worm", clientId = 3492, buy = 1 }
 }

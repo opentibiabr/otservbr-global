@@ -186,7 +186,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "blank rune", clientId = 3147, buy = 10 },
 	{ itemName = "cure poison rune", clientId = 3153, buy = 65 },
 	{ itemName = "destroy field rune", clientId = 3148, buy = 15 },

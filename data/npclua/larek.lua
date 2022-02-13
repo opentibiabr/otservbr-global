@@ -52,23 +52,21 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "black pearl", clientId = 3027, sell = 280 },
-	{ itemName = "onyx chip", clientId = 22193, sell = 500 },
-	{ itemName = "opal", clientId = 22194, sell = 500 },
-	{ itemName = "small ruby", clientId = 3030, sell = 250 },
-	{ itemName = "small topaz", clientId = 9057, sell = 200 },
-	{ itemName = "white pearl", clientId = 3026, sell = 160 },
-	-- Buyable items
 	{ itemName = "cookie", clientId = 3598, buy = 7 },
 	{ itemName = "flour", clientId = 3603, buy = 30 },
 	{ itemName = "hoe", clientId = 3455, buy = 15 },
 	{ itemName = "juice squeezer", clientId = 5865, buy = 100 },
 	{ itemName = "kitchen knife", clientId = 3469, buy = 20 },
+	{ itemName = "onyx chip", clientId = 22193, sell = 500 },
+	{ itemName = "opal", clientId = 22194, sell = 500 },
 	{ itemName = "rope", clientId = 3003, buy = 50 },
 	{ itemName = "shovel", clientId = 3457, buy = 50 },
+	{ itemName = "small ruby", clientId = 3030, sell = 250 },
+	{ itemName = "small topaz", clientId = 9057, sell = 200 },
+	{ itemName = "vial", clientId = 2874, buy = 20 },
 	{ itemName = "vial of milk", clientId = 2874, buy = 50, count = 6 },
-	{ itemName = "vial", clientId = 2874, buy = 20, count = 0 }
+	{ itemName = "white pearl", clientId = 3026, sell = 160 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

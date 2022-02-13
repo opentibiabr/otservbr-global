@@ -94,15 +94,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "life crystal", clientId = 3061, sell = 75 },
-	{ itemName = "mind stone", clientId = 3062, sell = 150 },
-	{ itemName = "spellbook of enlightenment", clientId = 8072, sell = 3500 },
-	{ itemName = "spellbook of warding", clientId = 8073, sell = 7500 },
-	{ itemName = "spellbook of mind control", clientId = 8074, sell = 12000 },
-	{ itemName = "spellbook of lost souls", clientId = 8075, sell = 17500 },
-	{ itemName = "spellwand", clientId = 651, sell = 299 },
-	-- Buyable items
 	{ itemName = "animate dead rune", clientId = 3203, buy = 375 },
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },
 	{ itemName = "blank rune", clientId = 3147, buy = 20 },
@@ -132,9 +123,11 @@ npcConfig.shop = {
 	{ itemName = "intense healing rune", clientId = 3152, buy = 95 },
 	{ itemName = "lasting exercise rod", clientId = 35289, buy = 7560000, count = 14400 },
 	{ itemName = "lasting exercise wand", clientId = 35290, buy = 7560000, count = 14400 },
+	{ itemName = "life crystal", clientId = 3061, sell = 75 },
 	{ itemName = "life ring", clientId = 3052, buy = 1000 },
 	{ itemName = "light magic missile rune", clientId = 3174, buy = 4 },
 	{ itemName = "magic wall rune", clientId = 3180, buy = 116 },
+	{ itemName = "mind stone", clientId = 3062, sell = 150 },
 	{ itemName = "moonlight rod", clientId = 3070, buy = 1000 },
 	{ itemName = "necrotic rod", clientId = 3069, buy = 5000 },
 	{ itemName = "northwind rod", clientId = 8083, buy = 7500 },
@@ -144,6 +137,11 @@ npcConfig.shop = {
 	{ itemName = "poison wall rune", clientId = 3176, buy = 52 },
 	{ itemName = "snakebite rod", clientId = 3066, buy = 500 },
 	{ itemName = "soulfire rune", clientId = 3195, buy = 46 },
+	{ itemName = "spellbook of enlightenment", clientId = 8072, sell = 3500 },
+	{ itemName = "spellbook of lost souls", clientId = 8075, sell = 17500 },
+	{ itemName = "spellbook of mind control", clientId = 8074, sell = 12000 },
+	{ itemName = "spellbook of warding", clientId = 8073, sell = 7500 },
+	{ itemName = "spellwand", clientId = 651, sell = 299 },
 	{ itemName = "springsprout rod", clientId = 8084, buy = 18000 },
 	{ itemName = "stalagmite rune", clientId = 3179, buy = 12 },
 	{ itemName = "stone shower rune", clientId = 3175, buy = 37 },

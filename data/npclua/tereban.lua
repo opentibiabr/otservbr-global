@@ -55,7 +55,7 @@ local function creatureSayCallback(npc, creature, type, message)
 end
 
 local function onReleaseFocus(npc, creature)
-	ClearTerebanMessages(creature)
+	ClearTerebanMessages(npc, creature)
 end
 
 npcHandler:setMessage(MESSAGE_GREET, "Greetings, friend. Good you are showing up.")

@@ -94,15 +94,14 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "armor rack", clientId = 6114, buy = 90 },
 	{ itemName = "barrel", clientId = 2793, buy = 12 },
 	{ itemName = "big table", clientId = 2785, buy = 30 },
 	{ itemName = "birdcage", clientId = 2796, buy = 50 },
 	{ itemName = "bookcase", clientId = 6372, buy = 70 },
 	{ itemName = "box", clientId = 2469, buy = 10 },
-	{ itemName = "chest of drawers", clientId = 2789, buy = 18 },
 	{ itemName = "chest", clientId = 2472, buy = 10 },
+	{ itemName = "chest of drawers", clientId = 2789, buy = 18 },
 	{ itemName = "chimney", clientId = 7864, buy = 200 },
 	{ itemName = "crate", clientId = 2471, buy = 10 },
 	{ itemName = "cuckoo clock", clientId = 2664, buy = 40 },
@@ -128,9 +127,9 @@ npcConfig.shop = {
 	{ itemName = "oven", clientId = 6371, buy = 80 },
 	{ itemName = "pendulum clock", clientId = 2801, buy = 75 },
 	{ itemName = "piano", clientId = 2807, buy = 200 },
-	{ itemName = "picture", clientId = 2639, buy = 50 },
-	{ itemName = "picture", clientId = 2640, buy = 50 },
-	{ itemName = "picture", clientId = 2641, buy = 50 },
+	{ itemName = "green picture", clientId = 2639, buy = 50 },
+	{ itemName = "yellow picture", clientId = 2640, buy = 50 },
+	{ itemName = "blue picture", clientId = 2641, buy = 50 },
 	{ itemName = "potted flower", clientId = 2985, buy = 5 },
 	{ itemName = "purple tapestry", clientId = 2644, buy = 25 },
 	{ itemName = "red cushioned chair", clientId = 2775, buy = 40 },
@@ -161,8 +160,6 @@ npcConfig.shop = {
 	{ itemName = "venorean cabinet", clientId = 17974, buy = 90 },
 	{ itemName = "venorean drawer", clientId = 17977, buy = 40 },
 	{ itemName = "venorean wardrobe", clientId = 17975, buy = 50 },
-	{ itemName = "wall mirror", clientId = 2632, buy = 40 },
-	{ itemName = "wall mirror", clientId = 2635, buy = 40 },
 	{ itemName = "wall mirror", clientId = 2638, buy = 40 },
 	{ itemName = "water pipe", clientId = 2974, buy = 40 },
 	{ itemName = "weapon rack", clientId = 6115, buy = 90 },

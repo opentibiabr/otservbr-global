@@ -63,9 +63,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "What a strange person.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "bread", clientId = 3600, sell = 2 },
-	-- Buyable items
 	{ itemName = "cheese", clientId = 3607, buy = 5 },
 	{ itemName = "cherry", clientId = 3590, buy = 1 },
 	{ itemName = "melon", clientId = 3593, buy = 8 },

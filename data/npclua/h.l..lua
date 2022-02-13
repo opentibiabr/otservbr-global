@@ -53,7 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "ancient shield", clientId = 3432, sell = 49 },
 	{ itemName = "axe", clientId = 3274, sell = 6 },
 	{ itemName = "barbarian axe", clientId = 3317, sell = 30 },
@@ -151,7 +150,6 @@ npcConfig.shop = {
 	{ itemName = "shield of honour", clientId = 3417, sell = 520 },
 	{ itemName = "short sword", clientId = 3294, sell = 3 },
 	{ itemName = "sickle", clientId = 3293, sell = 1 },
-	{ itemName = "dagger", clientId = 3267, sell = 1 },
 	{ itemName = "silver mace", clientId = 3312, sell = 270 },
 	{ itemName = "soldier helmet", clientId = 3375, sell = 16 },
 	{ itemName = "spear", clientId = 3277, sell = 2 },

@@ -88,7 +88,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "scroll of heroic deeds", clientId = 11510, sell = 230 },
 	{ itemName = "small notebook", clientId = 11450, sell = 480 }
 }

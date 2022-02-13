@@ -23,24 +23,24 @@ npcConfig.flags = {
 	floorchange = false
 }
 npcConfig.shop = {
-	{itemName = "backpack", clientId = 2854, buy = 10, count = 1},
-	{itemName = "bag", clientId = 2853, buy = 4, count = 1},
-	{itemName = "bread", clientId = 3600, buy = 3, count = 1},
-	{itemName = "carrot", clientId = 3595, buy = 1, count = 1},
-	{itemName = "cheese", clientId = 3607, buy = 5, sell = 2, count = 1},
-	{itemName = "cherry", clientId = 3590, buy = 1, count = 1},
-	{itemName = "egg", clientId = 3606, buy = 1, count = 1},
-	{itemName = "fishing rod", clientId = 3483, buy = 150, sell = 30, count = 1},
-	{itemName = "ham", clientId = 3582, buy = 8, count = 1},
-	{itemName = "machete", clientId = 3308, buy = 6, count = 1},
-	{itemName = "meat", clientId = 3577, buy = 5, sell = 2, count = 1},
-	{itemName = "pick", clientId = 3456, buy = 15, count = 1},
-	{itemName = "rope", clientId = 3003, buy = 50, sell = 8, count = 1},
-	{itemName = "salmon", clientId = 3579, buy = 2, count = 1},
-	{itemName = "scroll", clientId = 2815, buy = 5, count = 1},
-	{itemName = "shovel", clientId = 3457, buy = 10, sell = 2, count = 1},
-	{itemName = "torch", clientId = 2920, buy = 2, count = 1},
-	{itemName = "worm", clientId = 3492, buy = 1, count = 1}
+	{ itemName = "backpack", clientId = 2854, buy = 10, count = 1 },
+	{ itemName = "bag", clientId = 2853, buy = 4, count = 1 },
+	{ itemName = "bread", clientId = 3600, buy = 3, count = 1 },
+	{ itemName = "carrot", clientId = 3595, buy = 1, count = 1 },
+	{ itemName = "cheese", clientId = 3607, sell = 2, count = 1 },
+	{ itemName = "cherry", clientId = 3590, buy = 1, count = 1 },
+	{ itemName = "egg", clientId = 3606, buy = 1, count = 1 },
+	{ itemName = "fishing rod", clientId = 3483, sell = 30, count = 1 },
+	{ itemName = "ham", clientId = 3582, buy = 8, count = 1 },
+	{ itemName = "machete", clientId = 3308, buy = 6, count = 1 },
+	{ itemName = "meat", clientId = 3577, sell = 2, count = 1 },
+	{ itemName = "pick", clientId = 3456, buy = 15, count = 1 },
+	{ itemName = "rope", clientId = 3003, sell = 8, count = 1 },
+	{ itemName = "salmon", clientId = 3579, buy = 2, count = 1 },
+	{ itemName = "scroll", clientId = 2815, buy = 5, count = 1 },
+	{ itemName = "shovel", clientId = 3457, sell = 2, count = 1 },
+	{ itemName = "torch", clientId = 2920, buy = 2, count = 1 },
+	{ itemName = "worm", clientId = 3492, buy = 1, count = 1 }
 }
 
 -- On buy npc shop message

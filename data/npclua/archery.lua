@@ -68,14 +68,12 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Please come back from time to time.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
-	{ itemName = "assassin star", clientId = 7368, buy = 100 },
-	{ itemName = "infernal bolt", clientId = 6528, buy = 300000 },
-	{ itemName = "burst arrow", clientId = 3449, buy = 300000 },
 	{ itemName = "arrow", clientId = 3447, buy = 3 },
+	{ itemName = "assassin star", clientId = 7368, buy = 100 },
 	{ itemName = "blue quiver", clientId = 35848, buy = 400 },
 	{ itemName = "bolt", clientId = 3446, buy = 4 },
 	{ itemName = "bow", clientId = 3350, buy = 400 },
+	{ itemName = "burst arrow", clientId = 3449, buy = 300000 },
 	{ itemName = "crossbow", clientId = 3349, buy = 500 },
 	{ itemName = "crystalline arrow", clientId = 15793, buy = 20 },
 	{ itemName = "diamond arrow", clientId = 35901, buy = 100 },
@@ -84,6 +82,7 @@ npcConfig.shop = {
 	{ itemName = "envenomed arrow", clientId = 16143, buy = 12 },
 	{ itemName = "flaming arrow", clientId = 763, buy = 5 },
 	{ itemName = "flash arrow", clientId = 761, buy = 5 },
+	{ itemName = "infernal bolt", clientId = 6528, buy = 300000 },
 	{ itemName = "onyx arrow", clientId = 7365, buy = 7 },
 	{ itemName = "piercing bolt", clientId = 7363, buy = 5 },
 	{ itemName = "power bolt", clientId = 3450, buy = 7 },
@@ -92,8 +91,8 @@ npcConfig.shop = {
 	{ itemName = "red quiver", clientId = 35849, buy = 400 },
 	{ itemName = "royal spear", clientId = 7378, buy = 15 },
 	{ itemName = "shiver arrow", clientId = 762, buy = 5 },
-	{ itemName = "sniper arrow", clientId = 7364, buy = 5 },
 	{ itemName = "small stone", clientId = 1781, buy = 100 },
+	{ itemName = "sniper arrow", clientId = 7364, buy = 5 },
 	{ itemName = "spear", clientId = 3277, buy = 9 },
 	{ itemName = "spectral bolt", clientId = 35902, buy = 70 },
 	{ itemName = "tarsal arrow", clientId = 14251, buy = 6 },
