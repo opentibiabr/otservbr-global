@@ -65,7 +65,6 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Sure, take a look. Apart from those, I
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "basalt fetish", clientId = 17856, sell = 210 },
 	{ itemName = "basalt figurine", clientId = 17857, sell = 160 },
 	{ itemName = "bat wing", clientId = 5894, sell = 50 },

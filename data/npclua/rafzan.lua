@@ -63,27 +63,22 @@ keywordHandler:addKeyword({'ratmen'}, StdModule.say, {npcHandler = npcHandler, t
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "fishing rod", clientId = 3483, sell = 30 },
-	{ itemName = "leather harness", clientId = 17846, sell = 750 },
-	{ itemName = "life preserver", clientId = 17813, sell = 300 },
-	{ itemName = "ratana", clientId = 17812, sell = 500 },
-	{ itemName = "rope", clientId = 3003, sell = 8 },
-	{ itemName = "shovel", clientId = 3457, sell = 2 },
-	{ itemName = "spike shield", clientId = 17810, sell = 250 },
-	{ itemName = "spiky club", clientId = 17859, sell = 300 },
-	-- Buyable items
 	{ itemName = "advertisement sign", clientId = 17668, buy = 75 },
 	{ itemName = "backpack", clientId = 2854, buy = 10 },
 	{ itemName = "bag", clientId = 2853, buy = 4 },
 	{ itemName = "bottle with rat urine", clientId = 17671, buy = 150 },
-	{ itemName = "fishing rod", clientId = 3483, buy = 150 },
+	{ itemName = "fishing rod", clientId = 3483, buy = 150, sell = 30 },
 	{ itemName = "guardcatcher", clientId = 17669, buy = 200 },
+	{ itemName = "leather harness", clientId = 17846, sell = 750 },
+	{ itemName = "life preserver", clientId = 17813, sell = 300 },
 	{ itemName = "perfume gatherer", clientId = 17670, buy = 400 },
-	{ itemName = "rope", clientId = 3003, buy = 50 },
+	{ itemName = "ratana", clientId = 17812, sell = 500 },
+	{ itemName = "rope", clientId = 3003, buy = 50, sell = 8 },
 	{ itemName = "scroll", clientId = 2815, buy = 5 },
 	{ itemName = "scythe", clientId = 3453, buy = 12 },
-	{ itemName = "shovel", clientId = 3457, buy = 10 },
+	{ itemName = "shovel", clientId = 3457, buy = 10, sell = 2 },
+	{ itemName = "spike shield", clientId = 17810, sell = 250 },
+	{ itemName = "spiky club", clientId = 17859, sell = 300 },
 	{ itemName = "torch", clientId = 2920, buy = 2 },
 	{ itemName = "trunkhammer", clientId = 17676, buy = 150 },
 	{ itemName = "worm", clientId = 3492, buy = 1 }

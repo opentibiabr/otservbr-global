@@ -196,15 +196,13 @@ npcHandler:setCallback(CALLBACK_REMOVE_INTERACTION, onReleaseFocus)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "ice cube", clientId = 7441, sell = 250 },
-	-- Buyable items
-	{ itemName = "cheese", clientId = 3607, buy = 6 },
 	{ itemName = "bread", clientId = 3600, buy = 4 },
+	{ itemName = "cheese", clientId = 3607, buy = 6 },
 	{ itemName = "ham", clientId = 3582, buy = 8 },
+	{ itemName = "ice cube", clientId = 7441, sell = 250 },
 	{ itemName = "meat", clientId = 3577, buy = 5 },
-	{ itemName = "mug of milk", clientId = 2880, buy = 5, count = 6 },
 	{ itemName = "mug of lemonade", clientId = 2880, buy = 3, count = 5 },
+	{ itemName = "mug of milk", clientId = 2880, buy = 5, count = 6 },
 	{ itemName = "mug of water", clientId = 2880, buy = 2, count = 1 },
 	{ itemName = "scarab cheese", clientId = 169, buy = 100 }
 }

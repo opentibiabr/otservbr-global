@@ -103,9 +103,6 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my ware
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "spellwand", clientId = 651, sell = 299 },
-	-- Buyable items
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },
 	{ itemName = "blank rune", clientId = 3147, buy = 10 },
 	{ itemName = "chameleon rune", clientId = 3178, buy = 210 },
@@ -136,6 +133,7 @@ npcConfig.shop = {
 	{ itemName = "poison wall rune", clientId = 3176, buy = 52 },
 	{ itemName = "snakebite rod", clientId = 3066, buy = 500 },
 	{ itemName = "spellbook", clientId = 3059, buy = 150 },
+	{ itemName = "spellwand", clientId = 651, sell = 299 },
 	{ itemName = "springsprout rod", clientId = 8084, buy = 18000 },
 	{ itemName = "stalagmite rune", clientId = 3179, buy = 12 },
 	{ itemName = "sudden death rune", clientId = 3155, buy = 135 },

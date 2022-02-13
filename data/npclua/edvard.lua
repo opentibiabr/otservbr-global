@@ -63,8 +63,7 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Have a look. Most furniture comes in h
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
-	{ itemName = "amphora", clientId = 2893, buy = 4, count = 0 },
+	{ itemName = "amphora", clientId = 2893, buy = 4 },
 	{ itemName = "armor rack kit", clientId = 6114, buy = 90 },
 	{ itemName = "barrel kit", clientId = 2793, buy = 12 },
 	{ itemName = "big table kit", clientId = 2785, buy = 30 },
@@ -103,9 +102,9 @@ npcConfig.shop = {
 	{ itemName = "oven kit", clientId = 6371, buy = 80 },
 	{ itemName = "pendulum clock kit", clientId = 2801, buy = 75 },
 	{ itemName = "piano kit", clientId = 2807, buy = 200 },
-	{ itemName = "picture", clientId = 2639, buy = 50 },
-	{ itemName = "picture", clientId = 2640, buy = 50 },
-	{ itemName = "picture", clientId = 2641, buy = 50 },
+	{ itemName = "green picture", clientId = 2639, buy = 50 },
+	{ itemName = "yellow picture", clientId = 2640, buy = 50 },
+	{ itemName = "blue picture", clientId = 2641, buy = 50 },
 	{ itemName = "potted flower", clientId = 2985, buy = 5 },
 	{ itemName = "purple tapestry", clientId = 2644, buy = 25 },
 	{ itemName = "red bed kit", clientId = 833, buy = 80 },
@@ -135,12 +134,10 @@ npcConfig.shop = {
 	{ itemName = "trophy stand", clientId = 872, buy = 50 },
 	{ itemName = "trough kit", clientId = 2792, buy = 7 },
 	{ itemName = "trunk kit", clientId = 2794, buy = 10 },
-	{ itemName = "vase", clientId = 2876, buy = 3, count = 0 },
+	{ itemName = "vase", clientId = 2876, buy = 3 },
 	{ itemName = "venorean cabinet kit", clientId = 17974, buy = 90 },
 	{ itemName = "venorean drawer kit", clientId = 17977, buy = 40 },
 	{ itemName = "venorean wardrobe kit", clientId = 17975, buy = 50 },
-	{ itemName = "wall mirror", clientId = 2632, buy = 40 },
-	{ itemName = "wall mirror", clientId = 2635, buy = 40 },
 	{ itemName = "wall mirror", clientId = 2638, buy = 40 },
 	{ itemName = "water pipe", clientId = 2980, buy = 40 },
 	{ itemName = "weapon rack kit", clientId = 6115, buy = 90 },

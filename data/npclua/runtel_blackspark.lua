@@ -53,7 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "animate dead rune", clientId = 3203, buy = 375 },
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },
 	{ itemName = "blank rune", clientId = 3147, buy = 10 },

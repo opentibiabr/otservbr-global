@@ -77,7 +77,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "brown bread", clientId = 3602, buy = 4 },
 	{ itemName = "fish", clientId = 3578, buy = 5 },
 	{ itemName = "meat", clientId = 3577, buy = 6 },

@@ -185,26 +185,24 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 284, sell = 5 },
+	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
 	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
-	{ itemName = "vial", clientId = 2874, sell = 5 },
-	-- Buyable items
-	{ itemName = "vial of blood", clientId = 2874, buy = 15, count = 2 },
 	{ itemName = "great health potion", clientId = 239, buy = 225 },
 	{ itemName = "great mana potion", clientId = 238, buy = 144 },
 	{ itemName = "great spirit potion", clientId = 7642, buy = 228 },
 	{ itemName = "health potion", clientId = 266, buy = 50 },
 	{ itemName = "mana potion", clientId = 268, buy = 56 },
-	{ itemName = "vial of oil", clientId = 2874, buy = 20, count = 11 },
-	{ itemName = "vial of slime", clientId = 2874, buy = 12, count = 4 },
 	{ itemName = "strong health potion", clientId = 236, buy = 115 },
 	{ itemName = "strong mana potion", clientId = 237, buy = 93 },
 	{ itemName = "supreme health potion", clientId = 23375, buy = 625 },
 	{ itemName = "ultimate health potion", clientId = 7643, buy = 379 },
 	{ itemName = "ultimate mana potion", clientId = 23373, buy = 438 },
 	{ itemName = "ultimate spirit potion", clientId = 23374, buy = 438 },
+	{ itemName = "vial", clientId = 2874, sell = 5 },
+	{ itemName = "vial of blood", clientId = 2874, buy = 15, count = 2 },
+	{ itemName = "vial of oil", clientId = 2874, buy = 20, count = 11 },
+	{ itemName = "vial of slime", clientId = 2874, buy = 12, count = 4 },
 	{ itemName = "vial of urine", clientId = 2874, buy = 10, count = 13 },
 	{ itemName = "vial of water", clientId = 2874, buy = 8, count = 1 }
 }

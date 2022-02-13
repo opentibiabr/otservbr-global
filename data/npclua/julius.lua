@@ -53,7 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "blood preservation", clientId = 11449, sell = 320 },
 	{ itemName = "vampire teeth", clientId = 9685, sell = 275 }
 }

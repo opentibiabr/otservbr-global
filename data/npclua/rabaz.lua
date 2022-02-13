@@ -108,13 +108,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 284, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
-	{ itemName = "spellwand", clientId = 651, sell = 299 },
-	{ itemName = "vial", clientId = 2874, sell = 5 },
-	-- Buyable items
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },
 	{ itemName = "blank rune", clientId = 3147, buy = 10 },
 	{ itemName = "chameleon rune", clientId = 3178, buy = 210 },
@@ -123,6 +116,9 @@ npcConfig.shop = {
 	{ itemName = "destroy field rune", clientId = 3148, buy = 15 },
 	{ itemName = "durable exercise rod", clientId = 35283, buy = 945000, count = 1800 },
 	{ itemName = "durable exercise wand", clientId = 35284, buy = 945000, count = 1800 },
+	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
 	{ itemName = "energy field rune", clientId = 3164, buy = 38 },
 	{ itemName = "energy wall rune", clientId = 3166, buy = 85 },
 	{ itemName = "exercise rod", clientId = 28556, buy = 262500, count = 500 },
@@ -150,6 +146,7 @@ npcConfig.shop = {
 	{ itemName = "poison wall rune", clientId = 3176, buy = 52 },
 	{ itemName = "snakebite rod", clientId = 3066, buy = 500 },
 	{ itemName = "spellbook", clientId = 3059, buy = 150 },
+	{ itemName = "spellwand", clientId = 651, sell = 299 },
 	{ itemName = "springsprout rod", clientId = 8084, buy = 18000 },
 	{ itemName = "stalagmite rune", clientId = 3179, buy = 12 },
 	{ itemName = "strong health potion", clientId = 236, buy = 115 },
@@ -162,6 +159,7 @@ npcConfig.shop = {
 	{ itemName = "ultimate mana potion", clientId = 23373, buy = 438 },
 	{ itemName = "ultimate spirit potion", clientId = 23374, buy = 438 },
 	{ itemName = "underworld rod", clientId = 8082, buy = 22000 },
+	{ itemName = "vial", clientId = 2874, sell = 5 },
 	{ itemName = "wand of cosmic energy", clientId = 3073, buy = 10000 },
 	{ itemName = "wand of decay", clientId = 3072, buy = 5000 },
 	{ itemName = "wand of draconia", clientId = 8093, buy = 5000 },

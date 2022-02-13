@@ -1,5 +1,6 @@
 dofile('data/startup/tables/chest.lua')
 dofile('data/startup/tables/corpse.lua')
+dofile('data/startup/tables/create_item.lua')
 dofile('data/startup/tables/door_key.lua')
 dofile('data/startup/tables/door_level.lua')
 dofile('data/startup/tables/door_quest.lua')

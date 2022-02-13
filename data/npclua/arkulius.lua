@@ -181,7 +181,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "energy soil", clientId = 945, sell = 2000 },
 	{ itemName = "eternal flames", clientId = 946, sell = 5000 },
 	{ itemName = "flawless ice crystal", clientId = 942, sell = 5000 },

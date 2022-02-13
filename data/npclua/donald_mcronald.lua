@@ -53,15 +53,13 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "dead spider", clientId = 3988, sell = 2 },
-	-- Buyable items
 	{ itemName = "beetroot", clientId = 8017, buy = 2 },
 	{ itemName = "bunch of wheat", clientId = 3605, buy = 1 },
 	{ itemName = "carrot", clientId = 3595, buy = 3 },
 	{ itemName = "cheese", clientId = 3607, buy = 5 },
 	{ itemName = "corncob", clientId = 3597, buy = 3 },
-	{ itemName = "cucumber", clientId = 8014, buy = 3 }
+	{ itemName = "cucumber", clientId = 8014, buy = 3 },
+	{ itemName = "dead spider", clientId = 3988, sell = 2 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

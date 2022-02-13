@@ -23,7 +23,7 @@ npcConfig.flags = {
 	floorchange = false
 }
 npcConfig.shop = {
-	{ itemName = "holy tible", clientId = 2836, buy = 1000, sell = 0 }
+	{ itemName = "holy tible", clientId = 2836 }
 }
 
 -- On buy npc shop message

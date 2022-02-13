@@ -61,7 +61,6 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my ware
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "bowl of evergreen flowers", clientId = 8763, buy = 150 },
 	{ itemName = "flower bowl", clientId = 2983, buy = 6 },
 	{ itemName = "god flowers", clientId = 2981, buy = 5 },

@@ -528,7 +528,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "banana", clientId = 3587, buy = 2 },
 	{ itemName = "monkey statue 'hear' kit", clientId = 5087, buy = 65 },
 	{ itemName = "monkey statue 'see' kit", clientId = 5086, buy = 65 },

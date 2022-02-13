@@ -228,7 +228,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "sniper gloves", clientId = 5875, sell = 2000 }
 }
 -- On buy npc shop message

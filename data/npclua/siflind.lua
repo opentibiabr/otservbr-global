@@ -215,12 +215,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 284, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
-	{ itemName = "vial", clientId = 2874, sell = 5 },
-	-- Buyable items
 	{ itemName = "animal cure", clientId = 8819, buy = 400 },
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },
 	{ itemName = "blank rune", clientId = 3147, buy = 10 },
@@ -230,6 +224,9 @@ npcConfig.shop = {
 	{ itemName = "destroy field rune", clientId = 3148, buy = 15 },
 	{ itemName = "durable exercise rod", clientId = 35283, buy = 945000, count = 1800 },
 	{ itemName = "durable exercise wand", clientId = 35284, buy = 945000, count = 1800 },
+	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
 	{ itemName = "energy field rune", clientId = 3164, buy = 38 },
 	{ itemName = "energy wall rune", clientId = 3166, buy = 85 },
 	{ itemName = "exercise rod", clientId = 28556, buy = 262500, count = 500 },
@@ -269,6 +266,7 @@ npcConfig.shop = {
 	{ itemName = "ultimate mana potion", clientId = 23373, buy = 438 },
 	{ itemName = "ultimate spirit potion", clientId = 23374, buy = 438 },
 	{ itemName = "underworld rod", clientId = 8082, buy = 22000 },
+	{ itemName = "vial", clientId = 2874, sell = 5 },
 	{ itemName = "wand of cosmic energy", clientId = 3073, buy = 10000 },
 	{ itemName = "wand of decay", clientId = 3072, buy = 5000 },
 	{ itemName = "wand of draconia", clientId = 8093, buy = 7500 },

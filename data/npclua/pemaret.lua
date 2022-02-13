@@ -107,14 +107,12 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
+	{ itemName = "fish", clientId = 3578, buy = 5 },
 	{ itemName = "green perch", clientId = 7159, sell = 100 },
 	{ itemName = "marlin", clientId = 901, sell = 800 },
 	{ itemName = "northern pike", clientId = 3580, sell = 100 },
 	{ itemName = "rainbow trout", clientId = 7158, sell = 100 },
-	{ itemName = "shimmer swimmer", clientId = 12557, sell = 3000 },
-	-- Buyable items
-	{ itemName = "fish", clientId = 3578, buy = 5 }
+	{ itemName = "shimmer swimmer", clientId = 12557, sell = 3000 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

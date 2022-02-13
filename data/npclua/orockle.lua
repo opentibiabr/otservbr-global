@@ -75,7 +75,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "blob bomb", clientId = 13976, buy = 150 },
 	{ itemName = "flask of chitin dissolver", clientId = 14052, buy = 150 },
 	{ itemName = "gooey substance", clientId = 14051, buy = 150 },

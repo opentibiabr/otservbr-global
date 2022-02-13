@@ -53,9 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
-	{ itemName = "costume bag", clientId = 653, buy = 500 },
-	{ itemName = "costume bag", clientId = 655, buy = 1500 },
 	{ itemName = "costume bag", clientId = 654, buy = 1000 },
 	{ itemName = "party hat", clientId = 6578, buy = 600 },
 	{ itemName = "party trumpet", clientId = 6572, buy = 80 }

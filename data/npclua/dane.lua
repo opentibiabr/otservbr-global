@@ -64,7 +64,6 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Please come back from time to time.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "bottle of lemonade", clientId = 2875, buy = 12, count = 5 },
 	{ itemName = "bottle of milk", clientId = 2875, buy = 4, count = 6 },
 	{ itemName = "bottle of water", clientId = 2875, buy = 2, count = 1 }

@@ -151,21 +151,15 @@ npcHandler:setMessage(MESSAGE_GREET, 'Howdy |PLAYERNAME|. I\'m a farmer and cook
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "bread", clientId = 3600, sell = 1 },
+	{ itemName = "bread", clientId = 3600, buy = 3, sell = 1 },
 	{ itemName = "carrot", clientId = 3595, sell = 1 },
-	{ itemName = "cheese", clientId = 3607, sell = 2 },
+	{ itemName = "cheese", clientId = 3607, buy = 5, sell = 2 },
 	{ itemName = "cherry", clientId = 3590, sell = 1 },
 	{ itemName = "dead rat", clientId = 3994, sell = 2 },
 	{ itemName = "egg", clientId = 3606, sell = 1 },
-	{ itemName = "ham", clientId = 3582, sell = 4 },
-	{ itemName = "meat", clientId = 3577, sell = 2 },
-	{ itemName = "salmon", clientId = 3579, sell = 2 },
-	-- Buyable items
-	{ itemName = "bread", clientId = 3600, buy = 3 },
-	{ itemName = "cheese", clientId = 3607, buy = 5 },
-	{ itemName = "ham", clientId = 3582, buy = 8 },
-	{ itemName = "meat", clientId = 3577, buy = 5 }
+	{ itemName = "ham", clientId = 3582, buy = 8, sell = 4 },
+	{ itemName = "meat", clientId = 3577, buy = 5, sell = 2 },
+	{ itemName = "salmon", clientId = 3579, sell = 2 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

@@ -111,14 +111,12 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "first verse of the hymn", clientId = 6087, sell = 100 },
-	{ itemName = "second verse of the hymn", clientId = 6088, sell = 250 },
-	{ itemName = "third verse of the hymn", clientId = 6089, sell = 400 },
-	{ itemName = "fourth verse of the hymn", clientId = 6090, sell = 800 },
-	-- Buyable items
 	{ itemName = "atlas", clientId = 6108, buy = 150 },
-	{ itemName = "orichalcum pearl", clientId = 5021, buy = 80 }
+	{ itemName = "first verse of the hymn", clientId = 6087, sell = 100 },
+	{ itemName = "fourth verse of the hymn", clientId = 6090, sell = 800 },
+	{ itemName = "orichalcum pearl", clientId = 5021, buy = 80 },
+	{ itemName = "second verse of the hymn", clientId = 6088, sell = 250 },
+	{ itemName = "third verse of the hymn", clientId = 6089, sell = 400 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

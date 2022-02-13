@@ -135,33 +135,21 @@ npcHandler:setMessage(MESSAGE_GREET, 'Hello, hello, |PLAYERNAME|! Please come in
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "axe", clientId = 3274, sell = 7 },
+	{ itemName = "axe", clientId = 3274, buy = 20, sell = 7 },
 	{ itemName = "bone club", clientId = 3337, sell = 5 },
-	{ itemName = "dagger", clientId = 3267, sell = 2 },
-	{ itemName = "hand axe", clientId = 3268, sell = 4 },
+	{ itemName = "dagger", clientId = 3267, buy = 5, sell = 2 },
+	{ itemName = "hand axe", clientId = 3268, buy = 8, sell = 4 },
 	{ itemName = "hatchet", clientId = 3276, sell = 25 },
 	{ itemName = "katana", clientId = 3300, sell = 35 },
 	{ itemName = "mace", clientId = 3286, sell = 30 },
 	{ itemName = "machete", clientId = 3308, sell = 30 },
-	{ itemName = "machete", clientId = 3308, sell = 6 },
-	{ itemName = "rapier", clientId = 3272, sell = 5 },
-	{ itemName = "sabre", clientId = 3273, sell = 12 },
-	{ itemName = "scythe", clientId = 3453, sell = 3 },
-	{ itemName = "short sword", clientId = 3294, sell = 10 },
-	{ itemName = "sickle", clientId = 3293, sell = 2 },
-	{ itemName = "spear", clientId = 3277, sell = 3 },
-	{ itemName = "sword", clientId = 3264, sell = 25 },
-	-- Buyable items
-	{ itemName = "axe", clientId = 3274, buy = 20 },
-	{ itemName = "dagger", clientId = 3267, buy = 5 },
-	{ itemName = "hand axe", clientId = 3268, buy = 8 },
-	{ itemName = "rapier", clientId = 3272, buy = 15 },
-	{ itemName = "sabre", clientId = 3273, buy = 25 },
-	{ itemName = "scythe", clientId = 3453, buy = 12 },
-	{ itemName = "short sword", clientId = 3294, buy = 30 },
-	{ itemName = "sickle", clientId = 3293, buy = 8 },
-	{ itemName = "spear", clientId = 3277, buy = 10 }
+	{ itemName = "rapier", clientId = 3272, buy = 15, sell = 5 },
+	{ itemName = "sabre", clientId = 3273, buy = 25, sell = 12 },
+	{ itemName = "scythe", clientId = 3453, buy = 12, sell = 3 },
+	{ itemName = "short sword", clientId = 3294, buy = 30, sell = 10 },
+	{ itemName = "sickle", clientId = 3293, buy = 8, sell = 2 },
+	{ itemName = "spear", clientId = 3277, buy = 10, sell = 3 },
+	{ itemName = "sword", clientId = 3264, sell = 25 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

@@ -96,17 +96,15 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Sure, browse through my offers.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "ice cube", clientId = 7441, sell = 250 },
-	-- Buyable items
 	{ itemName = "bread", clientId = 3600, buy = 8 },
 	{ itemName = "cheese", clientId = 3607, buy = 12 },
 	{ itemName = "fish", clientId = 3578, buy = 6 },
 	{ itemName = "ham", clientId = 3582, buy = 16 },
+	{ itemName = "ice cube", clientId = 7441, sell = 250 },
 	{ itemName = "meat", clientId = 3577, buy = 10 },
-	{ itemName = "mug of water", clientId = 2880, buy = 1, count = 1 },
 	{ itemName = "mug of beer", clientId = 2880, buy = 2, count = 3 },
 	{ itemName = "mug of lemonade", clientId = 2880, buy = 2, count = 5 },
+	{ itemName = "mug of water", clientId = 2880, buy = 1, count = 1 },
 	{ itemName = "mug of wine", clientId = 2880, buy = 3, count = 15 }
 }
 -- On buy npc shop message

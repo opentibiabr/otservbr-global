@@ -77,7 +77,6 @@ keywordHandler:addKeyword({'sail'}, StdModule.say, {npcHandler = npcHandler, tex
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "compass", clientId = 10302, sell = 45 }
 }
 -- On buy npc shop message

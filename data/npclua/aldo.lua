@@ -24,38 +24,23 @@ npcConfig.flags = {
 }
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "brass helmet", clientId = 3354, sell = 30 },
-	{ itemName = "brass legs", clientId = 3372, sell = 49 },
-	{ itemName = "chain helmet", clientId = 3352, sell = 17 },
-	{ itemName = "chain legs", clientId = 3558, sell = 25 },
-	{ itemName = "iron helmet", clientId = 3353, sell = 150 },
-	{ itemName = "leather boots", clientId = 3552, sell = 2 },
-	{ itemName = "leather helmet", clientId = 3355, sell = 4 },
-	{ itemName = "leather legs", clientId = 3559, sell = 9 },
+	{ itemName = "brass helmet", clientId = 3354, buy = 120, sell = 30 },
+	{ itemName = "brass legs", clientId = 3372, buy = 195, sell = 49 },
+	{ itemName = "chain helmet", clientId = 3352, buy = 52, sell = 17 },
+	{ itemName = "chain legs", clientId = 3558, buy = 80, sell = 25 },
+	{ itemName = "iron helmet", clientId = 3353, buy = 390, sell = 150 },
+	{ itemName = "leather boots", clientId = 3552, buy = 10, sell = 2 },
+	{ itemName = "leather helmet", clientId = 3355, buy = 12, sell = 4 },
+	{ itemName = "leather legs", clientId = 3559, buy = 10, sell = 9 },
 	{ itemName = "legion helmet", clientId = 3374, sell = 22 },
 	{ itemName = "plate legs", clientId = 3557, sell = 115 },
-	{ itemName = "small axe", clientId = 3462, sell = 5 },
-	{ itemName = "soldier helmet", clientId = 3375, sell = 16 },
-	{ itemName = "steel helmet", clientId = 3351, sell = 293 },
-	{ itemName = "studded helmet", clientId = 3376, sell = 20 },
-	{ itemName = "studded legs", clientId = 3362, sell = 15 },
-	{ itemName = "viking helmet", clientId = 3367, sell = 66 },
-	-- Buyable items
-	{ itemName = "brass helmet", clientId = 3354, buy = 120 },
-	{ itemName = "brass legs", clientId = 3372, buy = 195 },
-	{ itemName = "chain helmet", clientId = 3352, buy = 52 },
-	{ itemName = "chain legs", clientId = 3558, buy = 80 },
-	{ itemName = "iron helmet", clientId = 3353, buy = 390 },
-	{ itemName = "leather boots", clientId = 3552, buy = 10 },
-	{ itemName = "leather helmet", clientId = 3355, buy = 12 },
-	{ itemName = "leather legs", clientId = 3559, buy = 10 },
 	{ itemName = "sandals", clientId = 3551, buy = 2 },
-	{ itemName = "soldier helmet", clientId = 3375, buy = 110 },
-	{ itemName = "steel helmet", clientId = 3351, buy = 580 },
-	{ itemName = "studded helmet", clientId = 3376, buy = 63 },
-	{ itemName = "studded legs", clientId = 3362, buy = 50 },
-	{ itemName = "viking helmet", clientId = 3367, buy = 265 }
+	{ itemName = "small axe", clientId = 3462, sell = 5 },
+	{ itemName = "soldier helmet", clientId = 3375, buy = 110, sell = 16 },
+	{ itemName = "steel helmet", clientId = 3351, buy = 580, sell = 293 },
+	{ itemName = "studded helmet", clientId = 3376, buy = 63, sell = 20 },
+	{ itemName = "studded legs", clientId = 3362, buy = 50, sell = 15 },
+	{ itemName = "viking helmet", clientId = 3367, buy = 265, sell = 66 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

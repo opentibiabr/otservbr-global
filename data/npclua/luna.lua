@@ -65,12 +65,13 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my ware
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "bamboo stick", clientId = 11445, sell = 30 },
+	{ itemName = "brown mushroom", clientId = 3725, buy = 10 },
 	{ itemName = "bundle of cursed straw", clientId = 9688, sell = 800 },
 	{ itemName = "carniphila seeds", clientId = 10300, sell = 50 },
 	{ itemName = "dark mushroom", clientId = 3728, sell = 100 },
 	{ itemName = "dung ball", clientId = 14225, sell = 130 },
+	{ itemName = "fern", clientId = 3737, buy = 24 },
 	{ itemName = "fire mushroom", clientId = 3731, sell = 200 },
 	{ itemName = "goat grass", clientId = 3674, sell = 50 },
 	{ itemName = "grave flower", clientId = 3661, sell = 25 },
@@ -81,22 +82,19 @@ npcConfig.shop = {
 	{ itemName = "nettle spit", clientId = 11476, sell = 25 },
 	{ itemName = "orange mushroom", clientId = 3726, sell = 150 },
 	{ itemName = "powder herb", clientId = 3739, sell = 10 },
+	{ itemName = "red mushroom", clientId = 3724, buy = 12 },
+	{ itemName = "red rose", clientId = 3658, buy = 11 },
 	{ itemName = "seeds", clientId = 647, sell = 150 },
 	{ itemName = "shadow herb", clientId = 3740, sell = 20 },
 	{ itemName = "sling herb", clientId = 3738, sell = 10 },
+	{ itemName = "star herb", clientId = 3736, buy = 21 },
+	{ itemName = "stone herb", clientId = 3735, buy = 28 },
 	{ itemName = "swamp grass", clientId = 9686, sell = 20 },
 	{ itemName = "troll green", clientId = 3741, sell = 25 },
 	{ itemName = "trollroot", clientId = 11515, sell = 50 },
-	{ itemName = "wood mushroom", clientId = 3727, sell = 15 },
-	-- Buyable items
-	{ itemName = "brown mushroom", clientId = 3725, buy = 10 },
-	{ itemName = "fern", clientId = 3737, buy = 24 },
-	{ itemName = "red mushroom", clientId = 3724, buy = 12 },
-	{ itemName = "red rose", clientId = 3658, buy = 11 },
-	{ itemName = "star herb", clientId = 3736, buy = 21 },
-	{ itemName = "stone herb", clientId = 3735, buy = 28 },
 	{ itemName = "tulip", clientId = 3668, buy = 9 },
-	{ itemName = "white mushroom", clientId = 3723, buy = 6 }
+	{ itemName = "white mushroom", clientId = 3723, buy = 6 },
+	{ itemName = "wood mushroom", clientId = 3727, sell = 15 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

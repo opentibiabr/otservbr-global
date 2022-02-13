@@ -62,7 +62,6 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Asha Thrazi.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "banana", clientId = 3587, buy = 2 },
 	{ itemName = "bottle of bug milk", clientId = 8758, buy = 200 },
 	{ itemName = "bottle of milk", clientId = 2875, buy = 15, count = 6 },

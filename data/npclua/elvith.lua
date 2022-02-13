@@ -111,7 +111,6 @@ npcHandler:setMessage(MESSAGE_FAREWELL, 'Asha Thrazi, |PLAYERNAME|!')
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "drum", clientId = 14253, buy = 140 },
 	{ itemName = "lute", clientId = 2950, buy = 195 },
 	{ itemName = "lyre", clientId = 2949, buy = 120 },

@@ -68,7 +68,6 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye and come again.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "battle stone", clientId = 11447, buy = 100 },
 	{ itemName = "blazing bone", clientId = 16131, buy = 100 },
 	{ itemName = "bloody pincers", clientId = 9633, buy = 100 },

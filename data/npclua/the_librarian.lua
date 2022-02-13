@@ -81,30 +81,26 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
+	{ itemName = "Inkwell black", clientId = 28568, sell = 720 },
+	{ itemName = "atlas", clientId = 6108, buy = 150 },
+	{ itemName = "black book", clientId = 2838, buy = 20 },
 	{ itemName = "blue book", clientId = 2844, sell = 40 },
 	{ itemName = "book page", clientId = 28569, sell = 640 },
+	{ itemName = "brown book", clientId = 2837, buy = 20 },
 	{ itemName = "bunch of reed", clientId = 30975, sell = 25 },
+	{ itemName = "document", clientId = 2834, buy = 20 },
 	{ itemName = "gemmed book", clientId = 2842, sell = 150 },
 	{ itemName = "glowing rune", clientId = 28570, sell = 350 },
 	{ itemName = "green book", clientId = 2831, sell = 30 },
-	{ itemName = "Inkwell black", clientId = 28568, sell = 720 },
-	{ itemName = "inkwell", clientId = 3509, sell = 15 },
-	{ itemName = "orange book", clientId = 2843, sell = 60 },
-	{ itemName = "parchment", clientId = 2833, sell = 10 },
-	{ itemName = "quill", clientId = 28567, sell = 1100 },
-	{ itemName = "silken bookmark", clientId = 28566, sell = 1300 },
-	-- Buyable items
-	{ itemName = "atlas", clientId = 6108, buy = 150 },
-	{ itemName = "black book", clientId = 2838, buy = 20 },
-	{ itemName = "brown book", clientId = 2837, buy = 20 },
-	{ itemName = "document", clientId = 2834, buy = 20 },
 	{ itemName = "greeting card", clientId = 6386, buy = 40 },
 	{ itemName = "grey small book", clientId = 2839, buy = 20 },
-	{ itemName = "inkwell", clientId = 3509, buy = 20 },
-	{ itemName = "parchment", clientId = 2833, buy = 15 },
+	{ itemName = "inkwell", clientId = 3509, buy = 20, sell = 15 },
+	{ itemName = "orange book", clientId = 2843, sell = 60 },
+	{ itemName = "parchment", clientId = 2833, buy = 15, sell = 10 },
 	{ itemName = "parchment", clientId = 2835, buy = 15 },
+	{ itemName = "quill", clientId = 28567, sell = 1100 },
 	{ itemName = "scroll", clientId = 2815, buy = 10 },
+	{ itemName = "silken bookmark", clientId = 28566, sell = 1300 },
 	{ itemName = "valentine's card", clientId = 6538, buy = 40 }
 }
 -- On buy npc shop message

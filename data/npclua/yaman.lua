@@ -140,40 +140,28 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "ankh", clientId = 3214, sell = 100 },
-	{ itemName = "dragon necklace", clientId = 3085, sell = 100 },
-	{ itemName = "dwarven ring", clientId = 3097, sell = 100 },
-	{ itemName = "energy ring", clientId = 3051, sell = 100 },
+	{ itemName = "dragon necklace", clientId = 3085, buy = 1000, sell = 100, count = 200 },
+	{ itemName = "dwarven ring", clientId = 3097, buy = 2000, sell = 100 },
+	{ itemName = "energy ring", clientId = 3051, buy = 2000, sell = 100 },
 	{ itemName = "glacial rod", clientId = 16118, sell = 6500 },
 	{ itemName = "hailstorm rod", clientId = 3067, sell = 3000 },
-	{ itemName = "life ring", clientId = 3052, sell = 50 },
-	{ itemName = "might ring", clientId = 3048, sell = 250 },
+	{ itemName = "life ring", clientId = 3052, buy = 900, sell = 50 },
+	{ itemName = "might ring", clientId = 3048, buy = 5000, sell = 250, count = 20 },
 	{ itemName = "moonlight rod", clientId = 3070, sell = 200 },
 	{ itemName = "muck rod", clientId = 16117, sell = 6000 },
 	{ itemName = "mysterious fetish", clientId = 3078, sell = 50 },
 	{ itemName = "necrotic rod", clientId = 3069, sell = 1000 },
 	{ itemName = "northwind rod", clientId = 8083, sell = 1500 },
-	{ itemName = "protection amulet", clientId = 3084, sell = 100 },
-	{ itemName = "ring of healing", clientId = 3098, sell = 100 },
-	{ itemName = "silver amulet", clientId = 3054, sell = 50 },
+	{ itemName = "protection amulet", clientId = 3084, buy = 700, sell = 100, count = 250 },
+	{ itemName = "ring of healing", clientId = 3098, buy = 2000, sell = 100 },
+	{ itemName = "silver amulet", clientId = 3054, buy = 100, sell = 50, count = 200 },
 	{ itemName = "snakebite rod", clientId = 3066, sell = 100 },
 	{ itemName = "springsprout rod", clientId = 8084, sell = 3600 },
-	{ itemName = "strange talisman", clientId = 3045, sell = 30 },
+	{ itemName = "strange talisman", clientId = 3045, buy = 100, sell = 30, count = 200 },
 	{ itemName = "terra rod", clientId = 3065, sell = 2000 },
-	{ itemName = "time ring", clientId = 3053, sell = 100 },
-	{ itemName = "underworld rod", clientId = 8082, sell = 4400 },
-	-- Buyable items
-	{ itemName = "dragon necklace", clientId = 3085, buy = 1000, count = 200 },
-	{ itemName = "dwarven ring", clientId = 3097, buy = 2000 },
-	{ itemName = "energy ring", clientId = 3051, buy = 2000 },
-	{ itemName = "life ring", clientId = 3052, buy = 900 },
-	{ itemName = "might ring", clientId = 3048, buy = 5000, count = 20 },
-	{ itemName = "protection amulet", clientId = 3084, buy = 700, count = 250 },
-	{ itemName = "ring of healing", clientId = 3098, buy = 2000 },
-	{ itemName = "silver amulet", clientId = 3054, buy = 100, count = 200 },
-	{ itemName = "strange talisman", clientId = 3045, buy = 100, count = 200 },
-	{ itemName = "time ring", clientId = 3053, buy = 2000 }
+	{ itemName = "time ring", clientId = 3053, buy = 2000, sell = 100 },
+	{ itemName = "underworld rod", clientId = 8082, sell = 4400 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

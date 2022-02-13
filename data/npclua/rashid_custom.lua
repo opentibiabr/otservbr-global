@@ -277,7 +277,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "abyss hammer", clientId = 7414, sell = 20000 },
 	{ itemName = "albino plate", clientId = 19358, sell = 1500 },
 	{ itemName = "amber staff", clientId = 7426, sell = 8000 },

@@ -49,12 +49,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 284, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
-	{ itemName = "vial", clientId = 2874, sell = 5 },
-	-- Buyable items
 	{ itemName = "animate dead rune", clientId = 3203, buy = 375 },
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },
 	{ itemName = "blank rune", clientId = 3147, buy = 10 },
@@ -63,6 +57,9 @@ npcConfig.shop = {
 	{ itemName = "cure poison rune", clientId = 3153, buy = 65 },
 	{ itemName = "destroy field rune", clientId = 3148, buy = 15 },
 	{ itemName = "disintegrate rune", clientId = 3197, buy = 26 },
+	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
 	{ itemName = "energy bomb rune", clientId = 3149, buy = 203 },
 	{ itemName = "energy field rune", clientId = 3164, buy = 38 },
 	{ itemName = "energy wall rune", clientId = 3166, buy = 85 },
@@ -99,6 +96,7 @@ npcConfig.shop = {
 	{ itemName = "ultimate health potion", clientId = 7643, buy = 379 },
 	{ itemName = "ultimate mana potion", clientId = 23373, buy = 438 },
 	{ itemName = "ultimate spirit potion", clientId = 23374, buy = 438 },
+	{ itemName = "vial", clientId = 2874, sell = 5 },
 	{ itemName = "wild growth rune", clientId = 3156, buy = 160 }
 }
 -- On buy npc shop message

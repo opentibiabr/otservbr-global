@@ -49,7 +49,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "collar of blue plasma", clientId = 23542, sell = 6000 },
 	{ itemName = "collar of green plasma", clientId = 23543, sell = 6000 },
 	{ itemName = "collar of red plasma", clientId = 23544, sell = 6000 },
