@@ -5056,8 +5056,8 @@ for _, w in ipairs(weapons) do
 	if(w.damage) then
 		weapon:damage(w.damage[1], w.damage[2])
 	end
-	if(w.wandType or w.wandtype) then
-		weapon:element(w.wandType or w.wandType)
+	if(w.wandtype or w.wandType) then
+		weapon:element(w.wandtype or w.wandType)
 	end
 	if(w.vocation) then
 		for _, v in ipairs(w.vocation) do
