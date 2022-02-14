@@ -235,11 +235,11 @@ npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
+	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
 	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
-	{ itemName = "vial", clientId = 2874, sell = 5 },
-	-- Buyable items
-	{ itemName = "small health potion", clientId = 7876, buy = 20 }
+	{ itemName = "small health potion", clientId = 7876, buy = 20 },
+	{ itemName = "vial", clientId = 2874, sell = 5 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

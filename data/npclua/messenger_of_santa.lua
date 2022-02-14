@@ -49,7 +49,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "blue christmas bundle", clientId = 6507, buy = 60 },
 	{ itemName = "blue christmas garland", clientId = 6504, buy = 25 },
 	{ itemName = "christmas branch", clientId = 6488, buy = 40 },

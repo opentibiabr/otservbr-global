@@ -63,9 +63,6 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "spear", clientId = 3277, sell = 3 },
-	-- Buyable items
 	{ itemName = "arrow", clientId = 3447, buy = 3 },
 	{ itemName = "blue quiver", clientId = 35848, buy = 400 },
 	{ itemName = "bolt", clientId = 3446, buy = 4 },

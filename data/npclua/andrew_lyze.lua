@@ -23,7 +23,6 @@ npcConfig.flags = {
 	floorchange = false
 }
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "broken compass", clientId = 25746, buy = 10000 }
 }
 

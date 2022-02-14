@@ -59,7 +59,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "white deer antlers", clientId = 12544, sell = 400 },
 	{ itemName = "white deer skin", clientId = 12545, sell = 245 }
 }

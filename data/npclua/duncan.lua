@@ -211,7 +211,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "pirate tapestry", clientId = 5615, buy = 40 }
 }
 -- On buy npc shop message

@@ -58,16 +58,13 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my ware
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "belted cape", clientId = 8044, sell = 500 },
-	-- Buyable items
-	{ itemName = "belted cape", clientId = 8044, buy = 1300 },
+	{ itemName = "belted cape", clientId = 8044, buy = 1300, sell = 500 },
 	{ itemName = "cape", clientId = 3565, buy = 9 },
 	{ itemName = "green tunic", clientId = 3563, buy = 25 },
 	{ itemName = "jacket", clientId = 3561, buy = 12 },
-	{ itemName = "rangers cloak", clientId = 3571, buy = 550 },
-	{ itemName = "leather legs", clientId = 3559, buy = 10 },
 	{ itemName = "leather boots", clientId = 3552, buy = 2 },
+	{ itemName = "leather legs", clientId = 3559, buy = 10 },
+	{ itemName = "rangers cloak", clientId = 3571, buy = 550 },
 	{ itemName = "sandals", clientId = 3551, buy = 2 },
 	{ itemName = "scarf", clientId = 3572, buy = 15 }
 }

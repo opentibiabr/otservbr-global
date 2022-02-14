@@ -53,7 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "bottle of water", clientId = 2875, buy = 2, count = 1 },
 	{ itemName = "bread", clientId = 3600, buy = 2 },
 	{ itemName = "cake", clientId = 6277, buy = 50 },

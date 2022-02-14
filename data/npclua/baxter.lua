@@ -65,7 +65,7 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, "Do you bring freshly killed rats for a
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
+	{ itemName = "bricklayers kit", clientId = 7785, buy = 100 },
 	{ itemName = "broken helmet", clientId = 11453, sell = 20 },
 	{ itemName = "broken shamanic staff", clientId = 11452, sell = 35 },
 	{ itemName = "dead rat", clientId = 2418, sell = 1 },
@@ -73,9 +73,7 @@ npcConfig.shop = {
 	{ itemName = "orc tooth", clientId = 10196, sell = 150 },
 	{ itemName = "orcish gear", clientId = 11477, sell = 85 },
 	{ itemName = "shamanic hood", clientId = 11478, sell = 45 },
-	{ itemName = "skull belt", clientId = 11480, sell = 80 },
-	-- Buyable items
-	{ itemName = "bricklayers kit", clientId = 7785, buy = 100 }
+	{ itemName = "skull belt", clientId = 11480, sell = 80 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

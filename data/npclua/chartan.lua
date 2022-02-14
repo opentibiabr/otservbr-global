@@ -107,12 +107,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 284, sell = 5 },
-	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
-	{ itemName = "vial", clientId = 2874, sell = 5 },
-	-- Buyable items
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },
 	{ itemName = "blank rune", clientId = 3147, buy = 10 },
 	{ itemName = "chameleon rune", clientId = 3178, buy = 210 },
@@ -121,6 +115,9 @@ npcConfig.shop = {
 	{ itemName = "destroy field rune", clientId = 3148, buy = 15 },
 	{ itemName = "dragonfruit", clientId = 11682, buy = 5 },
 	{ itemName = "egg", clientId = 3606, buy = 3 },
+	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
 	{ itemName = "energy field rune", clientId = 3164, buy = 38 },
 	{ itemName = "energy wall rune", clientId = 3166, buy = 85 },
 	{ itemName = "explosion rune", clientId = 3200, buy = 31 },
@@ -147,7 +144,8 @@ npcConfig.shop = {
 	{ itemName = "ultimate healing rune", clientId = 3160, buy = 175 },
 	{ itemName = "ultimate health potion", clientId = 7643, buy = 379 },
 	{ itemName = "ultimate mana potion", clientId = 23373, buy = 438 },
-	{ itemName = "ultimate spirit potion", clientId = 23374, buy = 438 }
+	{ itemName = "ultimate spirit potion", clientId = 23374, buy = 438 },
+	{ itemName = "vial", clientId = 2874, sell = 5 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

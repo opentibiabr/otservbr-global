@@ -17673,7 +17673,7 @@ local items = {
 
 for _, i in ipairs(items) do
 	local movement = MoveEvent()
-	movement:id(i.itemid)
+	movement:id(i.itemid or i.itemId)
 
 	if(i.type) then
 		movement:type(i.type)

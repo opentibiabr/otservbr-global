@@ -53,7 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "fire bug", clientId = 5467, buy = 100 }
 }
 -- On buy npc shop message

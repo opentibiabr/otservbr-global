@@ -49,7 +49,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "armor rack kit", clientId = 6114, buy = 90 },
 	{ itemName = "barrel kit", clientId = 2793, buy = 12 },
 	{ itemName = "bookcase kit", clientId = 6372, buy = 70 },
@@ -63,8 +62,8 @@ npcConfig.shop = {
 	{ itemName = "trough kit", clientId = 2792, buy = 7 },
 	{ itemName = "trunk kit", clientId = 2794, buy = 10 },
 	{ itemName = "venorean cabinet kit", clientId = 17974, buy = 90 },
-	{ itemName = "venorean wardrobe kit", clientId = 17975, buy = 50 },
 	{ itemName = "venorean drawer kit", clientId = 17977, buy = 40 },
+	{ itemName = "venorean wardrobe kit", clientId = 17975, buy = 50 },
 	{ itemName = "weapon rack kit", clientId = 6115, buy = 90 }
 }
 -- On buy npc shop message

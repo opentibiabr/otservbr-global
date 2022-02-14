@@ -724,19 +724,17 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
-	{ itemName = "explorer brooch", clientId = 4871, sell = 50 },
-	{ itemName = "giant smithhammer", clientId = 12510, sell = 250 },
-	{ itemName = "hydra egg", clientId = 4839, sell = 500 },
-	{ itemName = "old parchment", clientId = 4831, sell = 500 },
-	{ itemName = "skull of Ratha", clientId = 3207, sell = 250 },
-	-- Buyable items
 	{ itemName = "atlas", clientId = 6108, buy = 150 },
 	{ itemName = "botanist's container", clientId = 4867, buy = 500 },
 	{ itemName = "butterfly conservation kit", clientId = 4863, buy = 250 },
 	{ itemName = "crown backpack", clientId = 9605, buy = 800 },
 	{ itemName = "ectoplasm container", clientId = 4852, buy = 750 },
-	{ itemName = "orichalcum pearl", clientId = 5021, buy = 80 }
+	{ itemName = "explorer brooch", clientId = 4871, sell = 50 },
+	{ itemName = "giant smithhammer", clientId = 12510, sell = 250 },
+	{ itemName = "hydra egg", clientId = 4839, sell = 500 },
+	{ itemName = "old parchment", clientId = 4831, sell = 500 },
+	{ itemName = "orichalcum pearl", clientId = 5021, buy = 80 },
+	{ itemName = "skull of Ratha", clientId = 3207, sell = 250 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

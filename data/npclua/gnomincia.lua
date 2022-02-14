@@ -53,7 +53,6 @@ end
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "teleport crystal", clientId = 16167, buy = 150 }
 }
 -- On buy npc shop message

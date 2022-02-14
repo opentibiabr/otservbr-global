@@ -30,7 +30,6 @@ npcConfig.voices = {
 }
 
 npcConfig.shop = {
-	-- Buyable items
 	{ itemName = "crimson rose", clientId = 21954, buy = 15 },
 	{ itemName = "flower bouquet", clientId = 649, buy = 20 },
 	{ itemName = "heart backpack", clientId = 10202, buy = 500 },

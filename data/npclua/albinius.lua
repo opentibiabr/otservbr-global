@@ -24,7 +24,6 @@ npcConfig.flags = {
 }
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "heavy old tome", clientId = 23986, sell = 30 }
 }
 -- On buy npc shop message

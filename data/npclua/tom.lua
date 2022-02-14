@@ -271,7 +271,6 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, 'Sure, check what I buy.')
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "antlers", clientId = 10297, sell = 5 },
 	{ itemName = "bear paw", clientId = 5896, sell = 10 },
 	{ itemName = "bunch of troll hair", clientId = 9689, sell = 5 },

@@ -93,7 +93,6 @@ addGloveKeyword({
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "girlish hair decoration", clientId = 11443, sell = 30 },
 	{ itemName = "hunters quiver", clientId = 11469, sell = 80 },
 	{ itemName = "protective charm", clientId = 11444, sell = 60 }

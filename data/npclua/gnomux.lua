@@ -24,13 +24,13 @@ npcConfig.flags = {
 }
 
 npcConfig.shop = {
-	{clientId = 19214, buy = 250, count = 4, storage = SPIKE_MIDDLE_MUSHROOM_MAIN},
-	{clientId = 19205, buy = 150, count = 3, storage = SPIKE_UPPER_TRACK_MAIN},
-	{clientId = 19219, buy = 100, count = 4, storage = SPIKE_LOWER_PARCEL_MAIN},
-	{clientId = 19207, buy = 250, count = 1, storage = SPIKE_MIDDLE_CHARGE_MAIN},
-	{clientId = 19203, buy = 150, count = 4, storage = SPIKE_UPPER_MOUND_MAIN},
-	{clientId = 19206, buy = 500, count = 1, storage = SPIKE_LOWER_LAVA_MAIN},
-	{clientId = 19204, buy = 150, count = 7, storage = SPIKE_UPPER_PACIFIER_MAIN}
+	{ clientId = 19214, buy = 250, storageKey = SPIKE_MIDDLE_MUSHROOM_MAIN, storageValue = 4 },
+	{ clientId = 19205, buy = 150, storageKey = SPIKE_UPPER_TRACK_MAIN, storageValue = 3 },
+	{ clientId = 19219, buy = 100, storageKey = SPIKE_LOWER_PARCEL_MAIN, storageValue = 4 },
+	{ clientId = 19207, buy = 250, storageKey = SPIKE_MIDDLE_CHARGE_MAIN, storageValue = 1 },
+	{ clientId = 19203, buy = 150, storageKey = SPIKE_UPPER_MOUND_MAIN, storageValue = 4 },
+	{ clientId = 19206, buy = 500, storageKey = SPIKE_LOWER_LAVA_MAIN, storageValue = 1 },
+	{ clientId = 19204, buy = 150, storageKey = SPIKE_UPPER_PACIFIER_MAIN, storageValue = 7 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

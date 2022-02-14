@@ -86,6 +86,6 @@ function grimvaleSpectators()
 		return true
 	end
 	Game.setStorageValue(GlobalStorage.Feroxa.Active, 2)
-	addEvent(spectators, 15 * 60 * 1000)
+	addEvent(grimvaleSpectators, 15 * 60 * 1000)
 	addEvent(Game.broadcastMessage, 15 * 60 * 1000, 'Half of the current full moon is visible now, there are still a lot of clouds in front of it.', MESSAGE_EVENT_ADVANCE)
 end

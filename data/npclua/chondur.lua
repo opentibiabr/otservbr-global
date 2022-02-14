@@ -587,7 +587,6 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "black skull", clientId = 9056, sell = 4000 },
 	{ itemName = "blood goblet", clientId = 8531, sell = 10000 },
 	{ itemName = "blood herb", clientId = 3734, sell = 500 },

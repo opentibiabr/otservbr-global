@@ -171,7 +171,6 @@ npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	-- Sellable items
 	{ itemName = "arbalest", clientId = 5803, sell = 42000 },
 	{ itemName = "arcane staff", clientId = 3341, sell = 42000 },
 	{ itemName = "baby seal doll", clientId = 7183, sell = 20000 },
@@ -198,6 +197,7 @@ npcConfig.shop = {
 	{ itemName = "marlin trophy", clientId = 902, sell = 5000 },
 	{ itemName = "modified crossbow", clientId = 8021, sell = 10000 },
 	{ itemName = "mucus plug", clientId = 16102, sell = 500 },
+	{ itemName = "mushroom pie", clientId = 16103, buy = 150 },
 	{ itemName = "orichalcum pearl", clientId = 5021, sell = 40 },
 	{ itemName = "ornamented shield", clientId = 3424, sell = 1500 },
 	{ itemName = "panda teddy", clientId = 5080, sell = 30000 },
@@ -225,9 +225,7 @@ npcConfig.shop = {
 	{ itemName = "trophy of obujos", clientId = 14002, sell = 3000 },
 	{ itemName = "trophy of tanjis", clientId = 14004, sell = 2000 },
 	{ itemName = "unholy book", clientId = 6103, sell = 30000 },
-	{ itemName = "windborn colossus armor", clientId = 8055, sell = 50000 },
-	-- Buyable items
-	{ itemName = "mushroom pie", clientId = 16103, buy = 150 }
+	{ itemName = "windborn colossus armor", clientId = 8055, sell = 50000 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
