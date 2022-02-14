@@ -30,14 +30,14 @@ jobs:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         luacheck --version
-        cd ${{ runner.workspace }}/otservbr-global-datapack
+        cd ${{ runner.workspace }}/
         $HOME/bin/reviewdog -reporter=github-pr-check -runners=luacheck
 
     - name: luac
       env:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        cd ${{ runner.workspace }}/otservbr-global-datapack
+        cd ${{ runner.workspace }}/
         luac -v
         $HOME/bin/reviewdog -reporter=github-pr-check -runners=luac
 
@@ -45,7 +45,7 @@ jobs:
       env:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        cd ${{ runner.workspace }}/otservbr-global-datapack
+        cd ${{ runner.workspace }}/
         xmllint --version
         $HOME/bin/reviewdog -reporter=github-pr-check -runners=xmllint
 
