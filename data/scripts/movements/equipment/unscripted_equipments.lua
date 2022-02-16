@@ -874,7 +874,17 @@ local items = {
 		itemid = 34150,
 		type = "deequip",
 		slot = "hand"
-	},
+	}, -- lion shield
+	{
+		itemid = 38989,
+		type = "equip",
+		slot = "shield",
+		level = 250,
+		vocation = {
+			{"Knight", true},
+			{"Elite Knight"}
+		}
+	}, -- lion shield
 	{
 		-- soulbastion shield
 		itemid = 34099,
