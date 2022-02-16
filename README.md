@@ -1,6 +1,7 @@
 # OpenTibiaBR - Global Server
 ## The source code to run this server can be found in another repository, which is the MMORPG engine. Access the links below to see the most current release:
-[Canary Engine](https://github.com/opentibiabr/canary) [stable-v1.2.0](https://github.com/opentibiabr/canary/releases/tag/stable-1.2.0)
+## [Canary Engine Repository](https://github.com/opentibiabr/canary) ![Canary Engine](https://raw.githubusercontent.com/opentibiabr/canary/master/cmake/canary.ico)
+## [Latest Release - Stable-v1.2.0](https://github.com/opentibiabr/canary/releases/tag/stable-1.2.0)
 
 [![Discord Channel](https://img.shields.io/discord/528117503952551936.svg?style=flat-square&logo=discord)](https://discord.gg/3NxYnyV)
 [![GitHub issues](https://img.shields.io/github/issues/opentibiabr/otservbr-global)](https://github.com/opentibiabr/otservbr-global/issues)
