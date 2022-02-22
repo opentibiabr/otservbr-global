@@ -25,8 +25,8 @@ npcConfig.flags = {
 
 npcConfig.shop = {
 	{ itemName = "cowbell", clientId = 21204, sell = 210 },
-	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
 	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
 	{ itemName = "execowtioner mask", clientId = 21201, sell = 240 },
 	{ itemName = "giant pacifier", clientId = 21199, sell = 170 },
