@@ -1083,7 +1083,7 @@
 	<npc centerx="32822" centery="31249" centerz="7" radius="1">
 		<npc name="Znozel" x="0" y="0" z="7" spawntime="60" />
 	</npc>
-	<npc centerx="32810" centery="31251" centerz="7" radius="1">
+	<npc centerx="32810" centery="31252" centerz="7" radius="1">
 		<npc name="Pugwah" x="0" y="0" z="7" spawntime="60" />
 	</npc>
 	<npc centerx="32694" centery="31256" centerz="7" radius="1">
