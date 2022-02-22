@@ -237,28 +237,28 @@ keywordHandler:addSpellKeyword({"annihilation"},
 
 keywordHandler:addKeyword({"healing", "spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = "In this category I have '{Bruise Bane}', '{Cure Bleeding}', '{Wound Cleansing}', \z
 		'{Cure Poison}'', '{Intense Wound Cleansing}'', '{Recovery}'' and '{Intense Recovery}''."
 	}
 )
 keywordHandler:addKeyword({"attack", "spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = {"In this category I have '{Whirlwind Throw}', '{Groundshaker}', '{Berserk}' and \z
 		'{Fierce Berserk}' as well as ...', ''{Brutal Strike}', '{Front Sweep}', '{Inflict Wound}' and '{Annihilation}'"}
 	}
 )
 keywordHandler:addKeyword({"support", "spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = "In this category I have '{Light}', '{Find Person}', '{Magic Rope}', '{Levitate}', \z
 		'{Haste}', '{Charge}' and '{Great Light}'."
 	}
 )
 keywordHandler:addKeyword({"spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = "I can teach you {healing spells}, {attack spells} and {support spells}. \z
 		What kind of spell do you wish to learn? \z
 		You can also tell me for which level you would like to learn a spell, if you prefer that."
