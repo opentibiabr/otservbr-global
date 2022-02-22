@@ -19,7 +19,7 @@ local reward = {
 	},
 	vocationItems = {
 		-- Sorcerer
-		[2470] = {
+		[14025] = {
 			{id = 7992, amount = 1},	-- Mage hat
 			{id = 7991, amount = 1},	-- Magician's robe
 			{id = 3559, amount = 1},	-- Leather legs
@@ -28,7 +28,7 @@ local reward = {
 			{id = 3059, amount = 1}		-- Spellbook
 		},
 		-- Druid
-		[2479] = {
+		[14026] = {
 			{id = 7992, amount = 1},	-- Mage hat
 			{id = 7991, amount = 1},	-- Magician's robe
 			{id = 3559, amount = 1},	-- Leather legs
@@ -37,7 +37,7 @@ local reward = {
 			{id = 3059, amount = 1}		-- Spellbook
 		},
 		-- Paladin
-		[2543] = {
+		[14027] = {
 			{id = 3355, amount = 1},	-- Leader helmet
 			{id = 3571, amount = 1},	-- Ranger's cloak
 			{id = 8095, amount = 1},	-- Ranger legs
@@ -48,12 +48,14 @@ local reward = {
 			{id = 3447, amount = 100}	-- Arrows
 		},
 		-- Knight
-		[2544] = {
+		[14028] = {
 			{id = 3375, amount = 1},	-- Soldier helmet
 			{id = 3359, amount = 1},	-- Brass armor
 			{id = 3372, amount = 1},	-- Brass legs
 			{id = 3552, amount = 1},	-- Leather boots
 			{id = 7774, amount = 1},	-- Jagged sword
+			{id = 17824, amount = 1},	-- Swampling club
+			{id = 7773, amount = 1},	-- steel axe
 			{id = 3409, amount = 1}		-- Steel shield
 		}
 	}
