@@ -806,6 +806,23 @@ local items = {
 		slot = "hand"
 	},
 	{
+		-- lion shield
+		itemid = 34154,
+		type = "equip",
+		slot = "hand",
+		level = 250,
+		vocation = {
+			{"Knight", true},
+			{"Elite Knight"}
+		}
+	},
+	{
+		-- lion shield
+		itemid = 34154,
+		type = "deequip",
+		slot = "hand"
+	},
+	{
 		-- lion spellbook
 		itemid = 34153,
 		type = "deequip",
