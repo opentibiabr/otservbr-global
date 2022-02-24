@@ -81,28 +81,28 @@ monster.voices = {
 
 monster.loot = {
 	{name = "platinum coin", chance = 70000, maxCount = 25},
-	{name = "terra rod", chance = 26530, maxCount = 1},
+	{name = "terra rod", chance = 26530},
 	{name = "blemished spawn abdomen", chance = 9690, maxCount = 1},
 	{name = "cyan crystal fragment", chance = 8420, maxCount = 3},
 	{name = "violet crystal shard", chance = 7380, maxCount = 3},
-	{name = "hailstorm rod", chance = 5550, maxCount = 1},
+	{name = "hailstorm rod", chance = 5550},
 	{name = "blue crystal shard", chance = 6300, maxCount = 3},
-	{name = "knight axe", chance = 4750, maxCount = 1},
-	{name = "dragonbone staff", chance = 3950, maxCount = 1},
-	{name = "violet gem", chance = 4660, maxCount = 1},
-	{name = "yellow gem", chance = 4560, maxCount = 1},
-	{name = "wand of starstorm", chance = 4190, maxCount = 1},
-	{name = "northwind rod", chance = 5320, maxCount = 1},
-	{name = "blemished spawn head", chance = 4840, maxCount = 1},
-	{name = "sacred tree amulet", chance = 4000, maxCount = 1},
-	{name = "springsprout rod", chance = 4610, maxCount = 1},
-	{name = "diamond sceptre", chance = 3950, maxCount = 1},
-	{id = 281, chance = 3570, maxCount = 1}, -- giant shimmering pearl
-	{name = "ice rapier", chance = 3950, maxCount = 1},
-	{id = 3289, chance = 3760, maxCount = 1}, -- staff
-	{name = "wand of cosmic energy", chance = 3620, maxCount = 1},
-	{name = "blemished spawn tail", chance = 3530, maxCount = 1},
-	{name = "fur armor", chance = 1360, maxCount = 1}
+	{name = "knight axe", chance = 4750},
+	{name = "dragonbone staff", chance = 3950},
+	{name = "violet gem", chance = 4660},
+	{name = "yellow gem", chance = 4560},
+	{name = "wand of starstorm", chance = 4190},
+	{name = "northwind rod", chance = 5320},
+	{name = "blemished spawn head", chance = 4840},
+	{name = "sacred tree amulet", chance = 4000},
+	{name = "springsprout rod", chance = 4610},
+	{name = "diamond sceptre", chance = 3950},
+	{id = 281, chance = 3570}, -- giant shimmering pearl
+	{name = "ice rapier", chance = 3950},
+	{id = 3289, chance = 3760}, -- staff
+	{name = "wand of cosmic energy", chance = 3620},
+	{name = "blemished spawn tail", chance = 3530},
+	{name = "fur armor", chance = 1360}
 }
 
 monster.attacks = {

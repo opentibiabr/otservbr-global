@@ -85,15 +85,15 @@ monster.loot = {
 	{name = "carnisylvan finger", chance = 17490, maxCount = 4},
 	{name = "carnisylvan bark", chance = 11490, maxCount = 5},
 	{name = "great mana potion", chance = 9660, maxCount = 4},
-	{name = "underworld rod", chance = 4440, maxCount = 1},
-	{name = "wand of starstorm", chance = 3660, maxCount = 1},
-	{name = "hailstorm rod", chance = 3660, maxCount = 1},
-	{name = "springsprout rod", chance = 2610, maxCount = 1},
-	{id = 3101, chance = 2350, maxCount = 1}, -- spellbook
-	{name = "spellbook of warding", chance = 3390, maxCount = 1},
-	{name = "gold ring", chance = 780, maxCount = 1},
-	{name = "butterfly ring", chance = 520, maxCount = 1},
-	{name = "human teeth", chance = 1040, maxCount = 1}
+	{name = "underworld rod", chance = 4440},
+	{name = "wand of starstorm", chance = 3660},
+	{name = "hailstorm rod", chance = 3660,
+	{name = "springsprout rod", chance = 2610},
+	{id = 3101, chance = 2350}, -- spellbook
+	{name = "spellbook of warding", chance = 3390},
+	{name = "gold ring", chance = 780},
+	{name = "butterfly ring", chance = 520},
+	{name = "human teeth", chance = 1040}
 }
 
 monster.attacks = {

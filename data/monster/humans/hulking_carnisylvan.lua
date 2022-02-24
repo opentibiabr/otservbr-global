@@ -82,15 +82,15 @@ monster.loot = {
 	{name = "great health potion", chance = 14990, maxCount = 4},
 	{name = "carnisylvan bark", chance = 12100, maxCount = 1},
 	{name = "carnisylvan finger", chance = 10090, maxCount = 2},
-	{name = "terra hood", chance = 7200, maxCount = 1},
-	{name = "terra boots", chance = 4900, maxCount = 1},
-	{name = "knight axe", chance = 3460, maxCount = 1},
-	{name = "lightning headband", chance = 3460, maxCount = 1},
-	{name = "dragonbone staff", chance = 5190, maxCount = 1},
-	{name = "diamond sceptre", chance = 4320, maxCount = 1},
-	{name = "epee", chance = 2590, maxCount = 1},
-	{name = "war hammer", chance = 3750, maxCount = 1},
-	{name = "human teeth", chance = 580, maxCount = 1}
+	{name = "terra hood", chance = 7200},
+	{name = "terra boots", chance = 4900},
+	{name = "knight axe", chance = 3460},
+	{name = "lightning headband", chance = 3460},
+	{name = "dragonbone staff", chance = 5190},
+	{name = "diamond sceptre", chance = 4320},
+	{name = "epee", chance = 2590},
+	{name = "war hammer", chance = 3750},
+	{name = "human teeth", chance = 580}
 }
 
 monster.attacks = {

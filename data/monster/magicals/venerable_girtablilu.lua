@@ -82,23 +82,23 @@ monster.loot = {
 	{id = 3039, chance = 4910, maxCount = 1}, -- red gem
 	{name = "old girtablilu carapace", chance = 4760, maxCount = 1},
 	{name = "violet gem", chance = 4170, maxCount = 1},
-	{name = "northwind rod", chance = 3570, maxCount = 1},
-	{name = "wand of cosmic energy", chance = 2680, maxCount = 1},
-	{name = "blue crystal shard", chance = 2530, maxCount = 3},
-	{name = "red crystal fragment", chance = 2530, maxCount = 3},
-	{name = "violet crystal shard", chance = 2530, maxCount = 3},	
-	{name = "yellow gem", chance = 2530, maxCount = 1},
-	{name = "underworld rod", chance = 2080, maxCount = 1},
-	{name = "wand of voodoo", chance = 2080, maxCount = 1},
-	{name = "blue gem", chance = 1930, maxCount = 1},
-	{id = 23529, chance = 1930, maxCount = 1}, -- ring of blue plasma
-	{name = "green crystal fragment", chance = 1640, maxCount = 3},
-	{name = "green crystal shard", chance = 1640, maxCount = 3},
-	{name = "wand of defiance", chance = 1340, maxCount = 1},	
-	{name = "wood cape", chance = 1340, maxCount = 1},
-	{name = "necrotic rod", chance = 1040, maxCount = 1},
-	{name = "springsprout rod", chance = 1040, maxCount = 1},
-	{name = "wand of decay", chance = 1040, maxCount = 1}
+	{name = "northwind rod", chance = 3570},
+	{name = "wand of cosmic energy", chance = 2680},
+	{name = "blue crystal shard", chance = 2530},
+	{name = "red crystal fragment", chance = 2530},
+	{name = "violet crystal shard", chance = 2530},	
+	{name = "yellow gem", chance = 2530},
+	{name = "underworld rod", chance = 2080},
+	{name = "wand of voodoo", chance = 2080},
+	{name = "blue gem", chance = 1930},
+	{id = 23529, chance = 1930}, -- ring of blue plasma
+	{name = "green crystal fragment", chance = 1640},
+	{name = "green crystal shard", chance = 1640},
+	{name = "wand of defiance", chance = 1340},	
+	{name = "wood cape", chance = 1340},
+	{name = "necrotic rod", chance = 1040},
+	{name = "springsprout rod", chance = 1040},
+	{name = "wand of decay", chance = 1040}
 }
 
 monster.attacks = {

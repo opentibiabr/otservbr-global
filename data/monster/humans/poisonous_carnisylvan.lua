@@ -87,20 +87,20 @@ monster.loot = {
 	{name = "carnisylvan bark", chance = 12040, maxCount = 2},
 	{name = "mushroom pie", chance = 8640, maxCount = 1},
 	{name = "carnisylvan finger", chance = 8640, maxCount = 4},
-	{name = "emerald bangle", chance = 4970, maxCount = 1},
+	{name = "emerald bangle", chance = 4970},
 	{name = "great spirit potion", chance = 6810, maxCount = 5},
-	{name = "guardian halberd", chance = 4970, maxCount = 1},
-	{id = 23542, chance = 4970, maxCount = 1}, -- collar of blue plasma
-	{name = "terra rod", chance = 7330, maxCount = 1},
-	{name = "underworld rod", chance = 6280, maxCount = 1},
-	{name = "diamond sceptre", chance = 4710, maxCount = 1},
-	{name = "fire mushroom", chance = 3140, maxCount = 3},
-	{name = "knight axe", chance = 5760, maxCount = 1},
-	{name = "wand of starstorm", chance = 4710, maxCount = 1},
-	{name = "sacred tree amulet", chance = 2880, maxCount = 1},
-	{id = 281, chance = 2090, maxCount = 1}, -- giant shimmering pearl
-	{name = "gemmed figurine", chance = 790, maxCount = 1},
-	{name = "human teeth", chance = 520, maxCount = 1}
+	{name = "guardian halberd", chance = 4970},
+	{id = 23542, chance = 4970}, -- collar of blue plasma
+	{name = "terra rod", chance = 7330},
+	{name = "underworld rod", chance = 6280},
+	{name = "diamond sceptre", chance = 4710},
+	{name = "fire mushroom", chance = 3140},
+	{name = "knight axe", chance = 5760},
+	{name = "wand of starstorm", chance = 4710},
+	{name = "sacred tree amulet", chance = 2880},
+	{id = 281, chance = 2090}, -- giant shimmering pearl
+	{name = "gemmed figurine", chance = 790},
+	{name = "human teeth", chance = 520}
 }
 
 monster.attacks = {

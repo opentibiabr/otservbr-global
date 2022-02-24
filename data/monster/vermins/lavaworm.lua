@@ -84,17 +84,17 @@ monster.loot = {
 	{name = "gold ingot", chance = 18430, maxCount = 2},
 	{name = "violet crystal shard", chance = 15630, maxCount = 3},
 	{name = "lavaworm spike roots", chance = 20310, maxCount = 3},
-	{name = "violet gem", chance = 6750, maxCount = 1},
-	{name = "lavaworm spikes", chance = 4230, maxCount = 3},
-	{name = "green gem", chance = 4130, maxCount = 1},
-	{name = "butterfly ring", chance = 3120, maxCount = 1},
-	{name = "underworld rod", chance = 2920, maxCount = 1},
-	{name = "lavaworm jaws", chance = 2620, maxCount = 2},
-	{name = "blue crystal shard", chance = 2520, maxCount = 3},
-	{name = "warrior helmet", chance = 1560, maxCount = 1},
-	{name = "wand of voodoo", chance = 1560, maxCount = 1},
-	{name = "crusader helmet", chance = 1560, maxCount = 1},
-	{name = "strange helmet", chance = 500, maxCount = 1}
+	{name = "violet gem", chance = 6750},
+	{name = "lavaworm spikes", chance = 4230},
+	{name = "green gem", chance = 4130},
+	{name = "butterfly ring", chance = 3120},
+	{name = "underworld rod", chance = 2920},
+	{name = "lavaworm jaws", chance = 2620},
+	{name = "blue crystal shard", chance = 2520},
+	{name = "warrior helmet", chance = 1560},
+	{name = "wand of voodoo", chance = 1560},
+	{name = "crusader helmet", chance = 1560},
+	{name = "strange helmet", chance = 500}
 }
 
 monster.attacks = {

@@ -85,17 +85,17 @@ monster.loot = {
 	{name = "streaked devourer maw", chance = 13850, maxCount = 2},
 	{name = "streaked devourer eyes", chance = 9230, maxCount = 2},
 	{id = 3039, chance = 4620, maxCount = 1}, -- red gem
-	{name = "streaked devourer legs", chance = 1540, maxCount = 2},
-	{name = "yellow gem", chance = 1540, maxCount = 1},
-	{name = "crystal mace", chance = 1540, maxCount = 1},
-	{name = "mercenary sword", chance = 1540, maxCount = 1},
-	{name = "noble axe", chance = 1280, maxCount = 1},
-	{name = "ornate crossbow", chance = 1100, maxCount = 1},
-	{name = "relic sword", chance = 1010, maxCount = 1},
-	{name = "guardian halberd", chance = 3080, maxCount = 1},
-	{name = "warrior's axe", chance = 1540, maxCount = 1},
-	{name = "giant sword", chance = 830, maxCount = 1},
-	{name = "war axe", chance = 4620, maxCount = 1}
+	{name = "streaked devourer legs", chance = 1540},
+	{name = "yellow gem", chance = 1540},
+	{name = "crystal mace", chance = 1540},
+	{name = "mercenary sword", chance = 1540},
+	{name = "noble axe", chance = 1280},
+	{name = "ornate crossbow", chance = 1100},
+	{name = "relic sword", chance = 1010},
+	{name = "guardian halberd", chance = 3080},
+	{name = "warrior's axe", chance = 1540},
+	{name = "giant sword", chance = 830},
+	{name = "war axe", chance = 4620}
 }
 
 monster.attacks = {

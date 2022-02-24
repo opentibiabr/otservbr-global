@@ -81,7 +81,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "platinum coin", chance = 70000, maxCount = 18},
-	{name = "terra rod", chance = 30090, maxCount = 1},
+	{name = "terra rod", chance = 30090},
 	{name = "emerald bangle", chance = 18580, maxCount = 1},
 	{name = "brown crystal splinter", chance = 8850, maxCount = 3},
 	{id = 3039, chance = 10620, maxCount = 1}, -- red gem
@@ -89,22 +89,22 @@ monster.loot = {
 	{name = "small diamond", chance = 9730, maxCount = 6},
 	{name = "varnished diremaw legs", chance = 13270, maxCount = 4},
 	{name = "violet crystal shard", chance = 9730, maxCount = 3},
-	{name = "cyan crystal fragment", chance = 5310, maxCount = 3},
-	{name = "varnished diremaw brainpan", chance = 2650, maxCount = 1},
+	{name = "cyan crystal fragment", chance = 5310},
+	{name = "varnished diremaw brainpan", chance = 2650},
 	{name = "green gem", chance = 6190, maxCount = 1},
 	{name = "small emerald", chance = 9730, maxCount = 5},
 	{name = "green crystal shard", chance = 11500, maxCount = 3},
-	{name = "hailstorm rod", chance = 6190, maxCount = 1},
-	{name = "diamond sceptre", chance = 2650, maxCount = 1},
-	{name = "wand of starstorm", chance = 2650, maxCount = 1},
-	{name = "springsprout rod", chance = 7080, maxCount = 1},
-	{name = "glacier shoes", chance = 2650, maxCount = 1},
-	{name = "spellbook of warding", chance = 1770, maxCount = 1},
-	{name = "fur armor", chance = 1640, maxCount = 1},
-	{name = "wood cape", chance = 2650, maxCount = 1},
-	{name = "haunted blade", chance = 1370, maxCount = 1},
-	{name = "glacier kilt", chance = 880, maxCount = 1},
-	{name = "crown shield", chance = 880, maxCount = 1}
+	{name = "hailstorm rod", chance = 6190},
+	{name = "diamond sceptre", chance = 2650},
+	{name = "wand of starstorm", chance = 2650},
+	{name = "springsprout rod", chance = 7080},
+	{name = "glacier shoes", chance = 2650},
+	{name = "spellbook of warding", chance = 1770},
+	{name = "fur armor", chance = 1640},
+	{name = "wood cape", chance = 2650},
+	{name = "haunted blade", chance = 1370},
+	{name = "glacier kilt", chance = 880},
+	{name = "crown shield", chance = 880}
 }
 
 monster.attacks = {

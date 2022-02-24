@@ -86,20 +86,20 @@ monster.loot = {
 	{name = "gold ingot", chance = 19130, maxCount = 2},
 	{name = "violet crystal shard", chance = 6090, maxCount = 3},
 	{name = "violet gem", chance = 6960, maxCount = 1},
-	{name = "cave chimera leg", chance = 4350, maxCount = 4},
-	{name = "cave chimera head", chance = 3480, maxCount = 1},
-	{id = 281, chance = 1740, maxCount = 1}, -- giant shimmering pearl
-	{name = "yellow gem", chance = 2660, maxCount = 1},
-	{name = "glacier amulet", chance = 2480, maxCount = 1},
-	{id = 23529, chance = 1720, maxCount = 1}, -- ring of blue plasma
-	{name = "glacier kilt", chance = 1540, maxCount = 1},
-	{name = "gold ring", chance = 1430, maxCount = 1},
-	{name = "fur armor", chance = 970, maxCount = 1},
-	{name = "gemmed figurine", chance = 970, maxCount = 1},
-	{name = "ornate crossbow", chance = 850, maxCount = 1},
-	{name = "crystal crossbow", chance = 180, maxCount = 1},
-	{name = "composite hornbow", chance = 100, maxCount = 1},
-	{name = "elvish bow", chance = 80, maxCount = 1}
+	{name = "cave chimera leg", chance = 4350},
+	{name = "cave chimera head", chance = 3480},
+	{id = 281, chance = 1740}, -- giant shimmering pearl
+	{name = "yellow gem", chance = 2660},
+	{name = "glacier amulet", chance = 2480},
+	{id = 23529, chance = 1720}, -- ring of blue plasma
+	{name = "glacier kilt", chance = 1540},
+	{name = "gold ring", chance = 1430},
+	{name = "fur armor", chance = 970},
+	{name = "gemmed figurine", chance = 970},
+	{name = "ornate crossbow", chance = 850},
+	{name = "crystal crossbow", chance = 180},
+	{name = "composite hornbow", chance = 100},
+	{name = "elvish bow", chance = 80}
 }
 
 monster.attacks = {
