@@ -81,15 +81,15 @@ monster.voices = {
 
 monster.loot = {
 	{name = "platinum coin", chance = 70000, maxCount = 19},
-	{id = 3111, chance = 39690, maxCount = 1}, -- bone
+	{id = 3115, chance = 39690, maxCount = 1}, -- bone
 	{name = "carnisylvan finger", chance = 17490, maxCount = 4},
 	{name = "carnisylvan bark", chance = 11490, maxCount = 5},
 	{name = "great mana potion", chance = 9660, maxCount = 4},
 	{name = "underworld rod", chance = 4440},
 	{name = "wand of starstorm", chance = 3660},
-	{name = "hailstorm rod", chance = 3660,
+	{name = "hailstorm rod", chance = 3660},
 	{name = "springsprout rod", chance = 2610},
-	{id = 3101, chance = 2350}, -- spellbook
+	{id = 3059, chance = 2350}, -- spellbook
 	{name = "spellbook of warding", chance = 3390},
 	{name = "gold ring", chance = 780},
 	{name = "butterfly ring", chance = 520},
