@@ -162,7 +162,10 @@ Prey.MonsterList = {
 	"Waspoid", "Wiggler", "Terrified Elephant", "Burning Book", "Tainted Soul", "Brachiodemon", "Infernal Demon",
 	"Infernal Phantom", "Branchy Crawler", "Mould Phantom", "Rotten Golem", "Bony Sea Devil", "Capricious Phantom",
 	"Hazardous Phantom", "Turbulent Elemental", "Cloak Of Terror", "Courage Leech", "Vibrant Phantom", "Distorted Phantom",
-	"Druid's Apparition", "Knight's Apparition", "Many Faces", "Paladin's Apparition", "Sorcerer's Apparition"
+	"Druid's Apparition", "Knight's Apparition", "Many Faces", "Paladin's Apparition", "Sorcerer's Apparition", "Lavaworm",
+	"Tremendous Tyrant", "Varnished Diremaw", "Streaked Devourer", "Eyeless Devourer", "Blemished Spawn", "Afflicted Strider",
+	"Lavafungus", "Cave Chimera", "Venerable Girtablilu", "Girtablilu Warrior", "Bashmu", "Juvenile Bashmu", "Hulking Carnisylvan",
+	"Poisonous Carnisylvan", "Dark Carnisylvan"
 }
 
 -- Communication functions
