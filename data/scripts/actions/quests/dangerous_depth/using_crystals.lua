@@ -530,5 +530,5 @@ function dangerousDepthCrystals.onUse(player, item, fromPosition, target, toPosi
 	return true
 end
 
-dangerousDepthCrystals:id(31993)
+dangerousDepthCrystals:id(27509)
 dangerousDepthCrystals:register()

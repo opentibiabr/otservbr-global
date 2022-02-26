@@ -11,5 +11,5 @@ function ferumbrasAscendantMysterious.onUse(player, item, fromPosition, target, 
 	return true
 end
 
-ferumbrasAscendantMysterious:id(34784)
+ferumbrasAscendantMysterious:id(22865)
 ferumbrasAscendantMysterious:register()
