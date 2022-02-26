@@ -43654,32 +43654,32 @@
 	<item id="28559" article="a" name="ferumbras exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
 		<attribute key="wrapableto" value="23398"/>
-		<attribute key="rotateto" value="32144"/>
+		<attribute key="rotateto" value="28560"/>
 	</item>
 	<item id="28560" article="a" name="ferumbras exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
 		<attribute key="wrapableto" value="23398"/>
-		<attribute key="rotateto" value="32143"/>
+		<attribute key="rotateto" value="28559"/>
 	</item>
 	<item id="28561" article="a" name="demon exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
 		<attribute key="wrapableto" value="23398"/>
-		<attribute key="rotateto" value="32146"/>
+		<attribute key="rotateto" value="28562"/>
 	</item>
 	<item id="28562" article="a" name="demon exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
 		<attribute key="wrapableto" value="23398"/>
-		<attribute key="rotateto" value="32145"/>
+		<attribute key="rotateto" value="28561"/>
 	</item>
 	<item id="28563" article="a" name="monk exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
 		<attribute key="wrapableto" value="23398"/>
-		<attribute key="rotateto" value="32148"/>
+		<attribute key="rotateto" value="28564"/>
 	</item>
 	<item id="28564" article="a" name="monk exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
 		<attribute key="wrapableto" value="23398"/>
-		<attribute key="rotateto" value="32147"/>
+		<attribute key="rotateto" value="28563"/>
 	</item>
 	<item id="28565" article="an" name="exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this exercise dummy."/>
