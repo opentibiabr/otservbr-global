@@ -18,12 +18,12 @@ npcConfig.flags = {
 	floorchange = false
 }
 npcConfig.shop = {
-	{ itemName = "broken crossbow", clientId = 11451 },
+	{ itemName = "broken crossbow", clientId = 11451, sell = 30 },
 	{ itemName = "flask with beaver bait", clientId = 9843, sell = 100 },
-	{ itemName = "minotaur horn", clientId = 11472 },
-	{ itemName = "piece of archer armor", clientId = 11483 },
-	{ itemName = "piece of warrior armor", clientId = 0 },
-	{ itemName = "purple robe", clientId = 11473 }
+	{ itemName = "minotaur horn", clientId = 11472, sell = 75 },
+	{ itemName = "piece of archer armor", clientId = 11483, sell = 20 },
+	{ itemName = "piece of warrior armor", clientId = 11482, sell = 50 },
+	{ itemName = "purple robe", clientId = 11473, sell = 110 }
 }
 
 -- On buy npc shop message
