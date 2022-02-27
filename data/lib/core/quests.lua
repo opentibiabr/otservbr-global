@@ -113,92 +113,6 @@ if not Quests then
 				}
 			}
 		},
-		[45] = {
-			name = "Spirithunters Quest",
-			startStorageId = Storage.SpiritHunters.Mission01,
-			startStorageValue = 1,
-			missions = {
-				[1] = {
-					name = "Method",
-					storageId = Storage.SpiritHunters.Mission01,
-					missionId = 1018,
-					startValue = 1,
-					endValue = 2,
-					states = {
-						[1] = "Use the item on the tombstones.",
-						[2] = "You have used these item in the tombstones."
-					}
-				},
-				[2] = {
-					name = "First Mission",
-					storageId = Storage.SpiritHunters.Mission01,
-					missionId = 1019,
-					startValue = 2,
-					endValue = 4,
-					states = {
-						[3] = "Talk to Sinclair and take the ghost residue.",
-						[4] = "You got the ghost waste."
-					}
-				},
-				[3] = {
-					name = "Second Mission",
-					storageId = Storage.SpiritHunters.Mission01,
-					missionId = 1020,
-					startValue = 4,
-					endValue = 6,
-					states = {
-						[5] = "You need to get more samples of ghosts.",
-						[6] = "You got all the ghost scraps."
-					}
-				}
-			}
-		},
-		[3] = {
-			name = "Spike Task",
-			startStorageId = Storage.SpikeTaskQuest.QuestLine,
-			startStorageValue = 1,
-			missions = {
-				[1] = {
-					name = "First Task",
-					storageId = Storage.SpikeTaskQuest.Gnomilly,
-					missionId = 1021,
-					startValue = 0,
-					endValue = 100,
-					description = function(player)
-						return string.format(
-							"You have %d points of task. You need 100 points to take Cave Explorer outfit.",
-							(math.max(player:getStorageValue(Storage.SpikeTaskQuest.Gnomilly), 0))
-						)
-					end
-				},
-				[2] = {
-					name = "Second Task",
-					storageId = Storage.SpikeTaskQuest.Gnombold.Points,
-					missionId = 1022,
-					startValue = 0,
-					endValue = 100,
-					description = function(player)
-						return string.format(
-							"You have %d points of task. You need 100 points to take first addon.",
-							(math.max(player:getStorageValue(Storage.SpikeTaskQuest.Gnombold.Points), 0))
-						)
-					end
-				},
-				[3] = {
-					name = "Third Task",
-					storageId = Storage.SpikeTaskQuest.Gnomargery.Points,
-					missionId = 1023,
-					startValue = 0,
-					endValue = 100,
-					description = function(player)
-						return string.format(
-							"You have %d points of task. You need 100 points to take second addon.",
-							(math.max(player:getStorageValue(Storage.SpikeTaskQuest.Gnomargery.Points), 0))
-						)
-					end
-				}
-			}
-		},
 		[4] = {
 			name = "A Father\'s Burden",
 			startStorageId = Storage.FathersBurden.QuestLog,
@@ -4419,7 +4333,7 @@ if not Quests then
 						[6] = "You have completed the Quest!"
 					}
 				},
-				[4] = {
+				[5] = {
 					name = "An Interest In Botany",
 					storageId = Storage.TibiaTales.AnInterestInBotany,
 					missionId = 10322,
@@ -4435,7 +4349,7 @@ if not Quests then
 						[4] = "You have completed the Quest!"
 					}
 				},
-				[5] = {
+				[6] = {
 					name = "Graves Sanctified - In Progress",
 					storageId = Storage.TibiaTales.RestInHallowedGround.HolyWater,
 					missionId = 10323,
@@ -4448,7 +4362,7 @@ if not Quests then
 						)
 					end
 				},
-				[6] = {
+				[7] = {
 					name = "Into the Bone Pit",
 					storageId = Storage.TibiaTales.IntoTheBonePit,
 					missionId = 10324,
@@ -4461,7 +4375,7 @@ if not Quests then
 						[3] = "You helped Muriel to obtain a desecrated bone."
 					}
 				},
-				[7] = {
+				[8] = {
 					name = "Rest in Hallowed Ground",
 					storageId = Storage.TibiaTales.RestInHallowedGround.Questline,
 					missionId = 10325,
@@ -4476,7 +4390,7 @@ if not Quests then
 						[5] = "You helped Amanda by sanctifying the cursed graveyard of Edron."
 					}
 				},
-				[8] = {
+				[9] = {
 					name = "The Exterminator",
 					storageId = Storage.TibiaTales.TheExterminator,
 					missionId = 10326,
@@ -4490,7 +4404,7 @@ if not Quests then
 						[3] = "You successfully helped Padreia in saving Carlin from a slimy disease."
 					}
 				},
-				[9] = {
+				[10] = {
 					name = "The Ultimate Booze",
 					storageId = Storage.TibiaTales.ultimateBoozeQuest,
 					missionId = 10327,
@@ -4503,7 +4417,7 @@ if not Quests then
 						[3] = "You have completed The Ultimate Booze Quest!"
 					}
 				},
-				[10] = {
+				[11] = {
 					name = "Jack to the Future",
 					storageId = Storage.TibiaTales.JackFutureQuest.QuestLine,
 					missionId = 10328,
@@ -4536,7 +4450,7 @@ if not Quests then
 						end
 					}
 				},
-				[11] = {
+				[12] = {
 					name = "The Cursed Crystal",
 					storageId = Storage.TibiaTales.TheCursedCrystal.Questline,
 					missionId = 10329,
@@ -5809,6 +5723,92 @@ if not Quests then
 						[14] = "With the last bit of Kraknaknork's energy, you were teleported out of the fortress. Time to return to Vascalir victoriously.",
 						[15] = "You've vanquished Kraknaknork and brought peace to the village of Rookgaard. It will soon be time for you to leave for the Isle of Destiny, choose a vocation and enter the open world of Tibia."
 					}
+				}
+			}
+		},
+		[46] = {
+			name = "Spirithunters Quest",
+			startStorageId = Storage.SpiritHunters.Mission01,
+			startStorageValue = 1,
+			missions = {
+				[1] = {
+					name = "Method",
+					storageId = Storage.SpiritHunters.Mission01,
+					missionId = 1018,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Use the item on the tombstones.",
+						[2] = "You have used these item in the tombstones."
+					}
+				},
+				[2] = {
+					name = "First Mission",
+					storageId = Storage.SpiritHunters.Mission01,
+					missionId = 1019,
+					startValue = 2,
+					endValue = 4,
+					states = {
+						[3] = "Talk to Sinclair and take the ghost residue.",
+						[4] = "You got the ghost waste."
+					}
+				},
+				[3] = {
+					name = "Second Mission",
+					storageId = Storage.SpiritHunters.Mission01,
+					missionId = 1020,
+					startValue = 4,
+					endValue = 6,
+					states = {
+						[5] = "You need to get more samples of ghosts.",
+						[6] = "You got all the ghost scraps."
+					}
+				}
+			}
+		},
+		[3] = {
+			name = "Spike Task",
+			startStorageId = Storage.SpikeTaskQuest.QuestLine,
+			startStorageValue = 1,
+			missions = {
+				[1] = {
+					name = "First Task",
+					storageId = Storage.SpikeTaskQuest.Gnomilly,
+					missionId = 1021,
+					startValue = 0,
+					endValue = 100,
+					description = function(player)
+						return string.format(
+							"You have %d points of task. You need 100 points to take Cave Explorer outfit.",
+							(math.max(player:getStorageValue(Storage.SpikeTaskQuest.Gnomilly), 0))
+						)
+					end
+				},
+				[2] = {
+					name = "Second Task",
+					storageId = Storage.SpikeTaskQuest.Gnombold.Points,
+					missionId = 1022,
+					startValue = 0,
+					endValue = 100,
+					description = function(player)
+						return string.format(
+							"You have %d points of task. You need 100 points to take first addon.",
+							(math.max(player:getStorageValue(Storage.SpikeTaskQuest.Gnombold.Points), 0))
+						)
+					end
+				},
+				[3] = {
+					name = "Third Task",
+					storageId = Storage.SpikeTaskQuest.Gnomargery.Points,
+					missionId = 1023,
+					startValue = 0,
+					endValue = 100,
+					description = function(player)
+						return string.format(
+							"You have %d points of task. You need 100 points to take second addon.",
+							(math.max(player:getStorageValue(Storage.SpikeTaskQuest.Gnomargery.Points), 0))
+						)
+					end
 				}
 			}
 		}

@@ -1,3 +1,4 @@
+---@diagnostic disable: ambiguity-1
 local internalNpcName = "Junkar"
 local npcType = Game.createNpcType("Junkar (Robsons)")
 local npcConfig = {}

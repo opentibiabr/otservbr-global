@@ -148,7 +148,7 @@ function Player:onLook(thing, position, distance)
 
 	if self:getGroup():getAccess() then
 		if thing:isItem() then
-			description = string.format("%s\nItem ID: %d", description, thing:getId())
+			description = string.format("%s\nClient ID: %d", description, thing:getId())
 
 			local actionId = thing:getActionId()
 			if actionId ~= 0 then
@@ -173,11 +173,6 @@ function Player:onLook(thing, position, distance)
 			local decayId = itemType:getDecayId()
 			if decayId ~= -1 then
 				description = string.format("%s\nDecays to: %d", description, decayId)
-			end
-
-			local clientId = itemType:getId()
-			if clientId then
-				description = string.format("%s\nClient ID: %d", description, clientId)
 			end
 
 		elseif thing:isCreature() then
