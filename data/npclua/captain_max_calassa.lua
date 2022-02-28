@@ -71,7 +71,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye.")
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	{ itemName = "helmet of the deep", clientId = 5460, sell = 5000 }
+	{ itemName = "helmet of the deep", clientId = 5460, sell = 5000 },
 	{ itemName = "helmet of the deep", clientId = 5460, buy = 5000 }
 }
 -- On buy npc shop message
