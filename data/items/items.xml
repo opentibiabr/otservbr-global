@@ -422,21 +422,21 @@
 	</item>
 	<item id="286" article="a" name="dead cat">
 		<attribute key="containerSize" value="5"/>
-		<attribute key="decayTo" value="7638"/>
+		<attribute key="decayTo" value="287"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 	</item>
 	<item id="287" article="a" name="dead cat">
 		<attribute key="containerSize" value="5"/>
-		<attribute key="decayTo" value="7639"/>
+		<attribute key="decayTo" value="288"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 	</item>
 	<item id="288" article="a" name="dead cat">
 		<attribute key="containerSize" value="5"/>
-		<attribute key="decayTo" value="7640"/>
+		<attribute key="decayTo" value="289"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="corpseType" value="blood"/>
 	</item>
@@ -470,14 +470,14 @@
 	<item id="321" article="a" name="flower pot">
 		<attribute key="description" value="The plant in there sprouted, but only gardeners might recognise what it will develop into."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7678"/>
+		<attribute key="decayTo" value="329"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item fromid="322" toid="323" name="dirt"/>
 	<item id="324" article="a" name="flower pot">
 		<attribute key="description" value="Something has been planted in there, but you cannot see what it is yet. The earth is a little dry"/>
 		<attribute key="duration" value="72000"/>
-		<attribute key="decayTo" value="7679"/>
+		<attribute key="decayTo" value="330"/>
 		<attribute key="weight" value="150"/>
 	</item>
 	<item id="325" article="a" name="withered plant">
@@ -517,7 +517,7 @@
 	<item id="331" article="a" name="flower pot">
 		<attribute key="description" value="The plant in it seems to be a lizard tongue fern."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7681"/>
+		<attribute key="decayTo" value="332"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="332" article="a" name="flower pot">
@@ -527,7 +527,7 @@
 	<item id="333" article="a" name="flower pot">
 		<attribute key="description" value="The plant in it seems to be a dryad's heart flower."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7683"/>
+		<attribute key="decayTo" value="334"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="334" article="a" name="flower pot">
@@ -537,7 +537,7 @@
 	<item id="335" article="a" name="flower pot">
 		<attribute key="description" value="The plant in it seems to be a midnight bloom flower."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7685"/>
+		<attribute key="decayTo" value="336"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="336" article="a" name="flower pot">
@@ -547,7 +547,7 @@
 	<item id="337" article="a" name="flower pot">
 		<attribute key="description" value="The plant in it seems to be an ember queen flower."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7687"/>
+		<attribute key="decayTo" value="338"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="338" article="a" name="flower pot">
@@ -557,49 +557,49 @@
 	<item id="339" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown lizard tongue plant in it."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7689"/>
+		<attribute key="decayTo" value="340"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="340" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown lizard tongue plant in it. The earth feels a little dry"/>
 		<attribute key="duration" value="259200"/>
-		<attribute key="decayTo" value="7674"/>
+		<attribute key="decayTo" value="325"/>
 		<attribute key="weight" value="150"/>
 	</item>
 	<item id="341" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown dryad's heart flower in it."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7691"/>
+		<attribute key="decayTo" value="342"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="342" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown dryad's heart flower in it. The earth feels a little dry"/>
 		<attribute key="duration" value="259200"/>
-		<attribute key="decayTo" value="7675"/>
+		<attribute key="decayTo" value="326"/>
 		<attribute key="weight" value="150"/>
 	</item>
 	<item id="343" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown midnight bloom flower in it."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7693"/>
+		<attribute key="decayTo" value="344"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="344" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown midnight bloom flower in it. The earth feels a little dry"/>
 		<attribute key="duration" value="259200"/>
-		<attribute key="decayTo" value="7676"/>
+		<attribute key="decayTo" value="327"/>
 		<attribute key="weight" value="150"/>
 	</item>
 	<item id="345" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown ember queen flower in it."/>
 		<attribute key="weight" value="150"/>
-		<attribute key="decayTo" value="7695"/>
+		<attribute key="decayTo" value="346"/>
 		<attribute key="duration" value="72000"/>
 	</item>
 	<item id="346" article="a" name="flower pot">
 		<attribute key="description" value="There is a fully grown ember queen flower in it. The earth feels a little dry"/>
 		<attribute key="duration" value="259200"/>
-		<attribute key="decayTo" value="7677"/>
+		<attribute key="decayTo" value="328"/>
 		<attribute key="weight" value="150"/>
 	</item>
 	<item id="347" article="a" name="scroll">
@@ -2755,14 +2755,18 @@
 	<item id="2001" article="an" name="unlit campfire"/>
 	<item fromid="2002" toid="2003" article="a" name="campfire"/>
 	<item fromid="2004" toid="2011" article="a" name="large cauldron"/>
-	<item fromid="2012" toid="2017" article="a" name="sign"/>
+	<item fromid="2012" toid="2017" article="a" name="sign">
+		<attribute key="allowDistRead" value="1" />
+	</item>
 	<item id="2018" article="a" name="dragon flag"/>
 	<item id="2019" article="a" name="castle flag"/>
 	<item id="2020" article="a" name="flag of Tibia"/>
 	<item fromid="2021" toid="2022" article="a" name="street sign">
 		<attribute key="allowdistread" value="1"/>
 	</item>
-	<item fromid="2023" toid="2024" article="a" name="sign"/>
+	<item fromid="2023" toid="2024" article="a" name="sign">
+		<attribute key="allowdistread" value="1"/>
+	</item>
 	<item id="2025" article="a" name="statue">
 		<attribute key="rotateto" value="2059"/>
 	</item>
@@ -5266,11 +5270,11 @@
 	</item>
 	<item id="3145" name="trashed wooden bars">
 		<attribute key="duration" value="120"/>
-		<attribute key="decayTo" value="3799"/>
+		<attribute key="decayTo" value="2295"/>
 	</item>
 	<item id="3146" name="trashed wooden bars">
 		<attribute key="duration" value="120"/>
-		<attribute key="decayTo" value="3798"/>
+		<attribute key="decayTo" value="2296"/>
 	</item>
 	<item id="3147" article="a" name="blank rune">
 		<attribute key="type" value="rune"/>
@@ -20458,22 +20462,22 @@
 	</item>
 	<item id="9616" article="a" name="bejeweled ship's telescope">
 		<attribute key="description" value="It's the only left-over from a famous pirate treasure"/>
-		<attribute key="rotateto" value="3487"/>
+		<attribute key="rotateto" value="9617"/>
 		<attribute key="weight" value="4500"/>
 	</item>
 	<item id="9617" article="a" name="bejeweled ship's telescope">
 		<attribute key="description" value="It's the only left-over from a famous pirate treasure"/>
-		<attribute key="rotateto" value="3485"/>
+		<attribute key="rotateto" value="9618"/>
 		<attribute key="weight" value="4500"/>
 	</item>
 	<item id="9618" article="a" name="bejeweled ship's telescope">
 		<attribute key="description" value="It's the only left-over from a famous pirate treasure"/>
-		<attribute key="rotateto" value="3486"/>
+		<attribute key="rotateto" value="9619"/>
 		<attribute key="weight" value="4500"/>
 	</item>
 	<item id="9619" article="a" name="bejeweled ship's telescope">
 		<attribute key="description" value="It's the only left-over from a famous pirate treasure"/>
-		<attribute key="rotateto" value="3484"/>
+		<attribute key="rotateto" value="9616"/>
 		<attribute key="weight" value="4500"/>
 	</item>
 	<item fromid="9620" toid="9623" name="unknown item"/>
@@ -33638,7 +33642,7 @@
 	</item>
 	<item fromid="20461" toid="20466" article="a" name="rosetta window"/>
 	<item fromid="20467" toid="20468" article="a" name="closed window"/>
-	<item fromid="20469" toid="20463" name="ladder rung">
+	<item fromid="20469" toid="20473" name="ladder rung">
 		<attribute key="floorchange" value="down"/>
 	</item>
 	<item fromid="20474" toid="20475" name="ladder rung"/>
@@ -43654,32 +43658,32 @@
 	</item>
 	<item id="28559" article="a" name="ferumbras exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
-		<attribute key="wrapableto" value="23398"/>
+		<attribute key="wrapableto" value="28560"/>
 		<attribute key="rotateto" value="32144"/>
 	</item>
 	<item id="28560" article="a" name="ferumbras exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
-		<attribute key="wrapableto" value="23398"/>
+		<attribute key="wrapableto" value="28559"/>
 		<attribute key="rotateto" value="32143"/>
 	</item>
 	<item id="28561" article="a" name="demon exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
-		<attribute key="wrapableto" value="23398"/>
+		<attribute key="wrapableto" value="28562"/>
 		<attribute key="rotateto" value="32146"/>
 	</item>
 	<item id="28562" article="a" name="demon exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
-		<attribute key="wrapableto" value="23398"/>
+		<attribute key="wrapableto" value="28561"/>
 		<attribute key="rotateto" value="32145"/>
 	</item>
 	<item id="28563" article="a" name="monk exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
-		<attribute key="wrapableto" value="23398"/>
+		<attribute key="wrapableto" value="28564"/>
 		<attribute key="rotateto" value="32148"/>
 	</item>
 	<item id="28564" article="a" name="monk exercise dummy">
 		<attribute key="description" value="You can train your skills by using training weapons with this expert exercise dummy"/>
-		<attribute key="wrapableto" value="23398"/>
+		<attribute key="wrapableto" value="28563"/>
 		<attribute key="rotateto" value="32147"/>
 	</item>
 	<item id="28565" article="an" name="exercise dummy">
@@ -47339,7 +47343,6 @@
 	<item id="30401" name="amulet of theurgy">
 		<attribute key="slotType" value="necklace"/>
 		<attribute key="weight" value="500"/>
-		<attribute key="upgradeclassification" value="4"/>
 	</item>
 	<item id="30402" name="enchanted theurgic amulet">
 		<attribute key="slotType" value="necklace"/>
@@ -47380,7 +47383,9 @@
 	<item fromid="30446" toid="30447" article="a" name="veined stone"/>
 	<item fromid="30448" toid="30449" article="a" name="ruddy obelisk"/>
 	<item fromid="30450" toid="30451" article="a" name="pile of ruddy ashlars"/>
-	<item fromid="30452" toid="30453" article="an" name="ancient sepulchre"/>
+	<item fromid="30452" toid="30453" article="an" name="ancient sepulchre">
+		<attribute key="floorchange" value="down"/>
+	</item>
 	<item fromid="30454" toid="30469" article="a" name="sphinx statue"/>
 	<item id="30613" article="a" name="cobra statue"/>
 	<item fromid="30614" toid="30615" article="a" name="unknown item"/>

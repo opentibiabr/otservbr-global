@@ -47,5 +47,5 @@ local foundItem = data[item.itemid]
 	return true
 end
 
-cupCakes:id(31719, 31720, 31721)
+cupCakes:id(28484, 28485, 28486)
 cupCakes:register()
