@@ -14,17 +14,9 @@ function Monster:onDropLoot(corpse)
 	if not player or player:getStamina() > 840 then
 		local monsterLoot = mType:getLoot()
 		for i = 1, #monsterLoot do
-			local boolCharm = false
-			if player then
-				local charmType = player:getCharmMonsterType(CHARM_GUT)
-				if charmType and charmType:raceId() == mType:raceId() then
-					boolCharm = true
-				end
-			end
-		
-			local item = corpse:createLootItem(monsterLoot[i], boolCharm)
+			local item = corpse:createLootItem(monsterLoot[i], player, self)
 			if self:getName():lower() == (Game.getBoostedCreature()):lower() then
-				local itemBoosted = corpse:createLootItem(monsterLoot[i], boolCharm)
+				local itemBoosted = corpse:createLootItem(monsterLoot[i], player, self)
 			end
 			if not item then
 				Spdlog.warn(string.format("[Monster:onDropLoot] - Could not add loot item to monster: %s, from corpse id: %d.", self:getName(), corpse:getId()))
