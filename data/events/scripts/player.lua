@@ -673,15 +673,12 @@ function Player:onGainExperience(source, exp, rawExp)
 		displayRate = 1
 	end
 
-	-- Prey Bonus
-	for slot = CONST_PREY_SLOT_FIRST, CONST_PREY_SLOT_THIRD do
-		if (self:getPreyCurrentMonster(slot) == source:getName()
-		and self:getPreyBonusType(slot) == CONST_BONUS_XP_BONUS) then
-			exp = exp + math.floor(exp * (self:getPreyBonusValue(slot) / 100))
-			break
-		end
-		if (self:getPreyTimeLeft(slot) / 60) > 0 then
-			preyTimeLeft(self, slot) -- slot consumption, outside of the mosnter check
+	-- Prey system
+	if configManager.getBoolean(configKeys.PREY_ENABLED) then
+		local monsterType = source:getType()
+		if monsterType and monsterType:raceId() > 0 then
+			local preyBonus = player:getPreyExperiencePercentage(monsterType:raceId())
+			exp = math.ceil((exp * preyBonus) / 100)
 		end
 	end
 
