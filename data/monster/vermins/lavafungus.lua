@@ -24,7 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Grotto of the Lost"
-	}
+}
 
 monster.health = 7200
 monster.maxHealth = 7200
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 36764
 monster.speed = 115
 monster.manaCost = 0
-
 
 monster.changeTarget = {
 	interval = 4000,
@@ -111,7 +110,6 @@ monster.attacks = {
 	{name ="combat", interval = 2750, chance = 30, type = COMBAT_DEATHDAMAGE, minDamage = -720, maxDamage = -810, range = 5, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = true},
 	{name ="lavafungus ring", interval = 2000, chance = 20, minDamage = -450, maxDamage = -610},
 	{name ="lavafungus x wave", interval = 2000, chance = 10, minDamage = -640, maxDamage = -730},
-	
 }
 
 monster.defenses = {

@@ -24,7 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Grotto of the Lost"
-	}
+}
 
 monster.health = 7500
 monster.maxHealth = 7500
@@ -32,7 +32,6 @@ monster.race = "fire"
 monster.corpse = 36679
 monster.speed = 120
 monster.manaCost = 0
-
 
 monster.changeTarget = {
 	interval = 5000,

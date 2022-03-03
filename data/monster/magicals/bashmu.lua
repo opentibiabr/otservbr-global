@@ -24,8 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Salt Caves"
-	}
-
+}
 
 monster.health = 8200
 monster.maxHealth = 8200

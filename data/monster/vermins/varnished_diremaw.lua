@@ -24,7 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Dwelling of the Forgotten"
-	}
+}
 
 monster.health = 9000
 monster.maxHealth = 9000
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 36688
 monster.speed = 120
 monster.manaCost = 0
-
 
 monster.changeTarget = {
 	interval = 5000,

@@ -55168,6 +55168,62 @@
 	<item id="36796" name="Brainstealer's brainwave">
 		<attribute key="weight" value="200"/>
 	</item>
+	<item id="36797" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36798" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36797" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36799" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36798" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36800" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36799" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36801" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36802" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36801" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36803" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36802" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36804" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36803" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
 	<item id="36805" name="carnisylvan finger">
 		<attribute key="description" value="A broken finger from a dead carnisylvan. While wooden in its appearance, its structure is more of a brittle human bone"/>
 		<attribute key="weight" value="100"/>
@@ -55513,6 +55569,62 @@
 		<attribute key="description" value="The pot contains rare sylvan earth from the living forest under Bounac. Nothing is planted in there"/>
 		<attribute key="loottype" value="decoration"/>
 		<attribute key="weight" value="20"/>
+	</item>
+	<item id="36963" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36964" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36964" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36965" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36965" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36966" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36966" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36967" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36968" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36968" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36969" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36969" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36970" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36970" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="36971" article="a" name="girtablilu warrior carapace">
 		<attribute key="loottype" value="creatureproduct"/>

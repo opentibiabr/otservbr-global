@@ -13,7 +13,6 @@ end
 local spell = Spell("instant")
 
 function spell.onCastSpell(creature, var)
-	local from = creature:getId()
 	addEvent(removeSapling, 1, creature.uid)
 	return combat:execute(creature, var)
 end

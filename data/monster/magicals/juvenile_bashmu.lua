@@ -24,16 +24,14 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Salt Caves"
-	}
+}
 
-	
 monster.health = 7500
 monster.maxHealth = 7500
 monster.race = "blood"
 monster.corpse = 36967
 monster.speed = 195
 monster.manaCost = 0
-
 
 monster.changeTarget = {
 	interval = 2000,

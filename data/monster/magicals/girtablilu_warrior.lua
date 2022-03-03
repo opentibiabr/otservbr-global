@@ -24,7 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Ruins of Nuur"
-	}
+}
 
 monster.health = 8500
 monster.maxHealth = 8500
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 36800
 monster.speed = 180
 monster.manaCost = 0
-
 
 monster.changeTarget = {
 	interval = 4000,

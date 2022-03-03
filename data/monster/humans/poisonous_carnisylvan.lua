@@ -24,7 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 0,
 	Locations = "Forest of Life"
-	}
+}
 
 monster.health = 8000
 monster.maxHealth = 8000
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 36890
 monster.speed = 105
 monster.manaCost = 0
-
 
 monster.changeTarget = {
 	interval = 4000,

@@ -33,7 +33,6 @@ monster.corpse = 36684
 monster.speed = 115
 monster.manaCost = 0
 
-
 monster.changeTarget = {
 	interval = 10000,
 	chance = 10

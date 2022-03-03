@@ -24,8 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Antrum of the Fallen"
-	}
-	
+}
 	
 monster.health = 10000
 monster.maxHealth = 10000
@@ -33,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 36716
 monster.speed = 135
 monster.manaCost = 0
-
 
 monster.changeTarget = {
 	interval = 4000,
