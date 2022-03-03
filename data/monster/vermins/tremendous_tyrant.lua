@@ -24,7 +24,7 @@ monster.Bestiary = {
 	Stars = 4,
 	Occurrence = 1,
 	Locations = "Dwelling of the Forgotten"
-	}
+}
 
 monster.health = 11500
 monster.maxHealth = 11500
