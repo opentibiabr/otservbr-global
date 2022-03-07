@@ -617,9 +617,11 @@ local function useStamina(player)
 			staminaMinutes = 0
 		end
 		nextUseStaminaTime[playerId] = currentTime + 120
+		player:removePreyStamina(120)
 	else
 		staminaMinutes = staminaMinutes - 1
 		nextUseStaminaTime[playerId] = currentTime + 60
+		player:removePreyStamina(60)
 	end
 	player:setStamina(staminaMinutes)
 end
@@ -644,11 +646,9 @@ local function useStaminaXp(player)
 			staminaMinutes = 0
 		end
 		nextUseXpStamina[playerId] = currentTime + 120
-		player:removePreyStamina(120)
 	else
 		staminaMinutes = staminaMinutes - 1
 		nextUseXpStamina[playerId] = currentTime + 60
-		player:removePreyStamina(60)
 	end
 	player:setExpBoostStamina(staminaMinutes * 60)
 end
