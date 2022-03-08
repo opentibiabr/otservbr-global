@@ -19821,7 +19821,6 @@
 		<attribute key="weight" value="333"/>
 	</item>
 	<item id="9653" article="a" name="witch hat">
-		<attribute key="slotType" value="head"/>
 		<attribute key="absorbpercentmanadrain" value="5"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="780"/>
