@@ -1,6 +1,46 @@
 local mType = Game.createMonsterType("Minotaur Cult Prophet")
 local monster = {}
 
+local combat = Combat()
+combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_MAGIC_GREEN)
+combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_HEALING)
+combat:setParameter(COMBAT_PARAM_AGGRESSIVE, 0)
+
+local area = createCombatArea(AREA_CIRCLE5X5)
+combat:setArea(area)
+
+function spellCallback(param)
+	local tile = Tile(Position(param.pos))
+	if tile then
+		if tile:getTopCreature() and tile:getTopCreature():isMonster() then
+			tile:getTopCreature():addHealth(math.random(200, 350))
+		end
+	end
+end
+
+function onTargetTile(cid, pos)
+	local param = {}
+	param.cid = cid
+	param.pos = pos
+	param.count = 0
+	spellCallback(param)
+end
+
+setCombatCallback(combat, CALLBACK_PARAM_TARGETTILE, "onTargetTile")
+
+local spell = Spell("instant")
+
+function spell.onCastSpell(creature, var)
+	return combat:execute(creature, var)
+end
+
+spell:name("minotaurcultprophetheal")
+spell:words("###404")
+spell:blockWalls(true)
+spell:needLearn(true)
+spell:register()
+
+
 monster.description = "a minotaur cult prophet"
 monster.experience = 1100
 monster.outfit = {
@@ -12,6 +52,8 @@ monster.outfit = {
 	lookAddons = 0,
 	lookMount = 0
 }
+
+monster.enemyFactions = {FACTION_PLAYER}
 
 monster.raceId = 1509
 monster.Bestiary = {
@@ -102,28 +144,28 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -100},
-	{name ="combat", interval = 2000, chance = 15, type = COMBAT_ENERGYDAMAGE, minDamage = -20, maxDamage = -350, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = false},
-	{name ="combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -50, maxDamage = -300, range = 7, radius = 1, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true}
+	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -240},
+	{name ="combat", interval = 2000, chance = 15, type = COMBAT_ENERGYDAMAGE, minDamage = -200, maxDamage = -350, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = true},
+	{name ="combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -200, maxDamage = -350, range = 7, radius = 1, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true}
 }
 
 monster.defenses = {
 	defense = 15,
 	armor = 15,
-	{name ="heal monster", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE, target = false}
+	{name ="minotaurcultprophetheal", interval = 2000, radius = 6, chance = 20, target = false}
 }
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = 20},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_ICEDAMAGE, percent = -10},
+	{type = COMBAT_HOLYDAMAGE , percent = 10},
+	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 
 monster.immunities = {
