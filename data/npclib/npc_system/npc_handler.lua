@@ -583,8 +583,9 @@ if NpcHandler == nil then
 			if delay ~= nil and delay > 1 then
 				self.talkDelay = delay
 			end
-			print(self.talkDelay)
-			npc:sayWithDelay(npcUniqueId, msgs[messagesTable], TALKTYPE_PRIVATE_NP, ((messagesTable-1) * self.talkDelay),
+			-- Interval for sending subsequent messages from the first
+			local remainingMessagesInterval = 1000
+			npc:sayWithDelay(npcUniqueId, msgs[messagesTable], TALKTYPE_PRIVATE_NP, ((messagesTable-1) * self.talkDelay + remainingMessagesInterval),
                              self.eventDelayedSay[playerId][messagesTable], playerUniqueId)
 			ret[#ret + 1] = self.eventDelayedSay[playerId][messagesTable]
 		end
