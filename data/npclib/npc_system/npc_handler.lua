@@ -594,7 +594,7 @@ if NpcHandler == nil then
 
 	-- Makes the npc represented by this instance of NpcHandler say something.
 	-- This implements the currently set type of talkdelay.
-	-- Delay 
+	-- The "delay" variable sets the delay for the interval between messages
 	function NpcHandler:say(message, npc, player, delay, textType)
 		local playerId = player:getId()
 		if type(message) == "table" then
