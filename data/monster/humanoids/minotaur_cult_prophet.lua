@@ -1,46 +1,6 @@
 local mType = Game.createMonsterType("Minotaur Cult Prophet")
 local monster = {}
 
-local combat = Combat()
-combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_MAGIC_GREEN)
-combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_HEALING)
-combat:setParameter(COMBAT_PARAM_AGGRESSIVE, 0)
-
-local area = createCombatArea(AREA_CIRCLE5X5)
-combat:setArea(area)
-
-function spellCallback(param)
-	local tile = Tile(Position(param.pos))
-	if tile then
-		if tile:getTopCreature() and tile:getTopCreature():isMonster() then
-			tile:getTopCreature():addHealth(math.random(200, 350))
-		end
-	end
-end
-
-function onTargetTile(cid, pos)
-	local param = {}
-	param.cid = cid
-	param.pos = pos
-	param.count = 0
-	spellCallback(param)
-end
-
-setCombatCallback(combat, CALLBACK_PARAM_TARGETTILE, "onTargetTile")
-
-local spell = Spell("instant")
-
-function spell.onCastSpell(creature, var)
-	return combat:execute(creature, var)
-end
-
-spell:name("minotaurcultprophetheal")
-spell:words("###404")
-spell:blockWalls(true)
-spell:needLearn(true)
-spell:register()
-
-
 monster.description = "a minotaur cult prophet"
 monster.experience = 1100
 monster.outfit = {
@@ -52,8 +12,6 @@ monster.outfit = {
 	lookAddons = 0,
 	lookMount = 0
 }
-
-monster.enemyFactions = {FACTION_PLAYER}
 
 monster.raceId = 1509
 monster.Bestiary = {
@@ -152,7 +110,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 15,
 	armor = 15,
-	{name ="minotaurcultprophetheal", interval = 2000, radius = 6, chance = 20, target = false}
+	{name ="minotaur_cult_prophet_mass_healing", interval = 2000, chance = 20, target = false}
 }
 
 monster.elements = {
