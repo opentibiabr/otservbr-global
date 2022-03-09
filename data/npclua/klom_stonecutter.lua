@@ -67,7 +67,7 @@ local function greetCallback(npc, creature)
 		{
 			"Greetings. A warning straight ahead: I don't like loiterin'. If you're not here to {help} us, you're here to waste my time. Which I consider loiterin'. Now, try and prove your {worth} to our alliance. ... ",
 			"I have sealed some of the areas far too dangerous for anyone to enter. If you can prove you're capable, you'll get an opportunity to help destroy the weird machines, pumping lava into the caves leading to the most dangerous enemies."
-		})
+		}, 2000)
 		npcHandler:setTopic(playerId, 1)
 	end
 	return true

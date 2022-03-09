@@ -314,9 +314,12 @@ if NpcHandler == nil then
 	end
 
 	-- Changes the default response message with the specified id to newMessage
-	function NpcHandler:setMessage(id, newMessage)
+	function NpcHandler:setMessage(id, newMessage, delay)
 		if self.messages ~= nil then
 			self.messages[id] = newMessage
+			if delay ~= nil and delay > 1 then
+				self.talkDelay = delay
+			end
 		end
 	end
 
