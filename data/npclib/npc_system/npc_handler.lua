@@ -67,7 +67,7 @@ if NpcHandler == nil then
 		keywordHandler = nil,
 		talkStart = nil,
 		talkDelayTime = 1, -- Seconds to delay outgoing messages.
-		talkDelay = nil,
+		talkDelay = 1000, -- Delay from each messages
 		callbackFunctions = nil,
 		modules = nil,
 		eventSay = nil,
@@ -109,7 +109,6 @@ if NpcHandler == nil then
 		obj.eventDelayedSay = {}
 		obj.topic = {}
 		obj.talkStart = {}
-		obj.talkDelay = {}
 		obj.keywordHandler = keywordHandler
 		obj.messages = {}
 
@@ -352,7 +351,7 @@ if NpcHandler == nil then
 				local parseInfo = { [TAG_PLAYERNAME] = playerName }
 				self:resetNpc(player)
 				msg = self:parseMessage(msg, parseInfo)
-				self:say(msg, npc, player, true)
+				self:say(msg, npc, player)
 				self:removeInteraction(npc, player)
 			end
 		end
@@ -371,7 +370,7 @@ if NpcHandler == nil then
 				local playerName = player:getName() or -1
 				local parseInfo = { [TAG_PLAYERNAME] = playerName }
 				msg = self:parseMessage(msg, parseInfo)
-				self:say(msg, npc, player, true)
+				self:say(msg, npc, player)
 			end
 		end
 		self:setInteraction(npc, player)
@@ -579,17 +578,22 @@ if NpcHandler == nil then
 
 		self.eventDelayedSay[playerId] = {}
 		local ret = {}
-		for aux = 1, #msgs do
-			self.eventDelayedSay[playerId][aux] = {}
-			npc:sayWithDelay(npcUniqueId, msgs[aux], TALKTYPE_PRIVATE_NP, ((aux-1) * (delay or 4000)),
-                             self.eventDelayedSay[playerId][aux], playerUniqueId)
-			ret[#ret + 1] = self.eventDelayedSay[playerId][aux]
+		for messagesTable, messageString in pairs(msgs) do
+			self.eventDelayedSay[playerId][messagesTable] = {}
+			if delay ~= nil and delay > 1 then
+				self.talkDelay = delay
+			end
+			print(self.talkDelay)
+			npc:sayWithDelay(npcUniqueId, msgs[messagesTable], TALKTYPE_PRIVATE_NP, ((messagesTable-1) * self.talkDelay),
+                             self.eventDelayedSay[playerId][messagesTable], playerUniqueId)
+			ret[#ret + 1] = self.eventDelayedSay[playerId][messagesTable]
 		end
 		return(ret)
 	end
 
 	-- Makes the npc represented by this instance of NpcHandler say something.
-	--	This implements the currently set type of talkdelay.
+	-- This implements the currently set type of talkdelay.
+	-- Delay 
 	function NpcHandler:say(message, npc, player, delay, textType)
 		local playerId = player:getId()
 		if type(message) == "table" then
