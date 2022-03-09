@@ -47345,6 +47345,8 @@
 	<item id="30399" name="cobra wand">
 		<attribute key="weaponType" value="wand"/>
 		<attribute key="magicpoints" value="2"/>
+		<attribute key="criticalhitdamage" value="35"/>
+		<attribute key="criticalhitchance" value="10"/>
 		<attribute key="range" value="4"/>
 		<attribute key="weight" value="1900"/>
 		<attribute key="upgradeclassification" value="4"/>
@@ -47357,6 +47359,8 @@
 	<item id="30400" name="cobra rod">
 		<attribute key="weaponType" value="wand"/>
 		<attribute key="magicpoints" value="2"/>
+		<attribute key="lifeleechamount" value="18"/>
+		<attribute key="lifeleechchance" value="100"/>
 		<attribute key="range" value="5"/>
 		<attribute key="weight" value="2500"/>
 		<attribute key="upgradeclassification" value="4"/>
@@ -52193,10 +52197,10 @@
 		<attribute key="weaponType" value="sword"/>
 		<attribute key="loottype" value="sword"/>
 		<attribute key="elementdeath" value="45"/>
-		<attribute key="skillmanaamount" value="3"/>
-		<attribute key="skillmanachance" value="100"/>
-		<attribute key="skilllifeamount" value="5"/>
-		<attribute key="skilllifechance" value="100"/>
+		<attribute key="manaleechamount" value="3"/>
+		<attribute key="manaleechchance" value="100"/>
+		<attribute key="lifeleechamount" value="5"/>
+		<attribute key="lifeleechchance" value="100"/>
 		<attribute key="skillsword" value="5"/>
 		<attribute key="attack" value="7"/>
 		<attribute key="extradef" value="3"/>
@@ -52235,10 +52239,10 @@
 		<attribute key="weaponType" value="axe"/>
 		<attribute key="loottype" value="axe"/>
 		<attribute key="elementdeath" value="45"/>
-		<attribute key="skillmanaamount" value="3"/>
-		<attribute key="skillmanachance" value="100"/>
-		<attribute key="skilllifeamount" value="5"/>
-		<attribute key="skilllifechance" value="100"/>
+		<attribute key="manaleechamount" value="3"/>
+		<attribute key="manaleechchance" value="100"/>
+		<attribute key="lifeleechamount" value="5"/>
+		<attribute key="lifeleechchance" value="100"/>
 		<attribute key="skillaxe" value="5"/>
 		<attribute key="attack" value="7"/>
 		<attribute key="extradef" value="3"/>
@@ -52277,10 +52281,10 @@
 		<attribute key="weaponType" value="club"/>
 		<attribute key="loottype" value="club"/>
 		<attribute key="elementice" value="46"/>
-		<attribute key="skillmanaamount" value="3"/>
-		<attribute key="skillmanachance" value="100"/>
-		<attribute key="skilllifeamount" value="5"/>
-		<attribute key="skilllifechance" value="100"/>
+		<attribute key="manaleechamount" value="3"/>
+		<attribute key="manaleechchance" value="100"/>
+		<attribute key="lifeleechamount" value="5"/>
+		<attribute key="lifeleechchance" value="100"/>
 		<attribute key="skillclub" value="5"/>
 		<attribute key="attack" value="6"/>
 		<attribute key="extradef" value="3"/>
@@ -52342,6 +52346,8 @@
 		<attribute key="loottype" value="distance"/>
 		<attribute key="absorbpercentdeath" value="7"/>
 		<attribute key="skilldist" value="4"/>
+		<attribute key="criticalhitdamage" value="10"/>
+		<attribute key="criticalhitchance" value="10"/>
 		<attribute key="hitchance" value="6"/>
 		<attribute key="range" value="6"/>
 		<attribute key="attack" value="9"/>
@@ -52378,10 +52384,10 @@
 		<attribute key="loottype" value="wand"/>
 		<attribute key="absorbpercentice" value="12"/>
 		<attribute key="magicpoints" value="5"/>
-		<attribute key="skillmanaamount" value="3"/>
-		<attribute key="skillmanachance" value="100"/>
-		<attribute key="skilllifeamount" value="5"/>
-		<attribute key="skilllifechance" value="100"/>
+		<attribute key="manaleechamount" value="3"/>
+		<attribute key="manaleechchance" value="100"/>
+		<attribute key="lifeleechamount" value="5"/>
+		<attribute key="lifeleechchance" value="100"/>
 		<attribute key="range" value="6"/>
 		<attribute key="weight" value="2500"/>
 		<attribute key="upgradeclassification" value="4"/>
@@ -52759,8 +52765,8 @@
 		<attribute key="shootType" value="smallice"/>
 		<attribute key="loottype" value="wand"/>
 		<attribute key="magicpoints" value="2"/>
-		<attribute key="skilllifeamount" value="18"/>
-		<attribute key="skilllifechance" value="100"/>
+		<attribute key="lifeleechamount" value="18"/>
+		<attribute key="lifeleechchance" value="100"/>
 		<attribute key="range" value="4"/>
 		<attribute key="weight" value="2100"/>
 		<attribute key="upgradeclassification" value="4"/>
@@ -55201,6 +55207,62 @@
 	<item id="36796" name="Brainstealer's brainwave">
 		<attribute key="weight" value="200"/>
 	</item>
+	<item id="36797" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36798" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36797" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36799" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36798" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36800" article="a" name="dead girtablilu warrior">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36799" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36801" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36802" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36801" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36803" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36802" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36804" article="a" name="dead bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36803" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
 	<item id="36805" name="carnisylvan finger">
 		<attribute key="description" value="A broken finger from a dead carnisylvan. While wooden in its appearance, its structure is more of a brittle human bone"/>
 		<attribute key="weight" value="100"/>
@@ -55546,6 +55608,62 @@
 		<attribute key="description" value="The pot contains rare sylvan earth from the living forest under Bounac. Nothing is planted in there"/>
 		<attribute key="loottype" value="decoration"/>
 		<attribute key="weight" value="20"/>
+	</item>
+	<item id="36963" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36964" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36964" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36965" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36965" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36966" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36966" article="a" name="dead venerable girtablilu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36967" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36968" />
+		<attribute key="duration" value="10" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36968" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36969" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36969" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="36970" />
+		<attribute key="duration" value="300" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
+	</item>
+	<item id="36970" article="a" name="dead juvenile bashmu">
+		<attribute key="containerSize" value="30" />
+		<attribute key="decayTo" value="0" />
+		<attribute key="duration" value="60" />
+		<attribute key="corpseType" value="blood" />
+		<attribute key="fluidSource" value="blood" />
 	</item>
 	<item id="36971" article="a" name="girtablilu warrior carapace">
 		<attribute key="loottype" value="creatureproduct"/>
