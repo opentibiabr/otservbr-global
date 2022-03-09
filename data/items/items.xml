@@ -27403,7 +27403,7 @@
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="absorbpercentphysical" value="10"/>
 		<attribute key="absorbpercentenergy" value="8"/>
-		<attribute key="transformequipto" value="18528"/>
+		<attribute key="transformequipto" value="16264"/>
 		<attribute key="weight" value="105"/>
 	</item>
 	<item id="16115" article="a" name="wand of everblazing">
@@ -37987,7 +37987,7 @@
 		<attribute key="healthgain" value="3"/>
 		<attribute key="speed" value="60"/>
 		<attribute key="duration" value="3600"/>
-		<attribute key="transformdeequipto" value="26133"/>
+		<attribute key="transformdeequipto" value="23477"/>
 		<attribute key="decayTo" value="0"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="1500"/>
@@ -37997,7 +37997,7 @@
 		<attribute key="slotType" value="feet"/>
 		<attribute key="stopduration" value="1"/>
 		<attribute key="showduration" value="1"/>
-		<attribute key="transformequipto" value="26132"/>
+		<attribute key="transformequipto" value="23476"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="1500"/>
 	</item>
@@ -44404,6 +44404,7 @@
 			<attribute key="skillboost club" value="3"/>
 			<attribute key="skillboost shielding" value="3"/>
 			<attribute key="skillboost distance" value="3"/>
+			<attribute key="skillboost magic level" value="2"/>
 		</attribute>
 	</item>
 	<item id="28716" article="a" name="falcon rod">
@@ -52838,6 +52839,7 @@
 			<attribute key="skillboost club" value="3"/>
 			<attribute key="skillboost shielding" value="3"/>
 			<attribute key="skillboost distance" value="3"/>
+			<attribute key="skillboost magic level" value="2"/>
 		</attribute>
 	</item>
 	<item id="34157" article="a" name="lion plate">

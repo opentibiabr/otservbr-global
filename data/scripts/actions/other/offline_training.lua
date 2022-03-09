@@ -19,7 +19,7 @@ function offlineTraining.onUse(player, item, fromPosition, target, toPosition, i
 		return false
 	end
 	player:setOfflineTrainingSkill(skill)
-	player:remove()
+	player:remove(false)
 	return true
 end
 
