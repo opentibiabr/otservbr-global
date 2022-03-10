@@ -7,35 +7,30 @@ local monsters = {
 	"minotaur cult zealot",
 }
 
-local area = createCombatArea(AREA_CIRCLE3X3)
-combat:setArea(area)
-
-function onTargetTile(cid, pos)
+function onTargetTile(creature, pos)
 	local tile = Tile(pos)
-    	if tile then
-    		local target = tile:getTopCreature()
-    		if target and target ~= cid then
-    			targetName = target:getName():lower()
-    			casterName = cid:getName():lower()
-    			if table.contains(monsters, targetName) then
-    			local healingValue = math.random(200, 350)
-    				target:addHealth(healingValue)
-    			end
-    		end
-    	end
-    return true
+	if tile then
+		local target = tile:getTopCreature()
+		if target and target ~= creature then
+			if table.contains(monsters, target:getName():lower()) then
+				target:addHealth(math.random(200, 350))
+			end
+		end
+	end
+	return true
 end
 
-setCombatCallback(combat, CALLBACK_PARAM_TARGETTILE, "onTargetTile")
+combat:setArea(createCombatArea(AREA_CIRCLE3X3))
+combat:setCallback(CALLBACK_PARAM_TARGETTILE, "onTargetTile")
 
 local spell = Spell("instant")
 
 function spell.onCastSpell(creature, variant)
-    return combat:execute(creature, variant)
+	return combat:execute(creature, variant)
 end
 
-spell:name("minotaur_cult_prophet_mass_healing")
-spell:words("###404")
+spell:name("Minotaur Cult Prophet Mass Healing")
+spell:words("##488")
 spell:blockWalls(true)
 spell:needLearn(true)
 spell:isAggressive(false)

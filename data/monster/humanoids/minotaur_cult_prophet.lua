@@ -110,7 +110,7 @@ monster.attacks = {
 monster.defenses = {
 	defense = 15,
 	armor = 15,
-	{name ="minotaur_cult_prophet_mass_healing", interval = 2000, chance = 20, target = false}
+	{name ="Minotaur Cult Prophet Mass Healing", interval = 2000, chance = 20, target = false}
 }
 
 monster.elements = {
