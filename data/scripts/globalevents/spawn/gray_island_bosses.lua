@@ -7,16 +7,19 @@ local config = {
 	}
 }
 
-local gray = GlobalEvent("gray island bosses")
+local gray = GlobalEvent("GrayIslandBosses")
 function gray.onStartup()
 	local day = config.days[os.date("%A")]
 	if day then
 		local item = Game.createItem(config.teleportId, 1, day[1])
-		if not item:isTeleport() then
-			item:remove()
-			return false
+		if item then
+			if not item:isTeleport() then
+				item:remove()
+				return false
+			end
+
+			item:setDestination(day[2])
 		end
-		item:setDestination(day[2])
 	end
 	return true
 end
