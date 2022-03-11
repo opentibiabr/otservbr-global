@@ -1,3 +1,24 @@
+local login = CreatureEvent("login")
+
+function login.onLogin(player)
+	player:registerEvent("prepareDeath")
+	return true
+end
+
+login:register()
+
+local blesses = CreatureEvent("prepareDeath")
+
+function blesses.onPrepareDeath(player)
+	function blessMessage()
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You were blessed with ".. player:getBlessMessage() ..".")
+	end
+	addEvent(blessMessage, 10)
+	return true
+end
+
+blesses:register()
+
 local deathListEnabled = true
 
 local playerDeath = CreatureEvent("PlayerDeath")
@@ -7,7 +28,13 @@ function playerDeath.onDeath(player, corpse, killer, mostDamageKiller, unjustifi
 		nextUseStaminaTime[playerId] = nil
 	end
 
-	player:sendTextMessage(MESSAGE_BEYOND_LAST, 'You are dead.')
+	nextUseStaminaTime[playerId] = 1
+
+	local function blessMessageOnDeath()
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are still blessed with ".. player:getBlessMessage() ..".")
+	end
+
+	addEvent(blessMessageOnDeath, 150)
 	if player:getStorageValue(Storage.SvargrondArena.PitDoor) > 0 then
 		player:setStorageValue(Storage.SvargrondArena.PitDoor, 0)
 	end
