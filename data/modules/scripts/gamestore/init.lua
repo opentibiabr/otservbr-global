@@ -739,7 +739,7 @@ function sendShowStoreOffers(playerId, category, redirectId)
 
 				if (off.state) then
 					if (off.state == GameStore.States.STATE_SALE) then
-						local daySub = off.validUntil - os.sdate("*t").day
+						local daySub = off.validUntil - os.date("*t").day
 						if (daySub >= 0) then
 							msg:addByte(off.state)
 							msg:addU32(os.time() + daySub * 86400)

@@ -73,7 +73,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if MsgContains(message, 'gamel') and MsgContains(message, 'rebel') then
+	if MsgContains(message, 'gamel') or MsgContains(message, 'rebel') or MsgContains(message, 'gamel rebel') then
 		npcHandler:say('Are you saying that Gamel is a member of the rebellion?', npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif MsgContains(message, 'yes') then
