@@ -1,5 +1,5 @@
 local function removeTeleport(position)
-	local teleportItem = Tile({x = 33487, y = 32101, z = 9}):getItemById(1387)
+	local teleportItem = Tile({x = 33487, y = 32101, z = 9}):getItemById(1949)
 	if teleportItem then
 		teleportItem:remove()
 		position:sendMagicEffect(CONST_ME_POFF)
@@ -14,7 +14,7 @@ function deathPriestShargon.onKill(creature, target)
 
 	local position = target:getPosition()
 	position:sendMagicEffect(CONST_ME_TELEPORT)
-	local item = Game.createItem(1387, 1, {x = 33487, y = 32101, z = 9})
+	local item = Game.createItem(1949, 1, {x = 33487, y = 32101, z = 9})
 	if item:isTeleport() then
 		item:setDestination(Position(33489,32088,9))
 	end

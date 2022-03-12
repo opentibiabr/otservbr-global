@@ -4,17 +4,17 @@ function elementalSpheresMachine2.onUse(player, item, fromPosition, target, toPo
 		return false
 	end
 
-	if isInArray({7913, 7914}, item.itemid) then
-		toPosition.y = toPosition.y + (item.itemid == 7913 and 1 or -1)
-		local machineItem = Tile(toPosition):getItemById(item.itemid == 7913 and 7914 or 7913)
+	if isInArray({844, 845}, item.itemid) then
+		toPosition.y = toPosition.y + (item.itemid == 844 and 1 or -1)
+		local machineItem = Tile(toPosition):getItemById(item.itemid == 844 and 845 or 844)
 		if machineItem then
 			machineItem:transform(machineItem.itemid + 4)
 		end
 		item:transform(item.itemid + 4)
 		player:say('ON', TALKTYPE_MONSTER_SAY, false, player, toPosition)
 	else
-		toPosition.y = toPosition.y + (item.itemid == 7917 and 1 or -1)
-		local machineItem = Tile(toPosition):getItemById(item.itemid == 7917 and 7918 or 7917)
+		toPosition.y = toPosition.y + (item.itemid == 848 and 1 or -1)
+		local machineItem = Tile(toPosition):getItemById(item.itemid == 848 and 845 or 849)
 		if machineItem then
 			machineItem:transform(machineItem.itemid - 4)
 		end
@@ -24,5 +24,5 @@ function elementalSpheresMachine2.onUse(player, item, fromPosition, target, toPo
 	return true
 end
 
-elementalSpheresMachine2:id(7913,7914,7917,7918)
+elementalSpheresMachine2:id(844, 845, 848, 849)
 elementalSpheresMachine2:register()

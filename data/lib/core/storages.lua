@@ -82,7 +82,6 @@ Storage = {
 	-- General storages
 	isTraining = 30000,
 	NpcExhaust = 30001,
-	NpcExhaustOnBuy = 30002,
 	Dragonfetish = 30003,
 	EdronRopeQuest = 30004,
 	GhostShipQuest = 30005,
@@ -136,8 +135,9 @@ Storage = {
 	BlueberryCupcake = 30053,
 	FamiliarSummonEvent10 = 30054,
 	FamiliarSummonEvent60 = 30055,
-	FreeQuests = 990000,
-	PremiumAccount = 998899,
+	ChayenneKeyTime = 30056,
+	FreeQuests = 30057,
+	PremiumAccount = 30058,
 
 	--[[
 	Old storages
@@ -768,7 +768,7 @@ Storage = {
 		Mission49 = 50815,
 		Mission50 = 50816,
 		Mission51 = 50817,
-		Mission50 = 50818,
+		Mission52 = 50818,
 		Mission53 = 50819,
 		Mission54 = 50820,
 		Mission55 = 50821,
@@ -1368,6 +1368,7 @@ Storage = {
 		cockroachBodyMsgStorage = 51670,
 		ZirellaNpcGreetStorage = 51671,
 		ZirellaQuestLog = 51672,
+		CarlosNpcTradeStorage = 51673,
 		CarlosNpcGreetStorage = 51677,
 		CarlosQuestLog = 51678
 	},
@@ -2257,7 +2258,6 @@ Storage = {
 		GraveDanger = {},
 		HandOfTheInquisitionOutfits = {},
 		-- Kilmaresh = {}, done earlier in the file
-		GraveDanger = {},
 		-- update 12.30
 		FeasterOfSouls = {},
 		PoltergeistOutfits = {}
@@ -2422,7 +2422,6 @@ local function extractValues(tab, ret)
 	end
 end
 
-local benchmark = os.clock()
 local extraction = {}
 extractValues(Storage, extraction) -- Call function
 table.sort(extraction) -- Sort the table
@@ -2435,7 +2434,6 @@ if #extraction > 1 then
 		if extraction[i] == extraction[i+1] then
 			Spdlog.warn(string.format("Duplicate storage value found: %d",
 				extraction[i]))
-			Spdlog.warn(string.format("Processed in %.4f(s)", os.clock() - benchmark))
 		end
 	end
 end

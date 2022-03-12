@@ -114,5 +114,5 @@ function drumeAction.onUse(player, item, fromPosition, target, toPosition, isHot
 	Game.setStorageValue(Storage.TheOrderOfTheLion.Drume.TotalUsurperCommanders, totalUsurper)
 	return true
 end
-drumeAction:aid(59600)
+drumeAction:aid(59601)
 drumeAction:register()

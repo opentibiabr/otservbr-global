@@ -180,11 +180,17 @@ function Player.depositMoney(self, amount)
 end
 
 function Player.transferMoneyTo(self, target, amount)
+	if not target then
+		return false
+	end
+
+	-- See if you can afford this transfer
 	local balance = self:getBankBalance()
 	if amount > balance then
 		return false
 	end
 
+	-- See if player is online
 	local targetPlayer = Player(target)
 	if targetPlayer then
 		local town = targetPlayer:getTown()
@@ -224,17 +230,59 @@ function Player.withdrawMoney(self, amount)
 	return true
 end
 
+-- player:removeMoneyBank(money)
+function Player:removeMoneyBank(amount)
+
+	if type(amount) == 'string' then
+		amount = tonumber(amount)
+	end
+
+	local moneyCount = self:getMoney()
+	local bankCount = self:getBankBalance()
+
+	-- The player have all the money with him
+	if amount <= moneyCount then
+		-- Removes player inventory money
+		self:removeMoney(amount)
+
+		self:sendTextMessage(MESSAGE_TRADE, ("Paid %d gold from inventory."):format(amount))
+		return true
+
+	-- The player doens't have all the money with him
+	elseif amount <= (moneyCount + bankCount) then
+
+		-- Check if the player has some money
+		if moneyCount ~= 0 then
+			-- Removes player inventory money
+			self:removeMoney(moneyCount)
+			local remains = amount - moneyCount
+
+			-- Removes player bank money
+			self:setBankBalance(bankCount - remains)
+
+			self:sendTextMessage(MESSAGE_TRADE, ("Paid %d from inventory and %d gold from bank account. Your account balance is now %d gold."):format(moneyCount, amount - moneyCount, self:getBankBalance()))
+			return true
+
+		else
+			self:setBankBalance(bankCount - amount)
+			self:sendTextMessage(MESSAGE_TRADE, ("Paid %d gold from bank account. Your account balance is now %d gold."):format(amount, self:getBankBalance()))
+			return true
+		end
+	end
+	return false
+end
+
 function Player.hasAllowMovement(self)
 	return self:getStorageValue(STORAGE.blockMovementStorage) ~= 1
 end
 
 function Player.hasRookgaardShield(self)
 	-- Wooden Shield, Studded Shield, Brass Shield, Plate Shield, Copper Shield
-	return self:getItemCount(2512) > 0
-		or self:getItemCount(2526) > 0
-		or self:getItemCount(2511) > 0
-		or self:getItemCount(2510) > 0
-		or self:getItemCount(2530) > 0
+	return self:getItemCount(3412) > 0
+		or self:getItemCount(3426) > 0
+		or self:getItemCount(3411) > 0
+		or self:getItemCount(3410) > 0
+		or self:getItemCount(3430) > 0
 end
 
 

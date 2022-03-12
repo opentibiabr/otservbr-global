@@ -1,7 +1,7 @@
 local ragingMage2 = CreatureEvent("RagingMage2")
 function ragingMage2.onDeath(creature, corpse, killer, mostDamageKiller, unjustified, mostDamageUnjustified)
 	local targetMonster = creature:getMonster()
-	if not targetMonster or targetMonster:getName():lower() ~= 'raging mage' then
+	if not creature or not targetMonster or targetMonster:getName():lower() ~= 'raging mage' then
 		return true
 	end
 
@@ -10,7 +10,7 @@ function ragingMage2.onDeath(creature, corpse, killer, mostDamageKiller, unjusti
 	targetMonster:say("I WILL RETURN!! My death will just be a door to await my homecoming, \z
 	my physical hull will be... my... argh...", TALKTYPE_MONSTER_SAY, 0, 0, Position(33142, 31529, 2))
 	addEvent(function()
-		local tilePos = Tile(Position(33143, 31527, 2)):getItemById(11796)
+		local tilePos = Tile(Position(33143, 31527, 2)):getItemById(10840)
 		if not tilePos then
 			return true
 		end

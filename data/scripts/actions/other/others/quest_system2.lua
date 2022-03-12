@@ -31,7 +31,7 @@ local config = {
 	},
 	[3020] = {
 		items = {
-			{itemId = 7503}
+			{itemId = 145}
 		},
 		storage = Storage.TravellingTrader.Mission02,
 		formerValue = 3,

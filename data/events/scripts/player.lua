@@ -5,37 +5,37 @@ local storeItemID = {
 	-- registered item ids here are not tradable with players
 	-- these items can be set to moveable at items.xml
 	-- 500 charges exercise weapons
-	32384, -- exercise sword
-	32385, -- exercise axe
-	32386, -- exercise club
-	32387, -- exercise bow
-	32388, -- exercise rod
-	32389, -- exercise wand
+	28552, -- exercise sword
+	28553, -- exercise axe
+	28554, -- exercise club
+	28555, -- exercise bow
+	28556, -- exercise rod
+	28557, -- exercise wand
 
 	-- 50 charges exercise weapons
-	32124, -- training sword
-	32125, -- training axe
-	32126, -- training club
-	32127, -- training bow
-	32128, -- training wand
-	32129, -- training club
+	28540, -- training sword
+	28541, -- training axe
+	28542, -- training club
+	28543, -- training bow
+	28544, -- training wand
+	28545, -- training club
 
 	-- magic gold and magic converter (activated/deactivated)
-	32109, -- magic gold converter
-	33299, -- magic gold converter
-	26378, -- gold converter
-	29020, -- gold converter
+	28525, -- magic gold converter
+	28526, -- magic gold converter
+	23722, -- gold converter
+	25719, -- gold converter
 
 	-- foods
-	35172, -- roasted wyvern wings
-	35173, -- carrot pie
-	35174, -- tropical marinated tiger
-	35175, -- delicatessen salad
-	35176, -- chilli con carniphila
-	35177, -- svargrond salmon filet
-	35178, -- carrion casserole
-	35179, -- consecrated beef
-	35180, -- overcooked noodles
+	29408, -- roasted wyvern wings
+	29409, -- carrot pie
+	29410, -- tropical marinated tiger
+	29411, -- delicatessen salad
+	29412, -- chilli con carniphila
+	29413, -- svargrond salmon filet
+	29414, -- carrion casserole
+	29415, -- consecrated beef
+	29416, -- overcooked noodles
 }
 
 -- Players cannot throw items on teleports if set to true
@@ -148,7 +148,7 @@ function Player:onLook(thing, position, distance)
 
 	if self:getGroup():getAccess() then
 		if thing:isItem() then
-			description = string.format("%s\nItem ID: %d", description, thing:getId())
+			description = string.format("%s\nClient ID: %d", description, thing:getId())
 
 			local actionId = thing:getActionId()
 			if actionId ~= 0 then
@@ -173,11 +173,6 @@ function Player:onLook(thing, position, distance)
 			local decayId = itemType:getDecayId()
 			if decayId ~= -1 then
 				description = string.format("%s\nDecays to: %d", description, decayId)
-			end
-
-			local clientId = itemType:getClientId()
-			if clientId then
-				description = string.format("%s\nClient ID: %d", description, clientId)
 			end
 
 		elseif thing:isCreature() then
@@ -268,7 +263,7 @@ local function antiPush(self, item, count, fromPosition, toPosition, fromCylinde
 
 	pushDelay[cid].items = pushDelay[cid].items + 1
 
-	local currentTime = os.mtime()
+	local currentTime = systemTime()
 	if pushDelay[cid].time == 0 then
 		pushDelay[cid].time = currentTime
 	elseif pushDelay[cid].time == currentTime then
@@ -325,7 +320,7 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 	-- Cults of Tibia begin
 	local frompos = Position(33023, 31904, 14) -- Checagem
 	local topos = Position(33052, 31932, 15) -- Checagem
-	if self:getPosition():isInRange(frompos, topos) and item:getId() == 26397 then
+	if self:getPosition():isInRange(frompos, topos) and item:getId() == 23729 then
 		local tileBoss = Tile(toPosition)
 		if tileBoss and tileBoss:getTopCreature() and tileBoss:getTopCreature():isMonster() then
 			if tileBoss:getTopCreature():getName():lower() == 'the remorseless corruptor' then
