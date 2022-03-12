@@ -378,11 +378,11 @@ function Player:CreateFamiliarSpell()
 	local playerPosition = self:getPosition()
 	if not self:isPremium() then
 		playerPosition:sendMagicEffect(CONST_ME_POFF)
-		player:sendCancelMessage("You need a premium account.")
+		self:sendCancelMessage("You need a premium account.")
 		return false
 	end
 
-	if #self:getSummons() >= 1 then
+	if #self:getSummons() >= 1 and self:getAccountType() < ACCOUNT_TYPE_GOD then
 		self:sendCancelMessage("You can't have other summons.")
 		playerPosition:sendMagicEffect(CONST_ME_POFF)
 		return false
@@ -410,14 +410,26 @@ function Player:CreateFamiliarSpell()
 
 	myFamiliar:setOutfit({lookType = self:getFamiliarLooktype()})
 	myFamiliar:registerEvent("FamiliarDeath")
-	local deltaSpeed = math.max(self:getSpeed() - myFamiliar:getBaseSpeed(), 0)
-	myFamiliar:changeSpeed(deltaSpeed)
+	myFamiliar:changeSpeed(math.max(self:getSpeed() - myFamiliar:getBaseSpeed(), 0))
 	playerPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
 	myFamiliar:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	self:setStorageValue(Storage.FamiliarSummon, os.time() + 15*60) -- 15 minutes from now
-	addEvent(removeFamiliar, 15*60*1000, myFamiliar:getId(), self:getId())
+	-- 15 minute count starts after using the spell
+	self:setStorageValue(Storage.FamiliarSummon, os.time() + 15*60)
+	addEvent(RemoveFamiliar, 15*60*1000, myFamiliar:getId(), self:getId())
 	for sendMessage = 1, #FAMILIAR_TIMER do
-		self:setStorageValue(FAMILIAR_TIMER[sendMessage].storage,addEvent(sendMessageFunction, (15*60-FAMILIAR_TIMER[sendMessage].countdown)*1000, self:getId(),FAMILIAR_TIMER[sendMessage].message))
+		self:setStorageValue(
+			FAMILIAR_TIMER[sendMessage].storage,
+			addEvent(
+				-- Calling function
+				SendMessageFunction,
+				-- Time for execute event
+				(15 * 60 - FAMILIAR_TIMER[sendMessage].countdown) * 1000,
+				-- Param "playerId"
+				self:getId(),
+				-- Param "message"
+				FAMILIAR_TIMER[sendMessage].message
+			)
+		)
 	end
 	return true
 end
