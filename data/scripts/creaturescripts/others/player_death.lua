@@ -10,8 +10,17 @@ login:register()
 local blesses = CreatureEvent("prepareDeath")
 
 function blesses.onPrepareDeath(player)
-	function blessMessage()
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You were blessed with ".. player:getBlessMessage() ..".")
+	local function blessMessage()
+		if not player then
+			return false
+		end
+
+		local blesses = player:getBlessMessage()
+		if blesses == nil then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You weren't protected with any blessings.")
+		else
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You were blessed with ".. blesses ..".")
+		end
 	end
 	addEvent(blessMessage, 10)
 	return true
@@ -31,7 +40,16 @@ function playerDeath.onDeath(player, corpse, killer, mostDamageKiller, unjustifi
 	nextUseStaminaTime[playerId] = 1
 
 	local function blessMessageOnDeath()
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are still blessed with ".. player:getBlessMessage() ..".")
+		if not player then
+			return false
+		end
+
+		local blesses = player:getBlessMessage()
+		if blesses == nil then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You lost all your blesses.")
+		else
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are still blessed with ".. blesses ..".")
+		end
 	end
 
 	addEvent(blessMessageOnDeath, 150)
