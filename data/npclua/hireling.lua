@@ -351,19 +351,6 @@ local TOPIC_FOOD = {
 	SKILL_CHOOSE = 1301
 }
 
-local TOPIC_GOODS = {
-	VARIOUS = 1401,
-	EQUIPMENT = 1402,
-	DISTANCE = 1403,
-	WANDS = 1404,
-	RODS = 1405,
-	POTIONS = 1406,
-	RUNES = 1407,
-	SUPPLIES = 1408,
-	TOOLS = 1409,
-	POSTAL = 1410
-}
-
 local GREETINGS = {
 	BANK = "Alright! What can I do for you and your bank business, |PLAYERNAME|?",
 	FOOD = "Hmm, yes! A variety of fine food awaits! However, a small expense of 15000 gold is expected to make these delicious masterpieces happen. Shall I?",
@@ -1070,19 +1057,6 @@ end
 ############################################################################
 ############################################################################
 ]]
--- ========================[[ TRADER FUNCTIONS ]] ========================== --
-
-local function getGoodsGreetingMessage()
-	local str
-	if not hireling:hasSkill(HIRELING_SKILLS.TRADER) then
-		str = "While I'm not a trader, I still have a collection of {various} items to sell if you like!"
-	else
-		str = "I sell a {selection} of {various} items, {equipment}, " ..
-			"{distance} weapons, {wands} and {rods}, {potions}, {runes}, " ..
-			"{supplies}, {tools} and {postal} goods. Just ask!"
-	end
-	return str
-end
 
 -- ========================[[ COOKER FUNCTIONS ]] ========================== --
 
@@ -1219,10 +1193,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			else
 				sendSkillNotLearned(npc, creature, HIRELING_SKILLS.STEWARD)
 			end
-		elseif MsgContains(message, "goods") or MsgContains(message, "trade") then
-			npcHandler:setTopic(playerId, TOPIC.GOODS)
-			local goodsMsg = getGoodsGreetingMessage()
-			npcHandler:say(goodsMsg, npc, creature)
+		elseif MsgContains(message, "goods") then
+			npcHandler:say("I sell a selection of various items. Just ask {trade}!", npc, creature)
 		elseif MsgContains(message, "lamp") then
 			npcHandler:setTopic(playerId, TOPIC.LAMP)
 			if player:getGuid() == hireling:getOwnerId() then
@@ -1250,14 +1222,6 @@ local function creatureSayCallback(npc, creature, type, message)
 		handleBankActions(npc, creature, message)
 	elseif(getTopic(creature) >= TOPIC.FOOD and getTopic(creature) < TOPIC.GOODS) then
 		handleFoodActions(npc, creature, message)
-	elseif(getTopic(creature) >= TOPIC.GOODS) then
-		if MsgContains(message, "goods") or MsgContains(message, "trade") then
-			npcHandler:setTopic(playerId, TOPIC.GOODS)
-			local goodsMsg = getGoodsGreetingMessage()
-			npcHandler:say(goodsMsg, npc, creature)
-		else
-			handleGoodsActions(creature, message)
-		end
 	end
 	return true
 end
