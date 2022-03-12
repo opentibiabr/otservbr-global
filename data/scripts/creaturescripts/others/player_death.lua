@@ -15,11 +15,11 @@ function blesses.onPrepareDeath(player)
 			return false
 		end
 
-		local blesses = player:getBlessMessage()
-		if blesses == nil then
+		local blessings = player:getBlessMessage()
+		if blessings == nil then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You weren't protected with any blessings.")
 		else
-			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You were blessed with ".. blesses ..".")
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You were blessed with ".. blessings ..".")
 		end
 	end
 	addEvent(blessMessage, 10)
@@ -44,11 +44,11 @@ function playerDeath.onDeath(player, corpse, killer, mostDamageKiller, unjustifi
 			return false
 		end
 
-		local blesses = player:getBlessMessage()
-		if blesses == nil then
+		local blessings = player:getBlessMessage()
+		if blessings == nil then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You lost all your blesses.")
 		else
-			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are still blessed with ".. blesses ..".")
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are still blessed with ".. blessings ..".")
 		end
 	end
 
