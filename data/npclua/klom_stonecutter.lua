@@ -53,7 +53,10 @@ end
 npcConfig.voices = {
 	interval = 15000,
 	chance = 50,
-	{text = 'abc'}
+	{text = 'Ah.'},
+	{text = 'We need more volunteers!'},
+	{text = 'And they call this "deep"...'},
+	{text = 'Preparation is paramount.'},
 }
 
 local count = {}
