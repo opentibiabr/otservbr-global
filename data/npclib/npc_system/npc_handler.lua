@@ -67,7 +67,7 @@ if NpcHandler == nil then
 		keywordHandler = nil,
 		talkStart = nil,
 		talkDelay = 1000, -- Delay from each messages
-		talkDelayTimeFromEachMessage = 1, -- Seconds to delay outgoing messages
+		talkDelayTimeForOutgoingMessages = 1, -- Seconds to delay outgoing messages
 		callbackFunctions = nil,
 		modules = nil,
 		eventSay = nil,
@@ -582,8 +582,8 @@ if NpcHandler == nil then
 			if delay ~= nil and delay > 1 then
 				self.talkDelay = delay
 			end
-			-- The "self.talkDelayTimeFromEachMessage * 1000" = Interval for sending subsequent messages from the first
-			npc:sayWithDelay(npcUniqueId, msgs[messagesTable], TALKTYPE_PRIVATE_NP, ((messagesTable-1) * self.talkDelay + self.talkDelayTimeFromEachMessage * 1000),
+			-- The "self.talkDelayTimeForOutgoingMessages * 1000" = Interval for sending subsequent messages from the first
+			npc:sayWithDelay(npcUniqueId, msgs[messagesTable], TALKTYPE_PRIVATE_NP, ((messagesTable-1) * self.talkDelay + self.talkDelayTimeForOutgoingMessages * 1000),
                              self.eventDelayedSay[playerId][messagesTable], playerUniqueId)
 			ret[#ret + 1] = self.eventDelayedSay[playerId][messagesTable]
 		end
@@ -633,7 +633,7 @@ if NpcHandler == nil then
 				npc:say(self:parseMessage(messageDelayed, parseInfo),
                         textType or TALKTYPE_PRIVATE_NP, false, focusPlayer, npc:getPosition())
 			end
-		end, self.talkDelayTimeFromEachMessage * 1000, npcId, message, focusId)
+		end, self.talkDelayTimeForOutgoingMessages * 1000, npcId, message, focusId)
 	end
 
 	-- sendMessages(msg, messagesTable, npc, player, useDelay(true or false), delay)
