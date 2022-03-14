@@ -102,7 +102,7 @@ function enchanting.onUse(player, item, fromPosition, target, toPosition, isHotk
 		player:addMana(-mana)
 		player:addSoul(-soul)
 		item:transform(enchantedGems[targetId])
-		player:addManaSpent(items.valuables.mana)
+		player:addManaSpent(mana)
 		player:getPosition():sendMagicEffect(CONST_ME_HOLYDAMAGE)
 		return true
 	end
