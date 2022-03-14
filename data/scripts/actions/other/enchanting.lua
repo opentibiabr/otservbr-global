@@ -139,5 +139,5 @@ function enchanting.onUse(player, item, fromPosition, target, toPosition, isHotk
 	return false
 end
 
-enchanting:id(675, 676, 677, 678)
+enchanting:id(3029,3030,3031,3032)
 enchanting:register()
