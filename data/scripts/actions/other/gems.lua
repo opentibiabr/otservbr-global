@@ -121,8 +121,6 @@ local enchantedItems = {
 local gems = Action()
 
 function gems.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	-- Enchanting items
-	Spdlog.info("Enchanting")
 	if table.contains({33268, 33269}, toPosition.x)
 	and toPosition.y == 31830 and toPosition.z == 10
 	and player:getStorageValue(Storage.ElementalSphere.QuestLine) > 0 then
@@ -183,7 +181,6 @@ function gems.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		item:remove(1)
 		return true
 	end
-	Spdlog.info("after enchanting")
 	-- Small emerald for Kilmaresh quest
 	-- see data\scripts\quests\kilmaresh\1-fafnars-wrath\7-four-masks.lua
 	if item.itemid == 3032 and target.uid == 40032
@@ -295,7 +292,6 @@ function gems.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 	end
 
-	-- Enchant gem
 	if player:getStorageValue(setting.storage) >= setting.value then
 		if setting.item == item.itemid then
 			local gemSpot = Tile(setting.itemPos):getItemById(setting.fieldId)
