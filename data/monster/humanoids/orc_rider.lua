@@ -44,7 +44,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
