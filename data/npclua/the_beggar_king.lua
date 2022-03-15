@@ -68,8 +68,8 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
-			selfSay("Fine. But the first thing you have to know is that we are not the city's problem. We are just trying to survive. We usually seek shelter in the sewers.", npc, creature)
-			selfSay("There we are comparatively warm and safe. At least we were. But recently something has changed. There is {something} in the sewers. And it is hunting us.", npc, creature)
+			npcHandler:say("Fine. But the first thing you have to know is that we are not the city's problem. We are just trying to survive. We usually seek shelter in the sewers.", npc, creature)
+			npcHandler:say("There we are comparatively warm and safe. At least we were. But recently something has changed. There is {something} in the sewers. And it is hunting us.", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
 	elseif MsgContains(message, "something") then
