@@ -65,7 +65,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				creature
 			)
 			npcHandler:setTopic(playerId, 1)
-			else npcHandler:say("You cant vote yet.", npc, creature)
+		else
+			npcHandler:say("You cant vote yet.", npc, creature)
 		end
 	elseif(MsgContains(message, "archives")) then
 		if(npcHandler:getTopic(playerId) == 1) then
@@ -79,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 3) then
-		   player:setStorageValue(Storage.DarkTrails.Mission08, 1)
+			player:setStorageValue(Storage.DarkTrails.Mission08, 1)
 			npcHandler:say("Thanks, you successfully cast your vote. Feel free to continue gathering votes by helping the city! Farewell.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
