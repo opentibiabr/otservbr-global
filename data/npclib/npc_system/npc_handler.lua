@@ -613,6 +613,11 @@ if NpcHandler == nil then
 				return
 			end
 
+			if Creature(npcId) == nil then
+				-- We are silently return it because this can happen when the NPC is removed before the chat msg is triggered.
+				return
+			end
+
 			focusId = player:getId()
 			if focusId == nil then
 				Spdlog.error("[NpcHandler:say] - Player id not found or is nil")
