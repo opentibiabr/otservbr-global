@@ -140,7 +140,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif(MsgContains(message, "hat") or MsgContains(message, "accessory")) and (npcHandler:getTopic(playerId) == 2 and getPlayerStorageValue(creature, Storage.Irmana1) < 1) then
 		npcHandler:say(
 			{
-				"This accessory requires a small fee of 150000 gold pieces. Of course, we do not want to put you at any risk to be attacked while carrying this huge amount of money. ...", 
+				"This accessory requires a small fee of 150000 gold pieces. Of course, we do not want to put you at any risk to be attacked while carrying this huge amount of money. ...",
 				"This is why we have established our brand-new instalment sale. You can choose to either pay the price at once, or if you want to be safe, by instalments of 10000 gold pieces. ...",
 				"I also have to inform you that once you started paying for one of the accessories, you have to finish the payment first before you can start paying for the other one, of course. ...",
 				"Are you interested in purchasing this accessory?"
