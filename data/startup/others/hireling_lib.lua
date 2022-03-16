@@ -540,49 +540,43 @@ function Player:getHirelingChangingOutfit()
 	return getHirelingById(id)
 end
 
-local function addOutfit(msg, outfit)
+function Player:sendHirelingOutfitWindow(hireling)
+	local outfit = hireling:getOutfit()
+	local msg = NetworkMessage()
+	msg:addByte(0xC8) -- 'ProtocolGame::sendOutfitWindow()'' header
 	msg:addU16(outfit.lookType)
 
-	msg:addByte(outfit.lookHead)
-	msg:addByte(outfit.lookBody)
-	msg:addByte(outfit.lookLegs)
-	msg:addByte(outfit.lookFeet)
-	msg:addByte(outfit.lookAddons)
+	if outfit.lookType == 0 then
+		msg:addU16(outfit.lookTypeEx)
+	else
+		msg:addByte(outfit.lookHead)
+		msg:addByte(outfit.lookBody)
+		msg:addByte(outfit.lookLegs)
+		msg:addByte(outfit.lookFeet)
+		msg:addByte(outfit.lookAddons)
+	end
 	msg:addU16(outfit.lookMount)
-	msg:addByte(0)
-	msg:addByte(0)
-	msg:addByte(0)
-	msg:addByte(0)
-	msg:addU16(0)
-end
 
-function Player:sendHirelingOutfitWindow(hireling)
-	local msg = NetworkMessage()
-	local client = self:getClient()
-	msg:addByte(200) -- header
-	addOutfit(msg, hireling:getOutfit()) -- current outfit
+	msg:addByte(0x00) -- Mount head
+	msg:addByte(0x00) -- Mount body
+	msg:addByte(0x00) -- Mount legs
+	msg:addByte(0x00) -- Mount feet
+	msg:addU16(0x00) -- Familiar
 
 	local availableOutfits = hireling:getAvailableOutfits()
-
-	-- Version 1185+
 	msg:addU16(#availableOutfits)
-
 	for _,outfit in ipairs(availableOutfits) do
 		msg:addU16(outfit.lookType)
 		msg:addString(outfit.name)
 		msg:addByte(0x00) -- addons
-
-		-- Version 1185+
-		-- something related to the store button (offer_id maybe) not using now
-		msg:addByte(0x00)
+		msg:addByte(0x00) -- Store bool
 	end
 
-	-- mounts disabled for hirelings
-	-- Version 1185+
-	msg:addU16(0x00) --mounts count
-	msg:addU16(0x00) --familiar count
-	msg:addByte(0x00) -- dunno
-	msg:addByte(0x00) -- dunno2
+	msg:addU16(0x00) -- Mounts count
+	msg:addU16(0x00) -- Familiar count
+	msg:addByte(0x00) -- Try outfit bool
+	msg:addByte(0x00) -- Is mounted bool
+	msg:addByte(0x00) -- Random outfit bool
 
 	msg:sendToPlayer(self)
 end
