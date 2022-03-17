@@ -60,8 +60,8 @@ monster.flags = {
 	runHealth = 50,
 	healthHidden = false,
 	isBlockable = true,
-	canWalkOnEnergy = false,
-	canWalkOnFire = false,
+	canWalkOnEnergy = true,
+	canWalkOnFire = true,
 	canWalkOnPoison = false
 }
 
