@@ -408,17 +408,11 @@ local function getHirelingServiceString(creature)
 	str = str .. "?"
 
 	local player = Player(creature)
-	local playerId = player:getId()
 
 	if player:getGuid() == hireling:getOwnerId() then
 		str = str .. " If you want, I can go back to my {lamp} or maybe change my {outfit}."
 	end
 	return str
-end
-
-local function getTopic(creature)
-	local playerId = creature:getId()
-	return npcHandler:getTopic(playerId) and npcHandler:getTopic(playerId) > 0 and npcHandler:getTopic(playerId) or TOPIC.SERVICES
 end
 
 local function sendSkillNotLearned(npc, creature, SKILL)
@@ -1196,7 +1190,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, TOPIC.SERVICES)
 		local servicesMsg = getHirelingServiceString(creature)
 		npcHandler:say(servicesMsg, npc, creature)
-	elseif(getTopic(creature) == TOPIC.SERVICES) then
+	elseif npcHandler:getTopic(playerId) == TOPIC.SERVICES then
 		if MsgContains(message, "bank") then
 			if hireling:hasSkill(HIRELING_SKILLS.BANKER) then
 				npcHandler:setTopic(playerId, TOPIC.BANK)
@@ -1238,7 +1232,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				return false
 			end
 		end
-	elseif(getTopic(creature) == TOPIC.LAMP) then
+	elseif npcHandler:getTopic(playerId) == TOPIC.LAMP then
 		if MsgContains(message, "yes") then
 			npcHandler:say("As you wish!", npc, creature)
 			hireling:returnToLamp(player:getGuid())
@@ -1246,11 +1240,11 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, TOPIC.SERVICES)
 			npcHandler:say("Alright then, I will be here.", npc, creature)
 		end
-	elseif(getTopic(creature) >= TOPIC.BANK and getTopic(creature) < TOPIC.FOOD) then
+	elseif npcHandler:getTopic(playerId) >= TOPIC.BANK and npcHandler:getTopic(playerId) < TOPIC.FOOD then
 		handleBankActions(npc, creature, message)
-	elseif(getTopic(creature) >= TOPIC.FOOD and getTopic(creature) < TOPIC.GOODS) then
+	elseif npcHandler:getTopic(playerId) >= TOPIC.FOOD and npcHandler:getTopic(playerId) < TOPIC.GOODS then
 		handleFoodActions(npc, creature, message)
-	elseif(getTopic(creature) >= TOPIC.GOODS) then
+	elseif npcHandler:getTopic(playerId) >= TOPIC.GOODS then
 		if MsgContains(message, "goods") or MsgContains(message, "trade") then
 			npcHandler:setTopic(playerId, TOPIC.GOODS)
 			local goodsMsg = getGoodsGreetingMessage()
