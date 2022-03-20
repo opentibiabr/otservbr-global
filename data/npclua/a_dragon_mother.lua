@@ -77,9 +77,8 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "help") then
-		npcHandler:say({
-			"I'm aware what you are looking for. Usually I would rather devour you, but due to unfortunate circumstances, I need your {assistance}.",
-		}, npc, creature)
+		npcHandler:say(
+			"I'm aware what you are looking for. Usually I would rather devour you, but due to unfortunate circumstances, I need your {assistance}.", npc, creature)
 		npcHandler:setTopic(playerId, 2)
 	elseif MsgContains(message, "assistance") then
 		if npcHandler:getTopic(playerId) == 2 then
