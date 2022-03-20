@@ -1240,7 +1240,6 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(getTopic(creature) == TOPIC.LAMP) then
 		if MsgContains(message, "yes") then
-			npcHandler:say("As you wish!", npc, creature)
 			hireling:returnToLamp(player:getGuid())
 		else
 			npcHandler:setTopic(playerId, TOPIC.SERVICES)
