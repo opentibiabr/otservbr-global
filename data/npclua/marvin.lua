@@ -56,10 +56,17 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	if(MsgContains(message, "funding")) then
 		if(player:setStorageValue(Storage.DarkTrails.Mission07) == 1) then
-			selfSay("So far you earned x votes. Each single vote can be spent on a different topic or you're also able to cast all your votes on one voting. ...", npc, creature)
-			selfSay("Well in the topic b you have the possibility to vote for the funding of the {archives}, import of bug {milk} or street {repairs}.", npc, creature)
+			npcHandler:say(
+				{
+					"So far you earned x votes. Each single vote can be spent on a different topic or you're also able to cast all your votes on one voting. ...",
+					"Well in the topic b you have the possibility to vote for the funding of the {archives}, import of bug {milk} or street {repairs}."
+				},
+				npc,
+				creature
+			)
 			npcHandler:setTopic(playerId, 1)
-			else selfSay("You cant vote yet.", npc, creature)
+		else
+			npcHandler:say("You cant vote yet.", npc, creature)
 		end
 	elseif(MsgContains(message, "archives")) then
 		if(npcHandler:getTopic(playerId) == 1) then
@@ -73,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 3) then
-		   player:setStorageValue(Storage.DarkTrails.Mission08, 1)
+			player:setStorageValue(Storage.DarkTrails.Mission08, 1)
 			npcHandler:say("Thanks, you successfully cast your vote. Feel free to continue gathering votes by helping the city! Farewell.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
