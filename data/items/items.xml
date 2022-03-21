@@ -35940,9 +35940,7 @@
 		<attribute key="stopduration" value="1"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentphysical" value="3"/>
 		<attribute key="transformequipto" value="22134"/>
-		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="550"/>
 	</item>
 	<item id="22062" article="a" name="werewolf helmet">
@@ -36289,7 +36287,9 @@
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="absorbpercentphysical" value="6"/>
 		<attribute key="duration" value="3600"/>
-		<attribute key="decayTo" value="0"/>
+		<attribute key="decayTo" value="22060"/>
+		<attribute key="transformDeEquipTo" value="22061" />
+		<attribute key="duration" value="3600" />
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="550"/>
 	</item>
@@ -47222,10 +47222,15 @@
 		<attribute key="weight" value="8000"/>
 	</item>
 	<item fromid="30374" toid="30392" name="RESERVED SPRITE"/>
-	<item id="30393" article="a" name="cobra crossbow">
+		<item id="30393" article="a" name="cobra crossbow">
+        <attribute key="weaponType" value="distance"/>
 		<attribute key="slotType" value="two-handed"/>
+        <attribute key="ammotype" value="bolt"/>
+		<attribute key="loottype" value="distance"/>
 		<attribute key="skilldist" value="2"/>
 		<attribute key="range" value="6"/>
+		<attribute key="hitChance" value="6"/>
+		<attribute key="attack" value="7"/>
 		<attribute key="weight" value="4000"/>
 		<attribute key="upgradeclassification" value="4"/>
 		<attribute key="imbuementslot" value="2">
@@ -47344,9 +47349,11 @@
 		<attribute key="slotType" value="necklace"/>
 		<attribute key="absorbpercentphysical" value="3"/>
 		<attribute key="absorbpercentpoison" value="14"/>
+		<attribute key="transformDeEquipTo" value="30403" />
 		<attribute key="magicpoints" value="3"/>
+		<attribute key="showduration" value="1" />
 		<attribute key="duration" value="7200"/>
-		<attribute key="decayTo" value="30403"/>
+		<attribute key="decayTo" value="30401"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
 	</item>
@@ -47354,6 +47361,9 @@
 		<attribute key="slotType" value="necklace"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
+		<attribute key="transformEquipTo" value="30402" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
 	</item>
 	<item fromid="30404" toid="30406" name="RESERVED SPRITE"/>
 	<item id="30407" article="a" name="sequoia trunk"/>
