@@ -20,15 +20,16 @@ local function checkBoss(centerPosition, rangeX, rangeY, bossName)
 end
 
 local thawingDragonLord = GlobalEvent("thawing dragon lord")
+
 function thawingDragonLord.onThink(interval, lastExecution)
     if checkBoss(config.centerPosition, config.rangeX, config.rangeY, config.monsterName) then
         return true
     end
 
-    local boss =
-    Game.createMonster(config.monsterName, config.bossPosition, true, true)
+    local boss = Game.createMonster(config.monsterName, config.bossPosition, true, true)
     boss:setReward(true)
     return true
 end
+
 thawingDragonLord:interval(900000)
 thawingDragonLord:register()
