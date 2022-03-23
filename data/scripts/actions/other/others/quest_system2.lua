@@ -1,12 +1,12 @@
 local config = {
 	[2285] = {
 		items = {
-			{itemId = 2356}
+			{itemId = 3243}
 		},
 		storage = Storage.DjinnWar.EfreetFaction.Mission03,
 		formerValue = 1,
 		newValue = 2,
-		needItem = {itemId = 2344},
+		needItem = {itemId = 3231},
 		effect = CONST_ME_MAGIC_BLUE
 	},
 	[2286] = {
@@ -39,12 +39,12 @@ local config = {
 	},
 	[3024] = {
 		items = {
-			{itemId = 2356}
+			{itemId = 3243}
 		},
 		storage = Storage.DjinnWar.MaridFaction.Mission03,
 		formerValue = 1,
 		newValue = 2,
-		needItem = {itemId = 2344},
+		needItem = {itemId = 3231},
 		effect = CONST_ME_MAGIC_RED
 	},
 	[3062] = {
@@ -150,7 +150,7 @@ local config = {
 	},
 	[9226] = {
 		items = {
-			{itemId = 2503}
+			{itemId = 3397}
 		},
 		storage = Storage.SamsOldBackpack,
 		formerValue = 2,

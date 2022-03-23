@@ -87,16 +87,16 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Mission check
 	elseif MsgContains(message, "mission") then
-		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) > 3
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) > 3
+		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) > 4
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) > 4
 		and player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) < 26
 		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) < 26
-		or player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 7
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 7
-		or player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 16
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 16
-		or player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) == 4
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 4 then
+		or player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 8
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 8
+		or player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 17
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 17
+		or player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) == 5
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 5 then
 			npcHandler:say("The missions available for your rank are the {butterfly hunt}, {plant collection} and {ice delivery}.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) > 25
@@ -183,7 +183,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	-- Mission check
 	-- Pickaxe mission
 	elseif MsgContains(message, "pickaxe") then
-		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) < 4
+		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) < 5
 		or player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) > 1
 		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) < 1
 		or player:getStorageValue(Storage.ExplorerSociety.QuestLine) > 1 then
@@ -193,90 +193,90 @@ local function creatureSayCallback(npc, creature, type, message)
 	-- Pickaxe mission
 	-- Ice delivery
 	elseif MsgContains(message, "ice delivery") then
-		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) == 4
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 4 then
+		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) == 5
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 5 then
 			npcHandler:say({
 				"Our finest minds came up with the theory that deep beneath the ice island of Folda ice can be found that is ancient. To prove this theory we would need a sample of the aforesaid ice ...",
 				"Of course the ice melts away quickly so you would need to hurry to bring it here ...",
 				"Would you like to accept this mission?"
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 4)
-		elseif player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 6
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 6 then
+		elseif player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 7
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 7 then
 			npcHandler:say("Did you get the ice we are looking for?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		end
 	-- Ice delivery
 	-- Butterfly hunt
 	elseif MsgContains(message, "butterfly hunt") then
-		if player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 7
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 7 then
+		if player:getStorageValue(Storage.ExplorerSociety.TheIceDelivery) == 8
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 8 then
 			npcHandler:say("The mission asks you to collect some species of butterflies, are you interested?", npc, creature)
 			npcHandler:setTopic(playerId, 7)
-		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 9
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 9 then
-			npcHandler:say("Did you acquire the purple butterfly we are looking for?", npc, creature)
-			npcHandler:setTopic(playerId, 8)
 		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 10
 		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 10 then
+			npcHandler:say("Did you acquire the purple butterfly we are looking for?", npc, creature)
+			npcHandler:setTopic(playerId, 8)
+		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 11
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 11 then
 			npcHandler:say({
 				"This preparation kit will allow you to collect a blue butterfly you have killed ...",
 				"Just use it on the fresh corpse of a blue butterfly, return the prepared butterfly to me and give me a report of your butterfly hunt."
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
 			player:addItem(4863, 1)
-			player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 11)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 11)
-		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 12
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 12 then
-			npcHandler:say("Did you acquire the blue butterfly we are looking for?", npc, creature)
-			npcHandler:setTopic(playerId, 9)
+			player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 12)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 12)
 		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 13
 		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 13 then
+			npcHandler:say("Did you acquire the blue butterfly we are looking for?", npc, creature)
+			npcHandler:setTopic(playerId, 9)
+		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 14
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 14 then
 			npcHandler:say({
 				"This preparation kit will allow you to collect a red butterfly you have killed ...",
 				"Just use it on the fresh corpse of a red butterfly, return the prepared butterfly to me and give me a report of your butterfly hunt."
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
 			player:addItem(4863, 1)
-			player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 14)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 14)
-		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 15
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 15 then
+			player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 15)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 15)
+		elseif player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 16
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 16 then
 			npcHandler:say("Did you acquire the red butterfly we are looking for?", npc, creature)
 			npcHandler:setTopic(playerId, 10)
 		end
 	-- Butterfly Hunt
 	-- Plant Collection
 	elseif MsgContains(message, "plant collection") then
-		if player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 16
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 16 then
+		if player:getStorageValue(Storage.ExplorerSociety.TheButterflyHunt) == 17
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 17 then
 			npcHandler:say("In this mission we require you to get us some plant samples from Tiquandan plants. Would you like to fulfil this mission?", npc, creature)
 			npcHandler:setTopic(playerId, 11)
-		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 18 
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 18 then
+		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 19 
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 19 then
 			npcHandler:say("Did you acquire the sample of the jungle bells plant we are looking for?", npc, creature)
 			npcHandler:setTopic(playerId, 12)
-		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 19
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 19 then
+		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 20
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 20 then
 			npcHandler:say("Use this botanist's container on a witches cauldron to collect a sample for us. Bring it here and report about your plant collection.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 			player:addItem(4867, 1)
-			player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 20)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 20)
-		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 21
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 21 then
-			npcHandler:say("Did you acquire the sample of the witches cauldron we are looking for?", npc, creature)
-			npcHandler:setTopic(playerId, 13)
+			player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 21)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 21)
 		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 22
 		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 22 then
+			npcHandler:say("Did you acquire the sample of the witches cauldron we are looking for?", npc, creature)
+			npcHandler:setTopic(playerId, 13)
+		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 23
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 23 then
 			npcHandler:say("Use this botanist\'s container on a giant jungle rose to obtain a sample for us. Bring it here and report about your plant collection.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 			player:addItem(4867, 1)
-			player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 23)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 23)
-		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 24
-		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 24 then
+			player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 24)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 24)
+		elseif player:getStorageValue(Storage.ExplorerSociety.ThePlantCollection) == 25
+		and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 25 then
 			npcHandler:say("Did you acquire the sample of the giant jungle rose we are looking for?", npc, creature)
 			npcHandler:setTopic(playerId, 14)
 		end
@@ -390,8 +390,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 1)
 		elseif npcHandler:getTopic(playerId) == 3 then
 			if player:removeItem(4845, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.JoiningTheExplorers, 4)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 4)
+				player:setStorageValue(Storage.ExplorerSociety.JoiningTheExplorers, 5)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 5)
 				npcHandler:say({
 					"Excellent, you brought just the tool we need! Of course it was only a simple task. However ...",
 					"I officially welcome you to the explorer society. From now on you can ask for missions to improve your rank."
@@ -399,8 +399,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 4 then
-			player:setStorageValue(Storage.ExplorerSociety.TheIceDelivery, 5)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 5)
+			player:setStorageValue(Storage.ExplorerSociety.TheIceDelivery, 6)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 6)
 			npcHandler:say({
 				"So listen please: Take this ice pick and use it on a block of ice in the caves beneath Folda. Get some ice and bring it here as fast as you can ...",
 				"Should the ice melt away, report on your ice delivery mission anyway. I will then tell you if the time is right to start another mission."
@@ -409,21 +409,21 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addItem(4872, 1)
 		elseif npcHandler:getTopic(playerId) == 5 then
 			if player:removeItem(4837, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.TheIceDelivery, 7)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 7)
+				player:setStorageValue(Storage.ExplorerSociety.TheIceDelivery, 8)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 8)
 				npcHandler:say("Just in time. Sadly not much ice is left over but it will do. Thank you again.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 6 then
-			player:setStorageValue(Storage.ExplorerSociety.TheIceDelivery, 5)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 5)
+			player:setStorageValue(Storage.ExplorerSociety.TheIceDelivery, 6)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 6)
 			npcHandler:say("*Sigh* I think the time is right to grant you another chance to get that ice. Hurry up this time.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 
 		-- Butterfly Hunt
 		elseif npcHandler:getTopic(playerId) == 7 then
-			player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 8)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 8)
+			player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 9)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 9)
 			npcHandler:say({
 				"This preparation kit will allow you to collect a purple butterfly you have killed ...",
 				"Just use it on the fresh corpse of a purple butterfly, return the prepared butterfly to me and give me a report of your butterfly hunt."
@@ -432,44 +432,44 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addItem(4863, 1)
 		elseif npcHandler:getTopic(playerId) == 8 then
 			if player:removeItem(4864, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 10)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 10)
+				player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 11)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 11)
 				npcHandler:say("A little bit battered but it will do. Thank you! If you think you are ready, ask for another butterfly hunt.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 9 then
 			if player:removeItem(4865, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 13)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 13)
+				player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 14)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 14)
 				npcHandler:say("A little bit battered but it will do. Thank you! If you think you are ready, ask for another butterfly hunt.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 10 then
 			if player:removeItem(4866, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 16)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 16)
+				player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 17)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 17)
 				npcHandler:say("That is an extraordinary species you have brought. Thank you! That was the last butterfly we needed.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
 		-- Butterfly Hunt
 		-- Plant Collection
 		elseif npcHandler:getTopic(playerId) == 11 then
-			player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 17)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 17)
+			player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 18)
+			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 18)
 			npcHandler:say("Fine! Here take this botanist's container. Use it on a jungle bells plant to collect a sample for us. Report about your plant collection when you have been successful.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 			player:addItem(4867, 1)
 		elseif npcHandler:getTopic(playerId) == 12 then
 			if player:removeItem(4868, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 19)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 19)
+				player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 20)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 20)
 				npcHandler:say("I see. It seems you've got some quite useful sample by sheer luck. Thank you! Just tell me when you are ready to continue with the plant collection.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 13 then
 			if player:removeItem(4869, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 22)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 22)
+				player:setStorageValue(Storage.ExplorerSociety.ThePlantCollection, 23)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 23)
 				npcHandler:say("Ah, finally. I started to wonder what took you so long. But thank you! Another fine sample, indeed. Just tell me when you are ready to continue with the plant collection.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
@@ -690,14 +690,6 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-local function onTradeRequest(npc, creature)
-	if Player(creature):getStorageValue(Storage.ExplorerSociety.TheAstralPortals) ~= 56 then
-		return false
-	end
-
-	return true
-end
-
 npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 
@@ -706,7 +698,7 @@ npcConfig.shop = {
 	{ itemName = "atlas", clientId = 6108, buy = 150 },
 	{ itemName = "botanist s container", clientId = 4867, buy = 500 },
 	{ itemName = "butterfly conservation kit", clientId = 4863, buy = 250 },
-	{ itemName = "crown backpack", clientId = 9605, buy = 800 },
+	{ itemName = "crown backpack", clientId = 9605, buy = 800, storageKey = Storage.ExplorerSociety.TheAstralPortals, storageValue = 56},
 	{ itemName = "ectoplasm container", clientId = 4852, buy = 750 },
 	{ itemName = "explorer brooch", clientId = 4871, sell = 50 },
 	{ itemName = "giant smithhammer", clientId = 12510, sell = 250 },
