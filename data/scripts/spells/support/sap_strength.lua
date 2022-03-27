@@ -18,7 +18,6 @@ end
 
 local combat = Combat()
 combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_MORTAREA)
-combat:setArea(createCombatArea(AREA_CIRCLE3X3))
 combat:setCallback(CALLBACK_PARAM_TARGETCREATURE, "onTargetCreature")
 
 local spell = Spell("instant")
