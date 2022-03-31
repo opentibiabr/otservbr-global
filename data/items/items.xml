@@ -34685,7 +34685,7 @@
 	<item id="21391" article="an" name="ornamented stone pedestal">
 		<attribute key="description" value="The surface is covered with strange carvings."/>
 	</item>
-	<item id="21392" article="a" name="silver key (Key:0010)" editorsuffix="(from thieves guild dawnport quest)">
+	<item id="21392" article="a" name="silver key (Key:0010)" editorsuffix="(from dawnport quest)">
 		<attribute key="description" value="This could be the key to a room in the outpost"/>
 		<attribute key="weight" value="100"/>
 	</item>
