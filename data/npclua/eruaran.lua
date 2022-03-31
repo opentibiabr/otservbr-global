@@ -56,6 +56,11 @@ local action = {}
 local weapon = {}
 local weapon_sub = {}
 
+-- Messages
+local newAddon = 'Here you are, enjoy your brand new addon!'
+local noItems = 'You do not have all the required items.'
+local alreadyHaveAddon = 'It seems you already have this addon, don\'t you try to mock me son!'
+
 local Config = {
 	Create = {
 		Clusters = 20,
@@ -150,7 +155,7 @@ local function dreamFirst(npc, creature, message, keywords, parameters, node)
 		if getPlayerStorageValue(creature, storage) == -1 then
 			if getPlayerItemCount(creature,20276) >= 1 then
 				if doPlayerRemoveItem(creature,20276,1) then
-					selfSay(newaddon, npc, creature)
+					npcHandler:say(newAddon, npc, creature)
 
 					doSendMagicEffect(getCreaturePosition(creature), 13)
 					doPlayerAddOutfit(creature, 577, 1)
@@ -158,10 +163,10 @@ local function dreamFirst(npc, creature, message, keywords, parameters, node)
 					setPlayerStorageValue(creature, storage,1)
 				end
 			else
-				selfSay(noitems, npc, creature)
+				npcHandler:say(noItems, npc, creature)
 			end
 		else
-			selfSay(already, npc, creature)
+			npcHandler:say(alreadyHaveAddon, npc, creature)
 		end
 	end
 
@@ -172,7 +177,7 @@ local function dreamSecond(npc, creature, message, keywords, parameters, node)
 		if getPlayerStorageValue(creature, storage + 1) == -1 then
 			if getPlayerItemCount(creature,20275) >= 1 then
 				if doPlayerRemoveItem(creature,20275,1) then
-					selfSay(newaddon, npc, creature)
+					npcHandler:say(newAddon, npc, creature)
 					
 					doSendMagicEffect(getCreaturePosition(creature), 13)
 					doPlayerAddOutfit(creature, 577, 2)
@@ -180,10 +185,10 @@ local function dreamSecond(npc, creature, message, keywords, parameters, node)
 					setPlayerStorageValue(creature, storage+1,1)
 				end
 			else
-				selfSay(noitems, npc, creature)
+				npcHandler:say(noItems, npc, creature)
 			end
 		else
-			selfSay(already, npc, creature)
+			npcHandler:say(alreadyHaveAddon, npc, creature)
 		end
 	end
 	

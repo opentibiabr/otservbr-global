@@ -298,8 +298,8 @@ npcConfig.shop = {
 	{ itemName = "antidote potion", clientId = 7644, buy = 50 },
 	{ itemName = "blueberry", clientId = 3588, sell = 1 },
 	{ itemName = "cookie", clientId = 130, sell = 1 },
-	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 284, sell = 5 },
 	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
 	{ itemName = "small health potion", clientId = 7876, buy = 20 },
 	{ itemName = "vial", clientId = 2874, sell = 5 }

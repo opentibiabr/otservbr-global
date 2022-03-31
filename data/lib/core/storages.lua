@@ -768,7 +768,7 @@ Storage = {
 		Mission49 = 50815,
 		Mission50 = 50816,
 		Mission51 = 50817,
-		Mission50 = 50818,
+		Mission52 = 50818,
 		Mission53 = 50819,
 		Mission54 = 50820,
 		Mission55 = 50821,
@@ -2258,7 +2258,6 @@ Storage = {
 		GraveDanger = {},
 		HandOfTheInquisitionOutfits = {},
 		-- Kilmaresh = {}, done earlier in the file
-		GraveDanger = {},
 		-- update 12.30
 		FeasterOfSouls = {},
 		PoltergeistOutfits = {}
@@ -2423,7 +2422,6 @@ local function extractValues(tab, ret)
 	end
 end
 
-local benchmark = os.clock()
 local extraction = {}
 extractValues(Storage, extraction) -- Call function
 table.sort(extraction) -- Sort the table
@@ -2436,7 +2434,6 @@ if #extraction > 1 then
 		if extraction[i] == extraction[i+1] then
 			Spdlog.warn(string.format("Duplicate storage value found: %d",
 				extraction[i]))
-			Spdlog.warn(string.format("Processed in %.4f(s)", os.clock() - benchmark))
 		end
 	end
 end

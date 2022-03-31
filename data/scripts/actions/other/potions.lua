@@ -259,9 +259,18 @@ function flaskPotion.onUse(player, item, fromPosition, target, toPosition, isHot
 			potion.combat:execute(target, Variant(target:getId()))
 		end
 
+		if not potion.effect then
+			target:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
+		end
+
 		player:addAchievementProgress('Potion Addict', 100000)
 		target:say("Aaaah...", MESSAGE_POTION)
-		player:addItem(potion.flask, 1)
+		if fromPosition.x == CONTAINER_POSITION and not container == store_inbox then
+			local container = Container(item:getParent().uid)
+			container:addItem(potion.flask, 1)
+		else
+			player:addItem(potion.flask, 1)
+		end
 		player:addCondition(exhaust)
 		player:setStorageValue(38412, player:getStorageValue(38412)+1)
 	end
@@ -271,9 +280,7 @@ function flaskPotion.onUse(player, item, fromPosition, target, toPosition, isHot
 	
 	if potion.func then
 		potion.func(player)
-		if potion.text then
-			player:say(potion.text, MESSAGE_POTION)
-		end
+		player:say("Aaaah...", MESSAGE_POTION)
 		player:getPosition():sendMagicEffect(potion.effect)
 	end
 

@@ -56,7 +56,7 @@ keywordHandler:addSpellKeyword({"find", "person"},
 )
 keywordHandler:addSpellKeyword({"great", "light"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Great Light",
 		price = 500,
 		level = 13,
@@ -65,7 +65,7 @@ keywordHandler:addSpellKeyword({"great", "light"},
 )
 keywordHandler:addSpellKeyword({"light"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Light",
 		price = 0,
 		level = 8,
@@ -74,7 +74,7 @@ keywordHandler:addSpellKeyword({"light"},
 )
 keywordHandler:addSpellKeyword({"magic", "rope"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Magic Rope",
 		price = 200,
 		level = 9,
@@ -83,7 +83,7 @@ keywordHandler:addSpellKeyword({"magic", "rope"},
 )
 keywordHandler:addSpellKeyword({"cure", "poison"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Cure Poison",
 		price = 150,
 		level = 10,
@@ -92,7 +92,7 @@ keywordHandler:addSpellKeyword({"cure", "poison"},
 )
 keywordHandler:addSpellKeyword({"intense", "wound", "cleansing"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Intense Wound Cleansing",
 		price = 6000,
 		level = 80,
@@ -101,7 +101,7 @@ keywordHandler:addSpellKeyword({"intense", "wound", "cleansing"},
 )
 keywordHandler:addSpellKeyword({"wound", "cleansing"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Wound Cleansing",
 		price = 0,
 		level = 8,
@@ -110,7 +110,7 @@ keywordHandler:addSpellKeyword({"wound", "cleansing"},
 )
 keywordHandler:addSpellKeyword({"levitate"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Levitate",
 		price = 500,
 		level = 12,
@@ -119,7 +119,7 @@ keywordHandler:addSpellKeyword({"levitate"},
 )
 keywordHandler:addSpellKeyword({"haste"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Haste",
 		price = 600,
 		level = 14,
@@ -128,7 +128,7 @@ keywordHandler:addSpellKeyword({"haste"},
 )
 keywordHandler:addSpellKeyword({"brutal", "strike"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Brutal Strike",
 		price = 1000,
 		level = 16,
@@ -137,7 +137,7 @@ keywordHandler:addSpellKeyword({"brutal", "strike"},
 )
 keywordHandler:addSpellKeyword({"charge"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Charge",
 		price = 1300,
 		level = 25,
@@ -146,7 +146,7 @@ keywordHandler:addSpellKeyword({"charge"},
 )
 keywordHandler:addSpellKeyword({"whirlwind", "throw"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Whirlwind Throw",
 		price = 1500,
 		level = 28,
@@ -155,7 +155,7 @@ keywordHandler:addSpellKeyword({"whirlwind", "throw"},
 )
 keywordHandler:addSpellKeyword({"groundshaker"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Groundshaker",
 		price = 1500,
 		level = 33,
@@ -164,7 +164,7 @@ keywordHandler:addSpellKeyword({"groundshaker"},
 )
 keywordHandler:addSpellKeyword({"fierce", "berserk"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Fierce Berserk",
 		price = 7500,
 		level = 90,
@@ -173,7 +173,7 @@ keywordHandler:addSpellKeyword({"fierce", "berserk"},
 )
 keywordHandler:addSpellKeyword({"berserk"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Berserk",
 		price = 2500,
 		level = 35,
@@ -182,7 +182,7 @@ keywordHandler:addSpellKeyword({"berserk"},
 )
 keywordHandler:addSpellKeyword({"inflict", "wound"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Inflict Wound",
 		price = 2500,
 		level = 40,
@@ -191,7 +191,7 @@ keywordHandler:addSpellKeyword({"inflict", "wound"},
 )
 keywordHandler:addSpellKeyword({"cure", "bleeding"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Cure Bleeding",
 		price = 2500,
 		level = 45,
@@ -200,7 +200,7 @@ keywordHandler:addSpellKeyword({"cure", "bleeding"},
 )
 keywordHandler:addSpellKeyword({"intense", "recovery"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Intense Recovery",
 		price = 10000,
 		level = 100,
@@ -209,7 +209,7 @@ keywordHandler:addSpellKeyword({"intense", "recovery"},
 )
 keywordHandler:addSpellKeyword({"recovery"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Recovery",
 		price = 4000,
 		level = 50,
@@ -218,7 +218,7 @@ keywordHandler:addSpellKeyword({"recovery"},
 )
 keywordHandler:addSpellKeyword({"front", "sweep"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Front Sweep",
 		price = 4000,
 		level = 70,
@@ -227,7 +227,7 @@ keywordHandler:addSpellKeyword({"front", "sweep"},
 )
 keywordHandler:addSpellKeyword({"annihilation"},
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		spellName = "Annihilation",
 		price = 20000,
 		level = 110,
@@ -237,28 +237,28 @@ keywordHandler:addSpellKeyword({"annihilation"},
 
 keywordHandler:addKeyword({"healing", "spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = "In this category I have '{Bruise Bane}', '{Cure Bleeding}', '{Wound Cleansing}', \z
 		'{Cure Poison}'', '{Intense Wound Cleansing}'', '{Recovery}'' and '{Intense Recovery}''."
 	}
 )
 keywordHandler:addKeyword({"attack", "spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = {"In this category I have '{Whirlwind Throw}', '{Groundshaker}', '{Berserk}' and \z
 		'{Fierce Berserk}' as well as ...', ''{Brutal Strike}', '{Front Sweep}', '{Inflict Wound}' and '{Annihilation}'"}
 	}
 )
 keywordHandler:addKeyword({"support", "spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = "In this category I have '{Light}', '{Find Person}', '{Magic Rope}', '{Levitate}', \z
 		'{Haste}', '{Charge}' and '{Great Light}'."
 	}
 )
 keywordHandler:addKeyword({"spells"}, StdModule.say,
 	{
-		npcHandle = npcHandler,
+		npcHandler = npcHandler,
 		text = "I can teach you {healing spells}, {attack spells} and {support spells}. \z
 		What kind of spell do you wish to learn? \z
 		You can also tell me for which level you would like to learn a spell, if you prefer that."

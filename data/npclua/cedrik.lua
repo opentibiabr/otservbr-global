@@ -203,6 +203,7 @@ npcConfig.shop = {
 	{ itemName = "quiver", clientId = 35562, buy = 400 },
 	{ itemName = "rapier", clientId = 3272, buy = 15 },
 	{ itemName = "red quiver", clientId = 35849, buy = 400 },
+	{ itemName = "royal spear", clientId = 7378, buy = 15 },
 	{ itemName = "sabre", clientId = 3273, buy = 35 },
 	{ itemName = "scale armor", clientId = 3377, buy = 260 },
 	{ itemName = "shiver arrow", clientId = 762, buy = 5 },

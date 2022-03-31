@@ -25,8 +25,7 @@ function mawhawk.onThink(interval, lastExecution)
         return true
     end
     addEvent(Game.broadcastMessage, 150, 'Beware! Mawhawk!', MESSAGE_EVENT_ADVANCE)
-    local boss =
-    Game.createMonster(config.monsterName, config.bossPosition, true, true)
+    local boss = Game.createMonster(config.monsterName, config.bossPosition, true, true)
     boss:setReward(true)
     return true
 end

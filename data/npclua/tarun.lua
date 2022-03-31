@@ -55,8 +55,8 @@ npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
 	{ itemName = "colourful feather", clientId = 11514, sell = 110 },
-	{ itemName = "empty strong potion flask", clientId = 283, sell = 5 },
-	{ itemName = "empty great potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 283, sell = 5 },
+	{ itemName = "empty potion flask", clientId = 284, sell = 5 },
 	{ itemName = "empty potion flask", clientId = 285, sell = 5 },
 	{ itemName = "golden lotus brooch", clientId = 21974, sell = 270 },
 	{ itemName = "great health potion", clientId = 239, buy = 225 },
