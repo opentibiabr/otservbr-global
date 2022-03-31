@@ -34685,6 +34685,7 @@
 	<item id="21391" article="an" name="ornamented stone pedestal">
 		<attribute key="description" value="The surface is covered with strange carvings."/>
 	</item>
+	<!-- Not add tag "<attribute key="type" value="key"/>", this item is used only for the downport quest"-->
 	<item id="21392" article="a" name="silver key (Key:0010)" editorsuffix="(from dawnport quest)">
 		<attribute key="description" value="This could be the key to a room in the outpost"/>
 		<attribute key="weight" value="100"/>
