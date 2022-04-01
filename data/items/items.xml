@@ -47286,8 +47286,8 @@
 		<attribute key="weight" value="8000"/>
 	</item>
 	<item fromid="30374" toid="30392" name="RESERVED SPRITE"/>
-		<item id="30393" article="a" name="cobra crossbow">
-		        <attribute key="weaponType" value="distance"/>
+	<item id="30393" article="a" name="cobra crossbow">
+		<attribute key="weaponType" value="distance"/>
 		<attribute key="slotType" value="two-handed"/>
              <attribute key="ammotype" value="bolt"/>
 		<attribute key="loottype" value="distance"/>
