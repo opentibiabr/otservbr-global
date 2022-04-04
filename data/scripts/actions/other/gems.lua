@@ -33,7 +33,7 @@ local shrine = {
 }
 
 local lionsRock = {
-	[22350] = {
+	[25006] = {
 		itemId = 21442,
 		itemPos = {x = 33069, y = 32298, z = 9},
 		storage = Storage.LionsRock.Questline,
@@ -43,7 +43,7 @@ local lionsRock = {
 		message = "You place the ruby on the small socket. A red flame begins to burn.",
 		effect = CONST_ME_MAGIC_RED
 	},
-	[22351] = {
+	[25007] = {
 		itemId = 21442,
 		itemPos = {x = 33069, y = 32302, z = 9},
 		storage = Storage.LionsRock.Questline,
@@ -53,7 +53,7 @@ local lionsRock = {
 		message = "You place the sapphire on the small socket. A blue flame begins to burn.",
 		effect = CONST_ME_MAGIC_BLUE
 	},
-	[22352] = {
+	[25008] = {
 		itemId = 21440,
 		itemPos = {x = 33077, y = 32302, z = 9},
 		storage = Storage.LionsRock.Questline,
@@ -63,7 +63,7 @@ local lionsRock = {
 		message = "You place the amethyst on the small socket. A violet flame begins to burn.",
 		effect = CONST_ME_PURPLESMOKE
 	},
-	[22353] = {
+	[25009] = {
 		itemId = 21437,
 		itemPos = {x = 33077, y = 32298, z = 9},
 		storage = Storage.LionsRock.Questline,
