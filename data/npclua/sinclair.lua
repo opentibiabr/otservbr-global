@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if MsgContains(message, 'mission') then
 		local qStorage = player:getStorageValue(Storage.SpiritHunters.Mission01)
 		if qStorage == 3 then
-			npcHandler:say("So, did you find anything worth examining? Did you actually catch a ghost?",creature)
+			npcHandler:say("So, did you find anything worth examining? Did you actually catch a ghost?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		elseif qStorage == 2 then
 			npcHandler:say({"So you have passed Spectulus' acceptance test. Well, I'm sure you will live up to that. ...",
@@ -88,10 +88,10 @@ local function creatureSayCallback(npc, creature, type, message)
 							}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		elseif qStorage > 2 then
-			npcHandler:say("You already done this quest.",creature)
+			npcHandler:say("You already done this quest.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif qStorage < 2 then
-			npcHandler:say("Talk research with spectulus to take some mission.",creature)
+			npcHandler:say("Talk research with spectulus to take some mission.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, 'yes') then
