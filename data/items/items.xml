@@ -17453,7 +17453,7 @@
 	<item id="8083" article="a" name="northwind rod">
 		<attribute key="description" value="It was made by one of the shamans in Svargrond and symbolises an icy mammoth"/>
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="ice"/>
+		<attribute key="shootType" value="smallice"/>
 		<attribute key="range" value="3"/>
 		<attribute key="weight" value="2900"/>
 		<attribute key="upgradeclassification" value="1"/>
@@ -40020,7 +40020,7 @@
 	<item id="25700" article="a" name="dream blossom staff">
 		<attribute key="description" value="It's a gnarly branch with a gleaming blue blossom"/>
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="death"/>
+		<attribute key="shootType" value="energy"/>
 		<attribute key="magicpoints" value="2"/>
 		<attribute key="range" value="4"/>
 		<attribute key="weight" value="3200"/>
@@ -40192,6 +40192,7 @@
 	<item id="25760" article="a" name="wand of darkness">
 		<attribute key="description" value="Temporary magic powers enchant this staff."/>
 		<attribute key="weaponType" value="wand"/>
+		<attribute key="shootType" value="death"/>
 		<attribute key="stopduration" value="0"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="magicpoints" value="2"/>
@@ -42387,7 +42388,7 @@
 	</item>
 	<item id="27458" article="a" name="rod of destruction">
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="ice"/>
+		<attribute key="shootType" value="smallice"/>
 		<attribute key="magicpoints" value="2"/>
 		<attribute key="range" value="4"/>
 		<attribute key="weight" value="3500"/>
@@ -44443,7 +44444,7 @@
 	</item>
 	<item id="28716" article="a" name="falcon rod">
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="smallearth"/>
+		<attribute key="shootType" value="earth"/>
 		<attribute key="absorbpercentenergy" value="8"/>
 		<attribute key="magicpoints" value="3"/>
 		<attribute key="range" value="5"/>
@@ -47383,6 +47384,7 @@
 	</item>
 	<item id="30399" name="cobra wand">
 		<attribute key="weaponType" value="wand"/>
+		<attribute key="shootType" value="energy"/>
 		<attribute key="magicpoints" value="2"/>
 		<attribute key="criticalhitdamage" value="35"/>
 		<attribute key="criticalhitchance" value="10"/>
@@ -47397,6 +47399,7 @@
 	</item>
 	<item id="30400" name="cobra rod">
 		<attribute key="weaponType" value="wand"/>
+		<attribute key="shootType" value="smallearth"/>
 		<attribute key="magicpoints" value="2"/>
 		<attribute key="lifeleechamount" value="18"/>
 		<attribute key="lifeleechchance" value="100"/>
@@ -54639,7 +54642,7 @@
 	</item>
 	<item id="36674" article="a" name="eldritch rod">
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="ice"/>
+		<attribute key="shootType" value="smallice"/>
 		<attribute key="loottype" value="wand"/>
 		<attribute key="absorbpercentpoison" value="4"/>
 		<attribute key="magicpoints" value="2"/>
@@ -54658,7 +54661,7 @@
 	<item id="36675" article="a" name="gilded eldritch rod">
 		<attribute key="description" value="Refined by the legendary artisan Gnomaurum"/>
 		<attribute key="weaponType" value="wand"/>
-		<attribute key="shootType" value="ice"/>
+		<attribute key="shootType" value="smallice"/>
 		<attribute key="loottype" value="wand"/>
 		<attribute key="absorbpercentpoison" value="4"/>
 		<attribute key="magicpoints" value="2"/>
