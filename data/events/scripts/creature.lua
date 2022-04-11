@@ -112,6 +112,13 @@ function Creature:onTargetCombat(target)
 		end
 	end
 
+	local master = self:getMaster()
+	if master and target:isPlayer() then
+		if master:hasSecureMode() or not master:isPzLocked() then
+			return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER
+		end
+	end
+
 	self:addEventStamina(target)
 	return true
 end
