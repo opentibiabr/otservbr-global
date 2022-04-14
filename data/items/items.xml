@@ -34704,6 +34704,7 @@
 	<item fromid="21398" toid="21399" article="a" name="dead goblin"/>
 	<item id="21400" article="a" name="spellbook of the novice">
 		<attribute key="description" value="It shows your spells and can also shield against attacks when worn"/>
+		<attribute key="weaponType" value="shield"/>
 		<attribute key="defense" value="8"/>
 		<attribute key="weight" value="1400"/>
 	</item>
