@@ -54230,6 +54230,11 @@
 		<attribute key="loottype" value="creatureproduct"/>
 		<attribute key="weight" value="1000"/>
 	</item>
+	<item id="36084" article="a" name="sleeping carnisylvan"/>
+	<item fromid="36094" toid="36096" article="a" name="sleeping carnisylvan"/>
+	<item fromid="36276" toid="36293" article="an" name="eldritch floor"/>
+	<item fromid="36344" toid="36362" article="a" name="hardened eldritch floor"/>
+	<item id="36363" article="an" name="eldritch floor"/>
 	<item fromid="36415" toid="36429" article="a" name="wall"/>
 	<item fromid="36430" toid="36434" article="a" name="buttress"/>
 	<item fromid="36435" toid="36439" article="a" name="wall"/>
@@ -54251,6 +54256,9 @@
 	<item id="36450" article="a" name="ramp">
 		<attribute key="floorchange" value="south"/>
 	</item>
+	<item fromid="36451" toid="36464" article="a" name="wall"/>
+	<item id="36466" article="a" name="buttress"/>
+	<item fromid="36467" toid="36475" article="a" name="wall"/>
 	<item fromid="36478" toid="36481" article="a" name="banor doll">
 		<attribute key="description" value="Imbued with the undying soul of the first human, it bestows the might of the gods to its owner. Awarded by TibiArt.net"/>
 		<attribute key="loottype" value="creatureproduct"/>
@@ -54859,6 +54867,7 @@
 		<attribute key="decayTo" value="36700"/>
 		<attribute key="containersize" value="30"/>
 	</item>
+	<item fromid="36703" toid="36705" article="a" name="gnomish sanitizer"/>
 	<item id="36706" article="a" name="red gem">
 		<attribute key="loottype" value="creatureproduct"/>
 		<attribute key="weight" value="30"/>
@@ -55810,6 +55819,7 @@
 	<item id="37114" article="an" name="armillary sphere">
 		<attribute key="description" value="It's a sphere with models of the celestial bodies in the sky, used when navigating. TibiaMaps.io have used this sphere on their adventures to explore the Tibian lands"/>
 	</item>
+	<item fromid="37115" toid="37159" article="an" name="exaltation forge"/>
 	<item id="37161" article="a" name="bronze cup" plural="bronze cups"/>
 	<item id="37162" article="a" name="silver cup" plural="silver cups"/>
 	<item id="37163" article="a" name="gold cup" plural="gold cups"/>
@@ -55978,6 +55988,7 @@
 	<item id="37613" name="Morshabaal's brain" />
 	<item id="37614" name="box full of decoration" />
 	<item id="37700" name="kraken watcher lamp"/>
+	<item id="37703" name="metal wall"/>
 	<item id="37708" name="old health potion">
 		<attribute key="description" value="This health potion could not save the poor woman who fell victim to a giant spider on the island of Calcanea" />
 	</item>
