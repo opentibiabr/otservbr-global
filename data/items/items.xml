@@ -53598,6 +53598,10 @@
 		<attribute key="description" value="It is embroidered with the letter E"/>
 		<attribute key="weight" value="50"/>
 	</item>
+	<item id="35502" article="a" name="magic portal">
+		<attribute key="type" value="teleport"/>
+		<attribute key="effect" value="teleport"/>
+	</item>
 	<item id="35508" article="a" name="cheesy key">
 		<attribute key="weight" value="250"/>
 	</item>
