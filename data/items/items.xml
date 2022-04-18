@@ -54226,6 +54226,27 @@
 		<attribute key="loottype" value="creatureproduct"/>
 		<attribute key="weight" value="1000"/>
 	</item>
+	<item fromid="36415" toid="36429" article="a" name="wall"/>
+	<item fromid="36430" toid="36434" article="a" name="buttress"/>
+	<item fromid="36435" toid="36439" article="a" name="wall"/>
+	<item id="36440" article="a" name="buttress"/>
+	<item fromid="36441" toid="36442" article="a" name="wall"/>
+	<item id="36443" article="a" name="ramp"/>
+	<item id="36444" article="a" name="ramp">
+		<attribute key="floorchange" value="north"/>
+	</item>
+	<item id="36445" article="a" name="ramp"/>
+	<item id="36446" article="a" name="ramp">
+		<attribute key="floorchange" value="west"/>
+	</item>
+	<item id="36447" article="a" name="ramp"/>
+	<item id="36448" article="a" name="ramp">
+		<attribute key="floorchange" value="east"/>
+	</item>
+	<item id="36449" article="a" name="ramp"/>
+	<item id="36450" article="a" name="ramp">
+		<attribute key="floorchange" value="south"/>
+	</item>
 	<item fromid="36478" toid="36481" article="a" name="banor doll">
 		<attribute key="description" value="Imbued with the undying soul of the first human, it bestows the might of the gods to its owner. Awarded by TibiArt.net"/>
 		<attribute key="loottype" value="creatureproduct"/>
