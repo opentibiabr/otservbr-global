@@ -243,7 +243,7 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 	end
 
 	if item:getActionId() == 5500 then -- Essence of Malice
-		if player:getPosition() == Position(33095, 31943, 15) and item:getId() == 9826 then
+		if player:getPosition() == Position(33095, 31943, 15) and item:getId() == 8912 then
 			local teleport = 0
 			for i = 31943, 31947, 1 do
 				local newpos = Position(33095, i, 15)
@@ -297,7 +297,7 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 	end
 
 	if item:getActionId() == 5503 then -- The Sinister Hermit
-	if player:getPosition() == Position(33127, 31892, 15) and item:getId() == 9826 then
+	if player:getPosition() == Position(33127, 31892, 15) and item:getId() == 8912 then
 		local teleport = 0
 		for i = 31892, 31896, 1 do
 			local newpos = Position(33127, i, 15)
@@ -343,7 +343,7 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 end
 
 	if item:getActionId() == 5504 then -- Boss do orc
-		if player:getPosition() == Position(33164, 31859, 15) and item:getId() == 9826 then
+		if player:getPosition() == Position(33164, 31859, 15) and item:getId() == 8912 then
 			local teleport = 0
 			for y = 31859, 31863, 1 do
 				local newpos = Position(33164, y, 15)
@@ -430,7 +430,7 @@ end
 		end
 	end
 	if item:getActionId() == 5505 then -- Boss da areia
-		if player:getPosition() == Position(33507, 32228, 10) and item:getId() == 9826 then
+		if player:getPosition() == Position(33507, 32228, 10) and item:getId() == 8912 then
 			local teleport = 0
 			for _y = 32228, 32232, 1 do
 				local newpos = Position(33507, _y, 10)
@@ -488,7 +488,7 @@ end
 
 	-- final boss
 	if item:getActionId() == 5506 then
-		if player:getPosition() == Position(33074, 31884, 15) and item:getId() == 9826 then
+		if player:getPosition() == Position(33074, 31884, 15) and item:getId() == 8912 then
 			local convertTable = {}
 			convertTable[#convertTable + 1] = player:getId()
 
