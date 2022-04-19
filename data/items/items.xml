@@ -55988,7 +55988,7 @@
 	<item id="37613" name="Morshabaal's brain" />
 	<item id="37614" name="box full of decoration" />
 	<item id="37700" name="kraken watcher lamp"/>
-	<item id="37703" name="metal wall"/>
+	<item id="37703" name="iron wall"/>
 	<item id="37708" name="old health potion">
 		<attribute key="description" value="This health potion could not save the poor woman who fell victim to a giant spider on the island of Calcanea" />
 	</item>
