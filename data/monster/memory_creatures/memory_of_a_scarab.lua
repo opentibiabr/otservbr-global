@@ -74,8 +74,9 @@ monster.loot = {
 	{name = "small emerald", chance = 4810, maxCount = 3},
 	{name = "small amethyst", chance = 5000, maxCount = 4},
 	{name = "scarab coin", chance = 7692, maxCount = 2},
-	{id = 3046, chance = 11480},
+	{id = 3046, chance = 11480}, -- magic light wand
 	{name = "plate armor", chance = 10300},
+	{name = "special fx box", chance = 1500},
 	{name = "strong health potion", chance = 660}
 }
 

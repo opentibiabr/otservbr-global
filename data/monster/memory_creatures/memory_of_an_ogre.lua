@@ -69,9 +69,9 @@ monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 121},
 	{name = "strong health potion", chance = 18830, maxCount = 2},
 	{name = "onyx chip", chance = 9800},
-	{id = 3050, chance = 5070}, -- Power ring
+	{id = 3050, chance = 5070}, -- power ring
 	{name = "small ruby", chance = 7430, maxCount = 2},
-	{id = 3093, chance = 810}, -- Club ring
+	{id = 3093, chance = 810}, -- club ring
 	{name = "small stone", chance = 13890, maxCount = 3},
 	{id = 37531, chance = 5155}, -- candy floss
 	{name = "white pearl", chance = 530},

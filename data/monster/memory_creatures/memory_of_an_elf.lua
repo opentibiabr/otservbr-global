@@ -68,7 +68,7 @@ monster.loot = {
 	{name = "gold coin", chance = 37000, maxCount = 70},
 	{name = "candlestick", chance = 2100},
 	{name = "bread", chance = 14000},
-	{id = 3509, chance = 1000},
+	{id = 3509, chance = 1000}, -- inkwell
 	{name = "green tunic", chance = 7000},
 	{name = "blank rune", chance = 18000},
 	{name = "wand of cosmic energy", chance = 1160},

@@ -70,6 +70,7 @@ monster.loot = {
 	{name = "platinum coin", chance = 15000, maxCount = 3},
 	{id = 37531, chance = 5155}, -- candy floss
 	{name = "bottle of champagne", chance = 7280},
+	{name = "special fx box", chance = 1500},
 	{name = "violet crystal shard", chance = 5000}
 }
 

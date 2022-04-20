@@ -61,6 +61,7 @@ monster.loot = {
 	{name = "great spirit potion", chance = 100000, maxCount = 2},
 	{name = "onyx chip", chance = 1500},
 	{name = "small diamond", chance = 1500, maxCount = 2},
+	{name = "special fx box", chance = 1500},
 	{name = "small enchanted ruby", chance = 5000, maxCount = 2}
 }
 

@@ -65,14 +65,14 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 40000, maxCount = 30},
 	{name = "small amethyst", chance = 140},
-	{id = 3092, chance = 190}, -- Axe ring
+	{id = 3092, chance = 190}, -- axe ring
 	{name = "battle hammer", chance = 4000},
 	{name = "steel helmet", chance = 1600},
 	{name = "scale armor", chance = 9200},
 	{name = "battle shield", chance = 6000},
 	{name = "white mushroom", chance = 55000, maxCount = 2},
 	{name = "health potion", chance = 380},
-	{id = 12600, chance = 280}
+	{id = 12600, chance = 280} -- coal
 }
 
 monster.attacks = {

@@ -75,6 +75,7 @@ monster.loot = {
 	{name = "strange helmet", chance = 420},
 	{name = "vampire shield", chance = 230},
 	{name = "grave flower", chance = 1910},
+	{name = "special fx box", chance = 1500},
 	{name = "strong health potion", chance = 1500}
 }
 
