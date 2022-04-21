@@ -155,7 +155,6 @@ local function dreamFirst(npc, creature, message, keywords, parameters, node)
 			if getPlayerItemCount(creature,20276) >= 1 then
 				if doPlayerRemoveItem(creature,20276,1) then
 					npcHandler:say(newAddon, npc, creature)
-					
 					doSendMagicEffect(getCreaturePosition(creature), 13)
 					doPlayerAddOutfit(creature, 577, 1)
 					doPlayerAddOutfit(creature, 578, 1)
@@ -176,7 +175,6 @@ local function dreamSecond(npc, creature, message, keywords, parameters, node)
 			if getPlayerItemCount(creature,20275) >= 1 then
 				if doPlayerRemoveItem(creature,20275,1) then
 					npcHandler:say(newAddon, npc, creature)
-
 					doSendMagicEffect(getCreaturePosition(creature), 13)
 					doPlayerAddOutfit(creature, 577, 2)
 					doPlayerAddOutfit(creature, 578, 2)
