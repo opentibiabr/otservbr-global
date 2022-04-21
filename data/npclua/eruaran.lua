@@ -168,7 +168,6 @@ local function dreamFirst(npc, creature, message, keywords, parameters, node)
 			npcHandler:say(alreadyHaveAddon, npc, creature)
 		end
 	end
-	
 end
 
 local function dreamSecond(npc, creature, message, keywords, parameters, node)
@@ -190,7 +189,6 @@ local function dreamSecond(npc, creature, message, keywords, parameters, node)
 			npcHandler:say(alreadyHaveAddon, npc, creature)
 		end
 	end
-
 end
 -- dream END --
 
