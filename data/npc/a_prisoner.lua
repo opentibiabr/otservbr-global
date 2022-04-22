@@ -88,7 +88,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		elseif npcHandler:getTopic(playerId) == 5 then
 			player:setStorageValue(Storage.Quest.MadMageRoom.APrisoner, 1)
 			npcHandler:say("Then take it and get happy - or die, hehe.", npc, creature)
-			local key = player:addItem(2088, 1)
+			local key = player:addItem(2969, 1)
 			if key then
 				key:setActionId(Storage.Quest.Key.ID3666)
 			end

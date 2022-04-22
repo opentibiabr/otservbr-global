@@ -121,7 +121,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"I'l say I'm blown away but a Klom Stonecutter is not that easily impressed. Still, your got your hands dirt for us and I appreciate that."}, npc, creature)
 			-- Entregando surprise jar + 1 ponto de missão!
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.TimeTaskSubterranean, os.time() + tempo)
-			player:addItem(32014, 1)
+			player:addItem(27654, 1)
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Status, player:getStorageValue(Storage.DangerousDepths.Dwarves.Status) + 1)
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Subterranean, 2)
 			npcHandler:setTopic(playerId, 1)
@@ -164,7 +164,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			-- Entregando surprise jar + 1 ponto de missão!
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.TimeTaskHome, os.time() + tempo)
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Home, 2)
-			player:addItem(32014, 1)
+			player:addItem(27654, 1)
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Status, player:getStorageValue(Storage.DangerousDepths.Dwarves.Status) + 1)
 			npcHandler:setTopic(playerId, 1)
 		npcHandler:setTopic(playerId, 1)
@@ -173,7 +173,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			-- Entregando 2 surprise jars + 2 pontos de missão!
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.TimeTaskHome, os.time() + tempo)
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Home, 2)
-			player:addItem(32014, 2) -- +1 item pela task bônus!
+			player:addItem(27654, 2) -- +1 item pela task bônus!
 			player:setStorageValue(Storage.DangerousDepths.Dwarves.Status, player:getStorageValue(Storage.DangerousDepths.Dwarves.Status) + 2) -- +1 ponto pela task bônus!
 			npcHandler:setTopic(playerId, 1)
 		end

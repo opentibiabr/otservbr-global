@@ -184,7 +184,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				return true
 			end
 
-			local key = player:addItem(2087, 1)
+			local key = player:addItem(2968, 1)
 			if key then
 				key:setActionId(3940)
 			end

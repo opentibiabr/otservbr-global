@@ -111,7 +111,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say({"Excellent, you returned with more data! Let me see... hmm. ...",
 							"Well, we need more data on this but first I will have to show this to our grand horticulturist. Thank you for getting this for us!"}, npc, creature)
 			player:setStorageValue(Storage.DangerousDepths.Gnomes.TimeTaskMeasurements, os.time() + tempo)
-			player:addItem(32014, 1)
+			player:addItem(27654, 1)
 			player:setStorageValue(Storage.DangerousDepths.Gnomes.Status, player:getStorageValue(Storage.DangerousDepths.Gnomes.Status) + 1)
 			player:setStorageValue(Storage.DangerousDepths.Gnomes.Measurements, 2)
 			npcHandler:setTopic(playerId, 1)
@@ -163,13 +163,13 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say({"AMAZING! Not only did you salve all our friends - you also rescued the animals! Here is your reward and bonus! ...",
 								"The other are already telling stories about you. Please return to me later if you want to help out some more!"}, npc, creature)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.TimeTaskOrdnance, os.time() + tempo)
-				player:addItem(32014, 2)
+				player:addItem(27654, 2)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.Status, player:getStorageValue(Storage.DangerousDepths.Gnomes.Status) + 2)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.Ordnance, 3)
 			else
 				npcHandler:say({"The other are already telling stories about you. Please return to me later if you want to help out some more!"}, npc, creature)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.TimeTaskOrdnance, os.time() + tempo)
-				player:addItem(32014, 1)
+				player:addItem(27654, 1)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.Status, player:getStorageValue(Storage.DangerousDepths.Gnomes.Status) + 1)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.Ordnance, 3)
 			end
@@ -213,10 +213,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.DangerousDepths.Gnomes.Charting) == 1 and player:getStorageValue(Storage.DangerousDepths.Gnomes.ChartingCount) >= 3 then -- Não possuía a missão, agora possui!
 			npcHandler:say({"Thank you very much! With those structures mapped out we will be able to complete the puzzle in no time!"}, npc, creature)
 			if player:getStorageValue(Storage.DangerousDepths.Gnomes.ChartingCount) == 6 then
-				player:addItem(32014, 2)
+				player:addItem(27654, 2)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.Status, player:getStorageValue(Storage.DangerousDepths.Gnomes.Status) + 2)
 			else
-				player:addItem(32014, 1)
+				player:addItem(27654, 1)
 				player:setStorageValue(Storage.DangerousDepths.Gnomes.Status, player:getStorageValue(Storage.DangerousDepths.Gnomes.Status) + 1)
 			end
 			player:setStorageValue(Storage.DangerousDepths.Gnomes.Charting, 2)
