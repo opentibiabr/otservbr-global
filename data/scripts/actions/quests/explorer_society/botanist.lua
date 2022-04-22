@@ -15,7 +15,7 @@ function explorerSocietyBotanist.onUse(player, item, fromPosition, target, toPos
 		player:setStorageValue(Storage.ExplorerSociety.QuestLine, 25)
 		toPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		item:transform(4870)
-	elseif target.itemid == 5658 and target.uid == 499 then
+	elseif target.itemid == 5658 and target.uid == 3152 then
 		if player:getStorageValue(53051) < 1 then
 			toPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
 			item:transform(5937)
