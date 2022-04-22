@@ -164,7 +164,7 @@ function Spawn.spawnMonsterIndex(self, index)
 		self:addFunctionMonster("onSpawn", func, "MonsterIndex")
 		self:spawnMonsterTimer(config)
 	else
-		-- error("Table is a nil")
+		Spdlog.error("[Spawn.spawnMonsterIndex] - Table is nil")
 	end
 end
 

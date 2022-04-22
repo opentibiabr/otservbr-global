@@ -11,11 +11,11 @@ function createMonster.onSay(player, words, param)
 	end
 
 	local spawn = Spawn()
-	local param = param:split(",")
+	local parameter = param:split(",")
 	local config = {
 		{
-			spawntime = tonumber(param[2]) or 60,
-			monster = param[1],
+			spawntime = tonumber(parameter[2]) or 60,
+			monster = parameter[1],
 			pos = player:getPosition(),
 			status = true
 		}
