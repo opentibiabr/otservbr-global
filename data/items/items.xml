@@ -8446,13 +8446,13 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
-		<attribute key="decayTo" value="4262"/>
+		<attribute key="decayTo" value="4002"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="4002" article="a" name="dead orc">
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="duration" value="300"/>
-		<attribute key="decayTo" value="4263"/>
+		<attribute key="decayTo" value="4317"/>
 	</item>
 	<item id="4003" article="a" name="dead spider">
 		<attribute key="corpseType" value="venom"/>
@@ -10064,9 +10064,8 @@
 		<attribute key="decayTo" value="0"/>
 		<attribute key="weight" value="8000"/>
 	</item>
+	<!-- Quest corpse items? (4272-4275) -->
 	<item id="4272" article="a" name="dead minotaur">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4273"/>
 		<attribute key="containersize" value="10"/>
@@ -12483,7 +12482,7 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4251"/>
+		<attribute key="decayTo" value="3989"/>
 		<attribute key="containersize" value="30"/>
 	</item>
 	<item id="5963" article="a" name="slain skeleton">
@@ -12506,7 +12505,7 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4262"/>
+		<attribute key="decayTo" value="4001"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5967" article="a" name="dead rotworm">
@@ -12527,7 +12526,7 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4272"/>
+		<attribute key="decayTo" value="4011"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5970" article="a" name="dead deer">
