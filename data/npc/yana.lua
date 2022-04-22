@@ -235,7 +235,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say("You don\'t have enough capacity. You must have "..neededCap.." oz.", npc, creature)
 			end
 		elseif MsgContains(message, "no") then
-			npcHandler:say("Your decision. Come back if you have changed your mind.",creature)
+			npcHandler:say("Your decision. Come back if you have changed your mind.", npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
 	end

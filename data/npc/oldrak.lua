@@ -122,43 +122,43 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
 		player:setStorageValue(Storage.DemonOak.Progress, 1)
 		if player:getStorageValue(Storage.DemonOak.Progress) == 1 then
-			npcHandler:say("A demon oak?!? <mumbles some blessings> May the gods be on our side. You'll need a {hallowed axe} to harm that tree. Bring me a simple {axe} and I'll prepare it for you.",creature)
+			npcHandler:say("A demon oak?!? <mumbles some blessings> May the gods be on our side. You'll need a {hallowed axe} to harm that tree. Bring me a simple {axe} and I'll prepare it for you.", npc, creature)
 			player:setStorageValue(Storage.DemonOak.Progress, 2)
 			npcHandler:setTopic(playerId, 0)
 		else
-			npcHandler:say("I don't believe a word of it! How rude to lie to a monk!",creature)
+			npcHandler:say("I don't believe a word of it! How rude to lie to a monk!", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "axe") then
 		if player:getStorageValue(Storage.DemonOak.Progress) == 2 then
-			npcHandler:say("Ahh, you've got an axe. Very good. I can make a hallowed axe out of it. It will cost you... er... a donation of 1,000 gold. Alright?",creature)
+			npcHandler:say("Ahh, you've got an axe. Very good. I can make a hallowed axe out of it. It will cost you... er... a donation of 1,000 gold. Alright?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		else
-			npcHandler:say("You have to first talk about {demon oak} or the {mission} before we continue.",creature)
+			npcHandler:say("You have to first talk about {demon oak} or the {mission} before we continue.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 2 then
 		if player:getStorageValue(Storage.DemonOak.Progress) == 2 then
 			if player:getMoney() + player:getBankBalance() >= 1000 then
 				if player:removeItem(3274, 1) and player:removeMoneyBank(1000) then
-					npcHandler:say("Let's see....<mumbles a prayer>....here we go. The blessing on this axe will be absorbed by all the demonic energy around here. I presume it will not last very long, so better hurry. Actually, I can refresh the blessing as often as you like.",creature)
+					npcHandler:say("Let's see....<mumbles a prayer>....here we go. The blessing on this axe will be absorbed by all the demonic energy around here. I presume it will not last very long, so better hurry. Actually, I can refresh the blessing as often as you like.", npc, creature)
 					player:addItem(919, 1)
 					npc:getPosition():sendMagicEffect(CONST_ME_YELLOWENERGY)
 					npcHandler:setTopic(playerId, 0)
 				else
-					npcHandler:say("There is no axe with you.",creature)
+					npcHandler:say("There is no axe with you.", npc, creature)
 					npcHandler:setTopic(playerId, 0)
 				end
 			else
-				npcHandler:say("There is not enough of money with you.",creature)
+				npcHandler:say("There is not enough of money with you.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
 		end
 	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) == 1 then
-		npcHandler:say("What a pity! Let me know when you managed to get in there. Maybe I can help you when we know what we are dealing with.",creature)
+		npcHandler:say("What a pity! Let me know when you managed to get in there. Maybe I can help you when we know what we are dealing with.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "no") and npcHandler:getTopic(playerId) == 2 then
-		npcHandler:say("No then.",creature)
+		npcHandler:say("No then.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end
 

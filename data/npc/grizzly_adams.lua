@@ -169,7 +169,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"Ask me for a {task} if you want to go on a hunt.", npc, creature)
 	elseif isInArray({"tasks", "task", "mission"}, message:lower()) then
 		if player:getStorageValue(JOIN_STOR) == -1 then
-			return npcHandler:say("You'll have to {join}, to get any {tasks}.",creature)
+			return npcHandler:say("You'll have to {join}, to get any {tasks}.", npc, creature)
 		end
 
 		local can = player:getTasks()
