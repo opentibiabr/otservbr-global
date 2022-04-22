@@ -23,7 +23,7 @@ npcConfig.flags = {
 	floorchange = false
 }
 
- local keywordHandler = KeywordHandler:new()
+local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 
 npcType.onAppear = function(npc, creature)
@@ -154,6 +154,7 @@ npcConfig.shop = {
 	{ itemName = "tarsal arrow", clientId = 14251, buy = 6 },
 	{ itemName = "throwing knife", clientId = 3298, buy = 25 },
 	{ itemName = "throwing star", clientId = 3287, buy = 42 },
+	{ itemName = "tusk shield", clientId = 3443, sell = 850 },
 	{ itemName = "two handed sword", clientId = 3265, buy = 950 },
 	{ itemName = "viking helmet", clientId = 3367, buy = 265 },
 	{ itemName = "viking shield", clientId = 3431, buy = 260 },

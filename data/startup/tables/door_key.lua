@@ -118,12 +118,12 @@ KeyDoorAction = {
 	},
 	-- Door of the key 5009 (black knight quest)
 	[Storage.Quest.Key.ID5010] = {
-		itemId = 6248,
+		itemId = false,
 		itemPos = {{x = 32824, y = 31969, z = 8}}
 	},
 	-- Door of the key 6010 (demon helmet quest)
 	[Storage.Quest.Key.ID6010] = {
-		itemId = 5097,
+		itemId = false,
 		itemPos = {{x = 33211, y = 31634, z = 13}}
 	}
 }
