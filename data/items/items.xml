@@ -8446,13 +8446,13 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
-		<attribute key="decayTo" value="4262"/>
+		<attribute key="decayTo" value="4002"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="4002" article="a" name="dead orc">
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="duration" value="300"/>
-		<attribute key="decayTo" value="4263"/>
+		<attribute key="decayTo" value="4317"/>
 	</item>
 	<item id="4003" article="a" name="dead spider">
 		<attribute key="corpseType" value="venom"/>
@@ -10064,9 +10064,8 @@
 		<attribute key="decayTo" value="0"/>
 		<attribute key="weight" value="8000"/>
 	</item>
+	<!-- Quest corpse items? (4272-4275) -->
 	<item id="4272" article="a" name="dead minotaur">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4273"/>
 		<attribute key="containersize" value="10"/>
@@ -12483,7 +12482,7 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4251"/>
+		<attribute key="decayTo" value="3989"/>
 		<attribute key="containersize" value="30"/>
 	</item>
 	<item id="5963" article="a" name="slain skeleton">
@@ -12506,7 +12505,7 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4262"/>
+		<attribute key="decayTo" value="4001"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5967" article="a" name="dead rotworm">
@@ -12527,7 +12526,7 @@
 		<attribute key="corpseType" value="blood"/>
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4272"/>
+		<attribute key="decayTo" value="4011"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5970" article="a" name="dead deer">
@@ -36005,9 +36004,7 @@
 		<attribute key="stopduration" value="1"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentphysical" value="3"/>
 		<attribute key="transformequipto" value="22134"/>
-		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="550"/>
 	</item>
 	<item id="22062" article="a" name="werewolf helmet">
@@ -36354,7 +36351,9 @@
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="absorbpercentphysical" value="6"/>
 		<attribute key="duration" value="3600"/>
-		<attribute key="decayTo" value="0"/>
+		<attribute key="decayTo" value="22060"/>
+		<attribute key="transformDeEquipTo" value="22061" />
+		<attribute key="duration" value="3600" />
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="550"/>
 	</item>
@@ -47288,9 +47287,14 @@
 	</item>
 	<item fromid="30374" toid="30392" name="RESERVED SPRITE"/>
 	<item id="30393" article="a" name="cobra crossbow">
+		<attribute key="weaponType" value="distance"/>
 		<attribute key="slotType" value="two-handed"/>
+		<attribute key="ammotype" value="bolt"/>
+		<attribute key="loottype" value="distance"/>
 		<attribute key="skilldist" value="2"/>
 		<attribute key="range" value="6"/>
+		<attribute key="hitChance" value="6"/>
+		<attribute key="attack" value="7"/>
 		<attribute key="weight" value="4000"/>
 		<attribute key="upgradeclassification" value="4"/>
 		<attribute key="imbuementslot" value="2">
@@ -47412,9 +47416,11 @@
 		<attribute key="slotType" value="necklace"/>
 		<attribute key="absorbpercentphysical" value="3"/>
 		<attribute key="absorbpercentpoison" value="14"/>
+		<attribute key="transformDeEquipTo" value="30403" />
 		<attribute key="magicpoints" value="3"/>
+		<attribute key="showduration" value="1" />
 		<attribute key="duration" value="7200"/>
-		<attribute key="decayTo" value="30403"/>
+		<attribute key="decayTo" value="30401"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
 	</item>
@@ -47422,6 +47428,9 @@
 		<attribute key="slotType" value="necklace"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
+		<attribute key="transformEquipTo" value="30402" />
+		<attribute key="stopduration" value="1" />
+		<attribute key="showduration" value="1" />
 	</item>
 	<item fromid="30404" toid="30406" name="RESERVED SPRITE"/>
 	<item id="30407" article="a" name="sequoia trunk"/>
