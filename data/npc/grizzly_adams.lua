@@ -67,14 +67,14 @@ npcConfig.shop = {
 	{clientId = 10452, sell = 170, itemName = "terramite shell", storageKey = POINTSSTORAGE, storageValue = 10},
 	{clientId = 10273, sell = 95, itemName = "terrorbird beak", storageKey = POINTSSTORAGE, storageValue = 10},
 	-- Buy offers
-	{clientId = 5907, buy = 35000, itemName = "slingshot", storageKey = POINTSSTORAGE, storageValue = 10},
+	{clientId = 5907, buy = 35000, itemName = "slingshot", storageKey = POINTSSTORAGE, storageValue = 20},
 
 	-- BigGameHunter rank
-	{clientId = 10244, sell = 6000, itemName = "bonebeast trophy", storageKey = POINTSSTORAGE, storageValue = 20},
-	{clientId = 7397, sell = 3000, itemName = "deer trophy", storageKey = POINTSSTORAGE, storageValue = 20},
-	{clientId = 7400, sell = 3000, itemName = "lion trophy", storageKey = POINTSSTORAGE, storageValue = 20},
-	{clientId = 7395, sell = 1000, itemName = "orc trophy", storageKey = POINTSSTORAGE, storageValue = 20},
-	{clientId = 7394, sell = 3000, itemName = "wolf trophy", storageKey = POINTSSTORAGE, storageValue = 20},
+	{clientId = 10244, sell = 6000, itemName = "bonebeast trophy", storageKey = POINTSSTORAGE, storageValue = 40},
+	{clientId = 7397, sell = 3000, itemName = "deer trophy", storageKey = POINTSSTORAGE, storageValue = 40},
+	{clientId = 7400, sell = 3000, itemName = "lion trophy", storageKey = POINTSSTORAGE, storageValue = 40},
+	{clientId = 7395, sell = 1000, itemName = "orc trophy", storageKey = POINTSSTORAGE, storageValue = 40},
+	{clientId = 7394, sell = 3000, itemName = "wolf trophy", storageKey = POINTSSTORAGE, storageValue = 40},
 
 	-- TrophyHunter rank
 	-- Sell offers
@@ -169,7 +169,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"Ask me for a {task} if you want to go on a hunt.", npc, creature)
 	elseif isInArray({"tasks", "task", "mission"}, message:lower()) then
 		if player:getStorageValue(JOIN_STOR) == -1 then
-			return npcHandler:say("You'll have to {join}, to get any {tasks}.",creature)
+			return npcHandler:say("You'll have to {join}, to get any {tasks}.", npc, creature)
 		end
 
 		local can = player:getTasks()

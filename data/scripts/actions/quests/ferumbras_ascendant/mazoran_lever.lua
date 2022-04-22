@@ -37,8 +37,8 @@ function ferumbrasAscendantMazoranLever.onUse(player, item, fromPosition, target
 				playerTile:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			end
 		end
-		Game.setStorageValue(GlobalStorage.FerumbrasAscendant.MazoranTimer, 1)
-		addEvent(clearForgotten, 30 * 60 * 1000, Position(33572, 32679, 14), Position(33599, 32701, 14), Position(33319, 32318, 13), GlobalStorage.FerumbrasAscendant.MazoranTimer)
+		Game.setStorageValue(Storage.FerumbrasAscendant.MazoranTimer, 1)
+		addEvent(clearForgotten, 30 * 60 * 1000, Position(33572, 32679, 14), Position(33599, 32701, 14), Position(33319, 32318, 13), Storage.FerumbrasAscendant.MazoranTimer)
 		item:transform(8912)
 	elseif item.itemid == 8912 then
 		item:transform(8911)
