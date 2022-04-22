@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 295
 monster.maxHealth = 295
 monster.race = "blood"
-monster.corpse = 20403
+monster.corpse = 18122
 monster.speed = 190
 monster.manaCost = 420
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,13 +43,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,7 +79,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 50110, maxCount = 30},
-	{name = "club ring", chance = 740},
+	{id = 3093, chance = 740}, -- Club ring
 	{name = "studded legs", chance = 5220},
 	{name = "leather legs", chance = 15330}
 }

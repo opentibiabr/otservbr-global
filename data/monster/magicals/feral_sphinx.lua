@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 9800
 monster.maxHealth = 9800
 monster.race = "blood"
-monster.corpse = 36493
+monster.corpse = 31658
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -79,7 +77,7 @@ monster.loot = {
 	{name = "wand of draconia", chance = 4770},
 	{name = "sphinx feather", chance = 3450},
 	{name = "fire axe", chance = 2650},
-	{id = 36273, chance = 3450},
+	{id = 31438, chance = 3450},
 	{name = "magma legs", chance = 1860},
 	{name = "magma monocle", chance = 1590},
 	{name = "magma boots", chance = 2120},
@@ -106,12 +104,12 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 80},
+	{type = COMBAT_FIREDAMAGE, percent = 20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -15},
-	{type = COMBAT_HOLYDAMAGE , percent = 80},
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
 	{type = COMBAT_DEATHDAMAGE , percent = -15}
 }
 

@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 95,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {

@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 7320
 monster.speed = 136
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 60000,
@@ -47,7 +46,7 @@ monster.flags = {
 	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
+	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -82,8 +80,8 @@ monster.loot = {
 	{name = "gold coin", chance = 77810, maxCount = 20},
 	{name = "mace", chance = 5300},
 	{name = "bone shield", chance = 720},
-	{id = 2553, chance = 1100},
-	{id = 2667, chance = 25060, maxCount = 2},
+	{id = 3456, chance = 1100},
+	{id = 3578, chance = 25060, maxCount = 2},
 	{name = "northern pike", chance = 70},
 	{name = "rainbow trout", chance = 140},
 	{name = "green perch", chance = 70},

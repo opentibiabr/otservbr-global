@@ -31,10 +31,9 @@ monster.Bestiary = {
 monster.health = 550
 monster.maxHealth = 550
 monster.race = "undead"
-monster.corpse = 10499
+monster.corpse = 9582
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -55,7 +54,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -65,8 +64,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -86,15 +84,15 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "small emerald", chance = 1000, maxCount = 2},
 	{name = "platinum coin", chance = 10000},
-	{name = "energy ring", chance = 950},
-	{name = "life ring", chance = 930},
-	{id = 2667, chance = 20000},
+	{id = 3051, chance = 950}, -- Energy ring
+	{id = 3052, chance = 930}, -- Life ring
+	{id = 3578, chance = 20000},
 	{name = "rainbow trout", chance = 940},
 	{name = "green perch", chance = 1050},
 	{name = "strong health potion", chance = 10000},
 	{name = "strong mana potion", chance = 10000},
-	{id = 7632, chance = 800},
-	{id = 7633, chance = 800}
+	{id = 281, chance = 800},
+	{id = 282, chance = 800}
 }
 
 monster.attacks = {
@@ -113,7 +111,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 35},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
 	{type = COMBAT_ENERGYDAMAGE, percent = -25},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 100},

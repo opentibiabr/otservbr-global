@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 240
 monster.maxHealth = 240
 monster.race = "undead"
-monster.corpse = 9938
+monster.corpse = 9024
 monster.speed = 240
 monster.manaCost = 800
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -86,7 +84,7 @@ monster.loot = {
 	{name = "brown flask", chance = 8750},
 	{name = "small sapphire", chance = 360},
 	{name = "gold coin", chance = 52500, maxCount = 70},
-	{name = "dwarven ring", chance = 190},
+	{id = 3097, chance = 190}, -- Dwarven ring
 	{name = "battle axe", chance = 3100},
 	{name = "sabre", chance = 8250},
 	{name = "morning star", chance = 5000},

@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "You see a spyrat"
 monster.experience = 3750
 monster.outfit = {
-	lookTypeEx = 35212
+	lookTypeEx = 30377
 }
 
 monster.raceId = 2037
@@ -26,7 +26,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 0,
@@ -58,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {

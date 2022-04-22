@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 6600
 monster.maxHealth = 6600
 monster.race = "undead"
-monster.corpse = 17424
+monster.corpse = 16079
 monster.speed = 286
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -84,7 +82,7 @@ monster.loot = {
 	{name = "small emerald", chance = 10890, maxCount = 3},
 	{name = "small amethyst", chance = 15020, maxCount = 3},
 	{name = "platinum coin", chance = 100000, maxCount = 8},
-	{name = "red gem", chance = 3510},
+	{id= 3039, chance = 3510},
 	{name = "blue gem", chance = 480},
 	{name = "epee", chance = 480},
 	{name = "magic sulphur", chance = 830},
@@ -122,7 +120,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 15},
 	{type = COMBAT_ENERGYDAMAGE, percent = 25},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 60},
@@ -131,7 +129,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 20},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 50}
+	{type = COMBAT_DEATHDAMAGE , percent = 40}
 }
 
 monster.immunities = {

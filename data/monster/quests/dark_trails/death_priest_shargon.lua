@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 65000
 monster.maxHealth = 65000
 monster.race = "blood"
-monster.corpse = 23494
+monster.corpse = 21123
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 6
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.events = {
@@ -63,10 +61,13 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Lesser Death Minion", chance = 30, interval = 2000, max = 2},
-	{name = "Superior Death Minion", chance = 30, interval = 2000, max = 2},
-	{name = "Greater Death Minion", chance = 30, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Lesser Death Minion", chance = 30, interval = 2000, count = 2},
+		{name = "Superior Death Minion", chance = 30, interval = 2000, count = 2},
+		{name = "Greater Death Minion", chance = 30, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -75,14 +76,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 99},
-	{id = 7591, chance = 100000, maxCount = 3},
-	{id = 2185, chance = 100000},
-	{id = 2152, chance = 100000, maxCount = 13},
-	{id = 7590, chance = 10000, maxCount = 4},
-	{id = 9971, chance = 25000},
-	{id = 9969, chance = 9090},
-	{id = 9447, chance = 9090}
+	{id = 3031, chance = 100000, maxCount = 99},
+	{id = 239, chance = 100000, maxCount = 3},
+	{id = 3069, chance = 100000},
+	{id = 3035, chance = 100000, maxCount = 13},
+	{id = 238, chance = 10000, maxCount = 4},
+	{id = 9058, chance = 25000},
+	{id = 9056, chance = 9090},
+	{id = 8531, chance = 9090}
 }
 
 monster.attacks = {

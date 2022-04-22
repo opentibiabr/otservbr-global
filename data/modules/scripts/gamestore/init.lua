@@ -530,7 +530,7 @@ function Player.canBuyOffer(self, offer)
 
 	if disabled ~= 1 then
 		if offer.type == GameStore.OfferTypes.OFFER_TYPE_POUNCH then
-			local pounch = self:getItemById(26377, true)
+			local pounch = self:getItemById(23721, true)
 			if pounch then
 				disabled = 1
 				disabledReason = "You already have Loot Pouch."
@@ -658,7 +658,6 @@ function sendShowStoreOffers(playerId, category, redirectId)
 		return false
 	end
 
-	local version = player:getClient().version
 	local msg = NetworkMessage()
 	local haveSaleOffer = 0
 	msg:addByte(GameStore.SendingPackets.S_StoreOffers)
@@ -740,7 +739,7 @@ function sendShowStoreOffers(playerId, category, redirectId)
 
 				if (off.state) then
 					if (off.state == GameStore.States.STATE_SALE) then
-						local daySub = off.validUntil - os.sdate("*t").day
+						local daySub = off.validUntil - os.date("*t").day
 						if (daySub >= 0) then
 							msg:addByte(off.state)
 							msg:addU32(os.time() + daySub * 86400)
@@ -820,7 +819,6 @@ function sendStoreTransactionHistory(playerId, page, entriesPerPage)
 	if not player then
 		return false
 	end
-	local version = player:getClient().version
 	local totalEntries = GameStore.retrieveHistoryTotalPages(player:getAccountId())
 	local totalPages = math.ceil(totalEntries / entriesPerPage)
 	local entries = GameStore.retrieveHistoryEntries(player:getAccountId(), page, entriesPerPage) -- this makes everything easy!
@@ -835,17 +833,13 @@ function sendStoreTransactionHistory(playerId, page, entriesPerPage)
 	msg:addByte(#entries)
 
 	for k, entry in ipairs(entries) do
-		if version >= 1220 then
-			msg:addU32(0)
-		end
+		msg:addU32(0)
 		msg:addU32(entry.time)
 		msg:addByte(entry.mode)
 		msg:addU32(entry.amount)
-    	msg:addByte(0x0) -- 0 = transferable tibia coin, 1 = normal tibia coin
+		msg:addByte(0x0) -- 0 = transferable tibia coin, 1 = normal tibia coin
 		msg:addString(entry.description)
-		if version >= 1220 then
-			msg:addByte(0) -- details
-		end
+		msg:addByte(0) -- details
 	end
 	msg:sendToPlayer(player)
 end
@@ -1295,65 +1289,47 @@ function GameStore.processStackablePurchase(player, offerId, offerCount, offerNa
 	local function isKegItem(itemId)
 		return itemId >= ITEM_KEG_START and itemId <= ITEM_KEG_END
 	end
+	
+	local PARCEL_ID = 3504
+	local isKeg = isKegItem(offerId) 
 
-    if isKegItem(offerId) then
-    if player:getFreeCapacity() < ItemType(offerId):getWeight(1) + ItemType(2596):getWeight() then
-        return error({code = 0, message = "Please make sure you have free capacity to hold this item."})
-    end
-    elseif player:getFreeCapacity() < ItemType(offerId):getWeight(offerCount) + ItemType(2596):getWeight() then
+    if isKeg then
+        if player:getFreeCapacity() < ItemType(offerId):getWeight(1) + ItemType(PARCEL_ID):getWeight() then
+            return error({code = 0, message = "Please make sure you have free capacity to hold this item."})
+        end
+    elseif player:getFreeCapacity() < ItemType(offerId):getWeight(offerCount) + ItemType(PARCEL_ID):getWeight() then
         return error({code = 0, message = "Please make sure you have free capacity to hold this item."})
     end
 
 	local inbox = player:getSlotItem(CONST_SLOT_STORE_INBOX)
 	if inbox and inbox:getEmptySlots() > 0 then
-		if (isKegItem(offerId)) then
-			if (offerCount >= 500) then
-				local parcel = Item(inbox:addItem(2596, 1):getUniqueId())
-				local function changeParcel(parcel)
-					local packagename = '' .. offerCount .. 'x ' .. offerName .. ' package.'
-					if parcel then
-						parcel:setAttribute(ITEM_ATTRIBUTE_NAME, packagename)
-						local pendingCount = offerCount
-						while (pendingCount > 0) do
-							local pack
-							if (pendingCount > 500) then
-								pack = 500
-							else
-								pack = pendingCount
-							end
-							local kegItem = parcel:addItem(offerId, 1)
-							kegItem:setAttribute(ITEM_ATTRIBUTE_CHARGES, pack)
-							pendingCount = pendingCount - pack
-						end
+		if (isKeg and offerCount > 500) or offerCount > 100 then
+			local parcel = inbox:addItem(PARCEL_ID, 1)
+			if parcel then
+				parcel:setAttribute(ITEM_ATTRIBUTE_NAME, '' .. offerCount .. 'x ' .. offerName .. ' package.')
+				local pendingCount = offerCount
+				local limit = isKeg and 500 or 100
+				while (pendingCount > 0) do
+					local pack
+					if (pendingCount > limit) then
+						pack = limit
+					else
+						pack = pendingCount
 					end
-				end
-				addEvent(function() changeParcel(parcel) end, 250)
-			else
-				local kegItem = inbox:addItem(offerId, 1)
-				kegItem:setAttribute(ITEM_ATTRIBUTE_CHARGES, offerCount)
-			end
-		elseif (offerCount > 100) then
-			local parcel = Item(inbox:addItem(2596, 1):getUniqueId())
-			local function changeParcel(parcel)
-				local packagename = '' .. offerCount .. 'x ' .. offerName .. ' package.'
-				if parcel then
-					parcel:setAttribute(ITEM_ATTRIBUTE_NAME, packagename)
-					local pendingCount = offerCount
-					while (pendingCount > 0) do
-						local pack
-						if (pendingCount > 100) then
-							pack = 100
-						else
-							pack = pendingCount
-						end
+					if isKeg then
+						local kegItem = parcel:addItem(offerId, 1)
+						kegItem:setAttribute(ITEM_ATTRIBUTE_CHARGES, pack)
+					else
 						parcel:addItem(offerId, pack)
-						pendingCount = pendingCount - pack
 					end
+					pendingCount = pendingCount - pack
 				end
 			end
-			addEvent(function() changeParcel(parcel) end, 250)
 		else
-			inbox:addItem(offerId, offerCount)
+			local item = inbox:addItem(offerId, isKeg and 1 or offerCount)
+			if item and isKeg then
+				item:setAttribute(ITEM_ATTRIBUTE_CHARGES, offerCount)
+			end
 		end
 	else
 		return error({code = 0, message = "Please make sure you have free slots in your store inbox."})
@@ -1369,19 +1345,14 @@ function GameStore.processHouseRelatedPurchase(player, offerId, offerCount)
 
 	local inbox = player:getSlotItem(CONST_SLOT_STORE_INBOX)
 	if inbox and inbox:getEmptySlots() > 0 then
-		local decoKit = inbox:addItem(26054, 1)
-		local function changeKit(kit)
-			local decoItemName = ItemType(offerId):getName()
-			if kit then
-				kit:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "You bought this item in the Store.\nUnwrap it in your own house to create a <" .. decoItemName .. ">.")
-				kit:setCustomAttribute("unWrapId", offerId)
-
-				if isCaskItem(offerId) then
-					kit:setAttribute(ITEM_ATTRIBUTE_DATE, offerCount)
-				end
+		local decoKit = inbox:addItem(23398, 1)
+		if decoKit then		
+			decoKit:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "You bought this item in the Store.\nUnwrap it in your own house to create a <" .. ItemType(offerId):getName() .. ">.")
+			decoKit:setCustomAttribute("unWrapId", offerId)
+			if isCaskItem(offerId) then
+				decoKit:setAttribute(ITEM_ATTRIBUTE_DATE, offerCount)
 			end
 		end
-		addEvent(function() changeKit(decoKit) end, 250)
 	else
 		return error({code = 0, message = "Please make sure you have free slots in your store inbox."})
 	end
@@ -1683,7 +1654,6 @@ function sendHomePage(playerId)
 		return
 	end
 
-	local version = player:getClient().version
 	local msg = NetworkMessage()
 	msg:addByte(GameStore.SendingPackets.S_StoreOffers)
 

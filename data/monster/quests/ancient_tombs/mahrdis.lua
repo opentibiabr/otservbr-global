@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6025
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -49,8 +48,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -58,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Fire Elemental", chance = 30, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Fire Elemental", chance = 30, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -79,8 +80,8 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 80},
 	{name = "gold coin", chance = 50000, maxCount = 70},
 	{name = "gold coin", chance = 50000, maxCount = 64},
-	{name = "red gem", chance = 1500},
-	{name = "life ring", chance = 1500},
+	{id= 3039, chance = 1500},
+	{id = 3052, chance = 1500}, -- Life ring
 	{name = "burning heart", chance = 100000},
 	{name = "fire axe", chance = 750},
 	{name = "phoenix shield", chance = 300},

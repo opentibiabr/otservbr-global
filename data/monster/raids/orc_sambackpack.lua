@@ -20,7 +20,6 @@ monster.race = "blood"
 monster.corpse = 5966
 monster.speed = 150
 monster.manaCost = 300
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -32,13 +31,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -48,8 +47,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -76,7 +74,7 @@ monster.loot = {
 	{name = "meat", chance = 10160},
 	{name = "orc tooth", chance = 210},
 	{name = "orc leather", chance = 590},
-	{id = 26654, chance = 1000}
+	{id = 23986, chance = 1000}
 }
 
 monster.attacks = {

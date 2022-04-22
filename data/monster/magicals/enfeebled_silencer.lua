@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1100
 monster.maxHealth = 1100
 monster.race = "blood"
-monster.corpse = 22489
+monster.corpse = 20155
 monster.speed = 330
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -82,18 +80,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2152, chance = 100000, maxCount = 8},
-	{id = 2165, chance = 1200},
-	{id = 2195, chance = 360},
+	{id = 3031, chance = 100000, maxCount = 100},
+	{id = 3035, chance = 100000, maxCount = 8},
+	{id = 3049, chance = 1200}, -- Stealth ring
+	{id = 3079, chance = 360},
 	{id = 7368, chance = 7600, maxCount = 10},
 	{id = 7387, chance = 960},
 	{id = 7407, chance = 2000},
 	{id = 7451, chance = 640},
 	{id = 7454, chance = 2400},
-	{id = 7885, chance = 960},
-	{id = 7886, chance = 480},
-	{id = 22534, chance = 17000},
+	{id = 812, chance = 960},
+	{id = 813, chance = 480},
+	{id = 20200, chance = 17000},
 	{name = "fairy wings", chance = 30100}
 }
 
@@ -113,14 +111,14 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
 	{type = COMBAT_ENERGYDAMAGE, percent = 15},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 60},
 	{type = COMBAT_FIREDAMAGE, percent = 30},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_ICEDAMAGE, percent = 15},
 	{type = COMBAT_HOLYDAMAGE , percent = -25},
-	{type = COMBAT_DEATHDAMAGE , percent = 70}
+	{type = COMBAT_DEATHDAMAGE , percent = 65}
 }
 
 monster.immunities = {

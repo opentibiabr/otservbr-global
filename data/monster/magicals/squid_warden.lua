@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 16500
 monster.maxHealth = 16500
 monster.race = "undead"
-monster.corpse = 32486
+monster.corpse = 28786
 monster.speed = 430
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.loot = {
 	{name = "Small Sapphire", chance = 900, maxCount = 4},
 	{name = "Frosty Heart", chance = 11000, maxCount = 4},
 	{id = 7441, chance = 20000},
-	{id = 33315, chance = 20000},
+	{id = 28568, chance = 20000},
 	{name = "Ultimate Health Potion", chance = 10003, maxCount = 4},
 	{name = "Ultimate Mana Potion", chance = 10003, maxCount = 4},
 	{name = "Ice Rapier", chance = 500},

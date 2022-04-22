@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 3000
 monster.maxHealth = 3000
 monster.race = "venom"
-monster.corpse = 24262
+monster.corpse = 21893
 monster.speed = 500
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,26 +78,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2672, chance = 13040},
-	{id = 24170, chance = 12040},
-	{id = 7839, chance = 7020, maxCount = 17},
-	{id = 7902, chance = 2680},
-	{id = 24261, chance = 400},
-	{id = 2152, chance = 100000, maxCount = 5},
-	{id = 7588, chance = 7020, maxCount = 2},
-	{id = 7589, chance = 10370, maxCount = 2},
-	{id = 24116, chance = 10030},
-	{id = 2143, chance = 3680, maxCount = 2},
-	{id = 2144, chance = 2340, maxCount = 3},
-	{id = 7632, chance = 1000},
+	{id = 3583, chance = 13040},
+	{id = 21801, chance = 12040},
+	{id = 762, chance = 7020, maxCount = 17},
+	{id = 829, chance = 2680},
+	{id = 21892, chance = 400},
+	{id = 3035, chance = 100000, maxCount = 5},
+	{id = 236, chance = 7020, maxCount = 2},
+	{id = 237, chance = 10370, maxCount = 2},
+	{id = 21747, chance = 10030},
+	{id = 3026, chance = 3680, maxCount = 2},
+	{id = 3027, chance = 2340, maxCount = 3},
+	{id = 281, chance = 1000},
 	{id = 5944, chance = 3340},
-	{id = 2145, chance = 5020, maxCount = 3},
-	{id = 24169, chance = 17390},
-	{id = 7888, chance = 670},
-	{id = 7896, chance = 3680},
-	{id = 7892, chance = 3010},
-	{id = 18390, chance = 670},
-	{id = 8921, chance = 670}
+	{id = 3028, chance = 5020, maxCount = 3},
+	{id = 21800, chance = 17390},
+	{id = 815, chance = 670},
+	{id = 823, chance = 3680},
+	{id = 819, chance = 3010},
+	{id = 16096, chance = 670},
+	{id = 8093, chance = 670}
 }
 
 monster.attacks = {
@@ -118,16 +116,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 15},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
 	{type = COMBAT_ENERGYDAMAGE, percent = 10},
-	{type = COMBAT_EARTHDAMAGE, percent = 20},
+	{type = COMBAT_EARTHDAMAGE, percent = 10},
 	{type = COMBAT_FIREDAMAGE, percent = 20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
 	{type = COMBAT_ICEDAMAGE, percent = 100},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

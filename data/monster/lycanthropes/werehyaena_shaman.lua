@@ -25,14 +25,13 @@ monster.Bestiary = {
 	Occurrence = 0,
 	Locations = "This monster you can find in Hyaena Lairs."
 	}
-	
+
 monster.health = 2500
 monster.maxHealth = monster.health
 monster.race = "blood"
-monster.corpse = 39024
+monster.corpse = 34189
 monster.speed = 110
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -85,7 +83,7 @@ monster.loot = {
 	{name = "brown crystal splinter", chance = 5030},
 	{name = "wand of starstorm", chance = 4920},
 	{name = "small enchanted emerald", chance = 4630},
-	{name = "sword ring", chance = 4490},
+	{id = 3091, chance = 4490}, -- Sword ring
 	{name = "wand of voodoo", chance = 3990},
 	{name = "protection amulet", chance = 2660},
 	{name = "werehyaena talisman", chance = 650},
@@ -110,13 +108,13 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 60},
-	{type = COMBAT_FIREDAMAGE, percent = 75},
+	{type = COMBAT_EARTHDAMAGE, percent = 40},
+	{type = COMBAT_FIREDAMAGE, percent = 25},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -20},
-	{type = COMBAT_HOLYDAMAGE , percent = 95},
+	{type = COMBAT_HOLYDAMAGE , percent = 5},
 	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 

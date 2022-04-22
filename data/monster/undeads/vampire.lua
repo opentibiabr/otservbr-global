@@ -35,7 +35,6 @@ monster.race = "blood"
 monster.corpse = 6006
 monster.speed = 238
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -87,7 +85,7 @@ monster.loot = {
 	{name = "black pearl", chance = 1800},
 	{name = "gold coin", chance = 90230, maxCount = 60},
 	{name = "bronze amulet", chance = 220},
-	{id = 2229, chance = 1000},
+	{id = 3114, chance = 1000},
 	{name = "spike sword", chance = 1000},
 	{name = "ice rapier", chance = 420},
 	{name = "katana", chance = 1560},
@@ -114,7 +112,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 35},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = -10},

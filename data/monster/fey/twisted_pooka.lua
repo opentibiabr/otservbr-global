@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 700
 monster.maxHealth = 700
 monster.race = "blood"
-monster.corpse = 29114
+monster.corpse = 25827
 monster.speed = 230
 monster.manaCost = 450
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -52,13 +51,13 @@ monster.respawnType = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -68,8 +67,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -89,8 +87,8 @@ monster.loot = {
 	{name = "carrot on a stick", chance = 20},
 	{name = "small stone", chance = 200, maxCount = 5},
 	{name = "gold coin", chance = 30000, maxCount = 100},
-	{name = "stealth ring", chance = 492},
-	{id = 2684, chance = 55000, maxCount = 3},
+	{id = 3049, chance = 492}, -- Stealth ring
+	{id = 3595, chance = 55000, maxCount = 3},
 	{name = "strong health potion", chance = 719},
 	{name = "orange mushroom", chance = 10000},
 	{name = "fairy wings", chance = 30100},

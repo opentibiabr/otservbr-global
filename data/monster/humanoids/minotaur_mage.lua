@@ -35,7 +35,6 @@ monster.race = "blood"
 monster.corpse = 5981
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,12 +78,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 4950},
+	{id = 2920, chance = 4950},
 	{name = "gold coin", chance = 85780, maxCount = 35},
 	{name = "wand of cosmic energy", chance = 600},
 	{name = "leather helmet", chance = 3000},
 	{name = "leather legs", chance = 5190},
-	{id = 2684, chance = 15003, maxCount = 8},
+	{id = 3595, chance = 15003, maxCount = 8},
 	{name = "minotaur leather", chance = 2290},
 	{name = "taurus mace", chance = 1000},
 	{name = "mana potion", chance = 490},
@@ -115,7 +113,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -10},
 	{type = COMBAT_HOLYDAMAGE , percent = 10},
-	{type = COMBAT_DEATHDAMAGE , percent = -10}
+	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 
 monster.immunities = {

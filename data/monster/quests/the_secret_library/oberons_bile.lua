@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a Oberon's Bile"
 monster.experience = 20000
 monster.outfit = {
-	lookTypeEx = 11936
+	lookTypeEx = 10980
 }
 
 monster.health = 10000
@@ -12,8 +12,6 @@ monster.maxHealth = 10000
 monster.race = "blood"
 monster.corpse = 0
 monster.speed = 0
-monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -41,16 +39,12 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
 	level = 0,
 	color = 0
-}
-
-monster.summons = {
 }
 
 monster.voices = {

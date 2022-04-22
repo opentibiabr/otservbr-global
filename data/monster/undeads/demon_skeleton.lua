@@ -35,7 +35,6 @@ monster.race = "undead"
 monster.corpse = 5963
 monster.speed = 180
 monster.manaCost = 620
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -79,7 +77,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 5270},
+	{id = 2920, chance = 5270},
 	{name = "black pearl", chance = 2900},
 	{name = "small ruby", chance = 1400},
 	{name = "gold coin", chance = 97000, maxCount = 75},

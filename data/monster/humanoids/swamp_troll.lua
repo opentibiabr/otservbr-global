@@ -33,7 +33,6 @@ monster.race = "venom"
 monster.corpse = 6018
 monster.speed = 128
 monster.manaCost = 320
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -48,7 +47,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -79,13 +77,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 15000},
+	{id = 2920, chance = 15000},
 	{name = "gold coin", chance = 50300, maxCount = 5},
 	{name = "mouldy cheese", chance = 10000},
 	{name = "spear", chance = 13000},
 	{name = "fishing rod", chance = 60},
 	{name = "leather boots", chance = 9500},
-	{id = 2667, chance = 60000},
+	{id = 3578, chance = 60000},
 	{name = "troll green", chance = 1200},
 	{id = 5901, chance = 2140},
 	{name = "swamp grass", chance = 3100},
@@ -104,7 +102,7 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 5},
+	{type = COMBAT_EARTHDAMAGE, percent = 15},
 	{type = COMBAT_FIREDAMAGE, percent = -5},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},

@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 5998
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -78,7 +76,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 92000, maxCount = 155},
-	{name = "stealth ring", chance = 560},
+	{id = 3049, chance = 560}, -- Stealth ring
 	{name = "throwing star", chance = 28000, maxCount = 10},
 	{name = "frosty ear of a troll", chance = 5120}
 }

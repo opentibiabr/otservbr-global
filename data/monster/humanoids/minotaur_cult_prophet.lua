@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 5981
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -95,8 +93,8 @@ monster.loot = {
 	{name = "small diamond", chance = 2900, maxCount = 2},
 	{name = "small amethyst", chance = 6680, maxCount = 2},
 	{name = "red piece of cloth", chance = 630},
-	{name = "ring of healing", chance = 6730},
-	{name = "red gem", chance = 390},
+	{id = 3098, chance = 6730}, -- Ring of healing
+	{id= 3039, chance = 390},
 	{name = "meat", chance = 8040},
 	{name = "ham", chance = 60140},
 	{name = "minotaur leather", chance = 14230},
@@ -104,28 +102,28 @@ monster.loot = {
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -100},
-	{name ="combat", interval = 2000, chance = 15, type = COMBAT_ENERGYDAMAGE, minDamage = -20, maxDamage = -350, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = false},
-	{name ="combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -50, maxDamage = -300, range = 7, radius = 1, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true}
+	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -240},
+	{name ="combat", interval = 2000, chance = 15, type = COMBAT_ENERGYDAMAGE, minDamage = -200, maxDamage = -350, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = true},
+	{name ="combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -200, maxDamage = -350, range = 7, radius = 1, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true}
 }
 
 monster.defenses = {
 	defense = 15,
 	armor = 15,
-	{name ="heal monster", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE, target = false}
+	{name ="Minotaur Cult Prophet Mass Healing", interval = 2000, chance = 20, target = false}
 }
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = 20},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_ICEDAMAGE, percent = -10},
+	{type = COMBAT_HOLYDAMAGE , percent = 10},
+	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 
 monster.immunities = {

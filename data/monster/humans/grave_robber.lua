@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 165
 monster.maxHealth = 165
 monster.race = "blood"
-monster.corpse = 20411
+monster.corpse = 18130
 monster.speed = 190
 monster.manaCost = 435
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,7 +43,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -100,14 +98,14 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
-	{type = COMBAT_ENERGYDAMAGE, percent = 20},
+	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -10},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
 	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 

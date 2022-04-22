@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8700
 monster.maxHealth = 8700
 monster.race = "blood"
-monster.corpse = 36229
+monster.corpse = 31394
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -82,7 +80,7 @@ monster.loot = {
 	{name = "Lamassu Hoof", chance = 7700},
 	{name = "Violet Crystal Shard", chance = 6800},
 	{name = "Blue Crystal Shard", chance = 6500},
-	{name = "Red Gem", chance = 6200},
+	{id= 3039, chance = 6200},
 	{name = "Terra Hood", chance = 5900},
 	{name = "Sacred Tree Amulet", chance = 2300},
 	{name = "Elven Amulet", chance = 2000},
@@ -103,13 +101,13 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 80},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 80},
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
 	{type = COMBAT_DEATHDAMAGE , percent = -30}
 }
 

@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a makeshift home"
 monster.experience = 1800
 monster.outfit = {
-	lookTypeEx = 30601
+	lookTypeEx = 27366
 }
 
 monster.health = 6900
@@ -13,7 +13,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -44,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {

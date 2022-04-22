@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6033
 monster.speed = 234
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -69,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "blue djinn", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "blue djinn", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -84,14 +85,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1872, chance = 2560},
+	{id = 2659, chance = 2560},
 	{name = "small oil lamp", chance = 110},
 	{name = "small sapphire", chance = 6200},
 	{name = "gold coin", chance = 60000, maxCount = 70},
 	{name = "gold coin", chance = 60000, maxCount = 30},
 	{name = "blue gem", chance = 110},
 	{name = "hailstorm rod", chance = 770},
-	{id = 2070, chance = 5000},
+	{id = 2948, chance = 5000},
 	{name = "heavy machete", chance = 4530},
 	{name = "mystic turban", chance = 290},
 	{name = "blueberry", chance = 65000, maxCount = 29},
@@ -124,14 +125,14 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 60},
-	{type = COMBAT_EARTHDAMAGE, percent = 1},
+	{type = COMBAT_EARTHDAMAGE, percent = 10},
 	{type = COMBAT_FIREDAMAGE, percent = 90},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -1},
-	{type = COMBAT_HOLYDAMAGE , percent = 1},
-	{type = COMBAT_DEATHDAMAGE , percent = -1}
+	{type = COMBAT_ICEDAMAGE, percent = -5},
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
+	{type = COMBAT_DEATHDAMAGE , percent = -8}
 }
 
 monster.immunities = {

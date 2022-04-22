@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 3000
 monster.maxHealth = 3000
 monster.race = "blood"
-monster.corpse = 27750
+monster.corpse = 25082
 monster.speed = 290
 monster.manaCost = 290
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -47,13 +46,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,9 +78,9 @@ monster.voices = {
 
 monster.loot = {
 	{id = 5925, chance = 50320},
-	{id = 27056, chance = 50320},
-	{id = 27057, chance = 50320},
-	{id = 24842, chance = 50320}
+	{id = 24388, chance = 50320},
+	{id = 24389, chance = 50320},
+	{id = 22186, chance = 50320}
 }
 
 monster.attacks = {
@@ -96,14 +94,14 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
+	{type = COMBAT_FIREDAMAGE, percent = 10},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -10},
+	{type = COMBAT_ICEDAMAGE, percent = 10},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }

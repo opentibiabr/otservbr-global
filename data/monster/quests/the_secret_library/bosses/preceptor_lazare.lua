@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 15000
 monster.maxHealth = 15000
 monster.race = "blood"
-monster.corpse = 33384
+monster.corpse = 28643
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -47,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -67,9 +65,9 @@ monster.loot = {
 	{name = "platinum coin", chance = 100000, maxCount = 3},
 	{name = "great mana potion", chance = 100000, maxCount = 3},
 	{name = "demonic essence", chance = 100000, maxCount = 5},
-	{name = "red gem", chance = 700, maxCount = 3},
+	{id= 3039, chance = 700, maxCount = 3},
 	{name = "assassin star", chance = 100000, maxCount = 5},
-	{name = "concentrated demonic blood", chance = 100000, maxCount = 3},
+	{name = "flask of demonic blood", chance = 100000, maxCount = 3},
 	{name = "ham", chance = 100000, maxCount = 2},
 	{name = "small emerald", chance = 100000, maxCount = 5},
 	{name = "small diamond", chance = 100000, maxCount = 4},

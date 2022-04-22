@@ -20,7 +20,8 @@ local UniqueTable = {
 		count = 2
 	},
 	[14006] = {
-		itemId = 2156,
+		-- red gem
+		itemId = 3039,
 		count = 1
 	},
 	[14007] = {

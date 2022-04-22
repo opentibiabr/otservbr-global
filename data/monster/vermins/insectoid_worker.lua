@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 950
 monster.maxHealth = 950
 monster.race = "venom"
-monster.corpse = 13514
+monster.corpse = 12525
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.loot = {
 	{name = "epee", chance = 560},
 	{name = "health potion", chance = 5090},
 	{name = "compound eye", chance = 15380},
-	{id = 15622, chance = 14990}
+	{id = 14225, chance = 14990}
 }
 
 monster.attacks = {
@@ -100,7 +98,7 @@ monster.elements = {
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -5},
+	{type = COMBAT_ICEDAMAGE, percent = -10},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }

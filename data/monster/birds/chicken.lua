@@ -34,7 +34,6 @@ monster.race = "blood"
 monster.corpse = 6042
 monster.speed = 128
 monster.manaCost = 220
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "meat", chance = 2120, maxCount = 2},
-	{id = 2695, chance = 950},
+	{id = 3606, chance = 950},
 	{name = "worm", chance = 10000, maxCount = 3},
 	{name = "chicken feather", chance = 20000}
 }

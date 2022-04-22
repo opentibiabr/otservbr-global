@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1450
 monster.maxHealth = 1450
 monster.race = "blood"
-monster.corpse = 20438
+monster.corpse = 18157
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 60000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Pirate Cutthroat", chance = 50, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Pirate Cutthroat", chance = 50, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -73,7 +74,7 @@ monster.loot = {
 	{name = "meat", chance = 18750, maxCount = 3},
 	{name = "gold coin", chance = 50000, maxCount = 60},
 	{name = "gold coin", chance = 50000, maxCount = 61},
-	{id = 2229, chance = 81250, maxCount = 2},
+	{id = 3114, chance = 81250, maxCount = 2},
 	{name = "pirate backpack", chance = 6250},
 	{name = "plate armor", chance = 56250},
 	{name = "knight armor", chance = 12500},

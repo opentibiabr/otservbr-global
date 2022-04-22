@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6077
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -78,7 +76,7 @@ monster.loot = {
 	{name = "gold coin", chance = 75000, maxCount = 21},
 	{name = "two handed sword", chance = 500},
 	{name = "mace", chance = 2000},
-	{id = 2667, chance = 22000},
+	{id = 3578, chance = 22000},
 	{name = "poisonous slime", chance = 3000}
 }
 

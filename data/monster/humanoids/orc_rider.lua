@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6010
 monster.speed = 260
 monster.manaCost = 490
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -45,7 +44,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -78,8 +76,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 980},
-	{id = 2129, chance = 10210},
+	{id = 2920, chance = 980},
+	{id = 3012, chance = 10210},
 	{name = "gold coin", chance = 46000, maxCount = 81},
 	{name = "obsidian lance", chance = 1100},
 	{name = "orcish axe", chance = 6880},
@@ -111,7 +109,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
 	{type = COMBAT_HOLYDAMAGE , percent = 10},
-	{type = COMBAT_DEATHDAMAGE , percent = -5}
+	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 
 monster.immunities = {

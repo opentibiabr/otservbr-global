@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1000
 monster.maxHealth = 1000
 monster.race = "venom"
-monster.corpse = 13483
+monster.corpse = 12494
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -75,11 +73,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 9690, chance = 4840},
-	{id = 2148, chance = 82190, maxCount = 55},
-	{id = 7618, chance = 1980},
-	{id = 2381, chance = 1000},
-	{id = 13758, chance = 310}
+	{id = 8775, chance = 4840},
+	{id = 3031, chance = 82190, maxCount = 55},
+	{id = 266, chance = 1980},
+	{id = 3269, chance = 1000},
+	{id = 12601, chance = 310}
 }
 
 monster.attacks = {
@@ -95,15 +93,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 5},
-	{type = COMBAT_EARTHDAMAGE, percent = -5},
-	{type = COMBAT_FIREDAMAGE, percent = 10},
+	{type = COMBAT_ENERGYDAMAGE, percent = 25},
+	{type = COMBAT_EARTHDAMAGE, percent = -10},
+	{type = COMBAT_FIREDAMAGE, percent = 25},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 5},
-	{type = COMBAT_DEATHDAMAGE , percent = -5}
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
+	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 
 monster.immunities = {

@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 7338
 monster.speed = 184
 monster.manaCost = 220
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 70,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -76,7 +74,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "meat", chance = 86170, maxCount = 2},
-	{id = 2684, chance = 11150},
+	{id = 3595, chance = 11150},
 	{name = "silky fur", chance = 28670}
 }
 

@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6055
 monster.speed = 150
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -79,15 +77,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 6000},
+	{id = 2920, chance = 6000},
 	{name = "gold coin", chance = 75000, maxCount = 17},
 	{name = "strange symbol", chance = 500},
-	{id = 2229, chance = 1950, maxCount = 3},
-	{id = 2230, chance = 5800},
-	{id = 2231, chance = 3000},
+	{id = 3114, chance = 1950, maxCount = 3},
+	{id = 3115, chance = 5800},
+	{id = 3116, chance = 3000},
 	{name = "poison dagger", chance = 1000},
 	{name = "leather armor", chance = 10000},
-	{id = 3955, chance = 130},
+	{id = 3002, chance = 130},
 	{name = "tribal mask", chance = 500},
 	{name = "health potion", chance = 600}
 }
@@ -119,7 +117,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -10},
-	{type = COMBAT_HOLYDAMAGE , percent = 30},
+	{type = COMBAT_HOLYDAMAGE , percent = 35},
 	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 

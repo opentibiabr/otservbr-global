@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6064
 monster.speed = 590
 monster.manaCost = 480
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,7 +43,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -84,7 +82,7 @@ monster.loot = {
 	{name = "halberd", chance = 4970},
 	{name = "small sapphire", chance = 1130},
 	{name = "cape", chance = 1090},
-	{name = "stealth ring", chance = 1050},
+	{id = 3049, chance = 1050}, -- Stealth ring
 	{name = "two handed sword", chance = 990},
 	{name = "fish fin", chance = 610},
 	{name = "strange helmet", chance = 100},

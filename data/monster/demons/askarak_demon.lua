@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1500
 monster.maxHealth = 1500
 monster.race = "venom"
-monster.corpse = 13815
+monster.corpse = 12659
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -88,7 +86,7 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "gold coin", chance = 40000, maxCount = 35},
 	{name = "small emerald", chance = 6250, maxCount = 4},
-	{name = "energy ring", chance = 961},
+	{id = 3051, chance = 961}, -- Energy ring
 	{name = "brown mushroom", chance = 3846, maxCount = 5},
 	{name = "magic sulphur", chance = 102},
 	{name = "assassin star", chance = 4761, maxCount = 5},
@@ -114,15 +112,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 50},
+	{type = COMBAT_ENERGYDAMAGE, percent = 60},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = -30},
+	{type = COMBAT_FIREDAMAGE, percent = -25},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 50},
+	{type = COMBAT_ICEDAMAGE, percent = 60},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 
 monster.immunities = {

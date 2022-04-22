@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 3700
 monster.maxHealth = 3700
 monster.race = "venom"
-monster.corpse = 15296
+monster.corpse = 13870
 monster.speed = 390
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -48,7 +47,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -82,10 +80,10 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "platinum coin", chance = 45000, maxCount = 4},
 	{name = "violet gem", chance = 770},
-	{id = 6300, chance = 2700},
+	{id = 6299, chance = 2700},
 	{name = "titan axe", chance = 920},
 	{name = "great mana potion", chance = 11500, maxCount = 2},
-	{id = 7632, chance = 1700},
+	{id = 281, chance = 1700},
 	{name = "ultimate health potion", chance = 6250, maxCount = 2},
 	{name = "spidris mandible", chance = 14960},
 	{name = "compound eye", chance = 12500},
@@ -109,13 +107,13 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = -5},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 5},
+	{type = COMBAT_FIREDAMAGE, percent = 15},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -5},
+	{type = COMBAT_ICEDAMAGE, percent = -3},
 	{type = COMBAT_HOLYDAMAGE , percent = -10},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

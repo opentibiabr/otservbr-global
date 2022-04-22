@@ -19,7 +19,7 @@ monster.Bestiary = {
 	race = BESTY_RACE_ELEMENTAL,
 	toKill = 5000,
 	FirstUnlock = 25,
-	SecondUnlock = 2500,
+	SecondUnlock = 3394,
 	CharmsPoints = 100,
 	Stars = 5,
 	Occurrence = 0,
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 28000
 monster.maxHealth = 28000
 monster.race = "blood"
-monster.corpse = 38740
+monster.corpse = 33905
 monster.speed = 180
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -92,7 +90,7 @@ monster.loot = {
 	{name = "crystalline armor", chance = 4500},
 	{name = "rubber cap", chance = 3500},
 	{name = "fur armor", chance = 2500},
-	{id = 38944, chance = 50} -- Bag you desire
+	{id = 34109, chance = 50} -- Bag you desire
 }
 
 monster.attacks = {
@@ -111,10 +109,10 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
-	{type = COMBAT_ENERGYDAMAGE, percent = 10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
+	{type = COMBAT_ENERGYDAMAGE, percent = -10},
 	{type = COMBAT_EARTHDAMAGE, percent = 40},
-	{type = COMBAT_FIREDAMAGE, percent = 20},
+	{type = COMBAT_FIREDAMAGE, percent = -20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

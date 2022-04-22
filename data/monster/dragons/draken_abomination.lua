@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 6250
 monster.maxHealth = 6250
 monster.race = "venom"
-monster.corpse = 12623
+monster.corpse = 11667
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 70,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -69,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Death Blob", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Death Blob", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {

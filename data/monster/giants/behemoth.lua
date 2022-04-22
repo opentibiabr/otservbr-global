@@ -34,7 +34,6 @@ monster.race = "blood"
 monster.corpse = 5999
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -81,14 +79,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2023, chance = 100},
+	{id = 2893, chance = 100},
 	{name = "crystal necklace", chance = 2530},
 	{name = "gold coin", chance = 595300, maxCount = 100},
 	{name = "gold coin", chance = 40000, maxCount = 99},
 	{name = "small amethyst", chance = 6380, maxCount = 5},
 	{name = "platinum coin", chance = 59800, maxCount = 5},
 	{name = "strange symbol", chance = 750},
-	{id = 2231, chance = 670},
+	{id = 3116, chance = 670},
 	{name = "two handed sword", chance = 5980},
 	{name = "double axe", chance = 10510},
 	{name = "giant sword", chance = 1006},
@@ -96,7 +94,7 @@ monster.loot = {
 	{name = "war axe", chance = 50},
 	{name = "plate armor", chance = 3930},
 	{name = "dark armor", chance = 4370},
-	{id = 2553, chance = 650},
+	{id = 3456, chance = 650},
 	{name = "steel boots", chance = 380},
 	{name = "meat", chance = 30000, maxCount = 6},
 	{name = "perfect behemoth fang", chance = 1090},

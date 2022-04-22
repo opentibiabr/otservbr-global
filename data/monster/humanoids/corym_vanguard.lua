@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 700
 monster.maxHealth = 700
 monster.race = "blood"
-monster.corpse = 19734
+monster.corpse = 17454
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,7 +79,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 120},
-	{id = 2696, chance = 20000},
+	{id = 3607, chance = 20000},
 	{name = "bola", chance = 10000},
 	{name = "spike shield", chance = 4761},
 	{name = "ratana", chance = 5000},
@@ -116,7 +114,7 @@ monster.elements = {
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 20},
+	{type = COMBAT_ICEDAMAGE, percent = 10},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }

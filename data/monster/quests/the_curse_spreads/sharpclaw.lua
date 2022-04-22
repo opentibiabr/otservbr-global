@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 3300
 monster.maxHealth = 3300
 monster.race = "blood"
-monster.corpse = 24723
+monster.corpse = 22067
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Werebadger", chance = 20, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Werebadger", chance = 20, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -80,7 +81,7 @@ monster.loot = {
 	{name = "Beetroot", chance = 13600000, maxCount = 9},
 	{name = "Great Mana Potion", chance = 13600000, maxCount = 9},
 	{name = "Platinum Amulet", chance = 13600000},
-	{name = "Ring of Healing", chance = 13600000},
+	{id = 3098, chance = 13600000}, -- Ring of healing
 	{name = "Troll Green", chance = 13600000, maxCount = 9},
 	{name = "Ultimate Mana Potion", chance = 13600000, maxCount = 9},
 	{name = "Werebadger Claws", chance = 13600000, maxCount = 9},

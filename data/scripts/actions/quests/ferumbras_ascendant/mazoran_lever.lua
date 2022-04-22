@@ -13,13 +13,13 @@ local config = {
 
 local ferumbrasAscendantMazoranLever = Action()
 function ferumbrasAscendantMazoranLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if item.itemid == 9825 then
+	if item.itemid == 8911 then
 		if player:getPosition() ~= Position(33593, 32644, 14) then
-			item:transform(9826)
+			item:transform(8912)
 			return true
 		end
 	end
-	if item.itemid == 9825 then
+	if item.itemid == 8911 then
 		local specs, spec = Game.getSpectators(config.centerRoom, false, false, 15, 15, 15, 15)
 		for i = 1, #specs do
 			spec = specs[i]
@@ -37,11 +37,11 @@ function ferumbrasAscendantMazoranLever.onUse(player, item, fromPosition, target
 				playerTile:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			end
 		end
-		Game.setStorageValue(GlobalStorage.FerumbrasAscendant.MazoranTimer, 1)
-		addEvent(clearForgotten, 30 * 60 * 1000, Position(33572, 32679, 14), Position(33599, 32701, 14), Position(33319, 32318, 13), GlobalStorage.FerumbrasAscendant.MazoranTimer)
-		item:transform(9826)
-	elseif item.itemid == 9826 then
-		item:transform(9825)
+		Game.setStorageValue(Storage.FerumbrasAscendant.MazoranTimer, 1)
+		addEvent(clearForgotten, 30 * 60 * 1000, Position(33572, 32679, 14), Position(33599, 32701, 14), Position(33319, 32318, 13), Storage.FerumbrasAscendant.MazoranTimer)
+		item:transform(8912)
+	elseif item.itemid == 8912 then
+		item:transform(8911)
 	end
 	return true
 end

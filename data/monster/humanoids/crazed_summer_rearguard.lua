@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 5300
 monster.maxHealth = 5300
 monster.race = "blood"
-monster.corpse = 34719
+monster.corpse = 30081
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -90,9 +88,9 @@ monster.loot = {
 	{name = "small enchanted ruby", chance = 1755},
 	{name = "red crystal fragment", chance = 1565},
 	{name = "leaf star", chance = 11100, maxCount = 8},
-	{id = 26185, chance = 1000},
+	{id = 23529, chance = 1000},
 	{name = "sun fruit", chance = 25800},
-	{id = 26198, chance = 1590},-- collar of blue plasma
+	{id = 23542, chance = 1590},-- collar of blue plasma
 	{name = "wood cape", chance = 30000},
 	{name = "small diamond", chance = 800},
 	{name = "yellow gem", chance = 640},
@@ -117,15 +115,15 @@ monster.reflects = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 100},
+	{type = COMBAT_FIREDAMAGE, percent = 40},
 	{type = COMBAT_LIFEDRAIN, percent = 100},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = -10},
-	{type = COMBAT_HOLYDAMAGE , percent = 50},
+	{type = COMBAT_ICEDAMAGE, percent = -25},
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 

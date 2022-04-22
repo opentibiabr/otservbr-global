@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6011
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "demon skeleton", chance = 6, interval = 1000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "demon skeleton", chance = 6, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -86,7 +87,7 @@ monster.loot = {
 	{name = "great mana potion", chance = 13430},
 	{name = "life crystal", chance = 13430},
 	{name = "sling herb", chance = 8960},
-	{id = 2369, chance = 7460},-- cornucopia
+	{id = 3257, chance = 7460},-- cornucopia
 	{name = "green tunic", chance = 4480},
 	{name = "royal spear", chance = 1490, maxCount = 2}
 }

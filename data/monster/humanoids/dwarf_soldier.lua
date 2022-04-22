@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6014
 monster.speed = 176
 monster.manaCost = 360
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -78,14 +76,14 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 28000, maxCount = 12},
-	{name = "axe ring", chance = 120},
+	{id = 3092, chance = 120}, -- Axe ring
 	{name = "battle axe", chance = 2500},
 	{name = "crossbow", chance = 3000},
 	{name = "chain armor", chance = 8000},
 	{name = "soldier helmet", chance = 12000},
 	{name = "dwarven shield", chance = 3000},
 	{name = "bolt", chance = 40000, maxCount = 7},
-	{id = 2554, chance = 10000},
+	{id = 3457, chance = 10000},
 	{name = "white mushroom", chance = 40000, maxCount = 3},
 	{name = "iron ore", chance = 300},
 	{name = "piercing bolt", chance = 4000, maxCount = 3}

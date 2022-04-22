@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 125
 monster.maxHealth = 125
 monster.race = "blood"
-monster.corpse = 20395
+monster.corpse = 18114
 monster.speed = 146
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -86,7 +84,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 30300, maxCount = 35},
-	{id = 2230, chance = 4920},
+	{id = 3115, chance = 4920},
 	{name = "worm", chance = 25730, maxCount = 3},
 	{name = "ominous piece of cloth", chance = 1660},
 	{name = "dubious piece of cloth", chance = 1720},
@@ -108,16 +106,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 20},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -15},
+	{type = COMBAT_ENERGYDAMAGE, percent = -10},
+	{type = COMBAT_EARTHDAMAGE, percent = 10},
+	{type = COMBAT_FIREDAMAGE, percent = -15},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 80},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_HOLYDAMAGE , percent = 75},
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6058
 monster.speed = 148
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -78,9 +76,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 4750},
+	{id = 2920, chance = 4750},
 	{name = "gold coin", chance = 69000, maxCount = 13},
-	{id = 2229, chance = 3300, maxCount = 3},
+	{id = 3114, chance = 3300, maxCount = 3},
 	{name = "poison dagger", chance = 2250},
 	{name = "bone shield", chance = 1000},
 	{name = "cleaver", chance = 9750},
@@ -103,13 +101,13 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_FIREDAMAGE, percent = -8},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -10},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = -15}
+	{type = COMBAT_DEATHDAMAGE , percent = -13}
 }
 
 monster.immunities = {

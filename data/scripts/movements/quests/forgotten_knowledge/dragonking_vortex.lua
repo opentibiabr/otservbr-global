@@ -30,7 +30,7 @@ local function functionBack()
 end
 
 local function removeVortex(position)
-	local vortex = Tile(position):getItemById(26580)
+	local vortex = Tile(position):getItemById(23912)
 	if vortex then
 		vortex:remove()
 	end
@@ -56,5 +56,5 @@ function dragonkingVortex.onStepIn(creature, item, position, fromPosition)
 end
 
 dragonkingVortex:type("stepin")
-dragonkingVortex:id(26396)
+dragonkingVortex:id(23728)
 dragonkingVortex:register()

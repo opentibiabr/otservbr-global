@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 190
 monster.maxHealth = 190
 monster.race = "blood"
-monster.corpse = 15497
+monster.corpse = 14094
 monster.speed = 130
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 75000, maxCount = 25},
-	{id = 2667, chance = 12020, maxCount = 3},--fish
+	{id = 3578, chance = 12020, maxCount = 3},--fish
 	{name = "deepling scales", chance = 6950},
 	{name = "heavy trident", chance = 510},
 	{name = "fish fin", chance = 350},

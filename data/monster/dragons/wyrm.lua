@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 1825
 monster.maxHealth = 1825
 monster.race = "blood"
-monster.corpse = 8941
+monster.corpse = 8113
 monster.speed = 280
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 80,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -86,7 +84,7 @@ monster.loot = {
 	{name = "gold coin", chance = 30000, maxCount = 100},
 	{name = "gold coin", chance = 30000, maxCount = 30},
 	{name = "crossbow", chance = 5920},
-	{name = "burst arrow", chance = 7650, maxCount = 10},
+	{id = 3449, chance = 7650, maxCount = 10}, -- Burst arrow
 	{name = "dragon ham", chance = 34800, maxCount = 3},
 	{name = "dragonbone staff", chance = 110},
 	{name = "strong health potion", chance = 19970},

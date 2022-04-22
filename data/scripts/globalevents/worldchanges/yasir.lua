@@ -2,11 +2,12 @@ local config = {
 	-- Ankrahmun
 	[1] = {
 		removeItems = {
-			{position = Position(33096, 32882, 6), itemId = 4978},
-			{position = Position(33096, 32883, 6), itemId = 4978},
-			{position = Position(33096, 32883, 6), itemId = 4922},
-			{position = Position(33096, 32884, 6), itemId = 4922},
-			{position = Position(33096, 32885, 6), itemId = 4922}
+			{position = Position(33096, 32882, 6), itemId = 4977},
+			{position = Position(33096, 32883, 6), itemId = 4977},
+			{position = Position(33096, 32883, 6), itemId = 4920},
+			{position = Position(33096, 32884, 6), itemId = 4920},
+			{position = Position(33096, 32885, 6), itemId = 4920},
+			{position = Position(33097, 32883, 6), itemId = 4976}
 		},
 		fromPosition = Position(33099, 32875, 7),
 		toPosition = Position(33106, 32893, 7),
@@ -16,9 +17,9 @@ local config = {
 	-- Carlin
 	[2] = {
 		removeItems = {
-			{position = Position(32393, 31814, 6), itemId = 10408},
-			{position = Position(32393, 31815, 6), itemId = 10408},
-			{position = Position(32393, 31816, 6), itemId = 10408}
+			{position = Position(32393, 31814, 6), itemId = 9491},
+			{position = Position(32393, 31815, 6), itemId = 9491},
+			{position = Position(32393, 31816, 6), itemId = 9491}
 		},
 		fromPosition = Position(32397, 31806, 7),
 		toPosition = Position(32403, 31824, 7),
@@ -28,15 +29,14 @@ local config = {
 	-- Liberty Bay
 	[3] = {
 		removeItems = {
-			{position = Position(32309, 32896, 6), itemId = 3782},
-			{position = Position(32309, 32895, 6), itemId = 3782},
-			{position = Position(32309, 32894, 6), itemId = 3782},
-			{position = Position(32309, 32893, 6), itemId = 3782},
-			{position = Position(32309, 32896, 6), itemId = 3760},
-			{position = Position(32309, 32895, 6), itemId = 3760},
-			{position = Position(32309, 32894, 6), itemId = 3760},
-			{position = Position(32309, 32893, 6), itemId = 3760},
-			{position = Position(32309, 32892, 6), itemId = 3759}
+			{position = Position(32309, 32896, 6), itemId = 2279},
+			{position = Position(32309, 32895, 6), itemId = 2279},
+			{position = Position(32309, 32894, 6), itemId = 2279},
+			{position = Position(32309, 32893, 6), itemId = 2279},
+			{position = Position(32309, 32896, 6), itemId = 2257},
+			{position = Position(32309, 32895, 6), itemId = 2257},
+			{position = Position(32309, 32894, 6), itemId = 2257},
+			{position = Position(32309, 32893, 6), itemId = 2257}
 		},
 		fromPosition = Position(32311, 32884, 1),
 		toPosition = Position(32318, 32904, 7),
@@ -60,6 +60,7 @@ local function spawnYasir(position)
 end
 
 local yasir = GlobalEvent("yasir")
+
 function yasir.onStartup()
 	if yasirEnabled then
 		if math.random(100) <= yasirChance then
@@ -90,7 +91,10 @@ function yasir.onStartup()
 			if randTown.removeItems then
 				local item
 				for i = 1, #randTown.removeItems do
-					item = Tile(randTown.removeItems[i].position):getItemById(randTown.removeItems[i].itemId)
+					local tile = Tile(randTown.removeItems[i].position)
+					if tile then
+						item = tile:getItemById(randTown.removeItems[i].itemId)
+					end
 					if item then
 						item:remove()
 					end
@@ -109,4 +113,5 @@ function yasir.onStartup()
 		end
 	end
 end
+
 yasir:register()

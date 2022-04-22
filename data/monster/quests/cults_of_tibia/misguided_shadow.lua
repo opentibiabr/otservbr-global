@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 3000
 monster.maxHealth = 3000
 monster.race = "blood"
-monster.corpse = 29361
+monster.corpse = 26125
 monster.speed = 240
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -34,10 +33,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -66,8 +64,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7588, chance = 15000},
-	{id = 2156, chance = 6000}
+	{id = 236, chance = 15000},
+	{id = 3039, chance = 6000}
 }
 
 monster.attacks = {

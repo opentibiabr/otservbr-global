@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 20000
 monster.maxHealth = 20000
 monster.race = "undead"
-monster.corpse = 33337
+monster.corpse = 28590
 monster.speed = 440
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -75,9 +73,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 33316, chance = 10000, maxCount = 3},
+	{id = 28569, chance = 10000, maxCount = 3},
 	{name = "Platinum Coin", chance = 10000, maxCount = 10},
-	{id = 33313, chance = 10000, maxCount = 3},
+	{id = 28566, chance = 10000, maxCount = 3},
 	{name = "Small Diamond", chance = 10000, maxCount = 7},
 	{name = "Small Stone", chance = 10000, maxCount = 7},
 	{name = "Small Topaz", chance = 10000, maxCount = 7},

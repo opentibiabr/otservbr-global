@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5984
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Dragon", chance = 17, interval = 1000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Dragon", chance = 17, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -71,14 +72,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2672, chance = 20000, maxCount = 2},
-	{id = 2033, chance = 1818},
-	{id = 1976, chance = 3333},
-	{id = 2492, chance = 333},
-	{id = 2547, chance = 2222, maxCount = 10},
-	{id = 2796, chance = 6666},
-	{id = 2392, chance = 1428},
-	{id = 2146, chance = 2222, maxCount = 2},
+	{id = 3583, chance = 20000, maxCount = 2},
+	{id = 2903, chance = 1818},
+	{id = 2842, chance = 3333},
+	{id = 3386, chance = 333},
+	{id = 3450, chance = 2222, maxCount = 10},
+	{id = 3732, chance = 6666},
+	{id = 3280, chance = 1428},
+	{id = 3029, chance = 2222, maxCount = 2},
 	{id = 5948, chance = 5000},
 	{id = 5919, chance = 100000}
 }

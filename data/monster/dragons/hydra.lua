@@ -37,7 +37,6 @@ monster.race = "blood"
 monster.corpse = 6048
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -68,8 +67,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -93,7 +91,7 @@ monster.loot = {
 	{name = "life crystal", chance = 570},
 	{name = "boots of haste", chance = 130},
 	{name = "stone skin amulet", chance = 900},
-	{name = "ring of healing", chance = 1190},
+	{id = 3098, chance = 1190}, -- Ring of healing
 	{name = "warrior helmet", chance = 890},
 	{name = "knight armor", chance = 1000},
 	{name = "royal helmet", chance = 210},

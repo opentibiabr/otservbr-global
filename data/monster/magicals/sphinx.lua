@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8500
 monster.maxHealth = 8500
 monster.race = "blood"
-monster.corpse = 36221
+monster.corpse = 31386
 monster.speed = 290
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -78,7 +76,7 @@ monster.loot = {
 	{name = "Platinum Coin", chance = 100000, maxCount = 3},
 	{name = "Sphinx Feather", chance = 9300},
 	{name = "Magma Amulet", chance = 7000},
-	{id = 36273, chance = 5500},
+	{id = 31438, chance = 5500},
 	{name = "Magma Boots", chance = 3600},
 	{name = "Lightning Pendant", chance = 3500},
 	{name = "Lightning Headband", chance = 3100},
@@ -104,12 +102,12 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 90},
+	{type = COMBAT_FIREDAMAGE, percent = 10},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -15},
-	{type = COMBAT_HOLYDAMAGE , percent = 85},
+	{type = COMBAT_HOLYDAMAGE , percent = 15},
 	{type = COMBAT_DEATHDAMAGE , percent = -20}
 }
 

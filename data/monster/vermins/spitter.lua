@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1500
 monster.maxHealth = 1500
 monster.race = "venom"
-monster.corpse = 15392
+monster.corpse = 13979
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -48,9 +47,9 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 95,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -81,7 +79,7 @@ monster.loot = {
 	{name = "small amethyst", chance = 8000, maxCount = 2},
 	{name = "platinum coin", chance = 75250},
 	{name = "green gem", chance = 210},
-	{id = 2169, chance = 2400},
+	{id = 3053, chance = 2400},
 	{name = "platinum amulet", chance = 260},
 	{name = "crusader helmet", chance = 230},
 	{name = "brown mushroom", chance = 7500, maxCount = 3},
@@ -109,7 +107,7 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = -5},
+	{type = COMBAT_ENERGYDAMAGE, percent = -11},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 5},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
@@ -117,7 +115,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -5},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_DEATHDAMAGE , percent = 15}
 }
 
 monster.immunities = {

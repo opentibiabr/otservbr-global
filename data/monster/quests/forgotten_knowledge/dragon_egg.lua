@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a dragon egg"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 27745
+	lookTypeEx = 25077
 }
 
 monster.health = 5000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -41,8 +40,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.events = {

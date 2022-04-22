@@ -34,7 +34,6 @@ monster.race = "venom"
 monster.corpse = 6021
 monster.speed = 218
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -73,8 +71,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Larva", chance = 10, interval = 2000, max = 3}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Larva", chance = 10, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -84,13 +85,13 @@ monster.voices = {
 
 monster.loot = {
 	{name = "scarab amulet", chance = 3410},
-	{name = "ancient amulet", chance = 2570},
+	{id = 3025, chance = 2570}, -- Ancient amulet
 	{name = "gold coin", chance = 50000, maxCount = 90},
 	{name = "gold coin", chance = 50000, maxCount = 97},
 	{name = "small emerald", chance = 4810, maxCount = 3},
 	{name = "small amethyst", chance = 5000, maxCount = 4},
 	{name = "scarab coin", chance = 7692, maxCount = 2},
-	{id = 2162, chance = 11480},
+	{id = 3046, chance = 11480},
 	{name = "daramian waraxe", chance = 420},
 	{name = "plate armor", chance = 10300},
 	{name = "scarab shield", chance = 480},

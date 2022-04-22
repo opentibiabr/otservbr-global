@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "stolen tome of portals"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 26653
+	lookTypeEx = 23985
 }
 
 monster.health = 10000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -41,8 +40,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.events = {

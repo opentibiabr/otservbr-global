@@ -31,10 +31,9 @@ monster.Bestiary = {
 monster.health = 150
 monster.maxHealth = 150
 monster.race = "blood"
-monster.corpse = 20419
+monster.corpse = 18138
 monster.speed = 210
 monster.manaCost = 530
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -46,7 +45,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,7 +79,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 3300},
+	{id = 2920, chance = 3300},
 	{name = "small ruby", chance = 150},
 	{name = "dragon necklace", chance = 3000},
 	{name = "bow", chance = 5770},
@@ -89,7 +87,7 @@ monster.loot = {
 	{name = "brass armor", chance = 5070},
 	{name = "arrow", chance = 82000, maxCount = 22},
 	{name = "poison arrow", chance = 4500, maxCount = 4},
-	{name = "burst arrow", chance = 5360, maxCount = 3},
+	{id = 3449, chance = 5360, maxCount = 3}, -- Burst arrow
 	{name = "orange", chance = 20300, maxCount = 2},
 	{name = "roll", chance = 11370, maxCount = 2},
 	{name = "sniper gloves", chance = 610},
@@ -111,7 +109,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},

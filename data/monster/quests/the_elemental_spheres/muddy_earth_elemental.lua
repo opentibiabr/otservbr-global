@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 650
 monster.maxHealth = 650
 monster.race = "undead"
-monster.corpse = 8933
+monster.corpse = 8105
 monster.speed = 260
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 20000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 80,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -68,7 +66,7 @@ monster.loot = {
 	{name = "small stone", chance = 40000, maxCount = 3},
 	{name = "gold coin", chance = 24500, maxCount = 80},
 	{name = "gold coin", chance = 24500, maxCount = 47},
-	{id = 2244, chance = 22000},
+	{id = 3129, chance = 22000},
 	{name = "natural soil", chance = 3750}
 }
 

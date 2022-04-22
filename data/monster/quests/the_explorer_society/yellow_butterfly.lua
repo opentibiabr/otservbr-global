@@ -32,10 +32,9 @@ monster.Bestiary = {
 monster.health = 2
 monster.maxHealth = 2
 monster.race = "venom"
-monster.corpse = 5014
+monster.corpse = 5013
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -54,7 +53,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {

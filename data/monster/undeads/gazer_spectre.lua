@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 4500
 monster.maxHealth = 4500
 monster.race = "blood"
-monster.corpse = 34805
+monster.corpse = 30167
 monster.speed = 390
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -86,12 +84,12 @@ monster.loot = {
 	{name = "Small Enchanted Ruby", chance = 7500},
 	{name = "Small Diamond", chance = 6000},
 	{name = "Small Sapphire", chance = 5000},
-	{name = "Red Gem", chance = 4000},
+	{id= 3039, chance = 4000},
 	{name = "Yellow Gem", chance = 3000},
-	{id = 33938, chance = 1100},
+	{id = 29299, chance = 1100},
 	{name = "Wand of Draconia", chance = 3500},
 	{name = "Wand of Inferno", chance = 1100},
-	{id = 34722, chance = 700},
+	{id = 30084, chance = 700},
 	{name = "Magma Coat", chance = 900},
 	{name = "Prismatic Quartz", chance = 1500},
 	{name = "Small Enchanted Emerald", chance = 800},
@@ -126,7 +124,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -30},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 20}
+	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 
 monster.immunities = {

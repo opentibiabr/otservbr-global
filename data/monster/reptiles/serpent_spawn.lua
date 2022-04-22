@@ -33,7 +33,6 @@ monster.race = "venom"
 monster.corpse = 6061
 monster.speed = 234
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -86,8 +84,8 @@ monster.loot = {
 	{name = "gold coin", chance = 32300, maxCount = 100},
 	{name = "gold coin", chance = 32300, maxCount = 100},
 	{name = "gold coin", chance = 32300, maxCount = 39},
-	{name = "energy ring", chance = 590},
-	{name = "life ring", chance = 6250},
+	{id = 3051, chance = 590}, -- Energy ring
+	{id = 3052, chance = 6250}, -- Life ring
 	{name = "life crystal", chance = 800},
 	{name = "snakebite rod", chance = 930},
 	{name = "warrior helmet", chance = 560},

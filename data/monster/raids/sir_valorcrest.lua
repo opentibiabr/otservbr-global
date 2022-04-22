@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1600
 monster.maxHealth = 1600
 monster.race = "undead"
-monster.corpse = 8937
+monster.corpse = 8109
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Vampire", chance = 30, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Vampire", chance = 30, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -72,14 +73,14 @@ monster.voices = {
 
 monster.loot = {
 	{id = 7427, chance = 250},
-	{id = 9020, chance = 100000},
-	{id = 7588, chance = 1500},
-	{id = 2207, chance = 1400},
-	{id = 2229, chance = 15000},
-	{id = 9020, chance = 100000},
-	{id = 2152, chance = 50000, maxCount = 5},
-	{id = 2148, chance = 100000, maxCount = 93},
-	{id = 2534, chance = 6300}
+	{id = 8192, chance = 100000},
+	{id = 236, chance = 1500},
+	{id = 3091, chance = 1400}, -- Sword ring
+	{id = 3114, chance = 15000},
+	{id = 8192, chance = 100000},
+	{id = 3035, chance = 50000, maxCount = 5},
+	{id = 3031, chance = 100000, maxCount = 93},
+	{id = 3434, chance = 6300}
 }
 
 monster.attacks = {

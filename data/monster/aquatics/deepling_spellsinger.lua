@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 850
 monster.maxHealth = 850
 monster.race = "blood"
-monster.corpse = 15208
+monster.corpse = 13771
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,9 +50,9 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 60,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -85,10 +83,10 @@ monster.loot = {
 	{name = "spellsinger's seal", chance = 15185},
 	{name = "deepling filet", chance = 14995},
 	{name = "key to the Drowned Library", chance = 10740},
-	{id = 2667, chance = 3448},--fish
+	{id = 3578, chance = 3448},--fish
 	{name = "small sapphire", chance = 2934},
 	{name = "eye of a deepling", chance = 2540},
-	{name = "life ring", chance = 2459},
+	{id = 3052, chance = 2459}, -- Life ring
 	{name = "deepling staff", chance = 2020},
 	{name = "necklace of the deep", chance = 790},
 	{name = "fish fin", chance = 520},

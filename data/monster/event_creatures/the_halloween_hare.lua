@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 150
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -87,8 +85,8 @@ monster.attacks = {
 }
 
 monster.defenses = {
-	defense = 999,
-	armor = 999,
+	defense = 1244,
+	armor = 1244,
 	{name ="combat", interval = 1000, chance = 50, type = COMBAT_HEALING, minDamage = 1500, maxDamage = 2000, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 

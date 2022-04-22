@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 820
 monster.maxHealth = 820
 monster.race = "blood"
-monster.corpse = 21262
+monster.corpse = 18945
 monster.speed = 198
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -90,7 +88,7 @@ monster.loot = {
 	{name = "spellbook of mind control", chance = 180},
 	{name = "underworld rod", chance = 470},
 	{name = "book of necromantic rituals", chance = 13550},
-	{name = "red gem", chance = 880},
+	{id= 3039, chance = 880},
 	{name = "lancet", chance = 14410},
 	{name = "horoscope", chance = 9270},
 	{name = "blood tincture in a vial", chance = 14460},
@@ -114,16 +112,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
-	{type = COMBAT_ENERGYDAMAGE, percent = 5},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -8},
+	{type = COMBAT_ENERGYDAMAGE, percent = 15},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_FIREDAMAGE, percent = -8},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = 5},
-	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_ICEDAMAGE, percent = 15},
+	{type = COMBAT_HOLYDAMAGE , percent = -8},
+	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 
 monster.immunities = {

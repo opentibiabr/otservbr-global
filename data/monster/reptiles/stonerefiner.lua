@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 800
 monster.maxHealth = 800
 monster.race = "blood"
-monster.corpse = 30771
+monster.corpse = 27536
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -82,7 +80,7 @@ monster.voices = {
 monster.loot = {
 	{name = "platinum coin", chance = 50930, maxCount = 4},
 	{name = "rare earth", chance = 39750, maxCount = 2},
-	{id = 13757, chance = 27980, maxCount = 5},
+	{id = 12600, chance = 27980, maxCount = 5},
 	{name = "glob of acid slime", chance = 23680},
 	{name = "stonerefiner's skull", chance = 20110},
 	{name = "poisonous slime", chance = 20040, maxCount = 3},
@@ -92,7 +90,7 @@ monster.loot = {
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -100},
 	{name ="berserk", interval = 2000, chance = 15, minDamage = 0, maxDamage = -70, target = false},
-	{name ="stone shower", interval = 2000, chance = 10, minDamage = -40, maxDamage = -80, range = 7, target = false}
+	{name ="stone shower rune", interval = 2000, chance = 10, minDamage = -40, maxDamage = -80, range = 7, target = false}
 }
 
 monster.defenses = {
@@ -101,15 +99,15 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -20},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 1},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
+	{type = COMBAT_FIREDAMAGE, percent = -10},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 90},
+	{type = COMBAT_ICEDAMAGE, percent = -20},
+	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 

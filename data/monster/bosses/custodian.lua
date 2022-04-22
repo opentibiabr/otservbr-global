@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 47000
 monster.maxHealth = 47000
 monster.race = "blood"
-monster.corpse = 36758
+monster.corpse = 31923
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {

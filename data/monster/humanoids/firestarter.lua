@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 180
 monster.maxHealth = 180
 monster.race = "blood"
-monster.corpse = 20599
+monster.corpse = 18318
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -90,7 +88,7 @@ monster.loot = {
 	{name = "elvish bow", chance = 100},
 	{name = "flaming arrow", chance = 30000, maxCount = 12},
 	{name = "elvish talisman", chance = 5000},
-	{id = 13757, chance = 15280},
+	{id = 12600, chance = 15280},
 	{name = "flintstone", chance = 340}
 }
 
@@ -106,16 +104,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 5},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -20},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = -20}
+	{type = COMBAT_ICEDAMAGE, percent = -10},
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
+	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 
 monster.immunities = {

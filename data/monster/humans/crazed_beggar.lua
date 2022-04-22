@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 100
 monster.maxHealth = 100
 monster.race = "blood"
-monster.corpse = 20351
+monster.corpse = 18070
 monster.speed = 154
 monster.manaCost = 300
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = true,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 80,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -83,20 +81,20 @@ monster.voices = {
 
 monster.loot = {
 	{name = "small blue pillow", chance = 420},
-	{id = 2072, chance = 360},
+	{id = 2950, chance = 360},
 	{name = "gold coin", chance = 99000, maxCount = 9},
-	{name = "dwarven ring", chance = 120},
-	{id = 33528, chance = 55000},
+	{id = 3097, chance = 120}, -- Dwarven ring
+	{id = 3122, chance = 55000},
 	{name = "wooden hammer", chance = 6500},
 	{name = "wooden spoon", chance = 9750},
-	{id = 2570, chance = 5650},
+	{id = 3473, chance = 5650},
 	{name = "meat", chance = 9500},
 	{name = "roll", chance = 22500},
 	{name = "red rose", chance = 4700},
 	{name = "sling herb", chance = 420},
 	{name = "rum flask", chance = 420},
-	{id = 6092, chance = 300},
-	{id = 9808, chance = 80}
+	{id = 6091, chance = 300},
+	{id = 8894, chance = 80}
 }
 
 monster.attacks = {

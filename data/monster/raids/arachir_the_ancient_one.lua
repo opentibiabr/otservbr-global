@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1600
 monster.maxHealth = 1600
 monster.race = "undead"
-monster.corpse = 8937
+monster.corpse = 8109
 monster.speed = 286
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,9 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Lich", chance = 100, interval = 9000},
-	{name = "Lich", chance = 100, interval = 9000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Lich", chance = 100, interval = 9000, count = 2},
+	}
 }
 
 monster.voices = {
@@ -75,13 +75,13 @@ monster.voices = {
 
 monster.loot = {
 	{id = 7416, chance = 1200},
-	{id = 7588, chance = 10000},
-	{id = 2229, chance = 10000},
-	{id = 2148, chance = 100000, maxCount = 98},
-	{id = 9020, chance = 100000},
-	{id = 2152, chance = 50000, maxCount = 5},
-	{id = 2534, chance = 6300},
-	{id = 2144, chance = 8980}
+	{id = 236, chance = 10000},
+	{id = 3114, chance = 10000},
+	{id = 3031, chance = 100000, maxCount = 98},
+	{id = 8192, chance = 100000},
+	{id = 3035, chance = 50000, maxCount = 5},
+	{id = 3434, chance = 6300},
+	{id = 3027, chance = 8980}
 }
 
 monster.attacks = {

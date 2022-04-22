@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2400
 monster.maxHealth = 2400
 monster.race = "blood"
-monster.corpse = 24257
+monster.corpse = 21888
 monster.speed = 320
 monster.manaCost = 450
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -47,10 +46,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -78,30 +76,30 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2152, chance = 100000, maxCount = 3},
-	{id = 23574, chance = 9090},
-	{id = 24185, chance = 7692},
-	{id = 7590, chance = 5882},
-	{id = 23514, chance = 4000},
-	{id = 24183, chance = 3030},
-	{id = 8472, chance = 2500},
-	{id = 23517, chance = 2000},
-	{id = 8473, chance = 2000},
-	{id = 23549, chance = 1515},
-	{id = 23554, chance = 1515},
+	{id = 3031, chance = 100000, maxCount = 100},
+	{id = 3035, chance = 100000, maxCount = 3},
+	{id = 21203, chance = 9090},
+	{id = 21816, chance = 7692},
+	{id = 238, chance = 5882},
+	{id = 21143, chance = 4000},
+	{id = 21814, chance = 3030},
+	{id = 7642, chance = 2500},
+	{id = 21146, chance = 2000},
+	{id = 7643, chance = 2000},
+	{id = 21178, chance = 1515},
+	{id = 21183, chance = 1515},
 	{id = 7386, chance = 1000},
-	{id = 7884, chance = 1000},
-	{id = 7632, chance = 1000},
-	{id = 7887, chance = 1000},
+	{id = 811, chance = 1000},
+	{id = 281, chance = 1000},
+	{id = 814, chance = 1000},
 	{id = 7412, chance = 1000},
-	{id = 2155, chance = 1000},
-	{id = 7886, chance = 502},
+	{id = 3038, chance = 1000},
+	{id = 813, chance = 502},
 	{id = 7419, chance = 502},
-	{id = 23538, chance = 502},
-	{id = 23529, chance = 502},
-	{id = 23536, chance = 502},
-	{id = 7903, chance = 502}
+	{id = 21167, chance = 502},
+	{id = 21158, chance = 502},
+	{id = 21165, chance = 502},
+	{id = 830, chance = 502}
 }
 
 monster.attacks = {
@@ -125,7 +123,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 10},
 	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 20}
+	{type = COMBAT_DEATHDAMAGE , percent = 15}
 }
 
 monster.immunities = {

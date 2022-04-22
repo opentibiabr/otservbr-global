@@ -19,7 +19,6 @@ monster.race = "fire"
 monster.corpse = 6068
 monster.speed = 440
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -77,7 +75,7 @@ monster.loot = {
 	{name = "spike sword", chance = 9090},
 	{name = "fire sword", chance = 14285},
 	{name = "giant sword", chance = 7692},
-	{id = 2419, chance = 11111},
+	{id = 3307, chance = 11111},
 	{name = "warrior helmet", chance = 20000},
 	{name = "strange helmet", chance = 8333},
 	{name = "crown helmet", chance = 6250},
@@ -102,7 +100,7 @@ monster.loot = {
 	{name = "great health potion", chance = 20000},
 	{name = "great spirit potion", chance = 20000},
 	{name = "ultimate health potion", chance = 20000},
-	{id = 9808, chance = 20000},
+	{id = 8894, chance = 20000},
 	{name = "gold ingot", chance = 16666}
 }
 

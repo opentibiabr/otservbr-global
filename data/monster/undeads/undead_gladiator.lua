@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1000
 monster.maxHealth = 1000
 monster.race = "undead"
-monster.corpse = 9823
+monster.corpse = 8909
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -82,11 +80,11 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 44000, maxCount = 100},
 	{name = "gold coin", chance = 50500, maxCount = 48},
-	{name = "stealth ring", chance = 30},
+	{id = 3049, chance = 30}, -- Stealth ring
 	{name = "protection amulet", chance = 2200},
 	{name = "two handed sword", chance = 1900},
 	{name = "throwing star", chance = 15700, maxCount = 18},
-	{id = 2419, chance = 11280},
+	{id = 3307, chance = 11280},
 	{name = "knight axe", chance = 280},
 	{name = "plate armor", chance = 1700},
 	{name = "brass armor", chance = 4700},

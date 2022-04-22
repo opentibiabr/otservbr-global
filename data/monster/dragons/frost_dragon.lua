@@ -33,7 +33,6 @@ monster.race = "undead"
 monster.corpse = 7091
 monster.speed = 212
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 70,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -83,13 +81,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1976, chance = 8500},
+	{id = 2842, chance = 8500},
 	{name = "golden mug", chance = 3000},
 	{name = "small sapphire", chance = 5200},
 	{name = "gold coin", chance = 33000, maxCount = 100},
 	{name = "gold coin", chance = 33000, maxCount = 100},
 	{name = "gold coin", chance = 33000, maxCount = 42},
-	{name = "energy ring", chance = 5000},
+	{id = 3051, chance = 5000}, -- Energy ring
 	{name = "life crystal", chance = 520},
 	{name = "ice rapier", chance = 350},
 	{name = "strange helmet", chance = 450},
@@ -123,7 +121,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 100},

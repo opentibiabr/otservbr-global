@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6065
 monster.speed = 520
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Massive Water Elemental", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Massive Water Elemental", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -72,13 +73,13 @@ monster.voices = {
 
 monster.loot = {
 	{id = 5895, chance = 100000},
-	{id = 2152, chance = 88000, maxCount = 10},
-	{id = 7963, chance = 67000},
-	{id = 7590, chance = 46000},
-	{id = 2150, chance = 38000, maxCount = 4},
+	{id = 3035, chance = 88000, maxCount = 10},
+	{id = 901, chance = 67000},
+	{id = 238, chance = 46000},
+	{id = 3033, chance = 38000, maxCount = 4},
 	{id = 7383, chance = 35000},
-	{id = 2497, chance = 16000},
-	{id = 2487, chance = 10000}
+	{id = 3391, chance = 16000},
+	{id = 3381, chance = 10000}
 }
 
 monster.attacks = {

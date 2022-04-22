@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 4100
 monster.maxHealth = 4100
 monster.race = "blood"
-monster.corpse = 20399
+monster.corpse = 18118
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 70,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2124, chance = 410},
+	{id = 3007, chance = 410},
 	{name = "gold coin", chance = 30000, maxCount = 100},
 	{name = "gold coin", chance = 30000, maxCount = 100},
 	{name = "gold coin", chance = 38000, maxCount = 69},
@@ -92,9 +90,9 @@ monster.loot = {
 	{name = "red piece of cloth", chance = 4000},
 	{name = "soul orb", chance = 21500},
 	{name = "soul orb", chance = 50},
-	{id = 6301, chance = 60},
+	{id = 6300, chance = 60},
 	{name = "demonic essence", chance = 22500},
-	{name = "concentrated demonic blood", chance = 35000, maxCount = 3},
+	{name = "flask of demonic blood", chance = 35000, maxCount = 3},
 	{name = "assassin dagger", chance = 660},
 	{name = "noble axe", chance = 2000},
 	{name = "great health potion", chance = 10500},

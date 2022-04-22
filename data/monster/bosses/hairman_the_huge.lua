@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6043
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -66,7 +64,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 60},
-	{name = "club ring", chance = 25000},
+	{id = 3093, chance = 25000}, -- Club ring
 	{name = "banana", chance = 25000, maxCount = 1}
 }
 

@@ -31,10 +31,9 @@ monster.Bestiary = {
 monster.health = 3900
 monster.maxHealth = 3900
 monster.race = "undead"
-monster.corpse = 8955
+monster.corpse = 8127
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -84,20 +82,20 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 99000, maxCount = 263},
 	{name = "platinum coin", chance = 5200, maxCount = 4},
-	{id = 2162, chance = 4850},
+	{id = 3046, chance = 4850},
 	{name = "dark shield", chance = 3000},
 	{name = "scythe", chance = 9000},
 	{name = "orichalcum pearl", chance = 1400, maxCount = 4},
-	{id = 6300, chance = 330},
+	{id = 6299, chance = 330},
 	{name = "demonic essence", chance = 10600},
-	{name = "concentrated demonic blood", chance = 35000},
+	{name = "flask of demonic blood", chance = 35000},
 	{name = "nightmare blade", chance = 880},
 	{name = "great mana potion", chance = 10000},
 	{name = "glacier kilt", chance = 330},
 	{name = "ultimate health potion", chance = 9600},
 	{name = "skullcracker armor", chance = 270},
 	{name = "underworld rod", chance = 910},
-	{id = 9810, chance = 2500},
+	{id = 8896, chance = 2500},
 	{name = "mystical hourglass", chance = 5300}
 }
 
@@ -117,7 +115,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
 	{type = COMBAT_ENERGYDAMAGE, percent = -10},
 	{type = COMBAT_EARTHDAMAGE, percent = 40},
 	{type = COMBAT_FIREDAMAGE, percent = -10},

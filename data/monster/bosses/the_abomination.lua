@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6532
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = true,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -66,9 +64,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2152, chance = 10000, maxCount = 3},
-	{id = 6500, chance = 2857},
+	{id = 3031, chance = 100000, maxCount = 100},
+	{id = 3035, chance = 10000, maxCount = 3},
+	{id = 6499, chance = 2857},
 	{id = 5944, chance = 2500}
 }
 

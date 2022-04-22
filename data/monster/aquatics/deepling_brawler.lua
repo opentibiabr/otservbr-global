@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 380
 monster.maxHealth = 380
 monster.race = "blood"
-monster.corpse = 13840
+monster.corpse = 12685
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 96000, maxCount = 44},
-	{id = 2667, chance = 19730, maxCount = 3},
+	{id = 3578, chance = 19730, maxCount = 3},
 	{name = "deepling scales", chance = 14500},
 	{name = "eye of a deepling", chance = 6500},
 	{name = "heavy trident", chance = 2720},

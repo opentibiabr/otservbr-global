@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2500
 monster.maxHealth = 2500
 monster.race = "venom"
-monster.corpse = 9867
+monster.corpse = 8953
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 0,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2250, chance = 15220, maxCount = 96},
+	{id = 3135, chance = 15220, maxCount = 96},
 	{name = "dry piece of wood", chance = 100000}
 }
 

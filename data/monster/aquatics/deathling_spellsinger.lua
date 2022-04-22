@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 7200
 monster.maxHealth = 7200
 monster.race = "blood"
-monster.corpse = 32549
+monster.corpse = 28851
 monster.speed = 310
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -48,7 +47,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -93,7 +91,7 @@ monster.loot = {
 	{name = "Fish Fin", chance = 2990},
 	{name = "Warrior's Axe", chance = 2950},
 	{name = "Small Enchanted Sapphire", chance = 2220, maxCount = 4},
-	{name = "Life Ring", chance = 2010},
+	{id = 3052, chance = 2010}, -- Life ring
 	{name = "Necklace of the Deep", chance = 200}
 }
 

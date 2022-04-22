@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 13000
 monster.maxHealth = 13000
 monster.race = "undead"
-monster.corpse = 33325
+monster.corpse = 28578
 monster.speed = 420
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -77,8 +75,8 @@ monster.voices = {
 monster.loot = {
 	{name = "Small Sapphire", chance = 8700, maxCount = 5},
 	{name = "Platinum Coin", chance = 87000, maxCount = 50},
-	{id = 33317, chance = 500, maxCount = 10},
-	{name = "Energy Ring", chance = 8700},
+	{id = 28570, chance = 500, maxCount = 10},
+	{id = 3051, chance = 8700}, -- Energy ring
 	{id = 7441, chance = 4000},
 	{name = "Shard", chance = 250, maxCount = 3},
 	{name = "Glacier Mask", chance = 250},
@@ -87,7 +85,7 @@ monster.loot = {
 	{name = "Great Mana Potion", chance = 900, maxCount = 6},
 	{name = "Golden Mug", chance = 500},
 	{name = "Glowing Rune", chance = 500, maxCount = 10},
-	{name = "Energy Ring", chance = 8700},
+	{id = 3051, chance = 8700}, -- Energy ring
 	{name = "Quill", chance = 250},
 	{name = "Small Diamond", chance = 500, maxCount = 5}
 }

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 400
 monster.maxHealth = 400
 monster.race = "blood"
-monster.corpse = 13839
+monster.corpse = 12684
 monster.speed = 560
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -38,7 +37,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = true,
 	illusionable = false,
 	canPushItems = true,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -70,7 +68,7 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 50},
 	{name = "hunting spear", chance = 31250, maxCount = 4},
-	{name = "life ring", chance = 25000},
+	{id = 3052, chance = 25000}, -- Life ring
 	{name = "rusted armor", chance = 6250},
 	{name = "fish fin", chance = 1500}
 }

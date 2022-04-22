@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 800
 monster.maxHealth = 800
 monster.race = "undead"
-monster.corpse = 13975
+monster.corpse = 12840
 monster.speed = 204
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,12 +78,12 @@ monster.loot = {
 	{name = "white pearl", chance = 3000},
 	{name = "gold coin", chance = 70000, maxCount = 144},
 	{name = "scarab coin", chance = 10000, maxCount = 3},
-	{id = 2175, chance = 6800},
-	{name = "ring of healing", chance = 1000},
+	{id = 3059, chance = 6800},
+	{id = 3098, chance = 1000}, -- Ring of healing
 	{name = "orichalcum pearl", chance = 6000, maxCount = 4},
 	{name = "health potion", chance = 15000},
 	{name = "mana potion", chance = 15000},
-	{id = 13739, chance = 27000}
+	{id = 12482, chance = 27000}
 }
 
 monster.attacks = {
@@ -101,14 +99,14 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 75},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = 80},
+	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = -20},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

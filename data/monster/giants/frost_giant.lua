@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 7330
 monster.speed = 190
 monster.manaCost = 490
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -46,13 +45,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 80,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -84,7 +82,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 82000, maxCount = 40},
-	{name = "club ring", chance = 130},
+	{id = 3093, chance = 130}, -- Club ring
 	{name = "halberd", chance = 560},
 	{name = "short sword", chance = 8140},
 	{name = "dark helmet", chance = 180},

@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 800
 monster.maxHealth = 800
 monster.race = "blood"
-monster.corpse = 29118
+monster.corpse = 25831
 monster.speed = 234
 monster.manaCost = 450
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,13 +46,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {

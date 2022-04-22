@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 340
 monster.maxHealth = 340
 monster.race = "undead"
-monster.corpse = 9915
+monster.corpse = 9001
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 0,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -97,23 +95,23 @@ monster.defenses = {
 	{name ="invisible", interval = 5000, chance = 20, effect = CONST_ME_MAGIC_RED},
 	{name ="outfit", interval = 1500, chance = 20, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "nightstalker"},
 	{name ="outfit", interval = 1500, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "werewolf"},
-	{name ="outfit", interval = 1500, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "the count"},
+	{name ="outfit", interval = 1500, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "the count ="},
 	{name ="outfit", interval = 1500, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "grim reaper"},
 	{name ="outfit", interval = 1500, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "tarantula"},
 	{name ="outfit", interval = 1500, chance = 10, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 6000, outfitMonster = "ferumbras"}
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
-	{type = COMBAT_ENERGYDAMAGE, percent = -5},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
+	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 70},
+	{type = COMBAT_FIREDAMAGE, percent = 40},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 20},
-	{type = COMBAT_HOLYDAMAGE , percent = 20},
-	{type = COMBAT_DEATHDAMAGE , percent = -5}
+	{type = COMBAT_ICEDAMAGE, percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

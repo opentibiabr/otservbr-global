@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6073
 monster.speed = 200
 monster.manaCost = 490
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -44,13 +43,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -79,7 +77,7 @@ monster.loot = {
 	{name = "black pearl", chance = 800},
 	{name = "gold coin", chance = 89500, maxCount = 48},
 	{name = "war hammer", chance = 260},
-	{id = 2667, chance = 10800, maxCount = 2},
+	{id = 3578, chance = 10800, maxCount = 2},
 	{name = "white mushroom", chance = 1200},
 	{name = "brown mushroom", chance = 700},
 	{name = "tortoise egg", chance = 790, maxCount = 3},
@@ -98,7 +96,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 45},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = -10},

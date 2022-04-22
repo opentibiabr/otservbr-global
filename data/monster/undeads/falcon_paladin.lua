@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8500
 monster.maxHealth = 8500
 monster.race = "blood"
-monster.corpse = 32558
+monster.corpse = 28861
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -85,10 +83,10 @@ monster.loot = {
 	{name = "Small Ruby", chance = 20700, maxCount = 2},
 	{name = "Small Topaz", chance = 20100, maxCount = 2},
 	{name = "Onyx Arrow", chance = 14000, maxCount = 15},
-	{name = "Red Gem", chance = 7500, maxCount = 3},
+	{id= 3039, chance = 7500, maxCount = 3},
 	{name = "Green Gem", chance = 4880},
 	{name = "Violet Gem", chance = 4180},
-	{id = 7633, chance = 2260},
+	{id = 282, chance = 2260},
 	{name = "Damaged Armor Plates", chance = 1120},
 	{name = "Falcon Crest", chance = 730},
 	{name = "Golden Armor", chance = 310},
@@ -117,8 +115,8 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 55}
+	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 
 monster.immunities = {

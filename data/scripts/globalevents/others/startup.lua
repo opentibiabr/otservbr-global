@@ -1,8 +1,8 @@
 local serverstartup = GlobalEvent("serverstartup")
 function serverstartup.onStartup()
 	Spdlog.info("Loading map attributes")
-	-- Npc table
-	loadLuaNpcs(NpcTable)
+	Spdlog.info("Loaded ".. Game.getNpcCount() .." npcs and spawned ".. Game.getMonsterCount() .." monsters")
+	Spdlog.info("Loaded ".. #Game.getTowns() .. " towns with ".. #Game.getHouses() .." houses in total")
 	-- Sign table
 	loadLuaMapSign(SignTable)
 	Spdlog.info("Loaded " .. (#SignTable) .. " signs in the map")
@@ -27,7 +27,7 @@ function serverstartup.onStartup()
 	loadLuaMapAction(ItemAction)
 	loadLuaMapUnique(ItemUnique)
 	-- Item daily reward table
-	loadLuaMapAction(DailyRewardAction)
+	-- This is temporary disabled > loadLuaMapAction(DailyRewardAction)
 	-- Item unmoveable table
 	loadLuaMapAction(ItemUnmoveableAction)
 	-- Lever table
@@ -44,6 +44,8 @@ function serverstartup.onStartup()
 	loadLuaMapUnique(TileUnique)
 	-- Tile pick table
 	loadLuaMapAction(TilePickAction)
+	-- Create new item on map
+	CreateMapItem(CreateItemOnMap)
 
 	Spdlog.info("Loaded all actions in the map")
 	Spdlog.info("Loaded all uniques in the map")
@@ -62,8 +64,8 @@ function serverstartup.onStartup()
 	db.query('UPDATE `player_storage` SET `value` = 0 WHERE `player_storage`.`key` = 51052')
 
 	-- reset familiars message storage
-	db.query('DELETE FROM `player_storage` WHERE `key` = '..Storage.PetSummonEvent10)
-	db.query('DELETE FROM `player_storage` WHERE `key` = '..Storage.PetSummonEvent60)
+	db.query('DELETE FROM `player_storage` WHERE `key` = '..Storage.FamiliarSummonEvent10)
+	db.query('DELETE FROM `player_storage` WHERE `key` = '..Storage.FamiliarSummonEvent60)
 
 	-- delete canceled and rejected guilds
 	db.asyncQuery('DELETE FROM `guild_wars` WHERE `status` = 2')
@@ -127,8 +129,5 @@ function serverstartup.onStartup()
 
 	-- Hireling System
 	HirelingsInit()
-
-	-- Load otservbr-custom map (data/world/custom/otservbr-custom.otbm)
-	loadCustomMap()
 end
 serverstartup:register()

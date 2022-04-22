@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "Electric Sparks"
 monster.experience = 320
 monster.outfit = {
-	lookTypeEx = 460
+	lookTypeEx = 470
 }
 
 monster.health = 2000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -44,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {

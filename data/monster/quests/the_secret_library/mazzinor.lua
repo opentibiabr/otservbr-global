@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 300000
 monster.maxHealth = 300000
 monster.race = "blood"
-monster.corpse = 25151
+monster.corpse = 22495
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -47,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -73,7 +71,7 @@ monster.loot = {
 	{name = "small emerald", chance = 70000, maxCount = 12},
 	{name = "demon horn", chance = 70000},
 	{name = "lightning boots", chance = 70000},
-	{name = "Red Gem", chance = 70000},
+	{id= 3039, chance = 70000},
 	{name = "violet gem", chance = 70000},
 	{name = "stone skin amulet", chance = 70000},
 	{name = "wand of starstorm", chance = 70000},

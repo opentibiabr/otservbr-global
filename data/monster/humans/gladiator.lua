@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 185
 monster.maxHealth = 185
 monster.race = "blood"
-monster.corpse = 20407
+monster.corpse = 18126
 monster.speed = 196
 monster.manaCost = 470
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,7 +43,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 49500, maxCount = 30},
-	{id = 2376, chance = 12620},
+	{id = 3264, chance = 12620},
 	{name = "mace", chance = 11160},
 	{name = "chain helmet", chance = 5200},
 	{name = "iron helmet", chance = 590},
@@ -102,7 +100,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 15},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},

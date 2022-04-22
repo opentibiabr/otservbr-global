@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 10500
 monster.maxHealth = 10500
 monster.race = "undead"
-monster.corpse = 33349
+monster.corpse = 28605
 monster.speed = 460
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -84,7 +82,7 @@ monster.loot = {
 	{name = "Flash Arrow", chance = 10000, maxCount = 6},
 	{name = "Throwing Star", chance = 10000, maxCount = 10},
 	{name = "Crystal Sword", chance = 10000},
-	{name = "Energy Ring", chance = 10000},
+	{id = 3051, chance = 10000}, -- Energy ring
 	{name = "Guardian Shield", chance = 10000},
 	{name = "Mana Potion", chance = 10000, maxCount = 10},
 	{name = "Ultimate Mana Potion", chance = 10000, maxCount = 8},
@@ -108,14 +106,14 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 100},
-	{type = COMBAT_EARTHDAMAGE, percent = 10},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_ICEDAMAGE, percent = 0},
 	{type = COMBAT_HOLYDAMAGE , percent = 50},
-	{type = COMBAT_DEATHDAMAGE , percent = -10}
+	{type = COMBAT_DEATHDAMAGE , percent = -20}
 }
 
 monster.immunities = {

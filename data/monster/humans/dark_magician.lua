@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 325
 monster.maxHealth = 325
 monster.race = "blood"
-monster.corpse = 20367
+monster.corpse = 18086
 monster.speed = 180
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {

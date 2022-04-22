@@ -34,7 +34,6 @@ monster.race = "blood"
 monster.corpse = 6002
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -55,7 +54,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 0,
@@ -65,8 +64,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -105,24 +103,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1852, chance = 4000},
-	{id = 2072, chance = 5000},
-	{id = 2102, chance = 500},
+	{id = 2639, chance = 4000},
+	{id = 2950, chance = 5000},
+	{id = 2983, chance = 500},
 	{name = "snowball", chance = 7000, maxCount = 5},
 	{name = "piggy bank", chance = 1000},
 	{name = "gold coin", chance = 22500, maxCount = 22},
 	{name = "scarab coin", chance = 500, maxCount = 2},
-	{id = 2163, chance = 4000},
+	{id = 3047, chance = 4000},
 	{name = "blank rune", chance = 5000},
-	{id = 2551, chance = 1500},
-	{id = 2560, chance = 1000},
+	{id = 3211, chance = 1500},
+	{id = 3463, chance = 1000},
 	{name = "scarf", chance = 4000},
 	{name = "red apple", chance = 700, maxCount = 3},
 	{name = "orange", chance = 7000, maxCount = 3},
 	{name = "cherry", chance = 7000, maxCount = 4},
 	{name = "cookie", chance = 7000, maxCount = 5},
 	{name = "candy cane", chance = 5000, maxCount = 3},
-	{id = 2695, chance = 5000, maxCount = 2},
+	{id = 3606, chance = 5000, maxCount = 2},
 	{name = "explorer brooch", chance = 4000},
 	{name = "orichalcum pearl", chance = 500, maxCount = 2},
 	{id = 5792, chance = 1000},

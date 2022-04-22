@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 90
 monster.maxHealth = 90
 monster.race = "venom"
-monster.corpse = 19706
+monster.corpse = 17426
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -48,7 +47,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -76,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2120, chance = 4300},
+	{id = 3003, chance = 4300},
 	{name = "gold coin", chance = 90000, maxCount = 18},
 	{name = "arrow", chance = 7570, maxCount = 5},
 	{name = "health potion", chance = 3580},

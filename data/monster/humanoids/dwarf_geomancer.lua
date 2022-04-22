@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6015
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,9 +79,9 @@ monster.voices = {
 monster.loot = {
 	{name = "small sapphire", chance = 710},
 	{name = "gold coin", chance = 50000, maxCount = 35},
-	{id = 2162, chance = 14000},
-	{id = 2175, chance = 360},
-	{name = "dwarven ring", chance = 530},
+	{id = 3046, chance = 14000},
+	{id = 3059, chance = 360},
+	{id = 3097, chance = 530}, -- Dwarven ring
 	{name = "blank rune", chance = 33000},
 	{name = "clerical mace", chance = 1120},
 	{name = "pear", chance = 25000},
@@ -115,7 +113,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -5},
 	{type = COMBAT_HOLYDAMAGE , percent = 10},
-	{type = COMBAT_DEATHDAMAGE , percent = -1}
+	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 
 monster.immunities = {

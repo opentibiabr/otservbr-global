@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 5976
 monster.speed = 144
 monster.manaCost = 440
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -49,7 +48,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,10 +78,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 46150},
+	{id = 2920, chance = 46150},
 	{name = "gold coin", chance = 53850, maxCount = 30},
-	{name = "life ring", chance = 200},
-	{id = 2229, chance = 240},
+	{id = 3052, chance = 200}, -- Life ring
+	{id = 3114, chance = 240},
 	{name = "knife", chance = 15380},
 	{name = "brass helmet", chance = 23000},
 	{name = "viking helmet", chance = 1000},

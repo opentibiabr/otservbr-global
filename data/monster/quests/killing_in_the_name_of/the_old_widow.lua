@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5977
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -49,8 +48,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -58,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "giant spider", chance = 13, interval = 1000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "giant spider", chance = 13, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -68,18 +69,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 99},
-	{id = 2152, chance = 100000, maxCount = 10},
+	{id = 3031, chance = 100000, maxCount = 99},
+	{id = 3035, chance = 100000, maxCount = 10},
 	{id = 5879, chance = 100000},
-	{id = 2457, chance = 100000},
-	{id = 7591, chance = 100000, maxCount = 4},
-	{id = 2476, chance = 50000},
-	{id = 2165, chance = 33333},
-	{id = 2167, chance = 33333},
-	{id = 2169, chance = 33333},
-	{id = 13307, chance = 33333},
-	{id = 2477, chance = 25000},
-	{id = 2171, chance = 25000},
+	{id = 3351, chance = 100000},
+	{id = 239, chance = 100000, maxCount = 4},
+	{id = 3370, chance = 50000},
+	{id = 3049, chance = 33333}, -- Stealth ring
+	{id = 3051, chance = 33333}, -- Energy ring
+	{id = 3053, chance = 33333},
+	{id = 12320, chance = 33333},
+	{id = 3371, chance = 25000},
+	{id = 3055, chance = 25000},
 	{id = 5886, chance = 25000},
 	{id = 7416, chance = 3225},
 	{id = 7419, chance = 1639}

@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6016
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,12 +78,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1965, chance = 2280},
+	{id = 2831, chance = 2280},
 	{name = "gold coin", chance = 41000, maxCount = 70},
 	{name = "gold coin", chance = 51000, maxCount = 45},
 	{name = "small emerald", chance = 2960, maxCount = 4},
 	{name = "mystic turban", chance = 140},
-	{id = 2696, chance = 23500},
+	{id = 3607, chance = 23500},
 	{name = "grave flower", chance = 1000},
 	{name = "green piece of cloth", chance = 2000},
 	{name = "royal spear", chance = 4870, maxCount = 2},

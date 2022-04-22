@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 200
 monster.maxHealth = 200
 monster.race = "blood"
-monster.corpse = 24639
+monster.corpse = 21983
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -76,7 +74,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "ham", chance = 20120},
-	{id = 2129, chance = 2000},
+	{id = 3012, chance = 2000},
 	{name = "gold coin", chance = 65000, maxCount = 48},
 	{name = "meat", chance = 55000, maxCount = 2},
 	{name = "wolf paw", chance = 980}
@@ -94,14 +92,14 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 35},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
+	{type = COMBAT_FIREDAMAGE, percent = -5},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -5},
-	{type = COMBAT_HOLYDAMAGE , percent = 5},
-	{type = COMBAT_DEATHDAMAGE , percent = 35}
+	{type = COMBAT_HOLYDAMAGE , percent = -5},
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

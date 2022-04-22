@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5967
 monster.speed = 150
 monster.manaCost = 305
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -34,10 +33,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -66,7 +64,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 71760, maxCount = 17},
-	{id = 2376, chance = 3000},
+	{id = 3264, chance = 3000},
 	{name = "mace", chance = 4500},
 	{name = "meat", chance = 20000},
 	{name = "ham", chance = 20120},

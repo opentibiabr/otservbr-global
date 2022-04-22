@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2500
 monster.maxHealth = 2500
 monster.race = "undead"
-monster.corpse = 11300
+monster.corpse = 10383
 monster.speed = 204
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -93,7 +91,7 @@ monster.loot = {
 	{name = "spiked iron ball", chance = 9960},
 	{name = "clay lump", chance = 720},
 	{name = "piece of marble rock", chance = 430},
-	{id = 13757, chance = 400}
+	{id = 12600, chance = 400}
 }
 
 monster.attacks = {
@@ -106,7 +104,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
 	{type = COMBAT_ENERGYDAMAGE, percent = 10},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 70},

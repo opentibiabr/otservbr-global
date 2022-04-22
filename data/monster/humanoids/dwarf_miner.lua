@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6007
 monster.speed = 170
 monster.manaCost = 420
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 0,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -69,10 +67,10 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 33333, maxCount = 10},
-	{name = "dwarven ring", chance = 793},
+	{id = 3097, chance = 793}, -- Dwarven ring
 	{name = "axe", chance = 14285},
 	{name = "studded armor", chance = 6666},
-	{id = 2553, chance = 11111},
+	{id = 3456, chance = 11111},
 	{name = "leather legs", chance = 9090},
 	{name = "meat", chance = 3846},
 	{name = "iron ore", chance = 793}

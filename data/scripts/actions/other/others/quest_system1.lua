@@ -1,19 +1,25 @@
 local specialQuests = {
-	[2016] = Storage.DreamersChallenge.Reward,
-	[10544] = Storage.PitsOfInferno.WeaponReward,
-	[12513] = Storage.ThievesGuild.Reward,
-	[12374] = Storage.WrathoftheEmperor.mainReward,
-	[26300] = Storage.SvargrondArena.RewardGreenhorn,
-	[27300] = Storage.SvargrondArena.RewardScrapper,
-	[28300] = Storage.SvargrondArena.RewardWarlord
+	-- {x = 32752, y = 32343, z = 14}
+	[52167] = Storage.DreamersChallenge.Reward,
+	-- {x = 32806, y = 32230, z = 11}
+	[52003] = Storage.PitsOfInferno.WeaponReward,
+	-- {x = 32311, y = 32211, z = 8}
+	[51400] = Storage.ThievesGuild.Reward,
+	[51324] = Storage.WrathoftheEmperor.mainReward,
+	-- {x = 32232, y = 31066, z = 7}
+	[51715] = Storage.SvargrondArena.RewardGreenhorn,
+	-- {x = 32232, y = 31059, z = 7}
+	[51716] = Storage.SvargrondArena.RewardScrapper,
+	-- {x = 32232, y = 31052, z = 7}
+	[51717] = Storage.SvargrondArena.RewardWarlord
 }
 
 local questsExperience = {
-	[2217] = 1 -- dummy values
+	[3101] = 1 -- dummy values
 }
 
 local questLog = {
-	[9130] = Storage.HiddenCityOfBeregar.DefaultStart
+	[8213] = Storage.HiddenCityOfBeregar.DefaultStart
 }
 
 local tutorialIds = {
@@ -36,7 +42,7 @@ function questSystem1.onUse(player, item, fromPosition, target, toPosition, isHo
 		end
 	end
 
-	if storage == 26300 or storage == 27300 or storage == 28300 then
+	if storage == 23644 or storage == 24632 or storage == 14338 then
 		player:setStorageValue(Storage.SvargrondArena.PitDoor, -1)
 	end
 
@@ -77,9 +83,9 @@ function questSystem1.onUse(player, item, fromPosition, target, toPosition, isHo
 		if size > 20 then
 			reward = Game.createItem(item.itemid, 1)
 		elseif size > 8 then
-			reward = Game.createItem(1988, 1)
+			reward = Game.createItem(2854, 1)
 		else
-			reward = Game.createItem(1987, 1)
+			reward = Game.createItem(2853, 1)
 		end
 
 		for i = 1, size do

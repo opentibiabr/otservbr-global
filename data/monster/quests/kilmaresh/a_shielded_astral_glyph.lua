@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a shielded astral glyph"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 26894
+	lookTypeEx = 24226
 }
 
 monster.health = 50000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 470
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -32,7 +31,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -44,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {

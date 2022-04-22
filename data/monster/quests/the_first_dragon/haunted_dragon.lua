@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 6500
 monster.maxHealth = 6500
 monster.race = "undead"
-monster.corpse = 6306
+monster.corpse = 6305
 monster.speed = 280
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 70,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -72,7 +70,7 @@ monster.loot = {
 	{name = "platinum coin", chance = 52000, maxCount = 5},
 	{name = "life crystal", chance = 2500},
 	{name = "hardened bone", chance = 14180},
-	{id = 6300, chance = 1150},
+	{id = 6299, chance = 1150},
 	{name = "demonic essence", chance = 12460},
 	{name = "assassin star", chance = 26650, maxCount = 5},
 	{name = "dragon slayer", chance = 860},

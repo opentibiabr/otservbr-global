@@ -20,7 +20,6 @@ monster.race = "venom"
 monster.corpse = 5992
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 6
 
 monster.changeTarget = {
 	interval = 4000,
@@ -38,7 +37,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -48,8 +47,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -57,8 +55,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Skeleton", chance = 20, interval = 2000, max = 6}
+monster.summon = {
+	maxSummons = 6,
+	summons = {
+		{name = "Skeleton", chance = 20, interval = 2000, count = 6}
+	}
 }
 
 monster.voices = {
@@ -72,7 +73,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 65000, maxCount = 82},
-	{id = 2175, chance = 4650},
+	{id = 3059, chance = 4650},
 	{name = "two handed sword", chance = 3840},
 	{name = "morning star", chance = 6950},
 	{name = "longsword", chance = 8980},

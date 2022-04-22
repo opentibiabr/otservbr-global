@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 1450
 monster.maxHealth = 1450
 monster.race = "blood"
-monster.corpse = 11280
+monster.corpse = 10363
 monster.speed = 256
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -70,8 +68,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Dragon Hatchling", chance = 20, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Dragon Hatchling", chance = 20, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -86,7 +87,7 @@ monster.loot = {
 	{name = "small amethyst", chance = 4900, maxCount = 3},
 	{name = "platinum coin", chance = 4090, maxCount = 2},
 	{name = "yellow gem", chance = 1000},
-	{name = "life ring", chance = 770},
+	{id = 3052, chance = 770}, -- Life ring
 	{name = "terra rod", chance = 1001},
 	{name = "wand of inferno", chance = 1480},
 	{name = "lizard leather", chance = 980},
@@ -118,7 +119,7 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 45},
+	{type = COMBAT_FIREDAMAGE, percent = 85},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

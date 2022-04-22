@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 6800
 monster.maxHealth = 6800
 monster.race = "fire"
-monster.corpse = 17252
+monster.corpse = 15907
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.loot = {
 	{name = "small ruby", chance = 15690, maxCount = 3},
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "gold coin", chance = 50000, maxCount = 99},
-	{id = 2152, chance = 100000, maxCount = 7},
+	{id = 3035, chance = 100000, maxCount = 7},
 	{name = "fire sword", chance = 3280},
 	{name = "fire axe", chance = 2150},
 	{name = "great mana potion", chance = 14800, maxCount = 2},
@@ -88,7 +86,7 @@ monster.loot = {
 	{name = "magma coat", chance = 790},
 	{name = "ultimate health potion", chance = 15440, maxCount = 2},
 	{name = "fiery heart", chance = 13570},
-	{id = 13757, chance = 1320},
+	{id = 12600, chance = 1320},
 	{name = "wand of everblazing", chance = 1480},
 	{name = "violet crystal shard", chance = 5430},
 	{name = "brown crystal splinter", chance = 12100, maxCount = 2},
@@ -122,7 +120,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
 	{type = COMBAT_ICEDAMAGE, percent = -5},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_DEATHDAMAGE , percent = 30}
 }
 
 monster.immunities = {

@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 240
 monster.maxHealth = 240
 monster.race = "blood"
-monster.corpse = 13839
+monster.corpse = 12684
 monster.speed = 130
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -84,7 +82,7 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 75000, maxCount = 50},
 	{name = "hunting spear", chance = 15185, maxCount = 3},
-	{name = "life ring", chance = 2127},
+	{id = 3052, chance = 2127}, -- Life ring
 	{name = "rusted armor", chance = 925},
 	{name = "heavy trident", chance = 505},
 	{name = "eye of a deepling", chance = 310},

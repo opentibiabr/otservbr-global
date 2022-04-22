@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1100
 monster.maxHealth = 1100
 monster.race = "venom"
-monster.corpse = 8966
+monster.corpse = 8138
 monster.speed = 430
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -87,7 +85,7 @@ monster.loot = {
 	{name = "lightning legs", chance = 150},
 	{name = "spellbook of warding", chance = 360},
 	{name = "wand of starstorm", chance = 730},
-	{id = 9809, chance = 730},
+	{id = 8895, chance = 730},
 	{name = "shockwave amulet", chance = 500}
 }
 
@@ -105,7 +103,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 70},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 50},
 	{type = COMBAT_ENERGYDAMAGE, percent = 100},
 	{type = COMBAT_EARTHDAMAGE, percent = -5},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
@@ -113,8 +111,8 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 100},
-	{type = COMBAT_HOLYDAMAGE , percent = 25},
-	{type = COMBAT_DEATHDAMAGE , percent = 1}
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
+	{type = COMBAT_DEATHDAMAGE , percent = 20}
 }
 
 monster.immunities = {

@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6025
 monster.speed = 370
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -49,8 +48,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -58,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Stalker", chance = 100, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Stalker", chance = 100, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -77,12 +78,12 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 90},
 	{name = "gold coin", chance = 50000, maxCount = 70},
 	{name = "yellow gem", chance = 5000},
-	{name = "stealth ring", chance = 5000},
+	{id = 3049, chance = 5000}, -- Stealth ring
 	{name = "boots of haste", chance = 1500},
 	{name = "crystal arrow", chance = 100000},
 	{name = "arrow", chance = 10000, maxCount = 21},
 	{name = "poison arrow", chance = 10000, maxCount = 20},
-	{name = "burst arrow", chance = 10000, maxCount = 15},
+	{id = 3449, chance = 10000, maxCount = 15}, -- Burst arrow
 	{name = "power bolt", chance = 10000, maxCount = 3},
 	{name = "onyx arrow", chance = 10000, maxCount = 2},
 	{name = "great health potion", chance = 7000}

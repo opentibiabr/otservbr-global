@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 7334
 monster.speed = 116
 monster.manaCost = 300
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -48,7 +47,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
 	canPushItems = false,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -75,7 +73,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2667, chance = 7830, maxCount = 2},
+	{id = 3578, chance = 7830, maxCount = 2},
 	{name = "rainbow trout", chance = 70},
 	{name = "green perch", chance = 130}
 }

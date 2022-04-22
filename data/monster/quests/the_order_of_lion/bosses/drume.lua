@@ -16,18 +16,19 @@ monster.outfit = {
 monster.health = 35000
 monster.maxHealth = 35000
 monster.race = "blood"
-monster.corpse = 38808
+monster.corpse = 33973
 monster.speed = 260
-monster.summonCost = 0
-monster.maxSummons = 3
 
 monster.faction = FACTION_LIONUSURPERS
 monster.enemyFactions = {FACTION_LION, FACTION_PLAYER}
 
-monster.summons = {
-	{name = "preceptor lazare", chance = 10, interval = 8000},
-	{name = "grand commander soeren", chance = 10, interval = 8000},
-	{name = "grand chaplain gaunder", chance = 10, interval = 8000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "preceptor lazare", chance = 10, interval = 8000, count = 1},
+		{name = "grand commander soeren", chance = 10, interval = 8000, count = 1},
+		{name = "grand chaplain gaunder", chance = 10, interval = 8000, count = 1}
+	}
 }
 
 monster.changeTarget = {
@@ -56,8 +57,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -76,7 +76,7 @@ monster.loot = {
 	{name = "supreme health potion", chance = 57831, maxCount = 20},
 	{name = "ultimate mana potion", chance = 55723, maxCount = 20},
 	{name = "yellow gem", chance = 35843, maxCount = 2},
-	{name = "red gem", chance = 35542, maxCount = 2},
+	{id= 3039, chance = 35542, maxCount = 2},
 	{name = "ultimate spirit potion", chance = 31627, maxCount = 6},
 	{name = "royal star", chance = 31325, maxCount = 100},
 	{name = "bullseye potion", chance = 22590, maxCount = 10},
@@ -84,7 +84,7 @@ monster.loot = {
 	{name = "blue gem", chance = 21687, maxCount = 2},
 	{name = "mastermind potion", chance = 17771, maxCount = 10},
 	{name = "green gem", chance = 17470, maxCount = 2},
-	{id = 7632, chance = 15060},
+	{id = 281, chance = 15060},
 	{name = "gold ingot", chance = 13253},
 	{name = "terra rod", chance = 11145},
 	{name = "crystal coin", chance = 10241},

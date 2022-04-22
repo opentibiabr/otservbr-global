@@ -13,5 +13,5 @@ function childrenGrease.onUse(player, item, fromPosition, target, toPosition, is
 	return true
 end
 
-childrenGrease:id(11106)
+childrenGrease:id(10189)
 childrenGrease:register()

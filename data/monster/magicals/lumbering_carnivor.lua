@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2600
 monster.maxHealth = 2600
 monster.race = "blood"
-monster.corpse = 34703
+monster.corpse = 30065
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,14 +78,14 @@ monster.voices = {
 monster.loot = {
 	{name = "platinum coin", chance = 100000, maxCount = 5},
 	{name = "Blue Glass Plate", chance = 100000, maxCount = 3},
-	{id = 2376, chance = 15000},
+	{id = 3264, chance = 15000},
 	{name = "Axe", chance = 14000},
 	{name = "Ice Rapier", chance = 12000},
 	{name = "Glorious Axe", chance = 6100},
 	{name = "Blue Robe", chance = 4600},
 	{name = "Two Handed Sword", chance = 13000},
 	{name = "Fur Armor", chance = 5400},
-	{id = 7632, chance = 3200},
+	{id = 281, chance = 3200},
 	{name = "Green Crystal Shard", chance = 3100},
 	{name = "Violet Gem", chance = 4000},
 	{name = "Green Gem", chance = 4800},
@@ -107,10 +105,10 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 20},
+	{type = COMBAT_FIREDAMAGE, percent = -40},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

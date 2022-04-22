@@ -31,10 +31,9 @@ monster.Bestiary = {
 monster.health = 8350
 monster.maxHealth = 8350
 monster.race = "undead"
-monster.corpse = 6306
+monster.corpse = 6305
 monster.speed = 330
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -55,7 +54,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 70,
@@ -65,8 +64,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -95,7 +93,7 @@ monster.loot = {
 	{name = "royal helmet", chance = 1720},
 	{name = "power bolt", chance = 15190, maxCount = 15},
 	{name = "hardened bone", chance = 14180},
-	{id = 6300, chance = 1150},
+	{id = 6299, chance = 1150},
 	{name = "demonic essence", chance = 12460},
 	{name = "assassin star", chance = 26650, maxCount = 5},
 	{name = "dragon slayer", chance = 860},

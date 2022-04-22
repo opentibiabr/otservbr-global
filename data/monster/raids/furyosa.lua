@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 25000
 monster.maxHealth = 25000
 monster.race = "blood"
-monster.corpse = 20399
+monster.corpse = 18118
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Fury", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Fury", chance = 10, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -75,19 +76,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 200},
-	{id = 8844, chance = 100000, maxCount = 5},
-	{id = 21400, chance = 45000},
-	{id = 2152, chance = 85000, maxCount = 25},
+	{id = 3031, chance = 100000, maxCount = 200},
+	{id = 8016, chance = 100000, maxCount = 5},
+	{id = 19083, chance = 45000},
+	{id = 3035, chance = 85000, maxCount = 25},
 	{id = 6558, chance = 35000, maxCount = 3},
-	{id = 6500, chance = 22500},
+	{id = 6499, chance = 22500},
 	{id = 5911, chance = 4000},
 	{id = 5944, chance = 21500},
 	{id = 5944, chance = 50},
-	{id = 2124, chance = 410},
-	{id = 6301, chance = 60},
-	{id = 2539, chance = 100},
-	{id = 21725, chance = 100}
+	{id = 3007, chance = 410},
+	{id = 6300, chance = 60},
+	{id = 3439, chance = 100},
+	{id = 19391, chance = 100}
 }
 
 monster.attacks = {

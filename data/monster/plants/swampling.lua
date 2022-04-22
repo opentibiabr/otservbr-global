@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 80
 monster.maxHealth = 80
 monster.race = "venom"
-monster.corpse = 19902
+monster.corpse = 17622
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -79,7 +77,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2120, chance = 5080},
+	{id = 3003, chance = 5080},
 	{name = "gold coin", chance = 84900, maxCount = 12},
 	{name = "white mushroom", chance = 10220, maxCount = 5},
 	{name = "swampling club", chance = 7410},

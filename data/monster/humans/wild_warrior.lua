@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 135
 monster.maxHealth = 135
 monster.race = "blood"
-monster.corpse = 20531
+monster.corpse = 18250
 monster.speed = 190
 monster.manaCost = 420
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -78,7 +76,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2110, chance = 520},
+	{id = 2991, chance = 520},
 	{name = "gold coin", chance = 49070, maxCount = 30},
 	{name = "axe", chance = 30710},
 	{name = "mace", chance = 9800},
@@ -87,7 +85,7 @@ monster.loot = {
 	{name = "brass armor", chance = 2540},
 	{name = "steel shield", chance = 910},
 	{name = "brass shield", chance = 17000},
-	{id = 2695, chance = 9730, maxCount = 2}
+	{id = 3606, chance = 9730, maxCount = 2}
 }
 
 monster.attacks = {

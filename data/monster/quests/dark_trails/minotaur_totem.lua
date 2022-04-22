@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a minotaur totem"
 monster.experience = 500
 monster.outfit = {
-	lookTypeEx = 3802
+	lookTypeEx = 2299
 }
 
 monster.health = 6000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 78
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -44,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {

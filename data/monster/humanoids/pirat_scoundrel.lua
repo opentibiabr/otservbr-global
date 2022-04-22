@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2200
 monster.maxHealth = 2200
 monster.race = "blood"
-monster.corpse = 40215
+monster.corpse = 35380
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -77,7 +75,7 @@ monster.voices = {
 monster.loot = {
 	{name = "great mana potion", chance = 44810},
 	{name = "wand of inferno", chance = 12500},
-	{id = 40423, chance = 19420},
+	{id = 35588, chance = 19420},
 	{name = "pirate coin", chance = 17810, maxCount = 10},
 	{name = "pirat's tail", chance = 2120},
 	{name = "springsprout rod", chance = 9550},

@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6044
 monster.speed = 194
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 69500, maxCount = 45},
 	{name = "small amethyst", chance = 260},
-	{id = 2162, chance = 3000},
+	{id = 3046, chance = 3000},
 	{name = "wand of decay", chance = 1050},
 	{name = "orange", chance = 1000, maxCount = 5},
 	{name = "banana", chance = 30350, maxCount = 12},

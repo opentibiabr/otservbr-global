@@ -32,7 +32,6 @@ monster.race = "undead"
 monster.corpse = 6004
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -52,7 +51,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -77,18 +75,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2124, chance = 1650},
+	{id = 3007, chance = 1650},
 	{name = "silver brooch", chance = 4000},
 	{name = "black pearl", chance = 1340},
 	{name = "gold coin", chance = 87000, maxCount = 160},
 	{name = "scarab coin", chance = 10000, maxCount = 3},
 	{name = "strange talisman", chance = 4500},
-	{id = 2162, chance = 6000},
+	{id = 3046, chance = 6000},
 	{name = "poison dagger", chance = 380},
 	{name = "worm", chance = 20000, maxCount = 3},
 	{name = "gauze bandage", chance = 10000},
 	{name = "flask of embalming fluid", chance = 12600},
-	{id = 13472, chance = 2400}
+	{id = 12483, chance = 2400}
 }
 
 monster.attacks = {
@@ -111,7 +109,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 20},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = -25},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

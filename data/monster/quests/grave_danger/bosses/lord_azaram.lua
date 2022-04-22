@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 50000
 monster.maxHealth = 50000
 monster.race = "venom"
-monster.corpse = 36434
+monster.corpse = 31599
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -56,8 +54,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Condensed Sins", chance = 50, interval = 2000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Condensed Sins", chance = 50, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -74,21 +75,21 @@ monster.loot = {
 	{name = "bullseye potion", minCount = 0, maxCount = 10, chance = 12000},
 	{name = "berserk potion", minCount = 0, maxCount = 10, chance = 12000},
 	{name = "piece of hell steel", minCount = 0, maxCount = 4, chance = 9000},
-	{name = "red gem", minCount = 0, maxCount = 2, chance = 12000},
+	{id= 3039, minCount = 0, maxCount = 2, chance = 12000},
 	{name = "blue gem", minCount = 0, maxCount = 2, chance = 12000},
 	{name = "silver token", minCount = 0, maxCount = 2, chance = 9500},
 	{name = "ancient liche bone", chance = 5200},
-	{id = 26198, chance = 5200},-- collar of blue plasma
-	{id = 26200, chance = 5200},-- collar of red plasma
-	{name = "collar of green plasma", chance = 5200},
+	{id = 23542, chance = 5200},-- collar of blue plasma
+	{id = 23544, chance = 5200},-- collar of red plasma
+	{id = 23543, chance = 5200}, -- Collar of green plasma
 	{name = "giant sapphire", chance = 7000},
 	{name = "haunted blade", chance = 9000},
 	{name = "huge chunk of crude iron", chance = 4500},
 	{name = "knight armor", chance = 15000},
 	{name = "violet gem", minCount = 0, maxCount = 1, chance = 10000},
 	{name = "yellow gem", minCount = 0, maxCount = 1, chance = 10000},
-	{id = 26187, chance = 5000},-- ring of green plasma
-	{id = 26189, chance = 5000},-- ring of red plasma
+	{id = 23531, chance = 5000},-- ring of green plasma
+	{id = 23533, chance = 5000},-- ring of red plasma
 	{name = "young lich worm", chance = 5800},
 	{name = "bear skin", chance = 1600},
 	{name = "noble cape", chance = 1500},

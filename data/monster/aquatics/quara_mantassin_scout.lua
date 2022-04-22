@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6064
 monster.speed = 140
 monster.manaCost = 480
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,10 +43,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,10 +78,10 @@ monster.loot = {
 	{name = "gold coin", chance = 94000, maxCount = 30},
 	{name = "mantassin tail", chance = 7780},
 	{name = "chain armor", chance = 5061},
-	{id = 2229, chance = 990},--skull
+	{id = 3114, chance = 990},--skull
 	{name = "small sapphire", chance = 990},
 	{name = "two handed sword", chance = 810},
-	{name = "stealth ring", chance = 710},
+	{id = 3049, chance = 710}, -- Stealth ring
 	{name = "fish fin", chance = 360}
 }
 

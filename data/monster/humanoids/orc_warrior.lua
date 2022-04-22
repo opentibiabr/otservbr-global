@@ -34,7 +34,6 @@ monster.race = "blood"
 monster.corpse = 5979
 monster.speed = 190
 monster.manaCost = 360
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -89,7 +87,7 @@ monster.loot = {
 	{name = "broken helmet", chance = 10800},
 	{name = "orc leather", chance = 4000},
 	{name = "skull belt", chance = 980},
-	{id = 26654, chance = 1000}
+	{id = 23986, chance = 1000}
 }
 
 monster.attacks = {

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 300000
 monster.maxHealth = 300000
 monster.race = "blood"
-monster.corpse = 25151
+monster.corpse = 22495
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -66,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7633, chance = 26900},
+	{id = 282, chance = 26900},
 	{name = "magic sulphur", chance = 18920},
 	{name = "mino shield", chance = 17620},
 	{name = "silver token", chance = 1732},

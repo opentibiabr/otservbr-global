@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 6500
 monster.maxHealth = 6500
 monster.race = "undead"
-monster.corpse = 6344
+monster.corpse = 6343
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 60000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,9 +57,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Phantasm", chance = 7, interval = 2000, max = 3},
-	{name = "Phantasm summon", chance = 7, interval = 2000, max = 3}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Phantasm", chance = 7, interval = 2000, count = 3},
+		{name = "Phantasm summon", chance = 7, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -75,16 +76,16 @@ monster.voices = {
 
 monster.loot = {
 	{id = 6536, chance = 100000},
-	{id = 6500, chance = 20590},
-	{id = 2148, chance = 82350, maxCount = 169},
-	{id = 2152, chance = 55880, maxCount = 4},
+	{id = 6499, chance = 20590},
+	{id = 3031, chance = 82350, maxCount = 169},
+	{id = 3035, chance = 55880, maxCount = 4},
 	{id = 5944, chance = 85290},
-	{id = 2656, chance = 32350},
-	{id = 2424, chance = 4210},
-	{id = 2647, chance = 8820},
-	{id = 2200, chance = 23530},
-	{id = 2165, chance = 5880},
-	{id = 2238, chance = 47060}
+	{id = 3567, chance = 32350},
+	{id = 3312, chance = 4210},
+	{id = 3557, chance = 8820},
+	{id = 3084, chance = 23530},
+	{id = 3049, chance = 5880}, -- Stealth ring
+	{id = 3123, chance = 47060}
 }
 
 monster.attacks = {

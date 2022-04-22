@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 6900
 monster.maxHealth = 6900
 monster.race = "blood"
-monster.corpse = 22549
+monster.corpse = 20215
 monster.speed = 296
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -72,8 +70,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "energy elemental", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "energy elemental", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -93,9 +94,9 @@ monster.loot = {
 	{name = "small emerald", chance = 10000, maxCount = 5},
 	{name = "platinum coin", chance = 100000, maxCount = 6},
 	{name = "might ring", chance = 910},
-	{name = "stealth ring", chance = 1300},
+	{id = 3049, chance = 1300}, -- Stealth ring
 	{name = "platinum amulet", chance = 1000},
-	{name = "ring of healing", chance = 3000},
+	{id = 3098, chance = 3000}, -- Ring of healing
 	{name = "giant sword", chance = 2000},
 	{name = "ice rapier", chance = 660},
 	{name = "devil helmet", chance = 910},
@@ -128,16 +129,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
-	{type = COMBAT_ENERGYDAMAGE, percent = -5},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 15},
+	{type = COMBAT_ENERGYDAMAGE, percent = -8},
 	{type = COMBAT_EARTHDAMAGE, percent = 40},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 5},
-	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_HOLYDAMAGE , percent = -6},
+	{type = COMBAT_DEATHDAMAGE , percent = 30}
 }
 
 monster.immunities = {

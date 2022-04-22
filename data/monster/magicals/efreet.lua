@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6032
 monster.speed = 234
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -69,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "green djinn", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "green djinn", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -81,7 +82,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1860, chance = 2200},
+	{id = 2647, chance = 2200},
 	{name = "small oil lamp", chance = 160},
 	{name = "gold coin", chance = 50000, maxCount = 75},
 	{name = "gold coin", chance = 60000, maxCount = 50},

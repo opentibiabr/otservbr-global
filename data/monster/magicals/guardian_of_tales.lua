@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 15000
 monster.maxHealth = 15000
 monster.race = "undead"
-monster.corpse = 32470
+monster.corpse = 28770
 monster.speed = 420
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -88,7 +86,7 @@ monster.loot = {
 	{name = "Magma Coat", chance = 350},
 	{name = "Magma Legs", chance = 250},
 	{name = "Piece of Hellfire Armor", chance = 500, maxCount = 5},
-	{id = 13757, chance = 10000, maxCount = 5}
+	{id = 12600, chance = 10000, maxCount = 5}
 }
 
 monster.attacks = {
@@ -105,14 +103,14 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 50},
-	{type = COMBAT_EARTHDAMAGE, percent = 30},
-	{type = COMBAT_FIREDAMAGE, percent = 80},
+	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 50},
-	{type = COMBAT_HOLYDAMAGE , percent = 50},
+	{type = COMBAT_ICEDAMAGE, percent = -12},
+	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 

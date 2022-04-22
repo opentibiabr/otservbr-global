@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1100
 monster.maxHealth = 1100
 monster.race = "undead"
-monster.corpse = 12631
+monster.corpse = 11675
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -86,7 +84,7 @@ monster.loot = {
 	{name = "necrotic rod", chance = 980},
 	{name = "wand of cosmic energy", chance = 910},
 	{name = "spirit container", chance = 140},
-	{id = 6300, chance = 300},
+	{id = 6299, chance = 300},
 	{name = "great mana potion", chance = 8000},
 	{name = "ultimate health potion", chance = 9400},
 	{name = "souleater trophy", chance = 20},
@@ -110,7 +108,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 70},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 60},
 	{type = COMBAT_ENERGYDAMAGE, percent = -10},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = -10},

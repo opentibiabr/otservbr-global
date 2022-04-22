@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 20000
 monster.maxHealth = 20000
 monster.race = "blood"
-monster.corpse = 6336
+monster.corpse = 6335
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 60,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -82,7 +80,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2136, chance = 550},
+	{id = 3019, chance = 550},
 	{name = "small ruby", chance = 20000, maxCount = 4},
 	{name = "gold coin", chance = 100000, maxCount = 100},
 	{name = "gold coin", chance = 100000, maxCount = 100},
@@ -92,7 +90,7 @@ monster.loot = {
 	{name = "platinum coin", chance = 100000, maxCount = 15},
 	{name = "violet gem", chance = 830},
 	{name = "green gem", chance = 869},
-	{name = "red gem", chance = 13850},
+	{id= 3039, chance = 13850},
 	{name = "dragon hammer", chance = 9000},
 	{name = "heavy mace", chance = 400},
 	{name = "war axe", chance = 400},
@@ -100,11 +98,11 @@ monster.loot = {
 	{name = "golden legs", chance = 500},
 	{name = "knight armor", chance = 4990},
 	{name = "mastermind shield", chance = 800},
-	{id = 2578, chance = 280},
+	{id = 3481, chance = 280},
 	{name = "ham", chance = 60000, maxCount = 8},
 	{name = "soul orb", chance = 33333},
 	{name = "demonic essence", chance = 45333},
-	{name = "concentrated demonic blood", chance = 25000, maxCount = 4},
+	{name = "flask of demonic blood", chance = 25000, maxCount = 4},
 	{name = "onyx arrow", chance = 11111, maxCount = 15},
 	{name = "assassin star", chance = 25000, maxCount = 10},
 	{name = "titan axe", chance = 4430},
@@ -128,7 +126,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 40},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
 	{type = COMBAT_ENERGYDAMAGE, percent = -10},
 	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = 30},

@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "the distorted astral source"
 monster.experience = 3000
 monster.outfit = {
-	lookTypeEx = 26897
+	lookTypeEx = 24229
 }
 
 monster.health = 10000000
@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -28,10 +27,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -44,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.events = {

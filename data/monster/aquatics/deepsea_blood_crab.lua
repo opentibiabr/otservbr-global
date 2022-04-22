@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6075
 monster.speed = 380
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -77,7 +75,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 87000, maxCount = 20},
-	{id = 2667, chance = 10450},
+	{id = 3578, chance = 10450},
 	{name = "bloody pincers", chance = 6980},
 	{name = "chain armor", chance = 5020},
 	{name = "brass legs", chance = 2720},

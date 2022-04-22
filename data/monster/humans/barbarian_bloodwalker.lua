@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 305
 monster.maxHealth = 305
 monster.race = "blood"
-monster.corpse = 20335
+monster.corpse = 18054
 monster.speed = 236
 monster.manaCost = 590
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,13 +46,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 80,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -82,7 +80,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2044, chance = 8280},
+	{id = 2914, chance = 8280},
 	{name = "gold coin", chance = 55310, maxCount = 12},
 	{name = "battle axe", chance = 5910},
 	{name = "halberd", chance = 6740},

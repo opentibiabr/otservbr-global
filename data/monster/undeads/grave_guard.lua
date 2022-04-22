@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 720
 monster.maxHealth = 720
 monster.race = "undead"
-monster.corpse = 13975
+monster.corpse = 12840
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -83,7 +81,7 @@ monster.loot = {
 	{name = "scarab coin", chance = 4166},
 	{name = "daramian waraxe", chance = 1170},
 	{name = "grave flower", chance = 70000},
-	{id = 6300, chance = 1754},
+	{id = 6299, chance = 1754},
 	{name = "health potion", chance = 20000},
 	{name = "mana potion", chance = 20000}
 }
@@ -100,15 +98,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 20},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = 30},
+	{type = COMBAT_EARTHDAMAGE, percent = 90},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -10},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

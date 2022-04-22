@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6072
 monster.speed = 200
 monster.manaCost = 445
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -45,13 +44,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -79,7 +77,7 @@ monster.loot = {
 	{name = "gold coin", chance = 59000, maxCount = 30},
 	{name = "battle hammer", chance = 730},
 	{name = "plate shield", chance = 2850},
-	{id = 2667, chance = 4600},
+	{id = 3578, chance = 4600},
 	{name = "tortoise egg", chance = 770, maxCount = 2},
 	{name = "turtle shell", chance = 1300},
 	{name = "tortoise shield", chance = 200}
@@ -95,7 +93,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 35},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = -10},

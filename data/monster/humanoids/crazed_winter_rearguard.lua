@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 5200
 monster.maxHealth = 5200
 monster.race = "blood"
-monster.corpse = 34764
+monster.corpse = 30126
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -80,11 +78,11 @@ monster.voices = {
 monster.loot = {
 	{name = "platinum coin", chance = 100000, maxCount = 5},
 	{name = "red crystal fragment", chance = 1000000},
-	{name = "red gem", chance = 1000000},
+	{id= 3039, chance = 1000000},
 	{name = "ice rapier", chance = 15000},
 	{name = "ultimate health potion", chance = 21550},
 	{name = "great spirit potion", chance = 23550},
-	{id = 34696, chance = 14750, maxCount = 2},
+	{id = 30058, chance = 14750, maxCount = 2},
 	{name = "life crystal", chance = 17550},
 	{name = "dream essence egg", chance = 6350},
 	{name = "elven astral observer", chance = 14600},
@@ -116,16 +114,16 @@ monster.reflects = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = -15},
+	{type = COMBAT_EARTHDAMAGE, percent = -20},
+	{type = COMBAT_FIREDAMAGE, percent = -20},
 	{type = COMBAT_LIFEDRAIN, percent = 100},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = 100},
-	{type = COMBAT_HOLYDAMAGE , percent = 50},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_ICEDAMAGE, percent = 40},
+	{type = COMBAT_HOLYDAMAGE , percent = 0},
+	{type = COMBAT_DEATHDAMAGE , percent = 20}
 }
 
 monster.immunities = {

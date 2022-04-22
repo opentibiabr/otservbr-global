@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5973
 monster.speed = 180
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "dragon hatchlings", chance = 40, interval = 4000, max = 4}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "dragon hatchlings", chance = 40, interval = 4000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -70,24 +71,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 37500, maxCount = 70},
-	{id = 2148, chance = 37500, maxCount = 50},
-	{id = 2546, chance = 4000, maxCount = 12},
-	{id = 2672, chance = 15500, maxCount = 3},
-	{id = 2406, chance = 25000},
-	{id = 2398, chance = 21500},
-	{id = 2509, chance = 14000},
-	{id = 2455, chance = 10000},
-	{id = 2397, chance = 5000},
-	{id = 2457, chance = 3000},
-	{id = 2647, chance = 2000},
-	{id = 2413, chance = 2000},
-	{id = 2387, chance = 1333},
-	{id = 2187, chance = 1800},
+	{id = 3031, chance = 37500, maxCount = 70},
+	{id = 3031, chance = 37500, maxCount = 50},
+	{id = 3449, chance = 4000, maxCount = 12}, -- Burst arrow
+	{id = 3583, chance = 15500, maxCount = 3},
+	{id = 3294, chance = 25000},
+	{id = 3286, chance = 21500},
+	{id = 3409, chance = 14000},
+	{id = 3349, chance = 10000},
+	{id = 3285, chance = 5000},
+	{id = 3351, chance = 3000},
+	{id = 3557, chance = 2000},
+	{id = 3301, chance = 2000},
+	{id = 3275, chance = 1333},
+	{id = 3071, chance = 1800},
 	{id = 5920, chance = 100000},
-	{id = 2434, chance = 600},
+	{id = 3322, chance = 600},
 	{id = 5877, chance = 100000},
-	{id = 2516, chance = 500},
+	{id = 3416, chance = 500},
 	{id = 7430, chance = 650}
 }
 

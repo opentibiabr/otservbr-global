@@ -13,5 +13,5 @@ function childrenPoison.onUse(player, item, fromPosition, target, toPosition, is
 	return true
 end
 
-childrenPoison:id(10760)
+childrenPoison:id(10183)
 childrenPoison:register()

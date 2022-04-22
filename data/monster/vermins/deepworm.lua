@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 4500
 monster.maxHealth = 4500
 monster.race = "blood"
-monster.corpse = 30780
+monster.corpse = 27545
 monster.speed = 204
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -81,20 +79,20 @@ monster.voices = {
 
 monster.loot = {
 	{name = "Deepworm Jaws", chance = 24010},
-	{name = "Life Ring", chance = 7320},
+	{id = 3052, chance = 7320}, -- Life ring
 	{name = "Meat", chance = 19660, maxCount = 4},
 	{name = "Ham", chance = 19660, maxCount = 4},
 	{name = "Wood Mushroom", chance = 22280},
 	{name = "Dark Mushroom", chance = 14960},
 	{name = "Green Mushroom", chance = 18520},
 	{name = "Green Crystal Shard", chance = 5360},
-	{id = 30828, chance = 13210, maxCount = 2},
+	{id = 27593, chance = 13210, maxCount = 2},
 	{name = "Deepworm Spikes", chance = 9880},
 	{name = "Small Enchanted Amethyst", chance = 3430, maxCount = 2},
 	{name = "Terra Amulet", chance = 5060},
 	{name = "Springsprout Rod", chance = 1120},
 	{name = "Sacred Tree Amulet", chance = 2390},
-	{id = 7632, chance = 860},
+	{id = 281, chance = 860},
 	{name = "Suspicious Device", chance = 530}
 }
 
@@ -112,8 +110,8 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 30},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
+	{type = COMBAT_FIREDAMAGE, percent = -20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

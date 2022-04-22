@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2000
 monster.maxHealth = 2000
 monster.race = "venom"
-monster.corpse = 13484
+monster.corpse = 12495
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -75,18 +73,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2796, chance = 1450},
-	{id = 9690, chance = 940},
-	{id = 2148, chance = 85180, maxCount = 140},
-	{id = 7618, chance = 4930},
-	{id = 7620, chance = 4950},
-	{id = 2381, chance = 3030},
-	{id = 8900, chance = 520},
-	{id = 2165, chance = 450},
-	{id = 13758, chance = 340},
-	{id = 13938, chance = 36},
-	{id = 2466, chance = 13},
-	{id = 2179, chance = 8}
+	{id = 3732, chance = 1450},
+	{id = 8775, chance = 940},
+	{id = 3031, chance = 85180, maxCount = 140},
+	{id = 266, chance = 4930},
+	{id = 268, chance = 4950},
+	{id = 3269, chance = 3030},
+	{id = 8072, chance = 520},
+	{id = 3049, chance = 450}, -- Stealth ring
+	{id = 12601, chance = 340},
+	{id = 12801, chance = 36},
+	{id = 3360, chance = 13},
+	{id = 3063, chance = 8}
 }
 
 monster.attacks = {
@@ -103,15 +101,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = 25},
 	{type = COMBAT_EARTHDAMAGE, percent = 80},
-	{type = COMBAT_FIREDAMAGE, percent = 10},
+	{type = COMBAT_FIREDAMAGE, percent = 15},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -5},
 	{type = COMBAT_HOLYDAMAGE , percent = 100},
-	{type = COMBAT_DEATHDAMAGE , percent = -5}
+	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 
 monster.immunities = {

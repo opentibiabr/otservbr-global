@@ -4,16 +4,15 @@ local monster = {}
 monster.description = "a tentuglys head"
 monster.experience = 40000
 monster.outfit = {
-	lookTypeEx = 39940
+	lookTypeEx = 35105
 }
 
 monster.health = 0 --?
 monster.maxHealth = 0 --?
 monster.race = "blood"
-monster.corpse = 40435
+monster.corpse = 35600
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -44,8 +43,7 @@ monster.flags = {
 	isBlockable = true,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {

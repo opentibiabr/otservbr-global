@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 450
 monster.maxHealth = 450
 monster.race = "blood"
-monster.corpse = 19726
+monster.corpse = 17446
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
+	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -82,7 +80,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 45},
-	{id = 2696, chance = 20000},
+	{id = 3607, chance = 20000},
 	{name = "bola", chance = 7692},
 	{name = "spike shield", chance = 645},
 	{name = "ratana", chance = 2702},
@@ -108,14 +106,14 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 20},
-	{type = COMBAT_EARTHDAMAGE, percent = 20},
+	{type = COMBAT_ENERGYDAMAGE, percent = 15},
+	{type = COMBAT_EARTHDAMAGE, percent = 25},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = -20},
+	{type = COMBAT_HOLYDAMAGE , percent = -5},
 	{type = COMBAT_DEATHDAMAGE , percent = 20}
 }
 

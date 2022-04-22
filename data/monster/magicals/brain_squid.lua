@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 18000
 monster.maxHealth = 18000
 monster.race = "undead"
-monster.corpse = 33329
+monster.corpse = 28582
 monster.speed = 430
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -60,8 +59,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -84,7 +82,7 @@ monster.loot = {
 	{name = "Energy Drink", chance = 1200, maxCount = 4},
 	{name = "Odd Organ", chance = 1200, maxCount = 4},
 	{name = "Frozen Lightning", chance = 1200, maxCount = 4},
-	{id = 33315, chance = 1200, maxCount = 3},
+	{id = 28568, chance = 1200, maxCount = 3},
 	{name = "Small Ruby", chance = 1200, maxCount = 4},
 	{name = "Violet Gem", chance = 1200, maxCount = 4},
 	{name = "Blue Crystal Splinter", chance = 1200, maxCount = 4},
@@ -96,12 +94,12 @@ monster.loot = {
 	{name = "Lightning Pendant", chance = 850},
 	{name = "Might Ring", chance = 1300},
 	{name = "Slime Heart", chance = 1200, maxCount = 4},
-	{id = 26200, chance = 560},
-	{id = 26198, chance = 560},-- collar of blue plasma
-	{id = 26199, chance = 560},
-	{id = 26189, chance = 560},
-	{id = 26185, chance = 560},
-	{id = 26187, chance = 560}
+	{id = 23544, chance = 560},
+	{id = 23542, chance = 560},-- collar of blue plasma
+	{id = 23543, chance = 560}, -- Collar of green plasma
+	{id = 23533, chance = 560},
+	{id = 23529, chance = 560},
+	{id = 23531, chance = 560}
 }
 
 monster.attacks = {
@@ -117,15 +115,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 90},
-	{type = COMBAT_EARTHDAMAGE, percent = 30},
-	{type = COMBAT_FIREDAMAGE, percent = 50},
+	{type = COMBAT_ENERGYDAMAGE, percent = 100},
+	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 50},
-	{type = COMBAT_HOLYDAMAGE , percent = 70},
-	{type = COMBAT_DEATHDAMAGE , percent = 50}
+	{type = COMBAT_ICEDAMAGE, percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = 100},
+	{type = COMBAT_DEATHDAMAGE , percent = -15}
 }
 
 monster.immunities = {

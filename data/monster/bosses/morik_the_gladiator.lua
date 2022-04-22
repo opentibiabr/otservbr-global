@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1235
 monster.maxHealth = 1235
 monster.race = "blood"
-monster.corpse = 20454
+monster.corpse = 18173
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 2000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Gladiator", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Gladiator", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -73,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 9735, chance = 100000}
+	{id = 8820, chance = 100000}
 }
 
 monster.attacks = {

@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 275
 monster.maxHealth = 275
 monster.race = "undead"
-monster.corpse = 5566
+monster.corpse = 5565
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,9 +79,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1951, chance = 910},
+	{id = 2817, chance = 910},
 	{name = "gold coin", chance = 48000, maxCount = 67},
-	{name = "stealth ring", chance = 650},
+	{id = 3049, chance = 650}, -- Stealth ring
 	{name = "spike sword", chance = 130},
 	{name = "red robe", chance = 130},
 	{name = "tattered piece of robe", chance = 4300}

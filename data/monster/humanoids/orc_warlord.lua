@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6008
 monster.speed = 234
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -82,12 +80,12 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 18000, maxCount = 45},
-	{name = "stealth ring", chance = 90},
+	{id = 3049, chance = 90}, -- Stealth ring
 	{name = "gold ring", chance = 30},
 	{name = "protection amulet", chance = 2190},
 	{name = "two handed sword", chance = 1680},
 	{name = "throwing star", chance = 13920, maxCount = 18},
-	{id = 2419, chance = 3450},
+	{id = 3307, chance = 3450},
 	{name = "orcish axe", chance = 5400},
 	{name = "dragon hammer", chance = 320},
 	{name = "plate armor", chance = 5210},
@@ -95,7 +93,7 @@ monster.loot = {
 	{name = "dark helmet", chance = 1260},
 	{name = "crusader helmet", chance = 280},
 	{name = "plate legs", chance = 4280},
-	{id = 2667, chance = 10800, maxCount = 2},
+	{id = 3578, chance = 10800, maxCount = 2},
 	{name = "hunting spear", chance = 5260},
 	{id = 7395, chance = 50},
 	{name = "health potion", chance = 470},

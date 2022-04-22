@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1500
 monster.maxHealth = 1500
 monster.race = "blood"
-monster.corpse = 30756
+monster.corpse = 27521
 monster.speed = 280
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -72,8 +70,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "fox", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "fox", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -97,9 +98,9 @@ monster.loot = {
 	{name = "Troll Green", chance = 500, maxCount = 2},
 	{name = "Assassin Star", chance = 300, maxCount = 5},
 	{name = "Platinum Amulet", chance = 130},
-	{name = "Ring of Healing", chance = 200},
+	{id = 3098, chance = 200}, -- Ring of healing
 	{name = "Werewolf Amulet", chance = 50},
-	{id = 30941, chance = 30}
+	{id = 27706, chance = 30}
 }
 
 monster.attacks = {
@@ -117,16 +118,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 1},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
+	{type = COMBAT_ENERGYDAMAGE, percent = 10},
+	{type = COMBAT_EARTHDAMAGE, percent = 40},
+	{type = COMBAT_FIREDAMAGE, percent = -10},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 90},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_DEATHDAMAGE , percent = 40}
 }
 
 monster.immunities = {

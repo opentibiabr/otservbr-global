@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 50000
 monster.maxHealth = 50000
 monster.race = "blood"
-monster.corpse = 33376
+monster.corpse = 28635
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 5
 
 monster.changeTarget = {
 	interval = 1000,
@@ -38,9 +37,9 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = true,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 60,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "neutral deepling warrior", chance = 70, interval = 1000}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "neutral deepling warrior", chance = 70, interval = 1000, count = 5}
+	}
 }
 
 monster.voices = {
@@ -76,7 +77,7 @@ monster.loot = {
 	{name = "Broccoli", chance = 2439, maxCount = 10},
 	{name = "Small Diamond", chance = 498, maxCount = 10},
 	{name = "Blue Gem", chance = 2500},
-	{name = "Red Gem", chance = 2000},
+	{id= 3039, chance = 2000},
 	{name = "Deepling Ceremonial Dagger", chance = 200},
 	{name = "Deepling Fork", chance = 200},
 	{name = "True Book of Death", chance = 70000}

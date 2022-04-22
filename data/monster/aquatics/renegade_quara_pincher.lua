@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6063
 monster.speed = 396
 monster.manaCost = 330
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -47,13 +46,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -85,14 +83,14 @@ monster.loot = {
 	{name = "small ruby", chance = 9010, maxCount = 2},
 	{name = "small diamond", chance = 7060, maxCount = 2},
 	{name = "mind stone", chance = 6140},
-	{name = "red gem", chance = 5120},
+	{id= 3039, chance = 5120},
 	{name = "shrimp", chance = 4810, maxCount = 5},
 	{name = "vortex bolt", chance = 3790, maxCount = 5},
-	{id = 7632, chance = 1430},--giant shimmering pearl(brown)
+	{id = 281, chance = 1430},--giant shimmering pearl(brown)
 	{name = "warrior helmet", chance = 1430},
 	{name = "fish fin", chance = 920},
 	{name = "crown armor", chance = 611},
-	{id = 2169, chance = 410}, -- time ring
+	{id = 3053, chance = 410}, -- time ring
 	{name = "talon", chance = 310},
 	{name = "glacier robe", chance = 200},
 	{name = "giant shrimp", chance = 100},

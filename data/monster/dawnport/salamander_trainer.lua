@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5960
 monster.speed = 290
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -47,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -62,11 +60,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 10606, chance = 1050},
-	{id = 2148, chance = 65300, maxCount = 12},
-	{id = 2666, chance = 15200},
-	{id = 2120, chance = 7960},
-	{id = 2389, chance = 12970, maxCount = 3}
+	{id = 9689, chance = 1050},
+	{id = 3031, chance = 65300, maxCount = 12},
+	{id = 3577, chance = 15200},
+	{id = 3003, chance = 7960},
+	{id = 3277, chance = 12970, maxCount = 3}
 }
 
 monster.attacks = {
@@ -81,7 +79,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 50},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},

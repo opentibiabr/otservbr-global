@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6011
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,7 +79,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1949, chance = 31000},
+	{id = 2815, chance = 31000},
 	{name = "candlestick", chance = 2100},
 	{name = "gold coin", chance = 37000, maxCount = 47},
 	{name = "yellow gem", chance = 50},
@@ -90,7 +88,7 @@ monster.loot = {
 	{name = "elven amulet", chance = 1999},
 	{name = "blank rune", chance = 18000},
 	{name = "arrow", chance = 6000, maxCount = 3},
-	{id = 2600, chance = 1000},
+	{id = 3509, chance = 1000},
 	{name = "sandals", chance = 950},
 	{name = "green tunic", chance = 7000},
 	{name = "melon", chance = 22000},

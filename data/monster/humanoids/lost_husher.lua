@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1600
 monster.maxHealth = 1600
 monster.race = "blood"
-monster.corpse = 19964
+monster.corpse = 17684
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -93,7 +91,7 @@ monster.loot = {
 	{name = "terra boots", chance = 880},
 	{name = "small topaz", chance = 9780},
 	{name = "clay lump", chance = 500},
-	{id = 13757, chance = 10930},
+	{id = 12600, chance = 10930},
 	{name = "buckle", chance = 8180},
 	{name = "buckle", chance = 770},
 	{name = "bonecarving knife", chance = 8510},
@@ -120,15 +118,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
-	{type = COMBAT_ENERGYDAMAGE, percent = 15},
+	{type = COMBAT_ENERGYDAMAGE, percent = 10},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 40},
+	{type = COMBAT_FIREDAMAGE, percent = 25},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 5},
-	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_ICEDAMAGE, percent = 15},
+	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_DEATHDAMAGE , percent = 20}
 }
 
 monster.immunities = {

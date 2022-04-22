@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 900
 monster.maxHealth = 900
 monster.race = "blood"
-monster.corpse = 25398
+monster.corpse = 22742
 monster.speed = 430
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,11 +79,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 92000, maxCount = 130},
-	{id = 24842, chance = 2200},
+	{id = 3031, chance = 92000, maxCount = 130},
+	{id = 22186, chance = 2200},
 	{id = 5925, chance = 1200, maxCount = 2},
-	{id = 11224, chance = 900},
-	{id = 3973, chance = 400},
+	{id = 10307, chance = 900},
+	{id = 3443, chance = 400},
 	{id = 7432, chance = 200}
 }
 
@@ -103,7 +101,7 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

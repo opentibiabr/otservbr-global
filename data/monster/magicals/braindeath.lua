@@ -33,7 +33,6 @@ monster.race = "undead"
 monster.corpse = 7256
 monster.speed = 218
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 80,
@@ -64,8 +63,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -73,8 +71,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Vampire", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Vampire", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -95,7 +96,7 @@ monster.loot = {
 	{name = "bonelord eye", chance = 2990},
 	{name = "clerical mace", chance = 1970},
 	{name = "haunted blade", chance = 1440},
-	{id = 2175, chance = 930},
+	{id = 3059, chance = 930},
 	{name = "spiked squelcher", chance = 180},
 	{name = "bonelord shield", chance = 100},
 	{name = "bonelord helmet", chance = 100}

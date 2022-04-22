@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 485
 monster.maxHealth = 485
 monster.race = "blood"
-monster.corpse = 20446
+monster.corpse = 18165
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Monk", chance = 20, interval = 2000}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "Monk", chance = 20, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -73,10 +74,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2120, chance = 100000, maxCount = 3},
+	{id = 3003, chance = 100000, maxCount = 3},
 	{id = 7386, chance = 38000},
 	{id = 5913, chance = 30000},
-	{id = 2148, chance = 30000, maxCount = 39},
+	{id = 3031, chance = 30000, maxCount = 39},
 	{id = 7458, chance = 15000},
 	{id = 7290, chance = 8000}
 }

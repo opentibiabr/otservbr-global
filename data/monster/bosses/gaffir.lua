@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 54500
 monster.maxHealth = 54500
 monster.race = "blood"
-monster.corpse = 36142
+monster.corpse = 31307
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Black Cobra", chance = 10, interval = 2000, max = 1}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Black Cobra", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -82,10 +83,10 @@ monster.loot = {
 	{name = "blue gem", chance = 21000},
 	{name = "cobra crest", chance = 12560},
 	{name = "violet crystal shard", chance = 14800},
-	{id = 7632, chance = 14520}, -- giant shimmering pearl
+	{id = 281, chance = 14520}, -- giant shimmering pearl
 	{name = "gold ingot", chance = 14500},
 	{name = "spellbook of warding", chance = 6500},
-	{name = "ring of healing", chance = 5400},
+	{id = 3098, chance = 5400}, -- Ring of healing
 	{name = "terra hood", chance = 1600},
 	{name = "amulet of loss", chance = 3400},
 	{name = "wand of everblazing", chance = 2900},

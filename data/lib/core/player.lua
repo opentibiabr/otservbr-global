@@ -112,7 +112,7 @@ function Player.getCookiesDelivered(self)
 end
 
 function Player.allowMovement(self, allow)
-	return self:setStorageValue(STORAGE.blockMovementStorage, allow and -1 or 1)
+	return self:setStorageValue(Storage.blockMovementStorage, allow and -1 or 1)
 end
 
 function Player.checkGnomeRank(self)
@@ -180,11 +180,17 @@ function Player.depositMoney(self, amount)
 end
 
 function Player.transferMoneyTo(self, target, amount)
+	if not target then
+		return false
+	end
+
+	-- See if you can afford this transfer
 	local balance = self:getBankBalance()
 	if amount > balance then
 		return false
 	end
 
+	-- See if player is online
 	local targetPlayer = Player(target)
 	if targetPlayer then
 		local town = targetPlayer:getTown()
@@ -224,17 +230,59 @@ function Player.withdrawMoney(self, amount)
 	return true
 end
 
+-- player:removeMoneyBank(money)
+function Player:removeMoneyBank(amount)
+
+	if type(amount) == 'string' then
+		amount = tonumber(amount)
+	end
+
+	local moneyCount = self:getMoney()
+	local bankCount = self:getBankBalance()
+
+	-- The player have all the money with him
+	if amount <= moneyCount then
+		-- Removes player inventory money
+		self:removeMoney(amount)
+
+		self:sendTextMessage(MESSAGE_TRADE, ("Paid %d gold from inventory."):format(amount))
+		return true
+
+	-- The player doens't have all the money with him
+	elseif amount <= (moneyCount + bankCount) then
+
+		-- Check if the player has some money
+		if moneyCount ~= 0 then
+			-- Removes player inventory money
+			self:removeMoney(moneyCount)
+			local remains = amount - moneyCount
+
+			-- Removes player bank money
+			self:setBankBalance(bankCount - remains)
+
+			self:sendTextMessage(MESSAGE_TRADE, ("Paid %d from inventory and %d gold from bank account. Your account balance is now %d gold."):format(moneyCount, amount - moneyCount, self:getBankBalance()))
+			return true
+
+		else
+			self:setBankBalance(bankCount - amount)
+			self:sendTextMessage(MESSAGE_TRADE, ("Paid %d gold from bank account. Your account balance is now %d gold."):format(amount, self:getBankBalance()))
+			return true
+		end
+	end
+	return false
+end
+
 function Player.hasAllowMovement(self)
-	return self:getStorageValue(STORAGE.blockMovementStorage) ~= 1
+	return self:getStorageValue(Storage.blockMovementStorage) ~= 1
 end
 
 function Player.hasRookgaardShield(self)
 	-- Wooden Shield, Studded Shield, Brass Shield, Plate Shield, Copper Shield
-	return self:getItemCount(2512) > 0
-		or self:getItemCount(2526) > 0
-		or self:getItemCount(2511) > 0
-		or self:getItemCount(2510) > 0
-		or self:getItemCount(2530) > 0
+	return self:getItemCount(3412) > 0
+		or self:getItemCount(3426) > 0
+		or self:getItemCount(3411) > 0
+		or self:getItemCount(3410) > 0
+		or self:getItemCount(3430) > 0
 end
 
 
@@ -324,4 +372,64 @@ function Player.sendWeatherEffect(self, groundEffect, fallEffect, thunderEffect)
             end
         end
     end
+end
+
+function Player:CreateFamiliarSpell()
+	local playerPosition = self:getPosition()
+	if not self:isPremium() then
+		playerPosition:sendMagicEffect(CONST_ME_POFF)
+		self:sendCancelMessage("You need a premium account.")
+		return false
+	end
+
+	if #self:getSummons() >= 1 and self:getAccountType() < ACCOUNT_TYPE_GOD then
+		self:sendCancelMessage("You can't have other summons.")
+		playerPosition:sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	local vocation = FAMILIAR_ID[self:getVocation():getBaseId()]
+	local familiarName
+
+	if vocation then
+		familiarName = vocation.name
+	end
+
+	if not familiarName then
+		self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
+		playerPosition:sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	local myFamiliar = Game.createMonster(familiarName, playerPosition, true, false, self)
+	if not myFamiliar then
+		self:sendCancelMessage(RETURNVALUE_NOTENOUGHROOM)
+		playerPosition:sendMagicEffect(CONST_ME_POFF)
+		return false
+	end
+
+	myFamiliar:setOutfit({lookType = self:getFamiliarLooktype()})
+	myFamiliar:registerEvent("FamiliarDeath")
+	myFamiliar:changeSpeed(math.max(self:getSpeed() - myFamiliar:getBaseSpeed(), 0))
+	playerPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
+	myFamiliar:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	-- 15 minute count starts after using the spell
+	self:setStorageValue(Storage.FamiliarSummon, os.time() + 15*60)
+	addEvent(RemoveFamiliar, 15*60*1000, myFamiliar:getId(), self:getId())
+	for sendMessage = 1, #FAMILIAR_TIMER do
+		self:setStorageValue(
+			FAMILIAR_TIMER[sendMessage].storage,
+			addEvent(
+				-- Calling function
+				SendMessageFunction,
+				-- Time for execute event
+				(15 * 60 - FAMILIAR_TIMER[sendMessage].countdown) * 1000,
+				-- Param "playerId"
+				self:getId(),
+				-- Param "message"
+				FAMILIAR_TIMER[sendMessage].message
+			)
+		)
+	end
+	return true
 end

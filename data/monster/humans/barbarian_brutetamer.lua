@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 145
 monster.maxHealth = 145
 monster.race = "blood"
-monster.corpse = 20339
+monster.corpse = 18058
 monster.speed = 178
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 60000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -72,8 +70,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "War Wolf", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "War Wolf", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -85,9 +86,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1958, chance = 4750},
+	{id = 2824, chance = 4750},
 	{name = "gold coin", chance = 90230, maxCount = 15},
-	{id = 2401, chance = 6550},
+	{id = 3289, chance = 6550},
 	{name = "chain armor", chance = 9300},
 	{name = "corncob", chance = 10940, maxCount = 2},
 	{name = "hunting spear", chance = 5200},

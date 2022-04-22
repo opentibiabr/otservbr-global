@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a rift fragment"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 1491
+	lookTypeEx = 2122
 }
 
 monster.health = 7200
@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -31,8 +30,8 @@ monster.flags = {
 	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
-	pushable = false,
+	convinceable = true,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -44,8 +43,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = true,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {

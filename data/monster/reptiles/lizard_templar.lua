@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 410
 monster.maxHealth = 410
 monster.race = "blood"
-monster.corpse = 4251
+monster.corpse = 4239
 monster.speed = 174
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -79,7 +77,7 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 84000, maxCount = 60},
 	{name = "small emerald", chance = 250},
-	{id = 2376, chance = 4000},
+	{id = 3264, chance = 4000},
 	{name = "morning star", chance = 1990},
 	{name = "short sword", chance = 9500},
 	{name = "steel helmet", chance = 2000},

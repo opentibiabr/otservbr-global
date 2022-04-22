@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6532
 monster.speed = 310
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5500,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -59,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Defiler", chance = 20, interval = 4000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Defiler", chance = 20, interval = 4000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -72,11 +73,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 20000, maxCount = 177},
-	{id = 2152, chance = 25000, maxCount = 13},
-	{id = 6500, chance = 45000},
-	{id = 2144, chance = 5000, maxCount = 3},
-	{id = 2146, chance = 5000, maxCount = 3},
+	{id = 3031, chance = 20000, maxCount = 177},
+	{id = 3035, chance = 25000, maxCount = 13},
+	{id = 6499, chance = 45000},
+	{id = 3027, chance = 5000, maxCount = 3},
+	{id = 3029, chance = 5000, maxCount = 3},
 	{id = 5944, chance = 35000},
 	{id = 6535, chance = 100000}
 }

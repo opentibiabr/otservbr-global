@@ -32,7 +32,6 @@ monster.race = "undead"
 monster.corpse = 6029
 monster.speed = 156
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,8 +61,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -82,7 +80,7 @@ monster.loot = {
 	{name = "gold coin", chance = 82350, maxCount = 108},
 	{name = "scarab coin", chance = 8210},
 	{name = "rotten meat", chance = 2000},
-	{id = 2230, chance = 49000},
+	{id = 3115, chance = 49000},
 	{name = "longsword", chance = 6560},
 	{name = "bone shield", chance = 5300},
 	{name = "worm", chance = 25325, maxCount = 12},
@@ -109,7 +107,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = -25},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1600
 monster.maxHealth = 1600
 monster.race = "blood"
-monster.corpse = 15175
+monster.corpse = 13712
 monster.speed = 290
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -89,7 +87,7 @@ monster.loot = {
 	{name = "great health potion", chance = 10030},
 	{name = "vortex bolt", chance = 3431, maxCount = 5},
 	{name = "small emerald", chance = 3104},
-	{name = "life ring", chance = 3001},
+	{id = 3052, chance = 3001}, -- Life ring
 	{name = "heavy trident", chance = 999},
 	{name = "fish fin", chance = 870},
 	{name = "warrior's shield", chance = 610},

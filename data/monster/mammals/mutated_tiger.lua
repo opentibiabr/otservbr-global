@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 1100
 monster.maxHealth = 1100
 monster.race = "blood"
-monster.corpse = 9913
+monster.corpse = 8999
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.voices = {
 monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "gold coin", chance = 50000, maxCount = 5},
-	{name = "life ring", chance = 5580},
+	{id = 3052, chance = 5580}, -- Life ring
 	{name = "guardian shield", chance = 380},
 	{name = "meat", chance = 29500, maxCount = 2},
 	{name = "angelic axe", chance = 440},

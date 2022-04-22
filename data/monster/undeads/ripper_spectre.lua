@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 3800
 monster.maxHealth = 3800
 monster.race = "blood"
-monster.corpse = 34664
+monster.corpse = 30026
 monster.speed = 380
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -86,7 +84,7 @@ monster.loot = {
 	{name = "Emerald Bangle", chance = 14740},
 	{name = "Twin Hooks", chance = 1170},
 	{name = "Springsprout Rod", chance = 1210},
-	{id = 34721, chance = 1890},
+	{id = 30083, chance = 1890},
 	{name = "Coral Brooch", chance = 1330},
 	{name = "Serpent Sword", chance = 1950},
 	{name = "Hexagonal Ruby", chance = 800},
@@ -113,14 +111,14 @@ monster.reflects = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 20},
-	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 70},
+	{type = COMBAT_ENERGYDAMAGE, percent = -10},
+	{type = COMBAT_EARTHDAMAGE, percent = 20},
+	{type = COMBAT_FIREDAMAGE, percent = -20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 20},
+	{type = COMBAT_ICEDAMAGE, percent = 0},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }

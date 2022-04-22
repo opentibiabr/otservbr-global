@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 5972
 monster.speed = 155
 monster.manaCost = 350
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -31,14 +30,14 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -47,8 +46,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -63,10 +61,10 @@ monster.voices = {
 
 monster.loot = {
 	{name = "Platinum Coin", chance = 43500, maxCount = 15},
-	{id = 2230, chance = 50000},
+	{id = 3115, chance = 50000},
 	{name = "white mushroom", chance = 24000, maxCount = 3},
 	{name = "Soul Orb", chance = 43500, maxCount = 5},
-	{id = 2376, chance = 2630, maxCount = 1},
+	{id = 3264, chance = 2630, maxCount = 1},
 	{name = "pelvis bone", chance = 2630, maxCount = 10},
 	{name = "Unholy Bone", chance = 2630, maxCount = 5},
 	{name = "Ruthless Axe", chance = 150}
@@ -85,14 +83,14 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = -5},
+	{type = COMBAT_EARTHDAMAGE, percent = 5},
+	{type = COMBAT_FIREDAMAGE, percent = -5},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = -5},
+	{type = COMBAT_HOLYDAMAGE , percent = -25},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

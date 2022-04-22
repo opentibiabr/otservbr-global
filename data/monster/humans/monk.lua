@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 240
 monster.maxHealth = 240
 monster.race = "blood"
-monster.corpse = 20371
+monster.corpse = 18090
 monster.speed = 240
 monster.manaCost = 600
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
@@ -63,8 +62,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -81,14 +79,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1949, chance = 2000},
+	{id = 2815, chance = 2000},
 	{name = "brown flask", chance = 820},
-	{id = 2044, chance = 880},
+	{id = 2914, chance = 880},
 	{name = "gold coin", chance = 15000, maxCount = 18},
-	{name = "power ring", chance = 100},
+	{id = 3050, chance = 100}, -- Power ring
 	{name = "life crystal", chance = 1002},
 	{name = "ankh", chance = 2240},
-	{id = 2401, chance = 440},
+	{id = 3289, chance = 440},
 	{name = "sandals", chance = 710},
 	{name = "bread", chance = 20000},
 	{name = "book of prayers", chance = 4930},
@@ -108,7 +106,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},

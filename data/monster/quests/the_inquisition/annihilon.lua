@@ -19,7 +19,6 @@ monster.race = "fire"
 monster.corpse = 6068
 monster.speed = 132
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,8 +49,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
-	canWalkOnPoison = false,
-	pet = false
+	canWalkOnPoison = false
 }
 
 monster.light = {
@@ -74,7 +72,7 @@ monster.loot = {
 	{name = "violet gem", chance = 16666},
 	{name = "yellow gem", chance = 20000},
 	{name = "green gem", chance = 12500},
-	{name = "red gem", chance = 20000},
+	{id= 3039, chance = 20000},
 	{name = "blue gem", chance = 20000},
 	{name = "halberd", chance = 20000},
 	{name = "guardian halberd", chance = 20000},
@@ -97,15 +95,15 @@ monster.loot = {
 	{name = "mastermind potion", chance = 14285},
 	{name = "great mana potion", chance = 11111},
 	{name = "great health potion", chance = 14285},
-	{id = 7632, chance = 33333, maxCount = 2},
+	{id = 281, chance = 33333, maxCount = 2},
 	{name = "flaming arrow", chance = 20000, maxCount = 46},
 	{name = "great spirit potion", chance = 14285},
 	{name = "ultimate health potion", chance = 14285},
 	{name = "lavos armor", chance = 1851},
 	{name = "paladin armor", chance = 10000},
 	{name = "obsidian truncheon", chance = 1234},
-	{id = 9808, chance = 1234},
-	{id = 9810, chance = 50000},
+	{id = 8894, chance = 1234},
+	{id = 8896, chance = 50000},
 	{name = "gold ingot", chance = 20000}
 }
 

@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 9000
 monster.maxHealth = 9000
 monster.race = "fire"
-monster.corpse = 17333
+monster.corpse = 15988
 monster.speed = 420
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -61,8 +60,7 @@ monster.flags = {
 	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = true,
-	canWalkOnPoison = true,
-	pet = false
+	canWalkOnPoison = true
 }
 
 monster.light = {
@@ -80,7 +78,7 @@ monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 199},
 	{name = "platinum coin", chance = 100000, maxCount = 11},
 	{name = "yellow gem", chance = 6480},
-	{name = "red gem", chance = 1180},
+	{id= 3039, chance = 1180},
 	{name = "wand of inferno", chance = 2950},
 	{name = "fire sword", chance = 1710},
 	{name = "fire axe", chance = 1560},
@@ -124,8 +122,8 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
-	{type = COMBAT_ENERGYDAMAGE, percent = 5},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
+	{type = COMBAT_ENERGYDAMAGE, percent = 30},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
@@ -133,7 +131,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -5},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_DEATHDAMAGE , percent = 35}
 }
 
 monster.immunities = {

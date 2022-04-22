@@ -11,7 +11,7 @@ function onTargetCreature(creature, target)
 		end
 	end
 
-	doTargetCombatHealth(0, target, COMBAT_HEALING, min, max, CONST_ME_NONE)
+	doTargetCombatHealth(player, target, COMBAT_HEALING, min, max, CONST_ME_NONE)
 	return true
 end
 
