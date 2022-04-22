@@ -78,7 +78,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 6)
 	elseif MsgContains(message, 'yes') and npcHandler:getTopic(playerId) == 6 then
 		npcHandler:say('Here you are', npc, creature)
-		local key = player:addItem(2089, 1)
+		local key = player:addItem(2970, 1)
 		if key then
 			key:setActionId(3142)
 		end

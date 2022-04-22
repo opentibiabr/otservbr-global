@@ -141,7 +141,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif npcHandler:getTopic(playerId) == 2 then
 		if MsgContains(message, 'yes') then
 			if not chargeItem[charge] then
-				npcHandler:say("Sorry, you don't have an unenchanted ".. charge ..".",creature)
+				npcHandler:say("Sorry, you don't have an unenchanted ".. charge ..".", npc, creature)
 			else
 				if (player:getItemCount(npc:getCurrency()) >= 2) and (player:getItemCount(chargeItem[charge].noChargeID) >= 1) then
 					player:removeItem(npc:getCurrency(), 2)

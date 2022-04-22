@@ -73,5 +73,5 @@ function dreamerNightmareLever.onUse(player, item, fromPosition, target, toPosit
 	end
 end
 
-dreamerNightmareLever:uid(3041,4223,4224)
+dreamerNightmareLever:uid(3041,3042,3043)
 dreamerNightmareLever:register()
