@@ -109,7 +109,7 @@ monster.defenses = {
 	{name ="invisible", interval = 2000, chance = 10, effect = CONST_ME_YELLOW_RINGS},
 	{name ="outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "nightstalker"},
 	{name ="outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "werewolf"},
-	{name ="outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "the count ="},
+	{name ="outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "the count"},
 	{name ="outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "grim reaper"},
 	{name ="outfit", interval = 5000, chance = 10, target = false, duration = 4000, outfitMonster = "tarantula"},
 	{name ="outfit", interval = 5000, chance = 1, target = false, duration = 4000, outfitMonster = "ferumbras"}

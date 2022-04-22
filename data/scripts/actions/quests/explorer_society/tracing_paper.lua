@@ -1,6 +1,6 @@
 local explorerSocietyPaper = Action()
 function explorerSocietyPaper.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if target.itemid == 2199 and target.uid == 4191 and player:getStorageValue(Storage.ExplorerSociety.TheRuneWritings) == 42 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 42 then
+	if target.itemid == 2199 and target.uid == 3010 and player:getStorageValue(Storage.ExplorerSociety.TheRuneWritings) == 42 and player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 42 then
 		player:setStorageValue(Storage.ExplorerSociety.TheRuneWritings, 43)
 		player:setStorageValue(Storage.ExplorerSociety.QuestLine, 43)
 		item:transform(4843)

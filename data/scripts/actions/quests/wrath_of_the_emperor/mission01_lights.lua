@@ -54,5 +54,5 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 	return true
 end
 
-wrathEmperorMiss1Light:uid(3171,519,520,521)
+wrathEmperorMiss1Light:uid(3171,3172,3173,3174)
 wrathEmperorMiss1Light:register()

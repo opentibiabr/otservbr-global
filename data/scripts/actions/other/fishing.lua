@@ -9,6 +9,13 @@ local lootCommon1 = {3035, 237, 12557}
 
 local useWorms = true
 
+local function refreeIceHole(position)
+	local iceHole = Tile(position):getItemById(7237)
+	if iceHole then
+		iceHole:transform(7200)
+	end
+end
+
 local fishing = Action()
 
 function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
@@ -91,9 +98,9 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				return true
 			end
 		elseif targetId == 7236 then
-			target:transform(targetId + 1)
-			target:decay()
-
+			target:transform(7237)
+			local position = target:getPosition()
+			addEvent(refreeIceHole, 1000 * 60 * 15, position)
 			local rareChance = math.random(100)
 			if rareChance == 1 then
 				player:addItem(7158, 1)
@@ -114,4 +121,3 @@ end
 fishing:id(3483)
 fishing:allowFarUse(true)
 fishing:register()
-
