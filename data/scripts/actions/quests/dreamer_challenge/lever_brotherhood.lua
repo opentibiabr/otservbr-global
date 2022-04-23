@@ -73,5 +73,5 @@ function dreamerBrotherhoodLever.onUse(player, item, fromPosition, target, toPos
 	end
 end
 
-dreamerBrotherhoodLever:uid(3045,4227,4228)
+dreamerBrotherhoodLever:uid(3045,3046,3047)
 dreamerBrotherhoodLever:register()

@@ -31,5 +31,5 @@ function tombCoalBasin.onAddItem(moveitem, tileitem, position)
 end
 
 tombCoalBasin:type("additem")
-tombCoalBasin:id(1485)
+tombCoalBasin:id(2114)
 tombCoalBasin:register()

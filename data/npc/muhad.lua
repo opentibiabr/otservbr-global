@@ -87,6 +87,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				'Tell him that he can consider himself as acquitted. He is not the reason for our attacks towards {Ankrahmun}.'
 			}, npc, creature)
 			player:setStorageValue(Storage.TibiaTales.AritosTask, 2)
+			player:setStorageValue(Storage.TibiaTales.AritosTaskDoor, 1)
 		end
 	end
 	return true
