@@ -19,6 +19,11 @@ npcConfig.outfit = {
 	lookAddons = 0
 }
 
+npcConfig.respawnType = {
+	period = RESPAWNPERIOD_DAY,
+	underground = false
+}
+
 npcConfig.flags = {
 	floorchange = false
 }
