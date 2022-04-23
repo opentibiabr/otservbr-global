@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <npcs>
+	<npc centerx="33332" centery="32052" centerz="7" radius="1">
+		<npc name="Ghostly Wolf" x="0" y="0" z="7" spawntime="60" />
+	</npc>
 	<npc centerx="33957" centery="31513" centerz="0" radius="1">
 		<npc name="Tanyt" x="0" y="0" z="0" spawntime="60" />
 	</npc>
