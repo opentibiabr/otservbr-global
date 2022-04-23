@@ -61,10 +61,15 @@ onlyPremiumAccount = false
 weatherRain = false
 thunderEffect = false
 allConsoleLog = false
--- NOTE: saveIntervalTime in hours
-saveInterval = false
-saveIntervalCleanMap = false
-saveIntervalTime = 1
+-- stashMoving = true, stow an container inside your stash
+-- the non-stackable items will be moved to the selected depot chest(I - XVIII).
+stashMoving = false
+depotChest = 4
+autoLoot = false
+-- autoBank = true, the dropped coins from monsters will be automatically 
+-- deposited to your bank account.
+autoBank = false
+
 -- Stamina in Trainers
 staminaTrainer = false
 staminaTrainerDelay = 5
@@ -76,14 +81,16 @@ staminaGreenDelay = 5
 staminaPzGain = 1
 -- Max players allowed on a dummy.
 maxAllowedOnADummy = 1
--- stashMoving = true, stow an container inside your stash
--- the non-stackable items will be moved to the selected depot chest(I - XVIII).
-stashMoving = false
-depotChest = 4
--- autoBank = true, the dropped coins from monsters will be automatically 
--- deposited to your bank account.
-autoBank = false
-autoLoot = false
+
+-- Save interval per time
+-- NOTE: togleSaveInterval: true = enable the save interval, false = disable the save interval
+-- NOTE: saveIntervalType: "minute", "second" or "hour"
+-- NOTE: togleSaveIntervalCleanMap: true = enable the clean map, false = disable the clean map
+-- NOTE: saveIntervalTime: time based on what was set in "saveIntervalType"
+togleSaveInterval = true
+saveIntervalType = "hour"
+togleSaveIntervalCleanMap = true
+saveIntervalTime = 1
 
 -- Imbuement
 togleImbuementShrineStorage = false
@@ -113,9 +120,13 @@ houseOwnedByAccount = false
 timeBetweenActions = 200
 timeBetweenExActions = 1000
 
--- Push Delay
+-- Push
+-- NOTE: pushDelay: interval for every push
+-- NOTE: pushDistanceDelay: delay for every distance push
+-- NOTE: pushWhenAttacking: true = enable the push during attack, false = disable the push during attack
 pushDelay = 1000
 pushDistanceDelay = 1500
+pushWhenAttacking = false
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
@@ -147,6 +158,7 @@ mysqlPass = ""
 mysqlDatabase = "otservbr-global"
 mysqlPort = 3306
 mysqlSock = ""
+passwordType = "sha1"
 
 -- Misc.
 allowChangeOutfit = true
@@ -187,8 +199,7 @@ rateMagic = 25
 rateSpawn = 1
 
 -- Today regeneration condition over an loop every 1 second,
--- so values which should regenerated less then 1 second
--- won't will work
+-- So values which should regenerated less then 1 second or won't will work
 rateHealthRegen = 1.0
 rateHealthRegenSpeed = 1.0
 rateManaRegen = 1.0
