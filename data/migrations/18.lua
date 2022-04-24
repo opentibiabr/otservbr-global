@@ -1,22 +1,24 @@
 function onUpdateDatabase()
-    Spdlog.info("Updating database to version 19 (Prey system rework + Task hunting system)")
-    db.query([[
-        ALTER TABLE `players`
+	Spdlog.info("Updating database to version 19 (Prey system rework + Task hunting system)")
+	db.query([[
+		ALTER TABLE `players`
 			DROP `prey_stamina_1`,
 			DROP `prey_stamina_2`,
 			DROP `prey_stamina_3`,
-			DROP `prey_column`;
-    ]])
+			DROP `prey_column`,
+			ADD `prey_wildcard` bigint(21) NOT NULL DEFAULT 0,
+			ADD `task_points` bigint(21) NOT NULL DEFAULT 0;
+	]])
 
-    db.query([[
-        DROP TABLE `player_prey`;
-    ]])
+	db.query([[
+		DROP TABLE `player_prey`;
+	]])
 
-    db.query([[
-        DROP TABLE `prey_slots`;
-    ]])
+	db.query([[
+		DROP TABLE `prey_slots`;
+	]])
 
-    db.query([[
+	db.query([[
 		CREATE TABLE IF NOT EXISTS `player_taskhunt` (
 			`player_id` int(11) NOT NULL,
 			`slot` tinyint(1) NOT NULL,
@@ -29,9 +31,9 @@ function onUpdateDatabase()
 			`free_reroll` bigint(20) NOT NULL,
 			`monster_list` BLOB NULL
 		) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-    ]])
+	]])
 
-    db.query([[
+	db.query([[
 		CREATE TABLE IF NOT EXISTS `player_prey` (
 			`player_id` int(11) NOT NULL,
 			`slot` tinyint(1) NOT NULL,
@@ -45,7 +47,7 @@ function onUpdateDatabase()
 			`free_reroll` bigint(20) NOT NULL,
 			`monster_list` BLOB NULL
 		) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-    ]])
+	]])
 
-    return true
+	return true
 end
