@@ -10,7 +10,6 @@ function loginEvents.onLogin(player)
 		"BossParticipation",
 		"DropLoot",
 		"PlayerDeath",
-		"PreyLootBonusKill",
 		"RookgaardAdvance",
 		"FamiliarLogin",
 		"AdvanceFamiliar",
