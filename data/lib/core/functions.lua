@@ -168,18 +168,6 @@ function setPlayerMarriageStatus(id, val)
 	db.query("UPDATE `players` SET `marriage_status` = " .. val .. " WHERE `id` = " .. id)
 end
 
--- The following 2 functions can be used for delayed shouted text
-function say(param)
-	selfSay(text)
-	doCreatureSay(param.cid, param.text, 1)
-end
-
-function delayedSay(text, delay)
-	local delaySay = delay or 0
-	local cid = getNpcCid()
-	addEvent(say, delaySay, {cid = cid, text = text})
-end
-
 function clearBossRoom(playerId, bossId, centerPosition, rangeX, rangeY, exitPosition)
 	local spectators,
 	spectator = Game.getSpectators(centerPosition, false, false, rangeX, rangeX, rangeY, rangeY)

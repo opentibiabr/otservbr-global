@@ -41,7 +41,7 @@ function ferumbrasAscendantFlowerPuzzle.onUse(player, item, fromPosition, target
 			addEvent(Game.setStorageValue, 30 * 1000, Storage.FerumbrasAscension.FlowerPuzzleTimer, 0)
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'A portal forms as two beams of a strange construction dividing this room move towards each other.')
 			for x = 33475, 33479 do
-				local pos = Position(x, 27925, 14)
+				local pos = Position(x, 32698, 14)
 				pos:sendMagicEffect(CONST_ME_POFF)
 			end
 			for k = 1, #gates do
