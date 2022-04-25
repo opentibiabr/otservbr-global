@@ -120,24 +120,21 @@ local foods = {
 local food = Action()
 
 function food.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local food = foods[item.itemid]
-	if not food then
+	local itemFood = foods[item.itemid]
+	if not itemFood then
 		return false
 	end
 
-	--player:removeCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT)
-
 	local condition = player:getCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT)
-	if condition and math.floor(condition:getTicks() / 1000 + (food[1] * 12)) >= 1200 then
-		player:sendTextMessage(MESSAGE_FAILURE, 'You are full.')
+	if condition and math.floor(condition:getTicks() / 1000 + (itemFood[1] * 12)) >= 1200 then
+		player:sendTextMessage(MESSAGE_FAILURE, "You are full.")
 		return true
 	end
 
-	player:feed(food[1] * 12)
-	player:say(food[2], TALKTYPE_MONSTER_SAY)
+	player:feed(itemFood[1] * 12)
+	player:say(itemFood[2], TALKTYPE_MONSTER_SAY)
 	item:remove(1)
 	player:updateSupplyTracker(item)
-
 	return true
 end
 
