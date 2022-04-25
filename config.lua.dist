@@ -111,17 +111,17 @@ staminaPzGain = 1
 maxAllowedOnADummy = 1
 
 -- Save interval per time
--- NOTE: togleSaveInterval: true = enable the save interval, false = disable the save interval
+-- NOTE: toggleSaveInterval: true = enable the save interval, false = disable the save interval
 -- NOTE: saveIntervalType: "minute", "second" or "hour"
--- NOTE: togleSaveIntervalCleanMap: true = enable the clean map, false = disable the clean map
+-- NOTE: toggleSaveIntervalCleanMap: true = enable the clean map, false = disable the clean map
 -- NOTE: saveIntervalTime: time based on what was set in "saveIntervalType"
-togleSaveInterval = true
+toggleSaveInterval = true
 saveIntervalType = "hour"
-togleSaveIntervalCleanMap = true
+toggleSaveIntervalCleanMap = true
 saveIntervalTime = 1
 
 -- Imbuement
-togleImbuementShrineStorage = false
+toggleImbuementShrineStorage = false
 
 -- Free quests
 -- Add quest access to player when logging in
@@ -160,7 +160,7 @@ pushWhenAttacking = false
 -- NOTE: set mapName WITHOUT .otbm at the end
 -- NOTE: unzip the map world.rar
 mapName = "otservbr"
-mapAuthor = "OTServBR"
+mapAuthor = "OpenTibiaBR"
 
 -- Party List limitations
 -- max distance in which players in party list are visible
@@ -171,7 +171,7 @@ partyListMaxDistance = 30
 -- NOTE: mapCustomEnabled: true = activate the map, false = disable the map
 toggleMapCustom = true
 mapCustomName = "otservbr-custom"
-mapCustomAuthor = "OTServBR"
+mapCustomAuthor = "OpenTibiaBR"
 
 -- Market
 marketOfferDuration = 30 * 24 * 60 * 60
@@ -201,14 +201,14 @@ coinImagesURL = "http://127.0.0.1/images/store/"
 classicAttackSpeed = false
 showScriptsLogInConsole = false
 
--- Server Save
--- NOTE: serverSaveNotifyDuration in minutes
-serverSaveNotifyMessage = true
-serverSaveNotifyDuration = 5
-serverSaveCleanMap = false
-serverSaveClose = false
-serverSaveShutdown = true
-serverSaveTime = "06:00:00"
+-- Global server Save
+-- NOTE: globalServerSaveNotifyDuration in minutes
+globalServerSaveNotifyMessage = true
+globalServerSaveNotifyDuration = 5
+globalServerSaveCleanMap = false
+globalServerSaveClose = false
+globalServerSaveShutdown = true
+globalServerSaveTime = "06:00:00"
 
 -- Sort loot by chance, most rare items drop first
 -- it is good to be setted when you have a higher
@@ -263,9 +263,9 @@ defaultPriority = "high"
 startupDatabaseOptimization = true
 
 -- Status server information
-ownerName = "OTServBR-Global"
-ownerEmail = ""
-url = "https://github.com/opentibiabr/otservbr-global"
+ownerName = "OpenTibiaBR"
+ownerEmail = "opentibiabr@outlook.com"
+url = "https://github.com/opentibiabr/otservbr-global, source code: https://github.com/opentibiabr/canary"
 location = "South America"
 
 -- Sends Discord webhook notifications on startup, raids and shutdown.
