@@ -61,13 +61,8 @@
 	<item id="113" article="the" name="dwarven emperor's beard">
 		<attribute key="weight" value="50"/>
 	</item>
-	<item id="114" article="a" name="bed">
+	<item fromid="114" toid="115" article="a" name="bed">
 		<attribute key="description" value="The dwarven emperor is sleeping there."/>
-	</item>
-	<item id="115" article="a" name="bed">
-		<attribute key="type" value="bed"/>
-		<attribute key="partnerdirection" value="west"/>
-		<attribute key="maletransformto" value="2494"/>
 	</item>
 	<item id="116" article="a" name="crate">
 		<attribute key="description" value="It contains the daily supply for Xodet's shop."/>
