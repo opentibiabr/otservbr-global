@@ -40715,7 +40715,12 @@
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28614" article="a" name="slain librarian">
+		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="28613"/>
+		<attribute key="containersize" value="20"/>
+	</item>
+	<item id="28615" article="a" name="dead true midnight asura">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
