@@ -52,9 +52,6 @@ healingImpact = {}
 -- Global table to insert data
 damageImpact = {}
 
--- New prey => preyTimeLeft
-nextPreyTime = {}
-
 startupGlobalStorages = {
 	GlobalStorage.TheAncientTombs.AshmunrahSwitchesGlobalStorage,
 	GlobalStorage.TheAncientTombs.DiprathSwitchesGlobalStorage,
@@ -138,20 +135,12 @@ if nextUseStaminaTime == nil then
 	nextUseStaminaTime = {}
 end
 
-if nextUseStaminaPrey == nil then
-	nextUseStaminaPrey = {}
-end
-
 if nextUseXpStamina == nil then
 	nextUseXpStamina = {}
 end
 
 if lastItemImbuing == nil then
 	lastItemImbuing = {}
-end
-
-if nextDelayPreyReroll == nil then
-	nextDelayPreyReroll = {}
 end
 
 -- Delay potion
