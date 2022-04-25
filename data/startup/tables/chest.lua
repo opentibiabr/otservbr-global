@@ -86,7 +86,8 @@ ChestUnique = {
 		container = 2853,
 		reward = {{2970, 1}, {3598, 20}, {3598, 7}},
 		weight = 44,
-		storage = Storage.Quest.Key.ID3801
+		storage = Storage.Quest.Key.ID3801,
+		keyAction = Storage.Quest.Key.ID3801
 	},
 	-- Emperor's cookies quest key 2299
 	[5005] = {
@@ -118,7 +119,8 @@ ChestUnique = {
 		container = 2853,
 		reward = {{2970, 1}, {3031, 23}, {3147, 1}, {3298, 4}, {3384, 1}},
 		weight = 80,
-		storage = Storage.Quest.Key.ID4502
+		storage = Storage.Quest.Key.ID4502,
+		keyAction = Storage.Quest.Key.ID4502
 	},
 	[5009] = {
 		isKey = true,

@@ -2778,6 +2778,12 @@
 	<npc centerx="32306" centery="32546" centerz="14" radius="1">
 		<npc name="A Lost Thrower" x="0" y="0" z="14" spawntime="60" />
 	</npc>
+	<npc centerx="33332" centery="32052" centerz="7" radius="5">
+		<npc name="Ghostly Wolf" x="0" y="0" z="14" spawntime="60" />
+	</npc>
+	<npc centerx="33504" centery="32222" centerz="7" radius="5">
+		<npc name="Talila" x="0" y="0" z="14" spawntime="60" />
+	</npc>
 	<npc centerx="32245" centery="32600" centerz="14" radius="1">
 		<npc name="Gnomargery" x="0" y="0" z="14" spawntime="60" />
 	</npc>

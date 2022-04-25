@@ -16,7 +16,7 @@ monster.outfit = {
 monster.health = 33000
 monster.maxHealth = 33000
 monster.race = "blood"
-monster.corpse = 13797
+monster.corpse = 13800
 monster.speed = 560
 monster.manaCost = 0
 
@@ -37,7 +37,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = true,
 	illusionable = false,
 	canPushItems = true,

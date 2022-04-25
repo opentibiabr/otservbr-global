@@ -139,18 +139,6 @@ function playerLogin.onLogin(player)
 	-- EXP Stamina
 	nextUseXpStamina[playerId] = 1
 
-	-- Prey Small Window
-	for slot = CONST_PREY_SLOT_FIRST, CONST_PREY_SLOT_THIRD do
-		player:sendPreyData(slot)
-	end
-
-	-- New prey
-	nextPreyTime[playerId] = {
-		[CONST_PREY_SLOT_FIRST] = 1,
-		[CONST_PREY_SLOT_SECOND] = 1,
-		[CONST_PREY_SLOT_THIRD] = 1
-	}
-
 	if (player:getAccountType() == ACCOUNT_TYPE_TUTOR) then
 	local msg = [[:: Tutor Rules
 		1 *> 3 Warnings you lose the job.

@@ -572,6 +572,10 @@ QuestDoorAction = {
 		itemId = false,
 		itemPos = {{x = 33007, y = 31536, z = 10}}
 	},
+	[Storage.TibiaTales.AritosTaskDoor] = {
+		itemId = false,
+		itemPos = {{x = 33247, y = 32534, z = 8}}
+	},
 	-- THe shattered isles door
 	[Storage.TheShatteredIsles.TortoiseEggNargorDoor] = {
 		itemId = false,

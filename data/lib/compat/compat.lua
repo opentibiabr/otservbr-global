@@ -723,14 +723,6 @@ function getTileHouseInfo(pos)
 	return h and h:getId() or false
 end
 
-function getTilePzInfo(position)
-	local t = Tile(position)
-	if t == nil then
-		return false
-	end
-	return t:hasFlag(TILESTATE_PROTECTIONZONE)
-end
-
 function getTileInfo(position)
 	local t = Tile(position)
 	if t == nil then
@@ -879,35 +871,6 @@ function getThingfromPos(pos)
 		thing = tile:getThing(stackpos)
 	end
 	return pushThing(thing)
-end
-
-function doRelocate(fromPos, toPos)
-	if fromPos == toPos then
-		return false
-	end
-
-	local fromTile = Tile(fromPos)
-	if fromTile == nil then
-		return false
-	end
-
-	if Tile(toPos) == nil then
-		return false
-	end
-
-	for i = fromTile:getThingCount() - 1, 0, -1 do
-		local thing = fromTile:getThing(i)
-		if thing then
-			if thing:isItem() then
-				if ItemType(thing:getId()):isMovable() then
-					thing:moveTo(toPos)
-				end
-			elseif thing:isCreature() then
-				thing:teleportTo(toPos)
-			end
-		end
-	end
-	return true
 end
 
 function getThing(uid)

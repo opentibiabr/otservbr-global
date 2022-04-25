@@ -1,6 +1,6 @@
 local childrenGrease = Action()
 function childrenGrease.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if target.actionid ~= 1051 then
+	if target.actionid ~= 8013 then
 		return false
 	end
 
