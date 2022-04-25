@@ -138,7 +138,7 @@ npcConfig.shop = {
 	{ itemName = "torch", clientId = 2920, buy = 2 },
 	{ itemName = "valentine's card", clientId = 6538, buy = 30 },
 	{ itemName = "vial", clientId = 2874, sell = 5 },
-	{ itemName = "vial of oil", clientId = 2874, buy = 20, count = 11 },
+	{ itemName = "vial of oil", clientId = 2874, buy = 20, count = 7 },
 	{ itemName = "wall mirror", clientId = 2638, buy = 40 },
 	{ itemName = "watch", clientId = 6092, buy = 20 },
 	{ itemName = "water pipe", clientId = 2974, buy = 40 },
