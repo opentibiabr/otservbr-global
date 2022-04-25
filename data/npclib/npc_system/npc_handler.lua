@@ -604,7 +604,7 @@ if NpcHandler == nil then
 		end
 
 		stopEvent(self.eventSay[playerId])
-		self.eventSay[playerId] = addEvent(SayEvent, self.talkDelayTime * 1000, npc:getId(), player:getId(), message, self)
+		self.eventSay[playerId] = addEvent(SayEvent, self.talkDelayTimeForOutgoingMessages * 1000, npc:getId(), player:getId(), message, self)
 	end
 
 	-- sendMessages(msg, messagesTable, npc, player, useDelay(true or false), delay)
