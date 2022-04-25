@@ -32,10 +32,10 @@ loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
-motd = "Bem vindo ao OTServBR-Global!"
+motd = "Welcome to the Canary Global!"
 onePlayerOnlinePerAccount = true
 allowClones = false
-serverName = "OTServBR-Global"
+serverName = "Canary"
 statusTimeout = 5 * 1000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 25
@@ -120,8 +120,8 @@ pushDistanceDelay = 1500
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
 -- NOTE: unzip the map world.rar
-mapName = "otservbr"
-mapAuthor = "OTServBR"
+mapName = "canary"
+mapAuthor = "OpenTibiaBR"
 
 -- Party List limitations
 -- max distance in which players in party list are visible
@@ -131,8 +131,8 @@ partyListMaxDistance = 30
 -- Custom Map
 -- NOTE: mapCustomEnabled: true = activate the map, false = disable the map
 toggleMapCustom = true
-mapCustomName = "otservbr-custom"
-mapCustomAuthor = "OTServBR"
+mapCustomName = "canary-custom"
+mapCustomAuthor = "OpenTibiaBR"
 
 -- Market
 marketOfferDuration = 30 * 24 * 60 * 60
@@ -144,7 +144,7 @@ maxMarketOffersAtATimePerPlayer = 100
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
-mysqlDatabase = "otservbr-global"
+mysqlDatabase = "canary"
 mysqlPort = 3306
 mysqlSock = ""
 
@@ -161,13 +161,14 @@ coinImagesURL = "http://127.0.0.1/images/store/"
 classicAttackSpeed = false
 showScriptsLogInConsole = false
 
--- Server Save
--- NOTE: serverSaveNotifyDuration in minutes
-serverSaveNotifyMessage = true
-serverSaveNotifyDuration = 5
-serverSaveCleanMap = false
-serverSaveClose = false
-serverSaveShutdown = true
+-- Global server Save
+-- NOTE: globalServerSaveNotifyDuration in minutes
+globalServerSaveNotifyMessage = true
+globalServerSaveNotifyDuration = 5
+globalServerSaveCleanMap = false
+globalServerSaveClose = false
+globalServerSaveShutdown = true
+globalServerSaveTime = "06:00:00"
 
 -- Sort loot by chance, most rare items drop first
 -- it is good to be setted when you have a higher
@@ -223,9 +224,9 @@ defaultPriority = "high"
 startupDatabaseOptimization = true
 
 -- Status server information
-ownerName = "OTServBR-Global"
-ownerEmail = ""
-url = "https://github.com/opentibiabr/otservbr-global"
+ownerName = "OpenTibiaBR"
+ownerEmail = "opentibiabr@outlook.com"
+url = "soruce code: https://github.com/opentibiabr/canary, datapack global: https://github.com/opentibiabr/canary"
 location = "South America"
 
 -- Sends Discord webhook notifications on startup, raids and shutdown.
