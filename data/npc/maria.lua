@@ -60,9 +60,9 @@ npcConfig.shop = {
 	{ itemName = "ham", clientId = 3582, buy = 8 },
 	{ itemName = "meat", clientId = 3577, buy = 5 },
 	{ itemName = "mug of beer", clientId = 2880, buy = 2, count = 3 },
-	{ itemName = "mug of lemonade", clientId = 2880, buy = 2, count = 5 },
+	{ itemName = "mug of lemonade", clientId = 2880, buy = 2, count = 12 },
 	{ itemName = "mug of water", clientId = 2880, buy = 1, count = 1 },
-	{ itemName = "mug of wine", clientId = 2880, buy = 3, count = 15 },
+	{ itemName = "mug of wine", clientId = 2880, buy = 3, count = 2 },
 	{ itemName = "tomato", clientId = 3596, buy = 5 },
 	{ itemName = "valentine's cake", clientId = 6392, buy = 100 }
 }

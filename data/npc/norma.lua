@@ -205,9 +205,9 @@ npcConfig.shop = {
 	{ itemName = "cheese", clientId = 3607, buy = 5 },
 	{ itemName = "egg", clientId = 3606, buy = 2 },
 	{ itemName = "mug of beer", clientId = 2880, buy = 3, count = 3 },
-	{ itemName = "mug of lemonade", clientId = 2880, buy = 2, count = 5 },
+	{ itemName = "mug of lemonade", clientId = 2880, buy = 2, count = 12 },
 	{ itemName = "mug of milk", clientId = 2880, buy = 2, count = 6 },
-	{ itemName = "mug of wine", clientId = 2880, buy = 3, count = 15 },
+	{ itemName = "mug of wine", clientId = 2880, buy = 3, count = 2 },
 	{ itemName = "party cake", clientId = 6279, buy = 50 }
 }
 -- On buy npc shop message
