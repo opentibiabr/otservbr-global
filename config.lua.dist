@@ -265,7 +265,7 @@ startupDatabaseOptimization = true
 -- Status server information
 ownerName = "OpenTibiaBR"
 ownerEmail = "opentibiabr@outlook.com"
-url = "soruce code: https://github.com/opentibiabr/canary/, datapack global: https://github.com/opentibiabr/otservbr-global"
+url = "http://docs.opentibiabr.org/"
 location = "South America"
 
 -- Sends Discord webhook notifications on startup, raids and shutdown.
