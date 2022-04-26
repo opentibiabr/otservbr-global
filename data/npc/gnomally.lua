@@ -24,12 +24,12 @@ npcConfig.flags = {
 }
 
 npcConfig.shop = {
-	{ itemName = "bell", clientId = 18343, buy = 50 },
-	{ itemName = "gnomish crystal package", clientId = 18313, buy = 1000 },
-	{ itemName = "gnomish extraction crystal", clientId = 18213, buy = 50 },
-	{ itemName = "gnomish repair crystal", clientId = 18219, buy = 50 },
-	{ itemName = "gnomish spore gatherer", clientId = 18328, buy = 50 },
-	{ itemName = "little pig", clientId = 18339, buy = 150 }
+	{ itemName = "bell", clientId = 15832, buy = 50 },
+	{ itemName = "gnomish crystal package", clientId = 15802, buy = 1000 },
+	{ itemName = "gnomish extraction crystal", clientId = 15696, buy = 50 },
+	{ itemName = "gnomish repair crystal", clientId = 15703, buy = 50 },
+	{ itemName = "gnomish spore gatherer", clientId = 15821, buy = 50 },
+	{ itemName = "little pig", clientId = 15828, buy = 150 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

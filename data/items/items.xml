@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <items>
 	<!--  Liquids -->
-	<item id="1" name="water" />
-	<item id="2" name="blood" />
+	<!--  Fluid type 0 is same as water (id="1") -->
+	<item id="1" name="water" /> 
+	<item id="2" name="wine" />
 	<item id="3" name="beer" />
-	<item id="4" name="slime" />
-	<item id="5" name="lemonade" />
-	<item id="6" name="milk" />
-	<item id="7" name="manafluid" />
-	<item id="10" name="lifefluid" />
-	<item id="11" name="oil" />
-	<item id="13" name="urine" />
-	<item id="14" name="coconut milk" />
-	<item id="15" name="wine" />
-	<item id="19" name="mud" />
-	<item id="21" name="fruit juice" />
-	<item id="26" name="lava" />
-	<item id="27" name="rum" />
-	<item id="28" name="swamp" />
-	<item id="35" name="tea" />
-	<item id="43" name="mead" />
+	<item id="4" name="mud" />
+	<item id="5" name="blood" />
+	<item id="6" name="slime" />
+	<item id="7" name="oil" />
+	<item id="8" name="urine" />
+	<item id="9" name="milk" />
+	<item id="10" name="manafluid" />
+	<item id="11" name="lifefluid" />
+	<item id="12" name="lemonade" />
+	<item id="13" name="rum" />
+	<item id="14" name="fruit juice" />
+	<item id="15" name="coconut milk" />
+	<item id="16" name="mead" />
+	<item id="17" name="tea" />
+	<item id="18" name="ink" />
+	<!-- 12.85 last fluid is 18, 19+ is a loop from 0 to 18 over and over again -->
 
 	<item id="100" name="void"/>
 	<item id="101" name="earth"/>
@@ -61,13 +62,8 @@
 	<item id="113" article="the" name="dwarven emperor's beard">
 		<attribute key="weight" value="50"/>
 	</item>
-	<item id="114" article="a" name="bed">
+	<item fromid="114" toid="115" article="a" name="bed">
 		<attribute key="description" value="The dwarven emperor is sleeping there."/>
-	</item>
-	<item id="115" article="a" name="bed">
-		<attribute key="type" value="bed"/>
-		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2494"/>
 	</item>
 	<item id="116" article="a" name="crate">
 		<attribute key="description" value="It contains the daily supply for Xodet's shop."/>
@@ -644,7 +640,7 @@
 	</item>
 	<item id="391" article="a" name="lava hole">
 		<attribute key="description" value="It emits heat and light."/>
-		<attribute key="fluidsource" value="lava"/>
+		<attribute key="fluidsource" value="mud"/>
 	</item>
 	<item fromid="392" toid="393" name="stalagmites"/>
 	<item id="394" article="a" name="hole">
@@ -1178,167 +1174,167 @@
 	<item id="694" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="2487"/>
+		<attribute key="maletransformto" value="2487"/>
 	</item>
 	<item id="695" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="2488"/>
+		<attribute key="maletransformto" value="2488"/>
 	</item>
 	<item id="696" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="2493"/>
+		<attribute key="maletransformto" value="2493"/>
 	</item>
 	<item id="697" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2494"/>
+		<attribute key="maletransformto" value="2494"/>
 	</item>
 	<item id="698" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="2491"/>
+		<attribute key="maletransformto" value="2491"/>
 	</item>
 	<item id="699" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="2492"/>
+		<attribute key="maletransformto" value="2492"/>
 	</item>
 	<item id="700" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="2489"/>
+		<attribute key="maletransformto" value="2489"/>
 	</item>
 	<item id="701" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2490"/>
+		<attribute key="maletransformto" value="2490"/>
 	</item>
 	<item id="702" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="2503"/>
+		<attribute key="maletransformto" value="2503"/>
 	</item>
 	<item id="703" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="2504"/>
+		<attribute key="maletransformto" value="2504"/>
 	</item>
 	<item id="704" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="2505"/>
+		<attribute key="maletransformto" value="2505"/>
 	</item>
 	<item id="705" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2506"/>
+		<attribute key="maletransformto" value="2506"/>
 	</item>
 	<item id="706" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="734"/>
+		<attribute key="maletransformto" value="734"/>
 	</item>
 	<item id="707" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="735"/>
+		<attribute key="maletransformto" value="735"/>
 	</item>
 	<item id="708" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="736"/>
+		<attribute key="maletransformto" value="736"/>
 	</item>
 	<item id="709" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="737"/>
+		<attribute key="maletransformto" value="737"/>
 	</item>
 	<item id="710" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="738"/>
+		<attribute key="maletransformto" value="738"/>
 	</item>
 	<item id="711" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="739"/>
+		<attribute key="maletransformto" value="739"/>
 	</item>
 	<item id="712" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="740"/>
+		<attribute key="maletransformto" value="740"/>
 	</item>
 	<item id="713" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="741"/>
+		<attribute key="maletransformto" value="741"/>
 	</item>
 	<item id="714" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="742"/>
+		<attribute key="maletransformto" value="742"/>
 	</item>
 	<item id="715" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="743"/>
+		<attribute key="maletransformto" value="743"/>
 	</item>
 	<item id="716" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="744"/>
+		<attribute key="maletransformto" value="744"/>
 	</item>
 	<item id="717" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="745"/>
+		<attribute key="maletransformto" value="745"/>
 	</item>
 	<item id="718" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="734"/>
+		<attribute key="maletransformto" value="734"/>
 	</item>
 	<item id="719" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="735"/>
+		<attribute key="maletransformto" value="735"/>
 	</item>
 	<item id="720" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="736"/>
+		<attribute key="maletransformto" value="736"/>
 	</item>
 	<item id="721" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="737"/>
+		<attribute key="maletransformto" value="737"/>
 	</item>
 	<item id="722" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="738"/>
+		<attribute key="maletransformto" value="738"/>
 	</item>
 	<item id="723" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="739"/>
+		<attribute key="maletransformto" value="739"/>
 	</item>
 	<item id="724" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="740"/>
+		<attribute key="maletransformto" value="740"/>
 	</item>
 	<item id="725" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="741"/>
+		<attribute key="maletransformto" value="741"/>
 	</item>
 	<item id="726" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="742"/>
+		<attribute key="maletransformto" value="742"/>
 	</item>
 	<item fromid="727" toid="730" article="a" name="lava">
 		<attribute key="type" value="trashholder"/>
@@ -1348,89 +1344,89 @@
 	<item id="731" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="743"/>
+		<attribute key="maletransformto" value="743"/>
 	</item>
 	<item id="732" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="744"/>
+		<attribute key="maletransformto" value="744"/>
 	</item>
 	<item id="733" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="745"/>
+		<attribute key="maletransformto" value="745"/>
 	</item>
 	<item id="734" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="718"/>
-		<attribute key="malesleeper" value="706"/>
+		<attribute key="femaletransformto" value="718"/>
+		<attribute key="maletransformto" value="706"/>
 	</item>
 	<item id="735" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="719"/>
-		<attribute key="malesleeper" value="707"/>
+		<attribute key="femaletransformto" value="719"/>
+		<attribute key="maletransformto" value="707"/>
 	</item>
 	<item id="736" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="720"/>
-		<attribute key="malesleeper" value="708"/>
+		<attribute key="femaletransformto" value="720"/>
+		<attribute key="maletransformto" value="708"/>
 	</item>
 	<item id="737" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="721"/>
-		<attribute key="malesleeper" value="709"/>
+		<attribute key="femaletransformto" value="721"/>
+		<attribute key="maletransformto" value="709"/>
 	</item>
 	<item id="738" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="722"/>
-		<attribute key="malesleeper" value="710"/>
+		<attribute key="femaletransformto" value="722"/>
+		<attribute key="maletransformto" value="710"/>
 	</item>
 	<item id="739" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="723"/>
-		<attribute key="malesleeper" value="711"/>
+		<attribute key="femaletransformto" value="723"/>
+		<attribute key="maletransformto" value="711"/>
 	</item>
 	<item id="740" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="724"/>
-		<attribute key="malesleeper" value="712"/>
+		<attribute key="femaletransformto" value="724"/>
+		<attribute key="maletransformto" value="712"/>
 	</item>
 	<item id="741" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="725"/>
-		<attribute key="malesleeper" value="713"/>
+		<attribute key="femaletransformto" value="725"/>
+		<attribute key="maletransformto" value="713"/>
 	</item>
 	<item id="742" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="726"/>
-		<attribute key="malesleeper" value="714"/>
+		<attribute key="femaletransformto" value="726"/>
+		<attribute key="maletransformto" value="714"/>
 	</item>
 	<item id="743" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="727"/>
-		<attribute key="malesleeper" value="715"/>
+		<attribute key="femaletransformto" value="727"/>
+		<attribute key="maletransformto" value="715"/>
 	</item>
 	<item id="744" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="728"/>
-		<attribute key="malesleeper" value="716"/>
+		<attribute key="femaletransformto" value="728"/>
+		<attribute key="maletransformto" value="716"/>
 	</item>
 	<item id="745" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="729"/>
-		<attribute key="malesleeper" value="717"/>
+		<attribute key="femaletransformto" value="729"/>
+		<attribute key="maletransformto" value="717"/>
 	</item>
 	<item id="746" article="an" name="obsidian statue"/>
 	<item id="747" article="a" name="dragon statue"/>
@@ -1473,22 +1469,22 @@
 	<item id="764" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="5501"/>
+		<attribute key="maletransformto" value="5501"/>
 	</item>
 	<item id="765" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="5502"/>
+		<attribute key="maletransformto" value="5502"/>
 	</item>
 	<item id="766" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="5499"/>
+		<attribute key="maletransformto" value="5499"/>
 	</item>
 	<item id="767" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="5500"/>
+		<attribute key="maletransformto" value="5500"/>
 	</item>
 	<item id="768" article="a" name="document of the follower">
 		<attribute key="weight" value="200"/>
@@ -3442,55 +3438,55 @@
 	<item id="2487" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="694"/>
-		<attribute key="malesleeper" value="2495"/>
+		<attribute key="femaletransformto" value="694"/>
+		<attribute key="maletransformto" value="2495"/>
 	</item>
 	<item id="2488" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="695"/>
-		<attribute key="malesleeper" value="2496"/>
+		<attribute key="femaletransformto" value="695"/>
+		<attribute key="maletransformto" value="2496"/>
 	</item>
 	<item id="2489" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="700"/>
-		<attribute key="malesleeper" value="2501"/>
+		<attribute key="femaletransformto" value="700"/>
+		<attribute key="maletransformto" value="2501"/>
 	</item>
 	<item id="2490" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="701"/>
-		<attribute key="malesleeper" value="2502"/>
+		<attribute key="femaletransformto" value="701"/>
+		<attribute key="maletransformto" value="2502"/>
 	</item>
 	<item id="2491" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="698"/>
-		<attribute key="malesleeper" value="2499"/>
+		<attribute key="femaletransformto" value="698"/>
+		<attribute key="maletransformto" value="2499"/>
 	</item>
 	<item id="2492" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="699"/>
-		<attribute key="malesleeper" value="2500"/>
+		<attribute key="femaletransformto" value="699"/>
+		<attribute key="maletransformto" value="2500"/>
 	</item>
 	<item id="2493" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="696"/>
-		<attribute key="malesleeper" value="2497"/>
+		<attribute key="femaletransformto" value="696"/>
+		<attribute key="maletransformto" value="2497"/>
 	</item>
 	<item id="2494" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="697"/>
-		<attribute key="malesleeper" value="2498"/>
+		<attribute key="femaletransformto" value="697"/>
+		<attribute key="maletransformto" value="2498"/>
 	</item>
 	<item id="2495" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="2487"/>
+		<attribute key="maletransformto" value="2487"/>
 	</item>
 	<item id="2496" article="a" name="bed">
 		<attribute key="type" value="bed"/>
@@ -3499,72 +3495,72 @@
 	<item id="2497" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="2493"/>
+		<attribute key="maletransformto" value="2493"/>
 	</item>
 	<item id="2498" article="a" name="bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2494"/>
+		<attribute key="maletransformto" value="2494"/>
 	</item>
 	<item id="2499" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="2491"/>
+		<attribute key="maletransformto" value="2491"/>
 	</item>
 	<item id="2500" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="2492"/>
+		<attribute key="maletransformto" value="2492"/>
 	</item>
 	<item id="2501" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="2489"/>
+		<attribute key="maletransformto" value="2489"/>
 	</item>
 	<item id="2502" article="a" name="cot">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2490"/>
+		<attribute key="maletransformto" value="2490"/>
 	</item>
 	<item id="2503" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="2507"/>
+		<attribute key="maletransformto" value="2507"/>
 	</item>
 	<item id="2504" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="2508"/>
+		<attribute key="maletransformto" value="2508"/>
 	</item>
 	<item id="2505" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="2509"/>
+		<attribute key="maletransformto" value="2509"/>
 	</item>
 	<item id="2506" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2510"/>
+		<attribute key="maletransformto" value="2510"/>
 	</item>
 	<item id="2507" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="2503"/>
+		<attribute key="maletransformto" value="2503"/>
 	</item>
 	<item id="2508" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="2504"/>
+		<attribute key="maletransformto" value="2504"/>
 	</item>
 	<item id="2509" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="2505"/>
+		<attribute key="maletransformto" value="2505"/>
 	</item>
 	<item id="2510" article="a" name="hammock">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="2506"/>
+		<attribute key="maletransformto" value="2506"/>
 	</item>
 	<item fromid="2511" toid="2518" article="a" name="grass mat"/>
 	<item id="2519" article="a" name="barrel">
@@ -11523,17 +11519,17 @@
 	<item id="5495" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="5501"/>
+		<attribute key="maletransformto" value="5501"/>
 	</item>
 	<item id="5496" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="5502"/>
+		<attribute key="maletransformto" value="5502"/>
 	</item>
 	<item id="5497" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="5499"/>
+		<attribute key="maletransformto" value="5499"/>
 	</item>
 	<item id="5498" article="a" name="straw mat">
 		<attribute key="description" value="Someone is sleeping there."/>
@@ -11541,23 +11537,23 @@
 	<item id="5499" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="5497"/>
+		<attribute key="maletransformto" value="5497"/>
 	</item>
 	<item id="5500" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="5498"/>
-		<attribute key="malesleeper" value="5498"/>
+		<attribute key="femaletransformto" value="5498"/>
+		<attribute key="maletransformto" value="5498"/>
 	</item>
 	<item id="5501" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="5495"/>
+		<attribute key="maletransformto" value="5495"/>
 	</item>
 	<item id="5502" article="a" name="straw mat">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="5496"/>
+		<attribute key="maletransformto" value="5496"/>
 	</item>
 	<item id="5503" article="a" name="wooden column"/>
 	<item fromid="5504" toid="5511" article="a" name="pulley"/>
@@ -26615,66 +26611,66 @@
 	<item id="15506" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="15514"/>
-		<attribute key="malesleeper" value="15510"/>
+		<attribute key="femaletransformto" value="15514"/>
+		<attribute key="maletransformto" value="15510"/>
 	</item>
 	<item id="15507" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="15515"/>
-		<attribute key="malesleeper" value="15511"/>
+		<attribute key="femaletransformto" value="15515"/>
+		<attribute key="maletransformto" value="15511"/>
 	</item>
 	<item id="15508" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="15516"/>
-		<attribute key="malesleeper" value="15512"/>
+		<attribute key="femaletransformto" value="15516"/>
+		<attribute key="maletransformto" value="15512"/>
 	</item>
 	<item id="15509" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="15517"/>
-		<attribute key="malesleeper" value="15513"/>
+		<attribute key="femaletransformto" value="15517"/>
+		<attribute key="maletransformto" value="15513"/>
 	</item>
 	<item id="15510" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="15506"/>
+		<attribute key="maletransformto" value="15506"/>
 	</item>
 	<item id="15511" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="15507"/>
+		<attribute key="maletransformto" value="15507"/>
 	</item>
 	<item id="15512" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="15508"/>
+		<attribute key="maletransformto" value="15508"/>
 	</item>
 	<item id="15513" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="15509"/>
+		<attribute key="maletransformto" value="15509"/>
 	</item>
 	<item id="15514" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="15506"/>
+		<attribute key="femaletransformto" value="15506"/>
 	</item>
 	<item id="15515" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="15507"/>
+		<attribute key="femaletransformto" value="15507"/>
 	</item>
 	<item id="15516" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="15508"/>
+		<attribute key="femaletransformto" value="15508"/>
 	</item>
 	<item id="15517" article="a" name="simple bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="15509"/>
+		<attribute key="femaletransformto" value="15509"/>
 	</item>
 	<item fromid="15518" toid="15527" article="a" name="cave painting"/>
 	<item fromid="15528" toid="15531" article="a" name="lightsource"/>
@@ -28994,66 +28990,66 @@
 	<item id="17917" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="17925"/>
-		<attribute key="malesleeper" value="17921"/>
+		<attribute key="femaletransformto" value="17925"/>
+		<attribute key="maletransformto" value="17921"/>
 	</item>
 	<item id="17918" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="17926"/>
-		<attribute key="malesleeper" value="17922"/>
+		<attribute key="femaletransformto" value="17926"/>
+		<attribute key="maletransformto" value="17922"/>
 	</item>
 	<item id="17919" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="17927"/>
-		<attribute key="malesleeper" value="17923"/>
+		<attribute key="femaletransformto" value="17927"/>
+		<attribute key="maletransformto" value="17923"/>
 	</item>
 	<item id="17920" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="17928"/>
-		<attribute key="malesleeper" value="17924"/>
+		<attribute key="femaletransformto" value="17928"/>
+		<attribute key="maletransformto" value="17924"/>
 	</item>
 	<item id="17921" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="17917"/>
+		<attribute key="maletransformto" value="17917"/>
 	</item>
 	<item id="17922" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="17918"/>
+		<attribute key="maletransformto" value="17918"/>
 	</item>
 	<item id="17923" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="17919"/>
+		<attribute key="maletransformto" value="17919"/>
 	</item>
 	<item id="17924" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="17920"/>
+		<attribute key="maletransformto" value="17920"/>
 	</item>
 	<item id="17925" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="17917"/>
+		<attribute key="femaletransformto" value="17917"/>
 	</item>
 	<item id="17926" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="17918"/>
+		<attribute key="femaletransformto" value="17918"/>
 	</item>
 	<item id="17927" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="17919"/>
+		<attribute key="femaletransformto" value="17919"/>
 	</item>
 	<item id="17928" article="a" name="canopy bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="17920"/>
+		<attribute key="femaletransformto" value="17920"/>
 	</item>
 	<item fromid="17929" toid="17932" article="a" name="small wooden fence"/>
 	<item fromid="17933" toid="17935" article="a" name="wooden gable"/>
@@ -41772,72 +41768,72 @@
 	<item id="26088" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="26092"/>
+		<attribute key="femaletransformto" value="26092"/>
 	</item>
 	<item id="26089" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="description" value="Somebody is sleeping there"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="26093"/>
-		<attribute key="malesleeper" value="26087"/>
+		<attribute key="femaletransformto" value="26093"/>
+		<attribute key="maletransformto" value="26087"/>
 	</item>
 	<item id="26090" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="26094"/>
+		<attribute key="femaletransformto" value="26094"/>
 	</item>
 	<item id="26091" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="description" value="Somebody is sleeping there"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="26095"/>
-		<attribute key="malesleeper" value="26089"/>
+		<attribute key="femaletransformto" value="26095"/>
+		<attribute key="maletransformto" value="26089"/>
 	</item>
 	<item id="26092" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="malesleeper" value="26088"/>
+		<attribute key="maletransformto" value="26088"/>
 	</item>
 	<item id="26093" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="description" value="Somebody is sleeping there"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="malesleeper" value="26089"/>
+		<attribute key="maletransformto" value="26089"/>
 	</item>
 	<item id="26094" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="malesleeper" value="26090"/>
+		<attribute key="maletransformto" value="26090"/>
 	</item>
 	<item id="26095" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="description" value="Somebody is sleeping there"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="malesleeper" value="26091"/>
+		<attribute key="maletransformto" value="26091"/>
 	</item>
 	<item id="26096" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="south"/>
-		<attribute key="femalesleeper" value="26092"/>
-		<attribute key="malesleeper" value="26088"/>
+		<attribute key="femaletransformto" value="26092"/>
+		<attribute key="maletransformto" value="26088"/>
 	</item>
 	<item id="26097" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="north"/>
-		<attribute key="femalesleeper" value="26093"/>
-		<attribute key="malesleeper" value="26089"/>
+		<attribute key="femaletransformto" value="26093"/>
+		<attribute key="maletransformto" value="26089"/>
 	</item>
 	<item id="26098" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="east"/>
-		<attribute key="femalesleeper" value="26094"/>
-		<attribute key="malesleeper" value="26090"/>
+		<attribute key="femaletransformto" value="26094"/>
+		<attribute key="maletransformto" value="26090"/>
 	</item>
 	<item id="26099" article="a" name="verdant bed">
 		<attribute key="type" value="bed"/>
 		<attribute key="partnerdirection" value="west"/>
-		<attribute key="femalesleeper" value="26095"/>
-		<attribute key="malesleeper" value="26091"/>
+		<attribute key="femaletransformto" value="26095"/>
+		<attribute key="maletransformto" value="26091"/>
 	</item>
 	<item id="26100" article="a" name="bath tub">
 		<attribute key="description" value="A very inviting bath tub filled with water"/>
@@ -43771,26 +43767,26 @@
 	</item>
 	<item fromid="28573" toid="28574" name="unknown item"/>
 	<item id="28575" article="a" name="slain animated feather">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28576" article="a" name="slain animated feather">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28575"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28577" article="a" name="slain animated feather">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28576"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28578" article="a" name="slain animated feather">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28577"/>
 		<attribute key="containersize" value="20"/>
@@ -43821,51 +43817,51 @@
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28583" article="a" name="slain flying book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28584" article="a" name="slain flying book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28583"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28585" article="a" name="slain flying book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28584"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28586" article="a" name="slain flying book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28585"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28587" article="a" name="slain cursed book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28588" article="a" name="slain cursed book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28587"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28589" article="a" name="slain cursed book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28588"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28590" article="a" name="slain cursed book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28589"/>
 		<attribute key="containersize" value="20"/>
@@ -43897,26 +43893,26 @@
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28599" article="a" name="slain ink blob">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28600" article="a" name="slain ink blob">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28599"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28601" article="a" name="slain ink blob">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28600"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28602" article="a" name="slain ink blob">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28601"/>
 		<attribute key="containersize" value="20"/>
@@ -43947,51 +43943,51 @@
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28607" article="a" name="slain biting book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28608" article="a" name="slain biting book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28607"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28609" article="a" name="slain biting book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28608"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28610" article="a" name="slain biting book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28609"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28611" article="a" name="slain librarian">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28612" article="a" name="slain librarian">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28611"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28613" article="a" name="slain librarian">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28612"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28614" article="a" name="slain librarian">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28613"/>
 		<attribute key="containersize" value="20"/>
@@ -44681,27 +44677,27 @@
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28751" article="a" name="dead burning book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28752" article="a" name="dead burning book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28751"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28753" article="a" name="dead burning book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28752"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28754" article="a" name="dead burning book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28753"/>
 		<attribute key="containersize" value="20"/>
@@ -44734,52 +44730,52 @@
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28771" article="a" name="dead icecold book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28772" article="a" name="dead icecold book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28771"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28773" article="a" name="dead icecold book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28772"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28774" article="a" name="dead icecold book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28773"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28775" article="a" name="slain energetic book">
-		<attribute key="corpseType" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="28776" article="a" name="slain energetic book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28775"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="28777" article="a" name="slain energetic book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="28776"/>
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="28778" article="a" name="slain energetic book">
-		<attribute key="corpseType" value="blood"/>
-		<attribute key="fluidsource" value="blood"/>
+		<attribute key="corpseType" value="ink"/>
+		<attribute key="fluidsource" value="ink"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="28777"/>
 		<attribute key="containersize" value="20"/>

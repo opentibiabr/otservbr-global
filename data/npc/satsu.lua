@@ -55,14 +55,14 @@ npcHandler:addModule(FocusModule:new())
 npcConfig.shop = {
 	{ itemName = "cocktail glass", clientId = 9232, sell = 50 },
 	{ itemName = "cocktail glass of beer", clientId = 9232, buy = 52, count = 3 },
-	{ itemName = "cocktail glass of fruit juice", clientId = 9232, buy = 52, count = 21 },
-	{ itemName = "cocktail glass of lemonade", clientId = 9232, buy = 52, count = 5 },
-	{ itemName = "cocktail glass of mead", clientId = 9232, buy = 52, count = 43 },
-	{ itemName = "cocktail glass of milk", clientId = 9232, buy = 52, count = 6 },
-	{ itemName = "cocktail glass of rum", clientId = 9232, buy = 52, count = 27 },
-	{ itemName = "cocktail glass of tea", clientId = 9232, buy = 52, count = 35 },
+	{ itemName = "cocktail glass of fruit juice", clientId = 9232, buy = 52, count = 14 },
+	{ itemName = "cocktail glass of lemonade", clientId = 9232, buy = 52, count = 12 },
+	{ itemName = "cocktail glass of mead", clientId = 9232, buy = 52, count = 16 },
+	{ itemName = "cocktail glass of milk", clientId = 9232, buy = 52, count = 9 },
+	{ itemName = "cocktail glass of rum", clientId = 9232, buy = 52, count = 13 },
+	{ itemName = "cocktail glass of tea", clientId = 9232, buy = 52, count = 17 },
 	{ itemName = "cocktail glass of water", clientId = 9232, buy = 52, count = 1 },
-	{ itemName = "cocktail glass of wine", clientId = 9232, buy = 52, count = 15 }
+	{ itemName = "cocktail glass of wine", clientId = 9232, buy = 52, count = 2 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

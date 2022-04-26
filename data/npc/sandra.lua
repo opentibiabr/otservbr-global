@@ -200,10 +200,10 @@ npcConfig.shop = {
 	{ itemName = "ultimate mana potion", clientId = 23373, buy = 438 },
 	{ itemName = "ultimate spirit potion", clientId = 23374, buy = 438 },
 	{ itemName = "vial", clientId = 2874, sell = 5 },
-	{ itemName = "vial of blood", clientId = 2874, buy = 15, count = 2 },
-	{ itemName = "vial of oil", clientId = 2874, buy = 20, count = 11 },
-	{ itemName = "vial of slime", clientId = 2874, buy = 12, count = 4 },
-	{ itemName = "vial of urine", clientId = 2874, buy = 10, count = 13 },
+	{ itemName = "vial of blood", clientId = 2874, buy = 15, count = 5 },
+	{ itemName = "vial of oil", clientId = 2874, buy = 20, count = 7 },
+	{ itemName = "vial of slime", clientId = 2874, buy = 12, count = 6 },
+	{ itemName = "vial of urine", clientId = 2874, buy = 10, count = 8 },
 	{ itemName = "vial of water", clientId = 2874, buy = 8, count = 1 }
 }
 -- On buy npc shop message
