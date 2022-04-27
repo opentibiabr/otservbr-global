@@ -82,7 +82,7 @@ monster.loot = {
 	{name = "cave turnip", chance = 55000, maxCount = 4},
 	{id = 37531, chance = 5155}, -- candy floss
 	{name = "bottle of champagne", chance = 5155},
-	{name = "mandrake", chance = 50}	
+	{name = "mandrake", chance = 50}
 }
 
 monster.attacks = {
