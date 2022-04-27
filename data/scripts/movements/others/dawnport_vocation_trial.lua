@@ -216,7 +216,7 @@ local function addItems(player, items)
 				if itemType:getWeaponType() == WEAPON_AMMO and isInArray({AMMO_ARROW, AMMO_BOLT}, itemType:getAmmoType()) then
 					local equipment = player:getSlotItem(CONST_SLOT_RIGHT)
 					local equipmentType = ItemType(equipment.itemid)
-					if equipment and equipmentType:getWeaponType() == WEAPON_QUIVER then
+					if equipment and equipmentType:isQuiver() then
 						equipment:addItem(items[i].id, items[i].amount)
 					end
 				else
