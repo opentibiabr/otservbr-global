@@ -1262,6 +1262,7 @@ Storage = {
 		ToAppeaseTheMightyQuest = 51486,
 		IntoTheBonePit = 51487,
 		TheExterminator = 51488,
+		AritosTaskDoor = 51489,
 		RestInHallowedGround = {
 			Questline = 51495,
 			HolyWater = 51496,

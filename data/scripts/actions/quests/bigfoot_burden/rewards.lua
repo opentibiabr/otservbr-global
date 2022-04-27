@@ -1,5 +1,5 @@
 local rewards = {
-	[495] = {
+	[3148] = {
 		storage = Storage.BigfootBurden.Warzone1Reward,
 		bossName = 'Deathstrike',
 		items = {
@@ -12,7 +12,7 @@ local rewards = {
 		},
 		achievement = {'Final Strike', 'Death on Strike'}
 	},
-	[496] = {
+	[3149] = {
 		storage = Storage.BigfootBurden.Warzone2Reward,
 		bossName = 'Gnomevil',
 		items = {
@@ -26,7 +26,7 @@ local rewards = {
 		miniatureHouse = true,
 		achievement = {'Gnomebane\'s Bane', 'Fall of the Fallen'}
 	},
-	[497] = {
+	[3150] = {
 		storage = Storage.BigfootBurden.Warzone3Reward,
 		bossName = 'Abyssador',
 		items = {
