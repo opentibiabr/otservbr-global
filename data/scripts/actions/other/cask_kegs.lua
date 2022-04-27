@@ -39,6 +39,7 @@ function flasks.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
+	-- Check is cask item is in house
 	if not player:getTile():getHouse() and target:getId() >= ITEM_SPIRIT_CASK_START and target:getId() <= ITEM_SPIRIT_CASK_END then
 		return false
 	end
