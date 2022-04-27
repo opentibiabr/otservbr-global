@@ -252,7 +252,7 @@ function flaskPotion.onUse(player, item, fromPosition, target, toPosition, isHot
 		end
 
 		if potion.mana then
-			doTargetCombatMana(player, target, potion.mana[1], potion.mana[2], CONST_ME_MAGIC_BLUE)
+			doTargetCombatMana(0, target, potion.mana[1], potion.mana[2], CONST_ME_MAGIC_BLUE)
 		end
 
 		if potion.combat then

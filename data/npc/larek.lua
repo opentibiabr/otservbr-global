@@ -65,7 +65,7 @@ npcConfig.shop = {
 	{ itemName = "small ruby", clientId = 3030, sell = 250 },
 	{ itemName = "small topaz", clientId = 9057, sell = 200 },
 	{ itemName = "vial", clientId = 2874, buy = 20 },
-	{ itemName = "vial of milk", clientId = 2874, buy = 50, count = 6 },
+	{ itemName = "vial of milk", clientId = 2874, buy = 50, count = 9 },
 	{ itemName = "white pearl", clientId = 3026, sell = 160 }
 }
 -- On buy npc shop message

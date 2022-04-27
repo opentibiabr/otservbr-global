@@ -1,6 +1,9 @@
 ---
 name: Analysis - Review Dog
-on: [pull_request]
+
+on:
+  pull_request:
+
 jobs:
 
   luac:
@@ -24,6 +27,7 @@ jobs:
           luac -v
           reviewdog -reporter=github-pr-review -runners=luac
 
+
   luacheck:
     runs-on: ubuntu-latest
     steps:
@@ -45,6 +49,7 @@ jobs:
           cd $GITHUB_WORKSPACE
           reviewdog -reporter=github-pr-review -runners=luacheck
 
+
   shellcheck:
     runs-on: ubuntu-latest
     steps:
@@ -59,6 +64,7 @@ jobs:
           reporter: github-pr-review
           pattern: '*.sh'
           exclude: './.git/*'
+
 
   xmllint:
     runs-on: ubuntu-latest
@@ -81,6 +87,7 @@ jobs:
           xmllint --version
           reviewdog -reporter=github-pr-review -runners=xmllint
 
+
   yamllint:
     runs-on: ubuntu-latest
     steps:
@@ -94,8 +101,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
 
-      - name: Run yamllint
-        uses: reviewdog/action-yamllint@v1
+
+  hadolint:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out code
+        uses: actions/checkout@master
+
+      - name: hadolint
+        uses: reviewdog/action-hadolint@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review
+          reporter: github-pr-check
