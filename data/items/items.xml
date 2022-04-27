@@ -47072,6 +47072,7 @@
 		<attribute key="decayTo" value="32909"/>
 		<attribute key="wrapableto" value="23398"/>
 	</item>
+	<item id="32913" article="a" name="column of tournament heroes"/>
 	<item id="32914" name="papyrus deed"/>
 	<item id="32915" name="bronze deed"/>
 	<item id="32916" name="silver deed"/>
@@ -49456,6 +49457,10 @@
 		<attribute key="description" value="It is embroidered with the letter E"/>
 		<attribute key="weight" value="50"/>
 	</item>
+	<item id="35502" article="a" name="magic portal">
+		<attribute key="type" value="teleport"/>
+		<attribute key="effect" value="teleport"/>
+	</item>
 	<item id="35508" article="a" name="cheesy key">
 		<attribute key="weight" value="250"/>
 	</item>
@@ -50022,6 +50027,35 @@
 	<item fromid="36078" toid="36083" article="a" name="mosaic">
 		<attribute key="weight" value="1000"/>
 	</item>
+	<item id="36084" article="a" name="sleeping carnisylvan"/>
+	<item fromid="36094" toid="36096" article="a" name="sleeping carnisylvan"/>
+	<item fromid="36276" toid="36293" article="an" name="eldritch floor"/>
+	<item fromid="36344" toid="36362" article="a" name="hardened eldritch floor"/>
+	<item id="36363" article="an" name="eldritch floor"/>
+	<item fromid="36415" toid="36429" article="a" name="wall"/>
+	<item fromid="36430" toid="36434" article="a" name="buttress"/>
+	<item fromid="36435" toid="36439" article="a" name="wall"/>
+	<item id="36440" article="a" name="buttress"/>
+	<item fromid="36441" toid="36442" article="a" name="wall"/>
+	<item id="36443" article="a" name="ramp"/>
+	<item id="36444" article="a" name="ramp">
+		<attribute key="floorchange" value="north"/>
+	</item>
+	<item id="36445" article="a" name="ramp"/>
+	<item id="36446" article="a" name="ramp">
+		<attribute key="floorchange" value="west"/>
+	</item>
+	<item id="36447" article="a" name="ramp"/>
+	<item id="36448" article="a" name="ramp">
+		<attribute key="floorchange" value="east"/>
+	</item>
+	<item id="36449" article="a" name="ramp"/>
+	<item id="36450" article="a" name="ramp">
+		<attribute key="floorchange" value="south"/>
+	</item>
+	<item fromid="36451" toid="36464" article="a" name="wall"/>
+	<item id="36466" article="a" name="buttress"/>
+	<item fromid="36467" toid="36475" article="a" name="wall"/>
 	<item fromid="36478" toid="36481" article="a" name="banor doll">
 		<attribute key="description" value="Imbued with the undying soul of the first human, it bestows the might of the gods to its owner. Awarded by TibiArt.net"/>
 		<attribute key="weight" value="3800"/>
@@ -50540,6 +50574,7 @@
 		<attribute key="decayTo" value="36700"/>
 		<attribute key="containersize" value="30"/>
 	</item>
+	<item fromid="36703" toid="36705" article="a" name="gnomish sanitizer"/>
 	<item id="36706" article="a" name="red gem">
 		<attribute key="weight" value="30"/>
 	</item>
@@ -51388,6 +51423,7 @@
 	<item id="37114" article="an" name="armillary sphere">
 		<attribute key="description" value="It's a sphere with models of the celestial bodies in the sky, used when navigating. TibiaMaps.io have used this sphere on their adventures to explore the Tibian lands"/>
 	</item>
+	<item fromid="37115" toid="37159" article="an" name="exaltation forge"/>
 	<item id="37161" article="a" name="bronze cup" plural="bronze cups"/>
 	<item id="37162" article="a" name="silver cup" plural="silver cups"/>
 	<item id="37163" article="a" name="gold cup" plural="gold cups"/>
@@ -51554,6 +51590,7 @@
 	<item id="37613" name="Morshabaal's brain" />
 	<item id="37614" name="box full of decoration" />
 	<item id="37700" name="kraken watcher lamp"/>
+	<item id="37703" name="iron wall"/>
 	<item id="37708" name="old health potion">
 		<attribute key="description" value="This health potion could not save the poor woman who fell victim to a giant spider on the island of Calcanea" />
 	</item>

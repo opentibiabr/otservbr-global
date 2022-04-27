@@ -384,7 +384,7 @@ Storage = {
 		Life = {
 			Mission = 50245,
 			BossTimer = 50246,
-			AccessDoor = 50247
+			AccessDoor = 50264
 		},
 		Humans = {
 			Mission = 50250,
