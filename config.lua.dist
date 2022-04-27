@@ -32,10 +32,10 @@ loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
-motd = "Bem vindo ao OTServBR-Global!"
+motd = "Welcome to the Canary Global!"
 onePlayerOnlinePerAccount = true
 allowClones = false
-serverName = "OTServBR-Global"
+serverName = "Canary"
 statusTimeout = 5 * 1000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 25
@@ -155,7 +155,7 @@ pushWhenAttacking = false
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
 -- NOTE: unzip the map world.rar
-mapName = "otservbr"
+mapName = "canary"
 mapAuthor = "OpenTibiaBR"
 
 -- Party List limitations
@@ -166,7 +166,7 @@ partyListMaxDistance = 30
 -- Custom Map
 -- NOTE: mapCustomEnabled: true = activate the map, false = disable the map
 toggleMapCustom = true
-mapCustomName = "otservbr-custom"
+mapCustomName = "canary-custom"
 mapCustomAuthor = "OpenTibiaBR"
 
 -- Market
@@ -179,7 +179,7 @@ maxMarketOffersAtATimePerPlayer = 100
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
-mysqlDatabase = "otservbr-global"
+mysqlDatabase = "canary"
 mysqlPort = 3306
 mysqlSock = ""
 passwordType = "sha1"
@@ -261,7 +261,7 @@ startupDatabaseOptimization = true
 -- Status server information
 ownerName = "OpenTibiaBR"
 ownerEmail = "opentibiabr@outlook.com"
-url = "https://github.com/opentibiabr/otservbr-global, source code: https://github.com/opentibiabr/canary"
+url = "http://docs.opentibiabr.org/"
 location = "South America"
 
 -- Sends Discord webhook notifications on startup, raids and shutdown.
