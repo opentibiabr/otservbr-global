@@ -1,18 +1,18 @@
 local targetIdList = {
 	--health potions casks
-	[25879] = {itemId = 285, transform = 266}, -- Health Potion --
-	[25880] = {itemId = 283, transform = 236}, -- Strong Health --
-	[25881] = {itemId = 284, transform = 239}, -- Great Health --
-	[25882] = {itemId = 284, transform = 7643}, -- Ultimate Health --
-	[25883] = {itemId = 284, transform = 23375}, -- Supreme Health --
+	[25879] = {itemId = 285, transform = 266, house = true}, -- Health Potion --
+	[25880] = {itemId = 283, transform = 236, house = true}, -- Strong Health --
+	[25881] = {itemId = 284, transform = 239, house = true}, -- Great Health --
+	[25882] = {itemId = 284, transform = 7643, house = true}, -- Ultimate Health --
+	[25883] = {itemId = 284, transform = 23375, house = true}, -- Supreme Health --
 	--mana potions casks
-	[25889] = {itemId = 285, transform = 268}, -- Mana Potion --
-	[25890] = {itemId = 283, transform = 237}, -- Strong Mana --
-	[25891] = {itemId = 284, transform = 238}, -- Great Mana --
-	[25892] = {itemId = 284, transform = 23373}, -- Ultimate Mana --
+	[25889] = {itemId = 285, transform = 268, house = true}, -- Mana Potion --
+	[25890] = {itemId = 283, transform = 237, house = true}, -- Strong Mana --
+	[25891] = {itemId = 284, transform = 238, house = true}, -- Great Mana --
+	[25892] = {itemId = 284, transform = 23373, house = true}, -- Ultimate Mana --
 	--spirit potions caks
-	[25899] = {itemId = 284, transform = 7642}, -- Great Spirit --
-	[25900] = {itemId = 284, transform = 23374}, --Ultimate Spirit --
+	[25899] = {itemId = 284, transform = 7642, house = true}, -- Great Spirit --
+	[25900] = {itemId = 284, transform = 23374, house = true}, --Ultimate Spirit --
 
 	--health potions kegs
 	[25903] = {itemId = 285, transform = 266}, -- Health Potion --
@@ -39,31 +39,33 @@ function flasks.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	-- Check is cask item is in house
-	if not player:getTile():getHouse() and target:getId() >= ITEM_SPIRIT_CASK_START and target:getId() <= ITEM_SPIRIT_CASK_END then
-		return false
-	end
-
 	local charges = target:getCharges()
 	local itemCount = item:getCount()
-	if itemCount > charges then
-		itemCount = charges
+	local recharged = itemCount
+
+	if recharged > charges then
+		recharged = charges
 	end
 
 	local targetId = targetIdList[target:getId()]
-	if targetId and item:getId() == targetId.itemId and charges > 0 then
-		local potMath = item:getCount() - itemCount
-		local parent = item:getParent()
-		if not (parent:isContainer() and parent:addItem(item:getId(), potMath)) then
-			player:addItem(item:getId(), potMath, true)
+	if targetId and targetId.itemId == item:getId() and charges > 0 then
+		-- Check is cask item is in house
+		if targetId.house and not player:getTile():getHouse() then
+			return false
 		end
 
-		item:transform(targetId.transform, itemCount)
-		charges = charges - itemCount
+		charges = charges - recharged
 		target:transform(target:getId(), charges)
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("Remaining %s charges.", charges))
 		if charges == 0 then
-			target:remove()
+			toPosition:sendMagicEffect(CONST_ME_POFF)
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("No more charges left. Your keg has run dry.", charges))
+		else
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("Remaining %s charges.", charges))
+		end
+
+		player:addItem(targetId.transform, recharged)
+		if itemCount >= recharged then
+			item:transform(targetId.itemId, itemCount - recharged)
 		end
 		return true
 	end
