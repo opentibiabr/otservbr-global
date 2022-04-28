@@ -38,11 +38,11 @@ function flasks.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if not target then
 		return false
 	end
-	
+
 	local charges = target:getCharges()
 	local itemCount = item:getCount()
 	local recharged = itemCount
-	
+
 	if recharged > charges then
 		recharged = charges
 	end
@@ -62,7 +62,7 @@ function flasks.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		else
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, string.format("Remaining %s charges.", charges))
 		end
-		
+
 		player:addItem(targetId.transform, recharged)
 		if itemCount >= recharged then
 			item:transform(targetId.itemId, itemCount - recharged)
