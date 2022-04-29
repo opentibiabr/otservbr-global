@@ -83,14 +83,14 @@ monster.loot = {
 	{name = "gold coin", chance = 32000, maxCount = 41},
 	{name = "stone skin amulet", chance = 980},
 	{name = "protection amulet", chance = 1580},
-	{id = 3097, chance = 2790}, -- Dwarven ring
+	{id = 3097, chance = 2790}, -- dwarven ring
 	{name = "diamond sceptre", chance = 150},
 	{name = "terra amulet", chance = 500},
-	{id = 8895, chance = 3300},
+	{id = 8895, chance = 3300}, -- rusted armor
 	{name = "small topaz", chance = 5280, maxCount = 2},
 	{name = "lump of earth", chance = 40680},
 	{name = "clay lump", chance = 480},
-	{id = 12600, chance = 430}
+	{id = 12600, chance = 430} -- coal
 }
 
 monster.attacks = {

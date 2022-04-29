@@ -84,11 +84,11 @@ monster.loot = {
 	{name = "blank rune", chance = 10000},
 	{name = "strong mana potion", chance = 1910},
 	{name = "earth arrow", chance = 20160, maxCount = 30},
-	{id = 8894, chance = 350},
+	{id = 8894, chance = 350}, -- heavily rusted armor
 	{name = "small topaz", chance = 620},
 	{name = "lump of earth", chance = 20460},
 	{name = "clay lump", chance = 570},
-	{id = 12600, chance = 470}
+	{id = 12600, chance = 470} -- coal
 }
 
 monster.attacks = {
