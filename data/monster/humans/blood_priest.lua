@@ -88,7 +88,7 @@ monster.loot = {
 	{name = "spellbook of mind control", chance = 180},
 	{name = "underworld rod", chance = 470},
 	{name = "book of necromantic rituals", chance = 13550},
-	{id= 3039, chance = 880},
+	{id= 3039, chance = 880}, -- red gem
 	{name = "lancet", chance = 14410},
 	{name = "horoscope", chance = 9270},
 	{name = "blood tincture in a vial", chance = 14460},
