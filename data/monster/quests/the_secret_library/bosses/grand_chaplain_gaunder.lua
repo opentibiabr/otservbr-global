@@ -67,7 +67,7 @@ monster.loot = {
 	{name = "small emerald", chance = 30000, maxCount = 3},
 	{name = "small enchanted amethyst", chance = 20000, maxCount = 3},
 	{name = "damaged armor plates", chance = 2350, maxCount = 3},
-	{id = 281, chance = 12000, maxCount = 1}, -- giant shimmering pearl
+	{id = 281, chance = 12000, maxCount = 1}, -- giant shimmering pearl (green)
 	{name = "knight armor", chance = 7000},
 	{name = "patch of fine cloth", chance = 1800},
 	{name = "spiked squelcher", chance = 3200},
