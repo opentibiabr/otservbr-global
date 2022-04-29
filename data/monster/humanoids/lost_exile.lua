@@ -83,7 +83,7 @@ monster.loot = {
 	{name = "strong health potion", chance = 10950, maxCount = 2},
 	{name = "great mana potion", chance = 8330, maxCount = 2},
 	{name = "brown mushroom", chance = 16900, maxCount = 2},
-	{id = 12600, chance = 13100},
+	{id = 12600, chance = 13100}, -- coal
 	{name = "holy ash", chance = 13100},
 	{name = "small topaz", chance = 10240},
 	{name = "lost husher's staff", chance = 6900},
@@ -94,7 +94,7 @@ monster.loot = {
 	{name = "bonecarving knife", chance = 8100},
 	{name = "basalt figurine", chance = 8100},
 	{name = "bone fetish", chance = 8881},
-	{id = 3097, chance = 1043}, -- Dwarven ring
+	{id = 3097, chance = 1043}, -- dwarven ring
 	{name = "guardian shield", chance = 1430},
 	{name = "buckle", chance = 1900},
 	{name = "clay lump", chance = 710},
