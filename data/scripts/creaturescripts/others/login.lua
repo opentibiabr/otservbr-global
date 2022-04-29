@@ -136,10 +136,10 @@ function playerLogin.onLogin(player)
 
 	if SCHEDULE_EXP_RATE ~= 100 then
 		if SCHEDULE_EXP_RATE > 100 then
-			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Exp Rate Event! Monsters exp at a faster rate \
+			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Exp Rate Event! Monsters yield more experience points than usual \
 			Happy Hunting!")
 		else
-			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Exp Rate Decreased! Monsters exp at a slower rate.")
+			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Exp Rate Decreased! Monsters yield less experience points than usual.")
 		end
 	end
 
@@ -154,10 +154,19 @@ function playerLogin.onLogin(player)
 
 	if SCHEDULE_LOOT_RATE ~= 100 then
 		if SCHEDULE_LOOT_RATE > 100 then
-			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Loot Rate Event! Monsters looted at a faster rate \
+			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Loot Rate Event! Monsters carry more loot than usual \
 			Happy Hunting!")
 		else
-			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Loot Rate Decreased! looted looted at a slower rate.")
+			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Loot Rate Decreased! Monsters carry less loot than usual.")
+		end
+	end
+
+	if SCHEDULE_SKILL_RATE ~= 100 then
+		if SCHEDULE_SKILL_RATE > 100 then
+			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Skill Rate Event! Your skills progresses at a higher rate \
+			Happy Hunting!")
+		else
+			player:sendTextMessage(MESSAGE_BOOSTED_CREATURE, "Skill Rate Decreased! Your skills progresses at a lower rate.")
 		end
 	end
 
