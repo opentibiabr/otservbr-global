@@ -384,7 +384,7 @@ Storage = {
 		Life = {
 			Mission = 50245,
 			BossTimer = 50246,
-			AccessDoor = 50247
+			AccessDoor = 50264
 		},
 		Humans = {
 			Mission = 50250,
@@ -1262,6 +1262,7 @@ Storage = {
 		ToAppeaseTheMightyQuest = 51486,
 		IntoTheBonePit = 51487,
 		TheExterminator = 51488,
+		AritosTaskDoor = 51489,
 		RestInHallowedGround = {
 			Questline = 51495,
 			HolyWater = 51496,

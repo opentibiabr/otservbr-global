@@ -3,9 +3,9 @@ local UniqueTable = {
 	[14029] = {
 		-- Uzgod's Family Brooch
 		rewardItemId = 4834,
-		storageMission = Storage.ExplorerSociety.TheBonelordSecret,
-		storageMissionValue = 31,
-		storageQuestlineValue = 30
+		storageMission = Storage.ExplorerSociety.JoiningTheExplorers,
+		storageMissionValue = 3,
+		storageQuestlineValue = 3
 	},
 	[14030] = {
 		-- Wrinkled parchment

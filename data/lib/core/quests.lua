@@ -3987,62 +3987,67 @@ if not Quests then
 					storageId = Storage.ExplorerSociety.JoiningTheExplorers,
 					missionId = 11296,
 					startValue = 1,
-					endValue = 4,
+					endValue = 5,
 					states = {
 						[1] = "The mission should be simple to fulfil. You have to seek out Uzgod in \z
 							Kazordoon and get the pickaxe for us. Or just find dwarven pickaxe on your own...",
-						[2] = "Get into Dwacatra and bring family brooch back to Uzgod.",
-						[3] = "Bring the pickaxe back to the Explorer Society representative."
+						[2] = "Get into Dwacatra and get Uzgod's family brooch.",
+						[3] = "Bring family brooch back to Uzgod",
+						[4] = "Bring the pickaxe back to the Explorer Society representative.",
+						[5] = "You have completed Joining the Explorers"
 					}
 				},
 				[2] = {
 					name = "The Ice Delivery",
 					storageId = Storage.ExplorerSociety.TheIceDelivery,
 					missionId = 11297,
-					startValue = 5,
-					endValue = 7,
+					startValue = 6,
+					endValue = 8,
 					states = {
-						[5] = "Take this ice pick and use it on a block of ice in the caves beneath Folda. \z
+						[6] = "Take this ice pick and use it on a block of ice in the caves beneath Folda. \z
 							Get some ice and bring it here as fast as you can. \z
 							If the ice melt away, report on your ice delivery mission anyway.",
-						[6] = "You have 10 minutes before the icicle defrosts. Run back to the Explorer Society representative!"
+						[7] = "You have 10 minutes before the icicle defrosts. Run back to the Explorer Society representative!",
+						[8] = "You have completed The Ice Delivery."
 					}
 				},
 				[3] = {
 					name = "The Butterfly Hunt",
 					storageId = Storage.ExplorerSociety.TheButterflyHunt,
 					missionId = 11298,
-					startValue = 8,
-					endValue = 16,
+					startValue = 9,
+					endValue = 17,
 					states = {
-						[8] = "This preparation kit will allow you to collect a PURPLE butterfly you have killed. \z
+						[9] = "This preparation kit will allow you to collect a PURPLE butterfly you have killed. \z
 							Just use it on the fresh corpse of a PURPLE butterfly.",
-						[9] = "Return the prepared butterfly to Explorer Society representative.",
-						[10] = "Ask for another butterfly hunt.",
-						[11] = "This preparation kit will allow you to collect a BLUE butterfly you have killed. \z
+						[10] = "Return the prepared butterfly to Explorer Society representative.",
+						[11] = "Ask for another butterfly hunt.",
+						[12] = "This preparation kit will allow you to collect a BLUE butterfly you have killed. \z
 							Just use it on the fresh corpse of a BLUE butterfly.",
-						[12] = "Return the prepared butterfly to Explorer Society representative.",
-						[13] = "Ask for another butterfly hunt.",
-						[14] = "This preparation kit will allow you to collect a RED butterfly you have killed. \z
+						[13] = "Return the prepared butterfly to Explorer Society representative.",
+						[14] = "Ask for another butterfly hunt.",
+						[15] = "This preparation kit will allow you to collect a RED butterfly you have killed. \z
 							Just use it on the fresh corpse of a RED butterfly.",
-						[15] = "Return the prepared butterfly to Explorer Society representative."
+						[16] = "Return the prepared butterfly to Explorer Society representative.",
+						[17] = "You have completed The Butterfly Hunt."
 					}
 				},
 				[4] = {
 					name = "The Plant Collection",
 					storageId = Storage.ExplorerSociety.ThePlantCollection,
 					missionId = 11299,
-					startValue = 17,
+					startValue = 18,
 					endValue = 26,
 					states = {
-						[17] = "Take botanist\'s container. Use it on a jungle bells plant to collect a sample.",
-						[18] = "Report about your plant collection to Explorer Society representative.",
-						[19] = "Ask for plant collection when you are ready to continue.",
-						[20] = "Use botanist\'s container on a witches cauldron to collect a sample.",
-						[21] = "Report about your plant collection to Explorer Society representative.",
-						[22] = "Ask for plant collection when you are ready to continue.",
-						[23] = "Use this botanist\'s container on a giant jungle rose to obtain a sample.",
-						[24] = "Report about your plant collection to Explorer Society representative."
+						[18] = "Take botanist\'s container. Use it on a jungle bells plant to collect a sample.",
+						[19] = "Report about your plant collection to Explorer Society representative.",
+						[20] = "Ask for plant collection when you are ready to continue.",
+						[21] = "Use botanist\'s container on a witches cauldron to collect a sample.",
+						[22] = "Report about your plant collection to Explorer Society representative.",
+						[23] = "Ask for plant collection when you are ready to continue.",
+						[24] = "Use this botanist\'s container on a giant jungle rose to obtain a sample.",
+						[25] = "Report about your plant collection to Explorer Society representative.",
+						[26] = "You have completed The Plant Collection."
 					}
 				},
 				[5] = {
@@ -4055,7 +4060,8 @@ if not Quests then
 						[27] = "In the south-east of Tiquanda is a small settlement of the lizard people. \z
 							Beneath the newly constructed temple there, the lizards hide the urn. \z
 							Acquire an ancient urn which is some sort of relic to the lizard people of Tiquanda.",
-						[28] = "Bring the Funeral Urn back to the Explorer Society."
+						[28] = "Bring the Funeral Urn back to the Explorer Society.",
+						[29] = "You have completed The Lizard Urn."
 					}
 				},
 				[6] = {
@@ -4067,7 +4073,8 @@ if not Quests then
 					states = {
 						[30] = "Travel to the city of Darashia and then head north-east for the pyramid. \z
 								If any documents are left, you probably find them in the catacombs beneath.",
-						[31] = "Bring the Wrinkled Parchment back to the Explorer Society representative."
+						[31] = "Bring the Wrinkled Parchment back to the Explorer Society representative.",
+						[32] = "You have completed The Bonelord Secret."
 					}
 				},
 				[7] = {
@@ -4080,7 +4087,8 @@ if not Quests then
 						[33] = "As far as we can tell, the orcs maintain some sort of training facility \z
 							in some hill in the north-east of their city. \z
 							There you should find lots of their war wolves and hopefully also some of the orcish powder.",
-						[34] = "Bring the Strange Powder to the Explorer Society representative to complete your mission."
+						[34] = "Bring the Strange Powder to the Explorer Society representative to complete your mission.",
+						[35] = "You have completed The Orc Powder."
 					}
 				},
 				[8] = {
@@ -4091,7 +4099,8 @@ if not Quests then
 					endValue = 38,
 					states = {
 						[36] = "This mission is easy but nonetheless vital. Travel Hellgate beneath Ab'Dendriel and get the book.",
-						[37] = "Bring back an elven poetry book to the Explorer Society representative."
+						[37] = "Bring back an elven poetry book to the Explorer Society representative.",
+						[38] = "You have completed The Elven Poetry."
 					}
 				},
 				[9] = {
@@ -4102,7 +4111,8 @@ if not Quests then
 					endValue = 41,
 					states = {
 						[39] = "In the ruins of north-western Edron you should be able to find a memory stone. ",
-						[40] = "Bring back a memory stone to the Explorer Society representative."
+						[40] = "Bring back a memory stone to the Explorer Society representative.",
+						[41] = "You have completed The Memory Stone."
 					}
 				},
 				[10] = {
@@ -4115,7 +4125,8 @@ if not Quests then
 						[42] = "Somewhere under the ape infested city of Banuta, one can find dungeons \z
 							that were once inhabited by lizards. Look there for an atypical structure that \z
 							would rather fit to Ankrahmun and its Ankrahmun Tombs. Copy the runes you will find on this structure.",
-						[43] = "Report back to the Explorer Society representative."
+						[43] = "Report back to the Explorer Society representative.",
+						[44] = "You have completed The Rune Writings."
 					}
 				},
 				[11] = {
