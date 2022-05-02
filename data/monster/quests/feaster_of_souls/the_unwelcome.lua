@@ -1,10 +1,10 @@
-local mType = Game.createMonsterType("The Fear Feaster")
+local mType = Game.createMonsterType("The Unwelcome")
 local monster = {}
 
-monster.description = "a fear feaster"
+monster.description = "a unwelcome"
 monster.experience = 30000
 monster.outfit = {
-	lookType = 1276,
+	lookType = 1277,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -16,7 +16,7 @@ monster.outfit = {
 monster.health = 300000
 monster.maxHealth = 300000
 monster.race = "undead"
-monster.corpse = 32737
+monster.corpse = 32741
 monster.speed = 250
 monster.manaCost = 0
 

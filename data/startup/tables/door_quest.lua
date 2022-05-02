@@ -693,6 +693,18 @@ QuestDoorAction = {
 	[Storage.TheRookieGuard.AcademyDoor] = {
 		itemId = false,
 		itemPos = {{x = 32109, y = 32189, z = 8}}
+	},
+	-- The Grave Danger Bosses Access Door
+	[Storage.GraveDanger.BossAccessDoor] = {
+		itemId = false,
+		itemPos = {
+			{x = 32355, y = 32163, z = 11},
+			{x = 33197, y = 31684, z = 7},
+			{x = 33264, y = 31993, z = 7},
+			{x = 33288, y = 32479, z = 9},
+			{x = 32191, y = 31823, z = 8},
+			{x = 32173, y = 31922, z = 8}
+		}
 	}
 }
 

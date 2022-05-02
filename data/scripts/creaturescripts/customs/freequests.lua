@@ -298,7 +298,10 @@ local questTable = {
 	{storage = Storage.ForgottenKnowledge.AccessEarth, storageValue = 1},
 	{storage = Storage.ForgottenKnowledge.AccessFire, storageValue = 1},
 	{storage = Storage.ForgottenKnowledge.AccessIce, storageValue = 1},
-	{storage = Storage.ForgottenKnowledge.AccessGolden, storageValue = 1}
+	{storage = Storage.ForgottenKnowledge.AccessGolden, storageValue = 1},
+	{storage = Storage.Kilmaresh.First.Title, storageValue = 1}, -- Storage incorreto das portas dos falcons!
+	{storage = Storage.GraveDanger.BossAccessDoor, storageValue = 1} -- Storage para liberar acesso das portas da grave danger
+
 }
 
 local function playerFreeQuestStart(playerId, index)

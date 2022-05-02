@@ -1718,6 +1718,25 @@ Storage = {
 		CobraBastion = {
 			Questline = 52311,
 			ScarlettTimer = 52312
+		},
+		BossAccessDoor = 52313,
+		BossTimer = {
+			CountVlarkorthTimer = 52314,
+			LordAzaramTimer = 52315,
+			EarlOsamTimer = 52316,
+			SirBaelocSirNictrosTimer = 52317,
+			DukeKruleTimer = 52318,
+			KingZelos = 52319
+		}
+	},
+
+	-- 53000 - 53004
+	FeasterOfSouls = {
+		BossTimer = {
+			ThePaleWorm = 53000,
+			TheUnwelcome = 53001,
+			TheFearFeaster = 53002,
+			TheDreadMaiden = 53004
 		}
 	},
 	RottinWoodAndMaried = {
