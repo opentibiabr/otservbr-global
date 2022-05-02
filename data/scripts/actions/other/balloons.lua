@@ -40,8 +40,8 @@ function balloons.onUse(player, item, fp, target, toPosition, isHotkey)
 	if not fromPosition:getTile():getHouse() then
 		player:sendTextMessage(MESSAGE_FAILURE, "You may use this only inside a house.")
 	elseif tile:getItemCountById(item.itemid) == 1 then
-		for k,v in pairs(balloonItems) do
-			if tile:getItemCountById(k) > 0 and k ~= item.itemid then
+		for index, value in pairs(balloonItems) do
+			if tile:getItemCountById(index) > 0 and index ~= item.itemid then
 				player:sendCancelMessage(Game.getReturnMessage(RETURNVALUE_NOTPOSSIBLE))
 				return true
 			end

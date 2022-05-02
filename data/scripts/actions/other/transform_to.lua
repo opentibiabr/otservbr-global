@@ -134,6 +134,7 @@ local transformItems = {
 	[33030] = 33049, [33031] = 33030, -- heart lamp (small flower)
 	[33040] = 33042, -- bat
 	[33331] = 33332, [33333] = 33334, -- bard doll
+	[34026] = 34027, -- baby bonelord
 	[34030] = 34031, [34031] = 34030, -- artist shelf
 	[34032] = 34033, [34033] = 34032, -- artist shelf
 	[34034] = 34035, [34035] = 34034, -- artist table
@@ -182,6 +183,11 @@ local transformItems = {
 	[36640] = 36642, [36642] = 36644, -- volcanic shelf
 	[36644] = 36640, [36641] = 36643, -- volcanic shelf
 	[36643] = 36645, [36645] = 36641, -- volcanic shelf
+	[36646] = 36649, [36647] = 36650, -- demon baller
+	[36648] = 36651, [36653] = 36652, -- demon baller
+	[36654] = 36646, -- demon baller
+	[36750] = 36751, [36754] = 36752, -- falcon pet
+	[36756] = 36753, -- falcon pet
 	[36959] = 36960, -- megasylvan plant
 	[36978] = 36979, [36979] = 36978, -- magic hat
 	[36996] = 36997, [36998] = 36999, -- Luna

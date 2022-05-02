@@ -1,33 +1,33 @@
 local carpetItems = {
-	[22737] = 22736, [22736] = 22737, --rift carpet
-	[23537] = 23536, [23536] = 23537, --void carpet
-	[23431] = 23453, [23453] = 23431, --yalahahari carpet
-	[23432] = 23454, [23454] = 23432, --white fur carpet
-	[23433] = 23455, [23455] = 23433, --bamboo mat carpet
-	[23715] = 23707, [23707] = 23715, --crimson carpet
-	[23710] = 23716, [23716] = 23710, --azure carpet
-	[23711] = 23717, [23717] = 23711, --emerald carpet
-	[23712] = 23718, [23718] = 23712, --light parquet carpet
-	[23713] = 23719, [23719] = 23713, --dark parquet carpet
-	[23714] = 23720, [23720] = 23714, --marble floor
-	[24416] = 24424, [24424] = 24416, --flowery carpet
-	[24417] = 24425, [24425] = 24417, --Colourful Carpet
-	[24418] = 24426, [24426] = 24418, --striped carpet
-	[24419] = 24427, [24427] = 24419, --fur carpet
-	[24420] = 24428, [24428] = 24420, --diamond carpet
-	[24421] = 24429, [24429] = 24421, --patterned carpet
-	[24422] = 24430, [24430] = 24422, --night sky carpet
-	[24423] = 24431, [24431] = 24423, --star carpet
-	[26114] = 26115, [26115] = 26114, --verdant carpet
-	[26116] = 26117, [26117] = 26116, --shaggy carpet
-	[26119] = 26118, [26118] = 26119, --mystic carpet
-	[26120] = 26121, [26121] = 26120, --stone tile
-	[26123] = 26122, [26122] = 26123, --wooden plank
-	[26150] = 26151, [26151] = 26150, --wheat carpet
-	[26152] = 26153, [26153] = 26152, --crested carpet
-	[26154] = 26155, [26155] = 26154, --decorated carpet
-	[31466] = 31468, [31468] = 31466, --tournament carpet
-	[31467] = 31469, [31469] = 31467, --sublime tournament carpet
+	[22737] = 22736, [22736] = 22737, -- rift carpet
+	[23537] = 23536, [23536] = 23537, -- void carpet
+	[23431] = 23453, [23453] = 23431, -- yalahahari carpet
+	[23432] = 23454, [23454] = 23432, -- white fur carpet
+	[23433] = 23455, [23455] = 23433, -- bamboo mat carpet
+	[23715] = 23707, [23707] = 23715, -- crimson carpet
+	[23710] = 23716, [23716] = 23710, -- azure carpet
+	[23711] = 23717, [23717] = 23711, -- emerald carpet
+	[23712] = 23718, [23718] = 23712, -- light parquet carpet
+	[23713] = 23719, [23719] = 23713, -- dark parquet carpet
+	[23714] = 23720, [23720] = 23714, -- marble floor
+	[24416] = 24424, [24424] = 24416, -- flowery carpet
+	[24417] = 24425, [24425] = 24417, -- colourful Carpet
+	[24418] = 24426, [24426] = 24418, -- striped carpet
+	[24419] = 24427, [24427] = 24419, -- fur carpet
+	[24420] = 24428, [24428] = 24420, -- diamond carpet
+	[24421] = 24429, [24429] = 24421, -- patterned carpet
+	[24422] = 24430, [24430] = 24422, -- night sky carpet
+	[24423] = 24431, [24431] = 24423, -- star carpet
+	[26114] = 26115, [26115] = 26114, -- verdant carpet
+	[26116] = 26117, [26117] = 26116, -- shaggy carpet
+	[26119] = 26118, [26118] = 26119, -- mystic carpet
+	[26120] = 26121, [26121] = 26120, -- stone tile
+	[26123] = 26122, [26122] = 26123, -- wooden plank
+	[26150] = 26151, [26151] = 26150, -- wheat carpet
+	[26152] = 26153, [26153] = 26152, -- crested carpet
+	[26154] = 26155, [26155] = 26154, -- decorated carpet
+	[31466] = 31468, [31468] = 31466, -- tournament carpet
+	[31467] = 31469, [31469] = 31467, -- sublime tournament carpet
 	[35887] = 35888, [35888] = 35887, -- lilac carpet
 	[35889] = 35890, [35890] = 35889, -- colourful pom-pom carpet
 	[35891] = 35892, [35892] = 35891, -- natural pom-pom carpet
@@ -35,7 +35,7 @@ local carpetItems = {
 	[35895] = 35896, [35896] = 35895, -- midnight panther rug
 	[35897] = 35898, [35898] = 35897, -- moon carpet
 	[35899] = 35900, [35900] = 35899, -- romantic carpet
-	[35941] = 35942, [35942] = 35941, --grandiose carpet
+	[35941] = 35942, [35942] = 35941, -- grandiose carpet
 	[36496] = 36838, [36838] = 36496, -- eldritch carpet
 	[36939] = 36951, [36951] = 36939, -- folded artefact carpet I
 	[36940] = 36939, -- the sylvan sapling carpet

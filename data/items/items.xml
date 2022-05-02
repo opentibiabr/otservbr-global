@@ -48298,12 +48298,12 @@
 	</item>
 	<item id="34027" name="baby bonelord">
 		<attribute key="duration" value="2"/>
-		<attribute key="decayto" value="34026"/>
+		<attribute key="decayto" value="34028"/>
 		<attribute key="wrapableto" value="23398"/>
 	</item>
 	<item id="34028" name="baby bonelord">
 		<attribute key="duration" value="2"/>
-		<attribute key="decayto" value="34026"/>
+		<attribute key="decayto" value="34029"/>
 		<attribute key="wrapableto" value="23398"/>
 	</item>
 	<item id="34029" name="baby bonelord">
@@ -50716,7 +50716,30 @@
 		<attribute key="rotateto" value="36644"/>
 		<attribute key="wrapableto" value="23398"/>
 	</item>
-	<item fromid="36646" toid="36654" article="a" name="demon baller">
+	<item fromid="36646" toid="36648" article="a" name="demon baller">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="36649" article="a" name="demon baller">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="duration" value="2"/>
+		<attribute key="decayto" value="36647"/>
+	</item>
+	<item id="36650" article="a" name="demon baller">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="duration" value="2"/>
+		<attribute key="decayto" value="36648"/>
+	</item>
+	<item id="36651" article="a" name="demon baller">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="duration" value="2"/>
+		<attribute key="decayto" value="36653"/>
+	</item>
+	<item id="36652" article="a" name="demon baller">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="duration" value="2"/>
+		<attribute key="decayto" value="36654"/>
+	</item>
+	<item fromid="36653" toid="36654" article="a" name="demon baller">
 		<attribute key="wrapableto" value="23398"/>
 	</item>
 	<item id="36656" article="a" name="eldritch shield">
@@ -51255,10 +51278,28 @@
 	<item id="36749" article="a" name="many faces trophy">
 		<attribute key="wrapableto" value="23398"/>
 	</item>
-	<item fromid="36750" toid="36754" article="a" name="falcon pet">
+	<item id="36750" article="a" name="falcon pet">
 		<attribute key="wrapableto" value="23398"/>
 	</item>
-	<item id="36756" name="falcon pet">
+	<item id="36751" article="a" name="falcon pet">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="duration" value="4"/>
+		<attribute key="decayTo" value="36756"/>
+	</item>
+	<item id="36752" article="a" name="falcon pet">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="duration" value="4"/>
+		<attribute key="decayTo" value="36750"/>
+	</item>
+	<item id="36753" article="a" name="falcon pet">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="duration" value="4"/>
+		<attribute key="decayTo" value="36754"/>
+	</item>
+	<item id="36754" article="a" name="falcon pet">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="36756" article="a" name="falcon pet">
 		<attribute key="wrapableto" value="23398"/>
 	</item>
 	<item id="36761" article="a" name="dead lavafungus">
