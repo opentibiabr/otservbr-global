@@ -1,5 +1,5 @@
 local config = {
-	[37572] = CONST_ME_GHAZHARAGOTH, -- vessel of Gaz'haragoth
+	[37572] = CONST_ME_GAZHARAGOTH, -- vessel of Gaz'haragoth
 	[37573] = CONST_ME_FERUMBRAS_1, -- vessel of Ferumbras
 	[37574] = CONST_ME_MAD_MAGE, -- vessel of the Mad Mage
 	[37575] = CONST_ME_HORESTIS, -- vessel of Horestis
