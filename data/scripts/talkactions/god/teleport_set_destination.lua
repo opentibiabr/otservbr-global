@@ -11,7 +11,7 @@ function teleportSetDestination.onSay(player, words, param)
 		player:sendCancelMessage("Teleport position required.")
 		return false
 	end
-	
+
 	local position = player:getPosition()
 	position:getNextPosition(player:getDirection(), 1)
 	local tile = Tile(position)
