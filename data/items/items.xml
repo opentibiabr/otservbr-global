@@ -5610,12 +5610,14 @@
 	</item>
 	<item id="3265" article="a" name="two handed sword">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="30"/>
 		<attribute key="defense" value="25"/>
 		<attribute key="weight" value="7000"/>
 	</item>
 	<item id="3266" article="a" name="battle axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="25"/>
 		<attribute key="defense" value="10"/>
 		<attribute key="weight" value="5000"/>
@@ -5634,6 +5636,7 @@
 	</item>
 	<item id="3269" article="a" name="halberd">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="35"/>
 		<attribute key="defense" value="14"/>
 		<attribute key="weight" value="9000"/>
@@ -5681,6 +5684,7 @@
 	</item>
 	<item id="3275" article="a" name="double axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="35"/>
 		<attribute key="defense" value="12"/>
 		<attribute key="weight" value="7000"/>
@@ -5702,12 +5706,14 @@
 	<item id="3278" article="a" name="magic longsword">
 		<attribute key="description" value="It's the magic Cyclopmania Sword"/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="55"/>
 		<attribute key="defense" value="40"/>
 		<attribute key="weight" value="4300"/>
 	</item>
 	<item id="3279" article="a" name="war hammer">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="45"/>
 		<attribute key="defense" value="10"/>
 		<attribute key="weight" value="8500"/>
@@ -5731,6 +5737,7 @@
 	<item id="3281" article="a" name="giant sword">
 		<attribute key="description" value="This sword has been forged by ancient giants"/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="46"/>
 		<attribute key="defense" value="22"/>
 		<attribute key="weight" value="18000"/>
@@ -5801,6 +5808,7 @@
 	</item>
 	<item id="3289" article="a" name="staff">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="10"/>
 		<attribute key="defense" value="25"/>
 		<attribute key="weight" value="3800"/>
@@ -5853,6 +5861,7 @@
 	<item id="3296" article="a" name="warlord sword">
 		<attribute key="description" value="Strong powers flow in this magic sword"/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="53"/>
 		<attribute key="defense" value="38"/>
 		<attribute key="weight" value="6400"/>
@@ -5889,6 +5898,7 @@
 	</item>
 	<item id="3301" article="a" name="broadsword">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="26"/>
 		<attribute key="defense" value="23"/>
 		<attribute key="weight" value="5250"/>
@@ -5903,6 +5913,7 @@
 	<item id="3302" article="a" name="dragon lance">
 		<attribute key="description" value="The extraordinary sharp blade penetrates every armor"/>
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="47"/>
 		<attribute key="defense" value="16"/>
 		<attribute key="weight" value="6700"/>
@@ -5917,6 +5928,7 @@
 	<item id="3303" article="a" name="great axe">
 		<attribute key="description" value="A masterpiece of a dwarven smith"/>
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="52"/>
 		<attribute key="defense" value="22"/>
 		<attribute key="weight" value="9000"/>
@@ -6012,18 +6024,21 @@
 	</item>
 	<item id="3313" article="an" name="obsidian lance">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="34"/>
 		<attribute key="defense" value="10"/>
 		<attribute key="weight" value="8000"/>
 	</item>
 	<item id="3314" article="a" name="naginata">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="39"/>
 		<attribute key="defense" value="25"/>
 		<attribute key="weight" value="7800"/>
 	</item>
 	<item id="3315" article="a" name="guardian halberd">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="46"/>
 		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="11000"/>
@@ -6096,6 +6111,7 @@
 	<item id="3321" article="an" name="enchanted staff">
 		<attribute key="description" value="Temporal magic powers enchant this staff"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="3289"/>
 		<attribute key="attack" value="39"/>
@@ -6164,6 +6180,7 @@
 	</item>
 	<item id="3328" article="a" name="daramian waraxe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="39"/>
 		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="5250"/>
@@ -6182,6 +6199,7 @@
 	</item>
 	<item id="3331" article="a" name="ravager's axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="49"/>
 		<attribute key="defense" value="14"/>
 		<attribute key="weight" value="5250"/>
@@ -6196,6 +6214,7 @@
 	<item id="3332" article="a" name="hammer of wrath">
 		<attribute key="description" value="A giant is said to have forged this hammer to take revenge for the death of his brother"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="48"/>
 		<attribute key="defense" value="12"/>
 		<attribute key="weight" value="7000"/>
@@ -6230,6 +6249,7 @@
 	</item>
 	<item id="3335" article="a" name="twin axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="45"/>
 		<attribute key="defense" value="24"/>
 		<attribute key="weight" value="6400"/>
@@ -6278,6 +6298,7 @@
 	<item id="3340" article="a" name="heavy mace">
 		<attribute key="description" value="Its tip is made of extremely solid steel"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="49"/>
 		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="11000"/>
@@ -6292,6 +6313,7 @@
 	<item id="3341" article="an" name="arcane staff">
 		<attribute key="description" value="It is enchanted with ancient magic that renders a weak staff into a powerful weapon"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="50"/>
 		<attribute key="defense" value="30"/>
 		<attribute key="weight" value="4000"/>
@@ -6305,6 +6327,7 @@
 	</item>
 	<item id="3342" article="a" name="war axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="48"/>
 		<attribute key="defense" value="10"/>
 		<attribute key="weight" value="6150"/>
@@ -6347,6 +6370,7 @@
 	</item>
 	<item id="3346" article="a" name="ripper lance">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="28"/>
 		<attribute key="defense" value="7"/>
 		<attribute key="weight" value="8000"/>
@@ -6368,6 +6392,7 @@
 	</item>
 	<item id="3349" article="a" name="crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="range" value="5"/>
 		<attribute key="weight" value="4000"/>
@@ -6381,6 +6406,7 @@
 	</item>
 	<item id="3350" article="a" name="bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="range" value="6"/>
 		<attribute key="weight" value="3100"/>
@@ -7218,6 +7244,7 @@
 	</item>
 	<item id="3453" article="a" name="scythe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="8"/>
 		<attribute key="defense" value="3"/>
 		<attribute key="weight" value="3000"/>
@@ -11189,6 +11216,7 @@
 	<item id="5803" article="an" name="arbalest">
 		<attribute key="description" value="It is a bit heavy due to the iron mounting, but very precise"/>
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="2"/>
 		<attribute key="range" value="6"/>
@@ -11754,7 +11782,7 @@
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5991" article="a" name="dead sheep">
-		<!-- write sheep -->
+		<!-- white sheep -->
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="4086"/>
@@ -13241,6 +13269,7 @@
 	<item id="6527" article="the" name="avenger">
 		<attribute key="description" value="This holy blade was forged of shattered dreams"/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="50"/>
 		<attribute key="defense" value="38"/>
 		<attribute key="weight" value="6400"/>
@@ -13339,6 +13368,7 @@
 	</item>
 	<item id="6553" article="a" name="ruthless axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="50"/>
 		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="5800"/>
@@ -14311,6 +14341,7 @@
 	<item id="7379" article="a" name="brutetamer's staff">
 		<attribute key="description" value="Barbarian women are said to use it for conjuring beasts"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="35"/>
 		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="3800"/>
@@ -14318,6 +14349,7 @@
 	<item id="7380" article="a" name="headchopper">
 		<attribute key="description" value="This axe is only granted to a greenhorn of the Svargrond arena"/>
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="42"/>
 		<attribute key="defense" value="20"/>
 		<attribute key="weight" value="4500"/>
@@ -14338,6 +14370,7 @@
 	</item>
 	<item id="7382" article="a" name="demonrage sword">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="47"/>
 		<attribute key="defense" value="22"/>
 		<attribute key="weight" value="15000"/>
@@ -14395,6 +14428,7 @@
 	<item id="7386" article="a" name="mercenary sword">
 		<attribute key="description" value="This axe is only granted to a scrapper of the Svargrond arena."/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="43"/>
 		<attribute key="defense" value="27"/>
 		<attribute key="weight" value="6800"/>
@@ -14438,6 +14472,7 @@
 	</item>
 	<item id="7391" article="a" name="thaian sword">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="45"/>
 		<attribute key="defense" value="29"/>
 		<attribute key="weight" value="6100"/>
@@ -14452,6 +14487,7 @@
 	<item id="7392" article="an" name="orcish maul">
 		<attribute key="description" value="This club is only granted to a greenhorn of the Svargrond arena"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="42"/>
 		<attribute key="defense" value="18"/>
 		<attribute key="weight" value="5400"/>
@@ -14492,6 +14528,7 @@
 	</item>
 	<item id="7402" article="a" name="dragon slayer">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="44"/>
 		<attribute key="defense" value="28"/>
 		<attribute key="weight" value="8200"/>
@@ -14505,6 +14542,7 @@
 	</item>
 	<item id="7403" article="a" name="berserker">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="48"/>
 		<attribute key="defense" value="21"/>
 		<attribute key="weight" value="13000"/>
@@ -14532,6 +14570,7 @@
 	</item>
 	<item id="7405" article="a" name="havoc blade">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="49"/>
 		<attribute key="defense" value="34"/>
 		<attribute key="weight" value="7200"/>
@@ -14546,6 +14585,7 @@
 	<item id="7406" article="a" name="blacksteel sword">
 		<attribute key="description" value="This sword is only granted to a greenhorn of the Svargrond arena"/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="42"/>
 		<attribute key="defense" value="22"/>
 		<attribute key="weight" value="5900"/>
@@ -14559,6 +14599,7 @@
 	</item>
 	<item id="7407" article="a" name="haunted blade">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="40"/>
 		<attribute key="defense" value="12"/>
 		<attribute key="weight" value="3100"/>
@@ -14627,6 +14668,7 @@
 	</item>
 	<item id="7413" article="a" name="titan axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="43"/>
 		<attribute key="defense" value="30"/>
 		<attribute key="weight" value="8100"/>
@@ -14634,6 +14676,7 @@
 	<item id="7414" article="an" name="abyss hammer">
 		<attribute key="description" value="Floating stones form the tip of this strange weapon, held in place by unspeakable magic"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="47"/>
 		<attribute key="defense" value="21"/>
 		<attribute key="weight" value="5500"/>
@@ -14745,6 +14788,7 @@
 	</item>
 	<item id="7423" article="a" name="skullcrusher">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="51"/>
 		<attribute key="defense" value="20"/>
 		<attribute key="weight" value="12000"/>
@@ -14758,6 +14802,7 @@
 	</item>
 	<item id="7424" article="a" name="lunar staff">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="40"/>
 		<attribute key="defense" value="25"/>
 		<attribute key="weight" value="3800"/>
@@ -14771,12 +14816,14 @@
 	</item>
 	<item id="7425" article="a" name="taurus mace">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="30"/>
 		<attribute key="defense" value="18"/>
 		<attribute key="weight" value="5100"/>
 	</item>
 	<item id="7426" article="an" name="amber staff">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="43"/>
 		<attribute key="defense" value="25"/>
 		<attribute key="weight" value="3500"/>
@@ -14791,6 +14838,7 @@
 	<item id="7427" article="a" name="chaos mace">
 		<attribute key="description" value="Only those who have descended to the deepest depths may wield this hammer without it cursing them"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="44"/>
 		<attribute key="defense" value="21"/>
 		<attribute key="weight" value="6300"/>
@@ -14798,6 +14846,7 @@
 	<item id="7428" article="a" name="bonebreaker">
 		<attribute key="description" value="This weapon has to be swung in both hands and requires a lot of strength"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="46"/>
 		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="12000"/>
@@ -14890,6 +14939,7 @@
 	</item>
 	<item id="7436" article="an" name="angelic axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="44"/>
 		<attribute key="defense" value="24"/>
 		<attribute key="weight" value="5600"/>
@@ -14911,6 +14961,7 @@
 	<item id="7438" article="an" name="elvish bow">
 		<attribute key="description" value="This beautifully ornamented bow was made by a skilled elvish bowmaker"/>
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="5"/>
 		<attribute key="range" value="6"/>
@@ -14959,12 +15010,14 @@
 	</item>
 	<item id="7449" article="a" name="crystal sword">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="35"/>
 		<attribute key="defense" value="26"/>
 		<attribute key="weight" value="6900"/>
 	</item>
 	<item id="7450" article="a" name="hammer of prophecy">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="52"/>
 		<attribute key="defense" value="35"/>
 		<attribute key="weight" value="11000"/>
@@ -14984,6 +15037,7 @@
 	</item>
 	<item id="7452" article="a" name="spiked squelcher">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="41"/>
 		<attribute key="defense" value="21"/>
 		<attribute key="weight" value="6800"/>
@@ -14997,6 +15051,7 @@
 	</item>
 	<item id="7453" article="an" name="executioner">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="51"/>
 		<attribute key="defense" value="20"/>
 		<attribute key="weight" value="9900"/>
@@ -15010,6 +15065,7 @@
 	</item>
 	<item id="7454" article="a" name="glorious axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="40"/>
 		<attribute key="defense" value="23"/>
 		<attribute key="weight" value="9500"/>
@@ -15697,6 +15753,7 @@
 	</item>
 	<item id="8021" article="a" name="modified crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="1"/>
 		<attribute key="range" value="5"/>
@@ -15711,6 +15768,7 @@
 	</item>
 	<item id="8022" article="a" name="chain bolter">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="range" value="3"/>
 		<attribute key="attack" value="4"/>
@@ -15725,6 +15783,7 @@
 	</item>
 	<item id="8023" article="a" name="royal crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="3"/>
 		<attribute key="range" value="6"/>
@@ -15740,6 +15799,7 @@
 	</item>
 	<item id="8024" article="the" name="devileye">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="-20"/>
 		<attribute key="range" value="6"/>
@@ -15755,6 +15815,7 @@
 	</item>
 	<item id="8025" article="the" name="ironworker">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="range" value="5"/>
 		<attribute key="attack" value="4"/>
@@ -15769,6 +15830,7 @@
 	</item>
 	<item id="8026" article="a" name="warsinger bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="5"/>
 		<attribute key="range" value="7"/>
@@ -15784,6 +15846,7 @@
 	</item>
 	<item id="8027" article="a" name="composite hornbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="2"/>
 		<attribute key="range" value="6"/>
@@ -15799,6 +15862,7 @@
 	</item>
 	<item id="8028" name="Yol's bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="7"/>
 		<attribute key="range" value="7"/>
@@ -15806,6 +15870,7 @@
 	</item>
 	<item id="8029" article="a" name="silkweaver bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="3"/>
 		<attribute key="range" value="6"/>
@@ -15820,6 +15885,7 @@
 	</item>
 	<item id="8030" name="Elethriel's elemental bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="range" value="4"/>
 		<attribute key="attack" value="7"/>
@@ -16223,6 +16289,7 @@
 	</item>
 	<item id="8098" article="a" name="demonwing axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="53"/>
 		<attribute key="defense" value="20"/>
 		<attribute key="weight" value="12000"/>
@@ -16257,6 +16324,7 @@
 	</item>
 	<item id="8101" article="the" name="stomper">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="51"/>
 		<attribute key="defense" value="20"/>
 		<attribute key="weight" value="11500"/>
@@ -16298,6 +16366,7 @@
 	</item>
 	<item id="8104" article="the" name="calamity">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="51"/>
 		<attribute key="defense" value="35"/>
 		<attribute key="weight" value="6800"/>
@@ -18517,6 +18586,7 @@
 	<item id="9378" article="a" name="musician's bow">
 		<attribute key="description" value="If you could only figure out how you are supposed to fire more arrows at once"/>
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="range" value="4"/>
 		<attribute key="weight" value="1250"/>
@@ -18591,6 +18661,7 @@
 	<item id="9384" article="a" name="scythe of the reaper">
 		<attribute key="description" value="This scythe has harvested countless souls and still hungers for more"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="16"/>
 		<attribute key="defense" value="6"/>
 		<attribute key="weight" value="3000"/>
@@ -18605,6 +18676,7 @@
 	<item id="9386" article="a" name="farmer's avenger">
 		<attribute key="description" value="A weapon forged to fight oppression of the poor underdogs"/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="17"/>
 		<attribute key="defense" value="7"/>
 		<attribute key="weight" value="2500"/>
@@ -18640,7 +18712,6 @@
 	<item id="9393" article="a" name="claw of 'The Noxious Spawn'">
 		<attribute key="description" value="It's like a glove and you can't wear a ring on it. You are not sure if you should really put it on." />
 		<attribute key="transformequipto" value="9392"/>
-		<attribute key="slotType" value="ring"/>
 		<attribute key="weight" value="500"/>
 	</item>
 	<item id="9394" article="a" name="claw of 'The Noxious Spawn'">
@@ -20012,6 +20083,7 @@
 	</item>
 	<item id="10388" article="a" name="drakinata">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="47"/>
 		<attribute key="defense" value="20"/>
 		<attribute key="weight" value="5400"/>
@@ -20025,6 +20097,7 @@
 	</item>
 	<item id="10389" article="a" name="sai">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="45"/>
 		<attribute key="defense" value="27"/>
 		<attribute key="weight" value="5000"/>
@@ -20045,12 +20118,14 @@
 	</item>
 	<item id="10391" article="a" name="drachaku">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="46"/>
 		<attribute key="defense" value="25"/>
 		<attribute key="weight" value="6000"/>
 	</item>
 	<item id="10392" article="a" name="twin hooks">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="32"/>
 		<attribute key="defense" value="22"/>
 		<attribute key="weight" value="5000"/>
@@ -20121,6 +20196,7 @@
 	</item>
 	<item id="10406" article="a" name="Zaoan halberd">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="37"/>
 		<attribute key="defense" value="15"/>
 		<attribute key="weight" value="8700"/>
@@ -21314,6 +21390,7 @@
 	</item>
 	<item id="11657" article="a" name="twiceslicer">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="47"/>
 		<attribute key="defense" value="30"/>
 		<attribute key="weight" value="18000"/>
@@ -22756,6 +22833,7 @@
 	</item>
 	<item id="12683" article="a" name="heavy trident">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="35"/>
 		<attribute key="defense" value="17"/>
 		<attribute key="weight" value="9000"/>
@@ -22860,6 +22938,7 @@
 	<item id="12733" article="a" name="shimmer bow">
 		<attribute key="description" value="This bow seems to be alive but keeps perfectly still"/>
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="showduration" value="0"/>
 		<attribute key="hitchance" value="7"/>
@@ -23737,6 +23816,7 @@
 	</item>
 	<item id="13987" article="a" name="deepling staff">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="43"/>
 		<attribute key="defense" value="23"/>
 		<attribute key="weight" value="8800"/>
@@ -24032,6 +24112,7 @@
 	</item>
 	<item id="14043" article="a" name="guardian axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="46"/>
 		<attribute key="defense" value="11"/>
 		<attribute key="weight" value="11000"/>
@@ -24300,6 +24381,7 @@
 	<!-- unconfirmed attributes -->
 	<item id="14246" article="a" name="hive bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="5"/>
 		<attribute key="range" value="6"/>
@@ -24315,6 +24397,7 @@
 	</item>
 	<item id="14247" article="an" name="ornate crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="2"/>
 		<attribute key="range" value="6"/>
@@ -24511,6 +24594,7 @@
 	</item>
 	<item id="14768" article="a" name="thorn spitter">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="1"/>
 		<attribute key="range" value="6"/>
@@ -25657,6 +25741,7 @@
 	</item>
 	<item id="16163" article="a" name="crystal crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="3"/>
 		<attribute key="range" value="6"/>
@@ -25665,6 +25750,7 @@
 	</item>
 	<item id="16164" article="a" name="mycological bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="4"/>
 		<attribute key="range" value="6"/>
@@ -26807,6 +26893,7 @@
 	</item>
 	<item id="17828" article="a" name="pair of iron fists">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="45"/>
 		<attribute key="defense" value="17"/>
 		<attribute key="weight" value="4500"/>
@@ -29793,6 +29880,7 @@
 	<item fromid="19351" toid="19355" name="RESERVED SPRITE"/>
 	<item id="19356" article="a" name="triple bolt crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="hitchance" value="2"/>
@@ -29837,6 +29925,7 @@
 	</item>
 	<item id="19362" article="an" name="icicle bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="hitchance" value="4"/>
@@ -30168,12 +30257,14 @@
 	</item>
 	<item id="20067" article="a" name="crude umbral slayer">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="51"/>
 		<attribute key="defense" value="29"/>
 		<attribute key="weight" value="10000"/>
 	</item>
 	<item id="20068" article="an" name="umbral slayer">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="52"/>
 		<attribute key="defense" value="31"/>
 		<attribute key="weight" value="9500"/>
@@ -30187,6 +30278,7 @@
 	</item>
 	<item id="20069" article="an" name="umbral master slayer">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="skillsword" value="3"/>
 		<attribute key="attack" value="54"/>
 		<attribute key="defense" value="35"/>
@@ -30237,12 +30329,14 @@
 	</item>
 	<item id="20073" article="a" name="crude umbral chopper">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="51"/>
 		<attribute key="defense" value="27"/>
 		<attribute key="weight" value="12000"/>
 	</item>
 	<item id="20074" article="an" name="umbral chopper">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="52"/>
 		<attribute key="defense" value="30"/>
 		<attribute key="weight" value="11500"/>
@@ -30256,6 +30350,7 @@
 	</item>
 	<item id="20075" article="an" name="umbral master chopper">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="skillaxe" value="3"/>
 		<attribute key="attack" value="54"/>
 		<attribute key="defense" value="34"/>
@@ -30306,12 +30401,14 @@
 	</item>
 	<item id="20079" article="a" name="crude umbral hammer">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="51"/>
 		<attribute key="defense" value="27"/>
 		<attribute key="weight" value="17000"/>
 	</item>
 	<item id="20080" article="an" name="umbral hammer">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="53"/>
 		<attribute key="defense" value="30"/>
 		<attribute key="weight" value="16500"/>
@@ -30325,6 +30422,7 @@
 	</item>
 	<item id="20081" article="an" name="umbral master hammer">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="skillclub" value="3"/>
 		<attribute key="attack" value="55"/>
 		<attribute key="defense" value="34"/>
@@ -30339,6 +30437,7 @@
 	</item>
 	<item id="20082" article="a" name="crude umbral bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="5"/>
 		<attribute key="range" value="7"/>
@@ -30347,6 +30446,7 @@
 	</item>
 	<item id="20083" article="an" name="umbral bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="5"/>
 		<attribute key="range" value="7"/>
@@ -30362,6 +30462,7 @@
 	</item>
 	<item id="20084" article="an" name="umbral master bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="skilldist" value="3"/>
 		<attribute key="hitchance" value="5"/>
@@ -30378,6 +30479,7 @@
 	</item>
 	<item id="20085" article="a" name="crude umbral crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="1"/>
 		<attribute key="range" value="5"/>
@@ -30386,6 +30488,7 @@
 	</item>
 	<item id="20086" article="an" name="umbral crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="2"/>
 		<attribute key="range" value="5"/>
@@ -30401,6 +30504,7 @@
 	</item>
 	<item id="20087" article="an" name="umbral master crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="skilldist" value="3"/>
 		<attribute key="hitchance" value="4"/>
@@ -31719,6 +31823,7 @@
 	</item>
 	<item id="21173" article="a" name="moohtant cudgel">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="47"/>
 		<attribute key="defense" value="21"/>
 		<attribute key="weight" value="8500"/>
@@ -31736,6 +31841,7 @@
 	</item>
 	<item id="21176" article="an" name="execowtioner axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="46"/>
 		<attribute key="defense" value="18"/>
 		<attribute key="weight" value="8200"/>
@@ -31749,6 +31855,7 @@
 	</item>
 	<item id="21178" article="a" name="glooth club">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementearth" value="26"/>
 		<attribute key="charges" value="2"/>
 		<attribute key="attack" value="39"/>
@@ -31757,6 +31864,7 @@
 	</item>
 	<item id="21179" article="a" name="glooth blade">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementearth" value="26"/>
 		<attribute key="charges" value="2"/>
 		<attribute key="attack" value="39"/>
@@ -31765,6 +31873,7 @@
 	</item>
 	<item id="21180" article="a" name="glooth axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementearth" value="26"/>
 		<attribute key="charges" value="2"/>
 		<attribute key="attack" value="39"/>
@@ -31885,6 +31994,7 @@
 	</item>
 	<item id="21219" article="an" name="one hit wonder">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="49"/>
 		<attribute key="defense" value="22"/>
 		<attribute key="weight" value="9600"/>
@@ -33687,12 +33797,14 @@
 	</item>
 	<item id="22171" article="an" name="ogre klubba">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="45"/>
 		<attribute key="defense" value="25"/>
 		<attribute key="weight" value="7900"/>
 	</item>
 	<item id="22172" article="an" name="ogre choppa">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="39"/>
 		<attribute key="defense" value="23"/>
 		<attribute key="weight" value="7500"/>
@@ -34231,6 +34343,7 @@
 	</item>
 	<item id="22727" article="a" name="rift lance">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="48"/>
 		<attribute key="defense" value="28"/>
 		<attribute key="weight" value="6600"/>
@@ -34598,6 +34711,7 @@
 	</item>
 	<item id="22866" article="a" name="rift bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="3"/>
 		<attribute key="range" value="7"/>
@@ -34613,6 +34727,7 @@
 	</item>
 	<item id="22867" article="a" name="rift crossbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="4"/>
 		<attribute key="range" value="5"/>
@@ -39110,6 +39225,7 @@
 	</item>
 	<item id="27450" article="a" name="slayer of destruction">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="52"/>
 		<attribute key="defense" value="32"/>
 		<attribute key="weight" value="7000"/>
@@ -39136,6 +39252,7 @@
 	</item>
 	<item id="27452" article="a" name="chopper of destruction">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="52"/>
 		<attribute key="defense" value="32"/>
 		<attribute key="weight" value="7000"/>
@@ -39162,6 +39279,7 @@
 	</item>
 	<item id="27454" article="a" name="hammer of destruction">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="53"/>
 		<attribute key="defense" value="30"/>
 		<attribute key="weight" value="7000"/>
@@ -39175,6 +39293,7 @@
 	</item>
 	<item id="27455" article="a" name="bow of destruction">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="hitchance" value="6"/>
 		<attribute key="range" value="6"/>
@@ -39190,6 +39309,7 @@
 	</item>
 	<item id="27456" article="a" name="crossbow of destruction">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="hitchance" value="6"/>
 		<attribute key="range" value="5"/>
@@ -41144,6 +41264,7 @@
 	</item>
 	<item id="28718" article="a" name="falcon bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="absorbpercentfire" value="5"/>
 		<attribute key="skilldist" value="2"/>
@@ -41218,6 +41339,7 @@
 	</item>
 	<item id="28723" article="a" name="falcon longsword">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="absorbpercentpoison" value="10"/>
 		<attribute key="skillsword" value="4"/>
 		<attribute key="attack" value="56"/>
@@ -41233,6 +41355,7 @@
 	</item>
 	<item id="28724" article="a" name="falcon battleaxe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementenergy" value="47"/>
 		<attribute key="absorbpercentenergy" value="12"/>
 		<attribute key="skillaxe" value="4"/>
@@ -41331,6 +41454,7 @@
 	<item fromid="28746" toid="28749" name="zathroth' redeemer">
 		<attribute key="description" value="This is an ordinary looking scythe - or is it?"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 	</item>
 	<item id="28750" name="your supply stash">
 		<attribute key="containersize" value="10"/>
@@ -42025,6 +42149,7 @@
 	<item id="29286" article="a" name="golden axe">
 		<attribute key="description" value="Forged and wielded by a long forgotten dwarf with a heart as black as an adder"/>
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="10"/>
 		<attribute key="defense" value="5"/>
 		<attribute key="weight" value="1989"/>
@@ -42200,6 +42325,7 @@
 	</item>
 	<item id="29417" article="a" name="living vine bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="absorbpercentpoison" value="4"/>
 		<attribute key="skilldist" value="1"/>
@@ -43733,6 +43859,9 @@
 	</item>
 	<item fromid="30374" toid="30392" name="RESERVED SPRITE"/>
 	<item id="30393" article="a" name="cobra crossbow">
+		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
+		<attribute key="ammotype" value="bolt"/>
 		<attribute key="skilldist" value="2"/>
 		<attribute key="range" value="6"/>
 		<attribute key="hitChance" value="6"/>
@@ -43888,7 +44017,9 @@
 	<item fromid="30446" toid="30447" article="a" name="veined stone"/>
 	<item fromid="30448" toid="30449" article="a" name="ruddy obelisk"/>
 	<item fromid="30450" toid="30451" article="a" name="pile of ruddy ashlars"/>
-	<item fromid="30452" toid="30453" article="an" name="ancient sepulchre"/>
+	<item fromid="30452" toid="30453" article="an" name="ancient sepulchre">
+		<attribute key="floorchange" value="down"/>
+	</item>
 	<item fromid="30454" toid="30469" article="a" name="sphinx statue"/>
 	<item id="30613" article="a" name="cobra statue"/>
 	<item fromid="30614" toid="30615" article="a" name="unknown item"/>
@@ -45221,6 +45352,7 @@
 	</item>
 	<item id="31581" article="a" name="bow of cataclysm">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="absorbpercentdeath" value="4"/>
 		<attribute key="skilldist" value="4"/>
@@ -45337,6 +45469,7 @@
 	</item>
 	<item id="31614" article="a" name="tagralt blade">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementearth" value="49"/>
 		<attribute key="skillsword" value="2"/>
 		<attribute key="attack" value="7"/>
@@ -45353,7 +45486,7 @@
 		<attribute key="description" value="The spell on it has faded"/>
 		<attribute key="weight" value="4500"/>
 	</item>
-	<item id="31616" article="a" name="blister ring ">
+	<item id="31616" article="a" name="blister ring">
 		<attribute key="showduration" value="1"/>
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="absorbpercentfire" value="6"/>
@@ -46547,6 +46680,7 @@
 	<item id="32615" article="a" name="unknow item"/>
 	<item id="32616" article="a" name="phantasmal axe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementfire" value="49"/>
 		<attribute key="skillaxe" value="2"/>
 		<attribute key="attack" value="5"/>
@@ -46710,6 +46844,7 @@
 		<attribute key="containersize" value="20"/>
 	</item>
 	<item id="32702" article="a" name="dead pale worm">
+		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="32701"/>
 		<attribute key="containersize" value="20"/>
 	</item>
@@ -48266,6 +48401,7 @@
 	</item>
 	<item id="34083" article="a" name="soulshredder">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementice" value="47"/>
 		<attribute key="criticalhitdamage" value="10"/>
 		<attribute key="criticalhitchance" value="10"/>
@@ -48301,6 +48437,7 @@
 	</item>
 	<item id="34085" article="a" name="souleater">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementice" value="47"/>
 		<attribute key="criticalhitdamage" value="10"/>
 		<attribute key="criticalhitchance" value="10"/>
@@ -48336,6 +48473,7 @@
 	</item>
 	<item id="34087" article="a" name="soulmaimer">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementenergy" value="47"/>
 		<attribute key="criticalhitdamage" value="10"/>
 		<attribute key="criticalhitchance" value="10"/>
@@ -48352,6 +48490,7 @@
 	</item>
 	<item id="34088" article="a" name="soulbleeder">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="absorbpercentholy" value="7"/>
 		<attribute key="criticalhitdamage" value="10"/>
@@ -48371,6 +48510,7 @@
 	</item>
 	<item id="34089" article="a" name="soulpiercer">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="bolt"/>
 		<attribute key="absorbpercentdeath" value="7"/>
 		<attribute key="skilldist" value="4"/>
@@ -48694,6 +48834,7 @@
 	</item>
 	<item id="34150" article="a" name="lion longbow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="absorbpercentice" value="5"/>
 		<attribute key="skilldist" value="2"/>
@@ -49466,6 +49607,7 @@
 	</item>
 	<item id="35514" article="a" name="jungle flail">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="attack" value="52"/>
 		<attribute key="defense" value="31"/>
 		<attribute key="weight" value="8900"/>
@@ -49504,6 +49646,7 @@
 	</item>
 	<item id="35518" article="a" name="jungle bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="absorbpercentphysical" value="3"/>
 		<attribute key="skilldist" value="1"/>
@@ -49569,10 +49712,12 @@
 		<attribute key="weight" value="730"/>
 	</item>
 	<item id="35524" article="a" name="jungle quiver">
+		<attribute key="slotType" value="right-hand"/>
 		<attribute key="containersize" value="8"/>
 		<attribute key="weight" value="1800"/>
 	</item>
 	<item id="35562" article="a" name="quiver">
+		<attribute key="slotType" value="right-hand"/>
 		<attribute key="containersize" value="6"/>
 		<attribute key="weight" value="1700"/>
 	</item>
@@ -49702,10 +49847,12 @@
 		<attribute key="weight" value="350"/>
 	</item>
 	<item id="35848" article="a" name="blue quiver">
+		<attribute key="slotType" value="right-hand"/>
 		<attribute key="containersize" value="6"/>
 		<attribute key="weight" value="1700"/>
 	</item>
 	<item id="35849" article="a" name="red quiver">
+		<attribute key="slotType" value="right-hand"/>
 		<attribute key="containersize" value="6"/>
 		<attribute key="weight" value="1700"/>
 	</item>
@@ -50177,6 +50324,7 @@
 	</item>
 	<item id="36657" article="a" name="eldritch claymore">
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementfire" value="50"/>
 		<attribute key="skillsword" value="3"/>
 		<attribute key="attack" value="6"/>
@@ -50192,6 +50340,7 @@
 	<item id="36658" article="a" name="gilded eldritch claymore">
 		<attribute key="description" value="Refined by the legendary artisan Gnomaurum"/>
 		<attribute key="weaponType" value="sword"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementfire" value="50"/>
 		<attribute key="skillsword" value="3"/>
 		<attribute key="attack" value="6"/>
@@ -50206,6 +50355,7 @@
 	</item>
 	<item id="36659" article="a" name="eldritch warmace">
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementfire" value="50"/>
 		<attribute key="skillclub" value="3"/>
 		<attribute key="attack" value="6"/>
@@ -50221,6 +50371,7 @@
 	<item id="36660" article="a" name="gilded eldritch warmace">
 		<attribute key="description" value="Refined by the legendary artisan Gnomaurum"/>
 		<attribute key="weaponType" value="club"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="elementfire" value="50"/>
 		<attribute key="skillclub" value="3"/>
 		<attribute key="attack" value="6"/>
@@ -50235,6 +50386,7 @@
 	</item>
 	<item id="36661" article="a" name="eldritch greataxe">
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="skillaxe" value="3"/>
 		<attribute key="attack" value="56"/>
 		<attribute key="defense" value="33"/>
@@ -50250,6 +50402,7 @@
 	<item id="36662" article="a" name="gilded eldritch greataxe">
 		<attribute key="description" value="Refined by the legendary artisan Gnomaurum"/>
 		<attribute key="weaponType" value="axe"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="skillaxe" value="3"/>
 		<attribute key="attack" value="56"/>
 		<attribute key="defense" value="33"/>
@@ -50278,6 +50431,7 @@
 	</item>
 	<item id="36664" article="a" name="eldritch bow">
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="skilldist" value="2"/>
 		<attribute key="hitchance" value="6"/>
@@ -50295,6 +50449,7 @@
 	<item id="36665" article="a" name="gilded eldritch bow">
 		<attribute key="description" value="Refined by the legendary artisan Gnomaurum"/>
 		<attribute key="weaponType" value="distance"/>
+		<attribute key="slotType" value="two-handed"/>
 		<attribute key="ammotype" value="arrow"/>
 		<attribute key="skilldist" value="2"/>
 		<attribute key="hitchance" value="6"/>
@@ -50310,6 +50465,7 @@
 		</attribute>
 	</item>
 	<item id="36666" article="a" name="eldritch quiver">
+		<attribute key="slotType" value="right-hand"/>
 		<attribute key="containersize" value="8"/>
 		<attribute key="weight" value="2200"/>
 	</item>
@@ -50987,7 +51143,6 @@
 		<attribute key="weight" value="660"/>
 	</item>
 	<item id="36877" article="a" name="strange idol">
-		<attribute key="loottype" value="creatureproduct" />
 	</item>
 	<item id="36878" article="a" name="dead hulking carnisylvan">
 		<attribute key="containerSize" value="30" />
