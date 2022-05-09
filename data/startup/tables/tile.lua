@@ -1054,7 +1054,7 @@ TileAction = {
 			{x = 31951, y = 32174, z = 10}
 		}
 	},
-	-- Hidden Threats Quest 
+	-- Hidden Threats Quest
 	[50364] = { -- questline track
 		itemId = false,
 		itemPos = {

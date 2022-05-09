@@ -67,7 +67,7 @@ local function greetCallback(npc, creature, message)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
-	local player = Player(creature)
+	--local player = Player(creature)
 
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
@@ -77,10 +77,9 @@ end
 
 -- Greeting message
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Good bye, |PLAYERNAME|.')
-	
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-	
+
 npcHandler:addModule(FocusModule:new())
 
 -- npcType registering the npcConfig table
