@@ -52,7 +52,6 @@ end
 
 local function greetCallback(npc, creature, message)
 	local player = Player(creature)
-	local playerId = player:getId()
 
 	if player:getStorageValue(Storage.Quest.HiddenThreats.corymRescued03) < 0 then
 		npcHandler:setMessage(MESSAGE_GREET, {
@@ -66,7 +65,6 @@ end
 
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
-	local playerId = player:getId()
 
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false

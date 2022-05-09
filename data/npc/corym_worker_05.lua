@@ -68,20 +68,11 @@ local function greetCallback(npc, creature, message)
 end
 
 local function creatureSayCallback(npc, creature, type, message)
-	local player = Player(creature)
-	local playerId = player:getId()
+	--local player = Player(creature)
 
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-
---	if(MsgContains(message, "aaa")) then
---			npcHandler:say({
---				"Text text text",
---				"Text text text"
---			}, npc, creature)
---			npcHandler:setTopic(playerId, 1)
---	end
 	return true
 end
 
