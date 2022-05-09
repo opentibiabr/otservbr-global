@@ -98,7 +98,7 @@ monster.loot = {
 	{id = 8895, chance = 3125},
 	{id = 8896, chance = 3125},
 	{id = 9034, chance = 140},
-	{id = 9056, chance = 151},
+	{id = 9056, chance = 151}, -- Black skull
 	{name = "small topaz", chance = 5882, maxCount = 3},
 	{name = "hellspawn tail", chance = 20000}
 }
