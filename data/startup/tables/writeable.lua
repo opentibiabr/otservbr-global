@@ -849,5 +849,10 @@ Not mine!
 		itemId = 2027,
 		itemPos = {x = 32481, y = 31900, z = 3},
 		text = "Tristan, the black knight"
+	},
+	[15] = {
+		itemId = 2012,
+		itemPos = {x = 33044, y = 32067, z = 12},
+		text = "DO NOT ENTER!"
 	}
 }

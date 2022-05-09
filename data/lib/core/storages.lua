@@ -2238,8 +2238,30 @@ Storage = {
 		ThreatenedDreams = {},
 		-- update 11.50
 		DangerousDepths = {},
-		HiddenThreats = {},
 		MakeshiftWarriorOutfits = {},
+		HiddenThreats = { -- Reserved storage from 10120 - 10139
+			QuestLine = 10120,
+			RatterDoor = 10121,
+			ServantDoor = 10122,
+			CorymWorksDoor01 = 10123,
+			CorymWorksDoor02 = 10124,
+			CorymWorksDoor03 = 10125,
+			Reward = {
+				metalFile = 10126,
+				keyFragment01 = 10127,
+				keyFragment02 = 10128
+
+			},
+			corymRescued01 = 10129,
+			corymRescued02 = 10130,
+			corymRescued03 = 10131,
+			corymRescued04 = 10132,
+			corymRescued05 = 10133,
+			corymRescued06 = 10134,
+			corymRescued07 = 10135,
+			corymRescued08 = 10136,
+			corymRescueMission = 10137
+		},
 		-- update 11.80
 		BattleMageOutfits = {},
 		DiscovererOutfits = {},

@@ -1,5 +1,5 @@
-local internalNpcName = "Corym Ratter"
-local npcType = Game.createNpcType(internalNpcName)
+local internalNpcName = "Corym Worker"
+local npcType = Game.createNpcType("Corym Worker (1)")
 local npcConfig = {}
 
 npcConfig.name = internalNpcName
@@ -54,13 +54,15 @@ local function greetCallback(npc, creature, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) < 1 then
+	if player:getStorageValue(Storage.Quest.HiddenThreats.corymRescued01) < 0 then
 		npcHandler:setMessage(MESSAGE_GREET, {
-			'Welcome stranger! You might be surprised that I don\'t attack you immediately. The point is, that I think you could be useful to me. What you see in front of you is a great mine of the corym! ...',
-			'We dig up all what mother earth delivers to us, valuable natural resources. But the yield is getting worse and here I need your {help}.'
+			'My hero! A friend of mine sent you to liberate me? A true friend! I am poor but nevertheless I give you this as little reward.'
 		})
+		player:setStorageValue(Storage.Quest.HiddenThreats.corymRescueMission, player:getStorageValue(Storage.Quest.HiddenThreats.corymRescueMission) +1 )
+		player:setStorageValue(Storage.Quest.HiddenThreats.corymRescued01, 1 )
+		player:addItem(3030, 1)
 	else
-		npcHandler:setMessage(MESSAGE_GREET, 'We dig up all what mother earth delivers to us, valuable natural resources.')
+		npcHandler:setMessage(MESSAGE_GREET, 'My hero! A friend of mine sent you to liberate me? A true friend!')
 	end
 	return true
 end
@@ -73,18 +75,13 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(MsgContains(message, "help")) then
-			npcHandler:say("Recently the amount of delivered ores is decreasing. Could you find out the reason, why the situation has become worse?", npc, creature)
-			npcHandler:setTopic(playerId, 1)
-	elseif(MsgContains(message, "yes")) then
-		if(npcHandler:getTopic(playerId) == 1) then
-			player:setStorageValue(Storage.TibiaTales.DefaultStart, 1)
-			player:setStorageValue(Storage.Quest.HiddenThreats.QuestLine, 1)
-			player:setStorageValue(Storage.Quest.HiddenThreats.RatterDoor, 1)
-			npcHandler:say("Nice! I have opened the mine for you. But take care of you! The monsters of depth won't spare you.", npc, creature)
-			npcHandler:setTopic(playerId, 2)
-		end
-	end
+--	if(MsgContains(message, "aaa")) then
+--			npcHandler:say({
+--				"Text text text",
+--				"Text text text"
+--			}, npc, creature)
+--			npcHandler:setTopic(playerId, 1)
+--	end
 	return true
 end
 

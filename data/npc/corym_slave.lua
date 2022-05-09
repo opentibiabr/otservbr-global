@@ -1,4 +1,4 @@
-local internalNpcName = "Corym Ratter"
+local internalNpcName = "Corym Slave"
 local npcType = Game.createNpcType(internalNpcName)
 local npcConfig = {}
 
@@ -54,13 +54,12 @@ local function greetCallback(npc, creature, message)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) < 1 then
+	if player:getStorageValue(Storage.Quest.HiddenThreats.corymRescued02) < 0 then
 		npcHandler:setMessage(MESSAGE_GREET, {
-			'Welcome stranger! You might be surprised that I don\'t attack you immediately. The point is, that I think you could be useful to me. What you see in front of you is a great mine of the corym! ...',
-			'We dig up all what mother earth delivers to us, valuable natural resources. But the yield is getting worse and here I need your {help}.'
+			'Every man is the architect of his own fortune. There will be the day of {pay back}.'
 		})
 	else
-		npcHandler:setMessage(MESSAGE_GREET, 'We dig up all what mother earth delivers to us, valuable natural resources.')
+		npcHandler:setMessage(MESSAGE_GREET, 'The repression has taken too long. With our new weapons the respective people will get their just punishment.')
 	end
 	return true
 end
@@ -73,17 +72,14 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(MsgContains(message, "help")) then
-			npcHandler:say("Recently the amount of delivered ores is decreasing. Could you find out the reason, why the situation has become worse?", npc, creature)
-			npcHandler:setTopic(playerId, 1)
-	elseif(MsgContains(message, "yes")) then
-		if(npcHandler:getTopic(playerId) == 1) then
-			player:setStorageValue(Storage.TibiaTales.DefaultStart, 1)
-			player:setStorageValue(Storage.Quest.HiddenThreats.QuestLine, 1)
-			player:setStorageValue(Storage.Quest.HiddenThreats.RatterDoor, 1)
-			npcHandler:say("Nice! I have opened the mine for you. But take care of you! The monsters of depth won't spare you.", npc, creature)
-			npcHandler:setTopic(playerId, 2)
-		end
+	if(MsgContains(message, "pay back")) then
+			npcHandler:say({
+				"The repression has taken too long. With our new weapons the respective people will get their just punishment."
+			}, npc, creature)
+			if player:getStorageValue(Storage.Quest.HiddenThreats.corymRescued02) < 0 then
+				player:setStorageValue(Storage.Quest.HiddenThreats.corymRescueMission, player:getStorageValue(Storage.Quest.HiddenThreats.corymRescueMission) +1 )
+				player:setStorageValue(Storage.Quest.HiddenThreats.corymRescued02, 1 )
+			end
 	end
 	return true
 end

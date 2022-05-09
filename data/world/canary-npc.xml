@@ -2862,4 +2862,28 @@
 	<npc centerx="32174" centery="32598" centerz="15" radius="1">
 		<npc name="A Wyrm" x="0" y="0" z="15" spawntime="60" />
 	</npc>
+	<npc centerx="33058" centery="32007" centerz="12" radius="1">
+		<npc name="Corym Worker (3)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33006" centery="32009" centerz="12" radius="1">
+		<npc name="Corym Worker (2)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33064" centery="32010" centerz="12" radius="1">
+		<npc name="Corym Butler" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33052" centery="32015" centerz="12" radius="1">
+		<npc name="Corym Worker (4)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="32999" centery="32024" centerz="12" radius="1">
+		<npc name="Corym Slave" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33012" centery="32026" centerz="12" radius="1">
+		<npc name="Corym Worker (1)" x="0" y="-1" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33008" centery="32051" centerz="12" radius="1">
+		<npc name="Corym Worker (5)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="32999" centery="32053" centerz="12" radius="1">
+		<npc name="Corym Footman" x="0" y="0" z="12" spawntime="60" />
+	</npc>
 </npcs>
