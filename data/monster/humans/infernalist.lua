@@ -99,7 +99,7 @@ monster.loot = {
 	{name = "raspberry", chance = 8500, maxCount = 5},
 	{name = "spellbook of mind control", chance = 370},
 	{name = "royal tapestry", chance = 520},
-	{name = "black skull", chance = 820},
+	{id = 9056, chance = 820},
 	{name = "gold ingot", chance = 70},
 	{name = "crystal of power", chance = 220}
 }
