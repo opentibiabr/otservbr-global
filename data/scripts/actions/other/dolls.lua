@@ -1,6 +1,6 @@
 local dolls = {
 	[5080] = {"Hug me."},
-	[5669] = {
+	[5668] = {
 		"It's not winning that matters, but winning in style.",
 		"Today's your lucky day. Probably.",
 		"Do not meddle in the affairs of dragons, for you are crunchy and taste good with ketchup.",
@@ -19,8 +19,8 @@ local dolls = {
 		"Aaa... CHOO!",
 		"You... will.... burn!!"
 	},
-	[6388] = {"Merry Christmas |PLAYERNAME|."},
-	[6512] = {
+	[6387] = {"Merry Christmas |PLAYERNAME|."},
+	[6511] = {
 		"Ho ho ho",
 		"Jingle bells, jingle bells...",
 		"Have you been naughty?",
@@ -28,26 +28,26 @@ local dolls = {
 		"Merry Christmas!",
 		"Can you stop squeezing me now... I'm starting to feel a little sick."
 	},
-	[8974] = {"ARE YOU PREPARED TO FACE YOUR DESTINY?"},
-	[8977] = {
+	[8146] = {"ARE YOU PREPARED TO FACE YOUR DESTINY?"},
+	[8149] = {
 		"Weirdo, you're a weirdo! Actually all of you are!",
 		"Pie for breakfast, pie for lunch and pie for dinner!",
 		"All hail the control panel!",
 		"I own, Tibiacity owns, perfect match!",
 		"Hug me! Feed me! Hail me!"
 	},
-	[8981] = {
+	[8153] = {
 		"It's news to me.",
 		"News, updated as infrequently as possible!",
 		"Extra! Extra! Read all about it!",
 		"Fresh off the press!"
 	},
-	[8982] = {
+	[8154] = {
 		"Hail TibiaNordic!",
 		"So cold..",
 		"Run, mammoth!"
 	},
-	[23806] = {
+	[21435] = {
 		"I can hear their whisperings... Revenge!",
 		"You shall feel pain and terror, |PLAYERNAME|",
 		"I do not need a sword to slaughter you",
@@ -55,7 +55,7 @@ local dolls = {
 		"I can say 469 and more...",
 		"My dark magic lies on tibialatina.wikia.com"
 	},
-	[24331] = {"Hail Tibia Brasileiros! (União&Força)"}
+	[21962] = {"Hail Tibia Brasileiros! (União&Força)"}
 }
 
 local doll = Action()

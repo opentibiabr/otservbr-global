@@ -57,5 +57,5 @@ function theCursedMiscAction.onUse(cid, item, frompos, item2, topos)
 	end
 end
 
-theCursedMiscAction:id(35166, 35167)
+theCursedMiscAction:id(40001, 40002)
 theCursedMiscAction:register()
