@@ -26,7 +26,7 @@ function stoneTeleport.onAddItem(moveitem, tileitem, position)
 	end
 
 	if not sacrificeItems then
-		return true
+		return false
 	end
 
 	local stonePosition = Position(32881, 32270, 14)
