@@ -16,7 +16,8 @@ function corymCaveSpider.onStepIn(creature, item, position, fromPosition)
     return true
 end
 
-corymCaveSpider:aid(35003)
+corymCaveSpider:position({x = 33040, y = 32081, z = 12})
+corymCaveSpider:position({x = 33039, y = 32103, z = 12})
 corymCaveSpider:register()
 
 
@@ -39,6 +40,5 @@ function createSpiders.onStepIn(creature, item, position, fromPosition)
 	return true
 end
 
-createSpiders:type("stepin")
-createSpiders:aid(50365)
+createSpiders:position({x = 33023, y = 32106, z = 12})
 createSpiders:register()
