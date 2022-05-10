@@ -4526,6 +4526,25 @@ if not Quests then
 						Thus the baleful artefact was destroyed. You should return to One-Eyed Joe.",
 						[4] = "You have completed the Quest!"
 					}
+				},
+				[13] = {
+					name = "Hidden Threats",
+					storageId = Storage.Quest.HiddenThreats.QuestLine,
+					missionId = 10409,
+					startValue = 1,
+					endValue = 5,
+					states = {
+						[1] = "You have talked to Corym Ratter. He asked you to find the reason why the amount of  \z
+						delivered ores is decreasing. You got access to the mine.",
+						[2] = "You have met Corym Servant. He told you the true story of enslaved corym working under  \z
+						terrible conditions. You have agreed to help him planing a riot. First you have to liberate his comrades.",
+						[3] = "You have found two key fragments. They are quite rusted. It is necessary to remove the  \z
+						rust before forging them together. You have to find a way to rebuild the key. This might open the doors.",
+						[4] = "With the forged key you have unlocked the three areas. The Corym Servant was very relieved  \z
+						and asked you to bring 20 units of rare earth.",
+						[5] = "You have brought 20 units of rare earth to Corym Servant. He was very tahnkful and gave you  \z
+						a reward. The revolution should now take place as intended."
+					}
 				}
 			}
 		},
@@ -5822,7 +5841,7 @@ if not Quests then
 					}
 				}
 			}
-		},
+		}
 	}
 end
 
