@@ -1,6 +1,8 @@
 local stage = configManager.getNumber(configKeys.FREE_QUEST_STAGE)
 
 local questTable = {
+	{storage = Storage.LiquidBlackQuest.QuestLine, storageValue = 1},
+	{storage = Storage.LiquidBlackQuest.Visitor, storageValue = 5},
 	{storage = Storage.BigfootBurden.QuestLine, storageValue = 2},
 	{storage = Storage.BigfootBurden.QuestLine, storageValue = 4},
 	{storage = Storage.BigfootBurden.QuestLine, storageValue = 7},
@@ -263,7 +265,7 @@ local questTable = {
 	{storage = Storage.FriendsandTraders.TheBlessedStake, storageValue = 12},
 	{storage = 100157, storageValue = 1},
 	{storage = 2500, storageValue = 0},
-	{storage = Storage.WrathoftheEmperor.Questline, storageValue = 1},
+	{storage = Storage.WrathoftheEmperor.Questline, storageValue = 29,
 	{storage = Storage.WrathoftheEmperor.Mission01, storageValue = 3},
 	{storage = Storage.WrathoftheEmperor.Mission02, storageValue = 3},
 	{storage = Storage.WrathoftheEmperor.Mission03, storageValue = 3},
