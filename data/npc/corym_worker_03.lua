@@ -74,9 +74,9 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 	return true
 end
-
 -- Greeting message
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Good bye, |PLAYERNAME|.')
+
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 
