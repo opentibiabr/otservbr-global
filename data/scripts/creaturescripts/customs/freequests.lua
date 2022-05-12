@@ -265,7 +265,7 @@ local questTable = {
 	{storage = Storage.FriendsandTraders.TheBlessedStake, storageValue = 12},
 	{storage = 100157, storageValue = 1},
 	{storage = 2500, storageValue = 0},
-	{storage = Storage.WrathoftheEmperor.Questline, storageValue = 29,
+	{storage = Storage.WrathoftheEmperor.Questline, storageValue = 29},
 	{storage = Storage.WrathoftheEmperor.Mission01, storageValue = 3},
 	{storage = Storage.WrathoftheEmperor.Mission02, storageValue = 3},
 	{storage = Storage.WrathoftheEmperor.Mission03, storageValue = 3},
