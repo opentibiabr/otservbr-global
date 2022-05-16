@@ -61,16 +61,15 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	--The New Frontier
 	if MsgContains(message, "farmine") then
-		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 15 then
+		if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 14 then
 			npcHandler:say("Oh yes, that project the whole dwarven community is so excited about. I guess I already know why you are here, but speak up.", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
 	elseif MsgContains(message, "impress") or MsgContains(message, "plea") then
 		if npcHandler:getTopic(playerId) == 1 then
-			if player:getStorageValue(Storage.TheNewFrontier.BribeLeeland) < 1 then
+			if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_2_Leeland) == 1 then
 				npcHandler:say("The idea of a promising market and new resources suits us quite well. I think it is reasonable to send some assistance.", npc, creature)
-				player:setStorageValue(Storage.TheNewFrontier.BribeLeeland, 1)
-				player:setStorageValue(Storage.TheNewFrontier.Mission05, player:getStorageValue(Storage.TheNewFrontier.Mission05) + 1) --Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
+				player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_2_Leeland, 2)
 			end
 		end
 	end

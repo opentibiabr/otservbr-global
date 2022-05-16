@@ -30,6 +30,14 @@
 ]]
 
 ChestAction = {
+	[false] = {
+		itemId = false,
+		itemPos = {
+			{x = 33057, y = 31029, z = 7},
+			{x = 33055, y = 31029, z = 7},
+			{x = 33053, y = 31029, z = 7}
+		}
+	},
 	-- Keys quest
 	[5000] = {
 		itemId = xxxx,
@@ -40,6 +48,13 @@ ChestAction = {
 		action = xxxx,
 		reward = {{xxxx, 1}},
 		storage = storage
+	},
+	-- The New Frontier Quest
+	[5001] = { -- Reward Outfit
+		itemId = 5862,
+		itemPos = {
+			{x = 33053, y = 31020, z = 7}
+		}
 	}
 }
 
@@ -846,6 +861,29 @@ ChestUnique = {
 		keyAction = Storage.Quest.Key.ID3002,
 		storage = keyAction,
 		itemPos = {{x = 32802, y = 31576, z = 7}}
+	},
+	-- The New Frontier Quest
+	[6097] = {
+		itemId = 2472,
+		itemPos = {x = 33057, y = 31029, z = 7},
+		container = 2854,
+		weight = 14.90,
+		reward = {{7439, 1}, {7440, 1}, {7443, 1}},
+		storage = Storage.Quest.TheNewFrontier.Reward.Chest01
+	},
+	[6098] = {
+		itemId = 2472,
+		itemPos = {x = 33055, y = 31029, z = 7},
+		reward = {{9058, 2}},
+		weight = 36.00,
+		storage = Storage.Quest.TheNewFrontier.Reward.Chest02
+	},
+	[6099] = {
+		itemId = 2472,
+		itemPos = {x = 33053, y = 31029, z = 7},
+		reward = {{2995, 1}},
+		weight = 7.50,
+		storage = Storage.Quest.TheNewFrontier.Reward.Chest03
 	},
 
 	-- Reward of others scrips files (varied rewards)

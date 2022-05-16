@@ -3170,201 +3170,6 @@ if not Quests then
 			}
 		},
 		[25] = {
-			name = "The New Frontier",
-			startStorageId = Storage.TheNewFrontier.Questline,
-			startStorageValue = 1,
-			missions = {
-				[1] = {
-					name = "Mission 01: New Land",
-					storageId = Storage.TheNewFrontier.Mission01,
-					missionId = 10252,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "Ongulf sends you to explore the passage to the east of farmine.",
-						[2] = "You have found the passage through the mountains and can report Ongulf about your success.",
-						[3] = "You already reported Ongulf your success! Ask Ongulf for new mission!"
-					}
-				},
-				[2] = {
-					name = "Mission 02: From Kazordoon With Love",
-					storageId = Storage.TheNewFrontier.Mission02,
-					missionId = 10253,
-					startValue = 1,
-					endValue = 6,
-					states = {
-						[1] = "Ongulf will tell you that he needs to send a message to the dwarves in Kazordoon. \z
-						Travel there and then walk to the Dwarf Mines to the west. Cross the two rivers and find Melfar.",
-						[2] = "Melfar gave you a Flask with Beaver Bait that you must use on the 3 \z
-						trees(Trees will be marked on your map).",
-						[3] = "You marked 1 of 3 trees with Beaver Bait in near the Dwarf Mines",
-						[4] = "You marked 2 of 3 trees with Beaver Bait in near the Dwarf Mines",
-						[5] = "You marked all 3 trees with Beaver Bait in near the Dwarf Mines. \z
-						Return to talk to Melfar before heading back to Farmine.",
-						[6] = "Return to Ongulf and report your mission!"
-					}
-				},
-				[3] = {
-					name = "Mission 03: Strangers in the Night",
-					storageId = Storage.TheNewFrontier.Mission03,
-					missionId = 10254,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "You need to find the tribe which lives in the mountains. \z
-						Find some vines in this mountain, climb up there and find out who is spying on us!",
-						[2] = "Return to Ongulf and report your mission about primitive humans.",
-						[3] = "You already reported Ongulf about primitive humans! Ask Ongulf for new mission!"
-					}
-				},
-				[4] = {
-					name = "Mission 04: The Mine Is Mine",
-					storageId = Storage.TheNewFrontier.Mission04,
-					missionId = 10255,
-					startValue = 1,
-					endValue = 2,
-					states = {
-						[1] = "Head back to the levers and this time use the left one. \z
-						Go North through the tunnel of Stone Golems. Kill the boss, Shard of Corruption at the end of the tunnel.",
-						[2] = "You killed the Shard of Corruption. Return to Ongulf and report your mission!"
-					}
-				},
-				[5] = {
-					name = "Mission 05: Getting Things Busy",
-					storageId = Storage.TheNewFrontier.Mission05,
-					missionId = 10256,
-					startValue = 1,
-					endValue = 7,
-					states = {
-						[1] = "This mission consists of getting support from 6 people (King Tibianus in Thais, Leeland in Venore, \z
-						Angus in Port Hope, Wyrdin in the Ivory Towers, Telas in Edron, Humgolf in Kazordoon  around Tibia. \z
-						You need to ask for farmine and then you either need to Flatter, Threaten, Impress, Bluff, Reason or Plea him!",
-						[2] = "You got support from 1 of 6 people, King Tibianus in Thais, Leeland in Venore, Angus in Port Hope, \z
-						Wyrdin in the Ivory Towers, Telas in Edron and Humgolf in Kazordoon. \z
-						You need to ask for farmine and then you either need to Flatter, Threaten, Impress, Bluff, Reason or Plea him!",
-						[3] = "You got support from 2 of 6 people, King Tibianus in Thais, Leeland in Venore, Angus in Port Hope, \z
-						Wyrdin in the Ivory Towers, Telas in Edron and Humgolf in Kazordoon. \z
-						You need to ask for farmine and then you either need to Flatter, Threaten, Impress, Bluff, Reason or Plea him!",
-						[4] = "You got support from 3 of 6 people, King Tibianus in Thais, Leeland in Venore, Angus in Port Hope, \z
-						Wyrdin in the Ivory Towers, Telas in Edron and Humgolf in Kazordoon. \z
-						You need to ask for farmine and then you either need to Flatter, Threaten, Impress, Bluff, Reason or Plea him!",
-						[5] = "You got support from 4 of 6 people, King Tibianus in Thais, Leeland in Venore, Angus in Port Hope, \z
-						Wyrdin in the Ivory Towers, Telas in Edron and Humgolf in Kazordoon. \z
-						You need to ask for farmine and then you either need to Flatter, Threaten, Impress, Bluff, Reason or Plea him!",
-						[6] = "You got support from 5 of 6 people, King Tibianus in Thais, Leeland in Venore, Angus in Port Hope, \z
-						Wyrdin in the Ivory Towers, Telas in Edron and Humgolf in Kazordoon. \z
-						You need to ask for farmine and then you either need to Flatter, Threaten, Impress, Bluff, Reason or Plea him!",
-						[7] = "You got support from all needed people to help farmine! Return to Ongulf and report your mission!"
-					}
-				},
-				[6] = {
-					name = "Mission 06: Days Of Doom",
-					storageId = Storage.TheNewFrontier.Mission06,
-					missionId = 10257,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "Go to Curos, leader of the Orcs, in the middle of the Zao Steppe in the north-east area of an Orc camp. \z
-						Ask for a mission and accept it.",
-						[2] = "Enter the ring of battle, close to Curos quarter. \z
-						Face Mooh'Tah Master in a battle and survive for two minutes. Return to him after you have passed this test.",
-						[3] = "You passed the test of Curos. Return to Ongulf and report your mission!"
-					}
-				},
-				[7] = {
-					name = "Mission 07: Messengers Of Peace",
-					storageId = Storage.TheNewFrontier.Mission07,
-					missionId = 10258,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "You now have to contact the Lizards, the real rulers of Zao. \z
-						Find them, contact them, talk to them, scare them, bribe them, whatever.",
-						[2] = "You have been trapped! Find a way out!",
-						[3] = "You found the Lizards!"
-					}
-				},
-				[8] = {
-					name = "Mission 08: An Offer You Can't Refuse",
-					storageId = Storage.TheNewFrontier.Mission08,
-					missionId = 10259,
-					startValue = 1,
-					endValue = 2,
-					states = {
-						[1] = "Take the boat at the northern of Dragonblaze Peaks to tournament Isle. \z
-						Ask Zurak for a passage. There you'll learn anything you need to know about the great tournament. \z
-						Ask there Chrak for the battle.",
-						[2] = "You agreed the Offer."
-					}
-				},
-				[9] = {
-					name = "Mission 09: Mortal Combat",
-					storageId = Storage.TheNewFrontier.Mission09,
-					missionId = 10260,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "You have to go into the Arena with another player, \z
-						because 2 players are needed, at the same time, to enter. Choose your companion wisely!",
-						[2] = "You have won! Report Chrak your mission about the battle.",
-						[3] = "Go back to Farmine and talk to Ongulf about your mission."
-					}
-				},
-				[10] = {
-					name = "Mission 10: New Horizons",
-					storageId = Storage.TheNewFrontier.Mission10,
-					missionId = 10261,
-					startValue = 1,
-					endValue = 1,
-					description = "You now have permission to use the Magic Carpet on the mountain above Farmine, \z
-						Cael now accepts more Tomes of Knowledge from you and you got the Warmaster Outfit!"
-				},
-				[11] = {
-					name = "Tome of Knowledge Counter",
-					storageId = Storage.TheNewFrontier.TomeofKnowledge,
-					missionId = 10262,
-					startValue = 1,
-					endValue = 12,
-					states = {
-						[1] = "You brought the fist Tome of Knowledge to Cael. He learnt more about the lizard culture. \z
-						Pompan will sell you dragon tapestries from now on.",
-						[2] = "You brought the second Tome of Knowledge to Cael. He learnt more about the minotaur culture. \z
-						Pompan will sell you minotaur backpacks from now on.",
-						[3] = "You brought the third Tome of Knowledge to Cael. \z
-						He learnt more about the last stand of the draken culture. Esrik will sell you lizard weapon rack from now on.",
-						[4] = "You brought the fourth Tome of Knowledge to Cael. \z
-						He learnt something interesting about a certain food that the lizardmen apparently prepare. \z
-						Swolt will trade you a bunch of ripe rice for 10 rice balls from now on.",
-						[5] = "You brought the fifth Tome of Knowledge to Cael. \z
-						He learnt more about the last stand of the lizards in the South, Zzaion. \z
-						Pompan will sell you lizard backpacks from now on.",
-						[6] = "You brought the sixth Tome of Knowledge to Cael. \z
-						He learnt a few things about the primitive human culture on this continent. \z
-						Cael will sell you War Drums and Didgeridoo from now on.",
-						[7] = "You brought the seventh Tome of Knowledge to Cael. \z
-						He learnt something interesting about the Zao steppe. \z
-						Now you to use the snake teleport at the peak of the mountain.",
-						[8] = "You brought the eighth Tome of Knowledge to Cael. \z
-						He learnt a few things about an illness. \z
-						Now you can enter a corruption hole in the north-eastern end of Zao.",
-						[9] = "You brought the ninth Tome of Knowledge to Cael. \z
-						He learnt something interesting about the Draken origin. \z
-						Esrik will buy lizard equipment from you now.",
-						[10] = "You brought the tenth Tome of Knowledge to Cael. \z
-						He learnt more about the last stand of the lizard dynasty. \z
-						Now you can enter the Zao Palace. It is situated deep underground, below the mountain base of the Lizards.",
-						[11] = "You brought the eleventh Tome of Knowledge to Cael. \z
-						He learnt something interesting about dragons and their symbolism. \z
-						You can buy a Dragon Statue from NPC Cael after you bring him a Red Lantern.",
-						[12] = "You brought the twelfth Tome of Knowledge to Cael. \z
-						He learnt something about reveals some of the power structures in Zao. \z
-						Cael will now make a Dragon Throne for you after you bring him a Red Piece of Cloth. \z
-						He will reward you with 5000 experience points for each extra tome you give to him."
-					}
-				}
-			}
-		},
-		[26] = {
 			name = "The Postman Missions",
 			startStorageId = Storage.Postman.Mission01,
 			startStorageValue = 1,
@@ -3372,7 +3177,7 @@ if not Quests then
 				[1] = {
 					name = "Mission 01 - Check Postal Routes",
 					storageId = Storage.Postman.Mission01,
-					missionId = 10263,
+					missionId = 10252,
 					startValue = 1,
 					endValue = 6,
 					states = {
@@ -3387,7 +3192,7 @@ if not Quests then
 				[2] = {
 					name = "Mission 02 - Fix Mailbox",
 					storageId = Storage.Postman.Mission02,
-					missionId = 10264,
+					missionId = 10253,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3399,7 +3204,7 @@ if not Quests then
 				[3] = {
 					name = "Mission 03 - Bill Delivery",
 					storageId = Storage.Postman.Mission03,
-					missionId = 10265,
+					missionId = 10254,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3412,7 +3217,7 @@ if not Quests then
 				[4] = {
 					name = "Mission 04 - Aggressive Dogs",
 					storageId = Storage.Postman.Mission04,
-					missionId = 10266,
+					missionId = 10255,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3423,7 +3228,7 @@ if not Quests then
 				[5] = {
 					name = "Mission 05 - Present Delivery",
 					storageId = Storage.Postman.Mission05,
-					missionId = 10267,
+					missionId = 10256,
 					startValue = 1,
 					endValue = 4,
 					states = {
@@ -3437,7 +3242,7 @@ if not Quests then
 				[6] = {
 					name = "Mission 06 - New Uniforms",
 					storageId = Storage.Postman.Mission06,
-					missionId = 10268,
+					missionId = 10257,
 					startValue = 1,
 					endValue = 13,
 					states = {
@@ -3461,7 +3266,7 @@ if not Quests then
 				[7] = {
 					name = "Mission 07 - Measurements",
 					storageId = Storage.Postman.Mission07,
-					missionId = 10269,
+					missionId = 10258,
 					startValue = 1,
 					endValue = 8,
 					states = {
@@ -3478,7 +3283,7 @@ if not Quests then
 				[8] = {
 					name = "Mission 08 - Missing Courier",
 					storageId = Storage.Postman.Mission08,
-					missionId = 10270,
+					missionId = 10259,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3490,7 +3295,7 @@ if not Quests then
 				[9] = {
 					name = "Mission 09 - Dear Santa",
 					storageId = Storage.Postman.Mission09,
-					missionId = 10271,
+					missionId = 10260,
 					startValue = 1,
 					endValue = 4,
 					states = {
@@ -3503,7 +3308,7 @@ if not Quests then
 				[10] = {
 					name = "Mission 10 - Mintwallin",
 					storageId = Storage.Postman.Mission10,
-					missionId = 10272,
+					missionId = 10261,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3515,7 +3320,7 @@ if not Quests then
 				[11] = {
 					name = "Postman Rank",
 					storageId = Storage.Postman.Rank,
-					missionId = 10273,
+					missionId = 10262,
 					startValue = 1,
 					endValue = 5,
 					states = {
@@ -3528,7 +3333,7 @@ if not Quests then
 				}
 			}
 		},
-		[27] = {
+		[26] = {
 			name = "The Shattered Isles",
 			startStorageId = Storage.TheShatteredIsles.DefaultStart,
 			startStorageValue = 1,
@@ -3536,7 +3341,7 @@ if not Quests then
 				[1] = {
 					name = "A Djinn in Love",
 					storageId = Storage.TheShatteredIsles.ADjinnInLove,
-					missionId = 10274,
+					missionId = 10263,
 					startValue = 1,
 					endValue = 5,
 					states = {
@@ -3552,7 +3357,7 @@ if not Quests then
 				[2] = {
 					name = "A Poem for the Mermaid",
 					storageId = Storage.TheShatteredIsles.APoemForTheMermaid,
-					missionId = 10275,
+					missionId = 10264,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3567,7 +3372,7 @@ if not Quests then
 				[3] = {
 					name = "Access to Goroma",
 					storageId = Storage.TheShatteredIsles.AccessToGoroma,
-					missionId = 10276,
+					missionId = 10265,
 					startValue = 1,
 					endValue = 1,
 					description = "After helping Jack Fate to collect the 30 woodpieces, \z
@@ -3576,7 +3381,7 @@ if not Quests then
 				[4] = {
 					name = "Access to Laguna Island",
 					storageId = Storage.TheShatteredIsles.AccessToLagunaIsland,
-					missionId = 10277,
+					missionId = 10266,
 					startValue = 1,
 					endValue = 1,
 					description = "After arranging a date for Marina and Ocelus, you are allowed to use Marina\'s sea turtles. \z
@@ -3585,7 +3390,7 @@ if not Quests then
 				[5] = {
 					name = "Access to Meriana",
 					storageId = Storage.TheShatteredIsles.AccessToMeriana,
-					missionId = 10278,
+					missionId = 10267,
 					startValue = 1,
 					endValue = 1,
 					description = "After earning the trust of the governor\'s daughter Eleonore, \z
@@ -3594,7 +3399,7 @@ if not Quests then
 				[6] = {
 					name = "Access to Nargor",
 					storageId = Storage.TheShatteredIsles.AccessToNargor,
-					missionId = 10279,
+					missionId = 10268,
 					startValue = 1,
 					endValue = 1,
 					description = "After convincing the people in Sabrehaven that you are a trustworthy hero, \z
@@ -3603,7 +3408,7 @@ if not Quests then
 				[7] = {
 					name = "Ray\'s Mission 1: Fafnar\'s Fire",
 					storageId = Storage.TheShatteredIsles.RaysMission1,
-					missionId = 10280,
+					missionId = 10269,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3618,7 +3423,7 @@ if not Quests then
 				[8] = {
 					name = "Ray\'s Mission 2: Sabotage",
 					storageId = Storage.TheShatteredIsles.RaysMission2,
-					missionId = 10281,
+					missionId = 10270,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3633,7 +3438,7 @@ if not Quests then
 				[9] = {
 					name = "Ray\'s Mission 3: Spy Mission",
 					storageId = Storage.TheShatteredIsles.RaysMission3,
-					missionId = 10282,
+					missionId = 10271,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3646,7 +3451,7 @@ if not Quests then
 				[10] = {
 					name = "Ray\'s Mission 4: Proof of Death",
 					storageId = Storage.TheShatteredIsles.RaysMission4,
-					missionId = 10283,
+					missionId = 10272,
 					startValue = 1,
 					endValue = 5,
 					states = {
@@ -3665,7 +3470,7 @@ if not Quests then
 				[11] = {
 					name = "Reputation in Sabrehaven: Suspicious",
 					storageId = Storage.TheShatteredIsles.ReputationInSabrehaven,
-					missionId = 10284,
+					missionId = 10273,
 					startValue = 2,
 					endValue = 13,
 					states = {
@@ -3694,7 +3499,7 @@ if not Quests then
 				[12] = {
 					name = "Reputation in Sabrehaven: Friendly",
 					storageId = Storage.TheShatteredIsles.ReputationInSabrehaven,
-					missionId = 10285,
+					missionId = 10274,
 					startValue = 14,
 					endValue = 17,
 					states = {
@@ -3709,7 +3514,7 @@ if not Quests then
 				[13] = {
 					name = "Reputation in Sabrehaven: Cordial",
 					storageId = Storage.TheShatteredIsles.ReputationInSabrehaven,
-					missionId = 10286,
+					missionId = 10275,
 					startValue = 18,
 					endValue = 19,
 					description = "You have finished eight missions. \z
@@ -3718,7 +3523,7 @@ if not Quests then
 				[14] = {
 					name = "Reputation in Sabrehaven: Loyal",
 					storageId = Storage.TheShatteredIsles.ReputationInSabrehaven,
-					missionId = 10287,
+					missionId = 10276,
 					startValue = 20,
 					endValue = 22,
 					states = {
@@ -3730,7 +3535,7 @@ if not Quests then
 				[15] = {
 					name = "The Counterspell",
 					storageId = Storage.TheShatteredIsles.TheCounterspell,
-					missionId = 10288,
+					missionId = 10277,
 					startValue = 1,
 					endValue = 4,
 					states = {
@@ -3747,7 +3552,7 @@ if not Quests then
 				[16] = {
 					name = "The Errand",
 					storageId = Storage.TheShatteredIsles.TheErrand,
-					missionId = 10289,
+					missionId = 10278,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3759,7 +3564,7 @@ if not Quests then
 				[17] = {
 					name = "The Governor\'s Daughter",
 					storageId = Storage.TheShatteredIsles.TheGovernorDaughter,
-					missionId = 10290,
+					missionId = 10279,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3771,7 +3576,7 @@ if not Quests then
 				}
 			}
 		},
-		[28] = {
+		[27] = {
 			name = "The Thieves Guild",
 			startStorageId = Storage.ThievesGuild.Quest,
 			startStorageValue = 1,
@@ -3779,7 +3584,7 @@ if not Quests then
 				[1] = {
 					name = "Mission 1: Ivory Poaching",
 					storageId = Storage.ThievesGuild.Mission01,
-					missionId = 10291,
+					missionId = 10280,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3790,7 +3595,7 @@ if not Quests then
 				[2] = {
 					name = "Mission 2: Burglary",
 					storageId = Storage.ThievesGuild.Mission02,
-					missionId = 10292,
+					missionId = 10281,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3802,7 +3607,7 @@ if not Quests then
 				[3] = {
 					name = "Mission 3: Invitation",
 					storageId = Storage.ThievesGuild.Mission03,
-					missionId = 10293,
+					missionId = 10282,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3814,7 +3619,7 @@ if not Quests then
 				[4] = {
 					name = "Mission 4: Bridge Robbery",
 					storageId = Storage.ThievesGuild.Mission04,
-					missionId = 10294,
+					missionId = 10283,
 					startValue = 1,
 					endValue = 8,
 					states = {
@@ -3831,7 +3636,7 @@ if not Quests then
 				[5] = {
 					name = "Mission 5: Enforcing Debts",
 					storageId = Storage.ThievesGuild.Mission05,
-					missionId = 10295,
+					missionId = 10284,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3843,7 +3648,7 @@ if not Quests then
 				[6] = {
 					name = "Mission 6: Fishnapping",
 					storageId = Storage.ThievesGuild.Mission06,
-					missionId = 10296,
+					missionId = 10285,
 					startValue = 1,
 					endValue = 4,
 					states = {
@@ -3857,7 +3662,7 @@ if not Quests then
 				[7] = {
 					name = "Mission 7: Blackmail",
 					storageId = Storage.ThievesGuild.Mission07,
-					missionId = 10297,
+					missionId = 10286,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3869,7 +3674,7 @@ if not Quests then
 				[8] = {
 					name = "Mission 8: Message",
 					storageId = Storage.ThievesGuild.Mission08,
-					missionId = 10298,
+					missionId = 10287,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3881,7 +3686,7 @@ if not Quests then
 				}
 			}
 		},
-		[29] = {
+		[28] = {
 			name = "The Travelling Trader Quest",
 			startStorageId = Storage.TravellingTrader.Mission01,
 			startStorageValue = 1,
@@ -3889,7 +3694,7 @@ if not Quests then
 				[1] = {
 					name = "Mission 1: Trophy",
 					storageId = Storage.TravellingTrader.Mission01,
-					missionId = 10299,
+					missionId = 10288,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3901,7 +3706,7 @@ if not Quests then
 				[2] = {
 					name = "Mission 2: Delivery",
 					storageId = Storage.TravellingTrader.Mission02,
-					missionId = 10300,
+					missionId = 10289,
 					startValue = 1,
 					endValue = 5,
 					states = {
@@ -3916,7 +3721,7 @@ if not Quests then
 				[3] = {
 					name = "Mission 3: Cheese",
 					storageId = Storage.TravellingTrader.Mission03,
-					missionId = 10301,
+					missionId = 10290,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3929,7 +3734,7 @@ if not Quests then
 				[4] = {
 					name = "Mission 4: Vase",
 					storageId = Storage.TravellingTrader.Mission04,
-					missionId = 10302,
+					missionId = 10291,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3943,7 +3748,7 @@ if not Quests then
 				[5] = {
 					name = "Mission 5: Make a deal",
 					storageId = Storage.TravellingTrader.Mission05,
-					missionId = 10303,
+					missionId = 10292,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -3956,7 +3761,7 @@ if not Quests then
 				[6] = {
 					name = "Mission 6: Goldfish",
 					storageId = Storage.TravellingTrader.Mission06,
-					missionId = 10304,
+					missionId = 10293,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -3967,7 +3772,7 @@ if not Quests then
 				[7] = {
 					name = "Mission 7: Declare",
 					storageId = Storage.TravellingTrader.Mission07,
-					missionId = 10305,
+					missionId = 10294,
 					startValue = 1,
 					endValue = 1,
 					states = {
@@ -3977,7 +3782,7 @@ if not Quests then
 				}
 			}
 		},
-		[30] = {
+		[29] = {
 			name = "The Explorer Society",
 			startStorageId = Storage.ExplorerSociety.QuestLine,
 			startStorageValue = 1,
@@ -3985,7 +3790,7 @@ if not Quests then
 				[1] = {
 					name = "Joining the Explorers",
 					storageId = Storage.ExplorerSociety.JoiningTheExplorers,
-					missionId = 11296,
+					missionId = 10295,
 					startValue = 1,
 					endValue = 5,
 					states = {
@@ -4000,7 +3805,7 @@ if not Quests then
 				[2] = {
 					name = "The Ice Delivery",
 					storageId = Storage.ExplorerSociety.TheIceDelivery,
-					missionId = 11297,
+					missionId = 10296,
 					startValue = 6,
 					endValue = 8,
 					states = {
@@ -4014,7 +3819,7 @@ if not Quests then
 				[3] = {
 					name = "The Butterfly Hunt",
 					storageId = Storage.ExplorerSociety.TheButterflyHunt,
-					missionId = 11298,
+					missionId = 10297,
 					startValue = 9,
 					endValue = 17,
 					states = {
@@ -4035,7 +3840,7 @@ if not Quests then
 				[4] = {
 					name = "The Plant Collection",
 					storageId = Storage.ExplorerSociety.ThePlantCollection,
-					missionId = 11299,
+					missionId = 10298,
 					startValue = 18,
 					endValue = 26,
 					states = {
@@ -4053,7 +3858,7 @@ if not Quests then
 				[5] = {
 					name = "The Lizard Urn",
 					storageId = Storage.ExplorerSociety.TheLizardUrn,
-					missionId = 11300,
+					missionId = 10299,
 					startValue = 27,
 					endValue = 29,
 					states = {
@@ -4067,7 +3872,7 @@ if not Quests then
 				[6] = {
 					name = "The Bonelord Secret",
 					storageId = Storage.ExplorerSociety.TheBonelordSecret,
-					missionId = 11301,
+					missionId = 10300,
 					startValue = 30,
 					endValue = 32,
 					states = {
@@ -4080,7 +3885,7 @@ if not Quests then
 				[7] = {
 					name = "The Orc Powder",
 					storageId = Storage.ExplorerSociety.TheOrcPowder,
-					missionId = 11302,
+					missionId = 10301,
 					startValue = 33,
 					endValue = 35,
 					states = {
@@ -4094,7 +3899,7 @@ if not Quests then
 				[8] = {
 					name = "The Elven Poetry",
 					storageId = Storage.ExplorerSociety.TheElvenPoetry,
-					missionId = 11303,
+					missionId = 10302,
 					startValue = 36,
 					endValue = 38,
 					states = {
@@ -4106,7 +3911,7 @@ if not Quests then
 				[9] = {
 					name = "The Memory Stone",
 					storageId = Storage.ExplorerSociety.TheMemoryStone,
-					missionId = 11304,
+					missionId = 10303,
 					startValue = 39,
 					endValue = 41,
 					states = {
@@ -4118,7 +3923,7 @@ if not Quests then
 				[10] = {
 					name = "The Rune Writings",
 					storageId = Storage.ExplorerSociety.TheRuneWritings,
-					missionId = 11305,
+					missionId = 10304,
 					startValue = 42,
 					endValue = 44,
 					states = {
@@ -4132,7 +3937,7 @@ if not Quests then
 				[11] = {
 					name = "The Ectoplasm",
 					storageId = Storage.ExplorerSociety.TheEctoplasm,
-					missionId = 11306,
+					missionId = 10305,
 					startValue = 45,
 					endValue = 47,
 					states = {
@@ -4143,7 +3948,7 @@ if not Quests then
 				[12] = {
 					name = "The Spectral Dress",
 					storageId = Storage.ExplorerSociety.TheSpectralDress,
-					missionId = 11307,
+					missionId = 10306,
 					startValue = 48,
 					endValue = 50,
 					states = {
@@ -4155,7 +3960,7 @@ if not Quests then
 				[13] = {
 					name = "The Spectral Stone",
 					storageId = Storage.ExplorerSociety.TheSpectralStone,
-					missionId = 11308,
+					missionId = 10307,
 					startValue = 51,
 					endValue = 55,
 					states = {
@@ -4170,7 +3975,7 @@ if not Quests then
 				[14] = {
 					name = "The Astral Portals",
 					storageId = Storage.ExplorerSociety.TheAstralPortals,
-					missionId = 11309,
+					missionId = 10308,
 					startValue = 56,
 					endValue = 56,
 					states = {
@@ -4181,7 +3986,7 @@ if not Quests then
 				[15] = {
 					name = "The Island of Dragons",
 					storageId = Storage.ExplorerSociety.TheIslandofDragons,
-					missionId = 11310,
+					missionId = 10309,
 					startValue = 57,
 					endValue = 59,
 					states = {
@@ -4193,7 +3998,7 @@ if not Quests then
 				[16] = {
 					name = "The Ice Music",
 					storageId = Storage.ExplorerSociety.TheIceMusic,
-					missionId = 11311,
+					missionId = 10310,
 					startValue = 60,
 					endValue = 62,
 					states = {
@@ -4207,7 +4012,7 @@ if not Quests then
 				[17] = {
 					name = "The Undersea Kingdom",
 					storageId = Storage.ExplorerSociety.CalassaQuest,
-					missionId = 11312,
+					missionId = 10311,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -4218,7 +4023,7 @@ if not Quests then
 				}
 			}
 		},
-		[31] = {
+		[30] = {
 			name = "The Ultimate Challenges",
 			startStorageId = Storage.SvargrondArena.QuestLogGreenhorn,
 			startStorageValue = 1,
@@ -4226,7 +4031,7 @@ if not Quests then
 				[1] = {
 					name = "Barbarian Arena - Greenhorn Mode",
 					storageId = Storage.SvargrondArena.QuestLogGreenhorn,
-					missionId = 11313,
+					missionId = 10312,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -4237,7 +4042,7 @@ if not Quests then
 				[2] = {
 					name = "Barbarian Arena - Scrapper Mode",
 					storageId = Storage.SvargrondArena.QuestLogScrapper,
-					missionId = 11314,
+					missionId = 10313,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -4248,7 +4053,7 @@ if not Quests then
 				[3] = {
 					name = "Barbarian Arena - Warlord Mode",
 					storageId = Storage.SvargrondArena.QuestLogWarlord,
-					missionId = 11315,
+					missionId = 10314,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -4258,7 +4063,7 @@ if not Quests then
 				}
 			}
 		},
-		[32] = {
+		[31] = {
 			name = "The White Raven Monastery",
 			startStorageId = Storage.WhiteRavenMonastery.QuestLog,
 			startStorageValue = 1,
@@ -4266,7 +4071,7 @@ if not Quests then
 				[1] = {
 					name = "Access to the Isle of Kings",
                     storageId = Storage.WhiteRavenMonastery.Passage,
-                    missionId = 10316,
+                    missionId = 10315,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -4277,7 +4082,7 @@ if not Quests then
 				[2] = {
 					name = "The Investigation",
 					storageId = Storage.WhiteRavenMonastery.Diary,
-					missionId = 10317,
+					missionId = 10316,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -4288,7 +4093,7 @@ if not Quests then
 				}
 			}
 		},
-		[33] = {
+		[32] = {
 			name = "Tibia Tales",
 			startStorageId = Storage.TibiaTales.DefaultStart,
 			startStorageValue = 1,
@@ -4296,7 +4101,7 @@ if not Quests then
 				[1] = {
 					name = "To Appease the Mighty",
                     storageId = Storage.TibiaTales.ToAppeaseTheMightyQuest,
-                    missionId = 10318,
+                    missionId = 10317,
 					startValue = 0,
 					endValue = 4,
 					states = {
@@ -4310,7 +4115,7 @@ if not Quests then
 				[2] = {
 					name = "Arito\'s Task",
 					storageId = Storage.TibiaTales.AritosTask,
-					missionId = 10319,
+					missionId = 10318,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -4322,7 +4127,7 @@ if not Quests then
 				[3] = {
 					name = "Lion\'s Rock",
 					storageId = Storage.LionsRock.Questline,
-					missionId = 10320,
+					missionId = 10319,
 					startValue = 1,
 					endValue = 12,
 					states = {
@@ -4378,7 +4183,7 @@ if not Quests then
 				[4] = {
 					name = "Against the Spider Cult",
 					storageId = Storage.TibiaTales.AgainstTheSpiderCult,
-					missionId = 10321,
+					missionId = 10320,
 					startValue = 1,
 					endValue = 6,
 					states = {
@@ -4393,7 +4198,7 @@ if not Quests then
 				[5] = {
 					name = "An Interest In Botany",
 					storageId = Storage.TibiaTales.AnInterestInBotany,
-					missionId = 10322,
+					missionId = 10321,
 					startValue = 1,
 					endValue = 4,
 					states = {
@@ -4409,7 +4214,7 @@ if not Quests then
 				[6] = {
 					name = "Graves Sanctified - In Progress",
 					storageId = Storage.TibiaTales.RestInHallowedGround.HolyWater,
-					missionId = 10323,
+					missionId = 10322,
 					startValue = 1,
 					endValue = 15,
 					description = function(player)
@@ -4422,7 +4227,7 @@ if not Quests then
 				[7] = {
 					name = "Into the Bone Pit",
 					storageId = Storage.TibiaTales.IntoTheBonePit,
-					missionId = 10324,
+					missionId = 10323,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -4435,7 +4240,7 @@ if not Quests then
 				[8] = {
 					name = "Rest in Hallowed Ground",
 					storageId = Storage.TibiaTales.RestInHallowedGround.Questline,
-					missionId = 10325,
+					missionId = 10324,
 					startValue = 1,
 					endValue = 5,
 					states = {
@@ -4450,7 +4255,7 @@ if not Quests then
 				[9] = {
 					name = "The Exterminator",
 					storageId = Storage.TibiaTales.TheExterminator,
-					missionId = 10326,
+					missionId = 10325,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -4464,7 +4269,7 @@ if not Quests then
 				[10] = {
 					name = "The Ultimate Booze",
 					storageId = Storage.TibiaTales.ultimateBoozeQuest,
-					missionId = 10327,
+					missionId = 10326,
 					startValue = 1,
 					endValue = 3,
 					states = {
@@ -4477,7 +4282,7 @@ if not Quests then
 				[11] = {
 					name = "Jack to the Future",
 					storageId = Storage.TibiaTales.JackFutureQuest.QuestLine,
-					missionId = 10328,
+					missionId = 10327,
 					startValue = 1,
 					endValue = 11,
 					states = {
@@ -4510,7 +4315,7 @@ if not Quests then
 				[12] = {
 					name = "The Cursed Crystal",
 					storageId = Storage.TibiaTales.TheCursedCrystal.Questline,
-					missionId = 10329,
+					missionId = 10328,
 					startValue = 0,
 					endValue = 4,
 					states = {
@@ -4529,7 +4334,7 @@ if not Quests then
 				}
 			}
 		},
-		[34] = {
+		[33] = {
 			name = "Unnatural Selection",
 			startStorageId = Storage.UnnaturalSelection.Questline,
 			startStorageValue = 1,
@@ -4633,7 +4438,7 @@ if not Quests then
 				}
 			}
 		},
-		[35] = {
+		[34] = {
 			name = "What a foolish Quest",
 			startStorageId = Storage.WhatAFoolish.Questline,
 			startStorageValue = 1,
@@ -4793,7 +4598,7 @@ if not Quests then
 				}
 			}
 		},
-		[36] = {
+		[35] = {
 			name = "Wrath of the Emperor",
 			startStorageId = Storage.WrathoftheEmperor.Questline,
 			startStorageValue = 1,
@@ -4970,7 +4775,7 @@ if not Quests then
 				}
 			}
 		},
-		[37] = {
+		[36] = {
 			name = "Oramond",
 			startStorageId = Storage.Oramond.QuestLine,
 			startStorageValue = 1,
@@ -4986,7 +4791,7 @@ if not Quests then
 				}
 			}
 		},
-		[38] = {
+		[37] = {
 			name = "Forgotten Knowledge",
 			startStorageId = Storage.ForgottenKnowledge.Tomes,
 			startStorageValue = 1,
@@ -5067,7 +4872,7 @@ if not Quests then
 				}
 			}
 		},
-		[39] = {
+		[38] = {
 			name = "The First Dragon",
 			startStorageId = Storage.FirstDragon.Questline,
 			startStorageValue = 1,
@@ -5111,7 +4916,7 @@ if not Quests then
 				}
 			}
 		},
-		[40] = {
+		[39] = {
 			name = "Cults of Tibia",
 			startStorageId = Storage.CultsOfTibia.Questline,
 			startStorageValue = 1,
@@ -5285,7 +5090,7 @@ if not Quests then
 				}
 			}
 		},
-		[41] = {
+		[40] = {
 			name = "Dangerous Depths",
 			startStorageId = Storage.DangerousDepths.Questline,
 			startStorageValue = 1,
@@ -5431,7 +5236,7 @@ if not Quests then
 				}
 			}
 		},
-		[42] = {
+		[41] = {
 			name = "Threatened Dreams",
 			startStorageId = Storage.ThreatenedDreams.Start,
 			startStorageValue = 1,
@@ -5478,7 +5283,7 @@ if not Quests then
 				}
 			}
 		},
-		[43] = {
+		[42] = {
 			name = "Adventurers Guild",
 			startStorageId = Storage.AdventurersGuild.GreatDragonHunt.WarriorSkeleton,
 			startStorageValue = 1,
@@ -5498,7 +5303,7 @@ if not Quests then
 				}
 			}
 		},
-		[44] = {
+		[43] = {
 			name = "Dawnport",
 			startStorageId = Storage.Quest.Dawnport.Questline,
 			startStorageValue = 1,
@@ -5599,7 +5404,7 @@ if not Quests then
 				},
 			}
 		},
-		[45] = {
+		[44] = {
 			name = "The Rookie Guard",
 			startStorageId = Storage.TheRookieGuard.Questline,
 			startStorageValue = 1,
@@ -5783,6 +5588,249 @@ if not Quests then
 				}
 			}
 		},
+		[45] = {
+			name = "The New Frontier",
+			startStorageId = Storage.Quest.TheNewFrontier.Questline,
+			startStorageValue = 1,
+			missions = {
+				[1] = {
+					name = "Mission 01: New Land",
+					storageId = Storage.Quest.TheNewFrontier.Mission01,
+					missionId = 10409,
+					startValue = 1,
+					endValue = 3,
+					states = {
+						[1] = "Explore the new land and reach the bottom of the mountain.",
+						[2] = "You have found a passage from the mountains. You can report back to Ongulf.",
+						[3] = "You have reported the scouted route to Ongulf."
+					}
+				},
+				[2] = {
+					name = "Mission 02: From Kazordoon With Love",
+					storageId = Storage.Quest.TheNewFrontier.Mission02,
+					missionId = 10410,
+					startValue = 1,
+					endValue = 4,
+					states = {
+						[1] = "Find Melfar of the imperial mining guild close to a mine entrance west of Kazordoon. \z
+						Ask him to send more miners and wood.",
+						[2] = "Prepare the three trees which Melfar marked on your map with the beaver bait. \z
+						Once you've marked all three return to Melfar and tell him about your success.",
+						[3] = "Melfar has finally promised to send more miners and wood. Report this to Ongulf in Farmine.",
+						[4] = "You have reported that Melfar will send more miners and wood for Farmine."
+					}
+				},
+				[3] = {
+					name = "Mission 03: Strangers in the Night",
+					storageId = Storage.Quest.TheNewFrontier.Mission03,
+					missionId = 10411,
+					startValue = 1,
+					endValue = 3,
+					states = {
+						[1] = "Find the unknown stalkers somewhere in the mountains. They apparently climbed up \z
+						somewhere during their escape. Try to negotiate a peaceful agreement if possible.",
+						[2] = "You have talked to the leader of the primitive humans and have assured their peacefulness. \z
+						Report this to Ongulf back in the base.",
+						[3] = "You have negotiated a peacful agreement between the dwarfs and the local primitives."
+					}
+				},
+				[4] = {
+					name = "Mission 04: The Mine Is Mine",
+					storageId = Storage.Quest.TheNewFrontier.Mission04,
+					missionId = 10412,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Free the mine of the monstrous threat. Use a lift to reach the mines and look for a leader \z
+						of the stone creatures. Slay this creature and report back to Ongulf.",
+						[2] = "You have slain the monster that terrorised the mines."
+					}
+				},
+				[5] = {
+					name = "Mission 05: Getting Things Busy",
+					storageId = Storage.Quest.TheNewFrontier.Mission05,
+					missionId = 10413,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Try getting the support of the people mentioned. Talk to them about \"farmine\", then \z
+							choose the \"flaatter\", \"threaten\", \"impress\", \"bluff\", \"reason\" or \"plea\" and report \z
+							any progress to Ongulf.",
+						[2] = "You have gained the necessary support for Farmine."
+					}
+				},
+				[6] = {
+					name = "Mission 5: Support of Kazordoon's Worm Tamer",
+					storageId = Storage.Quest.TheNewFrontier.Mission5_6_Humgolf,
+					missionId = 10414,
+					startValue = 1,
+					endValue = 1,
+					states = {
+						[1] = "Talk to the worm tamer in Kazordoon."
+					}
+				},
+				[7] = {
+					name = "Mission 5: Support of the Edron Academy",
+					storageId = Storage.Quest.TheNewFrontier.Mission5_4_Wydrin,
+					missionId = 10415,
+					startValue = 1,
+					endValue = 1,
+					states = {
+						[1] = "Talk to the magician Wyrdin in the Edron Academy."
+					}
+				},
+				[8] = {
+					name = "Mission 5: Support of the Explorer Society",
+					storageId = Storage.Quest.TheNewFrontier.Mission5_3_Angus,
+					missionId = 10416,
+					startValue = 1,
+					endValue = 1,
+					states = {
+						[1] = "Talk to the representative of the Explorer Society in Port Hope."
+					}
+				},
+				[9] = {
+					name = "Mission 5: Support of the Inventor Telas",
+					storageId = Storage.Quest.TheNewFrontier.Mission5_5_Telas,
+					missionId = 10417,
+					startValue = 1,
+					endValue = 1,
+					states = {
+						[1] = "Talk to the inventor Telas in Edron."
+					}
+				},
+				[10] = {
+					name = "Mission 5: Support of the Thaian King",
+					storageId = Storage.Quest.TheNewFrontier.Mission5_1_KingTibianus,
+					missionId = 10418,
+					startValue = 1,
+					endValue = 1,
+					states = {
+						[1] = "Talk to king Tibianus in the thaian castle."
+					}
+				},
+				[11] = {
+					name = "Mission 5: Support of the Venorean Traders",
+					storageId = Storage.Quest.TheNewFrontier.Mission5_2_Leeland,
+					missionId = 10419,
+					startValue = 1,
+					endValue = 1,
+					states = {
+						[1] = "Talk to Leeland Slim, the representative of the Venorean Traders."
+					}
+				},
+				[12] = {
+					name = "Mission 06: Days Of Doom",
+					storageId = Storage.Quest.TheNewFrontier.Mission06,
+					missionId = 10420,
+					startValue = 1,
+					endValue = 5,
+					states = {
+						[1] = "Try to pacify the orcs of the steppe. It is probably necessary to find some leader of the orcish tribes.",
+						[2] = "You have talked to the minotaur leaders of the orcs. They agreed to spare Farmine if you \z
+						prove your worth in their arena. You will have to survive against Mooh'Tah master for 2 minutes, so prepare!",
+						[3] = "You have survived the arena. Talk to Curos again about your mission.",
+						[4] = "Your negotiations had moderate success. Your can report back to Ongulf.",
+						[5] = "You have ensured a brittle peace between Farmine and the orcs."
+					}
+				},
+				[13] = {
+					name = "Mission 07: Messengers Of Peace",
+					storageId = Storage.Quest.TheNewFrontier.Mission07,
+					missionId = 10421,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Find a lizardman somewhere in the north and try to start a negotiation of peace.",
+						[2] = "It seems that the lizardmen are not interested in peace and you will have to focus \z
+						on other problems at hand."
+					}
+				},
+				[14] = {
+					name = "Mission 08: An Offer You Can't Refuse",
+					storageId = Storage.Quest.TheNewFrontier.Mission08,
+					missionId = 10422,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Captured by lizardmen trap you have to find a way out of the prison. Perhaps \z
+						something in your cell might lead you to an opportunity for freedom.",
+						[2] = "You managed to find a way of the captivity of the lizardmen - but for a price."
+					}
+				},
+				[15] = {
+					name = "Mission 09: Mortal Combat",
+					storageId = Storage.Quest.TheNewFrontier.Mission09,
+					missionId = 10423,
+					startValue = 1,
+					endValue = 3,
+					states = {
+						[1] = "You are expected to participate in the great tournament of the lizard race. \z
+						Travel to the Isle of Strife and brave the challenges there.",
+						[2] = "You are the champion of the great tournament! Still the lizardmen are a menace to \z
+						behold. You should report to Chrak before you leave the isle.",
+						[3] = "You have reported your latest doings to Chrak. It seems you bought the dwarfs some \z
+						time of peace. Only the dragon kings may know how long though."
+					}
+				},
+				[16] = {
+					name = "Mission 10: New Horizons",
+					storageId = Storage.Quest.TheNewFrontier.Mission10,
+					missionId = 10424,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Ongulf will be anxious to learn about your latest adventures. Travel back to Farmine \z
+						for a final report.",
+						[2] = "Ongulf got very satisfied with your journey, this land is yours to be taken. You can \z
+						find now on top of the mountain a red carpet, it might offer you access to some cities." -- This last questlog message is not accurate, need to update.
+					}
+				},
+				[17] = {
+					name = "Tome of Knowledge Counter",
+					storageId = Storage.Quest.TheNewFrontier.TomeofKnowledge,
+					missionId = 10425,
+					startValue = 1,
+					endValue = 12,
+					states = {
+						[1] = "You brought the fist Tome of Knowledge to Cael. He learnt more about the lizard culture. \z
+						Pompan will sell you dragon tapestries from now on.",
+						[2] = "You brought the second Tome of Knowledge to Cael. He learnt more about the minotaur culture. \z
+						Pompan will sell you minotaur backpacks from now on.",
+						[3] = "You brought the third Tome of Knowledge to Cael. \z
+						He learnt more about the last stand of the draken culture. Esrik will sell you lizard weapon rack from now on.",
+						[4] = "You brought the fourth Tome of Knowledge to Cael. \z
+						He learnt something interesting about a certain food that the lizardmen apparently prepare. \z
+						Swolt will trade you a bunch of ripe rice for 10 rice balls from now on.",
+						[5] = "You brought the fifth Tome of Knowledge to Cael. \z
+						He learnt more about the last stand of the lizards in the South, Zzaion. \z
+						Pompan will sell you lizard backpacks from now on.",
+						[6] = "You brought the sixth Tome of Knowledge to Cael. \z
+						He learnt a few things about the primitive human culture on this continent. \z
+						Cael will sell you War Drums and Didgeridoo from now on.",
+						[7] = "You brought the seventh Tome of Knowledge to Cael. \z
+						He learnt something interesting about the Zao steppe. \z
+						Now you to use the snake teleport at the peak of the mountain.",
+						[8] = "You brought the eighth Tome of Knowledge to Cael. \z
+						He learnt a few things about an illness. \z
+						Now you can enter a corruption hole in the north-eastern end of Zao.",
+						[9] = "You brought the ninth Tome of Knowledge to Cael. \z
+						He learnt something interesting about the Draken origin. \z
+						Esrik will buy lizard equipment from you now.",
+						[10] = "You brought the tenth Tome of Knowledge to Cael. \z
+						He learnt more about the last stand of the lizard dynasty. \z
+						Now you can enter the Zao Palace. It is situated deep underground, below the mountain base of the Lizards.",
+						[11] = "You brought the eleventh Tome of Knowledge to Cael. \z
+						He learnt something interesting about dragons and their symbolism. \z
+						You can buy a Dragon Statue from NPC Cael after you bring him a Red Lantern.",
+						[12] = "You brought the twelfth Tome of Knowledge to Cael. \z
+						He learnt something about reveals some of the power structures in Zao. \z
+						Cael will now make a Dragon Throne for you after you bring him a Red Piece of Cloth. \z
+						He will reward you with 5000 experience points for each extra tome you give to him."
+					}
+				}
+			}
+		},
 		[46] = {
 			name = "Spirithunters Quest",
 			startStorageId = Storage.SpiritHunters.Mission01,
@@ -5791,7 +5839,7 @@ if not Quests then
 				[1] = {
 					name = "Method",
 					storageId = Storage.SpiritHunters.Mission01,
-					missionId = 1018,
+					missionId = 10426,
 					startValue = 1,
 					endValue = 2,
 					states = {
@@ -5802,7 +5850,7 @@ if not Quests then
 				[2] = {
 					name = "First Mission",
 					storageId = Storage.SpiritHunters.Mission01,
-					missionId = 1019,
+					missionId = 10427,
 					startValue = 2,
 					endValue = 4,
 					states = {
@@ -5813,7 +5861,7 @@ if not Quests then
 				[3] = {
 					name = "Second Mission",
 					storageId = Storage.SpiritHunters.Mission01,
-					missionId = 1020,
+					missionId = 10428,
 					startValue = 4,
 					endValue = 6,
 					states = {
@@ -5822,7 +5870,7 @@ if not Quests then
 					}
 				}
 			}
-		},
+		}
 	}
 end
 

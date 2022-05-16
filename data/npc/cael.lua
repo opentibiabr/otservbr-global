@@ -73,22 +73,22 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	if MsgContains(message, "tome") or MsgContains(message, "knowledge") then
 		--The first 8 missions of The New Frontier Quest completed to be able to trade 6 Tomes of Knowledge with NPC Cael.
-		if player:getStorageValue(Storage.TheNewFrontier.Mission08) == 2 then
-			if player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) < 1 then --tome1
+		if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission08) == 2 then
+			if player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) < 1 then --tome1
 				npcHandler:say("Oh! That sounds fascinating. Have you found a Tome of Knowledge for me to read?", npc, creature)
 				npcHandler:setTopic(playerId, 1)
-			elseif player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 1 and player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) <= 5 then --tome2 - tome6
+			elseif player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) >= 1 and player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) <= 5 then --tome2 - tome6
 				npcHandler:say("Oh! That sounds fascinating. Have you found a new Tome of Knowledge for me to read?", npc, creature)
-				npcHandler:setTopic(playerId, player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) +1)
-			elseif player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 6 and player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) <= 11 then --tome7 - tome12
+				npcHandler:setTopic(playerId, player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) +1)
+			elseif player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) >= 6 and player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) <= 11 then --tome7 - tome12
 				--The New Frontier Quest completed to trade more Tomes of Knowledge with NPC Cael.
-				if player:getStorageValue(Storage.TheNewFrontier.Mission10) == 1 then
+				if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission10) == 1 then
 					npcHandler:say("Oh! That sounds fascinating. Have you found a new Tome of Knowledge for me to read?", npc, creature)
-					npcHandler:setTopic(playerId, player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) +1)
+					npcHandler:setTopic(playerId, player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) +1)
 				else
 					npcHandler:say("I'm sorry I'm busy. Speak with Ongulf to get some missions!", npc, creature)
 				end
-			elseif player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 12 then -- more then 12 tomes
+			elseif player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) >= 12 then -- more then 12 tomes
 				npcHandler:say("Oh! That sounds fascinating. Have you found a Tome of Knowledge for me to read? I have the feeling though that I can only share some of my experience with you now. Is that alright with you?", npc, creature)
 				npcHandler:setTopic(playerId, 13)
 			end
@@ -99,12 +99,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:removeItem(10217, 1) then --remove tome
 			if npcHandler:getTopic(playerId) == 1 then	--tome1
 				npcHandler:say("Thank you! I look forward to reading this interesting discovery of yours and learn a few things about {Zao}.", npc, creature)
-				player:setStorageValue(Storage.TheNewFrontier.TomeofKnowledge, 1)
+				player:setStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge, 1)
 				npcHandler:setTopic(playerId, 21)
 			elseif npcHandler:getTopic(playerId) >= 2 and npcHandler:getTopic(playerId) <= 12 then --tome2 - tome12
 				npcHandler:say("Thank you! I look forward to reading this interesting discovery of yours and learn a few things about {Zao}.", npc, creature)
-				player:setStorageValue(Storage.TheNewFrontier.TomeofKnowledge, player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) + 1)
-				npcHandler:setTopic(playerId, player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) +20)
+				player:setStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge, player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) + 1)
+				npcHandler:setTopic(playerId, player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) +20)
 			elseif npcHandler:getTopic(playerId) == 13 then -- more then 12 tomes
 				player:addExperience(5000, true)
 				npcHandler:say("Thank you! I look forward to reading this interesting discovery of yours and learn a few things about {Zao}. Let me share some experience with you.", npc, creature)
@@ -294,7 +294,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "lantern") then
-		if player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 11 then
+		if player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) >= 11 then
 		 	npcHandler:say("Have you brought me a red lantern for a dragon statue?", npc, creature)
 			npcHandler:setTopic(playerId, 65)
 		end
@@ -308,7 +308,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "cloth") then
-		if player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 12 then
+		if player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) >= 12 then
 		 	npcHandler:say("Have you brought me a piece of red cloth? I can make that throne for you if you want. But remember, I won't do that all the time - so try and don't destroy it, okay?", npc, creature)
 			npcHandler:setTopic(playerId, 66)
 		end
@@ -364,7 +364,7 @@ local function onTradeRequest(npc, creature)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 6 then
+	if player:getStorageValue(Storage.Quest.TheNewFrontier.TomeofKnowledge) >= 6 then
 		npcHandler:say("Sorry, I don't have items to trade now.", npc, creature)
 		return false
 	end

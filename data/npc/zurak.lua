@@ -18,7 +18,6 @@ npcConfig.flags = {
 	floorchange = false
 }
 
-
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 
@@ -55,16 +54,16 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "trip") or MsgContains(message, "passage") then
-		--if Player(creature):getStorageValue(Storage.TheNewFrontier.Questline) >= 24 then
+		if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) >= 24 then
 			npcHandler:say("You want trip to Izzle of Zztrife?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
-			--else
-			--npcHandler:say("You need The New Frontier Quest to travel.", npc, creature)
-		--end
+		else
+			npcHandler:say("You need permission to travel to.", npc, creature)
+		end
 	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("It'zz your doom you travel to.", npc, creature)
-			local player, destination = Player(creature), Position(33102, 31056, 7)
+			local destination = Position(33102, 31056, 7)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			player:teleportTo(destination)
 			destination:sendMagicEffect(CONST_ME_TELEPORT)

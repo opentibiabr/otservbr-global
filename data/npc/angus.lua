@@ -67,21 +67,18 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	-- The new frontier
 	elseif MsgContains(message, "farmine") then
-		if player:getStorageValue(Storage.TheNewFrontier.Questline) <= 15
-		and player:getStorageValue(Storage.TheNewFrontier.BribeExplorerSociety) < 1 then
+		if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 14 then
 			npcHandler:say("Oh yes, an interesting topic. We had vivid discussions about this discovery. But what is it that you want?", npc, creature)
 			npcHandler:setTopic(playerId, 30)
 		end
 	elseif MsgContains(message, "bluff") then
 		if npcHandler:getTopic(playerId) == 30 then
-			if player:getStorageValue(Storage.TheNewFrontier.BribeExplorerSociety) < 1 then
+			if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_3_Angus) == 1 then
 				npcHandler:say({
 					"Those stories are just amazing! Men with faces on their stomach instead of heads you say? And hens that lay golden eggs? Whereas, most amazing is this fountain of youth you've mentioned! ...",
 					"I'll immediately send some of our most dedicated explorers to check those things out!"
 				}, npc, creature)
-				player:setStorageValue(Storage.TheNewFrontier.BribeExplorerSociety, 1)
-				--Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
-				player:setStorageValue(Storage.TheNewFrontier.Mission05, player:getStorageValue(Storage.TheNewFrontier.Mission05) + 1)
+				player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_3_Angus, 2)
 			end
 		end
 

@@ -17031,7 +17031,13 @@
 	<item id="8746" article="a" name="ghost's tear">
 		<attribute key="weight" value="1000"/>
 	</item>
-	<item fromid="8747" toid="8752" article="an" name="old piece of paper">
+	<item id="8747" article="an" name="old piece of paper">
+		<attribute key="writeable" value="1"/>
+		<attribute key="writeonceitemid" value="8748"/>
+		<attribute key="maxtextlen" value="511"/>
+		<attribute key="weight" value="200"/>
+	</item>
+	<item fromid="8749" toid="8752" article="an" name="old piece of paper">
 		<attribute key="weight" value="200"/>
 	</item>
 	<item fromid="8753" toid="8754" article="a" name="wall mirror"/>

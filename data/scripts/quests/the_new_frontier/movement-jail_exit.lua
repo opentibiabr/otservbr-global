@@ -8,7 +8,7 @@ function jailExit.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.TheNewFrontier.Mission08) >= 1 then
+	if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission08) >= 1 then
 		player:teleportTo(destination)
 		position:sendMagicEffect(CONST_ME_TELEPORT)
 		destination:sendMagicEffect(CONST_ME_TELEPORT)

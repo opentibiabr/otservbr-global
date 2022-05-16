@@ -58,21 +58,21 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if MsgContains(message, "mission") and player:getStorageValue(Storage.TheNewFrontier.Questline) == 9 then
+	if MsgContains(message, "mission") and player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 8 then
 		if npcHandler:getTopic(playerId) == 0 then
 			npcHandler:say("Me people wanting {peace}. No war with others. No war with {little men}. We few. We weak. Need {help}. We not wanting make {war}. No hurt.", npc, creature)
 			npcHandler:setTopic(playerId, 10)
 		end
-	elseif MsgContains(message, "peace") and npcHandler:getTopic(playerId) == 10 and player:getStorageValue(Storage.TheNewFrontier.Questline) == 9 then
+	elseif MsgContains(message, "peace") and npcHandler:getTopic(playerId) == 10 and player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 8 then
 		npcHandler:say("Me people wanting peace. No war with others. No war with little men.", npc, creature)
-		player:setStorageValue(Storage.TheNewFrontier.Questline, 10)
-		player:setStorageValue(Storage.TheNewFrontier.Mission03, 2) --Questlog, The New Frontier Quest "Mission 03: Strangers in the Night"
+		player:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 9)
+		player:setStorageValue(Storage.Quest.TheNewFrontier.Mission03, 2) --Questlog, The New Frontier Quest "Mission 03: Strangers in the Night"
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "help") then
 		npcHandler:say("You mean you want help us?", npc, creature)
 		npcHandler:setTopic(playerId, 11)
 	elseif MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 12 and player:getStorageValue(Storage.UnnaturalSelection.Questline) < 1 
-	and player:getStorageValue(Storage.TheNewFrontier.Mission03) == 3 then
+	and player:getStorageValue(Storage.Quest.TheNewFrontier.Mission03) == 3 then
 		npcHandler:say({
 				"Big problem we have! Skull of first leader gone. He ancestor of whole tribe but died long ago in war. We have keep his skull on our sacred place. ...",
 				"Then one night, green men came with wolves... and one of wolves took skull and ran off chewing on it! We need back - many wisdom and power is in skull. Maybe they took to north fortress. But can be hard getting in. You try get our holy skull back?"

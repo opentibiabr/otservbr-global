@@ -1,6 +1,6 @@
 local childrenZalamon = Action()
 function childrenZalamon.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if player:getStorageValue(Storage.TheNewFrontier.Mission08) >= 2 and player:getStorageValue(Storage.WrathoftheEmperor.Mission11) < 2 then
+	if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission08) >= 2 and player:getStorageValue(Storage.WrathoftheEmperor.Mission11) < 2 then
 		if item.itemid == 9874 then
 			player:teleportTo(toPosition, true)
 			item:transform(item.itemid + 1)

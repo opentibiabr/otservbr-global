@@ -1053,6 +1053,21 @@ TileAction = {
 			{x = 31951, y = 32173, z = 10},
 			{x = 31951, y = 32174, z = 10}
 		}
+	},
+	-- The New Frontier Quest
+	[50364] = { -- Mission 07 - Prison Trap
+		itemId = false,
+		itemPos = {
+			{x = 33169, y = 31253, z = 10},
+			{x = 33170, y = 31253, z = 10},
+			{x = 33171, y = 31253, z = 10}
+		}
+	},
+	[50365] = { -- Mission 07 - Hidden Note
+		itemId = false,
+		itemPos = {
+			{x = 33165, y = 31249, z = 11}
+		}
 	}
 }
 
