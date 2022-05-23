@@ -93,12 +93,8 @@ function ExerciseEvent(playerId, tilePosition, weaponId, dummyId)
 		return false
 	end
 
-	local isMagic = false
+	local isMagic = ExerciseWeaponsTable[weaponId].skill == SKILL_MAGLEVEL
 	local bonusDummy = table.contains(HouseDummies, weaponId) or nil
-
-	if ExerciseWeaponsTable[weaponId].skill == SKILL_MAGLEVEL then
-		isMagic = true
-	end
 
 	if bonusDummy then bonusDummy = 1.1 else bonusDummy = 1 end
 
