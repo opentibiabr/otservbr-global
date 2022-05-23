@@ -83,7 +83,7 @@ local addSkillTriesFunc = Player.addSkillTries
 function Player.addSkillTries(...)
 	local arg = {...}
 	local param4 = arg[4]
-	local applySkill = (not param4 and true) or (param4 and false)
+	local applySkill = not param4
 	APPLY_SKILL_MULTIPLIER = applySkill
 	local ret = addSkillTriesFunc(...)
 	APPLY_SKILL_MULTIPLIER = true
@@ -94,7 +94,7 @@ local addManaSpentFunc = Player.addManaSpent
 function Player.addManaSpent(...)
 	local arg = {...}
 	local param3 = arg[3]
-	local applySkill = (not param3 and true) or (param3 and false)
+	local applySkill = not param3
 	APPLY_SKILL_MULTIPLIER = applySkill
 	local ret = addManaSpentFunc(...)
 	APPLY_SKILL_MULTIPLIER = true
