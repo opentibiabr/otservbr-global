@@ -451,7 +451,7 @@ end
 
 function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
 	-- Cults of Tibia begin
-	local frompos = Position(33023, 31904, 15) -- Checagem
+	local frompos = Position(33023, 31904, 14) -- Checagem
 	local topos = Position(33052, 31932, 15) -- Checagem
 	local removeItem = false
 	if self:getPosition():isInRange(frompos, topos) and item:getId() == 23729 then
@@ -472,6 +472,7 @@ function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder,
 				Game.setStorageValue('CheckTile', os.time()+30)
 			elseif tileBoss:getTopCreature():getName():lower() == 'the corruptor of souls' then
 				Game.setStorageValue('CheckTile', os.time()+30)
+				removeItem = true
 			end
 		end
 		if removeItem then
