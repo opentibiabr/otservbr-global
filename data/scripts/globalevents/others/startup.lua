@@ -83,15 +83,15 @@ function serverstartup.onStartup()
 	local banResultId = db.storeQuery('SELECT * FROM `account_bans` WHERE `expires_at` != 0 AND `expires_at` <= ' .. time)
 	if banResultId ~= false then
 		repeat
-			local accountId = result.getNumber(banResultId, 'account_id')
+			local accountId = Result.get32(banResultId, 'account_id')
 			db.asyncQuery('INSERT INTO `account_ban_history` (`account_id`, `reason`, `banned_at`, \z
 			`expired_at`, `banned_by`) VALUES (' .. accountId .. ', \z
-			' .. db.escapeString(result.getString(banResultId, 'reason')) .. ', \z
-			' .. result.getNumber(banResultId, 'banned_at') .. ', ' .. result.getNumber(banResultId, 'expires_at') .. ', \z
-			' .. result.getNumber(banResultId, 'banned_by') .. ')')
+			' .. db.escapeString(Result.getString(banResultId, 'reason')) .. ', \z
+			' .. Result.get64(banResultId, 'banned_at') .. ', ' .. Result.get64(banResultId, 'expires_at') .. ', \z
+			' .. Result.get32(banResultId, 'banned_by') .. ')')
 			db.asyncQuery('DELETE FROM `account_bans` WHERE `account_id` = ' .. accountId)
-		until not result.next(banResultId)
-		result.free(banResultId)
+		until not Result.next(banResultId)
+		Result.free(banResultId)
 	end
 
 	-- Ferumbras Ascendant quest
@@ -106,11 +106,11 @@ function serverstartup.onStartup()
 	`bid_end` != 0 AND `bid_end` < ' .. time)
 	if resultId ~= false then
 		repeat
-			local house = House(result.getNumber(resultId, 'id'))
+			local house = House(Result.get32(resultId, 'id'))
 			if house then
-				local highestBidder = result.getNumber(resultId, 'highest_bidder')
-				local balance = result.getNumber(resultId, 'balance')
-				local lastBid = result.getNumber(resultId, 'last_bid')
+				local highestBidder = Result.get32(resultId, 'highest_bidder')
+				local balance = Result.getU64(resultId, 'balance')
+				local lastBid = Result.get32(resultId, 'last_bid')
 				if balance >= lastBid then
 					db.query('UPDATE `players` SET `balance` = ' .. (balance - lastBid) .. ' WHERE `id` = ' .. highestBidder)
 					house:setOwnerGuid(highestBidder)
@@ -118,8 +118,8 @@ function serverstartup.onStartup()
 				db.asyncQuery('UPDATE `houses` SET `last_bid` = 0, `bid_end` = 0, `highest_bidder` = 0, \z
 				`bid` = 0 WHERE `id` = ' .. house:getId())
 			end
-		until not result.next(resultId)
-		result.free(resultId)
+		until not Result.next(resultId)
+		Result.free(resultId)
 	end
 
 	-- Client XP Display Mode

@@ -1,4 +1,4 @@
-local function chargerSpawn(pos)
+local function createCharger(pos)
 	Game.createMonster("charger", pos, false, true)
 	spawningCharge = false
 	return true
@@ -20,7 +20,7 @@ function chargerSpawn.onDeath(creature)
 	}
 
 	local pos = positions[math.random(1, #positions)]
-	addEvent(chargerSpawn, 6000, pos)
+	addEvent(createCharger, 6000, pos)
 	spawningCharge = true
 	return true
 end
