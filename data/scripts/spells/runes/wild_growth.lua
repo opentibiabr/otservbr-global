@@ -1,16 +1,16 @@
 function onCreateWildGrowth(creature, tile)
 	local wildGrowth
 	if Game.getWorldType() == WORLD_TYPE_NO_PVP then
-		wildGrowth = ITEM_MAGICWALL_SAFE
+		wildGrowth = ITEM_WILDGROWTH_SAFE
 	else
-		wildGrowth = ITEM_MAGICWALL
+		wildGrowth = ITEM_WILDGROWTH
 	end
 	local item = Game.createItem(wildGrowth, 1, tile)
 	item:setDuration(30, 60)
 end
 
 local combat = Combat()
-combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_EARTH)
+combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_ENERGY)
 combat:setCallback(CALLBACK_PARAM_TARGETTILE, "onCreateWildGrowth")
 
 local spell = Spell("rune")
