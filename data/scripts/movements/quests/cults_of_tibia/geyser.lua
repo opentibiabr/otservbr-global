@@ -37,7 +37,7 @@ function geyser.onStepIn(creature, item, position, fromPosition)
 			item:remove()
 			local subtract = bossTransform:getHealth() - currentLife
 			bossTransform:addHealth(-subtract)
-			bossTransform:registerEvent("spawnBoss")
+			bossTransform:registerEvent("SpawnBoss")
 			addEvent(bossTransformBack, 4*1000, bossTransform:getId(), item:getId())
 			return true
 		end
