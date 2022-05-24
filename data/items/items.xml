@@ -45451,22 +45451,22 @@
 	<item id="31595" article="a" name="noble amulet">
 		<attribute key="weight" value="65"/>
 	</item>
-	<item id="31596" article="a" name="dead count vlarkorth">
+	<item id="31596" article="a" name="dead lichwarrior">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
-	<item id="31597" article="a" name="dead count vlarkorth">
+	<item id="31597" article="a" name="dead lichwarrior">
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="31596"/>
 		<attribute key="containersize" value="16"/>
 	</item>
-	<item id="31598" article="a" name="dead count vlarkorth">
+	<item id="31598" article="a" name="dead lichwarrior">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="31597"/>
 		<attribute key="containersize" value="32"/>
 	</item>
-	<item id="31599" article="a" name="dead count vlarkorth">
+	<item id="31599" article="a" name="dead lichwarrior">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31598"/>
