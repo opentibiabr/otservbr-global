@@ -60,18 +60,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Small Enchanted Amethyst", chance = 15000, maxCount = 3},--done
-	{name = "Platinum Coin", chance = 50000, maxCount = 3},--done
-	{name = "Great Health Potion", chance = 50000, maxCount = 3},--done
-	{name = "Small Ruby", chance = 12700, maxCount = 3},--done
-	{name = "Onyx Arrow", chance = 30000, maxCount = 3},--done
-	{name = "Golden Armor", chance = 1000},
-	{name = "Green Gem", chance = 1300},--done
-	{name = "Damaged Armor Plates", chance = 1800, maxCount = 3},--done
-	{name = "Falcon Crest", chance = 400, maxCount = 3},--done
-	{name = "Patch of Fine Cloth", chance = 2500},--done
-	{name = "Falcon Coif", chance = 200},--done
-	{name = "Falcon Bow", chance = 200}--done
+	{name = "small enchanted amethyst", chance = 15000, maxCount = 3},
+	{name = "platinum coin", chance = 50000, maxCount = 3},
+	{name = "great health potion", chance = 50000, maxCount = 3},
+	{name = "small ruby", chance = 12700, maxCount = 3},
+	{name = "onyx arrow", chance = 30000, maxCount = 3},
+	{name = "golden armor", chance = 1000},
+	{name = "green gem", chance = 1300},
+	{name = "damaged armor plates", chance = 1800, maxCount = 3},
+	{name = "falcon crest", chance = 400, maxCount = 3},
+	{name = "patch of fine cloth", chance = 2500},
+	{name = "falcon coif", chance = 200},
+	{name = "falcon bow", chance = 200}
 }
 
 monster.attacks = {

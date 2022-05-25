@@ -83,7 +83,7 @@ monster.loot = {
 	{name = "small emerald", chance = 10290, maxCount = 2},
 	{name = "small amethyst", chance = 10680, maxCount = 2},
 	{name = "platinum coin", chance = 100000, maxCount = 6},
-	{id = 3092, chance = 1550}, -- Axe ring
+	{id = 3092, chance = 1550}, -- axe ring
 	{name = "war hammer", chance = 5050},
 	{name = "warrior helmet", chance = 580},
 	{name = "guardian shield", chance = 2300},
@@ -98,7 +98,7 @@ monster.loot = {
 	{name = "great mana potion", chance = 6660, maxCount = 2},
 	{name = "great health potion", chance = 7960},
 	{name = "shiny stone", chance = 4660},
-	{id = 12600, chance = 780},
+	{id = 12600, chance = 780}, -- coal
 	{name = "green crystal shard", chance = 1750},
 	{name = "green crystal splinter", chance = 3110},
 	{name = "brown crystal splinter", chance = 5630, maxCount = 2},

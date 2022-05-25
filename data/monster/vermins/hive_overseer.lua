@@ -91,7 +91,7 @@ monster.loot = {
 	{name = "platinum coin", chance = 84000, maxCount = 6},
 	{name = "steel boots", chance = 550},
 	{name = "great mana potion", chance = 18000},
-	{id = 281, chance = 6000},
+	{id = 281, chance = 6000}, -- giant shimmering pearl (green)
 	{name = "ultimate health potion", chance = 12000},
 	{name = "gold ingot", chance = 29000},
 	{name = "kollos shell", chance = 28000},

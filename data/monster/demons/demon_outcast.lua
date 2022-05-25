@@ -94,9 +94,9 @@ monster.loot = {
 	{name = "small emerald", chance = 10000, maxCount = 5},
 	{name = "platinum coin", chance = 100000, maxCount = 6},
 	{name = "might ring", chance = 910},
-	{id = 3049, chance = 1300}, -- Stealth ring
+	{id = 3049, chance = 1300}, -- stealth ring
 	{name = "platinum amulet", chance = 1000},
-	{id = 3098, chance = 3000}, -- Ring of healing
+	{id = 3098, chance = 3000}, -- ring of healing
 	{name = "giant sword", chance = 2000},
 	{name = "ice rapier", chance = 660},
 	{name = "devil helmet", chance = 910},
@@ -104,7 +104,7 @@ monster.loot = {
 	{name = "crown shield", chance = 740},
 	{name = "demon shield", chance = 170},
 	{name = "fire mushroom", chance = 20600, maxCount = 6},
-	{id = 5906, chance = 1000},
+	{id = 5906, chance = 1000}, -- demon dust
 	{name = "assassin star", chance = 8340, maxCount = 10},
 	{name = "demonrage sword", chance = 350},
 	{name = "great mana potion", chance = 18000, maxCount = 2},
