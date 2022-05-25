@@ -88,11 +88,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2828, chance = 910},
+	{id = 2828, chance = 910}, -- book
 	{name = "piggy bank", chance = 130},
 	{name = "small sapphire", chance = 550},
 	{name = "gold coin", chance = 64550, maxCount = 70},
-	{id = 3051, chance = 450}, -- Energy ring
+	{id = 3051, chance = 450}, -- energy ring
 	{name = "platinum amulet", chance = 200},
 	{name = "wand of inferno", chance = 180},
 	{name = "protection amulet", chance = 790},
@@ -100,7 +100,7 @@ monster.loot = {
 	{name = "blue robe", chance = 40},
 	{name = "jewelled backpack", chance = 100},
 	{name = "pirate voodoo doll", chance = 430},
-	{id = 6090, chance = 490},
+	{id = 6090, chance = 490}, -- music sheet
 	{name = "amber staff", chance = 100},
 	{name = "strong mana potion", chance = 740},
 	{name = "cultish mask", chance = 10250},

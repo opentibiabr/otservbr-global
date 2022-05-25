@@ -63,15 +63,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3031, chance = 6230, maxCount = 30},
-	{id = 3430, chance = 2850},
-	{id = 3577, chance = 3260, maxCount = 2},
-	{id = 3492, chance = 32500, maxCount = 5},
-	{id = 3286, chance = 3335},
-	{id = 3582, chance = 3160, maxCount = 2},
-	{id = 3264, chance = 3335},
-	{id = 3300, chance = 900},
-	{id = 3374, chance = 1250}
+	{id = 3031, chance = 6230, maxCount = 30}, -- gold coin
+	{id = 3430, chance = 2850}, -- copper shield
+	{id = 3577, chance = 3260, maxCount = 2}, -- meat
+	{id = 3492, chance = 32500, maxCount = 5}, -- worm
+	{id = 3286, chance = 3335}, -- mace
+	{id = 3582, chance = 3160, maxCount = 2}, -- ham
+	{id = 3264, chance = 3335}, -- sword
+	{id = 3300, chance = 900}, -- katana
+	{id = 3374, chance = 1250} -- legion helmet
 }
 
 monster.attacks = {

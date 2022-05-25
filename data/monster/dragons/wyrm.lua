@@ -84,7 +84,7 @@ monster.loot = {
 	{name = "gold coin", chance = 30000, maxCount = 100},
 	{name = "gold coin", chance = 30000, maxCount = 30},
 	{name = "crossbow", chance = 5920},
-	{id = 3449, chance = 7650, maxCount = 10}, -- Burst arrow
+	{id = 3449, chance = 7650, maxCount = 10}, -- burst arrow
 	{name = "dragon ham", chance = 34800, maxCount = 3},
 	{name = "dragonbone staff", chance = 110},
 	{name = "strong health potion", chance = 19970},

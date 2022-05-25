@@ -81,7 +81,7 @@ monster.loot = {
 	{name = "grainy fireworks powder", chance = 6640},
 	{name = "broken bell", chance = 5390},
 	{name = "versicolour fireworks powder", chance = 4220},
-	{id = 30325, chance = 3190},
+	{id = 30325, chance = 3190}, -- dark bell
 	{name = "green fireworks powder", chance = 2790},
 	{name = "purple fireworks powder", chance = 2090},
 	{name = "turquoise fireworks powder", chance = 1980},

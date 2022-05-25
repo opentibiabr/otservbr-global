@@ -96,7 +96,7 @@ monster.loot = {
 	{name = "knight axe", chance = 5760},
 	{name = "wand of starstorm", chance = 4710},
 	{name = "sacred tree amulet", chance = 2880},
-	{id = 281, chance = 2090}, -- giant shimmering pearl
+	{id = 281, chance = 2090}, -- giant shimmering pearl (green)
 	{name = "gemmed figurine", chance = 790},
 	{name = "human teeth", chance = 520}
 }

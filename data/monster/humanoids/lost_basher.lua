@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "terra boots", chance = 780},
 	{name = "ultimate health potion", chance = 10250},
 	{name = "small topaz", chance = 10200},
-	{id = 12600, chance = 21130},
+	{id = 12600, chance = 21130}, -- coal
 	{name = "blue crystal shard", chance = 840},
 	{name = "lost basher's spike", chance = 17260},
 	{name = "lost basher's spike", chance = 14380},

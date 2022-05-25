@@ -94,7 +94,7 @@ monster.loot = {
 	{name = "sacred tree amulet", chance = 4000},
 	{name = "springsprout rod", chance = 4610},
 	{name = "diamond sceptre", chance = 3950},
-	{id = 281, chance = 3570}, -- giant shimmering pearl
+	{id = 281, chance = 3570}, -- giant shimmering pearl (green)
 	{name = "ice rapier", chance = 3950},
 	{id = 3289, chance = 3760}, -- staff
 	{name = "wand of cosmic energy", chance = 3620},

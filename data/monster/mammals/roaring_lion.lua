@@ -75,18 +75,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3031, chance = 100000, maxCount = 114},
-	{id = 3577, chance = 25000},
-	{id = 3582, chance = 25000},
-	{id = 9691, chance = 16666},
-	{id = 3035, chance = 10000},
-	{id = 3030, chance = 7692},
-	{id = 3033, chance = 7142},
-	{id = 9057, chance = 6666},
-	{id = 3029, chance = 5555},
-	{id = 3077, chance = 1612},
-	{id = 3048, chance = 1204},
-	{id = 3385, chance = 1010}
+	{id = 3031, chance = 100000, maxCount = 114}, -- gold coin
+	{id = 3577, chance = 25000}, -- meat
+	{id = 3582, chance = 25000}, -- ham
+	{id = 9691, chance = 16666}, -- lion's mane
+	{id = 3035, chance = 10000}, -- platinum coin
+	{id = 3030, chance = 7692}, -- small ruby
+	{id = 3033, chance = 7142}, -- small amethyst
+	{id = 9057, chance = 6666}, -- small topaz
+	{id = 3029, chance = 5555}, -- small sapphire
+	{id = 3077, chance = 1612}, -- ankh
+	{id = 3048, chance = 1204}, -- might ring
+	{id = 3385, chance = 1010} -- crown helmet
 }
 
 monster.attacks = {

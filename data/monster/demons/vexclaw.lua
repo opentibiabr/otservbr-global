@@ -95,15 +95,15 @@ monster.loot = {
 	{name = "talon", chance = 5400},
 	{name = "yellow gem", chance = 5090},
 	{name = "wand of voodoo", chance = 4940},
-	{id= 3039, chance = 4730},
+	{id= 3039, chance = 4730}, -- red gem
 	{name = "ice rapier", chance = 4730},
 	{name = "fire axe", chance = 3520},
 	{name = "might ring", chance = 2250},
 	{name = "giant sword", chance = 1880},
-	{id = 3049, chance = 1790}, -- Stealth ring
-	{id = 3051, chance = 1790}, -- Energy ring
+	{id = 3049, chance = 1790}, -- stealth ring
+	{id = 3051, chance = 1790}, -- energy ring
 	{name = "rift lance", chance = 1360},
-	{id = 3098, chance = 1320}, -- Ring of healing
+	{id = 3098, chance = 1320}, -- ring of healing
 	{name = "platinum amulet", chance = 940},
 	{name = "devil helmet", chance = 520},
 	{name = "rift crossbow", chance = 370},

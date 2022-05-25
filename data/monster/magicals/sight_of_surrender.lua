@@ -105,7 +105,7 @@ monster.loot = {
 	{name = "cluster of solace", chance = 1800},
 	{name = "sight of surrender's eye", chance = 100000},
 	{name = "broken visor", chance = 100000},
-	{id = 20208, chance = 460}
+	{id = 20208, chance = 460} -- string of mending
 }
 
 monster.attacks = {
