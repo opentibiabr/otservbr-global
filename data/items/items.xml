@@ -2849,6 +2849,7 @@
 	</item>
 	<item id="2128" article="a" name="magic wall">
 		<attribute key="type" value="magicfield"/>
+		<attribute key="blocking" value="1"/>
 		<attribute key="duration" value="20"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
@@ -2858,7 +2859,7 @@
 	<item id="2130" article="a" name="rush wood">
 		<attribute key="type" value="magicfield"/>
 		<attribute key="blocking" value="1"/>
-		<attribute key="duration" value="45"/>
+		<attribute key="duration" value="20"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="2131" article="a" name="fire field">
