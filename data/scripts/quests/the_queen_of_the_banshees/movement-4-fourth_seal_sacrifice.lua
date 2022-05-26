@@ -1,7 +1,7 @@
 local fourthSealSacrifice = MoveEvent()
 
 function fourthSealSacrifice.onAddItem(moveitem, tileitem, position)
-	if moveitem.itemid ~= 2886 or moveitem.type ~= 2 then
+	if moveitem.itemid ~= 2886 or moveitem.type ~= 5 then
 		return true
 	end
 
