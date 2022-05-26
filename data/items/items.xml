@@ -39534,7 +39534,7 @@
 	<item fromid="27538" toid="27541" name="RESERVED SPRITE"/>
 	<item id="27542" article="a" name="dead deepworm">
 		<attribute key="duration" value="60"/>
-		<attribute key="decayTo" value="10"/>
+		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="27543" article="a" name="dead deepworm">
 		<attribute key="fluidsource" value="blood"/>

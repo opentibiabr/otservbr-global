@@ -92,11 +92,11 @@ monster.loot = {
 	{name = "small emerald", chance = 10190, maxCount = 3},
 	{name = "small amethyst", chance = 14570, maxCount = 3},
 	{name = "platinum coin", chance = 87730, maxCount = 4},
-	{id = 3049, chance = 550}, -- Stealth ring
+	{id = 3049, chance = 550}, -- stealth ring
 	{name = "blank rune", chance = 22500, maxCount = 2},
 	{name = "crown armor", chance = 660},
 	{name = "shadow herb", chance = 26930, maxCount = 2},
-	{id = 6299, chance = 330},
+	{id = 6299, chance = 330}, -- death ring
 	{name = "demonic essence", chance = 16320},
 	{name = "abyss hammer", chance = 110},
 	{name = "shadow sceptre", chance = 550},

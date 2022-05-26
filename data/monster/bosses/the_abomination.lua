@@ -64,10 +64,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3031, chance = 100000, maxCount = 100},
-	{id = 3035, chance = 10000, maxCount = 3},
-	{id = 6499, chance = 2857},
-	{id = 5944, chance = 2500}
+	{id = 3031, chance = 100000, maxCount = 100}, -- gold coin
+	{id = 3035, chance = 10000, maxCount = 3}, -- platinum coin
+	{id = 6499, chance = 2857}, -- demonic essence
+	{id = 5944, chance = 2500} -- soul orb
 }
 
 monster.attacks = {

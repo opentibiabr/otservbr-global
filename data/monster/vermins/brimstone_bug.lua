@@ -77,7 +77,7 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "small emerald", chance = 2702, maxCount = 4},
-	{id = 3049, chance = 892}, -- Stealth ring
+	{id = 3049, chance = 892}, -- stealth ring
 	{name = "platinum amulet", chance = 110},
 	{name = "magic sulphur", chance = 1639},
 	{name = "strong health potion", chance = 9003},

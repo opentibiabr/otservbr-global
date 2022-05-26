@@ -83,7 +83,7 @@ monster.loot = {
 	{name = "brown crystal splinter", chance = 5030},
 	{name = "wand of starstorm", chance = 4920},
 	{name = "small enchanted emerald", chance = 4630},
-	{id = 3091, chance = 4490}, -- Sword ring
+	{id = 3091, chance = 4490}, -- sword ring
 	{name = "wand of voodoo", chance = 3990},
 	{name = "protection amulet", chance = 2660},
 	{name = "werehyaena talisman", chance = 650},

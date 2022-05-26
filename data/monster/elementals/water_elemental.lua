@@ -84,15 +84,15 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "small emerald", chance = 1000, maxCount = 2},
 	{name = "platinum coin", chance = 10000},
-	{id = 3051, chance = 950}, -- Energy ring
-	{id = 3052, chance = 930}, -- Life ring
-	{id = 3578, chance = 20000},
+	{id = 3051, chance = 950}, -- energy ring
+	{id = 3052, chance = 930}, -- life ring
+	{id = 3578, chance = 20000}, -- fish
 	{name = "rainbow trout", chance = 940},
 	{name = "green perch", chance = 1050},
 	{name = "strong health potion", chance = 10000},
 	{name = "strong mana potion", chance = 10000},
-	{id = 281, chance = 800},
-	{id = 282, chance = 800}
+	{id = 281, chance = 800}, -- giant shimmering pearl (green)
+	{id = 282, chance = 800} -- giant shimmering pearl (brown)
 }
 
 monster.attacks = {

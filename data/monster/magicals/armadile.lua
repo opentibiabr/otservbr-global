@@ -80,7 +80,7 @@ monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 100},
 	{name = "gold coin", chance = 100000, maxCount = 98},
 	{name = "platinum coin", chance = 95000, maxCount = 7},
-	{id = 3053, chance = 1000},
+	{id = 3053, chance = 1000}, -- time ring
 	{name = "tower shield", chance = 620},
 	{name = "titan axe", chance = 1540},
 	{name = "bonebreaker", chance = 1150},
@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "terra boots", chance = 2850},
 	{name = "crystalline armor", chance = 230},
 	{name = "battle stone", chance = 12460},
-	{id = 12600, chance = 6000},
+	{id = 12600, chance = 6000}, -- coal
 	{name = "green crystal splinter", chance = 3920, maxCount = 2},
 	{name = "green crystal fragment", chance = 5690, maxCount = 2},
 	{name = "crystalline spikes", chance = 14540},
