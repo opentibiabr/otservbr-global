@@ -17,7 +17,7 @@ function spellCallback(param)
 	if tile then
 		if tile:getTopCreature() and tile:getTopCreature():isMonster() then
 			if tile:getTopCreature():getName():lower() == "leiden" then
-				tile:getTopCreature():registerEvent("SpawnBoss")
+				tile:getTopCreature():registerEvent("spawnBoss")
 				tile:getTopCreature():addHealth(-math.random(3000, 6000))
 			elseif tile:getTopCreature():getName():lower() == "ravenous hunger" then
 				tile:getTopCreature():addHealth(math.random(3000, 6000))
