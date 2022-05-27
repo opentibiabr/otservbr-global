@@ -597,12 +597,20 @@ soulCondition:setTicks(4 * 60 * 1000)
 soulCondition:setParameter(CONDITION_PARAM_SOULGAIN, 1)
 
 local function useStamina(player)
+	if not player then
+		return false
+	end
+
 	local staminaMinutes = player:getStamina()
 	if staminaMinutes == 0 then
 		return
 	end
 
 	local playerId = player:getId()
+	if not playerId then
+		return false
+	end
+
 	local currentTime = os.time()
 	local timePassed = currentTime - nextUseStaminaTime[playerId]
 	if timePassed <= 0 then
@@ -625,13 +633,21 @@ local function useStamina(player)
 	player:setStamina(staminaMinutes)
 end
 
-local function useStaminaXp(player)
+local function useStaminaXpBoost(player)
+	if not player then
+		return false
+	end
+
 	local staminaMinutes = player:getExpBoostStamina() / 60
 	if staminaMinutes == 0 then
 		return
 	end
 
 	local playerId = player:getId()
+	if not playerId then
+		return false
+	end
+
 	local currentTime = os.time()
 	local timePassed = currentTime - nextUseXpStamina[playerId]
 	if timePassed <= 0 then
@@ -652,8 +668,8 @@ local function useStaminaXp(player)
 	player:setExpBoostStamina(staminaMinutes * 60)
 end
 
-function Player:onGainExperience(source, exp, rawExp)
-	if not source or source:isPlayer() then
+function Player:onGainExperience(target, exp, rawExp)
+	if not target or target:isPlayer() then
 		return exp
 	end
 
@@ -665,25 +681,15 @@ function Player:onGainExperience(source, exp, rawExp)
 	end
 
 	-- Experience Stage Multiplier
-	local expStage = getRateFromTable(experienceStages, self:getLevel(), configManager.getNumber(configKeys.RATE_EXP))
-	exp = exp * expStage
-	baseExp = rawExp * expStage
-	if Game.getStorageValue(GlobalStorage.XpDisplayMode) > 0 then
-		displayRate = expStage
-	else
-		displayRate = 1
-	end
+	local expStage = getRateFromTable(experienceStages, self:getLevel(), configManager.getNumber(configKeys.RATE_EXPERIENCE))
 
-	-- Prey system
-	if configManager.getBoolean(configKeys.PREY_ENABLED) then
-		local monsterType = source:getType()
-		if monsterType and monsterType:raceId() > 0 then
-			exp = math.ceil((exp * self:getPreyExperiencePercentage(monsterType:raceId())) / 100)
-		end
+	-- Event scheduler
+	if SCHEDULE_EXP_RATE ~= 100 then
+		expStage = math.max(0, (expStage * SCHEDULE_EXP_RATE)/100)
 	end
 
 	-- Store Bonus
-	useStaminaXp(self) -- Use store boost stamina
+	useStaminaXpBoost(self) -- Use store boost stamina
 
 	local Boost = self:getExpBoostStamina()
 	local stillHasBoost = Boost > 0
@@ -691,36 +697,33 @@ function Player:onGainExperience(source, exp, rawExp)
 
 	self:setStoreXpBoost(storeXpBoostAmount)
 
-	if (storeXpBoostAmount > 0) then
-		exp = exp + (baseExp * (storeXpBoostAmount/100)) -- Exp Boost
-	end
-
 	-- Stamina Bonus
+	local staminaBoost = 1
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then
 		useStamina(self)
 		local staminaMinutes = self:getStamina()
-		if staminaMinutes > 2340 and self:isPremium() then
-			exp = exp * 1.5
-			self:setStaminaXpBoost(150)
-		elseif staminaMinutes <= 840 then
-			exp = exp * 0.5 --TODO destroy loot of people with 840- stamina
-			self:setStaminaXpBoost(50)
-		else
-			self:setStaminaXpBoost(100)
-		end
+			if staminaMinutes > 2340 and self:isPremium() then
+				staminaBoost = 1.5
+			elseif staminaMinutes <= 840 then
+				staminaBoost = 0.5 --TODO destroy loot of people with 840- stamina
+			end
+		self:setStaminaXpBoost(staminaBoost * 100)
 	end
 
 	-- Boosted creature
-	if source:getName():lower() == (Game.getBoostedCreature()):lower() then
+	if target:getName():lower() == (Game.getBoostedCreature()):lower() then
 		exp = exp * 2
 	end
 
-	-- Event scheduler
-	if SCHEDULE_EXP_RATE ~= 100 then
-		exp = (exp * SCHEDULE_EXP_RATE)/100
+	-- Prey system
+	if configManager.getBoolean(configKeys.PREY_ENABLED) then
+		local monsterType = target:getType()
+		if monsterType and monsterType:raceId() > 0 then
+			exp = math.ceil((exp * self:getPreyExperiencePercentage(monsterType:raceId())) / 100)
+		end
 	end
-	self:setBaseXpGain(displayRate * 100)
-	return exp
+
+	return math.max((exp * expStage + (exp * (storeXpBoostAmount/100))) * staminaBoost)
 end
 
 function Player:onLoseExperience(exp)
@@ -737,18 +740,23 @@ function Player:onGainSkillTries(skill, tries)
 	end
 
 	-- Event scheduler skill rate
+	local STAGES_DEFAULT = skillsStages or nil
+	local SKILL_DEFAULT = self:getSkillLevel(skill)
+	local RATE_DEFAULT = configManager.getNumber(configKeys.RATE_SKILL)
+
+	if(skill == SKILL_MAGLEVEL) then -- Magic Level
+		STAGES_DEFAULT = magicLevelStages or nil
+		SKILL_DEFAULT = self:getBaseMagicLevel()
+		RATE_DEFAULT = configManager.getNumber(configKeys.RATE_MAGIC)
+	end
+
+	skillOrMagicRate = getRateFromTable(STAGES_DEFAULT, SKILL_DEFAULT, RATE_DEFAULT)
+
 	if SCHEDULE_SKILL_RATE ~= 100 then
-		tries = (tries * SCHEDULE_SKILL_RATE)/100
+		skillOrMagicRate = math.max(0, (skillOrMagicRate * SCHEDULE_SKILL_RATE) / 100)
 	end
 
-	local skillRate = configManager.getNumber(configKeys.RATE_SKILL)
-	local magicRate = configManager.getNumber(configKeys.RATE_MAGIC)
-
-	if(skill == SKILL_MAGLEVEL) then -- Magic getLevel
-		return tries * getRateFromTable(magicLevelStages, self:getBaseMagicLevel(), magicRate)
-	end
-
-	return tries * getRateFromTable(skillsStages, self:getSkillLevel(skill), skillRate)
+	return tries / 100 * (skillOrMagicRate * 100)
 end
 
 function Player:onRemoveCount(item)
