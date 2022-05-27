@@ -286,7 +286,6 @@ local function antiPush(self, item, count, fromPosition, toPosition, fromCylinde
 end
 
 function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
-
 	-- No move items with actionID = 100
 	if item:getActionId() == NOT_MOVEABLE_ACTION then
 		self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
@@ -316,32 +315,6 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 			return false
 		end
 	end
-
-	-- Cults of Tibia begin
-	local frompos = Position(33023, 31904, 14) -- Checagem
-	local topos = Position(33052, 31932, 15) -- Checagem
-	if self:getPosition():isInRange(frompos, topos) and item:getId() == 23729 then
-		local tileBoss = Tile(toPosition)
-		if tileBoss and tileBoss:getTopCreature() and tileBoss:getTopCreature():isMonster() then
-			if tileBoss:getTopCreature():getName():lower() == 'the remorseless corruptor' then
-				tileBoss:getTopCreature():addHealth(-17000)
-				item:remove(1)
-				if tileBoss:getTopCreature():getHealth() <= 300 then
-					tileBoss:getTopCreature():remove()
-					local monster = Game.createMonster('the corruptor of souls', toPosition)
-					monster:registerEvent('CheckTile')
-					if Game.getStorageValue('healthSoul') > 0 then
-						monster:addHealth(-(monster:getHealth() - Game.getStorageValue('healthSoul')))
-					end
-					Game.setStorageValue('CheckTile', os.time()+30)
-				end
-			elseif tileBoss:getTopCreature():getName():lower() == 'the corruptor of souls' then
-				Game.setStorageValue('CheckTile', os.time()+30)
-				item:remove(1)
-			end
-		end
-	end
-	-- Cults of Tibia end
 
 	-- SSA exhaust
 	local exhaust = { }
@@ -477,6 +450,37 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 end
 
 function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+	-- Cults of Tibia begin
+	local frompos = Position(33023, 31904, 14) -- Checagem
+	local topos = Position(33052, 31932, 15) -- Checagem
+	local removeItem = false
+	if self:getPosition():isInRange(frompos, topos) and item:getId() == 23729 then
+		local tileBoss = Tile(toPosition)
+		if tileBoss and tileBoss:getTopCreature() and tileBoss:getTopCreature():isMonster() then
+			if tileBoss:getTopCreature():getName():lower() == 'the remorseless corruptor' then
+				tileBoss:getTopCreature():addHealth(-17000)
+				tileBoss:getTopCreature():remove()
+				local monster = Game.createMonster('The Corruptor of Souls', toPosition)
+				if not monster then
+					return false
+				end
+				removeItem = true
+				monster:registerEvent('CheckTile')
+				if Game.getStorageValue('healthSoul') > 0 then
+					monster:addHealth(-(monster:getHealth() - Game.getStorageValue('healthSoul')))
+				end
+				Game.setStorageValue('CheckTile', os.time()+30)
+			elseif tileBoss:getTopCreature():getName():lower() == 'the corruptor of souls' then
+				Game.setStorageValue('CheckTile', os.time()+30)
+				removeItem = true
+			end
+		end
+		if removeItem then
+			item:remove(1)
+		end
+	end
+	-- Cults of Tibia end
+	return true
 end
 
 function Player:onMoveCreature(creature, fromPosition, toPosition)
