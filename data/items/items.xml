@@ -48879,7 +48879,9 @@
 		<attribute key="speed" value="30"/>
 		<attribute key="armor" value="4"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="imbuementslot" value="1"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
 	</item>
 	<item id="34098" name="pair of soulstalkers">
 		<attribute key="absorbpercentphysical" value="5"/>
@@ -48887,7 +48889,9 @@
 		<attribute key="speed" value="40"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="1300"/>
-		<attribute key="imbuementslot" value="1"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase speed" value="3"/>
+		</attribute>
 	</item>
 	<item id="34099" article="a" name="soulbastion">
 		<attribute key="weaponType" value="shield"/>
