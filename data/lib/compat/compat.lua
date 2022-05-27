@@ -531,7 +531,7 @@ function doConvinceCreature(cid, target)
 		return false
 	end
 
-	creature:addSummon(targetCreature)
+	creature:setSummon(targetCreature)
 	return true
 end
 
