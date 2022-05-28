@@ -74,7 +74,7 @@ monster.voices = {
 monster.loot = {
 	{name = "curious matter", chance = 8920, maxCount = 10},
 	{name = "spark sphere", chance = 21200, maxCount = 10},
-	{id = 282, chance = 26900},
+	{id = 282, chance = 26900}, -- giant shimmering pearl (brown)
 	{name = "wand of defiance", chance = 8920},
 	{name = "rift lance", chance = 13200},
 	{name = "rift crossbow", chance = 7620},

@@ -88,7 +88,7 @@ monster.loot = {
 	{name = "piggy bank", chance = 220},
 	{name = "gold coin", chance = 56500, maxCount = 100},
 	{name = "gold coin", chance = 40000, maxCount = 47},
-	{id = 3051, chance = 1800}, -- Energy ring
+	{id = 3051, chance = 1800}, -- energy ring
 	{name = "skull staff", chance = 6500},
 	{name = "magic sulphur", chance = 600},
 	{name = "red piece of cloth", chance = 1420},
@@ -99,7 +99,7 @@ monster.loot = {
 	{name = "raspberry", chance = 8500, maxCount = 5},
 	{name = "spellbook of mind control", chance = 370},
 	{name = "royal tapestry", chance = 520},
-	{name = "black skull", chance = 820},
+	{id = 9056, chance = 820}, -- black skull
 	{name = "gold ingot", chance = 70},
 	{name = "crystal of power", chance = 220}
 }

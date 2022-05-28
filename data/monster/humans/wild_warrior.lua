@@ -76,7 +76,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2991, chance = 520},
+	{id = 2991, chance = 520}, -- doll
 	{name = "gold coin", chance = 49070, maxCount = 30},
 	{name = "axe", chance = 30710},
 	{name = "mace", chance = 9800},
@@ -85,7 +85,7 @@ monster.loot = {
 	{name = "brass armor", chance = 2540},
 	{name = "steel shield", chance = 910},
 	{name = "brass shield", chance = 17000},
-	{id = 3606, chance = 9730, maxCount = 2}
+	{id = 3606, chance = 9730, maxCount = 2} -- egg
 }
 
 monster.attacks = {

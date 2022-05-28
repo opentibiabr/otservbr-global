@@ -90,7 +90,7 @@ monster.loot = {
 	{name = "underworld rod", chance = 18920},
 	{name = "springsprout rod", chance = 14920},
 	{name = "sacred tree amulet", chance = 19920},
-	{id = 23544, chance = 29000} -- Collar of red plasma
+	{id = 23544, chance = 29000} -- collar of red plasma
 }
 
 monster.attacks = {

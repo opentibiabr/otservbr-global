@@ -114,30 +114,31 @@ local foods = {
 	[30198] = {40, 'Mmmmm!'}, -- meringue cake
 	[30202] = {15, 'Slurp.'}, -- winterberry liquor
 	[31560] = {40, 'Slurp.'}, -- goanna meat
-	[32069] = {15, 'Slurp.'} -- candy floss
+	[32069] = {15, 'Slurp.'}, -- candy floss
+	[37530] = {10, 'Slurp.'}, -- bottle of champagne
+	[37531] = {5, 'Mmmm.'}, -- candy floss
+	[37532] = {15, 'Mmmm.'}, -- ice cream cone
+	[37533] = {60, 'Mmmm.'} -- birthday layer cake
 }
 
 local food = Action()
 
 function food.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local food = foods[item.itemid]
-	if not food then
+	local itemFood = foods[item.itemid]
+	if not itemFood then
 		return false
 	end
 
-	--player:removeCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT)
-
 	local condition = player:getCondition(CONDITION_REGENERATION, CONDITIONID_DEFAULT)
-	if condition and math.floor(condition:getTicks() / 1000 + (food[1] * 12)) >= 1200 then
-		player:sendTextMessage(MESSAGE_FAILURE, 'You are full.')
+	if condition and math.floor(condition:getTicks() / 1000 + (itemFood[1] * 12)) >= 1200 then
+		player:sendTextMessage(MESSAGE_FAILURE, "You are full.")
 		return true
 	end
 
-	player:feed(food[1] * 12)
-	player:say(food[2], TALKTYPE_MONSTER_SAY)
+	player:feed(itemFood[1] * 12)
+	player:say(itemFood[2], TALKTYPE_MONSTER_SAY)
 	item:remove(1)
 	player:updateSupplyTracker(item)
-
 	return true
 end
 

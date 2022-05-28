@@ -77,12 +77,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2920, chance = 4180},
+	{id = 2920, chance = 4180}, -- torch
 	{name = "bow", chance = 14930},
 	{name = "leather helmet", chance = 30600},
 	{name = "arrow", chance = 49500, maxCount = 17},
 	{name = "poison arrow", chance = 2930, maxCount = 3},
-	{id = 3481, chance = 710},
+	{id = 3481, chance = 710}, -- closed trap
 	{name = "leather legs", chance = 26740},
 	{name = "roll", chance = 11110, maxCount = 2}
 }

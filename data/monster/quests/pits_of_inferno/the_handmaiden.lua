@@ -63,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 6539, chance = 35000}
+	{id = 6539, chance = 35000} -- handmaiden's protector
 }
 
 monster.attacks = {

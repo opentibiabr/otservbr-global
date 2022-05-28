@@ -87,7 +87,7 @@ monster.loot = {
 	{name = "strong mana potion", chance = 5590},
 	{name = "spellbook of enlightenment", chance = 790},
 	{name = "book of necromantic rituals", chance = 9340},
-	{id= 3039, chance = 710},
+	{id= 3039, chance = 710}, -- red gem
 	{name = "lancet", chance = 10680},
 	{name = "horoscope", chance = 7950},
 	{name = "blood tincture in a vial", chance = 15460},
