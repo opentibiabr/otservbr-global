@@ -11,6 +11,15 @@ local sayFunction = function(npcId, text, type, eventDelay, playerId)
 end
 
 function MsgContains(message, keyword)
+	local message, keyword = message:lower(), keyword:lower()
+	if message == keyword then
+		return true
+	end
+
+	return message:find(keyword) and not message:find('(%w+)' .. keyword)
+end
+
+function MsgFind(message, keyword)
 	local lowerMessage, lowerKeyword = message:lower(), keyword:lower()
 	if lowerMessage == lowerKeyword then
 		return true
