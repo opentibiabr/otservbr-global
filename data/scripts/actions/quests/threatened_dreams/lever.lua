@@ -20,6 +20,7 @@ local config = {
 }
 
 local threatenedLever = Action()
+
 function threatenedLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	for _, v in pairs(config.playerPositions) do
 		if v.pos == player:getPosition() then
@@ -27,6 +28,7 @@ function threatenedLever.onUse(player, item, fromPosition, target, toPosition, i
 		end
 		return false
 	end
+
 	local spec = Spectators()
 	spec:setOnlyPlayer(false)
 	spec:setRemoveDestination(config.exit)
@@ -52,9 +54,9 @@ function threatenedLever.onUse(player, item, fromPosition, target, toPosition, i
 			local info = lever:getInfoPositions()
 			creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 			for _, v in pairs(info) do
-				local player = v.creature
-        		if player then
-					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You or a member in your team have to wait ".. config.timeToFightAgain .." hours to face Faceless Bane again!")
+				local newPlayer = v.creature
+				if newPlayer then
+					newPlayer:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You or a member in your team have to wait ".. config.timeToFightAgain .." hours to face Faceless Bane again!")
 				end
 			end
 			return false
