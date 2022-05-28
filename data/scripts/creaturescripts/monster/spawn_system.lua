@@ -1,6 +1,6 @@
 local monsterDeath = CreatureEvent("monsterDeath")
-function monsterDeath.onDeath(creature, corpse, killer, mostDamage, unjustified, mostDamage_unjustified)
-	if creature:isMonster() then
+function monsterDeath.onDeath(creature, corpse, killer, mostDamage, unjustified, mostDamageUnjustified)
+	if creature and creature:isMonster() then
 		local self = creature:getStorageValue(MonsterStorage.Spawn.monster_spawn_object)
 		self:executeFunctionMonster("onDeath", creature)
 		self:deleteMonster(creature)
@@ -9,9 +9,11 @@ function monsterDeath.onDeath(creature, corpse, killer, mostDamage, unjustified,
 	return true
 end
 
+monsterDeath:register()
+
 local monsterDeathBoss = CreatureEvent("monsterDeathBoss")
-function monsterDeathBoss.onDeath(creature, corpse, killer, mostDamage, unjustified, mostDamage_unjustified)
-	if creature:isMonster() then
+function monsterDeathBoss.onDeath(creature, corpse, killer, mostDamage, unjustified, mostDamageUnjustified)
+	if creature and creature:isMonster() then
 		local self = creature:getStorageValue(MonsterStorage.Spawn.monster_spawn_object)
 		self:removeSpawn()
 		self:removeMonsters()
@@ -21,4 +23,3 @@ function monsterDeathBoss.onDeath(creature, corpse, killer, mostDamage, unjustif
 end
 
 monsterDeathBoss:register()
-monsterDeath:register()
