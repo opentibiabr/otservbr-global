@@ -1,5 +1,5 @@
 ---@author @Glatharth
----@version 1.0
+---@version 1.1
 ---@since 1.0
 Lever = {}
 setmetatable(Lever, {
@@ -106,7 +106,6 @@ function Lever.checkPositions(self) -- Will check all positions defined in setPo
         local ground = tile:getGround()
         local actionID = ground:getActionId()
         local uniqueID = ground:getUniqueId()
-        local condition = self:getCondition(creature)
         table.insert(array, {
             tile = tile,
             creature = creature,
@@ -116,7 +115,6 @@ function Lever.checkPositions(self) -- Will check all positions defined in setPo
             ground = ground,
             actionID = actionID,
             uniqueID = uniqueID,
-            condition = condition
         })
     end
     self.info_positions = array
@@ -131,6 +129,7 @@ function Lever.checkConditions(self) -- It will check the conditions defined in 
         return false
     end
     for i, v in pairs(info) do
+        v.condition = self:getCondition(v.creature)
         if v.condition == false then
             return v.condition
         end
