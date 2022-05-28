@@ -286,7 +286,6 @@ local function antiPush(self, item, count, fromPosition, toPosition, fromCylinde
 end
 
 function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
-
 	-- No move items with actionID = 100
 	if item:getActionId() == NOT_MOVEABLE_ACTION then
 		self:sendCancelMessage(RETURNVALUE_NOTPOSSIBLE)
@@ -316,32 +315,6 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 			return false
 		end
 	end
-
-	-- Cults of Tibia begin
-	local frompos = Position(33023, 31904, 14) -- Checagem
-	local topos = Position(33052, 31932, 15) -- Checagem
-	if self:getPosition():isInRange(frompos, topos) and item:getId() == 23729 then
-		local tileBoss = Tile(toPosition)
-		if tileBoss and tileBoss:getTopCreature() and tileBoss:getTopCreature():isMonster() then
-			if tileBoss:getTopCreature():getName():lower() == 'the remorseless corruptor' then
-				tileBoss:getTopCreature():addHealth(-17000)
-				item:remove(1)
-				if tileBoss:getTopCreature():getHealth() <= 300 then
-					tileBoss:getTopCreature():remove()
-					local monster = Game.createMonster('the corruptor of souls', toPosition)
-					monster:registerEvent('CheckTile')
-					if Game.getStorageValue('healthSoul') > 0 then
-						monster:addHealth(-(monster:getHealth() - Game.getStorageValue('healthSoul')))
-					end
-					Game.setStorageValue('CheckTile', os.time()+30)
-				end
-			elseif tileBoss:getTopCreature():getName():lower() == 'the corruptor of souls' then
-				Game.setStorageValue('CheckTile', os.time()+30)
-				item:remove(1)
-			end
-		end
-	end
-	-- Cults of Tibia end
 
 	-- SSA exhaust
 	local exhaust = { }
@@ -477,6 +450,37 @@ function Player:onMoveItem(item, count, fromPosition, toPosition, fromCylinder, 
 end
 
 function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+	-- Cults of Tibia begin
+	local frompos = Position(33023, 31904, 14) -- Checagem
+	local topos = Position(33052, 31932, 15) -- Checagem
+	local removeItem = false
+	if self:getPosition():isInRange(frompos, topos) and item:getId() == 23729 then
+		local tileBoss = Tile(toPosition)
+		if tileBoss and tileBoss:getTopCreature() and tileBoss:getTopCreature():isMonster() then
+			if tileBoss:getTopCreature():getName():lower() == 'the remorseless corruptor' then
+				tileBoss:getTopCreature():addHealth(-17000)
+				tileBoss:getTopCreature():remove()
+				local monster = Game.createMonster('The Corruptor of Souls', toPosition)
+				if not monster then
+					return false
+				end
+				removeItem = true
+				monster:registerEvent('CheckTile')
+				if Game.getStorageValue('healthSoul') > 0 then
+					monster:addHealth(-(monster:getHealth() - Game.getStorageValue('healthSoul')))
+				end
+				Game.setStorageValue('CheckTile', os.time()+30)
+			elseif tileBoss:getTopCreature():getName():lower() == 'the corruptor of souls' then
+				Game.setStorageValue('CheckTile', os.time()+30)
+				removeItem = true
+			end
+		end
+		if removeItem then
+			item:remove(1)
+		end
+	end
+	-- Cults of Tibia end
+	return true
 end
 
 function Player:onMoveCreature(creature, fromPosition, toPosition)
@@ -593,12 +597,20 @@ soulCondition:setTicks(4 * 60 * 1000)
 soulCondition:setParameter(CONDITION_PARAM_SOULGAIN, 1)
 
 local function useStamina(player)
+	if not player then
+		return false
+	end
+
 	local staminaMinutes = player:getStamina()
 	if staminaMinutes == 0 then
 		return
 	end
 
 	local playerId = player:getId()
+	if not playerId then
+		return false
+	end
+
 	local currentTime = os.time()
 	local timePassed = currentTime - nextUseStaminaTime[playerId]
 	if timePassed <= 0 then
@@ -621,13 +633,21 @@ local function useStamina(player)
 	player:setStamina(staminaMinutes)
 end
 
-local function useStaminaXp(player)
+local function useStaminaXpBoost(player)
+	if not player then
+		return false
+	end
+
 	local staminaMinutes = player:getExpBoostStamina() / 60
 	if staminaMinutes == 0 then
 		return
 	end
 
 	local playerId = player:getId()
+	if not playerId then
+		return false
+	end
+
 	local currentTime = os.time()
 	local timePassed = currentTime - nextUseXpStamina[playerId]
 	if timePassed <= 0 then
@@ -648,8 +668,8 @@ local function useStaminaXp(player)
 	player:setExpBoostStamina(staminaMinutes * 60)
 end
 
-function Player:onGainExperience(source, exp, rawExp)
-	if not source or source:isPlayer() then
+function Player:onGainExperience(target, exp, rawExp)
+	if not target or target:isPlayer() then
 		return exp
 	end
 
@@ -661,25 +681,15 @@ function Player:onGainExperience(source, exp, rawExp)
 	end
 
 	-- Experience Stage Multiplier
-	local expStage = getRateFromTable(experienceStages, self:getLevel(), configManager.getNumber(configKeys.RATE_EXP))
-	exp = exp * expStage
-	baseExp = rawExp * expStage
-	if Game.getStorageValue(GlobalStorage.XpDisplayMode) > 0 then
-		displayRate = expStage
-	else
-		displayRate = 1
-	end
+	local expStage = getRateFromTable(experienceStages, self:getLevel(), configManager.getNumber(configKeys.RATE_EXPERIENCE))
 
-	-- Prey system
-	if configManager.getBoolean(configKeys.PREY_ENABLED) then
-		local monsterType = source:getType()
-		if monsterType and monsterType:raceId() > 0 then
-			exp = math.ceil((exp * self:getPreyExperiencePercentage(monsterType:raceId())) / 100)
-		end
+	-- Event scheduler
+	if SCHEDULE_EXP_RATE ~= 100 then
+		expStage = math.max(0, (expStage * SCHEDULE_EXP_RATE)/100)
 	end
 
 	-- Store Bonus
-	useStaminaXp(self) -- Use store boost stamina
+	useStaminaXpBoost(self) -- Use store boost stamina
 
 	local Boost = self:getExpBoostStamina()
 	local stillHasBoost = Boost > 0
@@ -687,36 +697,33 @@ function Player:onGainExperience(source, exp, rawExp)
 
 	self:setStoreXpBoost(storeXpBoostAmount)
 
-	if (storeXpBoostAmount > 0) then
-		exp = exp + (baseExp * (storeXpBoostAmount/100)) -- Exp Boost
-	end
-
 	-- Stamina Bonus
+	local staminaBoost = 1
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then
 		useStamina(self)
 		local staminaMinutes = self:getStamina()
-		if staminaMinutes > 2340 and self:isPremium() then
-			exp = exp * 1.5
-			self:setStaminaXpBoost(150)
-		elseif staminaMinutes <= 840 then
-			exp = exp * 0.5 --TODO destroy loot of people with 840- stamina
-			self:setStaminaXpBoost(50)
-		else
-			self:setStaminaXpBoost(100)
-		end
+			if staminaMinutes > 2340 and self:isPremium() then
+				staminaBoost = 1.5
+			elseif staminaMinutes <= 840 then
+				staminaBoost = 0.5 --TODO destroy loot of people with 840- stamina
+			end
+		self:setStaminaXpBoost(staminaBoost * 100)
 	end
 
 	-- Boosted creature
-	if source:getName():lower() == (Game.getBoostedCreature()):lower() then
+	if target:getName():lower() == (Game.getBoostedCreature()):lower() then
 		exp = exp * 2
 	end
 
-	-- Event scheduler
-	if SCHEDULE_EXP_RATE ~= 100 then
-		exp = (exp * SCHEDULE_EXP_RATE)/100
+	-- Prey system
+	if configManager.getBoolean(configKeys.PREY_ENABLED) then
+		local monsterType = target:getType()
+		if monsterType and monsterType:raceId() > 0 then
+			exp = math.ceil((exp * self:getPreyExperiencePercentage(monsterType:raceId())) / 100)
+		end
 	end
-	self:setBaseXpGain(displayRate * 100)
-	return exp
+
+	return math.max((exp * expStage + (exp * (storeXpBoostAmount/100))) * staminaBoost)
 end
 
 function Player:onLoseExperience(exp)
@@ -733,18 +740,23 @@ function Player:onGainSkillTries(skill, tries)
 	end
 
 	-- Event scheduler skill rate
+	local STAGES_DEFAULT = skillsStages or nil
+	local SKILL_DEFAULT = self:getSkillLevel(skill)
+	local RATE_DEFAULT = configManager.getNumber(configKeys.RATE_SKILL)
+
+	if(skill == SKILL_MAGLEVEL) then -- Magic Level
+		STAGES_DEFAULT = magicLevelStages or nil
+		SKILL_DEFAULT = self:getBaseMagicLevel()
+		RATE_DEFAULT = configManager.getNumber(configKeys.RATE_MAGIC)
+	end
+
+	skillOrMagicRate = getRateFromTable(STAGES_DEFAULT, SKILL_DEFAULT, RATE_DEFAULT)
+
 	if SCHEDULE_SKILL_RATE ~= 100 then
-		tries = (tries * SCHEDULE_SKILL_RATE)/100
+		skillOrMagicRate = math.max(0, (skillOrMagicRate * SCHEDULE_SKILL_RATE) / 100)
 	end
 
-	local skillRate = configManager.getNumber(configKeys.RATE_SKILL)
-	local magicRate = configManager.getNumber(configKeys.RATE_MAGIC)
-
-	if(skill == SKILL_MAGLEVEL) then -- Magic getLevel
-		return tries * getRateFromTable(magicLevelStages, self:getBaseMagicLevel(), magicRate)
-	end
-
-	return tries * getRateFromTable(skillsStages, self:getSkillLevel(skill), skillRate)
+	return tries / 100 * (skillOrMagicRate * 100)
 end
 
 function Player:onRemoveCount(item)

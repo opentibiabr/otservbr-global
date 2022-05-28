@@ -1717,9 +1717,7 @@
 		<attribute key="absorbpercentfire" value="-5"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="750"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="814" article="a" name="terra amulet">
 		<attribute key="showCharges" value="1"/>
@@ -1767,9 +1765,7 @@
 		<attribute key="absorbpercentenergy" value="-5"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="750"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="820" name="lightning boots">
 		<attribute key="absorbpercentpoison" value="-5"/>
@@ -4817,9 +4813,7 @@
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="speed" value="40"/>
 		<attribute key="weight" value="750"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="3080" article="a" name="broken amulet">
 		<attribute key="weight" value="420"/>
@@ -8151,9 +8145,7 @@
 		<attribute key="speed" value="30"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="2500"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="4034" article="a" name="slain ghoul">
 		<attribute key="duration" value="300"/>
@@ -15103,9 +15095,7 @@
 		<attribute key="speed" value="-12"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="1200"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="7458" article="a" name="fur cap">
 		<attribute key="description" value="It feels nice and warm on your ears"/>
@@ -19824,9 +19814,7 @@
 		<attribute key="absorbpercentholy" value="-2"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="2250"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="10324" article="an" name="expedition backpack">
 		<attribute key="containersize" value="20"/>
@@ -23888,9 +23876,7 @@
 		<attribute key="speed" value="-10"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="3700"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="13998" article="a" name="depth scutum">
 		<attribute key="weaponType" value="shield"/>
@@ -33107,9 +33093,7 @@
 		<attribute key="speed" value="30"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="21982" article="a" name="nightmare teddy">
 		<attribute key="weight" value="590"/>
@@ -43906,9 +43890,7 @@
 		<attribute key="speed" value="20"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="900"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="30395" name="cobra club">
 		<attribute key="elementfire" value="44"/>
@@ -45452,22 +45434,22 @@
 	<item id="31595" article="a" name="noble amulet">
 		<attribute key="weight" value="65"/>
 	</item>
-	<item id="31596" article="a" name="dead count vlarkorth">
+	<item id="31596" article="a" name="dead lichwarrior">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
-	<item id="31597" article="a" name="dead count vlarkorth">
+	<item id="31597" article="a" name="dead lichwarrior">
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="31596"/>
 		<attribute key="containersize" value="16"/>
 	</item>
-	<item id="31598" article="a" name="dead count vlarkorth">
+	<item id="31598" article="a" name="dead lichwarrior">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="31597"/>
 		<attribute key="containersize" value="32"/>
 	</item>
-	<item id="31599" article="a" name="dead count vlarkorth">
+	<item id="31599" article="a" name="dead lichwarrior">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31598"/>
