@@ -2,7 +2,7 @@ local mType = Game.createMonsterType("Faceless Bane")
 local monster = {}
 
 monster.description = "a Faceless Bane"
-monster.experience = 30000
+monster.experience = 20000
 monster.outfit = {
 	lookType = 1122,
 	lookHead = 0,
@@ -17,7 +17,7 @@ monster.health = 35000
 monster.maxHealth = 35000
 monster.race = "blood"
 monster.corpse = 30013
-monster.speed = 250
+monster.speed = 500
 monster.manaCost = 0
 
 monster.changeTarget = {
@@ -50,6 +50,11 @@ monster.flags = {
 	canWalkOnEnergy = true,
 	canWalkOnFire = false,
 	canWalkOnPoison = true
+}
+
+monster.events = {
+	"FacelessSummon",
+	"FacelessBaneImmunity"
 }
 
 monster.light = {
@@ -91,7 +96,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-    {name = "melee", type = COMBAT_PHYSICALDAMAGE, interval = 2000, minDamage = 0, maxDamage = -575},
+    {name ="melee", type = COMBAT_PHYSICALDAMAGE, interval = 2000, minDamage = 0, maxDamage = -575},
 	{name ="combat", interval = 2000, chance = 65, type = COMBAT_FIREDAMAGE, minDamage = -350, maxDamage = -500, radius = 3, Effect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = false},
 	{name ="combat", interval = 2000, chance = 45, type = COMBAT_DEATHDAMAGE, minDamage = -335, maxDamage = -450, radius = 4, Effect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_MORTAREA, target = false},
 	{name ="combat", interval = 2000, chance = 25, type = COMBAT_PHYSICALDAMAGE, minDamage = -330, maxDamage = -380, length = 7, effect = CONST_ME_EXPLOSIONAREA, target = false},
@@ -104,8 +109,12 @@ monster.defenses = {
 	armor = 10
 }
 
+monster.reflects = {
+	{type = COMBAT_DEATHDAMAGE, percent = 90}
+}
+
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 100},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 50},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = -20},
@@ -114,7 +123,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 99}
+	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 
 monster.heals = {
