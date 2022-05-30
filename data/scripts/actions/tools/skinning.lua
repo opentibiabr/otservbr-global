@@ -45,6 +45,8 @@ local config = {
 		[10355] = {value = 22344, newItem = 5876, after = 10353}, -- lizard high guard, after being killed
 		[10364] = {value = 22344, newItem = 5876, after = 10365}, -- lizard zaogun
 		[10367] = {value = 22344, newItem = 5876, after = 10365}, -- lizard zaogun, after being killed
+		[10356] = {value = 22344, newItem = 5876, after = 10357}, -- lizard legionnaire
+		[10359] = {value = 22344, newItem = 5876, after = 10357}, -- lizard legionnaire, after being killed
 
 		-- Dragons
 		[4286] = {value = 22344, newItem = 5877, after = 4287},
