@@ -148,7 +148,7 @@ function serverstartup.onStartup()
 		end
 	end
 
-    -- Client XP Display Mode
+	-- Client XP Display Mode
 	-- 0 = ignore exp rate /stage
 	-- 1 = include exp rate / stage
 	Game.setStorageValue(GlobalStorage.XpDisplayMode, 1)

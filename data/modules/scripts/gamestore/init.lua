@@ -1507,7 +1507,7 @@ function GameStore.processHirelingPurchase(player, offer, productType, hirelingN
 
 		hirelingName = hirelingName:lower():gsub("(%l)(%w*)", function(a, b) return string.upper(a) .. b end)
 
-		local hireling = player:addNewHireling(hirelingName, chosenSex)
+		local hireling = player:addHireling(hirelingName, chosenSex)
 		if not hireling then
 			return error({code = 1, message = "Error delivering your hireling lamp, try again later."})
 		end
