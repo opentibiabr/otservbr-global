@@ -20,7 +20,7 @@ end
 
 local parchment = MoveEvent()
 
-function parchment.onRemoveItem(item, tile, position)
+function parchment.onRemoveItem(item, position)
 	item:removeAttribute(ITEM_ATTRIBUTE_ACTIONID)
 	addEvent(recreateParchment, 2 * 60 * 60 * 1000, position) -- 2 hours
 
