@@ -95,9 +95,9 @@ monster.loot = {
 	{id = 677, chance = 3000, maxCount = 3}, -- small enchanted emerald
 	{id = 236, chance = 15000}, -- strong health potion
 	{id = 814, chance = 3200}, -- terra amulet
-	{name = "Fairy Wings", chance = 15000},
-	{name = "Wooden Spellbook", chance = 3440},
-	{name = "Leaf Star", chance = 3440, maxCount = 7},
+	{name = "fairy wings", chance = 15000},
+	{name = "wooden spellbook", chance = 3440},
+	{name = "leaf star", chance = 3440, maxCount = 7},
 	{id = 3727, chance = 4500} -- wood mushroom
 }
 
