@@ -83,7 +83,7 @@ DailyReward = {
 		jokerTokens = 14903,
 		-- Global
 		lastServerSave = 14110,
-		avoidDouble = 13412,
+		--avoidDouble = 13412,
 		notifyReset = 13413,
 		avoidDoubleJoker = 13414
 	},
