@@ -847,6 +847,21 @@ ChestUnique = {
 		storage = keyAction,
 		itemPos = {{x = 32802, y = 31576, z = 7}}
 	},
+	-- Threatened Dreams Quest
+	[6100] = {
+		itemId = 12764, -- Poacher Book
+		itemPos = {x = 32787, y = 31975, z = 11},
+		reward = {{25235, 1}},
+		weight = 13.00,
+		storage = Storage.Quest.ThreatenedDreams.Mission01.PoacherChest
+	},
+	[6101] = { -- Dark Moon Mirror
+		itemId = 25762,
+		itemPos = {x = 33594, y = 32214, z = 9},
+		reward = {{25729, 1}},
+		weight = 2.00,
+		storage = Storage.Quest.ThreatenedDreams.Mission02.DarkMoomMirror
+	},
 
 	-- Reward of others scrips files (varied rewards)
 	-- The First dragon Quest

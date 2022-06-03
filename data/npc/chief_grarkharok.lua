@@ -62,8 +62,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, 'cloak') then
-		if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 13) then
-			player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 14)
+		if player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission01[1]) == 12 then
 			npcHandler:say("Hahaha! Grarkharok take cloak from pretty girl. Then ... girl is swan. Grarkharok wants eat but flies away. Grarkharok not understand. Not need cloak, too many feathers. Give cloak to To ... Ta ... Tereban in Edron. Getting shiny coins and meat.", npc, creature)
 		else
 			npcHandler:say("You are not on that mission.", npc, creature)

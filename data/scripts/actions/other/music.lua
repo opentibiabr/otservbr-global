@@ -46,6 +46,20 @@ function music.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				player:setStorageValue(Storage.Diapason.LyreTimer, os.time() + 86400)
 			end
 		end
+	elseif item.itemid == 2953 then
+		if isInRange(player:getPosition(), Position(33540, 32245, 7), Position(33542, 32247, 7)) then
+			local UnlikelyCouple = player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission03.UnlikelyCouple)
+			local PanpipesTimer = player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission03.PanpipesTimer)
+			if UnlikelyCouple >= 2 and PanpipesTimer < os.time() then
+				if UnlikelyCouple == 2 then
+					player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission03.UnlikelyCouple, 3)
+				end
+				player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission03.PanpipesTimer, os.time() + 20 * 3600)
+				player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission03[1], 2)
+				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Mysteriously some colourful music notes fall of the panpipes. - Hurry, they will fade away quickly.")
+				player:addItem(25782, 1)
+			end
+		end
 	end
 
 	player:addAchievementProgress('Rockstar', 10000)

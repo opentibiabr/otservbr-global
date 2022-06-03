@@ -406,33 +406,6 @@ Storage = {
 			AccessDoor = 50263
 		}
 	},
-	ThreatenedDreams = {
-		-- Reserved storage from 50270 - 50349
-		Start = 50270,
-		TroubledMission01 = 50271,
-		TroubledMission02 = 50272,
-		TroubledMission03 = 50273,
-		FairyMission01 = 50274,
-		FairyMission02 = 50275,
-		FairyMission03 = 50276,
-		FairyMission04 = 50277,
-		DreamMission01 = 50278,
-		DreamCounter = 50279,
-		KroazurTimer = 50280,
-		CoupleMission01 = 50281,
-		CoupleMission02 = 50282,
-		FacelessBaneTime = 50283,
-		Reward01 = 50284,
-		Reward02 = 50285,
-		Reward03 = 50286,
-		TatteredSwanFeathers = 50300,
-		TatteredSwanFeathers01 = 50301,
-		TatteredSwanFeathers02 = 50302,
-		TatteredSwanFeathers03 = 50303,
-		TatteredSwanFeathers04 = 50304,
-		TatteredSwanFeathers05 = 50305,
-		PoacherChest = 50306
-	},
 	FirstDragon = {
 		-- Reserved storage from 50350 - 50379
 		Questline = 50350,
@@ -2235,7 +2208,61 @@ Storage = {
 		ForgottenKnowledge = {},
 		-- update 11.40
 		CultsOfTibia = {},
-		ThreatenedDreams = {},
+		ThreatenedDreams = { -- Reserved storage from 50270 - 50349
+			QuestLine = 50270,
+			Mission01 = {50271, -- Troubled Animals
+				PoacherChest = 50272,
+				PoacherNotes = 50273,
+				FeathersCount = 50274,
+				Feathers1 = 50275,
+				Feathers2 = 50276,
+				Feathers3 = 50277,
+				Feathers4 = 50278,
+				Feathers5 = 50279
+				},
+			Mission02 = {50280, -- Nightmare Intruders
+				FrazzlemawsCount = 50281,
+				EnfeebledCount = 50282,
+				KroazurAccess = 50283,
+				KroazurTimer = 50284,
+				KroazurKill = 50285,
+				DarkMoomMirror = 50286,
+				FairiesCounter = 50287,
+				Fairy01 = 50288,
+				Fairy02 = 50289,
+				Fairy03 = 50290,
+				Fairy04 = 50291,
+				Fairy05 = 50292,
+				ChargedMoomMirror = 50293,
+				MoonMirrorPos01 = 50294,
+				MoonMirrorPos02 = 50295,
+				MoonMirrorPos03 = 50296,
+				MoonMirrorPos04 = 50297,
+				MoonMirrorPos05 = 50298,
+				ChargedSunCacther = 50299,
+				SunCactherPos01 = 50300,
+				SunCactherPos02 = 50301,
+				SunCactherPos03 = 50302,
+				SunCactherPos04 = 50303,
+				SunCactherPos05 = 50304,
+				ChargedStarlightVial = 50305,
+				StarlightPos01 = 50306,
+				StarlightPos02 = 50307,
+				StarlightPos03 = 50308,
+				StarlightPos04 = 50309,
+				StarlightPos05 = 50310
+				},
+			Mission03 = {50311, -- An Unlikely Couple
+				UnlikelyCouple = 50312,
+				PanpipesTimer = 50313,
+				RavenHerbTimer = 50314,
+				DarkSunCatcher = 50315,
+				EmptyStarlightVial = 50316
+				},
+			Mission04 = {50317,
+				},
+			Mission05 = 50318
+		},
 		-- update 11.50
 		DangerousDepths = {},
 		HiddenThreats = {},
