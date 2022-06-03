@@ -77,7 +77,7 @@ monster.loot = {
 	{name = "wand of draconia", chance = 4770},
 	{name = "sphinx feather", chance = 3450},
 	{name = "fire axe", chance = 2650},
-	{id = 31438, chance = 3450},
+	{id = 31438, chance = 3450}, -- sphinx tiara
 	{name = "magma legs", chance = 1860},
 	{name = "magma monocle", chance = 1590},
 	{name = "magma boots", chance = 2120},

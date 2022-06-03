@@ -79,10 +79,10 @@ monster.loot = {
 	{name = "gold coin", chance = 78000, maxCount = 50},
 	{name = "scale armor", chance = 3000},
 	{name = "steel shield", chance = 2800},
-	{id = 5090, chance = 1000},
+	{id = 5090, chance = 1000}, -- treasure map
 	{name = "rum flask", chance = 90},
 	{name = "light shovel", chance = 2000},
-	{id = 5792, chance = 110},
+	{id = 5792, chance = 110}, -- die
 	{name = "pirate knee breeches", chance = 980},
 	{name = "pirate bag", chance = 1000},
 	{name = "hook", chance = 550},

@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "lightning pendant", chance = 710},
 	{name = "crystalline armor", chance = 20},
 	{name = "gear wheel", chance = 5000},
-	{id = 9063, chance = 5320},
+	{id = 9063, chance = 5320}, -- crystal pedestal
 	{name = "shockwave amulet", chance = 110},
 	{name = "gear crystal", chance = 5000},
 	{name = "slime mould", chance = 480}

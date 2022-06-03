@@ -95,7 +95,7 @@ monster.loot = {
 	{name = "blue crystal shard", chance = 6000},
 	{name = "blue crystal splinter", chance = 13000},
 	{name = "cyan crystal fragment", chance = 17000},
-	{id = 20029, chance = 1130},
+	{id = 20029, chance = 1130}, -- broken dream
 	{name = "trapped bad dream monster", chance = 13000},
 	{name = "bowl of terror sweat", chance = 18000}
 }

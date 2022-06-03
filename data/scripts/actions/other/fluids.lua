@@ -117,20 +117,20 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:sendTextMessage(MESSAGE_FAILURE, 'It is empty.')
 
 		elseif target.uid == player.uid then
-			if isInArray({3, 15, 43}, item.type) then
+			if isInArray({2, 3, 16}, item.type) then
 				player:addCondition(drunk)
 
-			elseif item.type == 4 then
+			elseif item.type == 6 then
 				local town = player:getTown()
 				if town and town:getId() == TOWNS_LIST.DAWNPORT then
 					dawnportPoisonCondition(player)
 				else
 					player:addCondition(poison)
 				end
-			elseif item.type == 7 then
+			elseif item.type == 10 then
 				player:addMana(math.random(50, 150))
 				fromPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
-			elseif item.type == 10 then
+			elseif item.type == 11 then
 				player:addHealth(60)
 				fromPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			end
@@ -158,7 +158,7 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:sendTextMessage(MESSAGE_FAILURE, 'It is empty.')
 
 		else
-			if item.type == 2 and target.actionid == 2023 then
+			if item.type == 5 and target.actionid == 2023 then
 				toPosition.y = toPosition.y + 1
 				local creatures, destination = Tile(toPosition):getCreatures(), Position(32791, 32332, 10)
 				if #creatures == 0 then

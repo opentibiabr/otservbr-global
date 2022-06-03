@@ -63,9 +63,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3035, chance = 33000, maxCount = 5},
-	{id = 239, chance = 10000},
-	{id = 238, chance = 10000}
+	{id = 3035, chance = 33000, maxCount = 5}, -- platinum coin
+	{id = 239, chance = 10000}, -- great health potion
+	{id = 238, chance = 10000} -- great mana potion
 }
 
 monster.attacks = {

@@ -63,18 +63,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3031, chance = 97000, maxCount = 51},
-	{id = 5920, chance = 50000},
-	{id = 24938, chance = 100000},
-	{id = 3386, chance = 25000},
-	{id = 3322, chance = 25000},
-	{id = 3416, chance = 25000},
-	{id = 3085, chance = 25000},
-	{id = 3583, chance = 25000},
-	{id = 5877, chance = 25000},
-	{id = 24937, chance = 80000, maxCount = 2},
-	{id = 3275, chance = 25000},
-	{id = 24940, chance = 100000}
+	{id = 3031, chance = 97000, maxCount = 51}, -- gold coin
+	{id = 5920, chance = 50000}, -- green dragon scale
+	{id = 24938, chance = 100000}, -- dragon tongue
+	{id = 3386, chance = 25000}, -- dragon scale mail
+	{id = 3322, chance = 25000}, -- dragon hammer
+	{id = 3416, chance = 25000}, -- dragon shield
+	{id = 3085, chance = 25000}, -- dragon necklace
+	{id = 3583, chance = 25000}, -- dragon ham
+	{id = 5877, chance = 25000}, -- green dragon leather
+	{id = 24937, chance = 80000, maxCount = 2}, -- dragon blood
+	{id = 3275, chance = 25000}, -- double axe
+	{id = 24940, chance = 100000} -- tooth of tazhadur
 }
 
 monster.attacks = {

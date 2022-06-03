@@ -82,7 +82,7 @@ monster.loot = {
 	{name = "black pearl", chance = 2500},
 	{name = "small ruby", chance = 3040, maxCount = 2},
 	{name = "gold coin", chance = 83000, maxCount = 50},
-	{id= 3039, chance = 540},
+	{id= 3039, chance = 540}, -- red gem
 	{name = "ice rapier", chance = 810},
 	{name = "vampire shield", chance = 200},
 	{name = "red piece of cloth", chance = 70},
