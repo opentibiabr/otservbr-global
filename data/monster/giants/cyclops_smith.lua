@@ -79,7 +79,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 82920, maxCount = 70},
-	{id = 3093, chance = 90}, -- Club ring
+	{id = 3093, chance = 90}, -- club ring
 	{name = "battle axe", chance = 5450},
 	{name = "double axe", chance = 880},
 	{name = "battle hammer", chance = 5200},
@@ -88,7 +88,7 @@ monster.loot = {
 	{name = "plate shield", chance = 2000},
 	{name = "battle shield", chance = 6190},
 	{name = "meat", chance = 49950},
-	{id = 7398, chance = 140},
+	{id = 7398, chance = 140}, -- cyclops trophy
 	{name = "spiked squelcher", chance = 150},
 	{name = "strong health potion", chance = 390},
 	{name = "cyclops toe", chance = 10280}

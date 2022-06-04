@@ -17,7 +17,7 @@ function zamuloshClone.onThink(creature)
 	for i = 1, #spectators do
 		local master = spectators[i]
 		if master:getMaxHealth() == 300000 and not master:getMaster() then
-			master:addSummon(creature)
+			master:setSummon(creature)
 		end
 	end
 end

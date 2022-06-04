@@ -76,20 +76,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3031, chance = 97000, maxCount = 242},
-	{id = 3578, chance = 18200, maxCount = 2},
-	{id = 16124, chance = 2000},
-	{id = 16123, chance = 2000},
-	{id = 16122, chance = 2210},
-	{id = 3582, chance = 1200},
-	{id = 3723, chance = 1900},
-	{id = 3052, chance = 950}, -- Life ring
-	{id = 3297, chance = 780},
-	{id = 814, chance = 700},
-	{id = 813, chance = 560},
-	{id = 3069, chance = 430},
-	{id = 8072, chance = 320},
-	{id = 12311, chance = 100}
+	{id = 3031, chance = 97000, maxCount = 242}, -- gold coin
+	{id = 3578, chance = 18200, maxCount = 2}, -- fish
+	{id = 16124, chance = 2000}, -- blue crystal splinter
+	{id = 16123, chance = 2000}, -- brown crystal splinter
+	{id = 16122, chance = 2210}, -- green crystal splinter
+	{id = 3582, chance = 1200}, -- ham
+	{id = 3723, chance = 1900}, -- white mushroom
+	{id = 3052, chance = 950}, -- life ring
+	{id = 3297, chance = 780}, -- serpent sword
+	{id = 814, chance = 700}, -- terra amulet
+	{id = 813, chance = 560}, -- terra boots
+	{id = 3069, chance = 430}, -- necrotic rod
+	{id = 8072, chance = 320}, -- spellbook of enlightenment
+	{id = 12311, chance = 100} -- carrot on a stick
 }
 
 monster.attacks = {

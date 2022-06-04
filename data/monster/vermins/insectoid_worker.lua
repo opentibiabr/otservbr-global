@@ -78,7 +78,7 @@ monster.loot = {
 	{name = "epee", chance = 560},
 	{name = "health potion", chance = 5090},
 	{name = "compound eye", chance = 15380},
-	{id = 14225, chance = 14990}
+	{id = 14225, chance = 14990} -- dung ball
 }
 
 monster.attacks = {

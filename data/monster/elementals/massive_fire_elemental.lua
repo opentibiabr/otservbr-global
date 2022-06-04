@@ -83,7 +83,7 @@ monster.loot = {
 	{name = "magma amulet", chance = 1300},
 	{name = "magma boots", chance = 560},
 	{name = "magma legs", chance = 210},
-	{id = 8895, chance = 1330}
+	{id = 8895, chance = 1330} -- rusted armor
 }
 
 monster.attacks = {

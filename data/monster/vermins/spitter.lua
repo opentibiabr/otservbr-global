@@ -79,7 +79,7 @@ monster.loot = {
 	{name = "small amethyst", chance = 8000, maxCount = 2},
 	{name = "platinum coin", chance = 75250},
 	{name = "green gem", chance = 210},
-	{id = 3053, chance = 2400},
+	{id = 3053, chance = 2400}, -- time ring
 	{name = "platinum amulet", chance = 260},
 	{name = "crusader helmet", chance = 230},
 	{name = "brown mushroom", chance = 7500, maxCount = 3},

@@ -28,7 +28,8 @@ function geyser.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if creature:getType():getName():lower() == "the sinister hermit" and creature:getOutfit().lookBody == 63 then
+	local monsterType = creature:getType()
+	if monsterType and monsterType:getTypeName():lower() == "the sinister hermit dirty" and creature:getOutfit().lookBody == 63 then
 		local currentLife = creature:getHealth()
 		local bossTransform = Game.createMonster("the sinister hermit", creature:getPosition(), true, true)
 		if bossTransform then
@@ -36,12 +37,12 @@ function geyser.onStepIn(creature, item, position, fromPosition)
 			item:remove()
 			local subtract = bossTransform:getHealth() - currentLife
 			bossTransform:addHealth(-subtract)
-			bossTransform:registerEvent("spawnBoss")
+			bossTransform:registerEvent("SpawnBoss")
 			addEvent(bossTransformBack, 4*1000, bossTransform:getId(), item:getId())
-			return false
+			return true
 		end
 	end
-	return true
+	return false
 end
 
 geyser:type("stepin")

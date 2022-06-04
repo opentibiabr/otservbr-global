@@ -228,6 +228,32 @@ local cutItems = {
 	[25800] = 0
 }
 
+-- Ferumbras ascendant ring reward
+local function addFerumbrasAscendantReward(player, target, toPosition)
+	local stonePos = Position(32648, 32134, 10)
+	if (toPosition == stonePos) then
+		local tile = Tile(stonePos)
+		local stone = tile:getItemById(1772)
+		if stone then
+			stone:remove(1)
+			toPosition:sendMagicEffect(CONST_ME_POFF)
+			addEvent(function()
+				Game.createItem(1772, 1, stonePos)
+			end, 20000)
+			return true
+		end
+	end
+
+	if target.itemid == 10551 and target.actionid == 53803 then
+		if player:getStorageValue(Storage.FerumbrasAscendant.Ring) >= 1 then
+			return false
+		end
+
+		player:addItem(22170, 1)
+		player:setStorageValue(Storage.FerumbrasAscendant.Ring, 1)
+	end
+end
+
 function onDestroyItem(player, item, fromPosition, target, toPosition, isHotkey)
 	if not target or target == nil or type(target) ~= "userdata" or not target:isItem() then
 		return false
@@ -330,6 +356,7 @@ function onUseRope(player, item, fromPosition, target, toPosition, isHotkey)
 end
 
 function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
+	addFerumbrasAscendantReward(player, target, toPosition)
 	--Dawnport quest (Morris amulet task)
 	local sandPosition = Position(32099, 31933, 7)
 	if (toPosition == sandPosition) then

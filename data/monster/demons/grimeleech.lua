@@ -93,7 +93,7 @@ monster.loot = {
 	{name = "small amethyst", chance = 9640, maxCount = 5},
 	{name = "underworld rod", chance = 6890},
 	{name = "wand of voodoo", chance = 4810},
-	{id= 3039, chance = 3930},
+	{id= 3039, chance = 3930}, -- red gem
 	{name = "yellow gem", chance = 2900},
 	{name = "devil helmet", chance = 1360},
 	{name = "magma legs", chance = 1150},
