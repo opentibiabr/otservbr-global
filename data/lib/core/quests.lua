@@ -5671,7 +5671,7 @@ if not Quests then
 				},
 				[7] = {
 					name = "Mission 5: Support of the Edron Academy",
-					storageId = Storage.Quest.TheNewFrontier.Mission5_4_Wydrin,
+					storageId = Storage.Quest.TheNewFrontier.Mission5_4_Wyrdin,
 					missionId = 10415,
 					startValue = 1,
 					endValue = 1,

@@ -184,7 +184,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_1_KingTibianus, 1) --Questlog, The New Frontier Quest "Mission 5-1"
 			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_2_Leeland, 1) --Questlog, The New Frontier Quest "Mission 5-2"
 			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_3_Angus, 1) --Questlog, The New Frontier Quest "Mission 5-3"
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_4_Wydrin, 1) --Questlog, The New Frontier Quest "Mission 5-4"
+			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_4_Wyrdin, 1) --Questlog, The New Frontier Quest "Mission 5-4"
 			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_5_Telas, 1) --Questlog, The New Frontier Quest "Mission 5-5"
 			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission5_6_Humgolf, 1) --Questlog, The New Frontier Quest "Mission 5-6"
 			npcHandler:setTopic(playerId, 0)
@@ -192,7 +192,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_1_KingTibianus) == 2
 			and player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_2_Leeland) == 2
 			and player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_3_Angus) == 2
-			and player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_4_Wydrin) == 2
+			and player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_4_Wyrdin) == 2
 			and player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_5_Telas) == 2
 			and player:getStorageValue(Storage.Quest.TheNewFrontier.Mission5_6_Humgolf) == 2 then
 				npcHandler:say("You did an excellent job! With all this help Farmine will grow and prosper. While we put all available resources into building this base, I have another urgent {mission} for you.", npc, creature)
