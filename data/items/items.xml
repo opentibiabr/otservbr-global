@@ -11670,7 +11670,7 @@
 	<item id="5973" article="a" name="dead dragon">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4286"/>
+		<attribute key="decayTo" value="4025"/>
 		<attribute key="containersize" value="12"/>
 	</item>
 	<item id="5974" article="a" name="dead spider">
