@@ -49,9 +49,8 @@ local config = {
 		[10359] = {value = 22344, newItem = 5876, after = 10357}, -- lizard legionnaire, after being killed
 
 		-- Dragons
-		[4286] = {value = 22344, newItem = 5877, after = 4287},
-		[4025] = {value = 22344, newItem = 5877, after = 4287},
-		[5973] = {value = 22344, newItem = 5877, after = 4287}, -- after being killed
+		[4025] = {value = 22344, newItem = 5877, after = 4026},	-- Dragon
+		[5973] = {value = 22344, newItem = 5877, after = 4026}, -- Dragon, after being killed
 
 		-- Dragon Lords
 		[4062] = {value = 22344, newItem = 5948, after = 4063},
