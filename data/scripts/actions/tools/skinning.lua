@@ -7,7 +7,7 @@ local config = {
 		[6017] = {value = 22344, newItem = 12172, after = 4302}, -- after being killed
 
 		-- Minotaurs
-		[4272] = {value = 22344, newItem = 5878, after = 4012}, -- minotaur
+		[4011] = {value = 22344, newItem = 5878, after = 4012}, -- minotaur
 		[5969] = {value = 22344, newItem = 5878, after = 4012},	-- minotaur, after being killed
 		[4052] = {value = 22344, newItem = 5878, after = 4053}, -- minotaur archer
 		[5982] = {value = 22344, newItem = 5878, after = 4053}, -- minotaur archer, after being killed
