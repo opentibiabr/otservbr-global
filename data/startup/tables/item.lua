@@ -148,31 +148,31 @@ ItemAction = {
 		}
 	},
 	-- Threatened Dreams Quest
-	[40013] = { -- Fairy 01
+	[40016] = { -- Fairy 01
 		itemId = false,
 		itemPos = {
 			{x = 33576, y = 32185, z = 8}
 		}
 	},
-	[40014] = { -- Fairy 02
+	[40017] = { -- Fairy 02
 		itemId = false,
 		itemPos = {
 			{x = 33621, y = 32214, z = 8}
 		}
 	},
-	[40015] = { -- Fairy 03
+	[40018] = { -- Fairy 03
 		itemId = false,
 		itemPos = {
 			{x = 33559, y = 32203, z = 9}
 		}
 	},
-	[40016] = { -- Fairy 04
+	[40019] = { -- Fairy 04
 		itemId = false,
 		itemPos = {
 			{x = 33505, y = 32286, z = 8}
 		}
 	},
-	[40017] = { -- Fairy 05
+	[40020] = { -- Fairy 05
 		itemId = false,
 		itemPos = {
 			{x = 33440, y = 32217, z = 8}

@@ -1,25 +1,25 @@
 local config = {
-	[40013] = {
+	[40016] = {
 		pos = Position(33576, 32185, 8),
 		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy01,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
-	[40014] = {
+	[40017] = {
 		pos = Position(33621, 32214, 8),
 		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy02,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
-	[40015] = {
+	[40018] = {
 		pos = Position(33559, 32203, 9),
 		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy03,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
-	[40016] = {
+	[40019] = {
 		pos = Position(33505, 32286, 8),
 		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy04,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
-	[40017] = {
+	[40020] = {
 		pos = Position(33440, 32217, 8),
 		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy05,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
@@ -66,5 +66,5 @@ function fairiesRelease.onUse(player, item, fromPosition, target, toPosition, is
     end
 end
 
-fairiesRelease:aid(40013,40014,40015,40016,40017)
+fairiesRelease:aid(40016,40017,40018,40019,40020)
 fairiesRelease:register()
