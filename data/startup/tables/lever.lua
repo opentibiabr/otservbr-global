@@ -10,6 +10,7 @@ LeverAction = {
 			{x = 32104, y = 31906, z = 7}
 		}
 	},
+	 -- The New Frontier Quest
 	[30002] = { -- Farmine Elevator Levers
 		itemId = false,
 		itemPos = {
@@ -23,7 +24,13 @@ LeverAction = {
 			{x = 33056, y = 31527, z = 10},
 			{x = 33064, y = 31489, z = 15}
 		}
-	}
+	},
+	[30003] = { -- Mortal Kombat Arena
+		itemId = false,
+		itemPos = {
+			{x = 33079, y = 31014, z = 2}
+		}
+	},
 }
 
 LeverUnique = {

@@ -1,11 +1,12 @@
 local config = {
-	[3153] = Position(33022, 31536, 6),
-	[3154] = Position(33020, 31536, 4)
+	[4] = Position(33022, 31536, 6),
+	[6] = Position(33020, 31536, 4)
 }
 
 local theNewFrontierVine = Action()
+
 function theNewFrontierVine.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local targetPosition = config[item.uid]
+	local targetPosition = config[player:getPosition().z]
 	if not targetPosition then
 		return true
 	end
@@ -15,5 +16,5 @@ function theNewFrontierVine.onUse(player, item, fromPosition, target, toPosition
 	return true
 end
 
-theNewFrontierVine:uid(3153,3154)
+theNewFrontierVine:aid(40013)
 theNewFrontierVine:register()

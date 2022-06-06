@@ -13,5 +13,5 @@ function prisionSecretDoor.onUse(player, item, fromPosition, target, toPosition,
 
 end
 
-prisionSecretDoor:uid(3156)
+prisionSecretDoor:aid(40014)
 prisionSecretDoor:register()

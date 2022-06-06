@@ -30,14 +30,11 @@ function minotaurBoss.onStepIn(creature, item, position, fromPosition)
 		return player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You don't have access to this area.")
 	end
 
-	if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 17 then
-		addEvent(completeTest, 2 * 60 * 1000, player.uid)
-		player:teleportTo(setting.arenaPosition)
-		setting.arenaPosition:sendMagicEffect(CONST_ME_TELEPORT)
-		return true
-	end
+	addEvent(completeTest, 2 * 60 * 1000, player.uid)
+	player:teleportTo(setting.arenaPosition)
+	setting.arenaPosition:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
 end
 
-minotaurBoss:type("stepin")
-minotaurBoss:aid(12135)
+minotaurBoss:position(Position(33146, 31413, 6))
 minotaurBoss:register()

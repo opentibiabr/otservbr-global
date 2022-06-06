@@ -13,5 +13,5 @@ function theNewFrontierOutfit.onUse(player, item)
 	return true
 end
 
-theNewFrontierOutfit:aid(5001)
+theNewFrontierOutfit:aid(40015)
 theNewFrontierOutfit:register()

@@ -81,5 +81,5 @@ function theNewFrontierArena.onUse(player, item, fromPosition, target, toPositio
 	return true
 end
 
-theNewFrontierArena:uid(3157)
+theNewFrontierArena:aid(30003)
 theNewFrontierArena:register()
