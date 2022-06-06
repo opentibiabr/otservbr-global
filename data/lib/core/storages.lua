@@ -1777,491 +1777,535 @@ Storage = {
 		SimpleChest = {
 			FamilyBrooch = 9000
 		},
-		-- update pre-6.0
-		DeeperFibula = {
-			-- 10000 EMPTY
-			RewardTowerShield = 10001,
-			RewardWarriorHelmet = 10002,
-			RewardDwarvenRing = 10003,
-			RewardElvenAmulet = 10004,
-			RewardKnightAxe = 10005
-		},
-		OrnamentedShield = {
-			Bag = 10006,
-			RedBag = 10007
-		},
-		ShortSword = {
-			Book = 10008
-		},
-		ThaisLighthouse = {
-			BattleHammer = 10009,
-			DarkShield = 10010
-		},
-		-- update 6.0
-		StuddedShield = {
-			BananaFree = 10011,
-			BananaPremium = 10012
-		},
-		-- update 6.1
-		EmperorsCookies = {
-			-- 10013/10015 EMPTY
-			RopeReward = 10016,
-		},
-		ExplorerBrooch = {
-			Reward = 10017
-		},
-		OrcFortress = {
-			KnightAxe = 10018,
-			KnightArmor = 10019,
-			FireSword = 10020
-		},
-		Panpipe = {
-			-- 10021 EMPTY
-			Reward = 10022
-		},
-		-- update 6.2
-		Draconia = {
-			Reward1 = 10023,
-			Reward2 = 10024
-		},
-		-- update 6.4
-		AdornedUHRune = {
-			Reward = 10025
-		},
-		BarbarianAxe = {
-			BarbarianAxe = 10026,
-			Scimitar = 10027
-		},
-		BerserkerTreasure = {
-			Reward = 10028
-		},
-		DarkArmor = {
-			Reward = 10029
-		},
-		DemonHelmet = {
-			SteelBoots = 10030,
-			DemonHelmet = 10031,
-			DemonShield = 10032
-		},
-		DoubleHero = {
-			RedGem = 10033,
-			ClubRing = 10034
-		},
-		EdronGoblin = {
-			SilverAmulet = 10035,
-			SteelShield = 10036
-		},
-		FireAxe = {
-			Bag = 10037,
-			FireAxe = 10038
-		},
-		PoisonDaggers = {
-			BackpackReward = 10039
-		},
-		Ring = {
-			TimeRing = 10040,
-			SwordRing = 10041
-		},
-		ShamanTreasure = {
-			Bag = 10042
-		},
-		StrongPotions = {
-			Reward = 10043
-		},
-		TrollCave = {
-			GarlicNecklace = 10044,
-			BrassLegs = 10045
-		},
-		VampireShield = {
-			Bag = 10046,
-			DragonLance = 10047,
-			VampireShield = 10048
-		},
-		WeddingRing = {
-			DragonNecklace = 10049,
-			WeedingRing = 10050
-		},
-		-- update 6.5
-		AlawarsVault = {
-			WhitePearl = 10051,
-			Broadsword = 10052
-		},
-		-- update 7.1
-		BlackKnight = {
-			-- 10053 EMPTY
-			CrownArmor = 10054,
-			CrownShield = 10055
-		},
-		DragonTower = {
-			Backpack1 = 10056,
-			Backpack2 = 10057
-		},
-		TimeRing = {
-			CrystallBall = 10058,
-			TimeRing = 10059,
-			ElvenAmulet = 10060
-		},
-		-- update 7.2
-		Behemoth = {
-			Bag = 10061,
-			GuardianHalberd = 10062,
-			DemonShield = 10063,
-			GoldenArmor = 10064
-		},
-		ParchmentRoom = {
-			Bag = 10065
-		},
-		TheQueenOfTheBanshees = {
-			Reward = {
-				StoneSkinAmulet = 10066,
-				StealthRing = 10067,
-				TowerShield = 10068,
-				GiantSword = 10069,
-				BootsOfHaste = 10070,
-				PlatinumCoin = 10071
+		PreU6_0 = { -- update pre-6.0 - Reserved Storages 45000 - 45099
+			DeeperFibula = {
+				RewardTowerShield = 10001,
+				RewardWarriorHelmet = 10002,
+				RewardDwarvenRing = 10003,
+				RewardElvenAmulet = 10004,
+				RewardKnightAxe = 10005
 			},
-			QuestLine = 10072,
-			FirstSeal = 10073,
-			FirstSealDoor = 10074,
-			SecondSeal = 10075,
-			SecondSealDoor = 10076,
-			ThirdSeal = 10077,
-			ThirdSealDoor = 10078,
-			ThirdSealWarlocks = 10079,
-			FourthSeal = 10080,
-			FourthSealDoor = 10081,
-			FifthSeal = 10082,
-			FifthSealDoor = 10083,
-			FifthSealTile = 10084,
-			SixthSeal = 10085,
-			SixthSealDoor = 10086,
-			LastSeal = 10087,
-			LastSealDoor = 10088,
-			BansheeDoor = 10089,
-			FinalBattle = 10090
+			OrnamentedShield = {
+				Bag = 10006,
+				RedBag = 10007
+			},
+			ShortSword = {
+				Book = 10008
+			},
+			ThaisLighthouse = {
+				BattleHammer = 10009,
+				DarkShield = 10010
+			},
 		},
-		-- update 7.24
-		GiantSmithhammer = {
-			QuestLine = 10091,
-			Talon = 10092,
-			Hammer = 10093,
-			GoldCoin = 10094
+		U6_0 = { -- update 6.0 - Reserved Storages 46000 - 46999
+			StuddedShield = {
+				BananaFree = 10011,
+				BananaPremium = 10012
+			},
 		},
-		MadMageRoom = {
-			QuestLine = 10095,
-			APrisoner = 10096,
-			StarAmulet = 10097,
-			Hat = 10098,
-			StoneSkinAmulet = 10099
+		U6_1 = { -- update 6.1 - Reserved Storages 47000 - 47999
+			EmperorsCookies = {
+				RopeReward = 10016,
+			},
+			ExplorerBrooch = {
+				Reward = 10017
+			},
+			OrcFortress = {
+				KnightAxe = 10018,
+				KnightArmor = 10019,
+				FireSword = 10020
+			},
+			Panpipe = {
+				Reward = 10022
+			},
 		},
-		SkullOfRatha = {
-			Bag1 = 10100,
-			Bag2 = 10101
+		U6_2 = { -- update 6.2 - Reserved Storages 48000 - 48999
+			Draconia = {
+				Reward1 = 10023,
+				Reward2 = 10024
+			},
 		},
-		TheAnnihilator = {
-			Reward = 10102
+		U6_4 = { -- update 6.4 - Reserved Storages 49000 - 49999
+			AdornedUHRune = {
+				Reward = 10025
+			},
+			BarbarianAxe = {
+				BarbarianAxe = 10026,
+				Scimitar = 10027
+			},
+			BerserkerTreasure = {
+				Reward = 10028
+			},
+			DarkArmor = {
+				Reward = 10029
+			},
+			DemonHelmet = {
+				SteelBoots = 10030,
+				DemonHelmet = 10031,
+				DemonShield = 10032
+			},
+			DoubleHero = {
+				RedGem = 10033,
+				ClubRing = 10034
+			},
+			EdronGoblin = {
+				SilverAmulet = 10035,
+				SteelShield = 10036
+			},
+			FireAxe = {
+				Bag = 10037,
+				FireAxe = 10038
+			},
+			PoisonDaggers = {
+				BackpackReward = 10039
+			},
+			Ring = {
+				TimeRing = 10040,
+				SwordRing = 10041
+			},
+			ShamanTreasure = {
+				Bag = 10042
+			},
+			StrongPotions = {
+				Reward = 10043
+			},
+			TrollCave = {
+				GarlicNecklace = 10044,
+				BrassLegs = 10045
+			},
+			VampireShield = {
+				Bag = 10046,
+				DragonLance = 10047,
+				VampireShield = 10048
+			},
+			WeddingRing = {
+				DragonNecklace = 10049,
+				WeedingRing = 10050
+			},
 		},
-		TheParadoxTower = {
-			QuestLine = 10103,
-			TheFearedHugo = 10104,
-			FirstParadoxAcess = 10105,
-			FavoriteColour = 10106,
-			Mathemagics = 10107,
-			Reward = {
-				Egg = 10108,
-				Gold = 10109,
-				Talon = 10110,
-				Wand = 10111
-			}
+		U6_5 = { -- update 6.5 - Reserved Storages 50000 - 50999
+			AlawarsVault = {
+				WhitePearl = 10051,
+				Broadsword = 10052
+			},
 		},
-		ThePostmanMissions = {},
-		TheWhiteRavenMonastery = {},
-		VoodooDoll = {},
-		-- update 7.3
-		MedusaShield = {},
-		SerpentineTower = {},
-		WhitePearl = {},
-		-- update 7.4
-		TheAncientTombs = {},
-		TheDjinnWarEfreetFaction = {},
-		TheDjinnWarMaridFaction = {},
-		-- update 7.5
-		ElephantTusk = {},
-		Waterfall = {},
-		-- update 7.6
-		HydraEgg = {},
-		TheApeCity = {},
-		TheExplorerSociety = {},
-		-- update 7.8
-		AssassinOutfits = {},
-		BarbarianOutfits = {},
-		BeggarOutfits = {},
-		CitizenOutfits = {},
-		CitizenOutfitsRook = {},
-		DruidOutfits = {},
-		DruidOutfitsRook = {},
-		HunterOutfits = {},
-		KnightOutfits = {},
-		MageOutfits = {},
-		MarlinTrophy = {},
-		Meriana = {},
-		NoblemanOutfits = {},
-		ObsidianKnife = {},
-		OrientalOutfits = {},
-		PirateOutfits = {},
-		ShamanOutfits = {},
-		SummonerOutfits = {},
-		TheBlessedStake = {},
-		TheMermaidMarina = {},
-		TheShatteredIsles = {},
-		TheSweatyCyclops = {},
-		TreasureIsland = {},
-		WarriorOutfits = {},
-		WizardOutfits = {},
-		-- update 7.9
-		DreamersChallenge = {},
-		ThePitsOfInferno = {},
-		-- update 8.0
-		BarbarianArena = {},
-		BarbarianTest = {},
-		BerserkPotion = {},
-		FishingBox = {},
-		FormorgarMinesHoist = {},
-		FormorgarMines = {},
-		FrostDragon = {},
-		Inukaya = {},
-		LionTrophy = {},
-		MastermindPotion = {},
-		NorsemanOutfits = {},
-		Sinatuki = {},
-		SkeletonDecoration = {},
-		TheIceIslands = {},
-		WaterskinOfMead = {},
-		-- update 8.1
-		AgainstTheSpiderCult = {},
-		AritosTask = {},
-		BrotherhoodOutfits = {},
-		OutfitBrotherhoodMaleAddon = {},
-		IntoTheBonePit = {},
-		KissingAPig = {},
-		KosheiTheDeathless = {},
-		NightmareOutfits = {},
-		OutfitNightmareMaleAddon = {},
-		NomadsLand = {},
-		RestInHallowedGround = {},
-		SecretService = {},
-		StealFromThieves = {},
-		TheExterminator = {},
-		TheTravellingTrader = {},
-		TheUltimateBooze = {},
-		ToAppeaseTheMighty = {},
-		ToBlindTheEnemy = {},
-		ToOutfoxAFox = {},
-		TowerDefence = {},
-		WhatAFoolish = {},
-		-- update 8.2
-		ElementalSpheres = {},
-		MachineryOfWar = {},
-		TheBeginning = {},
-		TheDemonOak = {},
-		TheHuntForTheSeaSerpent = {},
-		TheInquisition = {},
-		TheThievesGuild = {},
-		TrollSabotage = {},
-		VampireHunter = {},
-		-- update 8.4
-		BloodBrothers = {},
-		InServiceOfYalahar = {},
-		TheHiddenCityOfBeregar = {},
-		TopOfTheCity = {},
-		YalaharianOutfits = {},
-		-- update 8.5
-		Braindeath = {},
-		DarashiaDragon = {},
-		HotCuisine = {},
-		KillingInTheNameOf = {},
-		LoneMedusa = {},
-		PilgrimageOfAshes = {},
-		ShadowsOfYalahar = {},
-		TheIsleOfEvil = {},
-		TheLightbearer = {},
-		TheScatterbrainedSorcerer = {},
-		TreasureHunt = {},
-		-- update 8.54
-		AnUneasyAlliance = {},
-		ChildrenOfTheRevolution = {},
-		SeaOfLight = {},
-		TheNewFrontier = {},
-		TomesOfKnowledge = {},
-		UnnaturalSelection = {},
-		WarmasterOutfits = {},
-		-- update 8.6
-		AFathersBurden = {},
-		AnInterestInBotany = {},
-		TheSpiritWillGetYou = {},
-		WayfarerOutfits = {},
-		WrathOfTheEmperor = {},
-		-- update 8.61
-		RiseOfDevovorga = {},
-		-- update 8.7
-		APieceOfCake = {},
-		APiratesDeathToMe = {},
-		AnnualAutumnVintage = {},
-		Bewitched = {},
-		DemonsLullaby = {},
-		JackToTheFuture = {},
-		LastCreepStanding = {},
-		ResearchAndDevelopment = {},
-		RottinWoodAndTheMarriedMen = {},
-		Spirithunters = {},
-		TheColoursOfMagic = {},
-		--update 9.1
-		AfflictedOutfits = {},
-		AwashWorldChange = {},
-		DemonWarsWorldChange = {},
-		ElementalistOutfits = {},
-		HorseStationWorldChange = {},
-		InsectoidInvasionWorldChange = {},
-		LooseEnds = {},
-		OverhuntingWorldChange = {},
-		SteamshipWorldChange = {},
-		SwampFeverWorldChange = {},
-		TheMagesTowerWorldChange = {},
-		TheMummysCurseWorldChange = {},
-		TheRookieGuard = {},
-		TheirMastersVoiceWorldChange = {},
-		ThornfireWorldChange = {},
-		TwistedWatersWorldChange = {},
-		-- update 9.4
-		BankRobberyMiniWorldChange = {},
-		BoredMiniWorldChange = {},
-		DeeplingsWorldChange = {},
-		DownTheDrainMiniWorldChange = {},
-		FireFromTheEarthMiniWorldChange = {},
-		HiveBornWorldChange = {},
-		InsectoidOutfits = {},
-		KingsdayMiniWorldChange = {},
-		LiquidBlack = {},
-		LumberjackMiniWorldChange = {},
-		NomadsMiniWorldChange = {},
-		NoodlesIsGoneMiniWorldChange = {},
-		OrientalTraderMiniWorldChange = {},
-		RiverRunsDeepMiniWorldChange = {},
-		StampedeMiniWorldChange = {},
-		ThawingMiniWorldChange = {},
-		WarAgainstTheHive = {},
-		-- update 9.5
-		SpringIntoLife = {},
-		-- update 9.80
-		BigfootsBurden = {},
-		CrystalWarlordOutfits = {},
-		DevovorgasEssenceMiniWorldChange = {},
-		SoilGuardianOutfits = {},
-		SpiderNestMiniWorldChange = {},
-		WarpathMiniWorldChange = {},
-		-- update 9.80
-		ChildOfDestiny = {},
-		DemonOutfits = {},
-		GoblinMerchant = {},
-		VenoreDailyTasks = {},
-		-- update 10.10
-		FuryGatesMiniWorldChange = {},
-		HuntingForTokens = {},
-		OpticordingSphere = {},
-		SmallSapphire = {},
-		TheGravediggerOfDrefia = {},
-		TheRepenters = {},
-		-- update 10.20
-		CaveExplorerOutfits = {},
-		SpikeTasks = {},
-		SpiritGroundsMiniWorldChange = {},
-		-- update 10.30
-		DreamWardenOutfits = {},
-		Roshamuul = {},
-		-- update 10.37
-		TinderBox = {},
-		ChyllfroestMiniWorldChange = {},
-		-- update 10.50
-		DarkTrails = {},
-		GloothEngineerOutfits = {},
-		Oramond = {},
-		Rathleton = {},
-		-- update 10.55
-		Dawnport = {
-			VocationReward = 20000,
-			Questline = 20001,
-			GoMain = 20002,
-			TheLostAmulet = 20003,
-			TheStolenLogBook = 20004,
-			TheRareHerb = 20005,
-			TheDormKey = 20006,
-			StrangeAmulet = 20007,
-			TornLogBook = 20008,
-			HerbFlower = 20009,
-			MorriskTroll = 20010,
-			MorrisTrollCount = 20011,
-			MorrisGoblin = 20012,
-			MorrisGoblinCount = 20013,
-			MorrisMinos = 20014,
-			MorrisMinosCount = 20015
+		U7_1 = { -- update 7.1 - Reserved Storages 51000 - 51999
+			BlackKnight = {
+				CrownArmor = 10054,
+				CrownShield = 10055
+			},
+			DragonTower = {
+				Backpack1 = 10056,
+				Backpack2 = 10057
+			},
+			TimeRing = {
+				CrystallBall = 10058,
+				TimeRing = 10059,
+				ElvenAmulet = 10060
+			},
 		},
-		SanctuaryOfTheLizardGod = {
-			LizardGodTeleport = 20020,
-			LegionHelmet = 20021
+		U7_2 = { -- update 7.2 - Reserved Storages 52000 - 52999
+			Behemoth = {
+				Bag = 10061,
+				GuardianHalberd = 10062,
+				DemonShield = 10063,
+				GoldenArmor = 10064
+			},
+			ParchmentRoom = {
+				Bag = 10065
+			},
+			TheQueenOfTheBanshees = {
+				Reward = {
+					StoneSkinAmulet = 10066,
+					StealthRing = 10067,
+					TowerShield = 10068,
+					GiantSword = 10069,
+					BootsOfHaste = 10070,
+					PlatinumCoin = 10071
+				},
+				QuestLine = 10072,
+				FirstSeal = 10073,
+				FirstSealDoor = 10074,
+				SecondSeal = 10075,
+				SecondSealDoor = 10076,
+				ThirdSeal = 10077,
+				ThirdSealDoor = 10078,
+				ThirdSealWarlocks = 10079,
+				FourthSeal = 10080,
+				FourthSealDoor = 10081,
+				FifthSeal = 10082,
+				FifthSealDoor = 10083,
+				FifthSealTile = 10084,
+				SixthSeal = 10085,
+				SixthSealDoor = 10086,
+				LastSeal = 10087,
+				LastSealDoor = 10088,
+				BansheeDoor = 10089,
+				FinalBattle = 10090
+			},
 		},
-		-- update 10.70
-		HeroOfRathleton = {},
-		LionsRock = {},
-		TheCursedCrystal = {},
-		TheFireFeatheredSerpentWorldChange = {},
-		TwentyMilesBeneathTheSea = {},
-		-- update 10.80
-		AsuraPalace = {},
-		Cartography101 = {},
-		Grimvale = {},
-		NightmareTeddy = {},
-		TheGreatDragonHunt = {},
-		TheLostBrother = {},
-		TheTaintedSouls = {},
-		-- update 10.90
-		FerumbrasAscension = {},
-		Krailos = {},
-		RiftWarriorOutfits = {},
-		-- update 10.94
-		HeartOfDestruction = {},
-		-- update 11.02
-		FestiveOutfits = {},
-		FirstDragon = {},
-		ForgottenKnowledge = {},
-		-- update 11.40
-		CultsOfTibia = {},
-		ThreatenedDreams = {},
-		-- update 11.50
-		DangerousDepths = {},
-		HiddenThreats = {},
-		MakeshiftWarriorOutfits = {},
-		-- update 11.80
-		BattleMageOutfits = {},
-		DiscovererOutfits = {},
-		MeasuringTibia = {},
-		TheSecretLibrary = {},
-		-- update 12.00
-		DreamWarriorOutfits = {},
-		TheDreamCourts = {
-			AndrewDoor = 14900
+		U7_24 = { -- update 7.24 - Reserved Storages 53000 - 53999
+			GiantSmithhammer = {
+				QuestLine = 10091,
+				Talon = 10092,
+				Hammer = 10093,
+				GoldCoin = 10094
+			},
+			MadMageRoom = {
+				QuestLine = 10095,
+				APrisoner = 10096,
+				StarAmulet = 10097,
+				Hat = 10098,
+				StoneSkinAmulet = 10099
+			},
+			SkullOfRatha = {
+				Bag1 = 10100,
+				Bag2 = 10101
+			},
+			TheAnnihilator = {
+				Reward = 10102
+			},
+			TheParadoxTower = {
+				QuestLine = 10103,
+				TheFearedHugo = 10104,
+				FirstParadoxAcess = 10105,
+				FavoriteColour = 10106,
+				Mathemagics = 10107,
+				Reward = {
+					Egg = 10108,
+					Gold = 10109,
+					Talon = 10110,
+					Wand = 10111
+				}
+			},
+			ThePostmanMissions = {},
+			TheWhiteRavenMonastery = {},
+			VoodooDoll = {},
 		},
-		-- update 12.02
-		TibiaAnniversary = {},
-		WinterlightSolstice = {},
-		-- update 12.15.8659
-		GoldenOutfits = {},
-		-- update 12.20
-		GraveDanger = {},
-		HandOfTheInquisitionOutfits = {},
-		-- Kilmaresh = {}, done earlier in the file
-		-- update 12.30
-		FeasterOfSouls = {},
-		PoltergeistOutfits = {}
+		U7_3 = { -- update 7.3 - Reserved Storages 54000 - 54999
+			MedusaShield = {},
+			SerpentineTower = {},
+			WhitePearl = {},
+		},
+		U7_4 = { -- update 7.4 - Reserved Storages 55000 - 55999
+			TheAncientTombs = {},
+			TheDjinnWarEfreetFaction = {},
+			TheDjinnWarMaridFaction = {},
+		},
+		U7_5 = { -- update 7.5 - Reserved Storages 56000 - 56999
+			ElephantTusk = {},
+			Waterfall = {},
+		},
+		U7_6 = { -- update 7.6 - Reserved Storages 56000 - 56999
+			HydraEgg = {},
+			TheApeCity = {},
+			TheExplorerSociety = {},
+		},
+		U7_8 = { -- update 7.8 - Reserved Storages 56000 - 56999
+			AssassinOutfits = {},
+			BarbarianOutfits = {},
+			BeggarOutfits = {},
+			CitizenOutfits = {},
+			CitizenOutfitsRook = {},
+			DruidOutfits = {},
+			DruidOutfitsRook = {},
+			HunterOutfits = {},
+			KnightOutfits = {},
+			MageOutfits = {},
+			MarlinTrophy = {},
+			Meriana = {},
+			NoblemanOutfits = {},
+			ObsidianKnife = {},
+			OrientalOutfits = {},
+			PirateOutfits = {},
+			ShamanOutfits = {},
+			SummonerOutfits = {},
+			TheBlessedStake = {},
+			TheMermaidMarina = {},
+			TheShatteredIsles = {},
+			TheSweatyCyclops = {},
+			TreasureIsland = {},
+			WarriorOutfits = {},
+			WizardOutfits = {},
+		},
+		U7_9 = { -- update 7.9 - Reserved Storages 56000 - 56999
+			DreamersChallenge = {},
+			ThePitsOfInferno = {},
+		},
+		U8_0 = { -- update 8.0 - Reserved Storages 56000 - 56999
+			BarbarianArena = {},
+			BarbarianTest = {},
+			BerserkPotion = {},
+			FishingBox = {},
+			FormorgarMinesHoist = {},
+			FormorgarMines = {},
+			FrostDragon = {},
+			Inukaya = {},
+			LionTrophy = {},
+			MastermindPotion = {},
+			NorsemanOutfits = {},
+			Sinatuki = {},
+			SkeletonDecoration = {},
+			TheIceIslands = {},
+			WaterskinOfMead = {},
+		},
+		U8_1 = { -- update 8.1 - Reserved Storages 56000 - 56999
+			AgainstTheSpiderCult = {},
+			AritosTask = {},
+			BrotherhoodOutfits = {},
+			OutfitBrotherhoodMaleAddon = {},
+			IntoTheBonePit = {},
+			KissingAPig = {},
+			KosheiTheDeathless = {},
+			NightmareOutfits = {},
+			OutfitNightmareMaleAddon = {},
+			NomadsLand = {},
+			RestInHallowedGround = {},
+			SecretService = {},
+			StealFromThieves = {},
+			TheExterminator = {},
+			TheTravellingTrader = {},
+			TheUltimateBooze = {},
+			ToAppeaseTheMighty = {},
+			ToBlindTheEnemy = {},
+			ToOutfoxAFox = {},
+			TowerDefence = {},
+			WhatAFoolish = {},
+		},
+		U8_2 = { -- update 8.2 - Reserved Storages 56000 - 56999
+			ElementalSpheres = {},
+			MachineryOfWar = {},
+			TheBeginning = {},
+			TheDemonOak = {},
+			TheHuntForTheSeaSerpent = {},
+			TheInquisition = {},
+			TheThievesGuild = {},
+			TrollSabotage = {},
+			VampireHunter = {},
+		},
+		U8_4 = { -- update 8.4 - Reserved Storages 56000 - 56999
+			BloodBrothers = {},
+			InServiceOfYalahar = {},
+			TheHiddenCityOfBeregar = {},
+			TopOfTheCity = {},
+			YalaharianOutfits = {},
+		},
+		U8_5 = { -- update 8.5 - Reserved Storages 56000 - 56999
+			Braindeath = {},
+			DarashiaDragon = {},
+			HotCuisine = {},
+			KillingInTheNameOf = {},
+			LoneMedusa = {},
+			PilgrimageOfAshes = {},
+			ShadowsOfYalahar = {},
+			TheIsleOfEvil = {},
+			TheLightbearer = {},
+			TheScatterbrainedSorcerer = {},
+			TreasureHunt = {},
+		},
+		U8_54 = { -- update 8.54 - Reserved Storages 56000 - 56999
+			AnUneasyAlliance = {},
+			ChildrenOfTheRevolution = {},
+			SeaOfLight = {},
+			TheNewFrontier = {},
+			TomesOfKnowledge = {},
+			UnnaturalSelection = {},
+			WarmasterOutfits = {},
+		},
+		U8_6 = { -- update 8.6 - Reserved Storages 56000 - 56999
+			AFathersBurden = {},
+			AnInterestInBotany = {},
+			TheSpiritWillGetYou = {},
+			WayfarerOutfits = {},
+			WrathOfTheEmperor = {},
+		},
+		U8_61 = { -- update 8.61 - Reserved Storages 56000 - 56999
+			RiseOfDevovorga = {},
+		},
+		U8_7 = { -- update 8.7 - Reserved Storages 56000 - 56999
+			APieceOfCake = {},
+			APiratesDeathToMe = {},
+			AnnualAutumnVintage = {},
+			Bewitched = {},
+			DemonsLullaby = {},
+			JackToTheFuture = {},
+			LastCreepStanding = {},
+			ResearchAndDevelopment = {},
+			RottinWoodAndTheMarriedMen = {},
+			Spirithunters = {},
+			TheColoursOfMagic = {},
+		},
+		U9_1 = { --update 9.1 - Reserved Storages 56000 - 56999
+			AfflictedOutfits = {},
+			AwashWorldChange = {},
+			DemonWarsWorldChange = {},
+			ElementalistOutfits = {},
+			HorseStationWorldChange = {},
+			InsectoidInvasionWorldChange = {},
+			LooseEnds = {},
+			OverhuntingWorldChange = {},
+			SteamshipWorldChange = {},
+			SwampFeverWorldChange = {},
+			TheMagesTowerWorldChange = {},
+			TheMummysCurseWorldChange = {},
+			TheRookieGuard = {},
+			TheirMastersVoiceWorldChange = {},
+			ThornfireWorldChange = {},
+			TwistedWatersWorldChange = {},
+		},
+		U9_4 = { -- update 9.4 - Reserved Storages 56000 - 56999
+			BankRobberyMiniWorldChange = {},
+			BoredMiniWorldChange = {},
+			DeeplingsWorldChange = {},
+			DownTheDrainMiniWorldChange = {},
+			FireFromTheEarthMiniWorldChange = {},
+			HiveBornWorldChange = {},
+			InsectoidOutfits = {},
+			KingsdayMiniWorldChange = {},
+			LiquidBlack = {},
+			LumberjackMiniWorldChange = {},
+			NomadsMiniWorldChange = {},
+			NoodlesIsGoneMiniWorldChange = {},
+			OrientalTraderMiniWorldChange = {},
+			RiverRunsDeepMiniWorldChange = {},
+			StampedeMiniWorldChange = {},
+			ThawingMiniWorldChange = {},
+			WarAgainstTheHive = {},
+		},
+		U9_5 = { -- update 9.5 - Reserved Storages 56000 - 56999
+			SpringIntoLife = {},
+		},
+		U9_60 = { -- update 9.60 - Reserved Storages 56000 - 56999
+			BigfootsBurden = {},
+			CrystalWarlordOutfits = {},
+			DevovorgasEssenceMiniWorldChange = {},
+			SoilGuardianOutfits = {},
+			SpiderNestMiniWorldChange = {},
+			WarpathMiniWorldChange = {},
+		},
+		U9_80 = { -- update 9.80 - Reserved Storages 56000 - 56999
+			ChildOfDestiny = {},
+			DemonOutfits = {},
+			GoblinMerchant = {},
+			VenoreDailyTasks = {},
+		},
+		U10_10 = { -- update 10.10 - Reserved Storages 56000 - 56999
+			FuryGatesMiniWorldChange = {},
+			HuntingForTokens = {},
+			OpticordingSphere = {},
+			SmallSapphire = {},
+			TheGravediggerOfDrefia = {},
+			TheRepenters = {},
+		},
+		U10_20 = { -- update 10.20 - Reserved Storages 56000 - 56999
+			CaveExplorerOutfits = {},
+			SpikeTasks = {},
+			SpiritGroundsMiniWorldChange = {},
+		},
+		U10_30 = { -- update 10.30 - Reserved Storages 56000 - 56999
+			DreamWardenOutfits = {},
+			Roshamuul = {},
+		},
+		U10_37 = { -- update 10.37 - Reserved Storages 56000 - 56999
+			TinderBox = {},
+			ChyllfroestMiniWorldChange = {},
+		},
+		U10_50 = { -- update 10.50 - Reserved Storages 56000 - 56999
+			DarkTrails = {},
+			GloothEngineerOutfits = {},
+			Oramond = {},
+			Rathleton = {},
+		},
+		U10_55 = { -- update 10.55 - Reserved Storages 56000 - 56999
+			Dawnport = {
+				VocationReward = 20000,
+				Questline = 20001,
+				GoMain = 20002,
+				TheLostAmulet = 20003,
+				TheStolenLogBook = 20004,
+				TheRareHerb = 20005,
+				TheDormKey = 20006,
+				StrangeAmulet = 20007,
+				TornLogBook = 20008,
+				HerbFlower = 20009,
+				MorriskTroll = 20010,
+				MorrisTrollCount = 20011,
+				MorrisGoblin = 20012,
+				MorrisGoblinCount = 20013,
+				MorrisMinos = 20014,
+				MorrisMinosCount = 20015
+			},
+			SanctuaryOfTheLizardGod = {
+				LizardGodTeleport = 20020,
+				LegionHelmet = 20021
+			},
+		},
+		U10_70 = { -- update 10.70 - Reserved Storages 56000 - 56999
+			HeroOfRathleton = {},
+			LionsRock = {},
+			TheCursedCrystal = {},
+			TheFireFeatheredSerpentWorldChange = {},
+			TwentyMilesBeneathTheSea = {},
+		},
+		U10_80 = { -- update 10.80 - Reserved Storages 56000 - 56999
+			AsuraPalace = {},
+			Cartography101 = {},
+			Grimvale = {},
+			NightmareTeddy = {},
+			TheGreatDragonHunt = {},
+			TheLostBrother = {},
+			TheTaintedSouls = {},
+		},
+		U10_90 = { -- update 10.90 - Reserved Storages 56000 - 56999
+			FerumbrasAscension = {},
+			Krailos = {},
+			RiftWarriorOutfits = {},
+		},
+		U10_94 = { -- update 10.94 - Reserved Storages 56000 - 56999
+			HeartOfDestruction = {},
+		},
+		U11_02 = { -- update 11.02 - Reserved Storages 56000 - 56999
+			FestiveOutfits = {},
+			FirstDragon = {},
+			ForgottenKnowledge = {},
+		},
+		U11_40 = { -- update 11.40 - Reserved Storages 56000 - 56999
+			CultsOfTibia = {},
+			ThreatenedDreams = {},
+		},
+		U11_50 = { -- update 11.50 - Reserved Storages 56000 - 56999
+			DangerousDepths = {},
+			HiddenThreats = {},
+			MakeshiftWarriorOutfits = {},
+		},
+		U11_80 = { -- update 11.80 - Reserved Storages 56000 - 56999
+			BattleMageOutfits = {},
+			DiscovererOutfits = {},
+			MeasuringTibia = {},
+			TheSecretLibrary = {},
+		},
+		U12_00 = { -- update 12.00 - Reserved Storages 56000 - 56999
+			DreamWarriorOutfits = {},
+			TheDreamCourts = {
+				AndrewDoor = 14900
+			},
+		},
+		U12_02 = { -- update 12.02 - Reserved Storages 56000 - 56999
+			TibiaAnniversary = {},
+			WinterlightSolstice = {},
+		},
+		U12_15 = { -- update 12.15.8659 - Reserved Storages 56000 - 56999
+			GoldenOutfits = {},
+		},
+		U12_20 = { -- update 12.20 - Reserved Storages 56000 - 56999
+			GraveDanger = {},
+			HandOfTheInquisitionOutfits = {},
+			-- Kilmaresh = {}, done earlier in the file
+		},
+		U12_30 = { -- update 12.30 - Reserved Storages 56000 - 56999
+			FeasterOfSouls = {},
+			PoltergeistOutfits = {}
+		},
 	}
 }
 
