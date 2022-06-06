@@ -268,11 +268,6 @@ ChestUnique = {
 		reward = {{3587, 1}},
 		storage = Storage.Quest.StuddedShield.BananaPremium
 	},
-
-
-	-- [6018] = empyt -- Free slot for a simple chest quest
-
-
 	-- Explorer brooch quest (kazordoon)
 	[6019] = {
 		itemId = 4240,
