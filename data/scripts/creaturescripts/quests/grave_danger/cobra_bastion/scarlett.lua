@@ -26,7 +26,8 @@ end
 
 local eventDoDamage = function(creatureid, attackerid, type)
 	local creature = Creature(creatureid)
-	if not creature then
+	local attacker = Creature(attackerid)
+	if not creature or not attacker then
 		return
 	end
 

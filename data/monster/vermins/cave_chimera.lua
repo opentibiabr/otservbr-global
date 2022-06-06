@@ -85,7 +85,7 @@ monster.loot = {
 	{name = "violet gem", chance = 6960, maxCount = 1},
 	{name = "cave chimera leg", chance = 4350},
 	{name = "cave chimera head", chance = 3480},
-	{id = 281, chance = 1740}, -- giant shimmering pearl
+	{id = 281, chance = 1740}, -- giant shimmering pearl (green)
 	{name = "yellow gem", chance = 2660},
 	{name = "glacier amulet", chance = 2480},
 	{id = 23529, chance = 1720}, -- ring of blue plasma

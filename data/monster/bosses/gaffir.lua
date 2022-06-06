@@ -83,10 +83,10 @@ monster.loot = {
 	{name = "blue gem", chance = 21000},
 	{name = "cobra crest", chance = 12560},
 	{name = "violet crystal shard", chance = 14800},
-	{id = 281, chance = 14520}, -- giant shimmering pearl
+	{id = 281, chance = 14520}, -- giant shimmering pearl (green)
 	{name = "gold ingot", chance = 14500},
 	{name = "spellbook of warding", chance = 6500},
-	{id = 3098, chance = 5400}, -- Ring of healing
+	{id = 3098, chance = 5400}, -- ring of healing
 	{name = "terra hood", chance = 1600},
 	{name = "amulet of loss", chance = 3400},
 	{name = "wand of everblazing", chance = 2900},

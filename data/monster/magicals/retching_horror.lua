@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "great health potion", chance = 15000},
 	{name = "underworld rod", chance = 1800},
 	{name = "wand of starstorm", chance = 960},
-	{id = 20029, chance = 3700},
+	{id = 20029, chance = 3700}, -- broken dream
 	{name = "goosebump leather", chance = 16400},
 	{name = "pool of chitinous glue", chance = 14000}
 }

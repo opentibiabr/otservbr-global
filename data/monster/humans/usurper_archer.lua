@@ -94,7 +94,7 @@ monster.loot = {
 	{name = "silver brooch", chance = 7838},
 	{name = "knife", chance = 7703},
 	{name = "lion crest", chance = 6892},
-	{id = 281, chance = 5676},
+	{id = 281, chance = 5676}, -- giant shimmering pearl (green)
 	{name = "gemmed figurine", chance = 4189},
 	{name = "white pearl", chance = 3514},
 	{name = "glacier shoes", chance = 2432},

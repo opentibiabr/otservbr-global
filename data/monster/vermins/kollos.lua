@@ -79,10 +79,10 @@ monster.loot = {
 	{name = "gold coin", chance = 49000, maxCount = 100},
 	{name = "gold coin", chance = 50000, maxCount = 97},
 	{name = "platinum coin", chance = 66000, maxCount = 3},
-	{id = 3098, chance = 3270}, -- Ring of healing
+	{id = 3098, chance = 3270}, -- ring of healing
 	{name = "steel boots", chance = 130},
 	{name = "great mana potion", chance = 8950, maxCount = 4},
-	{id = 281, chance = 2600},
+	{id = 281, chance = 2600}, -- giant shimmering pearl (green)
 	{name = "ultimate health potion", chance = 4000, maxCount = 3},
 	{name = "gold ingot", chance = 5160},
 	{name = "kollos shell", chance = 15390},
