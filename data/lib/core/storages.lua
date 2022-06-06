@@ -1747,6 +1747,7 @@ Storage = {
 		},
 	},
 	-- News quest development
+	-- These new structure will be reserving range keys for each version. Please use accordingly.
 	-- New storages
 	Quest = {
 		Key = {
@@ -1777,7 +1778,8 @@ Storage = {
 		SimpleChest = {
 			FamilyBrooch = 9000
 		},
-		PreU6_0 = { -- update pre-6.0 - Reserved Storages 45000 - 45099
+		KeyUpdate = 70000,
+		PreU6_0 = { -- update pre-6.0 - Reserved Storages 70001 - 70050
 			DeeperFibula = {
 				RewardTowerShield = 10001,
 				RewardWarriorHelmet = 10002,
@@ -1797,13 +1799,13 @@ Storage = {
 				DarkShield = 10010
 			},
 		},
-		U6_0 = { -- update 6.0 - Reserved Storages 46000 - 46999
+		U6_0 = { -- update 6.0 - Reserved Storages 70051 - 70060
 			StuddedShield = {
 				BananaFree = 10011,
 				BananaPremium = 10012
 			},
 		},
-		U6_1 = { -- update 6.1 - Reserved Storages 47000 - 47999
+		U6_1 = { -- update 6.1 - Reserved Storages 70061 - 70080
 			EmperorsCookies = {
 				RopeReward = 10016,
 			},
@@ -1819,13 +1821,13 @@ Storage = {
 				Reward = 10022
 			},
 		},
-		U6_2 = { -- update 6.2 - Reserved Storages 48000 - 48999
+		U6_2 = { -- update 6.2 - Reserved Storages 70081 - 70090
 			Draconia = {
 				Reward1 = 10023,
 				Reward2 = 10024
 			},
 		},
-		U6_4 = { -- update 6.4 - Reserved Storages 49000 - 49999
+		U6_4 = { -- update 6.4 - Reserved Storages 70091 - 70110
 			AdornedUHRune = {
 				Reward = 10025
 			},
@@ -1883,13 +1885,13 @@ Storage = {
 				WeedingRing = 10050
 			},
 		},
-		U6_5 = { -- update 6.5 - Reserved Storages 50000 - 50999
+		U6_5 = { -- update 6.5 - Reserved Storages 70111 - 70120
 			AlawarsVault = {
 				WhitePearl = 10051,
 				Broadsword = 10052
 			},
 		},
-		U7_1 = { -- update 7.1 - Reserved Storages 51000 - 51999
+		U7_1 = { -- update 7.1 - Reserved Storages 70121 - 70130
 			BlackKnight = {
 				CrownArmor = 10054,
 				CrownShield = 10055
@@ -1904,7 +1906,7 @@ Storage = {
 				ElvenAmulet = 10060
 			},
 		},
-		U7_2 = { -- update 7.2 - Reserved Storages 52000 - 52999
+		U7_2 = { -- update 7.2 - Reserved Storages 70131 - 70180
 			Behemoth = {
 				Bag = 10061,
 				GuardianHalberd = 10062,
@@ -1944,7 +1946,7 @@ Storage = {
 				FinalBattle = 10090
 			},
 		},
-		U7_24 = { -- update 7.24 - Reserved Storages 53000 - 53999
+		U7_24 = { -- update 7.24 - Reserved Storages 70181 - 70180
 			GiantSmithhammer = {
 				QuestLine = 10091,
 				Talon = 10092,
