@@ -184,7 +184,7 @@ ChestUnique = {
 		itemId = 4240,
 		itemPos = {x = 32143, y = 31910, z = 8},
 		reward = {{3374, 1}},
-		storage = Storage.Quest.SanctuaryOfTheLizardGod.LegionHelmet
+		storage = Storage.Quest.U10_55.SanctuaryOfTheLizardGod.LegionHelmet
 	},
 	-- Dawnport quest
 	-- Torn log book
@@ -192,7 +192,7 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32059, y = 31800, z = 10},
 		reward = {{21378, 1}},
-		storage = Storage.Quest.Dawnport.TornLogBook
+		storage = Storage.Quest.U10_55.Dawnport.TornLogBook
 	},
 	-- Deeper fibula quest
 	-- Tower shield
@@ -412,14 +412,14 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 33131, y = 31624, z = 15},
 		reward = {{3053, 1}},
-		storage = Storage.Quest.Ring.TimeRing
+		storage = Storage.Quest.U7_1.Ring.TimeRing
 	},
 	-- Sword ring
 	[6038] = {
 		itemId = 2469,
 		itemPos = {x = 33134, y = 31624, z = 15},
 		reward = {{3091, 1}},
-		storage = Storage.Quest.Ring.SwordRing
+		storage = Storage.Quest.U7_1.Ring.SwordRing
 	},
 	-- Troll cave quest
 	-- Garlic necklace
@@ -472,14 +472,14 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32105, y = 31567, z = 9},
 		reward = {{3026, 3}},
-		storage = Storage.Quest.AlawarsVault.WhitePearl
+		storage = Storage.Quest.U6_5.AlawarsVault.WhitePearl
 	},
 	-- Broadsword
 	[6046] = {
 		itemId = 2472,
 		itemPos = {x = 32109, y = 31567, z = 9},
 		reward = {{3301, 1}},
-		storage = Storage.Quest.AlawarsVault.Broadsword
+		storage = Storage.Quest.U6_5.AlawarsVault.Broadsword
 	},
 	-- Black knight quest
 	-- Crown armor
@@ -487,14 +487,14 @@ ChestUnique = {
 		itemId = 3634,
 		itemPos = {x = 32868, y = 31955, z = 11},
 		reward = {{3381, 1}},
-		storage = Storage.Quest.BlackKnight.CrownArmor
+		storage = Storage.Quest.U7_1.BlackKnight.CrownArmor
 	},
 	-- Crown shield
 	[6048] = {
 		itemId = 3634,
 		itemPos = {x = 32880, y = 31955, z = 11},
 		reward = {{3419, 1}},
-		storage = Storage.Quest.BlackKnight.CrownShield
+		storage = Storage.Quest.U7_1.BlackKnight.CrownShield
 	},
 	-- TIme ring quest
 	-- Crystal ball
@@ -502,21 +502,21 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 33038, y = 32171, z = 9},
 		reward = {{3076, 1}},
-		storage = Storage.Quest.TimeRing.CrystalBall
+		storage = Storage.Quest.U7_1.TimeRing.CrystallBall
 	},
 	-- Time ring
 	[6050] = {
 		itemId = 2472,
 		itemPos = {x = 33039, y = 32171, z = 9},
 		reward = {{3053, 1}},
-		storage = Storage.Quest.TimeRing.TimeRing
+		storage = Storage.Quest.U7_1.TimeRing.TimeRing
 	},
 	-- Elven amulet
 	[6051] = {
 		itemId = 2472,
 		itemPos = {x = 33040, y = 32171, z = 9},
 		reward = {{3082, 1}},
-		storage = Storage.Quest.TimeRing.ElvenAmulet
+		storage = Storage.Quest.U7_1.TimeRing.ElvenAmulet
 	},
 	-- Behemoth quest
 	-- Guardian halberd
@@ -524,21 +524,21 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 33295, y = 31658, z = 13},
 		reward = {{3315, 1}},
-		storage = Storage.Quest.Behemoth.GuardianHalberd
+		storage = Storage.Quest.U7_2.Behemoth.GuardianHalberd
 	},
 	-- Demon shield
 	[6053] = {
 		itemId = 2472,
 		itemPos = {x = 33297, y = 31658, z = 13},
 		reward = {{3420, 1}},
-		storage = Storage.Quest.Behemoth.DemonShield
+		storage = Storage.Quest.U7_2.Behemoth.DemonShield
 	},
 	-- Golden armor
 	[6054] = {
 		itemId = 2472,
 		itemPos = {x = 33298, y = 31658, z = 13},
 		reward = {{3360, 1}},
-		storage = Storage.Quest.Behemoth.GoldenArmor
+		storage = Storage.Quest.U7_2.Behemoth.GoldenArmor
 	},
 	-- Family brooch quest
 	[6055] = {
@@ -553,42 +553,42 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32212, y = 31896, z = 15},
 		reward = {{3081, 1}},
-		storage = Storage.Quest.TheQueenOfTheBanshees.Reward.StoneSkinAmulet
+		storage = Storage.Quest.U7_2.TheQueenOfTheBanshees.Reward.StoneSkinAmulet
 	},
 	-- Stone skin amulet
 	[6057] = {
 		itemId = 2472,
 		itemPos = {x = 32226, y = 31896, z = 15},
 		reward = {{3049, 1}},
-		storage = Storage.Quest.TheQueenOfTheBanshees.Reward.StealthRing
+		storage = Storage.Quest.U7_2.TheQueenOfTheBanshees.Reward.StealthRing
 	},
 	-- Tower shield
 	[6058] = {
 		itemId = 2472,
 		itemPos = {x = 32212, y = 31910, z = 15},
 		reward = {{3428, 1}},
-		storage = Storage.Quest.TheQueenOfTheBanshees.Reward.TowerShield
+		storage = Storage.Quest.U7_2.TheQueenOfTheBanshees.Reward.TowerShield
 	},
 	-- Giant sword
 	[6059] = {
 		itemId = 2472,
 		itemPos = {x = 32226, y = 31910, z = 15},
 		reward = {{3281, 1}},
-		storage = Storage.Quest.TheQueenOfTheBanshees.Reward.GiantSword
+		storage = Storage.Quest.U7_2.TheQueenOfTheBanshees.Reward.GiantSword
 	},
 	-- Boots of haste
 	[6060] = {
 		itemId = 2472,
 		itemPos = {x = 32218, y = 31912, z = 15},
 		reward = {{3079, 1}},
-		storage = Storage.Quest.TheQueenOfTheBanshees.Reward.BootsOfHaste
+		storage = Storage.Quest.U7_2.TheQueenOfTheBanshees.Reward.BootsOfHaste
 	},
 	-- 100 platinum coins
 	[6061] = {
 		itemId = 2472,
 		itemPos = {x = 32220, y = 31912, z = 15},
 		reward = {{3035, 100}},
-		storage = Storage.Quest.TheQueenOfTheBanshees.Reward.PlatinumCoin
+		storage = Storage.Quest.U7_2.TheQueenOfTheBanshees.Reward.PlatinumCoin
 	},
 	-- Ornamented shield quest
 	[6062] = {
@@ -663,7 +663,7 @@ ChestUnique = {
 		container = 2857,
 		reward = {{237, 5}},
 		weight = 23,
-		storage = Storage.Quest.StrongPotions.Reward
+		storage = Storage.Quest.U8_1.StrongPotions.Reward
 	},
 	-- Vampire shield quest
 	-- Bag
@@ -685,7 +685,7 @@ ChestUnique = {
 		container = 2854,
 		reward = {{268, 1}, {266, 1}, {3449, 30}, {3448, 60}},
 		weight = 80,
-		storage = Storage.Quest.DragonTower.Backpack1
+		storage = Storage.Quest.U7_1.DragonTower.Backpack1
 	},
 	-- Backpack 2
 	[6074] = {
@@ -694,7 +694,7 @@ ChestUnique = {
 		container = 2854,
 		reward = {{3350, 1}, {3029, 2}},
 		weight = 50,
-		storage = Storage.Quest.DragonTower.Backpack2
+		storage = Storage.Quest.U7_1.DragonTower.Backpack2
 	},
 	-- Behemoth quest
 	-- Bag
@@ -704,7 +704,7 @@ ChestUnique = {
 		container = 2853,
 		reward = {{3028, 3}, {3029, 4}, {3007, 1}, {3052, 1}, {3055, 1}},
 		weight = 50,
-		storage = Storage.Quest.Behemoth.Bag
+		storage = Storage.Quest.U7_2.Behemoth.Bag
 	},
 	-- Parchment room quest
 	-- Bag
@@ -715,7 +715,7 @@ ChestUnique = {
 		keyAction = Storage.Quest.Key.ID6010,
 		reward = {{2972, 1}, {3114, 1}, {3034, 2}, {3049, 1}, {3115, 1}},
 		weight = 42,
-		storage = Storage.Quest.ParchmentRoom.Bag
+		storage = Storage.Quest.U7_2.ParchmentRoom.Bag
 	},
 	-- Giant smithhammer quest
 	-- Talon
@@ -723,21 +723,21 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32774, y = 32253, z = 8},
 		reward = {{3034, 1}},
-		storage = Storage.Quest.GiantSmithhammer.Talon
+		storage = Storage.Quest.U7_24.GiantSmithhammer.Talon
 	},
 	-- Giant smithhammer
 	[6078] = {
 		itemId = 2472,
 		itemPos = {x = 32776, y = 32253, z = 8},
 		reward = {{12510, 1}},
-		storage = Storage.Quest.GiantSmithhammer.Hammer
+		storage = Storage.Quest.U7_24.GiantSmithhammer.Hammer
 	},
 	-- 100 gold coin
 	[6079] = {
 		itemId = 2472,
 		itemPos = {x = 32778, y = 32253, z = 8},
 		reward = {{3031, 100}},
-		storage = Storage.Quest.GiantSmithhammer.GoldCoin
+		storage = Storage.Quest.U7_24.GiantSmithhammer.GoldCoin
 	},
 	-- Mad Mage room quest
 	-- Star amulet
@@ -745,21 +745,21 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32578, y = 32195, z = 14},
 		reward = {{3014, 1}},
-		storage = Storage.Quest.MadMageRoom.StarAmulet
+		storage = Storage.Quest.U7_24.MadMageRoom.StarAmulet
 	},
 	-- Hat of the mad
 	[6081] = {
 		itemId = 2472,
 		itemPos = {x = 32575, y = 32195, z = 14},
 		reward = {{3210, 1}},
-		storage = Storage.Quest.MadMageRoom.Hat
+		storage = Storage.Quest.U7_24.MadMageRoom.Hat
 	},
 	-- Stone skin amulet
 	[6082] = {
 		itemId = 2472,
 		itemPos = {x = 32572, y = 32195, z = 14},
 		reward = {{3081, 5}},
-		storage = Storage.Quest.MadMageRoom.StoneSkinAmulet
+		storage = Storage.Quest.U7_24.MadMageRoom.StoneSkinAmulet
 	},
 	-- Skull of ratha quest
 	-- Bag (white pearl, skull)
@@ -769,7 +769,7 @@ ChestUnique = {
 		container = 2853,
 		weight = 42,
 		reward = {{3026, 1}, {3207, 1}},
-		storage = Storage.Quest.SkullOfRatha.Bag1
+		storage = Storage.Quest.U7_24.SkullOfRatha.Bag1
 	},
 	-- Bag (wolf tooth chain/dwarven ring)
 	[6084] = {
@@ -778,7 +778,7 @@ ChestUnique = {
 		container = 2853,
 		weight = 42,
 		reward = {{3012, 1}, {3097, 1}},
-		storage = Storage.Quest.SkullOfRatha.Bag2
+		storage = Storage.Quest.U7_24.SkullOfRatha.Bag2
 	},
 	-- The annihilator quest
 	-- Demon armor
@@ -786,21 +786,21 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 33227, y = 31656, z = 13},
 		reward = {{3388, 1}},
-		storage = Storage.Quest.TheAnnihilator.Reward
+		storage = Storage.Quest.U7_24.TheAnnihilator.Reward
 	},
 	-- Magic sword
 	[6086] = {
 		itemId = 2472,
 		itemPos = {x = 33229, y = 31656, z = 13},
 		reward = {{3288, 1}},
-		storage = Storage.Quest.TheAnnihilator.Reward
+		storage = Storage.Quest.U7_24.TheAnnihilator.Reward
 	},
 	-- Stonecutter axe
 	[6087] = {
 		itemId = 2472,
 		itemPos = {x = 33231, y = 31656, z = 13},
 		reward = {{3319, 1}},
-		storage = Storage.Quest.TheAnnihilator.Reward
+		storage = Storage.Quest.U7_24.TheAnnihilator.Reward
 	},
 	-- Present (annihilation bear)
 	[6088] = {
@@ -809,7 +809,7 @@ ChestUnique = {
 		container = 2856,
 		weight = 50,
 		reward = {{3213, 1}},
-		storage = Storage.Quest.TheAnnihilator.Reward
+		storage = Storage.Quest.U7_24.TheAnnihilator.Reward
 	},
 	-- The paradox tower quest
 	-- Phoenix egg
@@ -817,28 +817,28 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32477, y = 31900, z = 1},
 		reward = {{3215, 1}},
-		storage = Storage.Quest.TheParadoxTower.Reward.Egg
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Egg
 	},
 	-- 10.000 gold coins
 	[6090] = {
 		itemId = 2472,
 		itemPos = {x = 32478, y = 31900, z = 1},
 		reward = {{3035, 100}},
-		storage = Storage.Quest.TheParadoxTower.Reward.Gold
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Gold
 	},
 	-- Talon
 	[6091] = {
 		itemId = 2472,
 		itemPos = {x = 32479, y = 31900, z = 1},
 		reward = {{3034, 32}},
-		storage = Storage.Quest.TheParadoxTower.Reward.Talon
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Talon
 	},
 	-- Wand of energy cosmic
 	[6092] = {
 		itemId = 2472,
 		itemPos = {x = 32480, y = 31900, z = 1},
 		reward = {{3073, 1}},
-		storage = Storage.Quest.TheParadoxTower.Reward.Wand
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Wand
 	},
 	[6093] = {
 		itemId = 2474,

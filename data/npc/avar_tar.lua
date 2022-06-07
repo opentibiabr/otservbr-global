@@ -98,18 +98,18 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif npcHandler:getTopic(playerId) == 2 then
 		if MsgContains(message, 'base') then
-			if player:getStorageValue(Storage.Quest.TheAnnihilator.Reward) == 1 then
+			if player:getStorageValue(Storage.Quest.U7_24.TheAnnihilator.Reward) == 1 then
 				player:addOutfit(541)
 				player:addOutfit(542)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.Quest.TheAnnihilator.Reward, 2)
+				player:setStorageValue(Storage.Quest.U7_24.TheAnnihilator.Reward, 2)
 				npcHandler:say('Receive the base outfit, |PLAYERNAME|.', npc, creature)
 			else
 				npcHandler:say('You need to complete annihilator quest first, |PLAYERNAME|.', npc, creature)
 				npcHandler:setTopic(playerId, 2)
 			end
 		elseif MsgContains(message, 'shield') then
-			if player:getStorageValue(Storage.Quest.TheAnnihilator.Reward) == 2
+			if player:getStorageValue(Storage.Quest.U7_24.TheAnnihilator.Reward) == 2
 			and player:getStorageValue(Storage.Quest.U6_4.DemonHelmet.DemonHelmet) == 1 then
 				player:addOutfitAddon(541, 1)
 				player:addOutfitAddon(542, 1)
@@ -121,7 +121,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 2)
 			end
 		elseif MsgContains(message, 'helmet') then
-			if player:getStorageValue(Storage.Quest.TheAnnihilator.Reward) == 2
+			if player:getStorageValue(Storage.Quest.U7_24.TheAnnihilator.Reward) == 2
 			and player:getStorageValue(Storage.DemonOak.Done) == 3 then
 				player:addOutfitAddon(541, 2)
 				player:addOutfitAddon(542, 2)

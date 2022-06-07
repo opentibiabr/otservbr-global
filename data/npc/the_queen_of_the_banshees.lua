@@ -65,7 +65,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				Do you think you are ready?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif MsgContains(message, "kiss") and npcHandler:getTopic(playerId) == 7 then
-		if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.LastSeal) < 1 then
+		if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.LastSeal) < 1 then
 			npcHandler:say("Are you prepared to receive my kiss, even though this will mean that your \z
 					death as well as a part of your soul will forever belong to me, my dear?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
@@ -93,7 +93,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
-			if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.FourthSeal) == 1 then
+			if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.FourthSeal) == 1 then
 				npcHandler:say("The Queen of the Banshee: Yessss, I can sense you have passed the seal of sacrifice. \z
 						Have you passed any other seal yet?", npc, creature)
 				npcHandler:setTopic(playerId, 2)
@@ -102,7 +102,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 2 then
-			if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.FirstSeal) == 1 then
+			if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.FirstSeal) == 1 then
 				npcHandler:say("The Queen of the Banshee: I sense you have passed the hidden seal as well. \z
 						Have you passed any other seal yet?", npc, creature)
 				npcHandler:setTopic(playerId, 3)
@@ -111,7 +111,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 3 then
-			if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.SecondSeal) == 1 then
+			if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.SecondSeal) == 1 then
 				npcHandler:say("The Queen of the Banshee: Oh yes, you have braved the plague seal. \z
 						Have you passed any other seal yet?", npc, creature)
 				npcHandler:setTopic(playerId, 4)
@@ -120,7 +120,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 4 then
-			if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.ThirdSeal) == 1 then
+			if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.ThirdSeal) == 1 then
 				npcHandler:say("The Queen of the Banshee: Ah, I can sense the power of the seal of \z
 						demonrage burning in your heart. Have you passed any other seal yet?", npc, creature)
 				npcHandler:setTopic(playerId, 5)
@@ -129,7 +129,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 5 then
-			if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.FifthSeal) == 1 then
+			if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.FifthSeal) == 1 then
 				npcHandler:say("The Queen of the Banshee: So, you have managed to pass the seal of the true path. \z
 						Have you passed any other seal yet?", npc, creature)
 				npcHandler:setTopic(playerId, 6)
@@ -138,7 +138,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 6 then
-			if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.SixthSeal) == 1 then
+			if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSeal) == 1 then
 				npcHandler:say("The Queen of the Banshee: I see! You have mastered the seal of logic. \z
 						You have made the sacrifice, you have seen the unseen, you possess fortitude, \z
 						you have filled yourself with power and found your path. You may ask me for my {kiss} now.", npc, creature)
@@ -153,9 +153,9 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 				player:teleportTo({x = 32202, y = 31812, z = 8})
 				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-				player:setStorageValue(Storage.Quest.TheQueenOfTheBanshees.LastSeal, 1)
-				player:setStorageValue(Storage.Quest.TheQueenOfTheBanshees.LastSealDoor, 1)
-				player:setStorageValue(Storage.Quest.TheQueenOfTheBanshees.BansheeDoor, 1)
+				player:setStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.LastSeal, 1)
+				player:setStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.LastSealDoor, 1)
+				player:setStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.BansheeDoor, 1)
 			else
 				npcHandler:say("You have spilled too much blood recently and the dead are hungry for your soul. \z
 						Perhaps return when you regained you inner balance.", npc, creature)

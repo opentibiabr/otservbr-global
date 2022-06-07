@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "key") then
-		if player:getStorageValue(Storage.Quest.Dawnport.TheDormKey) == 1 then
+		if player:getStorageValue(Storage.Quest.U10_55.Dawnport.TheDormKey) == 1 then
 			npcHandler:say("Me not give key! Key my precious now! \z
 				By old goblin law all that one has in his pockets for two days is family heirloom! \z
 				Me no part with my precious ... hm unless you provide Woblin with some {reward}!", npc, creature)
@@ -64,11 +64,11 @@ local function creatureSayCallback(npc, creature, type, message)
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("Me good angler but one fish eludes me since many many weeks. I call fish ''Old Nasty''. \z
 				You might catch him in this cave, in that pond there. Bring me Old Nasty and I'll give you key!", npc, creature)
-			player:setStorageValue(Storage.Quest.Dawnport.TheDormKey, 2)
+			player:setStorageValue(Storage.Quest.U10_55.Dawnport.TheDormKey, 2)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "old nasty") then
-		if player:getStorageValue(Storage.Quest.Dawnport.TheDormKey) == 3 and player:getItemCount(21402) >= 1 then
+		if player:getStorageValue(Storage.Quest.U10_55.Dawnport.TheDormKey) == 3 and player:getItemCount(21402) >= 1 then
 			npcHandler:say("You bring me Old Nasty?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:removeItem(21402, 1)
 			local TheDormKey = player:addItem(21392, 1)
 			TheDormKey:setActionId(103)
-			player:setStorageValue(Storage.Quest.Dawnport.TheDormKey, 4)
+			player:setStorageValue(Storage.Quest.U10_55.Dawnport.TheDormKey, 4)
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

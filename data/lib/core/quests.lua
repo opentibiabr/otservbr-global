@@ -2,12 +2,12 @@ if not Quests then
 	Quests = {
 		[1] = {
 			name = "The Queen of the Banshees",
-			startStorageId = Storage.Quest.TheQueenOfTheBanshees.FirstSeal,
+			startStorageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.FirstSeal,
 			startStorageValue = 1,
 			missions = {
 				[1] = {
 					name = "The Hidden Seal",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.FirstSeal,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.FirstSeal,
 					missionId = 1,
 					startValue = 1,
 					endValue = 1,
@@ -15,7 +15,7 @@ if not Quests then
 				},
 				[2] = {
 					name = "The Plague Seal",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.SecondSeal,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.SecondSeal,
 					missionId = 2,
 					startValue = 1,
 					endValue = 1,
@@ -23,7 +23,7 @@ if not Quests then
 				},
 				[3] = {
 					name = "The Seal of Demonrage",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.ThirdSeal,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.ThirdSeal,
 					missionId = 3,
 					startValue = 1,
 					endValue = 1,
@@ -31,7 +31,7 @@ if not Quests then
 				},
 				[4] = {
 					name = "The Seal of Sacrifice",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.FourthSeal,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.FourthSeal,
 					missionId = 4,
 					startValue = 1,
 					endValue = 1,
@@ -39,7 +39,7 @@ if not Quests then
 				},
 				[5] = {
 					name = "The Seal of True Path",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.FifthSeal,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.FifthSeal,
 					missionId = 5,
 					startValue = 1,
 					endValue = 1,
@@ -47,7 +47,7 @@ if not Quests then
 				},
 				[6] = {
 					name = "The Seal of Logic",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.SixthSeal,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSeal,
 					missionId = 6,
 					startValue = 1,
 					endValue = 1,
@@ -55,7 +55,7 @@ if not Quests then
 				},
 				[7] = {
 					name = "The Kiss of the Banshee Queen",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.LastSeal,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.LastSeal,
 					missionId = 7,
 					startValue = 1,
 					endValue = 1,
@@ -63,7 +63,7 @@ if not Quests then
 				},
 				[8] = {
 					name = "The Final Battle",
-					storageId = Storage.Quest.TheQueenOfTheBanshees.FinalBattle,
+					storageId = Storage.Quest.U7_2.TheQueenOfTheBanshees.FinalBattle,
 					missionId = 8,
 					startValue = 1,
 					endValue = 1,
@@ -73,12 +73,12 @@ if not Quests then
 		},
 		[2] = {
 			name = "The Paradox Tower",
-			startStorageId = Storage.Quest.TheParadoxTower.QuestLine,
+			startStorageId = Storage.Quest.U7_24.TheParadoxTower.QuestLine,
 			startStorageValue = 1,
 			missions = {
 				[1] = {
 					name = "The Feared Hugo",
-					storageId = Storage.Quest.TheParadoxTower.TheFearedHugo,
+					storageId = Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo,
 					missionId = 9,
 					startValue = 1,
 					endValue = 4,
@@ -91,7 +91,7 @@ if not Quests then
 				},
 				[2] = {
 					name = "Favorite colour: Green",
-					storageId = Storage.Quest.TheParadoxTower.FavoriteColour,
+					storageId = Storage.Quest.U7_24.TheParadoxTower.FavoriteColour,
 					missionId = 10,
 					startValue = 1,
 					endValue = 2,
@@ -102,7 +102,7 @@ if not Quests then
 				},
 				[3] = {
 					name = "The Secret of Mathemagics",
-					storageId = Storage.Quest.TheParadoxTower.Mathemagics,
+					storageId = Storage.Quest.U7_24.TheParadoxTower.Mathemagics,
 					missionId = 10,
 					startValue = 1,
 					endValue = 2,
@@ -5500,12 +5500,12 @@ if not Quests then
 		},
 		[44] = {
 			name = "Dawnport",
-			startStorageId = Storage.Quest.Dawnport.Questline,
+			startStorageId = Storage.Quest.U10_55.Dawnport.Questline,
 			startStorageValue = 1,
 			missions = {
 				[1] = {
 					name = "In the Adventures Outpost",
-					storageId = Storage.Quest.Dawnport.GoMain,
+					storageId = Storage.Quest.U10_55.Dawnport.GoMain,
 					missionId = 10389,
 					startValue = 1,
 					endValue = 2,
@@ -5514,7 +5514,7 @@ if not Quests then
 				},
 				[2] = {
 					name = "The Lost Amulet",
-					storageId = Storage.Quest.Dawnport.TheLostAmulet,
+					storageId = Storage.Quest.U10_55.Dawnport.TheLostAmulet,
 					missionId = 10390,
 					startValue = 1,
 					endValue = 3,
@@ -5526,7 +5526,7 @@ if not Quests then
 				},
 				[3] = {
 					name = "The Stolen Log Book",
-					storageId = Storage.Quest.Dawnport.TheStolenLogBook,
+					storageId = Storage.Quest.U10_55.Dawnport.TheStolenLogBook,
 					missionId = 10391,
 					startValue = 1,
 					endValue = 2,
@@ -5537,7 +5537,7 @@ if not Quests then
 				},
 				[4] = {
 					name = "The Rare Herb",
-					storageId = Storage.Quest.Dawnport.TheRareHerb,
+					storageId = Storage.Quest.U10_55.Dawnport.TheRareHerb,
 					missionId = 10392,
 					startValue = 1,
 					endValue = 3,
@@ -5549,7 +5549,7 @@ if not Quests then
 				},
 				[5] = {
 					name = "The Dorm Key",
-					storageId = Storage.Quest.Dawnport.TheDormKey,
+					storageId = Storage.Quest.U10_55.Dawnport.TheDormKey,
 					missionId = 10393,
 					startValue = 1,
 					endValue = 5,
