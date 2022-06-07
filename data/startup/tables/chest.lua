@@ -200,35 +200,35 @@ ChestUnique = {
 		itemId = 4024,
 		itemPos = {x = 32239, y = 32471, z = 10},
 		reward = {{3428, 1}},
-		storage = Storage.Quest.DeeperFibula.RewardTowerShield
+		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardTowerShield
 	},
 	-- Warrior helmet
 	[6009] = {
 		itemId = 4024,
 		itemPos = {x = 32239, y = 32478, z = 10},
 		reward = {{3369, 1}},
-		storage = Storage.Quest.DeeperFibula.RewardWarriorHelmet
+		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardWarriorHelmet
 	},
 	-- Dwarven ring
 	[6010] = {
 		itemId = 4240,
 		itemPos = {x = 32233, y = 32491, z = 10},
 		reward = {{3097, 1}},
-		storage = Storage.Quest.DeeperFibula.RewardDwarvenRing
+		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardDwarvenRing
 	},
 	-- Elven aulet
 	[6011] = {
 		itemId = 4025,
 		itemPos = {x = 32245, y = 32492, z = 10},
 		reward = {{3082, 1}},
-		storage = Storage.Quest.DeeperFibula.RewardElvenAmulet
+		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardElvenAmulet
 	},
 	-- Knight axe
 	[6012] = {
 		itemId = 4240,
 		itemPos = {x = 32256, y = 32500, z = 10},
 		reward = {{3318, 1}},
-		storage = Storage.Quest.DeeperFibula.RewardKnightAxe
+		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardKnightAxe
 	},
 	-- Short sword quest
 	-- Book
@@ -259,14 +259,14 @@ ChestUnique = {
 		itemId = 3639,
 		itemPos = {x = 32172, y = 32169, z = 7},
 		reward = {{3587, 1}},
-		storage = Storage.Quest.StuddedShield.BananaFree
+		storage = Storage.Quest.U6_0.StuddedShield.BananaFree
 	},
 	-- Banana premium account area
 	[6017] = {
 		itemId = 3639,
 		itemPos = {x = 31983, y = 32193, z = 5},
 		reward = {{3587, 1}},
-		storage = Storage.Quest.StuddedShield.BananaPremium
+		storage = Storage.Quest.U6_0.StuddedShield.BananaPremium
 	},
 	-- Rope (kazordoon, emperor's cookies quest)
 	[6018] = {
@@ -280,7 +280,7 @@ ChestUnique = {
 		itemId = 4240,
 		itemPos = {x = 32636, y = 31873, z = 10},
 		reward = {{4871, 1}},
-		storage = Storage.Quest.ExplorerBrooch.Reward
+		storage = Storage.Quest.U6_1.ExplorerBrooch.Reward
 	},
 	-- Orc fortress quest
 	-- Knight axe
@@ -288,41 +288,41 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 32980, y = 31727, z = 9},
 		reward = {{3318, 1}},
-		storage = Storage.Quest.OrcFortress.KnightAxe
+		storage = Storage.Quest.U6_1.OrcFortress.KnightAxe
 	},
 	-- Knight armor
 	[6021] = {
 		itemId = 2469,
 		itemPos = {x = 32981, y = 31727, z = 9},
 		reward = {{3370, 1}},
-		storage = Storage.Quest.OrcFortress.KnightArmor
+		storage = Storage.Quest.U6_1.OrcFortress.KnightArmor
 	},
 	-- Fire sword
 	[6022] = {
 		itemId = 2469,
 		itemPos = {x = 32985, y = 31727, z = 9},
 		reward = {{3280, 1}},
-		storage = Storage.Quest.OrcFortress.FireSword
+		storage = Storage.Quest.U6_1.OrcFortress.FireSword
 	},
 	-- Draconia quest
 	[6023] = {
 		itemId = 2472,
 		itemPos = {x = 32803, y = 31582, z = 2},
 		reward = {{3284, 1}, {3297, 1}},
-		storage = Storage.Quest.Draconia.Reward1
+		storage = Storage.Quest.U6_2.Draconia.Reward1
 	},
 	[6024] = {
 		itemId = 2472,
 		itemPos = {x = 32804, y = 31582, z = 2},
 		reward = {{3081, 5}, {3051, 1}},
-		storage = Storage.Quest.Draconia.Reward2
+		storage = Storage.Quest.U6_2.Draconia.Reward2
 	},
 	-- Adorned UH rune quest
 	[6025] = {
 		itemId = 2469,
 		itemPos = {x = 33136, y = 31601, z = 15},
 		reward = {{11603, 1}},
-		storage = Storage.Quest.AdornedUHRune.Reward
+		storage = Storage.Quest.U6_4.AdornedUHRune.Reward
 	},
 	-- Barbarian axe quest
 	-- Barbarian axe
@@ -330,21 +330,21 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 33184, y = 31945, z = 11},
 		reward = {{3317, 1}},
-		storage = Storage.Quest.BarbarianAxe.BarbarianAxe
+		storage = Storage.Quest.U6_4.BarbarianAxe.BarbarianAxe
 	},
 	-- Scimitar
 	[6027] = {
 		itemId = 2469,
 		itemPos = {x = 33185, y = 31945, z = 11},
 		reward = {{3307, 1}},
-		storage = Storage.Quest.BarbarianAxe.Scimitar
+		storage = Storage.Quest.U6_4.BarbarianAxe.Scimitar
 	},
 	-- Dark armor quest
 	[6028] = {
 		itemId = 4311,
 		itemPos = {x = 33178, y = 31870, z = 12},
 		reward = {{3383, 1}},
-		storage = Storage.Quest.DarkArmor.Reward
+		storage = Storage.Quest.U6_4.DarkArmor.Reward
 	},
 	-- Demon helmet quest
 	-- Steel boots
@@ -352,21 +352,21 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 33313, y = 31574, z = 15},
 		reward = {{3554, 1}},
-		storage = Storage.Quest.DemonHelmet.SteelBoots
+		storage = Storage.Quest.U6_4.DemonHelmet.SteelBoots
 	},
 	-- Demon helmet
 	[6030] = {
 		itemId = 2472,
 		itemPos = {x = 33313, y = 31575, z = 15},
 		reward = {{3387, 1}},
-		storage = Storage.Quest.DemonHelmet.DemonHelmet
+		storage = Storage.Quest.U6_4.DemonHelmet.DemonHelmet
 	},
 	-- Demon shield
 	[6031] = {
 		itemId = 2472,
 		itemPos = {x = 33313, y = 31576, z = 15},
 		reward = {{3420, 1}},
-		storage = Storage.Quest.DemonHelmet.DemonShield
+		storage = Storage.Quest.U6_4.DemonHelmet.DemonShield
 	},
 	-- Double hero quest
 	-- Red gem
@@ -374,14 +374,14 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 33109, y = 31679, z = 13},
 		reward = {{3039, 1}},
-		storage = Storage.Quest.DoubleHero.RedGem
+		storage = Storage.Quest.U6_4.DoubleHero.RedGem
 	},
 	-- Club ring
 	[6033] = {
 		itemId = 2469,
 		itemPos = {x = 33110, y = 31679, z = 13},
 		reward = {{3093, 1}},
-		storage = Storage.Quest.DoubleHero.ClubRing
+		storage = Storage.Quest.U6_4.DoubleHero.ClubRing
 	},
 	-- Edron goblin quest
 	-- Silver amulet
@@ -389,14 +389,14 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 33095, y = 31800, z = 10},
 		reward = {{3054, 200}},
-		storage = Storage.Quest.EdronGoblin.SilverAmulet
+		storage = Storage.Quest.U6_4.EdronGoblin.SilverAmulet
 	},
 	-- Steel shield
 	[6035] = {
 		itemId = 2469,
 		itemPos = {x = 33095, y = 31801, z = 10},
 		reward = {{3409, 1}},
-		storage = Storage.Quest.EdronGoblin.SteelShield
+		storage = Storage.Quest.U6_4.EdronGoblin.SteelShield
 	},
 	-- Fire axe quest
 	-- Fire axe
@@ -404,7 +404,7 @@ ChestUnique = {
 		itemId = 4024,
 		itemPos = {x = 33084, y = 31650, z = 12},
 		reward = {{3320, 1}},
-		storage = Storage.Quest.FireAxe.FireAxe
+		storage = Storage.Quest.U6_4.FireAxe.FireAxe
 	},
 	-- Ring quest
 	-- Time ring
@@ -427,14 +427,14 @@ ChestUnique = {
 		itemId = 2473,
 		itemPos = {x = 33143, y = 31719, z = 10},
 		reward = {{3083, 150}},
-		storage = Storage.Quest.TrollCave.GarlicNecklace
+		storage = Storage.Quest.U6_4.TrollCave.GarlicNecklace
 	},
 	-- Brass legs
 	[6040] = {
 		itemId = 2473,
 		itemPos = {x = 33143, y = 31721, z = 10},
 		reward = {{3372, 1}},
-		storage = Storage.Quest.TrollCave.BrassLegs
+		storage = Storage.Quest.U6_4.TrollCave.BrassLegs
 	},
 	-- Vampire shield quest
 	-- Dragon lance
@@ -442,14 +442,14 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 33189, y = 31688, z = 14},
 		reward = {{3302, 1}},
-		storage = Storage.Quest.VampireShield.DragonLance
+		storage = Storage.Quest.U6_4.VampireShield.DragonLance
 	},
 	-- Vampire shield
 	[6042] = {
 		itemId = 2469,
 		itemPos = {x = 33195, y = 31688, z = 14},
 		reward = {{3434, 1}},
-		storage = Storage.Quest.VampireShield.VampireShield
+		storage = Storage.Quest.U6_4.VampireShield.VampireShield
 	},
 	-- Weeding ring quest
 	-- Dragon necklace
@@ -457,14 +457,14 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 33158, y = 31621, z = 15},
 		reward = {{3085, 200}},
-		storage = Storage.Quest.WeddingRing.DragonNecklace
+		storage = Storage.Quest.U6_4.WeddingRing.DragonNecklace
 	},
 	-- Weeding ring
 	[6044] = {
 		itemId = 2469,
 		itemPos = {x = 33158, y = 31622, z = 15},
 		reward = {{3004, 1}},
-		storage = Storage.Quest.WeddingRing.WeedingRing
+		storage = Storage.Quest.U6_4.WeddingRing.WeedingRing
 	},
 	-- Alawars vault quest
 	-- White pearl
@@ -615,7 +615,7 @@ ChestUnique = {
 		container = 2853,
 		reward = {{3033, 2}, {3050, 1}, {2953, 1}},
 		weight = 44,
-		storage = Storage.Quest.Panpipe.Reward
+		storage = Storage.Quest.U6_1.Panpipe.Reward
 	},
 	[6066] = {
 		itemId = 2469,
@@ -623,7 +623,7 @@ ChestUnique = {
 		container = 2853,
 		reward = {{3031, 98}, {3031, 77}, {3026, 3}},
 		weight = 27,
-		storage = Storage.Quest.BerserkerTreasure.Reward
+		storage = Storage.Quest.U6_4.BerserkerTreasure.Reward
 	},
 	-- Fire axe quest
 	-- Bag
@@ -633,7 +633,7 @@ ChestUnique = {
 		container = 2853,
 		reward = {{3098, 1}, {3085, 200}, {3028, 7}},
 		weight = 27,
-		storage = Storage.Quest.FireAxe.Bag
+		storage = Storage.Quest.U6_4.FireAxe.Bag
 	},
 	-- Poison daggers quest
 	-- Backpack reward
@@ -643,7 +643,7 @@ ChestUnique = {
 		container = 2854,
 		reward = {{3448, 30}, {3299, 1}, {3299, 1}},
 		weight = 60,
-		storage = Storage.Quest.PoisonDaggers.BackpackReward
+		storage = Storage.Quest.U6_4.PoisonDaggers.BackpackReward
 	},
 	-- Shaman treasure quest
 	-- Bag with 3 blank runes
@@ -653,7 +653,7 @@ ChestUnique = {
 		container = 2853,
 		reward = {{3147, 3}},
 		weight = 15,
-		storage = Storage.Quest.ShamanTreasure.Bag
+		storage = Storage.Quest.U6_4.ShamanTreasure.Bag
 	},
 	-- Strong potions quest
 	-- Green bag with 5 strong mana potions
@@ -673,7 +673,7 @@ ChestUnique = {
 		container = 2853,
 		reward = {{3058, 1}, {3027, 1}, {3078, 1}},
 		weight = 16,
-		storage = Storage.Quest.VampireShield.Bag
+		storage = Storage.Quest.U6_4.VampireShield.Bag
 	},
 	-- [6072] empty
 
