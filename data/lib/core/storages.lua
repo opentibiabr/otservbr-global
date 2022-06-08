@@ -1777,7 +1777,7 @@ Storage = {
 		SimpleChest = {
 			FamilyBrooch = 9000
 		},
-		KeyUpdate = 70000,
+		KeysUpdate = 70000,
 		PreU6_0 = { -- update pre-6.0 - Reserved Storages 70001 - 70050
 			DeeperFibula = {
 				RewardTowerShield = 10001,
@@ -2461,7 +2461,8 @@ GlobalStorage = {
 	CobraBastionFlask = 65012,
 	Inquisition = 65013,
 	Yasir = 65014,
-	NightmareIsle = 65015
+	NightmareIsle = 65015,
+	KeysUpdate = 70000, -- Reserved storage from 70000 - 70000
 }
 
 
