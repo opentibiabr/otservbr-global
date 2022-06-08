@@ -53617,8 +53617,182 @@
 		<attribute key="rotateto" value="37815"/>
 		<attribute key="wrapableto" value="23398"/>
 	</item>
-	<item id="41560" article="a" name="stamina extension">
-		<attribute key="description" value="Drinking this potion fills up stamina by one hour."/>
-		<attribute key="weight" value="210"/>
+	<item id="38637" article="a" name="bronze cup"/>
+	<item id="38638" article="a" name="silver cup"/>
+	<item id="38639" article="a" name="gold cup"/>
+	<item id="38640" article="a" name="gilded horned helmet">
+		<attribute key="description" value="This is a gilded replica of the famous horned helmet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="38642" article="a" name="golden warlord sword">
+		<attribute key="description" value="This is a golden replica of the famous warlord sword"/>
+		<attribute key="weight" value="6400"/>
+	</item>
+	<item id="38677" article="a" name="beaver of wisdom">
+		<attribute key="description" value="This wise beaver will happily solve all your math problems! Awarded by TibiaPal.com" />
+		<attribute key="weight" value="600"/>
+	</item>
+	<item id="38680" article="a" name="beaver of wisdom">
+		<attribute key="description" value="This wise beaver will happily solve all your math problems! Awarded by TibiaPal.com" />
+		<attribute key="weight" value="600"/>
+		<attribute key="duration" value="2"/>
+		<attribute key="decayto" value="38704"/>
+	</item>
+	<item id="38704" article="a" name="beaver of wisdom">
+		<attribute key="description" value="This wise beaver will happily solve all your math problems! Awarded by TibiaPal.com" />
+		<attribute key="weight" value="600"/>
+	</item>
+	<item id="38705" article="a" name="beaver of wisdom">
+		<attribute key="description" value="This wise beaver will happily solve all your math problems! Awarded by TibiaPal.com" />
+		<attribute key="weight" value="600"/>
+		<attribute key="duration" value="2"/>
+		<attribute key="decayto" value="38677"/>
+	</item>
+	<item id="38706" article="a" name="observer tapestry">
+		<attribute key="weight" value="800"/>
+	</item>
+	<item id="39669" article="a" name="purple 25 years balloon">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39670" article="a" name="blue 25 years balloon">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39671" article="a" name="balloon no.0">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39672" article="a" name="balloon no.1">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39673" article="a" name="balloon no.2">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39674" article="a" name="balloon no.3">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39675" article="a" name="balloon no.4">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39676" article="a" name="balloon no.5">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39677" article="a" name="balloon no.6">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39678" article="a" name="balloon no.7">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39679" article="a" name="balloon no.8">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39680" article="a" name="balloon no.9">
+		<attribute key="weight" value="15"/>
+	</item>
+	<item id="39681" article="a" name="purple 25 years balloon">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39682" article="a" name="blue 25 years balloon">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39683" article="a" name="balloon no.0">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39684" article="a" name="balloon no.1">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39685" article="a" name="balloon no.2">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39686" article="a" name="balloon no.3">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39687" article="a" name="balloon no.4">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39688" article="a" name="balloon no.5">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39689" article="a" name="balloon no.6">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39690" article="a" name="balloon no.7">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39691" article="a" name="balloon no.8">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39692" article="a" name="balloon no.9">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39693" article="a" name="25 years backpack">
+		<attribute key="containersize" value="25"/>
+		<attribute key="description" value="It could be bought for Theons after the festivities of Tibia's 25th anniversary" />
+		<attribute key="weight" value="1700"/>
+		<attribute key="imbuementslot" value="1">
+			<attribute key="increase capacity" value="3"/>
+		</attribute>
+	</item>
+	<item id="39694" article="a" name="lucky dragon">
+		<attribute key="wrapableto" value="23473"/>
+	</item>
+	<item id="39695" article="a" name="lucky dragon kit">
+		<attribute key="description" value="Use it in your house to place a lucky dragon" />
+		<attribute key="weight" value="2500"/>
+	</item>
+	<item id="39696" article="a" name="lucky dragon">
+		<attribute key="duration" value="1"/>
+		<attribute key="decayto" value="39694"/>
+	</item>
+	<item id="39697" article="a" name="rainbow torch">
+		<attribute key="stopduration" value="1"/>
+		<attribute key="weight" value="500"/>
+	</item>
+	<item id="39698" article="a" name="lit rainbow torch">
+		<attribute key="duration" value="900"/>
+		<attribute key="decayTo" value="39700"/>
+		<attribute key="weight" value="500"/>
+	</item>
+	<item id="39699" article="a" name="rainbow torch">
+		<attribute key="stopduration" value="1"/>
+		<attribute key="weight" value="450"/>
+	</item>
+	<item id="39700" article="a" name="lit rainbow torch">
+		<attribute key="duration" value="600"/>
+		<attribute key="decayTo" value="39702"/>
+		<attribute key="weight" value="450"/>
+	</item>
+	<item id="39701" article="a" name="rainbow torch">
+		<attribute key="stopduration" value="1"/>
+		<attribute key="weight" value="400"/>
+	</item>
+	<item id="39702" article="a" name="lit rainbow torch">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="2926"/>
+		<attribute key="weight" value="400"/>
+	</item>
+	<item id="39703" article="a" name="burnt down rainbow torch">
+		<attribute key="description" value="Give it some time. Thanks to the 25 years anniversary magic it will be back to normal soon" />
+		<attribute key="duration" value="3600"/>
+		<attribute key="decayTo" value="39697"/>
+		<attribute key="weight" value="350"/>
+	</item>
+	<item id="39704" article="a" name="small reward box">
+		<attribute key="weight" value="3090"/>
+		<attribute key="description" value="It could be exchanged for Theons after the festivities of Tibia's 25th anniversary"/>
+	</item>
+	<item id="39705" article="a" name="reward box">
+		<attribute key="weight" value="13910"/>
+		<attribute key="description" value="It could be exchanged for Theons after the festivities of Tibia's 25th anniversary"/>
+	</item>
+	<item id="39706" article="a" name="box full of balloons">
+		<attribute key="weight" value="160"/>
+		<attribute key="description" value="Use this to get the ballons no.0 to no.9"/>
+	</item>
+	<item id="39707" article="a" name="Pantibian Amphora">
+		<attribute key="weight" value="2500"/>
+		<attribute key="description" value="It emanates a divine aura."/>
+	</item>
+	<item id="39708" article="a" name="big reward box">
+		<attribute key="weight" value="15610"/>
+		<attribute key="description" value="It could be exchanged for Theons after the festivities of Tibia's 25th anniversary"/>
 	</item>
 </items>

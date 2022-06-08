@@ -217,6 +217,11 @@ local transformItems = {
 	[37806] = 37807, [37807] = 37806, -- zaoan wall lamp
 	[37808] = 37809, [37809] = 37808, -- zaoan wall lamps
 	[37811] = 37813, [37812] = 37814, -- sculpture of a fox
+	[38677] = 38680, [38704] = 38705, -- beaver of wisdom
+	[39694] = 39696, -- lucky dragon
+	[39697] = 39698, [39698] = 39697, -- rainbow torch
+	[39699] = 39700, [39700] = 39699, -- rainbow torch
+	[39701] = 39702, [39702] = 39701, -- rainbow torch
 }
 
 local transformTo = Action()
