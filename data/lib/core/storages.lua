@@ -1746,7 +1746,7 @@ Storage = {
 		},
 	},
 	-- News quest development
-	-- These new structure will be reserving range keys for each version. Please use accordingly.
+	-- These new structure will reserve ranges for each version. Please use accordingly.
 	-- New storages
 	Quest = {
 		Key = {
@@ -1778,33 +1778,35 @@ Storage = {
 			FamilyBrooch = 9000
 		},
 		KeysUpdate = 70000,
-		PreU6_0 = { -- update pre-6.0 - Reserved Storages 70001 - 70050
+		-- Start of quests per version
+		-- Use the reserved storage keys accordingly
+		PreU6_0 = { -- update pre-6.0 - Reserved Storages 70001 - 70020   
 			DeeperFibula = {
-				RewardTowerShield = 10001,
-				RewardWarriorHelmet = 10002,
-				RewardDwarvenRing = 10003,
-				RewardElvenAmulet = 10004,
-				RewardKnightAxe = 10005
+				TowerShield = 70001,
+				WarriorHelmet = 70002,
+				DwarvenRing = 70003,
+				ElvenAmulet = 70004,
+				KnightAxe = 70005
 			},
 			OrnamentedShield = {
-				Bag = 10006,
-				RedBag = 10007
+				Bag = 70006,
+				RedBag = 70007
 			},
 			ShortSword = {
-				Book = 10008
+				Book = 70008
 			},
 			ThaisLighthouse = {
-				BattleHammer = 10009,
-				DarkShield = 10010
+				BattleHammer = 70009,
+				DarkShield = 70010
 			},
 		},
-		U6_0 = { -- update 6.0 - Reserved Storages 70051 - 70060
+		U6_0 = { -- update 6.0 - Reserved Storages 70021 - 70030
 			StuddedShield = {
-				BananaFree = 10011,
-				BananaPremium = 10012
+				BananaFree = 70021,
+				BananaPremium = 70022
 			},
 		},
-		U6_1 = { -- update 6.1 - Reserved Storages 70061 - 70080
+		U6_1 = { -- update 6.1 - Reserved Storages 70031 - 70080
 			EmperorsCookies = {
 				RopeReward = 10016,
 			},

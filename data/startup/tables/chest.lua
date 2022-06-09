@@ -200,35 +200,35 @@ ChestUnique = {
 		itemId = 4024,
 		itemPos = {x = 32239, y = 32471, z = 10},
 		reward = {{3428, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardTowerShield
+		storage = Storage.Quest.PreU6_0.DeeperFibula.TowerShield
 	},
 	-- Warrior helmet
 	[6009] = {
 		itemId = 4024,
 		itemPos = {x = 32239, y = 32478, z = 10},
 		reward = {{3369, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardWarriorHelmet
+		storage = Storage.Quest.PreU6_0.DeeperFibula.WarriorHelmet
 	},
 	-- Dwarven ring
 	[6010] = {
 		itemId = 4240,
 		itemPos = {x = 32233, y = 32491, z = 10},
 		reward = {{3097, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardDwarvenRing
+		storage = Storage.Quest.PreU6_0.DeeperFibula.DwarvenRing
 	},
 	-- Elven aulet
 	[6011] = {
 		itemId = 4025,
 		itemPos = {x = 32245, y = 32492, z = 10},
 		reward = {{3082, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardElvenAmulet
+		storage = Storage.Quest.PreU6_0.DeeperFibula.ElvenAmulet
 	},
 	-- Knight axe
 	[6012] = {
 		itemId = 4240,
 		itemPos = {x = 32256, y = 32500, z = 10},
 		reward = {{3318, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.RewardKnightAxe
+		storage = Storage.Quest.PreU6_0.DeeperFibula.KnightAxe
 	},
 	-- Short sword quest
 	-- Book
