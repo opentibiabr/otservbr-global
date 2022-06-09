@@ -1780,7 +1780,7 @@ Storage = {
 		KeysUpdate = 70000,
 		-- Start of quests per version
 		-- Use the reserved storage keys accordingly
-		PreU6_0 = { -- update pre-6.0 - Reserved Storages 70001 - 70020   
+		PreU6_0 = { -- update pre-6.0 - Reserved Storages 70001 - 70020
 			DeeperFibula = {
 				TowerShield = 70001,
 				WarriorHelmet = 70002,
