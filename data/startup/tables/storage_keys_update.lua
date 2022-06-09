@@ -1,6 +1,7 @@
 QuestKeysUpdate = {
-	[0] = {latest = 1}, -- Increase +1 every time this above table suffer a modification
-	[1] = { -- Add a new table to the bottow of this array with the following numver versioning.
+	[0] = {latest = 0}, -- Increase +1 every time this above table suffer a modification
+	-- Add a new table to the bottow of this array with the following numver versioning.
+--[[	[1] = {
 		-- The New Frontier Quest
 		{old = 51080, new = 72501}, -- Questline = 51080,
 		{old = 51081, new = 72503}, -- Mission01 = 51081,
@@ -26,5 +27,5 @@ QuestKeysUpdate = {
 		{old = 3158, new = 72527}, -- Reward 1
 		{old = 3159, new = 72528}, -- Reward 2
 		{old = 3160, new = 72529}, -- Reward 3
-	},
+	}, ]]--
 }

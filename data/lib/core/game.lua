@@ -1,4 +1,4 @@
-function getGlobalStorageValueDB(key)
+function getGlobalStorage(key)
     local resultId = db.storeQuery("SELECT `value` FROM `global_storage` WHERE `key` = " .. key)
     if resultId ~= false then
         local val = result.getString(resultId, "value")
@@ -8,7 +8,7 @@ function getGlobalStorageValueDB(key)
     return -1
 end
 
-function setGlobalStorageValueDB(key, value)
+function setGlobalStorage(key, value)
     db.query("INSERT INTO `global_storage` (`key`, `value`) VALUES (".. key ..", ".. value ..") ON DUPLICATE KEY UPDATE `value` = ".. value)
 end
 
