@@ -1,7 +1,7 @@
 function getGlobalStorage(key)
     local resultId = db.storeQuery("SELECT `value` FROM `global_storage` WHERE `key` = " .. key)
     if resultId ~= false then
-        local val = result.getString(resultId, "value")
+        local val = result.getNumber(resultId, "value")
         result.free(resultId)
         return val
     end
