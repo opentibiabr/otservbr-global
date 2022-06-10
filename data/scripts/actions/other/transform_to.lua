@@ -218,6 +218,16 @@ local transformItems = {
 	[37808] = 37809, [37809] = 37808, -- zaoan wall lamps
 	[37811] = 37813, [37812] = 37814, -- sculpture of a fox
 	[38677] = 38680, [38704] = 38705, -- beaver of wisdom
+	[39423] = 39425, [39425] = 39423, -- knightly table
+	[39424] = 39426, [39426] = 39424, -- knightly table
+	[39427] = 39428, [39428] = 39427, -- knightly chess table
+	[39443] = 39444, [39444] = 39445, -- knightly fire bowl
+	[39445] = 39443, -- knightly fire bowl
+	[39446] = 39447, [39447] = 39446, -- knightly wall lamp
+	[39496] = 39497, [39497] = 39496, -- knightly sword lamp
+	[39498] = 39499, [39499] = 39498, -- knightly candelabra
+	[39500] = 39501, [39501] = 39500, -- knightly candle holder
+	[39508] = 39509, [39668] = 39510, -- knightly guard
 	[39694] = 39696, -- lucky dragon
 	[39697] = 39698, [39698] = 39697, -- rainbow torch
 	[39699] = 39700, [39700] = 39699, -- rainbow torch

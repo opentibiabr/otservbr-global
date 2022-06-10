@@ -53651,6 +53651,170 @@
 	<item id="38706" article="a" name="observer tapestry">
 		<attribute key="weight" value="800"/>
 	</item>
+	<item id="39419" article="a" name="knightly chair">
+		<attribute key="rotateto" value="39420"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39420" article="a" name="knightly chair">
+		<attribute key="rotateto" value="39421"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39421" article="a" name="knightly chair">
+		<attribute key="rotateto" value="39422"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39422" article="a" name="knightly chair">
+		<attribute key="rotateto" value="39419"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39423" article="a" name="knightly table">
+		<attribute key="rotateto" value="39424"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39424" article="a" name="knightly table">
+		<attribute key="rotateto" value="39423"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39425" article="a" name="well-laid knightly table">
+		<attribute key="rotateto" value="39426"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39426" article="a" name="well-laid knightly table">
+		<attribute key="rotateto" value="39425"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39427" article="a" name="knightly chess table">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39428" article="a" name="knightly chess table">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39441" article="a" name="knightly cabinet">
+		<attribute key="containersize" value="8"/>
+		<attribute key="rotateto" value="39442"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39442" article="a" name="knightly cabinet">
+		<attribute key="containersize" value="8"/>
+		<attribute key="rotateto" value="39441"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39443" article="a" name="knightly fire bowl">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39444" article="a" name="knightly fire bowl">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39445" article="a" name="knightly fire bowl">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39446" article="a" name="knightly wall lamp">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39447" article="a" name="knightly wall lamp">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39496" article="a" name="knightly sword lamp">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39497" article="a" name="knightly sword lamp">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39498" article="a" name="knightly candelabra">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39499" article="a" name="knightly candelabra">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39500" article="a" name="knightly candle holder">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39501" article="a" name="knightly candle holder">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39502" article="a" name="knightly decorative shield">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39504" article="a" name="knightly chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="rotateto" value="39505"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39505" article="a" name="knightly chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="rotateto" value="39506"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39506" article="a" name="knightly chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="rotateto" value="39507"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39507" article="a" name="knightly chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="rotateto" value="39504"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39508" article="a" name="knightly guard">
+		<attribute key="description" value="This guard stands firm and will defend his post, no matter what"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39509" article="a" name="knightly guard">
+		<attribute key="description" value="Looks like this guard has left his post"/>
+		<attribute key="decayTo" value="39668"/>
+		<attribute key="duration" value="3"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39510" article="a" name="knightly guard">
+		<attribute key="description" value="This guard is about to return to his post"/>
+		<attribute key="decayTo" value="39508"/>
+		<attribute key="duration" value="5"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39517" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39526"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39518" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39525"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39519" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39524"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39520" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39523"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39521" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39522"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39522" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39521"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39523" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39520"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39524" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39519"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39525" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39518"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39526" article="a" name="knightly bench">
+		<attribute key="rotateto" value="39517"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39668" article="a" name="knightly guard">
+		<attribute key="description" value="This guard post has been left empty"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
 	<item id="39669" article="a" name="purple 25 years balloon">
 		<attribute key="weight" value="15"/>
 	</item>
