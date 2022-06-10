@@ -70,34 +70,34 @@ ChestUnique = {
 		reward = {{21392, 1}},
 		storage = Storage.Quest.Key.ID0010
 	},
-	-- Emperor's cookies quest key 2297
-	[5003] = {
+	-- Emperor's cookies quest
+	[5003] = { --  key 3800
 		isKey = true,
 		itemId = 2472,
 		itemPos = {x = 32605, y = 31908, z = 3},
 		reward = {{2970, 1}},
 		storage = Storage.Quest.Key.ID3800
 	},
-	-- Emperor's cookies quest key 2298
-	[5004] = {
+	-- Emperor's cookies quest
+	[5004] = { -- bag with cookies and key 3801
 		isKey = true,
 		itemId = 2472,
 		itemPos = {x = 32648, y = 31905, z = 3},
 		container = 2853,
 		reward = {{2970, 1}, {3598, 20}, {3598, 7}},
 		weight = 44,
-		storage = Storage.Quest.Key.ID3801,
+		storage = Storage.Quest.U6_1.EmperorsCookies.Rewards.Cookies,
 		keyAction = Storage.Quest.Key.ID3801
 	},
-	-- Emperor's cookies quest key 2299
-	[5005] = {
+	-- Emperor's cookies quest
+	[5005] = { --  key 3802
 		isKey = true,
 		itemId = 2472,
 		itemPos = {x = 32599, y = 31923, z = 6},
 		reward = {{2970, 1}},
 		storage = Storage.Quest.Key.ID3802
 	},
-	-- Black knight quest key 5009
+	-- Black knight quest key 5010
 	[5006] = {
 		isKey = true,
 		itemId = 3634,
@@ -200,35 +200,35 @@ ChestUnique = {
 		itemId = 4024,
 		itemPos = {x = 32239, y = 32471, z = 10},
 		reward = {{3428, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.TowerShield
+		storage = Storage.Quest.PreU6_0.DeeperFibula.Rewards.TowerShield
 	},
 	-- Warrior helmet
 	[6009] = {
 		itemId = 4024,
 		itemPos = {x = 32239, y = 32478, z = 10},
 		reward = {{3369, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.WarriorHelmet
+		storage = Storage.Quest.PreU6_0.DeeperFibula.Rewards.WarriorHelmet
 	},
 	-- Dwarven ring
 	[6010] = {
 		itemId = 4240,
 		itemPos = {x = 32233, y = 32491, z = 10},
 		reward = {{3097, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.DwarvenRing
+		storage = Storage.Quest.PreU6_0.DeeperFibula.Rewards.DwarvenRing
 	},
 	-- Elven aulet
 	[6011] = {
 		itemId = 4025,
 		itemPos = {x = 32245, y = 32492, z = 10},
 		reward = {{3082, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.ElvenAmulet
+		storage = Storage.Quest.PreU6_0.DeeperFibula.Rewards.ElvenAmulet
 	},
 	-- Knight axe
 	[6012] = {
 		itemId = 4240,
 		itemPos = {x = 32256, y = 32500, z = 10},
 		reward = {{3318, 1}},
-		storage = Storage.Quest.PreU6_0.DeeperFibula.KnightAxe
+		storage = Storage.Quest.PreU6_0.DeeperFibula.Rewards.KnightAxe
 	},
 	-- Short sword quest
 	-- Book
@@ -236,7 +236,7 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32171, y = 32197, z = 7},
 		reward = {{2821, 1}},
-		storage = Storage.Quest.ShortSword.Book
+		storage = Storage.Quest.PreU6_0.ShortSword.Rewards.Book
 	},
 	-- Thais lighthouse quest
 	-- Battle hammer
@@ -244,14 +244,14 @@ ChestUnique = {
 		itemId = 2472,
 		itemPos = {x = 32225, y = 32265, z = 10},
 		reward = {{3305, 1}},
-		storage = Storage.Quest.ThaisLighthouse.BattleHammer
+		storage = Storage.Quest.PreU6_0.ThaisLighthouse.Rewards.BattleHammer
 	},
 	-- Dark shield
 	[6015] = {
 		itemId = 2472,
 		itemPos = {x = 32226, y = 32265, z = 10},
 		reward = {{3421, 1}},
-		storage = Storage.Quest.ThaisLighthouse.DarkShield
+		storage = Storage.Quest.PreU6_0.ThaisLighthouse.DarkShield
 	},
 	-- Studded shield quest (rookgaard)
 	-- Banana free account area
@@ -259,14 +259,14 @@ ChestUnique = {
 		itemId = 3639,
 		itemPos = {x = 32172, y = 32169, z = 7},
 		reward = {{3587, 1}},
-		storage = Storage.Quest.U6_0.StuddedShield.BananaFree
+		storage = Storage.Quest.U6_0.StuddedShield.Rewards.BananaFree
 	},
 	-- Banana premium account area
 	[6017] = {
 		itemId = 3639,
 		itemPos = {x = 31983, y = 32193, z = 5},
 		reward = {{3587, 1}},
-		storage = Storage.Quest.U6_0.StuddedShield.BananaPremium
+		storage = Storage.Quest.U6_0.StuddedShield.Rewards.BananaPremium
 	},
 	-- Rope (kazordoon, emperor's cookies quest)
 	[6018] = {
@@ -280,7 +280,7 @@ ChestUnique = {
 		itemId = 4240,
 		itemPos = {x = 32636, y = 31873, z = 10},
 		reward = {{4871, 1}},
-		storage = Storage.Quest.U6_1.ExplorerBrooch.Reward
+		storage = Storage.Quest.U6_1.ExplorerBrooch.Brooch
 	},
 	-- Orc fortress quest
 	-- Knight axe
@@ -288,41 +288,45 @@ ChestUnique = {
 		itemId = 2469,
 		itemPos = {x = 32980, y = 31727, z = 9},
 		reward = {{3318, 1}},
-		storage = Storage.Quest.U6_1.OrcFortress.KnightAxe
+		storage = Storage.Quest.U6_1.OrcFortress.Rewards.KnightAxe
 	},
 	-- Knight armor
 	[6021] = {
 		itemId = 2469,
 		itemPos = {x = 32981, y = 31727, z = 9},
 		reward = {{3370, 1}},
-		storage = Storage.Quest.U6_1.OrcFortress.KnightArmor
+		storage = Storage.Quest.U6_1.OrcFortress.Rewards.KnightArmor
 	},
 	-- Fire sword
 	[6022] = {
 		itemId = 2469,
 		itemPos = {x = 32985, y = 31727, z = 9},
 		reward = {{3280, 1}},
-		storage = Storage.Quest.U6_1.OrcFortress.FireSword
+		storage = Storage.Quest.U6_1.OrcFortress.Rewards.FireSword
 	},
 	-- Draconia quest
 	[6023] = {
 		itemId = 2472,
 		itemPos = {x = 32803, y = 31582, z = 2},
+		container = 2853,
 		reward = {{3284, 1}, {3297, 1}},
-		storage = Storage.Quest.U6_2.Draconia.Reward1
+		weight = 64,
+		storage = Storage.Quest.U6_2.Draconia.Rewards.BagWithWeapons
 	},
 	[6024] = {
 		itemId = 2472,
 		itemPos = {x = 32804, y = 31582, z = 2},
+		container = 2853,
 		reward = {{3081, 5}, {3051, 1}},
-		storage = Storage.Quest.U6_2.Draconia.Reward2
+		weight = 15.80,
+		storage = Storage.Quest.U6_2.Draconia.Rewards.BagWithAmulets
 	},
 	-- Adorned UH rune quest
 	[6025] = {
 		itemId = 2469,
 		itemPos = {x = 33136, y = 31601, z = 15},
 		reward = {{11603, 1}},
-		storage = Storage.Quest.U6_4.AdornedUHRune.Reward
+		storage = Storage.Quest.U6_4.AdornedUHRune.SilverRuneEmblem
 	},
 	-- Barbarian axe quest
 	-- Barbarian axe
@@ -344,7 +348,7 @@ ChestUnique = {
 		itemId = 4311,
 		itemPos = {x = 33178, y = 31870, z = 12},
 		reward = {{3383, 1}},
-		storage = Storage.Quest.U6_4.DarkArmor.Reward
+		storage = Storage.Quest.U6_4.DarkArmor.DarkArmor
 	},
 	-- Demon helmet quest
 	-- Steel boots
@@ -545,7 +549,7 @@ ChestUnique = {
 		itemId = 2476,
 		itemPos = {x = 32248, y = 31866, z = 8},
 		reward = {{3205, 1}},
-		storage = Storage.Quest.SimpleChest.FamilyBrooch
+		storage = Storage.Quest.U7_24.FamilyBrooch.Brooch
 	},
 	-- The queen of the banshees quest
 	-- Stone skin amulet
@@ -598,7 +602,7 @@ ChestUnique = {
 		keyAction = Storage.Quest.Key.ID3702,
 		reward = {{2971,1}, {3509, 1}, {3351, 1}, {3424, 1}, {2821, 1}, {3271, 1}, {3085, 1}, {3048, 1}},
 		weight = 194,
-		storage = Storage.Quest.OrnamentedShield.Bag
+		storage = Storage.Quest.PreU6_0.OrnamentedShield.Rewards.OrnamentedShield
 	},
 	[6063] = {
 		itemId = 2480,
@@ -606,7 +610,7 @@ ChestUnique = {
 		container = 2859,
 		reward = {{2949, 1}, {3059, 1}, {3083, 1}, {3035, 5} , {3053, 1}},
 		weight = 44,
-		storage = Storage.Quest.OrnamentedShield.RedBag
+		storage = Storage.Quest.PreU6_0.OrnamentedShield.Rewards.TimeRing
 	},
 	--[6064] EMPTY
 	[6065] = {
@@ -615,7 +619,7 @@ ChestUnique = {
 		container = 2853,
 		reward = {{3033, 2}, {3050, 1}, {2953, 1}},
 		weight = 44,
-		storage = Storage.Quest.U6_1.Panpipe.Reward
+		storage = Storage.Quest.U6_1.Panpipe.Rewards.Panpipe
 	},
 	[6066] = {
 		itemId = 2469,

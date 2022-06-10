@@ -50,7 +50,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	local playerId = player:getId()
 
 	if MsgContains(message, 'fugio') then
-		if player:getStorageValue(Storage.Quest.SimpleChest.FamilyBrooch) == 1 then
+		if player:getStorageValue(Storage.Quest.U7_24.FamilyBrooch.Brooch) == 1 then
 			npcHandler:say('To be honest, I fear the omen in my dreams may be true. \z
 					Perhaps Fugio is unable to see the danger down there. \z
 					Perhaps ... you are willing to investigate this matter?', npc, creature)

@@ -1774,63 +1774,78 @@ Storage = {
 			ID5010 = 5010,
 			ID6010 = 6010
 		},
-		SimpleChest = {
-			FamilyBrooch = 9000
-		},
-		KeysUpdate = 70000,
 		-- Start of quests per version
 		-- Use the reserved storage keys accordingly
+		KeysUpdate = 70000,
 		PreU6_0 = { -- update pre-6.0 - Reserved Storages 70001 - 70020
 			DeeperFibula = {
-				TowerShield = 70001,
-				WarriorHelmet = 70002,
-				DwarvenRing = 70003,
-				ElvenAmulet = 70004,
-				KnightAxe = 70005
+				Rewards = {
+					TowerShield = 70001,
+					WarriorHelmet = 70002,
+					DwarvenRing = 70003,
+					ElvenAmulet = 70004,
+					KnightAxe = 70005
+				}
 			},
 			OrnamentedShield = {
-				Bag = 70006,
-				RedBag = 70007
+				Rewards = {
+					OrnamentedShield = 70006,
+					TimeRing = 70007
+				}
 			},
 			ShortSword = {
-				Book = 70008
+				Rewards = {
+					Book = 70008
+				}
 			},
 			ThaisLighthouse = {
-				BattleHammer = 70009,
-				DarkShield = 70010
+				Rewards = {
+					BattleHammer = 70009,
+					DarkShield = 70010
+				}
 			},
 		},
 		U6_0 = { -- update 6.0 - Reserved Storages 70021 - 70030
 			StuddedShield = {
-				BananaFree = 70021,
-				BananaPremium = 70022
+				Rewards = {
+					BananaFree = 70021,
+					BananaPremium = 70022
+				}
 			},
 		},
-		U6_1 = { -- update 6.1 - Reserved Storages 70031 - 70080
+		U6_1 = { -- update 6.1 - Reserved Storages 70031 - 70050
 			EmperorsCookies = {
-				RopeReward = 10016,
+				Rewards = {
+					Cookies = 70031,
+				}
 			},
 			ExplorerBrooch = {
-				Reward = 10017
+				Brooch = 70032
 			},
 			OrcFortress = {
-				KnightAxe = 10018,
-				KnightArmor = 10019,
-				FireSword = 10020
+				Rewards = {
+					KnightAxe = 70033,
+					KnightArmor = 70034,
+					FireSword = 70035
+				}
 			},
 			Panpipe = {
-				Reward = 10022
+				Rewards = {
+					Panpipe = 70036
+				}
 			},
 		},
-		U6_2 = { -- update 6.2 - Reserved Storages 70081 - 70090
+		U6_2 = { -- update 6.2 - Reserved Storages 70051 - 70070
 			Draconia = {
-				Reward1 = 10023,
-				Reward2 = 10024
+				Rewards = {
+					BagWithWeapons = 70051,
+					BagWithAmulets = 70052
+				}
 			},
 		},
-		U6_4 = { -- update 6.4 - Reserved Storages 70091 - 70120
+		U6_4 = { -- update 6.4 - Reserved Storages 70071 - 70120
 			AdornedUHRune = {
-				Reward = 10025
+				SilverRuneEmblem = 10025
 			},
 			BarbarianAxe = {
 				BarbarianAxe = 10026,
@@ -1840,7 +1855,7 @@ Storage = {
 				Reward = 10028
 			},
 			DarkArmor = {
-				Reward = 10029
+				DarkArmor = 10029
 			},
 			DemonHelmet = {
 				SteelBoots = 10030,
@@ -1945,6 +1960,9 @@ Storage = {
 			},
 		},
 		U7_24 = { -- update 7.24 - Reserved Storages 70201 - 70330
+			FamilyBrooch = {
+				Brooch = 9000
+			},
 			GiantSmithhammer = {
 				QuestLine = 10091,
 				Talon = 10092,
