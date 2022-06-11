@@ -73,14 +73,14 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say(
 		"To get pirate hat you need give me Brutus Bloodbeard's Hat, \
 		Lethal Lissy's Shirt, Ron the Ripper's Sabre and Deadeye Devious' Eye Patch. Do you have them with you?",
-		creature)
+		npc, creature)
 		npcHandler:setTopic(playerId, 2)
 	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 1 then
 			npcHandler:say(
 			"You know, we have plenty of rum here but we lack some basic food. \
 			Especially food that easily becomes mouldy is a problem. Bring me 100 breads and you will help me a lot.",
-			creature)
+			npc, creature)
 			player:setStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven, 2)
 		elseif player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 2 then
 			npcHandler:say("Are you here to bring me the 100 pieces of bread that I requested?", npc, creature)
@@ -93,7 +93,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"The beer is served in a secret whisper bar anyway. \
 				Bring me a sample of the whisper beer, NOT the usual beer but whisper beer. I hope you are listening."
 			},
-			creature)
+			npc, creature)
 			player:setStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven, 11)
 		elseif player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 12 then
 			npcHandler:say("Did you get a sample of the whisper beer from Carlin?", npc, creature)
@@ -115,7 +115,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say(
 			"How sweet of you ... Uhh ... OH NO ... Bozo did it again. Tell this prankster I'll pay him back.",
-			creature)
+			npc, creature)
 			npcHandler:removeInteraction(npc, creature)
 			npcHandler:resetNpc(creature)
 		elseif npcHandler:getTopic(playerId) == 2 then
