@@ -67,11 +67,15 @@ local function addTravelKeyword(keyword, cost, destination, action, condition)
 		travelKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'We would like to serve you some time.', reset = true})
 end
 
-addTravelKeyword('darashia', 60, Position(33270, 32441, 6))
-addTravelKeyword('svargrond', 40, Position(32253, 31097, 4))
-addTravelKeyword('kazordoon', 80, Position(32588, 31941, 0))
+addTravelKeyword('darashia', 40, Position(33270, 32441, 6))
+addTravelKeyword('darama', 40, Position(33270, 32441, 6))
+addTravelKeyword('svargrond', 60, Position(32253, 31097, 4))
+addTravelKeyword('kazordoon', 70, Position(32588, 31941, 0))
+addTravelKeyword('kazor', 70, Position(32588, 31941, 0))
 addTravelKeyword('zao', 60, Position(32983, 31539, 1))
+addTravelKeyword('farmine', 60, Position(32983, 31539, 1))
 addTravelKeyword('femor hills', 60, Position(32536, 31837, 4))
+addTravelKeyword('hills', 60, Position(32536, 31837, 4))
 addTravelKeyword('edron', 60, Position(33193, 31784, 3))
 
 -- Kick
