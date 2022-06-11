@@ -268,13 +268,6 @@ ChestUnique = {
 		reward = {{3587, 1}},
 		storage = Storage.Quest.StuddedShield.BananaPremium
 	},
-	-- Rope (kazordoon, emperor's cookies quest)
-	[6018] = {
-		itemId = 2472,
-		itemPos = {x = 32604, y = 31908, z = 3},
-		reward = {{3003, 1}},
-		storage = Storage.Quest.EmperorsCookies.RopeReward
-	},
 	-- Explorer brooch quest (kazordoon)
 	[6019] = {
 		itemId = 4240,
