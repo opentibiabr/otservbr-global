@@ -16592,7 +16592,13 @@ local items = {
 		-- energy ring
 		itemid = 3088,
 		type = "equip",
-		slot = "ring"
+		slot = "ring",
+		vocation = {
+			{"Knight", true},
+			{"Paladin", true, true},
+			{"Elite Knight"},
+			{"Royal Paladin"}
+		}
 	},
 	{
 		-- energy ring
@@ -16994,7 +17000,13 @@ local items = {
 		-- energy ring
 		itemid = 3051,
 		type = "equip",
-		slot = "ring"
+		slot = "ring",
+		vocation = {
+			{"Knight", true},
+			{"Paladin", true, true},
+			{"Elite Knight"},
+			{"Royal Paladin"}
+		}
 	},
 	{
 		-- energy ring
