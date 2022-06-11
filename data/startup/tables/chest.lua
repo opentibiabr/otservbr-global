@@ -853,21 +853,21 @@ ChestUnique = {
 		itemPos = {x = 33078, y = 31980, z = 13},
 		reward = {{27270, 1}},
 		weight = 5.09,
-		storage = Storage.Quest.HiddenThreats.Reward.metalFile
+		storage = Storage.Quest.U11_50.HiddenThreats.Rewards.metalFile
 	},
 	[6095] = {
 		itemId = 2469,
 		itemPos = {x = 33080, y = 32014, z = 13},
 		reward = {{27262, 1}},
 		weight = 2.50,
-		storage = Storage.Quest.HiddenThreats.Reward.keyFragment01
+		storage = Storage.Quest.U11_50.HiddenThreats.Rewards.keyFragment01
 	},
 	[6096] = {
 		itemId = 2469,
 		itemPos = {x = 33031, y = 32050, z = 13},
 		reward = {{27261, 1}},
 		weight = 2.50,
-		storage = Storage.Quest.HiddenThreats.Reward.keyFragment02
+		storage = Storage.Quest.U11_50.HiddenThreats.Rewards.keyFragment02
 	},
 
 	-- Reward of others scrips files (varied rewards)

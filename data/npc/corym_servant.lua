@@ -50,24 +50,25 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local HiddenThreats = Storage.Quest.U11_50.HiddenThreats
 local function greetCallback(npc, creature, message)
 	local player = Player(creature)
 
-	if player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) == 1 then
+	if player:getStorageValue(HiddenThreats.QuestLine) == 1 then
 		npcHandler:setMessage(MESSAGE_GREET, {
 			'We work as hard we can, my master! Wait, I haven\'t seen you here before. You were sent by the Corym Ratter, I see. He misses the courage to visit us and find the reason for {decreasing resources}? He\'s the coward I have expected.'
 		})
-	elseif player:getStorageValue(Storage.Quest.HiddenThreats.corymRescueMission) == 8 and player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) == 3 then
+	elseif player:getStorageValue(HiddenThreats.corymRescueMission) == 8 and player:getStorageValue(HiddenThreats.QuestLine) == 3 then
 		npcHandler:setMessage(MESSAGE_GREET, {
 			'Well done! The riot progesses! No fight without weapons. In the mine the temperature is quite high, higher as expected in this depth. Therefore we need heat-resistent weapons and armors. ...',
 			'This effect can be reached by adding rare earth to the common materials. But this can only be found in the stomaches of stonerefiners. 20 of these should be enough. Well, I see you have already collected enough of them! Would you give it to me?'
 		})
-		player:setStorageValue(Storage.Quest.HiddenThreats.QuestLine, 4)
-	elseif player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) == 4 then
+		player:setStorageValue(HiddenThreats.QuestLine, 4)
+	elseif player:getStorageValue(HiddenThreats.QuestLine) == 4 then
 		npcHandler:setMessage(MESSAGE_GREET, {
 			'Well, I see you have already collected enough rare earth! Would you give it to me?'
 		})
-	elseif player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) == 3 then
+	elseif player:getStorageValue(HiddenThreats.QuestLine) == 3 then
 		npcHandler:setMessage(MESSAGE_GREET, {
 			'You have to liberate all the Corym I told you. Unlock the three affected areas.'
 		})
@@ -93,10 +94,10 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 1)
 	elseif(MsgContains(message, "defy")) then
 		if(npcHandler:getTopic(playerId) == 1) then
-			if player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) == 1 then
-				player:setStorageValue(Storage.Quest.HiddenThreats.QuestLine, 2)
-				player:setStorageValue(Storage.Quest.HiddenThreats.ServantDoor, 1)
-				player:setStorageValue(Storage.Quest.HiddenThreats.corymRescueMission, 0)
+			if player:getStorageValue(HiddenThreats.QuestLine) == 1 then
+				player:setStorageValue(HiddenThreats.QuestLine, 2)
+				player:setStorageValue(HiddenThreats.ServantDoor, 1)
+				player:setStorageValue(HiddenThreats.corymRescueMission, 0)
 			end
 			npcHandler:say({
 				"I see you are interested to change our sitation. The first thing I like you to do is to liberate the jailed coryms. There are three areas with locked doors. You have to find a way to get access. ...",
@@ -104,15 +105,15 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
-	elseif(MsgContains(message, "yes")) and player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) == 4 then
+	elseif(MsgContains(message, "yes")) and player:getStorageValue(HiddenThreats.QuestLine) == 4 then
 		if player:removeItem(27301, 20) then
 			npcHandler:say({
 				"Thank you very much! Our smiths are now able to craft heat-resistent weapons and armor. A little reward for you is this. ...",
 				"There is one last thing I would like to say to you, there are rumours that this dungeon can only be entered alive. This could mean that there's an unknown dungeon keeper guarding this place, so take care of you!"
 			}, npc, creature)
 			player:addItem(3040, 2)
-			player:setStorageValue(Storage.Quest.HiddenThreats.QuestLine, 5)
-			player:setStorageValue(Storage.Quest.HiddenThreats.corymRescueMission, 9)
+			player:setStorageValue(HiddenThreats.QuestLine, 5)
+			player:setStorageValue(HiddenThreats.corymRescueMission, 9)
 		else
 			npcHandler:say("You don't have enough, return when could you bring 20 of rare earth to me.", npc, creature)
 			npcHandler:removeInteraction(npc, creature)

@@ -50,10 +50,11 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local HiddenThreats = Storage.Quest.U11_50.HiddenThreats
 local function greetCallback(npc, creature, message)
 	local player = Player(creature)
 
-	if player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) < 1 then
+	if player:getStorageValue(HiddenThreats.QuestLine) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, {
 			'Welcome stranger! You might be surprised that I don\'t attack you immediately. The point is, that I think you could be useful to me. What you see in front of you is a great mine of the corym! ...',
 			'We dig up all what mother earth delivers to us, valuable natural resources. But the yield is getting worse and here I need your {help}.'
@@ -78,8 +79,8 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif(MsgContains(message, "yes")) then
 		if(npcHandler:getTopic(playerId) == 1) then
 			player:setStorageValue(Storage.TibiaTales.DefaultStart, 1)
-			player:setStorageValue(Storage.Quest.HiddenThreats.QuestLine, 1)
-			player:setStorageValue(Storage.Quest.HiddenThreats.RatterDoor, 1)
+			player:setStorageValue(HiddenThreats.QuestLine, 1)
+			player:setStorageValue(HiddenThreats.RatterDoor, 1)
 			npcHandler:say("Nice! I have opened the mine for you. But take care of you! The monsters of depth won't spare you.", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end

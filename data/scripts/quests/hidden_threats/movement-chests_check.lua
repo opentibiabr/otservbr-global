@@ -1,12 +1,15 @@
 local corymChests = MoveEvent()
 
 function corymChests.onStepOut(creature, item, position, fromPosition)
+	local HiddenThreats = Storage.Quest.U11_50.HiddenThreats
 	local player = creature:getPlayer()
 	if not player then
-		return false
+		return true
 	end
-	if player:getStorageValue(Storage.Quest.HiddenThreats.Reward.keyFragment01) == 1 and player:getStorageValue(Storage.Quest.HiddenThreats.Reward.keyFragment02) == 1 and player:getStorageValue(Storage.Quest.HiddenThreats.QuestLine) == 2 then
-		player:setStorageValue(Storage.Quest.HiddenThreats.QuestLine, 3)
+	if player:getStorageValue(HiddenThreats.Rewards.keyFragment01) == 1
+	and player:getStorageValue(HiddenThreats.Rewards.keyFragment02) == 1
+	and player:getStorageValue(HiddenThreats.QuestLine) == 2 then
+		player:setStorageValue(HiddenThreats.QuestLine, 3)
 	end
 	return true
 end
