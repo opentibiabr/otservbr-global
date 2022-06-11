@@ -368,5 +368,4 @@ boss:type("stepin")
 for index, value in pairs(bosses) do
 	boss:uid(index)
 end
-
 boss:register()

@@ -71,7 +71,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"You have " ..
 				player:getStorageValue(38412) ..
 				" credits. We have a special offer right now for depositing vials. Are you interested in hearing it?",
-			creature)
+			npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		elseif player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonBelt) >= 1 then
 			npcHandler:say("Would you like to get a lottery ticket instead of the deposit for your vials?", npc, creature)
@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"What?? How dare you?! I am a sorcerer of the most reknown academy on the face of this world. \
 					Do you think some lousy pirates could scare me? Get lost! Now! \
 					I will have no further dealings with the likes of you!",
-				creature)
+				npc, creature)
 				player:setStorageValue(Storage.TheShatteredIsles.RaysMission1, 2)
 				npcHandler:setTopic(playerId, 0)
 			end
@@ -110,13 +110,13 @@ local function creatureSayCallback(npc, creature, type, message)
 					"Of course, you can leave or join the bonus system at any time by just asking me for the 'bonus'. ...",
 					"Would you like to join the bonus system now?"
 				},
-			creature)
+			npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		elseif npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say(
 				"Great! I've signed you up for our bonus system. From now on, \
 				you will have the chance to win the potion belt addon!",
-			creature)
+			npc, creature)
 			player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonBelt, 1)
 			player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1) --this for default start of Outfit and Addon Quests
 			npcHandler:setTopic(playerId, 0)
@@ -128,7 +128,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say(
 					"Alright, thank you very much! Here is your lottery ticket, good luck. \
 					Would you like to deposit more vials that way?",
-				creature)
+				npc, creature)
 				player:setStorageValue(38412, player:getStorageValue(38412) - 100)
 				player:addItem(5957, 1)
 				npcHandler:setTopic(playerId, 0)
@@ -136,7 +136,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say(
 					"Sorry, but you don't have 100 empty flasks or vials of the SAME kind and thus don't qualify for the lottery. \
 					Would you like to deposit the vials you have as usual and receive 5 gold per vial?",
-				creature)
+				npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 4 then
@@ -155,7 +155,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say(
 					"Finally. You have no idea how difficult it is to keep something secret here. \
 					And you brought me all the crystal coins I demanded?",
-				creature)
+				npc, creature)
 				npcHandler:setTopic(playerId, 6)
 			end
 		end

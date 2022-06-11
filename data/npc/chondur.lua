@@ -63,7 +63,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say(
 				'You did bring all the items I requqested, cuild. Good. \
 				Shall I travel to the spirit realm and try finding a stampor compasion for you?',
-			creature)
+			npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		else
 			npcHandler:say('You already have stampor mount.', npc, creature)
@@ -74,7 +74,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say(
 				'The evil cult has placed a curse on one of the captains here. \
 				I need at least five of their pirate voodoo dolls to lift that curse.',
-			creature)
+			npc, creature)
 			player:setStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven, 9)
 			npcHandler:setTopic(playerId, 0)
 		elseif player:getStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven) == 9 then
@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 						I linked this spirit to yours. You can probably already summon him to you ...",
 						'So, since me are done here... I need to prepare another ritual, so please let me work, cuild.'
 					},
-				creature)
+				npc, creature)
 				player:addMount(11)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)
 			else
