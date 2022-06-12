@@ -1,3 +1,4 @@
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 local config = {
     [25729] = {
         fromPos = Position(33518, 32209, 7),
@@ -20,13 +21,13 @@ local config = {
             "As soon as you're touching the moon sculpture with the mirror the sculpture is infused with moonlight. The barrier strengthens.",
             "As soon as you're touching the moon sculpture with the mirror the sculpture is infused with moonlight. This was the last sculpture."
         },
-        storageCounter = Storage.Quest.ThreatenedDreams.Mission02.ChargedMoomMirror,
+        storageCounter = ThreatenedDreams.Mission02.ChargedMoomMirror,
         storagePos = {
-            Storage.Quest.ThreatenedDreams.Mission02.MoonMirrorPos01,
-            Storage.Quest.ThreatenedDreams.Mission02.MoonMirrorPos02,
-            Storage.Quest.ThreatenedDreams.Mission02.MoonMirrorPos03,
-            Storage.Quest.ThreatenedDreams.Mission02.MoonMirrorPos04,
-            Storage.Quest.ThreatenedDreams.Mission02.MoonMirrorPos05,
+            ThreatenedDreams.Mission02.MoonMirrorPos01,
+            ThreatenedDreams.Mission02.MoonMirrorPos02,
+            ThreatenedDreams.Mission02.MoonMirrorPos03,
+            ThreatenedDreams.Mission02.MoonMirrorPos04,
+            ThreatenedDreams.Mission02.MoonMirrorPos05,
         }
     }
 }
@@ -47,16 +48,16 @@ function moonMirror.onUse(player, item, fromPosition, target, toPosition, isHotk
             return true
         end
 
-        if player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1]) ~= 6
-        and player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1]) ~= 8 then
+        if player:getStorageValue(ThreatenedDreams.Mission02[1]) ~= 6
+        and player:getStorageValue(ThreatenedDreams.Mission02[1]) ~= 8 then
             player:sendTextMessage(MESSAGE_EVENT_ADVANCE, tool.failMessage)
             return true
         end
 
-        if player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1]) == 6 then
+        if player:getStorageValue(ThreatenedDreams.Mission02[1]) == 6 then
             item:transform(25730)
-            player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission02.ChargedMoomMirror, 5)
-        elseif player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1]) == 8 then
+            player:setStorageValue(ThreatenedDreams.Mission02.ChargedMoomMirror, 5)
+        elseif player:getStorageValue(ThreatenedDreams.Mission02[1]) == 8 then
             item:transform(25975)
         end
         player:sendTextMessage(MESSAGE_EVENT_ADVANCE, tool.successMessage)
@@ -75,7 +76,7 @@ function moonMirror.onUse(player, item, fromPosition, target, toPosition, isHotk
             return true
         end
 
-        if player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1]) == 7 then
+        if player:getStorageValue(ThreatenedDreams.Mission02[1]) == 7 then
             local counter = player:getStorageValue(tool.storageCounter)
             for i = 1,5 do
                 if toPosition == tool.targetPos[i] and player:getStorageValue(tool.storagePos[i]) < 1 then

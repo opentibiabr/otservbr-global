@@ -853,14 +853,14 @@ ChestUnique = {
 		itemPos = {x = 32787, y = 31975, z = 11},
 		reward = {{25235, 1}},
 		weight = 13.00,
-		storage = Storage.Quest.ThreatenedDreams.Mission01.PoacherChest
+		storage = Storage.Quest.U11_40.ThreatenedDreams.Mission01.PoacherChest
 	},
 	[6101] = { -- Dark Moon Mirror
 		itemId = 25762,
 		itemPos = {x = 33594, y = 32214, z = 9},
 		reward = {{25729, 1}},
 		weight = 2.00,
-		storage = Storage.Quest.ThreatenedDreams.Mission02.DarkMoomMirror
+		storage = Storage.Quest.U11_40.ThreatenedDreams.Mission02.DarkMoomMirror
 	},
 
 	-- Reward of others scrips files (varied rewards)

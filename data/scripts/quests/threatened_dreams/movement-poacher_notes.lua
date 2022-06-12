@@ -1,13 +1,14 @@
-local foundPoacherBody = MoveEvent()
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 
+local foundPoacherBody = MoveEvent()
 function foundPoacherBody.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return false
 	end
-	if player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission01[1]) == 6 then
+	if player:getStorageValue(ThreatenedDreams.Mission01[1]) == 6 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You discover a sleeping wolf and a gnawed skeleton in this tent. Could it be the one you are searching for?')
-		player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission01[1], 7)
+		player:setStorageValue(ThreatenedDreams.Mission01[1], 7)
 	end
 	return true
 end

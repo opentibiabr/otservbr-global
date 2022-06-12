@@ -1,3 +1,4 @@
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 local config = {
 	[25029] = {
 		bossName = 'Kroazur', -- boss name
@@ -8,8 +9,8 @@ local config = {
 		rangeX = 20, -- Range in X
 		rangeY = 20, -- Range in Y
 		time = 10, -- time in minutes to remove the player
-		timer = Storage.Quest.ThreatenedDreams.Mission02.KroazurTimer, -- Timer to allow joing the room next time
-		access = Storage.Quest.ThreatenedDreams.Mission02.KroazurAccess -- Quest level to access the room
+		timer = ThreatenedDreams.Mission02.KroazurTimer, -- Timer to allow joing the room next time
+		access = ThreatenedDreams.Mission02.KroazurAccess -- Quest level to access the room
 	}
 }
 

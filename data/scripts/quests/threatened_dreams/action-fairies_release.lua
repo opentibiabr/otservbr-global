@@ -1,27 +1,28 @@
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 local config = {
 	[40016] = {
 		pos = Position(33576, 32185, 8),
-		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy01,
+		storage = ThreatenedDreams.Mission02.Fairy01,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
 	[40017] = {
 		pos = Position(33621, 32214, 8),
-		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy02,
+		storage = ThreatenedDreams.Mission02.Fairy02,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
 	[40018] = {
 		pos = Position(33559, 32203, 9),
-		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy03,
+		storage = ThreatenedDreams.Mission02.Fairy03,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
 	[40019] = {
 		pos = Position(33505, 32286, 8),
-		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy04,
+		storage = ThreatenedDreams.Mission02.Fairy04,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		},
 	[40020] = {
 		pos = Position(33440, 32217, 8),
-		storage = Storage.Quest.ThreatenedDreams.Mission02.Fairy05,
+		storage = ThreatenedDreams.Mission02.Fairy05,
 		message = "My tainted siblings locked me up in the dark far too long. Now I'm finally free! Thank you, mortal being!"
 		}
 }
@@ -34,15 +35,14 @@ local function revertFairy(toPosition, item)
 end
 
 local fairiesRelease = Action()
-
 function fairiesRelease.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local fairy = config[item.actionid]
 	if not fairy then
 		return
 	end
 
-	local fairiesCounter = player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02.FairiesCounter)
-    if player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1]) == 3
+	local fairiesCounter = player:getStorageValue(ThreatenedDreams.Mission02.FairiesCounter)
+    if player:getStorageValue(ThreatenedDreams.Mission02[1]) == 3
 	and fairiesCounter < 5 then
         if player:getStorageValue(fairy.storage) < 1 then
 			item:transform(25797)
@@ -52,9 +52,9 @@ function fairiesRelease.onUse(player, item, fromPosition, target, toPosition, is
             toPosition:sendMagicEffect(CONST_ME_MAGIC_GREEN)
             player:setStorageValue(fairy.storage, 1)
 			if fairiesCounter == -1 then
-				player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission02.FairiesCounter, 1)
+				player:setStorageValue(ThreatenedDreams.Mission02.FairiesCounter, 1)
 			else
-				player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission02.FairiesCounter, fairiesCounter + 1)
+				player:setStorageValue(ThreatenedDreams.Mission02.FairiesCounter, fairiesCounter + 1)
 			end
             return true
 		else

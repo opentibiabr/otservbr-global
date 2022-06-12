@@ -3,6 +3,7 @@ local nightmareMonsters = {
 	"weakened frazzlemaw",
 	"kroazur"
 }
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 
 local threatenedDreamsNightmareMonstersKills = CreatureEvent("ThreatenedDreamsNightmareMonstersKills")
 function threatenedDreamsNightmareMonstersKills.onKill(player, target)
@@ -14,16 +15,16 @@ function threatenedDreamsNightmareMonstersKills.onKill(player, target)
 		return true
 	end
 
-	local enfeebledKills = player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02.EnfeebledCount)
-	local frazzlemawsKills = player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02.FrazzlemawsCount)
-	if player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1]) == 1 then
-		player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission02[1], 1)
+	local enfeebledKills = player:getStorageValue(ThreatenedDreams.Mission02.EnfeebledCount)
+	local frazzlemawsKills = player:getStorageValue(ThreatenedDreams.Mission02.FrazzlemawsCount)
+	if player:getStorageValue(ThreatenedDreams.Mission02[1]) == 1 then
+		player:setStorageValue(ThreatenedDreams.Mission02[1], 1)
 		if target:getName():lower() == nightmareMonsters[1] then
-			player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission02.EnfeebledCount, enfeebledKills + 1)
+			player:setStorageValue(ThreatenedDreams.Mission02.EnfeebledCount, enfeebledKills + 1)
 		elseif target:getName():lower() == nightmareMonsters[2] then
-			player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission02.FrazzlemawsCount, frazzlemawsKills + 1)
+			player:setStorageValue(ThreatenedDreams.Mission02.FrazzlemawsCount, frazzlemawsKills + 1)
 		elseif target:getName():lower() == nightmareMonsters[3] then
-			player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission02.KroazurKill, 1)
+			player:setStorageValue(ThreatenedDreams.Mission02.KroazurKill, 1)
 		end
 	end
 	return true

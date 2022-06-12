@@ -1,10 +1,10 @@
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 local periods = {
 	[LIGHT_STATE_NIGHT] = "Night",
 	[LIGHT_STATE_DAY] = "Day",
 	[LIGHT_STATE_SUNRISE] = "Sunrise",
 	[LIGHT_STATE_SUNSET] = "Sunset"
 }
-
 local config = {
 	-- createByType day / night
 	[1] = { -- create in night
@@ -14,7 +14,7 @@ local config = {
 		pos = Position(33497, 32196, 7),
 		herbId = 5953,
 		herbWeight = 1,
-		storage = Storage.Quest.ThreatenedDreams.Mission03.RavenHerbTimer
+		storage = ThreatenedDreams.Mission03.RavenHerbTimer
 	}
 }
 
@@ -71,10 +71,10 @@ function ravenHerb.onUse(player, item, fromPosition, target, toPosition, isHotke
 	end
 
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. getItemName(ravenHerb.herbId) .. ".")
-	player:setStorageValue(Storage.Quest.ThreatenedDreams.Mission03.RavenHerbTimer, os.time() + 60 * 30 * 1000) -- Can be collected on next cycle
+	player:setStorageValue(ThreatenedDreams.Mission03.RavenHerbTimer, os.time() + 60 * 30 * 1000) -- Can be collected on next cycle
 	player:addItem(ravenHerb.herbId, 1)
 	return true
 end
 
-ravenHerb:aid(Storage.Quest.ThreatenedDreams.Mission03.RavenHerbTimer)
+ravenHerb:aid(ThreatenedDreams.Mission03.RavenHerbTimer)
 ravenHerb:register()

@@ -5796,12 +5796,12 @@ if not Quests then
 		},
 		[47] = {
 			name = "Threatened Dreams",
-			startStorageId = Storage.Quest.ThreatenedDreams.QuestLine,
+			startStorageId = Storage.Quest.U11_40.ThreatenedDreams.QuestLine,
 			startStorageValue = 1,
 			missions = {
 				[1] = {
 					name = "Troubled Animals",
-					storageId = Storage.Quest.ThreatenedDreams.Mission01[1],
+					storageId = Storage.Quest.U11_40.ThreatenedDreams.Mission01[1],
 					missionId = 10429,
 					startValue = 1,
 					endValue = 16,
@@ -5841,7 +5841,7 @@ if not Quests then
 				},
 				[2] = {
 					name = "Nightmare Intruders",
-					storageId = Storage.Quest.ThreatenedDreams.Mission02[1],
+					storageId = Storage.Quest.U11_40.ThreatenedDreams.Mission02[1],
 					missionId = 10430,
 					startValue = 1,
 					endValue = 8,
@@ -5850,8 +5850,8 @@ if not Quests then
 							return string.format(
 								"The fae queen asked for your help: Feyrist is threatened by intruders from Roshamuul. Kill 200 nightmare \z
 								monsters and Kroazur. - You killed %d weakened frazzlemaws and %d efeebled silencers.",
-								(math.max(player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02.FrazzlemawsCount), 0)),
-								(math.max(player:getStorageValue(Storage.Quest.ThreatenedDreams.Mission02.EnfeebledCount), 0))
+								(math.max(player:getStorageValue(Storage.Quest.U11_40.ThreatenedDreams.Mission02.FrazzlemawsCount), 0)),
+								(math.max(player:getStorageValue(Storage.Quest.U11_40.ThreatenedDreams.Mission02.EnfeebledCount), 0))
 								)
 							end,
 						[2] = "You killed 200 of the nightmare monsters that are invading Feyrist. Maelyrra was very happy but it seems \z
@@ -5872,7 +5872,7 @@ if not Quests then
 				},
 				[3] = {
 					name = "An Unlikely Couple",
-					storageId = Storage.Quest.ThreatenedDreams.Mission03[1],
+					storageId = Storage.Quest.U11_40.ThreatenedDreams.Mission03[1],
 					missionId = 10431,
 					startValue = 1,
 					endValue = 4,
