@@ -72,18 +72,18 @@ QuestKeysUpdate = {
 		{old = 10051, new = 70111}, -- WhitePearl
 		{old = 10052, new = 70112}, -- Broadsword
 		-- BlackKnight
-		{old = 10054, new = 70111}, -- CrownArmor
-		{old = 10055, new = 70112}, -- CrownShield
+		{old = 10054, new = 70121}, -- CrownArmor
+		{old = 10055, new = 70122}, -- CrownShield
 		-- DragonTower
-		{old = 10056, new = 70111}, -- Backpack1
-		{old = 10057, new = 70112}, -- Backpack2
+		{old = 10056, new = 70123}, -- Backpack1
+		{old = 10057, new = 70124}, -- Backpack2
 		-- Ring
-		{old = 10040, new = 70111}, -- TimeRing
-		{old = 10041, new = 70112}, -- SwordRing
+		{old = 10040, new = 70125}, -- TimeRing
+		{old = 10041, new = 70126}, -- SwordRing
 		-- TimeRing
-		{old = 10058, new = 70111}, -- CrystallBall
-		{old = 10059, new = 70112}, -- TimeRing
-		{old = 10060, new = 70112}, -- ElvenAmulet
+		{old = 10058, new = 70127}, -- CrystallBall
+		{old = 10059, new = 70128}, -- TimeRing
+		{old = 10060, new = 70129}, -- ElvenAmulet
 
 	},
 --[[
