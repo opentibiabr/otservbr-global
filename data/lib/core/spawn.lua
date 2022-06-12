@@ -139,7 +139,7 @@ function Spawn.spawnMonsterTimer(self, config, func)
 			end, i * 1000)
 		end
 		addEvent(function()
-			local monster = Game.createMonster(config.monster, config.pos, true, true)
+			local monster = Game.createMonster(config.monster, config.pos, false, false)
 			if not monster then
 				Spdlog.error("[Spawn] Error on spawn monster: " .. config.monster)
 				return false

@@ -22,10 +22,8 @@ local config = {
 local threatenedLever = Action()
 
 function threatenedLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	for _, v in pairs(config.playerPositions) do
-		if v.pos ~= player:getPosition() then
-			return false
-		end
+	if config.playerPositions[1].pos ~= player:getPosition() then
+		return false
 	end
 
 	local spec = Spectators()
