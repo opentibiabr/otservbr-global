@@ -869,21 +869,21 @@ ChestUnique = {
 		container = 2854,
 		weight = 14.90,
 		reward = {{7439, 1}, {7440, 1}, {7443, 1}},
-		storage = Storage.Quest.TheNewFrontier.Reward.Chest01
+		storage = Storage.Quest.U8_54.TheNewFrontier.Reward.Chest01
 	},
 	[6098] = {
 		itemId = 2472,
 		itemPos = {x = 33055, y = 31029, z = 7},
 		reward = {{9058, 2}},
 		weight = 36.00,
-		storage = Storage.Quest.TheNewFrontier.Reward.Chest02
+		storage = Storage.Quest.U8_54.TheNewFrontier.Reward.Chest02
 	},
 	[6099] = {
 		itemId = 2472,
 		itemPos = {x = 33053, y = 31029, z = 7},
 		reward = {{2995, 1}},
 		weight = 7.50,
-		storage = Storage.Quest.TheNewFrontier.Reward.Chest03
+		storage = Storage.Quest.U8_54.TheNewFrontier.Reward.Chest03
 	},
 
 	-- Reward of others scrips files (varied rewards)

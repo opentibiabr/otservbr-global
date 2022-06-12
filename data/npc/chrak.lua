@@ -46,6 +46,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -55,21 +56,21 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "battle") then
-		if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 24 then
+		if player:getStorageValue(TheNewFrontier.Questline) == 24 then
 			npcHandler:say({
 				"Zo you want to enter ze arena, you know ze rulez and zat zere will be no ozer option zan deaz or victory?"
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
 	elseif MsgContains(message, "mission") then
-		if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 24 then
+		if player:getStorageValue(TheNewFrontier.Questline) == 24 then
 			npcHandler:say({
 				"Ze tournament iz ze ultimate challenge of might and prowrezz. Ze rulez may have changed over ze \z
 				centuriez but ze ezzence remained ze zame. ...",
 				"If you know ze rulez, you might enter ze arena for ze {battle}."
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
-		elseif player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 27 then
+		elseif player:getStorageValue(TheNewFrontier.Questline) == 27 then
 			npcHandler:say({
 				"You have done ze impozzible and beaten ze champion. Your mazter will be pleazed. Hereby I cleanze ze \z
 				poizon from your body. You are now allowed to leave. ...",
@@ -77,17 +78,17 @@ local function creatureSayCallback(npc, creature, type, message)
 				are unimportant for hiz goalz. ...",
 				"You may crawl back to your alliez and warn zem of ze gloriouz might of ze dragon emperor and hiz minionz."
 			}, npc, creature)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 28)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission09, 3) --Questlog, "Mission 09: Mortal Combat"
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission10, 1) --Questlog, "Mission 10: New Horizons"
+			player:setStorageValue(TheNewFrontier.Questline, 28)
+			player:setStorageValue(TheNewFrontier.Mission09, 3) --Questlog, "Mission 09: Mortal Combat"
+			player:setStorageValue(TheNewFrontier.Mission10, 1) --Questlog, "Mission 10: New Horizons"
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say("I grant you ze permizzion to enter ze arena. Remember, you'will have to enter ze arena az a \z
 			team of two. If you are not familiar wiz ze rulez, I can explain zem to you once again.", npc, creature)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 25)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission9_ArenaDoor, 1)
+			player:setStorageValue(TheNewFrontier.Questline, 25)
+			player:setStorageValue(TheNewFrontier.Mission9_ArenaDoor, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

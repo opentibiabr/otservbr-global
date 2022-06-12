@@ -46,6 +46,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -55,7 +56,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "guezt") then
-		if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 23 then
+		if player:getStorageValue(TheNewFrontier.Questline) == 23 then
 		npcHandler:say({
 			"Ziz iz not for you to azk. I work for zomeone of immenze power. He haz an {offer} for you."
 		}, npc, creature)
@@ -87,9 +88,9 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Excellent! Now you may leave ziz area zrough ze teleporter to ze norz. It will bring you to a hidden boat. Ziz boat will take you to ze tournament izle. ...",
 				"Zere you'll learn anyzing you need to know about ze great tournament."
 			}, npc, creature)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 24)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission08, 2) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission09, 1) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
+			player:setStorageValue(TheNewFrontier.Questline, 24)
+			player:setStorageValue(TheNewFrontier.Mission08, 2) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
+			player:setStorageValue(TheNewFrontier.Mission09, 1) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

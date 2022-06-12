@@ -1,4 +1,7 @@
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
+
 local shardOfCorruptionKill = CreatureEvent("ShardOfCorruptionKill")
+
 function shardOfCorruptionKill.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster then
@@ -10,8 +13,8 @@ function shardOfCorruptionKill.onKill(creature, target)
 	end
 
 	local player = creature:getPlayer()
-	if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 11 then
-		player:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 12)
+	if player:getStorageValue(TheNewFrontier.Questline) == 11 then
+		player:setStorageValue(TheNewFrontier.Questline, 12)
 	end
 	return true
 end

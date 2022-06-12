@@ -46,6 +46,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -55,17 +56,17 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if(MsgContains(message, "mission")) then
-		if(player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 16) then
+		if(player:getStorageValue(TheNewFrontier.Questline) == 16) then
 			npcHandler:say("You come here to ask us to spare your people? This land has no tolerance for the weak, we have it neither. If you want us to consider you as useful for us, you'll have to prove it in a {test} of strength and courage. ", npc, creature)
 			npcHandler:setTopic(playerId, 1)
-		elseif(player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 18) then
+		elseif(player:getStorageValue(TheNewFrontier.Questline) == 18) then
 			npcHandler:say({
 				"We have seen that you can fight and survive. Yet, it will also need cleverness and courage to survive in these lands. We might see later if you've got what it takes. ...",
 				"However, I stand to my word - our hordes will spare your insignificant piece of rock for now. Time will tell if you are worthy living next to us. ...",
 				"Still, it will take years until we might consider you as an ally, but this is a start at least."
 			}, npc, creature)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 19)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission06, 4) --Questlog, The New Frontier Quest "Mission 06: Days Of Doom"
+			player:setStorageValue(TheNewFrontier.Questline, 19)
+			player:setStorageValue(TheNewFrontier.Mission06, 4) --Questlog, The New Frontier Quest "Mission 06: Days Of Doom"
 		end
 	elseif(MsgContains(message, "test")) then
 		if(npcHandler:getTopic(playerId) == 1) then
@@ -74,8 +75,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Face him in a battle and survive for two minutes. If you do, we will be willing to assume that your are prepared for the life in these lands. Enter the ring of battle, close to my quarter. Return to me after you have passed this test."
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 17)
-			player:setStorageValue(Storage.Quest.TheNewFrontier.Mission06, 2) --Questlog, The New Frontier Quest "Mission 06: Days Of Doom"
+			player:setStorageValue(TheNewFrontier.Questline, 17)
+			player:setStorageValue(TheNewFrontier.Mission06, 2) --Questlog, The New Frontier Quest "Mission 06: Days Of Doom"
 		end
 	end
 	return true

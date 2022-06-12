@@ -1,4 +1,5 @@
 local exitPosition = {Position(33062, 31029, 7), Position(33049, 31017, 2)}
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 
 local function clearArena()
 	local spectators, spectator = Game.getSpectators(Position(33063, 31034, 3), false, false, 10, 10, 10, 10)
@@ -33,13 +34,13 @@ function tireczKill.onKill(creature, target)
 		exitPosition[1]:sendMagicEffect(CONST_ME_TELEPORT)
 		spectator:say('You have won! As new champion take the ancient armor as reward before you leave.', TALKTYPE_MONSTER_SAY)
 		spectator:addAchievement('Champion of Chazorai')
-		if spectator:getStorageValue(Storage.Quest.TheNewFrontier.Questline) == 25 then
-			spectator:setStorageValue(Storage.Quest.TheNewFrontier.Mission09, 2) -- Questlog: 'Mission 09: Mortal Combat'
-			spectator:setStorageValue(Storage.Quest.TheNewFrontier.Questline, 26)
+		if spectator:getStorageValue(TheNewFrontier.Questline) == 25 then
+			spectator:setStorageValue(TheNewFrontier.Mission09, 2) -- Questlog: 'Mission 09: Mortal Combat'
+			spectator:setStorageValue(TheNewFrontier.Questline, 26)
 		end
 	end
 
-	Game.setStorageValue(Storage.Quest.TheNewFrontier.Mission09, -1)
+	Game.setStorageValue(TheNewFrontier.Mission09, -1)
 	clearArena()
 	return true
 end

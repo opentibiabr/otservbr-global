@@ -52,6 +52,7 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 -- Travel
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function addTravelKeyword(keyword, text, cost, discount, destination, condition, action)
 	if condition then
 		keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = {'Well, you might be just the hero they need there. To tell you the truth, some our most reliable ore mines have started to run low. ...',
@@ -69,16 +70,16 @@ end
 addTravelKeyword('farmine',{'Do you seek a ride to Farmine for |TRAVELCOST|?', 'Hold on!', 'You shouldn\'t miss the experience.'}, 110, {'postman', 'new frontier'},
 function(player)
 	local destination = Position(33025, 31553, 14)
-	if player:getStorageValue(Storage.Quest.TheNewFrontier.Mission05) == 7 then --if The New Frontier Quest 'Mission 05: Getting Things Busy' complete then Stage 3
+	if player:getStorageValue(TheNewFrontier.Mission05) == 7 then --if The New Frontier Quest 'Mission 05: Getting Things Busy' complete then Stage 3
 		destination.z = 10
-	elseif player:getStorageValue(Storage.Quest.TheNewFrontier.Mission03) >= 2 then --if The New Frontier Quest 'Mission 03: Strangers in the Night' complete then Stage 2
+	elseif player:getStorageValue(TheNewFrontier.Mission03) >= 2 then --if The New Frontier Quest 'Mission 03: Strangers in the Night' complete then Stage 2
 		destination.z = 12
 	end
 	return destination
-end, function(player) return player:getStorageValue(Storage.Quest.TheNewFrontier.FarmineFirstTravel) < 1 end,
+end, function(player) return player:getStorageValue(TheNewFrontier.FarmineFirstTravel) < 1 end,
 function(player)
-	if player:getStorageValue(Storage.Quest.TheNewFrontier.FarmineFirstTravel) < 1 then
-		player:setStorageValue(Storage.Quest.TheNewFrontier.FarmineFirstTravel, 1)
+	if player:getStorageValue(TheNewFrontier.FarmineFirstTravel) < 1 then
+		player:setStorageValue(TheNewFrontier.FarmineFirstTravel, 1)
 	end
 end
 )

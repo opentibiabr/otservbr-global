@@ -45,6 +45,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -54,7 +55,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "trip") or MsgContains(message, "passage") then
-		if player:getStorageValue(Storage.Quest.TheNewFrontier.Questline) >= 24 then
+		if player:getStorageValue(TheNewFrontier.Questline) >= 24 then
 			npcHandler:say("You want trip to Izzle of Zzao?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		else

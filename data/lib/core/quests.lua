@@ -5590,12 +5590,12 @@ if not Quests then
 		},
 		[45] = {
 			name = "The New Frontier",
-			startStorageId = Storage.Quest.TheNewFrontier.Questline,
+			startStorageId = Storage.Quest.U8_54.TheNewFrontier.Questline,
 			startStorageValue = 1,
 			missions = {
 				[1] = {
 					name = "Mission 01: New Land",
-					storageId = Storage.Quest.TheNewFrontier.Mission01,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission01,
 					missionId = 10409,
 					startValue = 1,
 					endValue = 3,
@@ -5607,7 +5607,7 @@ if not Quests then
 				},
 				[2] = {
 					name = "Mission 02: From Kazordoon With Love",
-					storageId = Storage.Quest.TheNewFrontier.Mission02,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission02,
 					missionId = 10410,
 					startValue = 1,
 					endValue = 4,
@@ -5622,7 +5622,7 @@ if not Quests then
 				},
 				[3] = {
 					name = "Mission 03: Strangers in the Night",
-					storageId = Storage.Quest.TheNewFrontier.Mission03,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission03,
 					missionId = 10411,
 					startValue = 1,
 					endValue = 3,
@@ -5636,7 +5636,7 @@ if not Quests then
 				},
 				[4] = {
 					name = "Mission 04: The Mine Is Mine",
-					storageId = Storage.Quest.TheNewFrontier.Mission04,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission04,
 					missionId = 10412,
 					startValue = 1,
 					endValue = 2,
@@ -5648,7 +5648,7 @@ if not Quests then
 				},
 				[5] = {
 					name = "Mission 05: Getting Things Busy",
-					storageId = Storage.Quest.TheNewFrontier.Mission05,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission05,
 					missionId = 10413,
 					startValue = 1,
 					endValue = 2,
@@ -5661,7 +5661,7 @@ if not Quests then
 				},
 				[6] = {
 					name = "Mission 5: Support of Kazordoon's Worm Tamer",
-					storageId = Storage.Quest.TheNewFrontier.Mission5_6_Humgolf,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission5_6_Humgolf,
 					missionId = 10414,
 					startValue = 1,
 					endValue = 1,
@@ -5671,7 +5671,7 @@ if not Quests then
 				},
 				[7] = {
 					name = "Mission 5: Support of the Edron Academy",
-					storageId = Storage.Quest.TheNewFrontier.Mission5_4_Wyrdin,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission5_4_Wyrdin,
 					missionId = 10415,
 					startValue = 1,
 					endValue = 1,
@@ -5681,7 +5681,7 @@ if not Quests then
 				},
 				[8] = {
 					name = "Mission 5: Support of the Explorer Society",
-					storageId = Storage.Quest.TheNewFrontier.Mission5_3_Angus,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission5_3_Angus,
 					missionId = 10416,
 					startValue = 1,
 					endValue = 1,
@@ -5691,7 +5691,7 @@ if not Quests then
 				},
 				[9] = {
 					name = "Mission 5: Support of the Inventor Telas",
-					storageId = Storage.Quest.TheNewFrontier.Mission5_5_Telas,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission5_5_Telas,
 					missionId = 10417,
 					startValue = 1,
 					endValue = 1,
@@ -5701,7 +5701,7 @@ if not Quests then
 				},
 				[10] = {
 					name = "Mission 5: Support of the Thaian King",
-					storageId = Storage.Quest.TheNewFrontier.Mission5_1_KingTibianus,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission5_1_KingTibianus,
 					missionId = 10418,
 					startValue = 1,
 					endValue = 1,
@@ -5711,7 +5711,7 @@ if not Quests then
 				},
 				[11] = {
 					name = "Mission 5: Support of the Venorean Traders",
-					storageId = Storage.Quest.TheNewFrontier.Mission5_2_Leeland,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission5_2_Leeland,
 					missionId = 10419,
 					startValue = 1,
 					endValue = 1,
@@ -5721,7 +5721,7 @@ if not Quests then
 				},
 				[12] = {
 					name = "Mission 06: Days Of Doom",
-					storageId = Storage.Quest.TheNewFrontier.Mission06,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission06,
 					missionId = 10420,
 					startValue = 1,
 					endValue = 5,
@@ -5736,7 +5736,7 @@ if not Quests then
 				},
 				[13] = {
 					name = "Mission 07: Messengers Of Peace",
-					storageId = Storage.Quest.TheNewFrontier.Mission07,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission07,
 					missionId = 10421,
 					startValue = 1,
 					endValue = 2,
@@ -5748,7 +5748,7 @@ if not Quests then
 				},
 				[14] = {
 					name = "Mission 08: An Offer You Can't Refuse",
-					storageId = Storage.Quest.TheNewFrontier.Mission08,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission08,
 					missionId = 10422,
 					startValue = 1,
 					endValue = 2,
@@ -5760,7 +5760,7 @@ if not Quests then
 				},
 				[15] = {
 					name = "Mission 09: Mortal Combat",
-					storageId = Storage.Quest.TheNewFrontier.Mission09,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission09,
 					missionId = 10423,
 					startValue = 1,
 					endValue = 3,
@@ -5775,7 +5775,7 @@ if not Quests then
 				},
 				[16] = {
 					name = "Mission 10: New Horizons",
-					storageId = Storage.Quest.TheNewFrontier.Mission10,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission10,
 					missionId = 10424,
 					startValue = 1,
 					endValue = 2,
@@ -5788,7 +5788,7 @@ if not Quests then
 				},
 				[17] = {
 					name = "Tome of Knowledge Counter",
-					storageId = Storage.Quest.TheNewFrontier.TomeofKnowledge,
+					storageId = Storage.Quest.U8_54.TheNewFrontier.TomeofKnowledge,
 					missionId = 10425,
 					startValue = 1,
 					endValue = 12,
