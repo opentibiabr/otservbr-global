@@ -140,10 +140,6 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 				key = setting.isKey
 			}
 
-			if  ItemType(itemid):getCharges() > 0 then
-				addItemParams.weight = getItemWeight(itemid) * 1
-			end
-
 			if count > 1 and ItemType(itemid):isStackable() then
 				if (itemDescriptions.plural) then
 					itemName = itemDescriptions.plural
@@ -151,6 +147,7 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 				addItemParams.message = "You have found " .. count .. " " .. itemName
 			elseif ItemType(itemid):getCharges() > 0 then
 				addItemParams.message = "You have found " .. itemArticle .. " " .. itemName
+				addItemParams.weight = getItemWeight(itemid)
 			else
 				addItemParams.message = "You have found " .. itemArticle .. " " .. itemName
 			end
