@@ -33,7 +33,7 @@ function threatenedLever.onUse(player, item, fromPosition, target, toPosition, i
 	spec:check()
 
 	if spec:getPlayers() > 0 then
-		player:say("There's someone fighting with Faceless Bane.", TALKTYPE_MONSTER_SAY)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "There's someone fighting with " .. config.bossName .. ".")
 		return true
 	end
 
@@ -49,11 +49,13 @@ function threatenedLever.onUse(player, item, fromPosition, target, toPosition, i
 		end
 		if creature:getStorageValue(config.storage) > os.time() then
 			local info = lever:getInfoPositions()
-			creature:getPosition():sendMagicEffect(CONST_ME_POFF)
 			for _, v in pairs(info) do
 				local newPlayer = v.creature
 				if newPlayer then
 					newPlayer:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You or a member in your team have to wait " .. config.timeToFightAgain .. " hours to face Faceless Bane again!")
+					if newPlayer:getStorageValue(config.storage) > os.time() then
+						newPlayer:getPosition():sendMagicEffect(CONST_ME_POFF)
+					end
 				end
 			end
 			return false
