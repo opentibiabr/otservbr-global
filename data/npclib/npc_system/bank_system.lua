@@ -69,11 +69,11 @@ function Npc:parseBank(message, npc, creature, npcHandler)
 		end
 		npcHandler:say("Please tell me how much gold it is you would like to deposit.", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif MsgContains(message, "deposit all") then
+	elseif MsgFind(message, "deposit all") then
 		count[playerId] = player:getMoney()
 		npcHandler:say(string.format("Would you really like to deposit %d gold?", count[playerId]), npc, creature)
 		npcHandler:setTopic(playerId, 2)
-	elseif MsgContains(message, "all") then
+	elseif MsgFind(message, "all") then
 		if npcHandler:getTopic(playerId) == 1 then
 			count[playerId] = player:getMoney()
 			npcHandler:say(string.format("Would you really like to deposit %d gold?", count[playerId]), npc, creature)
@@ -335,7 +335,7 @@ function Npc:parseGuildBank(message, npc, creature, playerId, npcHandler)
 		npcHandler:say(string.format("Your guild account balance is %d gold.", player:getGuild():getBankBalance()), npc, creature)
 		return true
 	-- Guild deposit
-	elseif MsgContains(message, "guild deposit") then
+	elseif MsgFind(message, "guild deposit") or MsgFind(message, "deposit") then
 		if not player:getGuild() then
 			npcHandler:say("You are not a member of a guild.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
