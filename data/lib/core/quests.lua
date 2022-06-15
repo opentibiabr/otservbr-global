@@ -4542,7 +4542,7 @@ if not Quests then
 						rust before forging them together. You have to find a way to rebuild the key. This might open the doors.",
 						[4] = "With the forged key you have unlocked the three areas. The Corym Servant was very relieved  \z
 						and asked you to bring 20 units of rare earth.",
-						[5] = "You have brought 20 units of rare earth to Corym Servant. He was very tahnkful and gave you  \z
+						[5] = "You have brought 20 units of rare earth to Corym Servant. He was very thankful and gave you  \z
 						a reward. The revolution should now take place as intended."
 					}
 				}
