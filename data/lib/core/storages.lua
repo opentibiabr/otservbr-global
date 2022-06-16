@@ -514,7 +514,8 @@ Storage = {
 		Flower = 50456,
 		Ring2 = 50457,
 		Bone = 50458,
-		Reward = 50459
+		Reward = 50459,
+		TheShattererLever = 50460
 	},
 	ForgottenKnowledge = {
 		-- Reserved storage from 50470 - 50519
