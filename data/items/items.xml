@@ -37349,6 +37349,8 @@
 		<attribute key="stopduration" value="0"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="magicpoints" value="2"/>
+		<attribute key="criticalhitdamage" value="35"/>
+		<attribute key="criticalhitchance" value="10"/>
 		<attribute key="duration" value="900"/>
 		<attribute key="decayTo" value="0"/>
 		<attribute key="range" value="4"/>
