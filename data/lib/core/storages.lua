@@ -2368,6 +2368,24 @@ Storage = {
 			FeasterOfSouls = {},
 			PoltergeistOutfits = {}
 		},
+		U12_40 = { -- update 12.40 - Reserved Storages 76851 - 77100
+			RevenantOutfits = {},
+			SoulWar = {},
+			TheOrderOfTheLion = {}
+		},
+		U12_60 = { -- update 12.60 - Reserved Storages 77101 - 77200
+			APiratesTail = {},
+			RascoohanOutfits = {}
+		},
+		U12_70 = { -- update 12.70 - Reserved Storages 77201 - 77400
+			AdventuresOfGalthen = {},
+			CitizenOfIssaviOutfits = {},
+			RoyalBounaceanAdvisorOutfits= {},
+			TooHotToHandle = {}
+		},
+		U12_80 = { -- update 12.80 - Reserved Storages 77401 - 77450
+			RoyalCostumeOutfits = {}
+		},
 	}
 }
 
