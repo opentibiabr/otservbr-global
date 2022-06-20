@@ -2361,51 +2361,51 @@ Storage = {
 			},
 			MakeshiftWarriorOutfits = {},
 		},
-		U11_80 = { -- update 11.80 - Reserved Storages 76001 - 76100
+		U11_80 = { -- update 11.80 - Reserved Storages 76001 - 76300
 			BattleMageOutfits = {},
 			DiscovererOutfits = {},
 			MeasuringTibia = {},
 			TheSecretLibrary = {},
 		},
-		U12_00 = { -- update 12.00 - Reserved Storages 76101 - 76300
+		U12_00 = { -- update 12.00 - Reserved Storages 76301 - 76600
 			DreamWarriorOutfits = {},
 			TheDreamCourts = {
 				AndrewDoor = 14900
 			},
 		},
-		U12_02 = { -- update 12.02 - Reserved Storages 76301 - 76400
+		U12_02 = { -- update 12.02 - Reserved Storages 76601 - 76800
 			TibiaAnniversary = {},
 			WinterlightSolstice = {},
 		},
-		U12_15 = { -- update 12.15.8659 - Reserved Storages 76401 - 76450
+		U12_15 = { -- update 12.15.8659 - Reserved Storages 76801 - 76850
 			GoldenOutfits = {},
 		},
-		U12_20 = { -- update 12.20 - Reserved Storages 76451 - 76650
+		U12_20 = { -- update 12.20 - Reserved Storages 76851 - 77000
 			GraveDanger = {},
 			HandOfTheInquisitionOutfits = {},
 			-- Kilmaresh = {}, done earlier in the file
 		},
-		U12_30 = { -- update 12.30 - Reserved Storages 76651 - 76850
+		U12_30 = { -- update 12.30 - Reserved Storages 77001 - 77200
 			FalconerOutfits = {},
 			FeasterOfSouls = {},
 			PoltergeistOutfits = {}
 		},
-		U12_40 = { -- update 12.40 - Reserved Storages 76851 - 77100
+		U12_40 = { -- update 12.40 - Reserved Storages 77201 - 77500
 			RevenantOutfits = {},
 			SoulWar = {},
 			TheOrderOfTheLion = {}
 		},
-		U12_60 = { -- update 12.60 - Reserved Storages 77101 - 77200
+		U12_60 = { -- update 12.60 - Reserved Storages 77501 - 77600
 			APiratesTail = {},
 			RascoohanOutfits = {}
 		},
-		U12_70 = { -- update 12.70 - Reserved Storages 77201 - 77400
+		U12_70 = { -- update 12.70 - Reserved Storages 77601 - 77800
 			AdventuresOfGalthen = {},
 			CitizenOfIssaviOutfits = {},
 			RoyalBounaceanAdvisorOutfits= {},
 			TooHotToHandle = {}
 		},
-		U12_80 = { -- update 12.80 - Reserved Storages 77401 - 77450
+		U12_80 = { -- update 12.80 - Reserved Storages 77801 - 77850
 			RoyalCostumeOutfits = {}
 		},
 	}
