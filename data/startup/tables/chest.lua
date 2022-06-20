@@ -30,6 +30,14 @@
 ]]
 
 ChestAction = {
+	[false] = {
+		itemId = false,
+		itemPos = {
+			{x = 33057, y = 31029, z = 7},
+			{x = 33055, y = 31029, z = 7},
+			{x = 33053, y = 31029, z = 7}
+		}
+	},
 	-- Keys quest
 	[5000] = {
 		itemId = xxxx,
@@ -40,6 +48,13 @@ ChestAction = {
 		action = xxxx,
 		reward = {{xxxx, 1}},
 		storage = storage
+	},
+	-- The New Frontier Quest
+	[5001] = { -- Reward Outfit
+		itemId = 5862,
+		itemPos = {
+			{x = 33053, y = 31020, z = 7}
+		}
 	}
 }
 
@@ -866,7 +881,29 @@ ChestUnique = {
 		weight = 2.50,
 		storage = Storage.Quest.U11_50.HiddenThreats.Rewards.keyFragment02
 	},
-
+	-- The New Frontier Quest
+	[6097] = {
+		itemId = 2472,
+		itemPos = {x = 33057, y = 31029, z = 7},
+		container = 2854,
+		weight = 14.90,
+		reward = {{7439, 1}, {7440, 1}, {7443, 1}},
+		storage = Storage.Quest.U8_54.TheNewFrontier.Reward.Potions
+	},
+	[6098] = {
+		itemId = 2472,
+		itemPos = {x = 33055, y = 31029, z = 7},
+		reward = {{9058, 2}},
+		weight = 36.00,
+		storage = Storage.Quest.U8_54.TheNewFrontier.Reward.GoldIngot
+	},
+	[6099] = {
+		itemId = 2472,
+		itemPos = {x = 33053, y = 31029, z = 7},
+		reward = {{2995, 1}},
+		weight = 7.50,
+		storage = Storage.Quest.U8_54.TheNewFrontier.Reward.PigBank
+	},
 	-- Reward of others scrips files (varied rewards)
 	-- The First dragon Quest
 	-- Treasure chests (data\scripts\actions\quests\first_dragon\treasure_chests.lua)
