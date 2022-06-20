@@ -25,5 +25,3 @@ end
 
 lizardsTrap:position(Position(33169, 31253, 10),Position(33170, 31253, 10),Position(33171, 31253, 10))
 lizardsTrap:register()
-
-
