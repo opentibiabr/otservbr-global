@@ -35,12 +35,12 @@ function tireczKill.onKill(creature, target)
 		spectator:say('You have won! As new champion take the ancient armor as reward before you leave.', TALKTYPE_MONSTER_SAY)
 		spectator:addAchievement('Champion of Chazorai')
 		if spectator:getStorageValue(TheNewFrontier.Questline) == 25 then
-			spectator:setStorageValue(TheNewFrontier.Mission09, 2) -- Questlog: 'Mission 09: Mortal Combat'
+			spectator:setStorageValue(TheNewFrontier.Mission09[1], 2) -- Questlog: 'Mission 09: Mortal Combat'
 			spectator:setStorageValue(TheNewFrontier.Questline, 26)
 		end
 	end
 
-	Game.setStorageValue(TheNewFrontier.Mission09, -1)
+	Game.setStorageValue(TheNewFrontier.Mission09[1], -1)
 	clearArena()
 	return true
 end

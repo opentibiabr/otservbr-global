@@ -92,12 +92,12 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Does this sound like something you can handle? "
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
-		elseif(player:getStorageValue(TheNewFrontier.Beaver1) == 1
-		and player:getStorageValue(TheNewFrontier.Beaver2) == 1
-		and player:getStorageValue(TheNewFrontier.Beaver3) == 1) then
+		elseif(player:getStorageValue(TheNewFrontier.Mission02.Beaver1) == 1
+		and player:getStorageValue(TheNewFrontier.Mission02.Beaver2) == 1
+		and player:getStorageValue(TheNewFrontier.Mission02.Beaver3) == 1) then
 			npcHandler:say("Yes, I can hear them even from here. It has to be a legion of beavers! I'll send the men to get the wood as soon as their gnawing frenzy has settled! You can report to Ongulf that men and wood will be on their way!", npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 6)
-			player:setStorageValue(TheNewFrontier.Mission02, 3) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
+			player:setStorageValue(TheNewFrontier.Mission02[1], 3) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
 		else
 			npcHandler:say("If you place the beaver bait on trees on some strategic locations, we could let the beavers do the work and later on, I'll send men to get the fallen trees.", npc, creature)
 		end
@@ -108,7 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"If you're unlucky enough to meet one of the giant beavers, try to stay calm. Don't do any hectic moves, don't yell, don't draw any weapon, and if you should carry anything wooden on you, throw it away as far as you can. "
 			}, npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 5)
-			player:setStorageValue(TheNewFrontier.Mission02, 2) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
+			player:setStorageValue(TheNewFrontier.Mission02[1], 2) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
 			player:addItem(9843, 1)
 			for i = 1, #config do
 				player:addMapMark(config[i].position, config[i].type, config[i].description)

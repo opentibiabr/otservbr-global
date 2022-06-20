@@ -123,12 +123,12 @@ local function creatureSayCallback(npc, creature, type, message)
 				"So please travel back to Kazordoon. In the western mines outside of The Big Old One, you'll find Melfar of the imperial mining guild. Ask him to send some more miners and wood. When you return, I might have some more interesting missions for you."
 			}, npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 4)
-			player:setStorageValue(TheNewFrontier.Mission02, 1) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
+			player:setStorageValue(TheNewFrontier.Mission02[1], 1) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
 			npcHandler:setTopic(playerId, 0)
 		elseif player:getStorageValue(TheNewFrontier.Questline) == 6 then
 			npcHandler:say("That's good news for sure. It will give our operation a new impulse. However, only if there is not some unexpected trouble ahead. Well, we'll talk about that when we discuss your next {mission}.", npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 7)
-			player:setStorageValue(TheNewFrontier.Mission02, 4) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
+			player:setStorageValue(TheNewFrontier.Mission02[1], 4) --Questlog, The New Frontier Quest "Mission 02: From Kazordoon With Love"
 			npcHandler:setTopic(playerId, 0)
 		elseif player:getStorageValue(TheNewFrontier.Questline) == 7 then
 			npcHandler:say({
@@ -181,24 +181,24 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Well, I hope you understand the importance of this mission and got what it takes to fulfil it. So hurry up and get us the needed support."
 			}, npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 14)
-			player:setStorageValue(TheNewFrontier.Mission05, 1) --Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
-			player:setStorageValue(TheNewFrontier.Mission5_1_KingTibianus, 1) --Questlog, The New Frontier Quest "Mission 5-1"
-			player:setStorageValue(TheNewFrontier.Mission5_2_Leeland, 1) --Questlog, The New Frontier Quest "Mission 5-2"
-			player:setStorageValue(TheNewFrontier.Mission5_3_Angus, 1) --Questlog, The New Frontier Quest "Mission 5-3"
-			player:setStorageValue(TheNewFrontier.Mission5_4_Wyrdin, 1) --Questlog, The New Frontier Quest "Mission 5-4"
-			player:setStorageValue(TheNewFrontier.Mission5_5_Telas, 1) --Questlog, The New Frontier Quest "Mission 5-5"
-			player:setStorageValue(TheNewFrontier.Mission5_6_Humgolf, 1) --Questlog, The New Frontier Quest "Mission 5-6"
+			player:setStorageValue(TheNewFrontier.Mission05[1], 1) --Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
+			player:setStorageValue(TheNewFrontier.Mission05.KingTibianus, 1) --Questlog, The New Frontier Quest "Mission 5-1"
+			player:setStorageValue(TheNewFrontier.Mission05.Leeland, 1) --Questlog, The New Frontier Quest "Mission 5-2"
+			player:setStorageValue(TheNewFrontier.Mission05.Angus, 1) --Questlog, The New Frontier Quest "Mission 5-3"
+			player:setStorageValue(TheNewFrontier.Mission05.Wyrdin, 1) --Questlog, The New Frontier Quest "Mission 5-4"
+			player:setStorageValue(TheNewFrontier.Mission05.Telas, 1) --Questlog, The New Frontier Quest "Mission 5-5"
+			player:setStorageValue(TheNewFrontier.Mission05.Humgolf, 1) --Questlog, The New Frontier Quest "Mission 5-6"
 			npcHandler:setTopic(playerId, 0)
 		elseif player:getStorageValue(TheNewFrontier.Questline) == 14 then
-			if player:getStorageValue(TheNewFrontier.Mission5_1_KingTibianus) == 2
-			and player:getStorageValue(TheNewFrontier.Mission5_2_Leeland) == 2
-			and player:getStorageValue(TheNewFrontier.Mission5_3_Angus) == 2
-			and player:getStorageValue(TheNewFrontier.Mission5_4_Wyrdin) == 2
-			and player:getStorageValue(TheNewFrontier.Mission5_5_Telas) == 2
-			and player:getStorageValue(TheNewFrontier.Mission5_6_Humgolf) == 2 then
+			if player:getStorageValue(TheNewFrontier.Mission05.KingTibianus) == 2
+			and player:getStorageValue(TheNewFrontier.Mission05.Leeland) == 2
+			and player:getStorageValue(TheNewFrontier.Mission05.Angus) == 2
+			and player:getStorageValue(TheNewFrontier.Mission05.Wyrdin) == 2
+			and player:getStorageValue(TheNewFrontier.Mission05.Telas) == 2
+			and player:getStorageValue(TheNewFrontier.Mission05.Humgolf) == 2 then
 				npcHandler:say("You did an excellent job! With all this help Farmine will grow and prosper. While we put all available resources into building this base, I have another urgent {mission} for you.", npc, creature)
 				player:setStorageValue(TheNewFrontier.Questline, 15)
-				player:setStorageValue(TheNewFrontier.Mission05, 2) --Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
+				player:setStorageValue(TheNewFrontier.Mission05[1], 2) --Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif player:getStorageValue(TheNewFrontier.Questline) == 15 then
@@ -226,7 +226,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"If the orcs are right, they are somewhere in or behind those mountains in the north. I doubt you can reason with them in any way, but you'll have to try for the sake of Farmine."
 			}, npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 21)
-			player:setStorageValue(TheNewFrontier.Mission07, 1) --Questlog, The New Frontier Quest "Mission 07: Messengers Of Peace"
+			player:setStorageValue(TheNewFrontier.Mission07[1], 1) --Questlog, The New Frontier Quest "Mission 07: Messengers Of Peace"
 			npcHandler:setTopic(playerId, 0)
 		elseif player:getStorageValue(TheNewFrontier.Questline) == 28 then
 			npcHandler:say({
@@ -243,8 +243,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:addOutfit(336)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			player:setStorageValue(TheNewFrontier.Questline, 29)
-			player:setStorageValue(TheNewFrontier.Mission10, 2) --Questlog, "Mission 10: New Horizons"
-			player:setStorageValue(TheNewFrontier.Mission10_MagicCarpetDoor, 1)
+			player:setStorageValue(TheNewFrontier.Mission10[1], 2) --Questlog, "Mission 10: New Horizons"
+			player:setStorageValue(TheNewFrontier.Mission10.MagicCarpetDoor, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

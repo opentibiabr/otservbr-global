@@ -68,9 +68,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif MsgContains(message, "impress") or MsgContains(message, "plea") then
 		if npcHandler:getTopic(playerId) == 1 then
-			if player:getStorageValue(TheNewFrontier.Mission5_2_Leeland) == 1 then
+			if player:getStorageValue(TheNewFrontier.Mission05.Leeland) == 1 then
 				npcHandler:say("The idea of a promising market and new resources suits us quite well. I think it is reasonable to send some assistance.", npc, creature)
-				player:setStorageValue(TheNewFrontier.Mission5_2_Leeland, 2)
+				player:setStorageValue(TheNewFrontier.Mission05.Leeland, 2)
 			end
 		end
 	end

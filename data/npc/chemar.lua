@@ -59,9 +59,9 @@ end
 
 -- Travel
 local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
-local function addTravelKeyword(keyword, cost, destination)
-	if keyword == 'farmine' then
-		keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'Never heard about a place like this.'}, function(player) return player:getStorageValue(TheNewFrontier.Mission10) ~= 1 end)
+local function addTravelKeyword(keyword, text, cost, destination, condition, action)
+	if condition then
+		keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'Never heard about a place like this.'}, condition)
 	end
 
 	local travelKeyword = keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'Do you seek a ride to ' .. keyword:titleCase() .. ' for |TRAVELCOST|?', cost = cost, discount = 'postman'})
@@ -69,7 +69,8 @@ local function addTravelKeyword(keyword, cost, destination)
 		travelKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'You shouldn\'t miss the experience.', reset = true})
 end
 
-addTravelKeyword('farmine', 60, Position(32983, 31539, 1))
+addTravelKeyword('farmine', 'Do you seek a ride to Farmine for |TRAVELCOST|?', 60, Position(32983, 31539, 1), function(player) return player:getStorageValue(TheNewFrontier.Mission10[1]) ~= 2 end)
+addTravelKeyword('zao', 'Do you seek a ride to Farmine for |TRAVELCOST|?', 60, Position(32983, 31539, 1), function(player) return player:getStorageValue(TheNewFrontier.Mission10[1]) ~= 2 end)
 addTravelKeyword('edron', 40, Position(33193, 31784, 3))
 addTravelKeyword('svargrond', 60, Position(32253, 31097, 4))
 addTravelKeyword('femor hills', 60, Position(32536, 31837, 4))

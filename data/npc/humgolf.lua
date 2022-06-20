@@ -62,9 +62,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "flatter")) then
 		if(npcHandler:getTopic(playerId) == 1) then
-			if(player:getStorageValue(TheNewFrontier.Mission5_6_Humgolf) == 1) then
+			if(player:getStorageValue(TheNewFrontier.Mission05.Humgolf) == 1) then
 				npcHandler:say("Yeah, of course they can't do without my worms. Mining and worms go hand in hand. Well, in the case of the worms it is only an imaginary hand of course. I'll send them some of my finest worms.", npc, creature)
-				player:setStorageValue(TheNewFrontier.Mission5_6_Humgolf, 2)
+				player:setStorageValue(TheNewFrontier.Mission05.Humgolf, 2)
 			end
 		end
 	end

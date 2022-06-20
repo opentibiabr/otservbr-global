@@ -67,9 +67,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "reason")) then
 		if(npcHandler:getTopic(playerId) == 1) then
-			if(player:getStorageValue(TheNewFrontier.Mission5_5_Telas) == 1) then
+			if(player:getStorageValue(TheNewFrontier.Mission05.Telas) == 1) then
 				npcHandler:say("Well it sounds like a good idea to test my golems in some real environment. I think it is acceptable to send some of them to Farmine.", npc, creature)
-				player:setStorageValue(TheNewFrontier.Mission5_5_Telas, 2)
+				player:setStorageValue(TheNewFrontier.Mission05.Telas, 2)
 			end
 		end
 	end

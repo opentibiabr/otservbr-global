@@ -90,7 +90,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 24)
 			player:setStorageValue(TheNewFrontier.Mission08, 2) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
-			player:setStorageValue(TheNewFrontier.Mission09, 1) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
+			player:setStorageValue(TheNewFrontier.Mission09[1], 1) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

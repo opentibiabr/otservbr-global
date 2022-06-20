@@ -1,5 +1,5 @@
 QuestKeysUpdate = {
-	[0] = {latest = 1}, -- Increase +1 every time this above table suffer a modification
+	[0] = {latest = 2}, -- Increase +1 every time this below table suffer a modification
 	-- Add a new table to the bottow of this array with the following number versioning.
 	[1] = {
 		-- Deeper Fibula
@@ -85,6 +85,33 @@ QuestKeysUpdate = {
 		{old = 10059, new = 70128}, -- TimeRing
 		{old = 10060, new = 70129}, -- ElvenAmulet
 
+	},
+	[2] = {
+		-- TheNewFrontier
+		{old = 51080, new = 72701}, -- Questline = 51080,
+		{old = 51081, new = 72703}, -- Mission01 = 51081,
+		{old = 51082, new = 72704}, -- Mission02 = 51082,
+		{old = 51092, new = 72705}, -- Beaver1 = 51092,
+		{old = 51093, new = 72706}, -- Beaver2 = 51093,
+		{old = 51094, new = 72707}, -- Beaver3 = 51094,
+		{old = 51083, new = 72708}, -- Mission03 = 51083,
+		{old = 51084, new = 72709}, -- Mission04 = 51084,
+		{old = 51085, new = 72710}, -- Mission05 = 51085,
+		{old = 51095, new = 72711}, -- BribeKing = 51095,
+		{old = 51096, new = 72712}, -- BribeLeeland = 51096,
+		{old = 51097, new = 72713}, -- BribeExplorerSociety = 51097,
+		{old = 51098, new = 72714}, -- BribeWydrin = 51098,
+		{old = 51099, new = 72715}, -- BribeTelas = 51099,
+		{old = 51100, new = 72716}, -- BribeHumgolf = 51100
+		{old = 51086, new = 72717}, -- Mission06 = 51086,
+		{old = 51087, new = 72718}, -- Mission07 = 51087,
+		{old = 51088, new = 72720}, -- Mission08 = 51088,
+		{old = 51089, new = 72721}, -- Mission09 = 51089,
+		{old = 51090, new = 72724}, -- Mission10 = 51090,
+		{old = 3158, new = 72726}, -- Reward 1
+		{old = 3159, new = 72727}, -- Reward 2
+		{old = 3160, new = 72728}, -- Reward 3
+		{old = 51091, new = 72729}, -- TomeofKnowledge = 51091,
 	},
 --[[
 	[2] = { -- New table version, allows the updated servers apply the changes to the only new revised quest.

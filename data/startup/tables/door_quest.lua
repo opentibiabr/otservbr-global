@@ -356,26 +356,26 @@ QuestDoorAction = {
 			{x = 33057, y = 31529, z = 14}
 		}
 	},
-	[Storage.Quest.U8_54.TheNewFrontier.Mission07] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission07[1]] = {
 		itemId = false,
 		itemPos = {
 			{x = 33170, y = 31260, z = 10},
 			{x = 33171, y = 31260, z = 10}
 		}
 	},
-	[Storage.Quest.U8_54.TheNewFrontier.Mission9_ArenaDoor] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission09.ArenaDoor] = {
 		itemId = false,
 		itemPos = {
 			{x = 33080, y = 31019, z = 2}
 		}
 	},
-	[Storage.Quest.U8_54.TheNewFrontier.Mission9_RewardDoor] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission09.RewardDoor] = {
 		itemId = false,
 		itemPos = {
 			{x = 33061, y = 31025, z = 7}
 		}
 	},
-	[Storage.Quest.U8_54.TheNewFrontier.Mission10_MagicCarpetDoor] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission10.MagicCarpetDoor] = {
 		itemId = false,
 		itemPos = {
 			{x = 32990, y = 31547, z = 4}

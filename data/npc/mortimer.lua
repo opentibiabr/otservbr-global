@@ -82,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				}, npc, creature)
 				player:setStorageValue(TheNewFrontier.BribeExplorerSociety, 1)
 				--Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
-				player:setStorageValue(TheNewFrontier.Mission05, player:getStorageValue(TheNewFrontier.Mission05) + 1)
+				player:setStorageValue(TheNewFrontier.Mission05[1], player:getStorageValue(TheNewFrontier.Mission05[1]) + 1)
 			end
 		end
 

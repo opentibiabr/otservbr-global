@@ -100,9 +100,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif MsgContains(message, "plea") then
 		if npcHandler:getTopic(playerId) == 2 then
-			if player:getStorageValue(TheNewFrontier.Mission5_4_Wyrdin) == 1 then
+			if player:getStorageValue(TheNewFrontier.Mission05.Wyrdin) == 1 then
 				npcHandler:say("Hm, you are right, we are at the forefront of knowledge and innovation. Our dwarven friends could learn much from one of our representatives.", npc, creature)
-				player:setStorageValue(TheNewFrontier.Mission5_4_Wyrdin, 2)
+				player:setStorageValue(TheNewFrontier.Mission05.Wyrdin, 2)
 			end
 		end
 	end

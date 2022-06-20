@@ -79,8 +79,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				"You may crawl back to your alliez and warn zem of ze gloriouz might of ze dragon emperor and hiz minionz."
 			}, npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 28)
-			player:setStorageValue(TheNewFrontier.Mission09, 3) --Questlog, "Mission 09: Mortal Combat"
-			player:setStorageValue(TheNewFrontier.Mission10, 1) --Questlog, "Mission 10: New Horizons"
+			player:setStorageValue(TheNewFrontier.Mission09[1], 3) --Questlog, "Mission 09: Mortal Combat"
+			player:setStorageValue(TheNewFrontier.Mission10[1], 1) --Questlog, "Mission 10: New Horizons"
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "yes") then
@@ -88,7 +88,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("I grant you ze permizzion to enter ze arena. Remember, you'will have to enter ze arena az a \z
 			team of two. If you are not familiar wiz ze rulez, I can explain zem to you once again.", npc, creature)
 			player:setStorageValue(TheNewFrontier.Questline, 25)
-			player:setStorageValue(TheNewFrontier.Mission9_ArenaDoor, 1)
+			player:setStorageValue(TheNewFrontier.Mission09.ArenaDoor, 1)
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

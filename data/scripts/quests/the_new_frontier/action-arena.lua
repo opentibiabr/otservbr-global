@@ -61,11 +61,11 @@ function theNewFrontierArena.onUse(player, item, fromPosition, target, toPositio
 		return player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You already finished this battle.')
 	end
 
-	if Game.getStorageValue(TheNewFrontier.Mission09) == 1 then
+	if Game.getStorageValue(TheNewFrontier.Mission09[1]) == 1 then
 		return player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'The arena is already in use.')
 	end
 
-	Game.setStorageValue(TheNewFrontier.Mission09, 1)
+	Game.setStorageValue(TheNewFrontier.Mission09[1], 1)
 	addEvent(clearArena, 30 * 60 * 1000)
 	player1:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	player1:teleportTo(config.teleportPositions[1])

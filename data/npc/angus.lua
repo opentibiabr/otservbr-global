@@ -74,12 +74,12 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif MsgContains(message, "bluff") then
 		if npcHandler:getTopic(playerId) == 30 then
-			if player:getStorageValue(TheNewFrontier.Mission5_3_Angus) == 1 then
+			if player:getStorageValue(TheNewFrontier.Mission05.Angus) == 1 then
 				npcHandler:say({
 					"Those stories are just amazing! Men with faces on their stomach instead of heads you say? And hens that lay golden eggs? Whereas, most amazing is this fountain of youth you've mentioned! ...",
 					"I'll immediately send some of our most dedicated explorers to check those things out!"
 				}, npc, creature)
-				player:setStorageValue(TheNewFrontier.Mission5_3_Angus, 2)
+				player:setStorageValue(TheNewFrontier.Mission05.Angus, 2)
 			end
 		end
 
