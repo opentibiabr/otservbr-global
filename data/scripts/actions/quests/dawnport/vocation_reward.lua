@@ -70,7 +70,7 @@ function vocationReward.onUse(player, item, fromPosition, itemEx, toPosition)
 		return true
 	end
 	-- Check quest storage
-	if player:getStorageValue(Storage.Quest.Dawnport.VocationReward) == 1 then
+	if player:getStorageValue(Storage.Quest.U10_55.Dawnport.VocationReward) == 1 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The " .. item:getName() .. " is empty.")
 		return true
 	end
@@ -120,7 +120,7 @@ function vocationReward.onUse(player, item, fromPosition, itemEx, toPosition)
 	-- Ensure reward was added properly to player
 	if player:addItemEx(container, false, CONST_SLOT_WHEREEVER) == RETURNVALUE_NOERROR then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. container:getName() .. ".")
-		player:setStorageValue(Storage.Quest.Dawnport.VocationReward, 1)
+		player:setStorageValue(Storage.Quest.U10_55.Dawnport.VocationReward, 1)
 	end
 	return true
 end

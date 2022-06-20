@@ -140,9 +140,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("As far as I can remember the story, a pet escaped its stable behind the inn. It got somehow involved with powerful magic at a ritual and was transformed in some way.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "stable") then
-		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) == 3 then
+		if player:getStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo) == 3 then
 			-- Questlog: The Feared Hugo (Completed)
-			player:setStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo, 4)
+			player:setStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo, 4)
 		end
 		npcHandler:say("My grandpa told me, in the old days there were some behind this cottage. Nothing big though, just small ones, for chicken or rabbits.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
