@@ -9,9 +9,9 @@ function onKill(player, target)
 		return true
 	end
 
-	local killAmount = player:getStorageValue(Storage.Quest.Dawnport.MorrisGoblinCount)
-	if player:getStorageValue(Storage.Quest.Dawnport.MorrisGoblin) == 1 and killAmount < 20 then
-		player:setStorageValue(Storage.Quest.Dawnport.MorrisGoblinCount, killAmount + 1)
+	local killAmount = player:getStorageValue(Storage.Quest.U10_55.Dawnport.MorrisGoblinCount)
+	if player:getStorageValue(Storage.Quest.U10_55.Dawnport.MorrisGoblin) == 1 and killAmount < 20 then
+		player:setStorageValue(Storage.Quest.U10_55.Dawnport.MorrisGoblinCount, killAmount + 1)
 	end
 	return true
 end
