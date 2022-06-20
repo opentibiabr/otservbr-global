@@ -46,6 +46,8 @@ function serverstartup.onStartup()
 	loadLuaMapAction(TilePickAction)
 	-- Create new item on map
 	CreateMapItem(CreateItemOnMap)
+	-- Update old quest storage keys
+	updateKeysStorage(QuestKeysUpdate)
 
 	Spdlog.info("Loaded all actions in the map")
 	Spdlog.info("Loaded all uniques in the map")

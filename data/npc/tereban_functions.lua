@@ -142,7 +142,7 @@ function ParseTerebanSay(npc, creature, message, npcHandler)
 						"Take this sachet over there, I wrapped the coins into this old cape I had still lying around here from a barter with a stranger, it is of no use for me anyway. Farewell and thank you once again."
 					}, npc, creature)
 			elseif player:getStorageValue(Storage.FathersBurden.Status) == 2 then
-				npcHandler:say("Thank you for your help!", creature)
+				npcHandler:say("Thank you for your help!", npc, creature)
 				return true
 			else
 				npcHandler:say(

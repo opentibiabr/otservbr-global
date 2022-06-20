@@ -5,38 +5,38 @@ Look README.md for look the reserved action/unique
 ]]
 QuestDoorAction = {
 	-- The queens of the banshee door
-	[Storage.Quest.TheQueenOfTheBanshees.BansheeDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.BansheeDoor] = {
 		itemId = 5113,
 		itemPos = {
 			{x = 32246, y = 31861, z = 14},
 			{x = 32246, y = 31862, z = 14}
 		}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FirstSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FirstSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31872, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.SecondSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.SecondSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31875, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.ThirdSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.ThirdSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31878, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FourthSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FourthSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31881, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FifthSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FifthSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31884, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.SixthSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31887, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.LastSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.LastSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31890, z = 14}}
 	},
@@ -594,7 +594,7 @@ QuestDoorAction = {
 		}
 	},
 	-- The annihilator door
-	[Storage.Quest.TheAnnihilator.Reward] = {
+	[Storage.Quest.U7_24.TheAnnihilator.Reward] = {
 		itemId = 5113,
 		itemPos = {{x = 33216, y = 31671, z = 13}}
 	},
@@ -662,7 +662,7 @@ QuestDoorAction = {
 		}
 	},
 	-- The dream courts door (Andrew Lyze npc)
-	[Storage.Quest.TheDreamCourts.AndrewDoor] = {
+	[Storage.Quest.U12_00.TheDreamCourts.AndrewDoor] = {
 		itemId = 20450,
 		itemPos = {{x = 32761, y = 32630, z = 7}}
 	},

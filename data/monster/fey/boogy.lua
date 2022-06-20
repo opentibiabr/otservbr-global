@@ -82,7 +82,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 24390, chance = 3000, maxCount = 5}, -- ancient coin
+	{id = 24390, chance = 3000, maxCount = 3}, -- ancient coin
 	{id = 7439, chance = 1500}, -- berserk potion
 	{id = 9067, chance = 100}, -- crystal of power
 	{id = 25693, chance = 15000}, -- shimmering beetles
@@ -95,6 +95,9 @@ monster.loot = {
 	{id = 677, chance = 3000, maxCount = 3}, -- small enchanted emerald
 	{id = 236, chance = 15000}, -- strong health potion
 	{id = 814, chance = 3200}, -- terra amulet
+	{name = "fairy wings", chance = 15000},
+	{name = "wooden spellbook", chance = 3440},
+	{name = "leaf star", chance = 3440, maxCount = 7},
 	{id = 3727, chance = 4500} -- wood mushroom
 }
 

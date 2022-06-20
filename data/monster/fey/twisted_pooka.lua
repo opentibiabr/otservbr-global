@@ -94,6 +94,8 @@ monster.loot = {
 	{name = "fairy wings", chance = 30100},
 	{name = "orange mushroom", chance = 5155},
 	{name = "shimmering beetles", chance = 591},
+	{name = "prismatic quartz", chance = 2500},
+	{name = "crystal of focus", chance = 60},
 	{name = "small enchanted ruby", chance = 3400, maxCount = 2}
 }
 

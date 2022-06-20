@@ -24,7 +24,7 @@ function leverFirstSeal.onUse(player, item, fromPosition, target, toPosition, is
 	if item.itemid == 2772 then
 		Position(wall.position):removeItem(2129)
 		if wall.revert == true then
-			addEvent(Position.revertItem, 100 * 1000, wall.position, 1498)
+			addEvent(Position.revertItem, 100 * 1000, wall.position, 2129)
 		end
 		item:transform(2773)
 	elseif item.itemid == 2773 then

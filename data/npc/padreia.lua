@@ -115,9 +115,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("Don't ask. They were only an unimportant footnote of history.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "footnote") then
-		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) == 2 then
+		if player:getStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo) == 2 then
 			-- Questlog: The Feared Hugo (Lubo)
-			player:setStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo, 3)
+			player:setStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo, 3)
 		end
 		npcHandler:say("They thought they had to bring Crunor to the people, if the people had not found Crunor on their own. To achieve this, they founded the inn called Crunor's Cottage, south of Mt. Sternum.", npc, creature)
 		npcHandler:setTopic(playerId, 0)

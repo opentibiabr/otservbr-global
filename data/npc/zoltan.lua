@@ -64,9 +64,9 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("Ah, Yenny the Gentle was one of the founders of the druid order called Crunor's Caress, that has been originated in her hometown Carlin.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "crunors caress") then
-		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) == 1 then
+		if player:getStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo) == 1 then
 			-- Questlog: The Feared Hugo (Padreia)
-			player:setStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo, 2)
+			player:setStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo, 2)
 		end
 		npcHandler:say("A quite undruidic order of druids they were, as far as we know. I have no more enlightening knowledge about them though.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
