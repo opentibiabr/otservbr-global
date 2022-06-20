@@ -2347,7 +2347,6 @@ Storage = {
 					metalFile = 75977,
 					keyFragment01 = 75978,
 					keyFragment02 = 75979
-
 				},
 				corymRescued01 = 75980,
 				corymRescued02 = 75981,
