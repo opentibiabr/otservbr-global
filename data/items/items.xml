@@ -26074,10 +26074,7 @@
 	<item fromid="16483" toid="16497" article="a" name="grimy wooden plank"/>
 	<item fromid="16498" toid="16571" name="RESERVED SPRITE"/>
 	<item id="16572" article="a" name="wooden treadmill"/>
-	<item id="16573" article="a" name="wooden ramp">
-		<attribute key="floorchange" value="north"/>
-	</item>
-	<item fromid="16574" toid="16575" article="a" name="wooden ramp"/>
+	<item fromid="16573" toid="16575" article="a" name="wooden ramp"/>
 	<item fromid="16576" toid="16577" article="a" name="wooden planks"/>
 	<item id="16578" name="nails"/>
 	<item fromid="16579" toid="16580" article="a" name="wooden planks"/>
@@ -26219,11 +26216,7 @@
 	</item>
 	<item id="17231" article="a" name="wooden scaffolding"/>
 	<item fromid="17232" toid="17234" article="a" name="small wooden fence"/>
-	<item id="17235" article="a" name="wooden ramp"/>
-	<item id="17236" article="a" name="wooden ramp">
-		<attribute key="floorchange" value="north"/>
-	</item>
-	<item id="17237" article="a" name="wooden ramp"/>
+	<item fromid="17235" toid="17237" article="a" name="wooden ramp"/>
 	<item id="17238" name="muddy floor">
 		<attribute key="description" value="There is a hole in the ceiling."/>
 	</item>
