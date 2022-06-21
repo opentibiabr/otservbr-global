@@ -4576,30 +4576,6 @@ local items = {
 		level = 50
 	},
 	{
-		-- glowing rubbish amulet
-		itemid = 25297,
-		type = "equip",
-		slot = "necklace"
-	},
-	{
-		-- glowing rubbish amulet
-		itemid = 25297,
-		type = "deequip",
-		slot = "necklace"
-	},
-	{
-		-- rubbish amulet
-		itemid = 25296,
-		type = "equip",
-		slot = "necklace"
-	},
-	{
-		-- rubbish amulet
-		itemid = 25296,
-		type = "deequip",
-		slot = "necklace"
-	},
-	{
 		-- porcelain mask
 		itemid = 25088,
 		type = "equip",
