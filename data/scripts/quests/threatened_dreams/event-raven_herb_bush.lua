@@ -49,30 +49,29 @@ createRavenHerb:register()
 
 
 local ravenHerb = Action()
-
 function ravenHerb.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local ravenHerb = config[1]
-	local message = "You have found a " .. getItemName(ravenHerb.herbId) .. "."
+	local herbConfig = config[1]
+	local message = "You have found a " .. getItemName(herbConfig.herbId) .. "."
 	local backpack = player:getSlotItem(CONST_SLOT_BACKPACK)
 
 	if not backpack or backpack:getEmptySlots(true) < 1 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, message .. " But you have no room to take it.")
 		return true
 	end
-	if (player:getFreeCapacity() / 100) < ravenHerb.herbWeight then
+	if (player:getFreeCapacity() / 100) < herbConfig.herbWeight then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE,
-		message .. ". Weighing " .. ravenHerb.herbWeight .. " oz, it is too heavy for you to carry.")
+		message .. ". Weighing " .. herbConfig.herbWeight .. " oz, it is too heavy for you to carry.")
 		return true
 	end
 
-	if player:getStorageValue(ravenHerb.storage) > os.time() then
+	if player:getStorageValue(herbConfig.storage) > os.time() then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The raven herb cannot be collected right now.")
 		return true
 	end
 
-	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. getItemName(ravenHerb.herbId) .. ".")
-	player:setStorageValue(ThreatenedDreams.Mission03.RavenHerbTimer, os.time() + 60 * 30 * 1000) -- Can be collected on next cycle
-	player:addItem(ravenHerb.herbId, 1)
+	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. getItemName(herbConfig.herbId) .. ".")
+	player:setStorageValue(herbConfig.storage, os.time() + 60 * 30 * 1000) -- Can be collected on next cycle
+	player:addItem(herbConfig.herbId, 1)
 	return true
 end
 
