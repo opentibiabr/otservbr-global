@@ -24,6 +24,7 @@ local config = {
 		Position(33066, 31037, 3)
 	}
 }
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 
 local function summonBoss(name, position)
 	Game.createMonster(name, position)
@@ -46,30 +47,30 @@ end
 
 local theNewFrontierArena = Action()
 function theNewFrontierArena.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local player1 = Tile(Position({x = 33080, y = 31014, z = 2})):getTopCreature()
+	local player1 = Tile(Position(33080, 31014, 2)):getTopCreature()
 	if not(player1 and player1:isPlayer()) then
-		return true
+		return false
 	end
 
-	local player2 = Tile(Position({x = 33081, y = 31014, z = 2})):getTopCreature()
+	local player2 = Tile(Position(33081, 31014, 2)):getTopCreature()
 	if not(player2 and player2:isPlayer()) then
-		return true
+		return false
 	end
 
-	if player1:getStorageValue(Storage.TheNewFrontier.Questline) ~= 25 then
-		player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You already finished this battle.')
-		return true
+	if player1:getStorageValue(TheNewFrontier.Questline) >= 26 then
+		return player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You already finished this battle.')
 	end
 
-	if Game.getStorageValue(Storage.TheNewFrontier.Mission09) == 1 then
-		player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'The arena is already in use.')
-		return true
+	if Game.getStorageValue(TheNewFrontier.Mission09[1]) == 1 then
+		return player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'The arena is already in use.')
 	end
 
-	Game.setStorageValue(Storage.TheNewFrontier.Mission09, 1)
+	Game.setStorageValue(TheNewFrontier.Mission09[1], 1)
 	addEvent(clearArena, 30 * 60 * 1000)
+	player1:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	player1:teleportTo(config.teleportPositions[1])
 	player1:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	player2:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	player2:teleportTo(config.teleportPositions[2])
 	player2:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 
@@ -81,5 +82,5 @@ function theNewFrontierArena.onUse(player, item, fromPosition, target, toPositio
 	return true
 end
 
-theNewFrontierArena:uid(3157)
+theNewFrontierArena:aid(30003)
 theNewFrontierArena:register()

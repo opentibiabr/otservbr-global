@@ -973,30 +973,6 @@ Storage = {
 		SnakeDestroyer = 51070,
 		ShamanOufit = 51071
 	},
-	TheNewFrontier = {
-		-- Reserved storage from 51080 - 51109
-		Questline = 51080,
-		Mission01 = 51081,
-		Mission02 = 51082,
-		Mission03 = 51083,
-		Mission04 = 51084,
-		Mission05 = 51085,
-		Mission06 = 51086,
-		Mission07 = 51087,
-		Mission08 = 51088,
-		Mission09 = 51089,
-		Mission10 = 51090,
-		TomeofKnowledge = 51091,
-		Beaver1 = 51092,
-		Beaver2 = 51093,
-		Beaver3 = 51094,
-		BribeKing = 51095,
-		BribeLeeland = 51096,
-		BribeExplorerSociety = 51097,
-		BribeWydrin = 51098,
-		BribeTelas = 51099,
-		BribeHumgolf = 51100
-	},
 	TheInquisition = {
 		-- Reserved storage from 51110 - 51139
 		Questline = 51110,
@@ -2159,13 +2135,50 @@ Storage = {
 			TreasureHunt = {},
 		},
 		U8_54 = { -- update 8.54 - Reserved Storages 72551 - 72950
-			AnUneasyAlliance = {},
-			ChildrenOfTheRevolution = {},
-			SeaOfLight = {},
-			TheNewFrontier = {},
-			TomesOfKnowledge = {},
-			UnnaturalSelection = {},
-			WarmasterOutfits = {},
+				AnUneasyAlliance = {}, -- 72551 - 72600
+				ChildrenOfTheRevolution = {}, -- 72601 - 72650
+				SeaOfLight = {}, -- 72651 - 72700
+				TheNewFrontier = { -- 72701 - 72750
+					Questline = 72701,
+					FarmineFirstTravel = 72702,
+					Mission01 = 72703,
+					Mission02 = {72704,
+						Beaver1 = 72705,
+						Beaver2 = 72706,
+						Beaver3 = 72707,
+						},
+					Mission03 = 72708,
+					Mission04 = 72709,
+					Mission05 = {72710,
+						KingTibianus = 72711,
+						Leeland = 72712,
+						Angus = 72713,
+						Wyrdin = 72714,
+						Telas = 72715,
+						Humgolf = 72716,
+						},
+					Mission06 = 72717,
+					Mission07 = {72718,
+						HiddenNote = 72719,
+						},
+					Mission08 = 72720,
+					Mission09 = {72721,
+						ArenaDoor = 72722,
+						RewardDoor = 72723,
+						},
+					Mission10 = {72724,
+						MagicCarpetDoor = 72725,
+						},
+					Reward = {
+						Potions = 72726,
+						GoldIngot = 72727,
+						PigBank = 72728
+					},
+					TomeofKnowledge = 72729,
+				},
+			TomesOfKnowledge = {}, -- 72751 - 72780
+			UnnaturalSelection = {}, -- 72781 - 72830
+			WarmasterOutfits = {}, -- 72831 - 72840
 		},
 		U8_6 = { -- update 8.6 - Reserved Storages 72951 - 73200
 			AFathersBurden = {},

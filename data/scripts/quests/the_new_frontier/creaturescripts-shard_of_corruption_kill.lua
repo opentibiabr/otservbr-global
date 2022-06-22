@@ -1,4 +1,7 @@
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
+
 local shardOfCorruptionKill = CreatureEvent("ShardOfCorruptionKill")
+
 function shardOfCorruptionKill.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster then
@@ -10,10 +13,8 @@ function shardOfCorruptionKill.onKill(creature, target)
 	end
 
 	local player = creature:getPlayer()
-	if player:getStorageValue(Storage.TheNewFrontier.Questline) == 12 then
-		--Questlog, The New Frontier Quest 'Mission 04: The Mine Is Mine'
-		player:setStorageValue(Storage.TheNewFrontier.Mission04, 2)
-		player:setStorageValue(Storage.TheNewFrontier.Questline, 13)
+	if player:getStorageValue(TheNewFrontier.Questline) == 11 then
+		player:setStorageValue(TheNewFrontier.Questline, 12)
 	end
 	return true
 end

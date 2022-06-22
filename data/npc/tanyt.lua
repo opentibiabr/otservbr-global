@@ -57,9 +57,10 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 -- Travel
-local function addTravelKeyword(keyword, cost, destination, action, condition)
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
+local function addTravelKeyword(keyword, text, cost, destination, condition, action)
 	if condition then
-		keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m sorry but I don\'t sail there.'}, condition)
+		keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'Never heard about a place like this.'}, condition)
 	end
 
 	local travelKeyword = keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'Do you seek a passage to ' .. keyword:titleCase() .. ' for |TRAVELCOST|?', cost = cost, discount = 'postman'})
@@ -67,13 +68,14 @@ local function addTravelKeyword(keyword, cost, destination, action, condition)
 		travelKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'We would like to serve you some time.', reset = true})
 end
 
+addTravelKeyword('farmine', 'Do you seek a ride to Farmine for |TRAVELCOST|?', 60, Position(32983, 31539, 1), function(player) return player:getStorageValue(TheNewFrontier.Mission10[1]) ~= 2 end)
+addTravelKeyword('zao', 'Do you seek a ride to Farmine for |TRAVELCOST|?', 60, Position(32983, 31539, 1), function(player) return player:getStorageValue(TheNewFrontier.Mission10[1]) ~= 2 end)
 addTravelKeyword('darashia', 40, Position(33270, 32441, 6))
 addTravelKeyword('darama', 40, Position(33270, 32441, 6))
 addTravelKeyword('svargrond', 60, Position(32253, 31097, 4))
 addTravelKeyword('kazordoon', 70, Position(32588, 31941, 0))
 addTravelKeyword('kazor', 70, Position(32588, 31941, 0))
 addTravelKeyword('zao', 60, Position(32983, 31539, 1))
-addTravelKeyword('farmine', 60, Position(32983, 31539, 1))
 addTravelKeyword('femor hills', 60, Position(32536, 31837, 4))
 addTravelKeyword('hills', 60, Position(32536, 31837, 4))
 addTravelKeyword('edron', 60, Position(33193, 31784, 3))
