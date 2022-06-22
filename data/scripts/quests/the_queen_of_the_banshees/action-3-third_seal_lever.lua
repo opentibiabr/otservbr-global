@@ -15,11 +15,11 @@ function thirdSealLever.onUse(player, item, fromPosition, target, toPosition, is
 		return true
 	end
 
-	if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.ThirdSeal) == 1 then
+	if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.ThirdSeal) == 1 then
 		return false
 	end
 
-	if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.ThirdSeal) < 1 then
+	if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.ThirdSeal) < 1 then
 		if item.uid == table then
 			item:transform(2772)
 			Game.setStorageValue("switchNum", Game.getStorageValue("switchNum") + 1)

@@ -60,7 +60,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Mad mage room quest
 	if MsgContains(message, "riddle") then
-		if player:getStorageValue(Storage.Quest.MadMageRoom.APrisoner) ~= 1 then
+		if player:getStorageValue(Storage.Quest.U7_24.MadMageRoom.APrisoner) ~= 1 then
 			npcHandler:say("Great riddle, isn't it? If you can tell me the correct answer, \z
 				I will give you something. Hehehe!", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -86,7 +86,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Really, really, really, really?", npc, creature)
 			npcHandler:setTopic(playerId, 5)
 		elseif npcHandler:getTopic(playerId) == 5 then
-			player:setStorageValue(Storage.Quest.MadMageRoom.APrisoner, 1)
+			player:setStorageValue(Storage.Quest.U7_24.MadMageRoom.APrisoner, 1)
 			npcHandler:say("Then take it and get happy - or die, hehe.", npc, creature)
 			local key = player:addItem(2969, 1)
 			if key then
@@ -99,7 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 	-- The paradox tower quest
 	if MsgContains(message, "math") then
-		if  player:getStorageValue(Storage.Quest.TheParadoxTower.Mathemagics) < 1 then
+		if  player:getStorageValue(Storage.Quest.U7_24.TheParadoxTower.Mathemagics) < 1 then
 			npcHandler:say("My surreal numbers are based on astonishing facts. \z
 				Are you interested in learning the secret of mathemagics?", npc, creature)
 			npcHandler:setTopic(playerId, 6)
@@ -114,8 +114,8 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("Very interesting. So are you ready to proceed in your lesson in mathemagics?", npc, creature)
 		npcHandler:setTopic(playerId, 8)
 	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 8 then
-		if player:getStorageValue(Storage.Quest.TheParadoxTower.Mathemagics) < 1 then
-			player:setStorageValue(Storage.Quest.TheParadoxTower.Mathemagics, 1)
+		if player:getStorageValue(Storage.Quest.U7_24.TheParadoxTower.Mathemagics) < 1 then
+			player:setStorageValue(Storage.Quest.U7_24.TheParadoxTower.Mathemagics, 1)
 			player:addAchievement("Mathemagician")
 			npcHandler:say("So know that everything is based on the simple fact that 1 + 1 = 1!", npc, creature)
 			npcHandler:setTopic(playerId, 0)

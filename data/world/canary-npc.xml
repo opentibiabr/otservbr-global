@@ -1560,6 +1560,9 @@
 	<npc centerx="32271" centery="32052" centerz="7" radius="1">
 		<npc name="Valentina" x="0" y="0" z="7" spawntime="60" />
 	</npc>
+	<npc centerx="33332" centery="32052" centerz="7" radius="5">
+		<npc name="Ghostly Wolf" x="0" y="0" z="7" spawntime="60" />
+	</npc>
 	<npc centerx="32253" centery="32055" centerz="7" radius="1">
 		<npc name="Tokel" x="0" y="0" z="7" spawntime="60" />
 	</npc>
@@ -1694,6 +1697,7 @@
 	</npc>
 	<npc centerx="33504" centery="32222" centerz="7" radius="1">
 		<npc name="Valindara" x="0" y="0" z="7" spawntime="60" />
+		<npc name="Talila" x="1" y="1" z="7" spawntime="60" />
 	</npc>
 	<npc centerx="32066" centery="32225" centerz="7" radius="1">
 		<npc name="Lily" x="0" y="0" z="7" spawntime="60" />
@@ -2778,12 +2782,6 @@
 	<npc centerx="32306" centery="32546" centerz="14" radius="1">
 		<npc name="A Lost Thrower" x="0" y="0" z="14" spawntime="60" />
 	</npc>
-	<npc centerx="33332" centery="32052" centerz="7" radius="5">
-		<npc name="Ghostly Wolf" x="0" y="0" z="14" spawntime="60" />
-	</npc>
-	<npc centerx="33504" centery="32222" centerz="7" radius="5">
-		<npc name="Talila" x="0" y="0" z="14" spawntime="60" />
-	</npc>
 	<npc centerx="32245" centery="32600" centerz="14" radius="1">
 		<npc name="Gnomargery" x="0" y="0" z="14" spawntime="60" />
 	</npc>
@@ -2861,6 +2859,30 @@
 	</npc>
 	<npc centerx="32174" centery="32598" centerz="15" radius="1">
 		<npc name="A Wyrm" x="0" y="0" z="15" spawntime="60" />
+	</npc>
+	<npc centerx="33058" centery="32007" centerz="12" radius="1">
+		<npc name="Corym Worker (3)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33006" centery="32009" centerz="12" radius="1">
+		<npc name="Corym Worker (2)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33064" centery="32010" centerz="12" radius="1">
+		<npc name="Corym Butler" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33052" centery="32015" centerz="12" radius="1">
+		<npc name="Corym Worker (4)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="32999" centery="32024" centerz="12" radius="1">
+		<npc name="Corym Slave" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33012" centery="32026" centerz="12" radius="1">
+		<npc name="Corym Worker (1)" x="0" y="-1" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33008" centery="32051" centerz="12" radius="1">
+		<npc name="Corym Worker (5)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="32999" centery="32053" centerz="12" radius="1">
+		<npc name="Corym Footman" x="0" y="0" z="12" spawntime="60" />
 	</npc>
 	<npc centerx="33456" centery="32296" centerz="7" radius="1">
 		<npc name="Dancing Fairy" x="0" y="0" z="7" spawntime="60" />
