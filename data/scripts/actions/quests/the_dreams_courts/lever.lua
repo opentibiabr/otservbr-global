@@ -16,7 +16,7 @@ local config = {
 		to = Position(33627, 32570, 13)
 	},
 	exit = Position(33618, 32523, 15),
-	storage = Storage.ThreatenedDreams.FacelessBaneTime
+	storage = Storage.Quest.U12_00.TheDreamCourts.FacelessBaneTime
 }
 
 local threatenedLever = Action()

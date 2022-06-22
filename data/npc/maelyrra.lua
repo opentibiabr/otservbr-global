@@ -141,7 +141,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 4 then
 			if player:getStorageValue(ThreatenedDreams.Mission02.FairiesCounter) == 5
-			and player:getStorageValue(ThreatenedDreams.Mission02.DarkMoomMirror) == 1 then
+			and player:getStorageValue(ThreatenedDreams.Mission02.DarkMoonMirror) == 1 then
 				npcHandler:say({
 					"Thank you, mortal being! Please keep the mirror. I think you may need it soon, because there is another problem. Would you help us again?"
 				}, npc, creature)
@@ -193,7 +193,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		elseif npcHandler:getTopic(playerId) == 8 then
 			if player:getStorageValue(ThreatenedDreams.Mission02.ChargedMoomMirror) == 0
 			and player:getStorageValue(ThreatenedDreams.Mission02.ChargedStarlightVial) == 0
-			and player:getStorageValue(ThreatenedDreams.Mission02.ChargedSunCacther) == 0 then
+			and player:getStorageValue(ThreatenedDreams.Mission02.ChargedSunCatcher) == 0 then
 				npcHandler:say({
 					"Thank you, mortal being! The fae will be forever grateful. Take this blossom bag as a little thank-you gift. Such blossoms grow on our trees just once in a decade, so they are quite rare."
 				}, npc, creature)

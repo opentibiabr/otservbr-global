@@ -917,7 +917,7 @@ ChestUnique = {
 		itemPos = {x = 33594, y = 32214, z = 9},
 		reward = {{25729, 1}},
 		weight = 2.00,
-		storage = Storage.Quest.U11_40.ThreatenedDreams.Mission02.DarkMoomMirror
+		storage = Storage.Quest.U11_40.ThreatenedDreams.Mission02.DarkMoonMirror
 	},
 	-- Reward of others scrips files (varied rewards)
 	-- The First dragon Quest

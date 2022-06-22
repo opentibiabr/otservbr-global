@@ -21,13 +21,13 @@ local config = {
             "As soon as you're placing the sun catcher on the stone the pattern the mosaic is infused with sunlight. The barrier strengthens.",
             "As soon as you're placing the sun catcher on the stone the pattern the mosaic is infused with sunlight. This was the last mosaic."
         },
-        storageCounter = ThreatenedDreams.Mission02.ChargedSunCacther,
+        storageCounter = ThreatenedDreams.Mission02.ChargedSunCatcher,
         storagePos = {
-            ThreatenedDreams.Mission02.SunCactherPos01,
-            ThreatenedDreams.Mission02.SunCactherPos02,
-            ThreatenedDreams.Mission02.SunCactherPos03,
-            ThreatenedDreams.Mission02.SunCactherPos04,
-            ThreatenedDreams.Mission02.SunCactherPos05,
+            ThreatenedDreams.Mission02.SunCatcherPos01,
+            ThreatenedDreams.Mission02.SunCatcherPos02,
+            ThreatenedDreams.Mission02.SunCatcherPos03,
+            ThreatenedDreams.Mission02.SunCatcherPos04,
+            ThreatenedDreams.Mission02.SunCatcherPos05,
         }
     }
 }
@@ -56,7 +56,7 @@ function sunCatcher.onUse(player, item, fromPosition, target, toPosition, isHotk
 
         if player:getStorageValue(ThreatenedDreams.Mission02[1]) == 6 then
             item:transform(25734)
-            player:setStorageValue(ThreatenedDreams.Mission02.ChargedSunCacther, 5)
+            player:setStorageValue(ThreatenedDreams.Mission02.ChargedSunCatcher, 5)
         elseif player:getStorageValue(ThreatenedDreams.Mission02[1]) == 8 then
             item:transform(25977)
         end
