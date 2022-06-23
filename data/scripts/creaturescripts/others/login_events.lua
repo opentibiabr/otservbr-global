@@ -89,6 +89,8 @@ function loginEvents.onLogin(player)
 		"TireczKill",
 		--Thieves Guild
 		"NomadKill",
+		--Threatened Dreams - Nightmare Intruders
+		"ThreatenedDreamsNightmareMonstersKills",
 		--Wrath of the Emperor
 		"LizardMagistratusKill",
 		"LizardNobleKill",

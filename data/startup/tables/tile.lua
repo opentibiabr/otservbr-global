@@ -227,9 +227,8 @@ TileAction = {
 			{x = 32216, y = 31838, z = 15}
 		}
 	},
-	-- Others actions
 	-- Threatened Dreams Quest
-	[50301] = {
+	[25024] = {
 		itemId = false,
 		itemPos = {
 			{x = 33200, y = 31892, z = 7},
@@ -238,7 +237,7 @@ TileAction = {
 			{x = 33201, y = 31894, z = 7}
 		}
 	},
-	[50302] = {
+	[25025] = {
 		itemId = false,
 		itemPos = {
 			{x = 33258, y = 32402, z = 7},
@@ -247,7 +246,7 @@ TileAction = {
 			{x = 33259, y = 32402, z = 7}
 		}
 	},
-	[50303] = {
+	[25026] = {
 		itemId = false,
 		itemPos = {
 			{x = 33262, y = 32378, z = 7},
@@ -259,7 +258,7 @@ TileAction = {
 			{x = 33264, y = 32379, z = 7}
 		}
 	},
-	[50304] = {
+	[25027] = {
 		itemId = false,
 		itemPos = {
 			{x = 33257, y = 32315, z = 7},
@@ -268,7 +267,7 @@ TileAction = {
 			{x = 33259, y = 32315, z = 7}
 		}
 	},
-	[50305] = {
+	[25028] = {
 		itemId = false,
 		itemPos = {
 			{x = 33249, y = 32267, z = 6},
@@ -276,6 +275,14 @@ TileAction = {
 			{x = 33250, y = 32268, z = 6}
 		}
 	},
+	[25029] = {
+		itemId = 10840,
+		itemPos = {
+			{x = 33619, y = 32304, z = 9},
+			{x = 33591, y = 32321, z = 10}
+		}
+	},
+	-- Others actions
 	-- Kilmaresh
 	-- First mission
 	[50307] = {
