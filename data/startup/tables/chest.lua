@@ -904,6 +904,21 @@ ChestUnique = {
 		weight = 7.50,
 		storage = Storage.Quest.U8_54.TheNewFrontier.Reward.PigBank
 	},
+	-- Threatened Dreams Quest
+	[6100] = {
+		itemId = 12764, -- Poacher Book
+		itemPos = {x = 32787, y = 31975, z = 11},
+		reward = {{25235, 1}},
+		weight = 13.00,
+		storage = Storage.Quest.U11_40.ThreatenedDreams.Mission01.PoacherChest
+	},
+	[6101] = { -- Dark Moon Mirror
+		itemId = 25762,
+		itemPos = {x = 33594, y = 32214, z = 9},
+		reward = {{25729, 1}},
+		weight = 2.00,
+		storage = Storage.Quest.U11_40.ThreatenedDreams.Mission02.DarkMoonMirror
+	},
 	-- Reward of others scrips files (varied rewards)
 	-- The First dragon Quest
 	-- Treasure chests (data\scripts\actions\quests\first_dragon\treasure_chests.lua)

@@ -97,6 +97,7 @@ TerebanConfig = {
 		itemId = 10594 -- Flexibe dragon scale
 	}
 }
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 
 function ClearTerebanMessages(npc, creature)
 	local player = Player(creature)
@@ -109,7 +110,7 @@ function ParseTerebanSay(npc, creature, message, npcHandler)
 	local playerId = player:getId()
 	if npcHandler:getTopic(playerId) == 0 then
 		if MsgContains(message, "cloak") then
-			if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 14) then
+			if player:getStorageValue(ThreatenedDreams.Mission01[1]) == 12 then
 				npcHandler:say(
 					{
 						"I met this troll when he was hanging around near the town. He carried something I would consider rather uncharacteristic for a troll: a stunningly beautiful cloak entirely made of white feathers. I was curious and asked him if he would sell it. ...",
@@ -120,8 +121,8 @@ function ParseTerebanSay(npc, creature, message, npcHandler)
 						"But the actual storm began when we were in the air above the Darama. The feathers are now scattered all over the desert I guess. Rather futile to look out for them but if you really want to try: ...",
 						"The magic carpet made a beeline from Edron to Darashia. You should search along this line on the ground. Good luck!"
 				}, npc, creature)
-				player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 15)
-				player:setStorageValue(Storage.ThreatenedDreams.TatteredSwanFeathers, 0) -- Start Mission 'Tattered Swan Feathers'
+				player:setStorageValue(ThreatenedDreams.Mission01[1], 13)
+				player:setStorageValue(ThreatenedDreams.Mission01.FeathersCount, 0) -- Start Mission 'Tattered Swan Feathers'
 			else
 				npcHandler:say("You are not on that mission.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
