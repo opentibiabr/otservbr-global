@@ -21,7 +21,7 @@ local config = {
             "As soon as you're touching the moon sculpture with the mirror the sculpture is infused with moonlight. The barrier strengthens.",
             "As soon as you're touching the moon sculpture with the mirror the sculpture is infused with moonlight. This was the last sculpture."
         },
-        storageCounter = ThreatenedDreams.Mission02.ChargedMoomMirror,
+        storageCounter = ThreatenedDreams.Mission02.ChargedMoonMirror,
         storagePos = {
             ThreatenedDreams.Mission02.MoonMirrorPos01,
             ThreatenedDreams.Mission02.MoonMirrorPos02,
@@ -56,7 +56,7 @@ function moonMirror.onUse(player, item, fromPosition, target, toPosition, isHotk
 
         if player:getStorageValue(ThreatenedDreams.Mission02[1]) == 6 then
             item:transform(25730)
-            player:setStorageValue(ThreatenedDreams.Mission02.ChargedMoomMirror, 5)
+            player:setStorageValue(ThreatenedDreams.Mission02.ChargedMoonMirror, 5)
         elseif player:getStorageValue(ThreatenedDreams.Mission02[1]) == 8 then
             item:transform(25975)
         end

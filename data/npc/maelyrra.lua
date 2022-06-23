@@ -191,7 +191,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 		elseif npcHandler:getTopic(playerId) == 8 then
-			if player:getStorageValue(ThreatenedDreams.Mission02.ChargedMoomMirror) == 0
+			if player:getStorageValue(ThreatenedDreams.Mission02.ChargedMoonMirror) == 0
 			and player:getStorageValue(ThreatenedDreams.Mission02.ChargedStarlightVial) == 0
 			and player:getStorageValue(ThreatenedDreams.Mission02.ChargedSunCatcher) == 0 then
 				npcHandler:say({
