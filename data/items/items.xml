@@ -11664,7 +11664,7 @@
 	</item>
 	<item id="5972" article="a" name="slain skeleton">
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4285"/>
+		<attribute key="decayTo" value="4024"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5973" article="a" name="dead dragon">
@@ -11687,7 +11687,7 @@
 	</item>
 	<item id="5976" article="a" name="slain ghoul">
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4295"/>
+		<attribute key="decayTo" value="4034"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5977" article="a" name="dead giant spider">
