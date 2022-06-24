@@ -23,7 +23,7 @@ jobs:
         with:
           tag-prefix: 'v'
           major-wording: '#MAJOR,#major'
-          minor-wording: '#ADD,#minor'
+          minor-wording: '#MINOR,#minor'
           patch-wording: '#FIXES,#fixes'
           rc-wording:    '#RELEASE,alpha'
         env:
