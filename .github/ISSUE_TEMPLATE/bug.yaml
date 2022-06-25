@@ -48,9 +48,9 @@ body:
       label: What OS are you seeing the problem on?
       multiple: true
       options:
-        - Ubuntu 18.04
+        - Debian 11
         - Ubuntu 20.04
-        - Windows 7
+        - Ubuntu 22.04
         - Windows 10
         - MacOS
     validations:

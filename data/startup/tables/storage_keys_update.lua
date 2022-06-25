@@ -1,5 +1,5 @@
 QuestKeysUpdate = {
-	[0] = {latest = 2}, -- Increase +1 every time this below table suffer a modification
+	[0] = {latest = 3}, -- Increase +1 every time this below table suffer a modification
 	-- Add a new table to the bottow of this array with the following number versioning.
 	[1] = {
 		-- Deeper Fibula
@@ -112,6 +112,28 @@ QuestKeysUpdate = {
 		{old = 3159, new = 72727}, -- Reward 2
 		{old = 3160, new = 72728}, -- Reward 3
 		{old = 51091, new = 72729}, -- TomeofKnowledge = 51091,
+	},
+	[3] = {
+		-- TheNewFrontier
+		{old = 50270, new = 75751}, -- Start = 50270,
+		{old = 50271, new = 75752}, -- TroubledMission01 = 50271,
+		{old = 50306, new = 75753}, -- PoacherChest = 50306
+		{old = 50300, new = 75755}, -- TatteredSwanFeathers = 50300,
+		{old = 50301, new = 75756}, -- TatteredSwanFeathers01 = 50301,
+		{old = 50302, new = 75757}, -- TatteredSwanFeathers02 = 50302,
+		{old = 50303, new = 75758}, -- TatteredSwanFeathers03 = 50303,
+		{old = 50304, new = 75759}, -- TatteredSwanFeathers04 = 50304,
+		{old = 50305, new = 75760}, -- TatteredSwanFeathers05 = 50305,
+		{old = 50272, new = 75761}, -- TroubledMission02 = 50272,
+		{old = 50280, new = 75765}, -- KroazurTimer = 50280,
+		{old = 50274, new = 75769}, -- FairyMission01 = 50274,
+		{old = 50275, new = 75770}, -- FairyMission02 = 50275,
+		{old = 50276, new = 75771}, -- FairyMission03 = 50276,
+		{old = 50277, new = 75772}, -- FairyMission04 = 50277,
+		{old = 50273, new = 75792}, -- TroubledMission03 = 50273,
+		{old = 50284, new = 75767}, -- Reward01 = 50284,
+		{old = 50285, new = 75796}, -- Reward02 = 50285,
+		{old = 50286, new = 75797}, -- Reward03 = 50286,
 	},
 --[[
 	[2] = { -- New table version, allows the updated servers apply the changes to the only new revised quest.
