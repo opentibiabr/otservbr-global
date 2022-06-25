@@ -1,7 +1,7 @@
 local mType = Game.createMonsterType("Squidgy Slime")
 local monster = {}
 
-monster.description = "a slime"
+monster.description = "a slime*"
 monster.experience = 55
 monster.outfit = {
 	lookType = 19,

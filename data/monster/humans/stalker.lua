@@ -5,10 +5,10 @@ monster.description = "a stalker"
 monster.experience = 90
 monster.outfit = {
 	lookType = 128,
-	lookHead = 78,
+	lookHead = 97,
 	lookBody = 116,
 	lookLegs = 95,
-	lookFeet = 114,
+	lookFeet = 95,
 	lookAddons = 0,
 	lookMount = 0
 }

@@ -5,10 +5,10 @@ monster.description = "a cult scholar"
 monster.experience = 1100
 monster.outfit = {
 	lookType = 145,
-	lookHead = 0,
+	lookHead = 19,
 	lookBody = 77,
-	lookLegs = 21,
-	lookFeet = 21,
+	lookLegs = 3,
+	lookFeet = 20,
 	lookAddons = 1,
 	lookMount = 0
 }
