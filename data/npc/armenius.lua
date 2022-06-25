@@ -60,8 +60,8 @@ npcConfig.shop = {
 	{ itemName = "ham", clientId = 3582, buy = 8 },
 	{ itemName = "meat", clientId = 3577, buy = 5 },
 	{ itemName = "mug of beer", clientId = 2880, buy = 3, count = 3 },
-	{ itemName = "mug of rum", clientId = 2880, buy = 10, count = 27 },
-	{ itemName = "mug of wine", clientId = 2880, buy = 4, count = 15 },
+	{ itemName = "mug of rum", clientId = 2880, buy = 10, count = 13 },
+	{ itemName = "mug of wine", clientId = 2880, buy = 4, count = 2 },
 	{ itemName = "tomato", clientId = 3596, buy = 3 }
 }
 -- On buy npc shop message

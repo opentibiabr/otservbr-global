@@ -55,7 +55,7 @@ npcHandler:addModule(FocusModule:new())
 npcConfig.shop = {
 	{ itemName = "bread", clientId = 3600, buy = 4 },
 	{ itemName = "cheese", clientId = 3607, buy = 6 },
-	{ itemName = "flask of rum", clientId = 5552, buy = 150, count = 27 },
+	{ itemName = "flask of rum", clientId = 5552, buy = 150, count = 13 },
 	{ itemName = "ham", clientId = 3582, buy = 8 },
 	{ itemName = "meat", clientId = 3577, buy = 5 }
 }
