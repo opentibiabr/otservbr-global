@@ -11641,7 +11641,7 @@
 	<item id="5968" article="a" name="dead wolf">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4268"/>
+		<attribute key="decayTo" value="4007"/>
 		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="5969" article="a" name="dead minotaur">
