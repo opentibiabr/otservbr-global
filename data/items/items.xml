@@ -32202,6 +32202,7 @@
 	</item>
 	<item id="21412" article="a" name="dead explorer"/>
 	<item id="21413" article="an" name="old parchment">
+		<attribute key="writeable" value="1"/>
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="21414" article="a" name="shallow water"/>
