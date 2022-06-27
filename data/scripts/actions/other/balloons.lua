@@ -25,7 +25,7 @@ local balloonItems = {
 	[37516] = 37438, [37438] = 37516, -- green 25 years balloon
 	[37517] = 37439, [37439] = 37517, -- orange 25 years balloon
 	[37518] = 37440, [37440] = 37518, -- pink 25 years balloon
-	[39699] = 39681, [39681] = 39699, -- purple 25 years balloon
+	[39669] = 39681, [39681] = 39669, -- purple 25 years balloon
 	[39670] = 39682, [39682] = 39670, -- blue 25 years balloon
 	[39671] = 39683, [39683] = 39671, -- balloon no.0
 	[39672] = 39684, [39684] = 39672, -- balloon no.1

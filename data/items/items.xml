@@ -53635,7 +53635,7 @@
 	<item id="38680" article="a" name="beaver of wisdom">
 		<attribute key="description" value="This wise beaver will happily solve all your math problems! Awarded by TibiaPal.com" />
 		<attribute key="weight" value="600"/>
-		<attribute key="duration" value="2"/>
+		<attribute key="duration" value="3"/>
 		<attribute key="decayto" value="38704"/>
 	</item>
 	<item id="38704" article="a" name="beaver of wisdom">
@@ -53645,7 +53645,7 @@
 	<item id="38705" article="a" name="beaver of wisdom">
 		<attribute key="description" value="This wise beaver will happily solve all your math problems! Awarded by TibiaPal.com" />
 		<attribute key="weight" value="600"/>
-		<attribute key="duration" value="2"/>
+		<attribute key="duration" value="4"/>
 		<attribute key="decayto" value="38677"/>
 	</item>
 	<item id="38706" article="a" name="observer tapestry">
@@ -53768,7 +53768,7 @@
 	<item id="39510" article="a" name="knightly guard">
 		<attribute key="description" value="This guard is about to return to his post"/>
 		<attribute key="decayTo" value="39508"/>
-		<attribute key="duration" value="5"/>
+		<attribute key="duration" value="8"/>
 		<attribute key="wrapableto" value="23398"/>
 	</item>
 	<item id="39517" article="a" name="knightly bench">
@@ -53955,7 +53955,7 @@
 		<attribute key="weight" value="2500"/>
 		<attribute key="description" value="It emanates a divine aura."/>
 	</item>
-	<item id="39708" article="a" name="big reward box">
+	<item id="39710" article="a" name="big reward box">
 		<attribute key="weight" value="15610"/>
 		<attribute key="description" value="It could be exchanged for Theons after the festivities of Tibia's 25th anniversary"/>
 	</item>
