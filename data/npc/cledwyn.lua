@@ -100,11 +100,11 @@ end
 local charge = {}
 
 local chargeItem = {
-	['pendulet'] = {noChargeID = 29429, ChargeID = 30345},
-	['sleep shawl'] = {noChargeID = 29428, ChargeID = 30343},
-	['blister ring'] = {noChargeID = 31557, ChargeID = 31621},
+	['pendulet'] = {noChargeID = 29429, ChargeID = 30344},
+	['sleep shawl'] = {noChargeID = 29428, ChargeID = 30342},
+	['blister ring'] = {noChargeID = 31621, ChargeID = 31557},
 	['theurgic amulet'] = {noChargeID = 30401, ChargeID = 30403},
-	['ring of souls'] = {noChargeID = 32621, ChargeID = 32636}
+	['ring of souls'] = {noChargeID = 32636, ChargeID = 32621}
 }
 
 local function creatureSayCallback(npc, creature, type, message)
@@ -132,10 +132,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say({"Here's the deal, " .. player:getName() .. ". For 100 of your silver tokens, I can offer you some first-class torso armor. These armors provide a solid boost to your main attack skill, as well as ...",
 		"some elemental protection of your choice! I also sell a magic shield potion for one silver token. So these are my offers."}, npc, creature)
 	elseif MsgContains(message, 'enchant') then
-		npcHandler:say("The following items can be enchanted: {pendulet}, {sleep shawl}, {blister ring}, {theurgic amulet}. Make you choice!", npc, creature)
+		npcHandler:say("The following items can be enchanted: {pendulet}, {sleep shawl}, {blister ring}, {theurgic amulet}, {ring of souls}. Make you choice!", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif isInArray({'pendulet', 'sleep shawl', 'blister ring', 'theurgic amulet'}, message:lower()) and npcHandler:getTopic(playerId) == 1 then
-		npcHandler:say("Should I enchant the item pendulet for 2 ".. ItemType(npc:getCurrency()):getPluralName():lower() .."?", npc, creature)
+	elseif isInArray({'pendulet', 'sleep shawl', 'blister ring', 'theurgic amulet', 'ring of souls'}, message:lower()) and npcHandler:getTopic(playerId) == 1 then
+		npcHandler:say("Should I enchant the item " .. message .. " for 2 ".. ItemType(npc:getCurrency()):getPluralName():lower() .."?", npc, creature)
 		charge = message:lower()
 		npcHandler:setTopic(playerId, 2)
 	elseif npcHandler:getTopic(playerId) == 2 then

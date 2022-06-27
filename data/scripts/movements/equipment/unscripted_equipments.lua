@@ -2012,7 +2012,7 @@ local items = {
 		slot = "feet"
 	},
 	{
-		-- pendulet
+		-- enchanted pendulet
 		itemid = 30345,
 		type = "equip",
 		slot = "necklace",
@@ -2023,7 +2023,7 @@ local items = {
 		}
 	},
 	{
-		-- pendulet
+		-- enchanted pendulet
 		itemid = 30345,
 		type = "deequip",
 		slot = "necklace",
@@ -2048,7 +2048,7 @@ local items = {
 		level = 180
 	},
 	{
-		-- sleep shawl
+		-- enchanted sleep shawl
 		itemid = 30343,
 		type = "equip",
 		slot = "necklace",
@@ -2059,7 +2059,7 @@ local items = {
 		}
 	},
 	{
-		-- sleep shawl
+		-- enchanted sleep shawl
 		itemid = 30343,
 		type = "deequip",
 		slot = "necklace",
@@ -2131,6 +2131,42 @@ local items = {
 		itemid = 29430,
 		type = "deequip",
 		slot = "shield",
+		level = 180
+	},
+	{
+		-- pendulet
+		itemid = 29429,
+		type = "equip",
+		slot = "necklace",
+		level = 180,
+		vocation = {
+			{"Paladin", true},
+			{"Royal Paladin"}
+		}
+	},
+	{
+		-- pendulet
+		itemid = 29429,
+		type = "deequip",
+		slot = "necklace",
+		level = 180
+	},
+	{
+		-- sleep shawl
+		itemid = 29428,
+		type = "equip",
+		slot = "necklace",
+		level = 180,
+		vocation = {
+			{"Paladin", true},
+			{"Royal Paladin"}
+		}
+	},
+	{
+		-- sleep shawl
+		itemid = 29428,
+		type = "deequip",
+		slot = "necklace",
 		level = 180
 	},
 	{
