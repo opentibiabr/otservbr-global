@@ -88,8 +88,8 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("This sarcophagus seals the entrance to the caves down there. Only here you can get all the {materials} you need for a working compass of this kind. So no entrance here - no further magic compasses in Tibia. In theory.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "materials") then
-		if player:getStorageValue(Storage.Quest.TheDreamCourts.AndrewDoor) ~= 1 then
-			player:setStorageValue(Storage.Quest.TheDreamCourts.AndrewDoor, 1)
+		if player:getStorageValue(Storage.Quest.U12_00.TheDreamCourts.AndrewDoor) ~= 1 then
+			player:setStorageValue(Storage.Quest.U12_00.TheDreamCourts.AndrewDoor, 1)
 		end
 		npcHandler:say({
 		 "Only in the cave down there you will find the materials you need to repair the compass. Now you know why the entrance is sealed. There's the seal, but I have a deal for you: ...",

@@ -1,19 +1,19 @@
 local setting = {
 	[50308] = {
 		position = {x = 32477, y = 31900, z = 1},
-		storage = Storage.Quest.TheParadoxTower.Reward.Egg
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Egg
 	},
 	[50309] = {
 		position = {x = 32478, y = 31900, z = 1},
-		storage = Storage.Quest.TheParadoxTower.Reward.Gold
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Gold
 	},
 	[50310] = {
 		position = {x = 32479, y = 31900, z = 1},
-		storage = Storage.Quest.TheParadoxTower.Reward.Talon
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Talon
 	},
 	[50311] = {
 		position = {x = 32480, y = 31900, z = 1},
-		storage = Storage.Quest.TheParadoxTower.Reward.Wand
+		storage = Storage.Quest.U7_24.TheParadoxTower.Reward.Wand
 	}
 }
 
