@@ -5,11 +5,11 @@ monster.description = "King Zelos"
 monster.experience = 251300
 monster.outfit = {
 	lookType = 1224,
-	lookHead = 10,
-	lookBody = 19,
-	lookLegs = 19,
-	lookFeet = 19,
-	lookAddons = 1,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
+	lookAddons = 0,
 	lookMount = 0
 }
 

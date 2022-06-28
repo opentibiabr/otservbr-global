@@ -5,10 +5,10 @@ monster.description = "Earl Osam"
 monster.experience = 44200
 monster.outfit = {
 	lookType = 1223,
-	lookHead = 95,
-	lookBody = 38,
-	lookLegs = 60,
-	lookFeet = 76,
+	lookHead = 113,
+	lookBody = 0,
+	lookLegs = 79,
+	lookFeet = 95,
 	lookAddons = 0,
 	lookMount = 0
 }

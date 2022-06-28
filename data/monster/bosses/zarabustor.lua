@@ -8,7 +8,7 @@ monster.outfit = {
 	lookHead = 0,
 	lookBody = 77,
 	lookLegs = 92,
-	lookFeet = 115,
+	lookFeet = 97,
 	lookAddons = 1,
 	lookMount = 0
 }
