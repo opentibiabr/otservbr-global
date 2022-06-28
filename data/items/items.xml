@@ -11805,7 +11805,7 @@
 	</item>
 	<item id="5993" name="remains of a ghost">
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4290"/>
+		<attribute key="decayTo" value="4094"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5994" article="a" name="dead sheep">
