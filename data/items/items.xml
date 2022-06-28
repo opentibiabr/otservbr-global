@@ -7934,7 +7934,7 @@
 	<item id="3987" article="a" name="dead troll">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
-		<attribute key="decayTo" value="4252"/>
+		<attribute key="decayTo" value="3991"/>
 		<attribute key="containersize" value="10"/>
 		<attribute key="weight" value="60000"/>
 	</item>
@@ -7958,6 +7958,8 @@
 		<attribute key="weight" value="60000"/>
 	</item>
 	<item id="3991" article="a" name="dead troll">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="3992"/>
 		<attribute key="containersize" value="10"/>
 		<attribute key="weight" value="50000"/>
 	</item>
@@ -11611,7 +11613,7 @@
 	<item id="5960" article="a" name="dead troll">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4249"/>
+		<attribute key="decayTo" value="3987"/>
 		<attribute key="containersize" value="7"/>
 	</item>
 	<item id="5961" article="a" name="dead spider">
