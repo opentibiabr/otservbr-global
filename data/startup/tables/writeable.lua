@@ -854,5 +854,10 @@ Not mine!
 		itemId = 2012,
 		itemPos = {x = 33044, y = 32067, z = 12},
 		text = "DO NOT ENTER!"
+	},
+	[16] = {
+		itemId = 12783,
+		itemPos = {x = 32205, y = 32883, z = 7},
+		text = "DANGER. Quara sighted below. Experienced adventurers only! Do not swim into a water channel unless you are prepared to meet your death!"
 	}
 }
