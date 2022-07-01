@@ -4335,7 +4335,7 @@ if not Quests then
 				[13] = {
 					name = "Hidden Threats",
 					storageId = Storage.Quest.U11_50.HiddenThreats.QuestLine,
-					missionId = 10409,
+					missionId = 10329,
 					startValue = 1,
 					endValue = 5,
 					states = {
