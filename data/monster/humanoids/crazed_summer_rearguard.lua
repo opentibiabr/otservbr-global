@@ -81,14 +81,14 @@ monster.loot = {
 	{name = "power bolt", chance = 1000000},
 	{name = "small enchanted sapphire", chance = 1000000, maxCount = 2},
 	{name = "platinum coin", chance = 1000000, maxCount = 5},
-	{id = 5921, chance = 1500},
+	{id = 5921, chance = 1500}, -- heaven blossom
 	{name = "dream essence egg", chance = 1155},
 	{name = "elvish talisman", chance = 1355},
 	{name = "violet crystal shard", chance = 1475},
 	{name = "small enchanted ruby", chance = 1755},
 	{name = "red crystal fragment", chance = 1565},
 	{name = "leaf star", chance = 11100, maxCount = 8},
-	{id = 23529, chance = 1000},
+	{id = 23529, chance = 1000}, -- ring of blue plasma
 	{name = "sun fruit", chance = 25800},
 	{id = 23542, chance = 1590},-- collar of blue plasma
 	{name = "wood cape", chance = 30000},

@@ -81,24 +81,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 3447, chance = 90450, maxCount = 10},
-	{id = 3031, chance = 75410, maxCount = 30},
-	{id = 3592, chance = 1210},
-	{id = 239, chance = 1210},
-	{id = 3577, chance = 1210, maxCount = 2},
-	{id = 7364, chance = 1210, maxCount = 4},
-	{id = 3381, chance = 210},
-	{id = 3385, chance = 310},
-	{id = 3419, chance = 210},
-	{id = 3382, chance = 110},
-	{id = 3280, chance = 310},
-	{id = 3269, chance = 1610},
-	{id = 3658, chance = 510},
-	{id = 3003, chance = 1510},
-	{id = 2815, chance = 910},
-	{id = 11510, chance = 910},
-	{id = 11450, chance = 910},
-	{id = 3004, chance = 510}
+	{id = 3447, chance = 90450, maxCount = 10}, -- arrow
+	{id = 3031, chance = 75410, maxCount = 30}, -- gold coin
+	{id = 3592, chance = 1210}, -- grapes
+	{id = 239, chance = 1210}, -- great health potion
+	{id = 3577, chance = 1210, maxCount = 2}, -- meat
+	{id = 7364, chance = 1210, maxCount = 4}, -- sniper arrow
+	{id = 3381, chance = 210}, -- crown armor
+	{id = 3385, chance = 310}, -- crown helmet
+	{id = 3419, chance = 210}, -- crown shield
+	{id = 3382, chance = 110}, -- crown legs
+	{id = 3280, chance = 310}, -- fire sword
+	{id = 3269, chance = 1610}, -- halberd
+	{id = 3658, chance = 510}, -- red rose
+	{id = 3003, chance = 1510}, -- rope
+	{id = 2815, chance = 910}, -- scroll
+	{id = 11510, chance = 910}, -- scroll of heroic deeds
+	{id = 11450, chance = 910}, -- small notebook
+	{id = 3004, chance = 510} -- wedding ring
 }
 
 monster.attacks = {

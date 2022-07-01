@@ -85,7 +85,7 @@ monster.loot = {
 	{name = "lightning legs", chance = 150},
 	{name = "spellbook of warding", chance = 360},
 	{name = "wand of starstorm", chance = 730},
-	{id = 8895, chance = 730},
+	{id = 8895, chance = 730}, -- rusted armor
 	{name = "shockwave amulet", chance = 500}
 }
 

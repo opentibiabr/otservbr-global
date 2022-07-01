@@ -6,7 +6,7 @@ function flameSixthSeal.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.SixthSeal) >= 1 then
+	if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSeal) >= 1 then
 		player:teleportTo(fromPosition)
 		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
 		return true
@@ -24,8 +24,8 @@ function flameSixthSeal.onStepIn(creature, item, position, fromPosition)
 		end
 	end
 
-	player:setStorageValue(Storage.Quest.TheQueenOfTheBanshees.SixthSeal, 1)
-	player:setStorageValue(Storage.Quest.TheQueenOfTheBanshees.SixthSealDoor, 1)
+	player:setStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSeal, 1)
+	player:setStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSealDoor, 1)
 	player:teleportTo({x = 32261, y = 31856, z = 15})
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true

@@ -76,16 +76,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2920, chance = 10190},
+	{id = 2920, chance = 10190}, -- torch
 	{name = "gold coin", chance = 67740, maxCount = 59},
 	{name = "worn leather boots", chance = 9900},
 	{name = "sabre", chance = 10100},
 	{name = "throwing knife", chance = 9000, maxCount = 5},
 	{name = "plate armor", chance = 1130},
 	{name = "battle shield", chance = 3850},
-	{id = 5090, chance = 1000},
+	{id = 5090, chance = 1000}, -- treasure map
 	{name = "rum flask", chance = 120},
-	{id = 5792, chance = 40},
+	{id = 5792, chance = 40}, -- die
 	{name = "pirate backpack", chance = 430},
 	{name = "pirate shirt", chance = 1200},
 	{name = "hook", chance = 450},

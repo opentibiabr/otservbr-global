@@ -5,38 +5,38 @@ Look README.md for look the reserved action/unique
 ]]
 QuestDoorAction = {
 	-- The queens of the banshee door
-	[Storage.Quest.TheQueenOfTheBanshees.BansheeDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.BansheeDoor] = {
 		itemId = 5113,
 		itemPos = {
 			{x = 32246, y = 31861, z = 14},
 			{x = 32246, y = 31862, z = 14}
 		}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FirstSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FirstSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31872, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.SecondSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.SecondSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31875, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.ThirdSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.ThirdSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31878, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FourthSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FourthSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31881, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FifthSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FifthSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31884, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.SixthSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31887, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.LastSealDoor] = {
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.LastSealDoor] = {
 		itemId = 5104,
 		itemPos = {{x = 32223, y = 31890, z = 14}}
 	},
@@ -327,7 +327,8 @@ QuestDoorAction = {
 		itemId = false,
 		itemPos = {{x = 32781, y = 32910, z = 8}}
 	},
-	[Storage.TheNewFrontier.Mission01] = {
+	-- The New Frontier Doors
+	[Storage.Quest.U8_54.TheNewFrontier.Mission01] = {
 		itemId = false,
 		itemPos = {
 			{x = 33060, y = 31529, z = 10},
@@ -341,7 +342,7 @@ QuestDoorAction = {
 			{x = 33062, y = 31529, z = 14}
 		}
 	},
-	[Storage.TheNewFrontier.Mission04] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission04] = {
 		itemId = false,
 		itemPos = {
 			{x = 33055, y = 31529, z = 10},
@@ -355,18 +356,28 @@ QuestDoorAction = {
 			{x = 33057, y = 31529, z = 14}
 		}
 	},
-	[Storage.TheNewFrontier.Mission07] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission07[1]] = {
 		itemId = false,
 		itemPos = {
 			{x = 33170, y = 31260, z = 10},
 			{x = 33171, y = 31260, z = 10}
 		}
 	},
-	[Storage.TheNewFrontier.Mission09] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission09.ArenaDoor] = {
 		itemId = false,
 		itemPos = {
-			{x = 33061, y = 31025, z = 7},
-			{x = 33080, y = 31019, z = 2},
+			{x = 33080, y = 31019, z = 2}
+		}
+	},
+	[Storage.Quest.U8_54.TheNewFrontier.Mission09.RewardDoor] = {
+		itemId = false,
+		itemPos = {
+			{x = 33061, y = 31025, z = 7}
+		}
+	},
+	[Storage.Quest.U8_54.TheNewFrontier.Mission10.MagicCarpetDoor] = {
+		itemId = false,
+		itemPos = {
 			{x = 32990, y = 31547, z = 4}
 		}
 	},
@@ -594,7 +605,7 @@ QuestDoorAction = {
 		}
 	},
 	-- The annihilator door
-	[Storage.Quest.TheAnnihilator.Reward] = {
+	[Storage.Quest.U7_24.TheAnnihilator.Reward] = {
 		itemId = 5113,
 		itemPos = {{x = 33216, y = 31671, z = 13}}
 	},
@@ -662,7 +673,7 @@ QuestDoorAction = {
 		}
 	},
 	-- The dream courts door (Andrew Lyze npc)
-	[Storage.Quest.TheDreamCourts.AndrewDoor] = {
+	[Storage.Quest.U12_00.TheDreamCourts.AndrewDoor] = {
 		itemId = 20450,
 		itemPos = {{x = 32761, y = 32630, z = 7}}
 	},
@@ -693,6 +704,27 @@ QuestDoorAction = {
 	[Storage.TheRookieGuard.AcademyDoor] = {
 		itemId = false,
 		itemPos = {{x = 32109, y = 32189, z = 8}}
+	},
+	-- Hidden Threats Quest
+	[Storage.Quest.U11_50.HiddenThreats.RatterDoor] = {
+		itemId = 1644,
+		itemPos = {{x = 33046, y = 32066, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.ServantDoor] = {
+		itemId = 1642,
+		itemPos = {{x = 33036, y = 32008, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor01] = {
+		itemId = 1642,
+		itemPos = {{x = 33025, y = 32008, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor02] = {
+		itemId = 1642,
+		itemPos = {{x = 33045, y = 32007, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor03] = {
+		itemId = 1644,
+		itemPos = {{x = 33001, y = 32047, z = 12}}
 	}
 }
 

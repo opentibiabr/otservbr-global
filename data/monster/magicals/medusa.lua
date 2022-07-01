@@ -92,7 +92,7 @@ monster.loot = {
 	{name = "terra legs", chance = 420},
 	{name = "terra amulet", chance = 4060},
 	{name = "ultimate health potion", chance = 9290, maxCount = 2},
-	{id = 8896, chance = 500},
+	{id = 8896, chance = 500}, -- slightly rusted armor
 	{name = "sacred tree amulet", chance = 850},
 	{name = "strand of medusa hair", chance = 9900}
 }

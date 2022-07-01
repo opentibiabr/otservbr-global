@@ -88,7 +88,7 @@ monster.loot = {
 	{name = "lion cloak patch", chance = 8444},
 	{name = "lion crest", chance = 8222},
 	{name = "black pearl", chance = 5778},
-	{id = 281, chance = 5556},
+	{id = 281, chance = 5556}, -- giant shimmering pearl (green)
 	{name = "terra hood", chance = 4667},
 	{name = "lightning headband", chance = 3778},
 	{name = "green gem", chance = 3556},

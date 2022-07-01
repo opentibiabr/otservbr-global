@@ -59,6 +59,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -93,16 +94,15 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	--The New Frontier
 	elseif MsgContains(message, "farmine") then
-		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 15 then
+		if player:getStorageValue(TheNewFrontier.Questline) == 14 then
 			npcHandler:say("I've heard some odd rumours about this new dwarven outpost. But tell me, what has the Edron academy to do with Farmine?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
 	elseif MsgContains(message, "plea") then
 		if npcHandler:getTopic(playerId) == 2 then
-			if player:getStorageValue(Storage.TheNewFrontier.BribeWydrin) < 1 then
+			if player:getStorageValue(TheNewFrontier.Mission05.Wyrdin) == 1 then
 				npcHandler:say("Hm, you are right, we are at the forefront of knowledge and innovation. Our dwarven friends could learn much from one of our representatives.", npc, creature)
-				player:setStorageValue(Storage.TheNewFrontier.BribeWydrin, 1)
-				player:setStorageValue(Storage.TheNewFrontier.Mission05, player:getStorageValue(Storage.TheNewFrontier.Mission05) + 1) --Questlog, The New Frontier Quest "Mission 05: Getting Things Busy"
+				player:setStorageValue(TheNewFrontier.Mission05.Wyrdin, 2)
 			end
 		end
 	end

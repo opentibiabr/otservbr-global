@@ -1717,9 +1717,7 @@
 		<attribute key="absorbpercentfire" value="-5"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="750"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="814" article="a" name="terra amulet">
 		<attribute key="showCharges" value="1"/>
@@ -1767,9 +1765,7 @@
 		<attribute key="absorbpercentenergy" value="-5"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="750"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="820" name="lightning boots">
 		<attribute key="absorbpercentpoison" value="-5"/>
@@ -2849,6 +2845,7 @@
 	</item>
 	<item id="2128" article="a" name="magic wall">
 		<attribute key="type" value="magicfield"/>
+		<attribute key="blocking" value="1"/>
 		<attribute key="duration" value="20"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
@@ -2858,7 +2855,7 @@
 	<item id="2130" article="a" name="rush wood">
 		<attribute key="type" value="magicfield"/>
 		<attribute key="blocking" value="1"/>
-		<attribute key="duration" value="45"/>
+		<attribute key="duration" value="20"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="2131" article="a" name="fire field">
@@ -4816,9 +4813,7 @@
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="speed" value="40"/>
 		<attribute key="weight" value="750"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="3080" article="a" name="broken amulet">
 		<attribute key="weight" value="420"/>
@@ -8150,9 +8145,7 @@
 		<attribute key="speed" value="30"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="2500"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="4034" article="a" name="slain ghoul">
 		<attribute key="duration" value="300"/>
@@ -11677,7 +11670,7 @@
 	<item id="5973" article="a" name="dead dragon">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4286"/>
+		<attribute key="decayTo" value="4025"/>
 		<attribute key="containersize" value="12"/>
 	</item>
 	<item id="5974" article="a" name="dead spider">
@@ -15102,9 +15095,7 @@
 		<attribute key="speed" value="-12"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="1200"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="7458" article="a" name="fur cap">
 		<attribute key="description" value="It feels nice and warm on your ears"/>
@@ -17031,7 +17022,13 @@
 	<item id="8746" article="a" name="ghost's tear">
 		<attribute key="weight" value="1000"/>
 	</item>
-	<item fromid="8747" toid="8752" article="an" name="old piece of paper">
+	<item id="8747" article="an" name="old piece of paper">
+		<attribute key="writeable" value="1"/>
+		<attribute key="writeonceitemid" value="8748"/>
+		<attribute key="maxtextlen" value="511"/>
+		<attribute key="weight" value="200"/>
+	</item>
+	<item fromid="8749" toid="8752" article="an" name="old piece of paper">
 		<attribute key="weight" value="200"/>
 	</item>
 	<item fromid="8753" toid="8754" article="a" name="wall mirror"/>
@@ -19823,9 +19820,7 @@
 		<attribute key="absorbpercentholy" value="-2"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="2250"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="10324" article="an" name="expedition backpack">
 		<attribute key="containersize" value="20"/>
@@ -23887,9 +23882,7 @@
 		<attribute key="speed" value="-10"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="3700"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="13998" article="a" name="depth scutum">
 		<attribute key="weaponType" value="shield"/>
@@ -26052,7 +26045,10 @@
 	<item fromid="16483" toid="16497" article="a" name="grimy wooden plank"/>
 	<item fromid="16498" toid="16571" name="RESERVED SPRITE"/>
 	<item id="16572" article="a" name="wooden treadmill"/>
-	<item fromid="16573" toid="16575" article="a" name="wooden ramp"/>
+	<item id="16573" article="a" name="wooden ramp">
+		<attribute key="floorchange" value="north"/>
+	</item>
+	<item fromid="16574" toid="16575" article="a" name="wooden ramp"/>
 	<item fromid="16576" toid="16577" article="a" name="wooden planks"/>
 	<item id="16578" name="nails"/>
 	<item fromid="16579" toid="16580" article="a" name="wooden planks"/>
@@ -26194,7 +26190,11 @@
 	</item>
 	<item id="17231" article="a" name="wooden scaffolding"/>
 	<item fromid="17232" toid="17234" article="a" name="small wooden fence"/>
-	<item fromid="17235" toid="17237" article="a" name="wooden ramp"/>
+	<item id="17235" article="a" name="wooden ramp"/>
+	<item id="17236" article="a" name="wooden ramp">
+		<attribute key="floorchange" value="north"/>
+	</item>
+	<item id="17237" article="a" name="wooden ramp"/>
 	<item id="17238" name="muddy floor">
 		<attribute key="description" value="There is a hole in the ceiling."/>
 	</item>
@@ -33106,9 +33106,7 @@
 		<attribute key="speed" value="30"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="21982" article="a" name="nightmare teddy">
 		<attribute key="weight" value="590"/>
@@ -37364,6 +37362,8 @@
 		<attribute key="stopduration" value="0"/>
 		<attribute key="showduration" value="1"/>
 		<attribute key="magicpoints" value="2"/>
+		<attribute key="criticalhitdamage" value="35"/>
+		<attribute key="criticalhitchance" value="10"/>
 		<attribute key="duration" value="900"/>
 		<attribute key="decayTo" value="0"/>
 		<attribute key="range" value="4"/>
@@ -39534,7 +39534,7 @@
 	<item fromid="27538" toid="27541" name="RESERVED SPRITE"/>
 	<item id="27542" article="a" name="dead deepworm">
 		<attribute key="duration" value="60"/>
-		<attribute key="decayTo" value="10"/>
+		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="27543" article="a" name="dead deepworm">
 		<attribute key="fluidsource" value="blood"/>
@@ -43785,31 +43785,47 @@
 	</item>
 	<item id="30342" article="an" name="enchanted sleep shawl">
 		<attribute key="showduration" value="1"/>
+		<attribute key="stopduration" value="1"/>
 		<attribute key="showAttributes" value="1"/>
+		<attribute key="transformEquipTo" value="30343"/>
+		<attribute key="absorbpercentphysical" value="7"/>
+		<attribute key="absorbpercentpoison" value="24"/>
+		<attribute key="skilldist" value="3"/>
+		<attribute key="armor" value="3"/>
+		<attribute key="weight" value="430"/>
+	</item>
+	<item id="30343" article="an" name="enchanted sleep shawl">
+		<attribute key="showduration" value="1"/>
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="transformDeEquipTo" value="30342"/>
 		<attribute key="absorbpercentphysical" value="7"/>
 		<attribute key="absorbpercentpoison" value="24"/>
 		<attribute key="skilldist" value="3"/>
 		<attribute key="duration" value="3600"/>
-		<attribute key="decayTo" value="30343"/>
-		<attribute key="armor" value="3"/>
-		<attribute key="weight" value="430"/>
-	</item>
-	<item id="30343" article="a" name="enchanted sleep shawl">
+		<attribute key="decayTo" value="29428"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="430"/>
 	</item>
 	<item id="30344" article="an" name="enchanted pendulet">
 		<attribute key="showduration" value="1"/>
+		<attribute key="stopduration" value="1"/>
+		<attribute key="transformEquipTo" value="30345"/>
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="absorbpercentphysical" value="5"/>
 		<attribute key="absorbpercentenergy" value="18"/>
 		<attribute key="skilldist" value="3"/>
-		<attribute key="duration" value="7200"/>
-		<attribute key="decayTo" value="30345"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="650"/>
 	</item>
-	<item id="30345" article="a" name="enchanted pendulet">
+	<item id="30345" article="an" name="enchanted pendulet">
+		<attribute key="showduration" value="1"/>
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="transformDeEquipTo" value="30344"/>
+		<attribute key="absorbpercentphysical" value="5"/>
+		<attribute key="absorbpercentenergy" value="18"/>
+		<attribute key="skilldist" value="3"/>
+		<attribute key="duration" value="7200"/>
+		<attribute key="decayTo" value="29429"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="650"/>
 	</item>
@@ -43905,9 +43921,7 @@
 		<attribute key="speed" value="20"/>
 		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="900"/>
-		<attribute key="imbuementslot" value="1">
-			<attribute key="increase speed" value="3"/>
-		</attribute>
+		<attribute key="imbuementslot" value="1"/>
 	</item>
 	<item id="30395" name="cobra club">
 		<attribute key="elementfire" value="44"/>
@@ -44011,6 +44025,9 @@
 		<attribute key="weight" value="500"/>
 	</item>
 	<item id="30403" name="enchanted theurgic amulet">
+		<attribute key="absorbpercentphysical" value="3"/>
+		<attribute key="absorbpercentpoison" value="14"/>
+		<attribute key="magicpoints" value="3"/>
 		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
 		<attribute key="transformEquipTo" value="30402" />
@@ -45271,7 +45288,11 @@
 		<attribute key="weight" value="570"/>
 	</item>
 	<item id="31557" article="a" name="blister ring">
-		<attribute key="description" value="This ring is out of magic energy."/>
+		<attribute key="stopduration" value="1"/>
+		<attribute key="showduration" value="1"/>
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentfire" value="6"/>
+		<attribute key="transformequipto" value="31616"/>
 		<attribute key="weight" value="90"/>
 	</item>
 	<item id="31558" article="a" name="red goanna scale">
@@ -45451,22 +45472,22 @@
 	<item id="31595" article="a" name="noble amulet">
 		<attribute key="weight" value="65"/>
 	</item>
-	<item id="31596" article="a" name="dead count vlarkorth">
+	<item id="31596" article="a" name="dead lichwarrior">
 		<attribute key="duration" value="60"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
-	<item id="31597" article="a" name="dead count vlarkorth">
+	<item id="31597" article="a" name="dead lichwarrior">
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="31596"/>
 		<attribute key="containersize" value="16"/>
 	</item>
-	<item id="31598" article="a" name="dead count vlarkorth">
+	<item id="31598" article="a" name="dead lichwarrior">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="31597"/>
 		<attribute key="containersize" value="32"/>
 	</item>
-	<item id="31599" article="a" name="dead count vlarkorth">
+	<item id="31599" article="a" name="dead lichwarrior">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="31598"/>
@@ -45523,8 +45544,8 @@
 		<attribute key="showAttributes" value="1"/>
 		<attribute key="absorbpercentfire" value="6"/>
 		<attribute key="duration" value="3600"/>
-		<attribute key="transformdeequipto" value="31621"/>
-		<attribute key="decayTo" value="31557"/>
+		<attribute key="transformdeequipto" value="31557"/>
+		<attribute key="decayTo" value="31621"/>
 		<attribute key="weight" value="90"/>
 	</item>
 	<item id="31617" name="winged boots">
@@ -45551,11 +45572,6 @@
 	</item>
 	<item id="31621" article="a" name="blister ring">
 		<attribute key="description" value="This ring is out of magic energy"/>
-		<attribute key="stopduration" value="1"/>
-		<attribute key="showduration" value="1"/>
-		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentfire" value="6"/>
-		<attribute key="transformequipto" value="31616"/>
 		<attribute key="weight" value="90"/>
 	</item>
 	<item id="31622" name="Urmahlullu's tail">
@@ -46782,7 +46798,12 @@
 		</attribute>
 	</item>
 	<item id="32621" article="a" name="ring of souls">
-		<attribute key="description" value="This ring is out of magic energy."/>
+		<attribute key="stopduration" value="1"/>
+		<attribute key="showduration" value="1"/>
+		<attribute key="showAttributes" value="1"/>
+		<attribute key="absorbpercentphysical" value="2"/>
+		<attribute key="absorbpercentlifedrain" value="10"/>
+		<attribute key="transformequipto" value="32635"/>
 		<attribute key="weight" value="80"/>
 	</item>
 	<item id="32622" article="a" name="giant amethyst">
@@ -46855,18 +46876,12 @@
 		<attribute key="absorbpercentphysical" value="2"/>
 		<attribute key="absorbpercentlifedrain" value="10"/>
 		<attribute key="duration" value="7200"/>
-		<attribute key="transformdeequipto" value="32636"/>
-		<attribute key="decayTo" value="32621"/>
+		<attribute key="transformdeequipto" value="32621"/>
+		<attribute key="decayTo" value="32636"/>
 		<attribute key="weight" value="80"/>
 	</item>
 	<item id="32636" article="a" name="ring of souls">
 		<attribute key="description" value="This ring is out of magic energy"/>
-		<attribute key="stopduration" value="1"/>
-		<attribute key="showduration" value="1"/>
-		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentphysical" value="2"/>
-		<attribute key="absorbpercentlifedrain" value="10"/>
-		<attribute key="transformequipto" value="32635"/>
 		<attribute key="weight" value="80"/>
 	</item>
 	<item id="32637" article="a" name="unknow"/>

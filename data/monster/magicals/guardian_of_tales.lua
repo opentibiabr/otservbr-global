@@ -73,20 +73,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Platinum Coin", chance = 10000, maxCount = 10},
-	{name = "Book Page", chance = 10000, maxCount = 5},
-	{name = "burnt Scroll", chance = 10000, maxCount = 5},
-	{name = "Glowing Rune", chance = 10000, maxCount = 5},
-	{name = "Small Diamond", chance = 10000, maxCount = 5},
-	{name = "Fire Axe", chance = 250},
-	{name = "Soul Orb", chance = 260, maxCount = 5},
-	{name = "Spellbook of Warding", chance = 250},
-	{name = "Wand of Inferno", chance = 250},
-	{name = "Fire Sword", chance = 250},
-	{name = "Magma Coat", chance = 350},
-	{name = "Magma Legs", chance = 250},
-	{name = "Piece of Hellfire Armor", chance = 500, maxCount = 5},
-	{id = 12600, chance = 10000, maxCount = 5}
+	{name = "platinum coin", chance = 10000, maxCount = 10},
+	{name = "book page", chance = 10000, maxCount = 5},
+	{name = "burnt scroll", chance = 10000, maxCount = 5},
+	{name = "glowing rune", chance = 10000, maxCount = 5},
+	{name = "small diamond", chance = 10000, maxCount = 5},
+	{name = "fire axe", chance = 250},
+	{name = "soul orb", chance = 260, maxCount = 5},
+	{name = "spellbook of warding", chance = 250},
+	{name = "wand of inferno", chance = 250},
+	{name = "fire sword", chance = 250},
+	{name = "magma coat", chance = 350},
+	{name = "magma legs", chance = 250},
+	{name = "piece of hellfire armor", chance = 500, maxCount = 5},
+	{id = 12600, chance = 10000, maxCount = 5} -- coal
 }
 
 monster.attacks = {

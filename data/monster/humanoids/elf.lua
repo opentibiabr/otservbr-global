@@ -86,7 +86,7 @@ monster.loot = {
 	{name = "plate shield", chance = 9300},
 	{name = "arrow", chance = 7060, maxCount = 3},
 	{name = "leather boots", chance = 11410},
-	{id = 5921, chance = 940},
+	{id = 5921, chance = 940}, -- heaven blossom
 	{name = "plum", chance = 20000, maxCount = 2},
 	{name = "elvish talisman", chance = 2100}
 }
