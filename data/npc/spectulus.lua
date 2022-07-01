@@ -292,7 +292,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 10)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif MsgContains(message, "yes") then
+	elseif MsgContains(message, "yes") and player:getStorageValue(Storage.SeaOfLight.Questline) < 1 then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:addExperience(100, true)
 			player:setStorageValue(Storage.SeaOfLight.Questline, 1)
