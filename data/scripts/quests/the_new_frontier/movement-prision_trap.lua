@@ -15,10 +15,10 @@ function lizardsTrap.onStepIn(creature, item, position, fromPosition)
 		player:setStorageValue(TheNewFrontier.Mission07[1], 2) -- Questlog, "Mission 07: Messengers Of Peace"
 		player:setStorageValue(TheNewFrontier.Mission08, 1) -- Questlog, "Mission 08: An Offer You Can't Refuse"
 		player:setStorageValue(TheNewFrontier.Questline, 22)	
+		player:say("So far for the negotiating peace. Now you have other problems to handle.", TALKTYPE_MONSTER_SAY)
 	end
 	player:getPosition():sendMagicEffect(CONST_ME_POFF)
 	player:teleportTo(prision)
-	player:say("So far for the negotiating peace. Now you have other problems to handle.", TALKTYPE_MONSTER_SAY)
 	player:getPosition():sendMagicEffect(CONST_ME_POFF)
 	return true
 end
