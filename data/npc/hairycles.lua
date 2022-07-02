@@ -278,7 +278,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheApeCity.DworcDoor, 1)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Hairycles thought better of you.', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		end
 		npcHandler:setTopic(playerId, 0)
 
@@ -321,7 +323,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 6)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 			npcHandler:setTopic(playerId, 0)
 		end
 
@@ -332,7 +336,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheApeCity.ChorDoor, 1)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		end
 		npcHandler:setTopic(playerId, 0)
 
@@ -360,7 +366,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheApeCity.Questline, 7)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		end
 		npcHandler:setTopic(playerId, 0)
 
@@ -380,7 +388,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheApeCity.Questline, 9)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		end
 		npcHandler:setTopic(playerId, 0)
 
@@ -405,7 +415,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheApeCity.FibulaDoor, 1)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		end
 		npcHandler:setTopic(playerId, 0)
 
@@ -421,7 +433,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheApeCity.FibulaDoor, -1)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Please try to find me a witches\' cap on Fibula.', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		end
 		npcHandler:setTopic(playerId, 0)
 
@@ -495,7 +509,9 @@ local function creatureSayCallback(npc, creature, type, message)
 
 			npc:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 			npcHandler:say('Thank you, you are ... YOU SON OF LIZARD!', npc, creature)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('I see.', npc, creature)
 		end
