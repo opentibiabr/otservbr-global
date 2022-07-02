@@ -6,7 +6,7 @@ function fifthSealTile.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	local storage = Storage.Quest.TheQueenOfTheBanshees.FifthSealTile
+	local storage = Storage.Quest.U7_2.TheQueenOfTheBanshees.FifthSealTile
 	local getStorage = player:getStorageValue(storage)
 	if item.actionid == 25020 then
 		if getStorage >= 1 and getStorage <= 8 then

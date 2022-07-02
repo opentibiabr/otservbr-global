@@ -119,8 +119,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission03, 3)
 			player:setStorageValue(Storage.DjinnWar.EfreetFaction.DoorToMaridTerritory, 1)
 			player:addAchievement('Efreet Ally')
-			addEvent(releasePlayer, 1000, npc, creature)
-
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		elseif MsgContains(message, 'no') then
 			npcHandler:say('Just do it!', npc, creature)
 		end

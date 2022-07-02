@@ -5,10 +5,10 @@ monster.description = "a pirat bombardier"
 monster.experience = 1700
 monster.outfit = {
 	lookType = 1346,
-	lookHead = 0,
-	lookBody = 124,
-	lookLegs = 124,
-	lookFeet = 124,
+	lookHead = 57,
+	lookBody = 125,
+	lookLegs = 86,
+	lookFeet = 67,
 	lookAddons = 2,
 	lookMount = 0
 }

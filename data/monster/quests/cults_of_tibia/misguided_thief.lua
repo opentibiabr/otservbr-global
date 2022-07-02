@@ -6,9 +6,9 @@ monster.experience = 1200
 monster.outfit = {
 	lookType = 684,
 	lookHead = 58,
-	lookBody = 58,
-	lookLegs = 41,
-	lookFeet = 76,
+	lookBody = 40,
+	lookLegs = 60,
+	lookFeet = 116,
 	lookAddons = 0,
 	lookMount = 0
 }

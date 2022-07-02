@@ -200,7 +200,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.CarlosQuestLog, 7)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.CarlosNpcGreetStorage, 8)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		end
 	elseif MsgContains(message, "ready") then
 		if storeTalkCid[playerId] == 7 then
@@ -211,7 +213,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.CarlosQuestLog, 7)
 			player:setStorageValue(Storage.RookgaardTutorialIsland.CarlosNpcGreetStorage, 8)
-			addEvent(releasePlayer, 5000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 5000)
 		end
 	end
 	return true
