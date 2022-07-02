@@ -5,10 +5,10 @@ monster.description = "a Soul-Broken Harbinger"
 monster.experience = 5800
 monster.outfit = {
 	lookType = 1137,
-	lookHead = 124,
-	lookBody = 31,
-	lookLegs = 17,
-	lookFeet = 81,
+	lookHead = 85,
+	lookBody = 10,
+	lookLegs = 16,
+	lookFeet = 83,
 	lookAddons = 3,
 	lookMount = 0
 }

@@ -45,6 +45,11 @@ QuestDoorAction = {
 		itemId = false,
 		itemPos = {{x = 32455, y = 31967, z = 14}}
 	},
+	-- To Outfox a Fox Quest, mining helmet door
+	[Storage.toOutfoxAFoxQuest] = {
+		itemId = false,
+		itemPos = {{x = 32467, y = 31969, z = 5}}
+	},
 	-- Edron
 	[Storage.Kilmaresh.Sixth.Favor] = {
 		itemId = false,

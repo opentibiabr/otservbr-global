@@ -7,6 +7,17 @@ local lootVeryRare1 = {281, 12557}
 local lootRare1 = {3026, 12557}
 local lootCommon1 = {3035, 237, 12557}
 
+local elementals = {
+		chances = {
+			{from = 0, to = 500, itemId = 3026}, -- white pearl
+			{from = 501, to = 801, itemId = 3029}, -- small sapphire
+			{from = 802, to = 1002, itemId = 3032}, -- small emerald
+			{from = 1003, to = 1053, itemId = 281}, -- giant shimmering pearl (green)
+			{from = 1054, to = 1104, itemId = 282}, -- giant shimmering pearl (brown)
+			{from = 1105, to = 1115, itemId = 9303} -- leviathan's amulet
+		}
+}
+
 local useWorms = true
 
 local function refreeIceHole(position)
@@ -32,19 +43,19 @@ function fishing.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 
 		toPosition:sendMagicEffect(CONST_ME_WATERSPLASH)
-		target:remove()
-
-		local rareChance = math.random(100)
-		if rareChance == 1 then
-			player:addItem(lootVeryRare[math.random(#lootVeryRare)], 1)
-		elseif rareChance <= 3 then
-			player:addItem(lootRare[math.random(#lootRare)], 1)
-		elseif rareChance <= 10 then
-			player:addItem(lootCommon[math.random(#lootCommon)], 1)
-		else
-			player:addItem(lootTrash[math.random(#lootTrash)], 1)
+		target:transform(target.itemid + 1)
+		
+		local chance = math.random(10000)
+		for i = 1, #elementals.chances do
+			local randomItem = elementals.chances[i]
+			if chance >= randomItem.from and chance <= randomItem.to then
+				player:addItem(randomItem.itemId, 1)
+			end
+			if chance > 1115 then
+				player:say('There was just rubbish in it.', TALKTYPE_MONSTER_SAY)
+				return true
+			end
 		end
-		return true
 	end
 
 	if targetId == 12560 then

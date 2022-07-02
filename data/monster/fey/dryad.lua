@@ -5,10 +5,10 @@ monster.description = "a dryad"
 monster.experience = 190
 monster.outfit = {
 	lookType = 137,
-	lookHead = 80,
-	lookBody = 59,
-	lookLegs = 7,
-	lookFeet = 101,
+	lookHead = 99,
+	lookBody = 41,
+	lookLegs = 5,
+	lookFeet = 102,
 	lookAddons = 3,
 	lookMount = 0
 }

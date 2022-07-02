@@ -37,6 +37,7 @@ function ferumbrasAscendantTheShattererLever.onUse(player, item, fromPosition, t
 				playerTile:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			end
 		end
+		Game.setStorageValue(Storage.FerumbrasAscension.TheShattererLever, 0)
 		Game.setStorageValue(Storage.FerumbrasAscension.TheShattererTimer, 1)
 		addEvent(clearForgotten, 30 * 60 * 1000, Position(33377, 32390, 14), Position(33446, 32447, 14), Position(33319, 32318, 13), Storage.FerumbrasAscension.TheShattererTimer)
 		item:transform(8912)

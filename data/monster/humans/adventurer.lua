@@ -5,10 +5,10 @@ monster.description = "an adventurer"
 monster.experience = 0
 monster.outfit = {
 	lookType = 129,
-	lookHead = 92,
+	lookHead = 93,
 	lookBody = 15,
-	lookLegs = 92,
-	lookFeet = 82,
+	lookLegs = 72,
+	lookFeet = 80,
 	lookAddons = 0,
 	lookMount = 0
 }

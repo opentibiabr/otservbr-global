@@ -198,6 +198,19 @@ ItemAction = {
 			{x = 33440, y = 32217, z = 8}
 		}
 	},
+	-- The Royal Rescue
+	[40021] = { -- bridge
+		itemId = false,
+		itemPos = {
+			{x = 32571, y = 31508, z = 9}
+		}
+	},
+	[40022] = { -- ladder
+		itemId = false,
+		itemPos = {
+			{x = 32680, y = 31509, z = 12}
+		}
+	},
 }
 
 ItemUnique = {

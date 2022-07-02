@@ -5,10 +5,10 @@ monster.description = "an orclops ravager"
 monster.experience = 1100
 monster.outfit = {
 	lookType = 935,
-	lookHead = 0,
-	lookBody = 0,
-	lookLegs = 0,
-	lookFeet = 0,
+	lookHead = 94,
+	lookBody = 1,
+	lookLegs = 80,
+	lookFeet = 94,
 	lookAddons = 0,
 	lookMount = 0
 }
