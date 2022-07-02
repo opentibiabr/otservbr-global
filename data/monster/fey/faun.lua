@@ -5,10 +5,10 @@ monster.description = "a faun"
 monster.experience = 800
 monster.outfit = {
 	lookType = 980,
-	lookHead = 81,
-	lookBody = 115,
-	lookLegs = 114,
-	lookFeet = 81,
+	lookHead = 61,
+	lookBody = 96,
+	lookLegs = 95,
+	lookFeet = 62,
 	lookAddons = 0,
 	lookMount = 0
 }

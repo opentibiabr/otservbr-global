@@ -5,10 +5,10 @@ monster.description = "a mad scientist"
 monster.experience = 205
 monster.outfit = {
 	lookType = 133,
-	lookHead = 97,
+	lookHead = 39,
 	lookBody = 0,
-	lookLegs = 38,
-	lookFeet = 97,
+	lookLegs = 19,
+	lookFeet = 20,
 	lookAddons = 1,
 	lookMount = 0
 }
