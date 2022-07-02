@@ -46121,8 +46121,9 @@
 	<item id="32020" article="a" name="trapdoor">
 		<attribute key="floorchange" value="down"/>
 	</item>
-	<item fromid="32021" toid="32035" name="addled egg">
-		<attribute key="weight" value="100"/>
+	<item id="32021" name="burning wall"/>
+	<item fromid="32022" toid="32035" name="addled egg">
+    	<attribute key="weight" value="100"/>
 	</item>
 	<item fromid="32036" toid="32038" name="reserved sprite"/>
 	<item fromid="32039" toid="32042" name="unknown"/>
