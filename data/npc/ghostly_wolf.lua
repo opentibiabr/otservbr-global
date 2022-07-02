@@ -55,6 +55,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -64,32 +65,35 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "mission") then
-		if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 6) then
+		if player:getStorageValue(ThreatenedDreams.Mission01[1]) == 5 then
 			npcHandler:say({
 				"I'm heartbroken, traveler. Some months ago, I was taking care of my three newborn whelps. They just opened their eyes and started exploring the wilderness as a hunter came by. ...",
 				"He shot me and took my three puppies with him. I have no idea where he brought them or whether they are still alive. This uncertainty harrows me and thus I'm unable to find peace. Will you help me?"
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
-		elseif (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 10) then
-			player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 11)
+		elseif player:getStorageValue(ThreatenedDreams.Mission01[1]) == 9 then
+			npcHandler:say("I guess I will stick around for a time to watch over the grave. After this final watch I will find peace, I can feel this. Thank you, human being. You redeemed me.", npc, creature)
+			player:setStorageValue(ThreatenedDreams.Mission01[1], 10)
+			npcHandler:setTopic(playerId, 0)
+		elseif player:getStorageValue(ThreatenedDreams.Mission01[1]) >= 10 then
 			npcHandler:say("I guess I will stick around for a time to watch over the grave. After this final watch I will find peace, I can feel this. Thank you, human being. You redeemed me.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		else
 			npcHandler:say("You are not on that mission.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif npcHandler:getTopic(playerId) == 1 then
-		if MsgContains(message, "yes") then
+
+	elseif MsgContains(message, "yes") then
+		if npcHandler:getTopic(playerId) == 1 then
 			npcHandler:say({
 				"I didn't dare hope for it! The man told something about selling my babies to the orcs so they could train them as war wolves. ...",
 				"I guess he mentioned Ulderek's Rock. Please search for them and - be they alive or not - return and tell me what happened to them."
 			}, npc, creature)
-			player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 7)
-			npcHandler:setTopic(playerId, 0)
-		elseif MsgContains(message, "no") then
-			npcHandler:say("Then not.", npc, creature)
+			player:setStorageValue(ThreatenedDreams.Mission01[1], 6)
 			npcHandler:setTopic(playerId, 0)
 		end
+	elseif MsgContains(message, "no") then
+		npcHandler:say("Then not.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	end
 	return true

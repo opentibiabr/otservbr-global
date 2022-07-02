@@ -103,8 +103,8 @@ function theShattererKill.onKill(creature, target)
 		addEvent(revertTeleport, 2 * 60 * 1000, teleportPos, 22761, 1949, oldPos)
 		revert()
 	end
-	Game.setStorageValue(Storage.FerumbrasAscendant.TheShattererLever, 0)
-	Game.setStorageValue(Storage.FerumbrasAscendant.TheShattererTimer, 0)
+	Game.setStorageValue(Storage.FerumbrasAscension.TheShattererLever, 0)
+	Game.setStorageValue(Storage.FerumbrasAscension.TheShattererTimer, 0)
 	return true
 end
 

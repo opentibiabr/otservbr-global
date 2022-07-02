@@ -363,11 +363,11 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 		local sandTile = Tile(sandPosition)
 		local amuletId = sandTile:getItemById(19401)
 		if amuletId then
-			if player:getStorageValue(Storage.Quest.Dawnport.TheLostAmulet) == 1 then
+			if player:getStorageValue(Storage.Quest.U10_55.Dawnport.TheLostAmulet) == 1 then
 				local rand = math.random(100)
 				if rand <= 10 then
 					player:addItem(21379, 1)
-					player:setStorageValue(Storage.Quest.Dawnport.TheLostAmulet, 2)
+					player:setStorageValue(Storage.Quest.U10_55.Dawnport.TheLostAmulet, 2)
 					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found an ancient amulet. Strange engravings cover it. Maybe Morris can make them out.")
 				elseif rand <= 80 then
 					player:addItem(21395, 1)
@@ -850,12 +850,12 @@ function onUseCrowbar(player, item, fromPosition, target, toPosition, isHotkey)
 				addEvent(revertCask, 3 * 60 * 1000, toPosition)
 			end
 		end
-	elseif target.actionid == 12566 and player:getStorageValue(Storage.secretService.TBIMission06) == 1 then
+	elseif target.actionid == 12566 and player:getStorageValue(Storage.SecretService.TBIMission06) == 1 then
 		-- Secret service quest
 		local yellPosition = Position(32204, 31157, 8)
 		-- Amazon lookType
 		if player:getOutfit().lookType == 137 then
-			player:setStorageValue(Storage.secretService.TBIMission06, 2)
+			player:setStorageValue(Storage.SecretService.TBIMission06, 2)
 			Game.createMonster("barbarian skullhunter", yellPosition)
 			player:say("Nooooo! What have you done??", TALKTYPE_MONSTER_SAY, false, 0, yellPosition)
 			yellPosition.y = yellPosition.y - 1

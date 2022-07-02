@@ -17,8 +17,8 @@ firstSealTable = {
 -- Table of the second seal
 secondSealTable = {
 	positions = {
-		{position = {x = 32173, y = 31871, z = 15}, pearlId = 2143},
-		{position = {x = 32180, y = 31871, z = 15}, pearlId = 2144}
+		{position = {x = 32173, y = 31871, z = 15}, pearlId = 3026},
+		{position = {x = 32180, y = 31871, z = 15}, pearlId = 3027}
 	}
 }
 
@@ -116,11 +116,11 @@ sixthSealTable = {
 	},
 
 	positions = {
-		{position = {x = 32309, y = 31975, z = 13}, campfireId = 1421},
-		{position = {x = 32311, y = 31975, z = 13}, campfireId = 1421},
-		{position = {x = 32313, y = 31975, z = 13}, campfireId = 1423},
-		{position = {x = 32309, y = 31976, z = 13}, campfireId = 1421},
-		{position = {x = 32311, y = 31976, z = 13}, campfireId = 1421},
-		{position = {x = 32313, y = 31976, z = 13}, campfireId = 1423}
+		{position = {x = 32309, y = 31975, z = 13}, campfireId = 1996},
+		{position = {x = 32311, y = 31975, z = 13}, campfireId = 1996},
+		{position = {x = 32313, y = 31975, z = 13}, campfireId = 1998},
+		{position = {x = 32309, y = 31976, z = 13}, campfireId = 1996},
+		{position = {x = 32311, y = 31976, z = 13}, campfireId = 1996},
+		{position = {x = 32313, y = 31976, z = 13}, campfireId = 1998}
 	}
 }

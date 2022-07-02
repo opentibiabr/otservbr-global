@@ -167,11 +167,11 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("Ah, the curse of the Plains of Havoc, the hidden beast, the unbeatable foe. I've been living here for years and I'm sure this is only a myth.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "myth") then
-		if player:getStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo) < 1 then
+		if player:getStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo) < 1 then
 			-- Questlog: The Paradox Tower
-			player:setStorageValue(Storage.Quest.TheParadoxTower.QuestLine, 1)
+			player:setStorageValue(Storage.Quest.U7_24.TheParadoxTower.QuestLine, 1)
 			-- Questlog: The Feared Hugo (Zoltan)
-			player:setStorageValue(Storage.Quest.TheParadoxTower.TheFearedHugo, 1)
+			player:setStorageValue(Storage.Quest.U7_24.TheParadoxTower.TheFearedHugo, 1)
 		end
 		npcHandler:say("There are many tales about the fearsome Hugo. It's said it's an abnormality, accidentally created by Yenny the Gentle. It's half demon, half something else and people say it's still alive after all these years.", npc, creature)
 		npcHandler:setTopic(playerId, 0)

@@ -92,6 +92,10 @@ monster.loot = {
 	{id = 9302, chance = 1000}, -- sacred tree amulet
 	{id = 678, chance = 2000, maxCount = 2}, -- small enchanted amethyst
 	{id = 9057, chance = 2500, maxCount = 2}, -- small topaz
+	{id = 25696, chance = 12000}, -- colourful snail shell
+	{id = 25700, chance = 720}, -- dream blossom staff
+	{id = 25698, chance = 840}, -- butterfly ring
+	{id = 25692, chance = 15000, maxCount = 2}, -- fresh fruit
 	{id = 237, chance = 1000} -- strong mana potion
 }
 

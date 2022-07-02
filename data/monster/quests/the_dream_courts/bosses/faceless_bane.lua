@@ -87,7 +87,7 @@ monster.loot = {
 	{name = "ectoplasmic shield", chance = 600},
 	{name = "book backpack", chance = 550},
 	{name = "spirit guide", chance = 530},
-	{id = 30345, chance = 500}, -- enchanted pendulet
+	{id = 30344, chance = 500}, -- enchanted pendulet
 }
 
 monster.attacks = {

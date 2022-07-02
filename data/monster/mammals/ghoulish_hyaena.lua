@@ -5,10 +5,10 @@ monster.description = "a ghoulish hyaena"
 monster.experience = 195
 monster.outfit = {
 	lookType = 94,
-	lookHead = 20,
-	lookBody = 30,
-	lookLegs = 40,
-	lookFeet = 50,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }
