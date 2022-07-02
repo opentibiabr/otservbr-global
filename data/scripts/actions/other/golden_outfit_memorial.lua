@@ -1,9 +1,8 @@
-local updateInterval = 5 * 60 -- The Memorial will be updated in 5 minutes
-
 local goldenOutfitCache
 local lastUpdated = 0
+
 local function updateGoldenOutfitCache()
-	if os.time() < lastUpdated + updateInterval then
+	if os.time() < lastUpdated + (5 * 60) then  -- Memorial cache update interval (5 minutes)
 		return
 	end
 
@@ -17,25 +16,23 @@ local function updateGoldenOutfitCache()
 	end
 
 	repeat
-		local addons = result.getNumber(resultId, "value")
-		local name = result.getString(resultId, "name")
-		table.insert(goldenOutfitCache[addons], name)
+		table.insert(goldenOutfitCache[result.getNumber(resultId, "value")], result.getString(resultId, "name"))
 	until not result.next(resultId)
 	result.free(resultId)
 
 	lastUpdated = os.time()
 end
 
-local function displayMemorialUI(player)
+local goldenOutfitMemorial = Action()
+
+function goldenOutfitMemorial.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	updateGoldenOutfitCache()
 	local response = NetworkMessage()
 	response:addByte(0xB0)
 
-	local price = 500000000
-	response:addU32(price)
-	price = price + 250000000
-	response:addU32(price)
-	price = price + 250000000
-	response:addU32(price)
+	response:addU32(500000000) -- Armor price
+	response:addU32(750000000) -- Armor + helmet price
+	response:addU32(1000000000) -- Armor + helmet + boots price
 
 	for i = 1, 3 do
 		response:addU16(#goldenOutfitCache[i])
@@ -54,12 +51,6 @@ local function displayMemorialUI(player)
 	end
 
 	response:sendToPlayer(player)
-end
-
-local goldenOutfitMemorial = Action()
-function goldenOutfitMemorial.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	updateGoldenOutfitCache()
-	displayMemorialUI(player)
 	return true
 end
 
