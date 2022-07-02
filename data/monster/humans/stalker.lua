@@ -82,7 +82,7 @@ monster.loot = {
 	{name = "katana", chance = 530},
 	{name = "obsidian lance", chance = 1210},
 	{name = "brass legs", chance = 3500},
-	{name = "brass legs", chance = 5510},
+	{name = "brass shield", chance = 5510},
 	{name = "miraculum", chance = 1550}
 }
 
@@ -93,7 +93,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 15,
-	armor = 15,
+	armor = 14,
 	{name ="invisible", interval = 2000, chance = 40, effect = CONST_ME_MAGIC_BLUE}
 }
 

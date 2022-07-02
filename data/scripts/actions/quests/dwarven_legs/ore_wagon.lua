@@ -4,6 +4,11 @@ function dwarvenOreWagon.onUse(player, item, fromPosition, itemEx, toPosition)
 		if player:getStorageValue(Storage.DwarvenLegs) < 1 then
 			player:teleportTo({x = 32624, y = 31514, z = 9})
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			local rubble = Game.createItem(5709, 1, Position(32619, 31514, 9)):setActionId(50114)
+			local tile = Tile(Position(32617, 31513, 9))
+			local tile2 = Tile(Position(32617, 31514, 9))
+			tile:getItemById(1272):remove()
+			tile2:getItemById(1624):remove()
 			return true
 		else
 			player:say("Zzz Dont working.", TALKTYPE_ORANGE_1)
