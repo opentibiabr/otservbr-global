@@ -8,7 +8,7 @@ function bellow.onStepIn(creature, item, position, fromPosition)
 	end
 	if item.itemid == 9121 then
 		item:transform(9120)
-	end	
+	end
 	local crucibleItem = Tile(Position(32699, 31494, 11)):getItemById(7813)
 	if not crucibleItem then
 		return true
