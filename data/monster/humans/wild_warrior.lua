@@ -5,10 +5,10 @@ monster.description = "a wild warrior"
 monster.experience = 60
 monster.outfit = {
 	lookType = 131,
-	lookHead = 57,
-	lookBody = 57,
-	lookLegs = 57,
-	lookFeet = 57,
+	lookHead = 38,
+	lookBody = 38,
+	lookLegs = 38,
+	lookFeet = 38,
 	lookAddons = 0,
 	lookMount = 0
 }

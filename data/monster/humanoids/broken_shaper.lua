@@ -5,10 +5,10 @@ monster.description = "a broken shaper"
 monster.experience = 1600
 monster.outfit = {
 	lookType = 932,
-	lookHead = 132,
-	lookBody = 95,
+	lookHead = 94,
+	lookBody = 76,
 	lookLegs = 0,
-	lookFeet = 121,
+	lookFeet = 82,
 	lookAddons = 0,
 	lookMount = 0
 }

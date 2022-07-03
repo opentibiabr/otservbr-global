@@ -5,10 +5,10 @@ monster.description = "a usurper archer"
 monster.experience = 6800
 monster.outfit = {
 	lookType = 1316,
-	lookHead = 57,
+	lookHead = 76,
 	lookBody = 57,
-	lookLegs = 57,
-	lookFeet = 57,
+	lookLegs = 76,
+	lookFeet = 95,
 	lookAddons = 2,
 	lookMount = 0
 }

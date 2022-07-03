@@ -4634,7 +4634,14 @@
 	<item id="3048" article="a" name="might ring">
 		<attribute key="showCharges" value="1"/>
 		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentall" value="20"/>
+<!-- 		<attribute key="absorbpercentall" value="20"/> -->
+		<attribute key="absorbpercentphysical" value="20"/>
+		<attribute key="absorbpercentfire" value="20"/>
+		<attribute key="absorbpercentpoison" value="20"/>
+		<attribute key="absorbpercentenergy" value="20"/>
+		<attribute key="absorbpercentice" value="20"/>
+		<attribute key="absorbpercentholy" value="20"/>
+		<attribute key="absorbpercentdeath" value="20"/>
 		<attribute key="charges" value="20"/>
 		<attribute key="weight" value="100"/>
 	</item>
@@ -4829,7 +4836,14 @@
 	<item id="3082" article="an" name="elven amulet">
 		<attribute key="showCharges" value="1"/>
 		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentall" value="5"/>
+<!-- 		<attribute key="absorbpercentall" value="5"/> -->
+		<attribute key="absorbpercentphysical" value="5"/>
+		<attribute key="absorbpercentfire" value="5"/>
+		<attribute key="absorbpercentpoison" value="5"/>
+		<attribute key="absorbpercentenergy" value="5"/>
+		<attribute key="absorbpercentice" value="5"/>
+		<attribute key="absorbpercentholy" value="5"/>
+		<attribute key="absorbpercentdeath" value="5"/>
 		<attribute key="charges" value="50"/>
 		<attribute key="weight" value="270"/>
 	</item>
@@ -7920,7 +7934,7 @@
 	<item id="3987" article="a" name="dead troll">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="300"/>
-		<attribute key="decayTo" value="4252"/>
+		<attribute key="decayTo" value="3991"/>
 		<attribute key="containersize" value="10"/>
 		<attribute key="weight" value="60000"/>
 	</item>
@@ -7944,6 +7958,8 @@
 		<attribute key="weight" value="60000"/>
 	</item>
 	<item id="3991" article="a" name="dead troll">
+		<attribute key="duration" value="300"/>
+		<attribute key="decayTo" value="3992"/>
 		<attribute key="containersize" value="10"/>
 		<attribute key="weight" value="50000"/>
 	</item>
@@ -11597,7 +11613,7 @@
 	<item id="5960" article="a" name="dead troll">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4249"/>
+		<attribute key="decayTo" value="3987"/>
 		<attribute key="containersize" value="7"/>
 	</item>
 	<item id="5961" article="a" name="dead spider">
@@ -11641,7 +11657,7 @@
 	<item id="5968" article="a" name="dead wolf">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4268"/>
+		<attribute key="decayTo" value="4007"/>
 		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="5969" article="a" name="dead minotaur">
@@ -11664,7 +11680,7 @@
 	</item>
 	<item id="5972" article="a" name="slain skeleton">
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4285"/>
+		<attribute key="decayTo" value="4024"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5973" article="a" name="dead dragon">
@@ -11687,7 +11703,7 @@
 	</item>
 	<item id="5976" article="a" name="slain ghoul">
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4295"/>
+		<attribute key="decayTo" value="4034"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5977" article="a" name="dead giant spider">
@@ -11789,7 +11805,7 @@
 	</item>
 	<item id="5993" name="remains of a ghost">
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4290"/>
+		<attribute key="decayTo" value="4094"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5994" article="a" name="dead sheep">
@@ -32195,6 +32211,7 @@
 	</item>
 	<item id="21412" article="a" name="dead explorer"/>
 	<item id="21413" article="an" name="old parchment">
+		<attribute key="writeable" value="1"/>
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="21414" article="a" name="shallow water"/>
@@ -46121,8 +46138,9 @@
 	<item id="32020" article="a" name="trapdoor">
 		<attribute key="floorchange" value="down"/>
 	</item>
-	<item fromid="32021" toid="32035" name="addled egg">
-		<attribute key="weight" value="100"/>
+	<item id="32021" name="burning wall"/>
+	<item fromid="32022" toid="32035" name="addled egg">
+    	<attribute key="weight" value="100"/>
 	</item>
 	<item fromid="32036" toid="32038" name="reserved sprite"/>
 	<item fromid="32039" toid="32042" name="unknown"/>

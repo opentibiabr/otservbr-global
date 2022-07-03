@@ -5,10 +5,10 @@ monster.description = "a warlock"
 monster.experience = 4000
 monster.outfit = {
 	lookType = 130,
-	lookHead = 19,
-	lookBody = 71,
+	lookHead = 0,
+	lookBody = 52,
 	lookLegs = 128,
-	lookFeet = 128,
+	lookFeet = 95,
 	lookAddons = 1,
 	lookMount = 0
 }

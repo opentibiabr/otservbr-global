@@ -5,11 +5,11 @@ monster.description = "a true dawnfire asura"
 monster.experience = 7475
 monster.outfit = {
 	lookType = 1068,
-	lookHead = 79,
+	lookHead = 114,
 	lookBody = 94,
-	lookLegs = 120,
-	lookFeet = 79,
-	lookAddons = 0,
+	lookLegs = 79,
+	lookFeet = 121,
+	lookAddons = 1,
 	lookMount = 0
 }
 

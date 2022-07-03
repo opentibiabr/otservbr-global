@@ -225,7 +225,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.SearoutesAroundYalahar.Thais, 1)
 			player:setStorageValue(Storage.SearoutesAroundYalahar.TownsCounter, player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) + 1)
 			npcHandler:setTopic(playerId, 0)
-		elseif npcHandler:getTopic(playerId) == 7 and player:removeItem(5552,1,27) then
+		elseif npcHandler:getTopic(playerId) == 7 and player:removeItem(5552,1,13) then
 			npcHandler:say("I doubt that the esteemed Yalahari will indulge into something profane as rum. But who knows, I'll give it a try.", npc, creature)
 			player:setStorageValue(Storage.SearoutesAroundYalahar.LibertyBay, 1)
 			player:setStorageValue(Storage.SearoutesAroundYalahar.TownsCounter, player:getStorageValue(Storage.SearoutesAroundYalahar.TownsCounter) + 1)
