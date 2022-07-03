@@ -234,7 +234,6 @@ ItemAction = {
 			{x = 32662, y = 31496, z = 13}, -- mushroom quest
 			{x = 32703, y = 31506, z = 12}, -- small tunnel with golems
 			{x = 32720, y = 31488, z = 15} -- troll tribe's hideout
-			
 		}
 	},
 	[40024] = { -- levers
