@@ -5,13 +5,11 @@ function bellow.onStepIn(creature, item, position, fromPosition)
 	if not player then
 		return true
 	end
-
 	local crucibleItem = Tile(Position(32699, 31494, 11)):getItemById(7813)
 	if not crucibleItem then
 		return true
 	end
-
-	if crucibleItem.actionid == 0 then
+	if crucibleItem.actionid == 50119 then
 		crucibleItem:setActionId(50120)
 		Position(32696, 31494, 11):sendMagicEffect(CONST_ME_POFF)
 	elseif crucibleItem.actionid == 50120 then
@@ -25,5 +23,5 @@ function bellow.onStepIn(creature, item, position, fromPosition)
 end
 
 bellow:type("stepin")
-bellow:uid(50107)
+bellow:aid(40025)
 bellow:register()
