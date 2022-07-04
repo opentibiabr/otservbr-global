@@ -369,7 +369,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				local offerTable = getOfferByName(message, config.trophies, npcHandler:getTopic(playerId))
 				if offerTable ~= nil then
 					if player:getTaskHuntingPoints() >= offerTable.value then
-						if processItemInboxPurchase(player, offerTable.name, offerTable.itemId) and player:useTaskHuntingPoints(offerTable.value) then
+						if processItemInboxPurchase(player, offerTable.name, offerTable.itemId) and player:removeTaskHuntingPoints(offerTable.value) then
 							npcHandler:say("Here you have it.", npc, creature)
 						else
 							npcHandler:say("Sorry, but you don't have enough slots on your inbox or capacity.", npc, creature)
@@ -387,7 +387,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				local offerTable = getOfferByName(message, config.furniture, npcHandler:getTopic(playerId))
 				if offerTable ~= nil then
 					if player:getTaskHuntingPoints() >= offerTable.value then
-						if processItemInboxPurchase(player, offerTable.name, offerTable.itemId) and player:useTaskHuntingPoints(offerTable.value) then
+						if processItemInboxPurchase(player, offerTable.name, offerTable.itemId) and player:removeTaskHuntingPoints(offerTable.value) then
 							npcHandler:say("Here you have it.", npc, creature)
 						else
 							npcHandler:say("Sorry, but you don't have enough slots on your inbox or capacity.", npc, creature)
@@ -409,7 +409,7 @@ local function creatureSayCallback(npc, creature, type, message)
 						points = offerTable.base
 						if player:hasOutfit(offerTable.male) or player:hasOutfit(offerTable.female) then
 							npcHandler:say("You already have this outfit.", npc, creature)
-						elseif player:useTaskHuntingPoints(points) then
+						elseif player:removeTaskHuntingPoints(points) then
 							-- Add task hunting points history here.
 							player:addOutfit(offerTable.male)
 							player:addOutfit(offerTable.female)
@@ -421,7 +421,7 @@ local function creatureSayCallback(npc, creature, type, message)
 							npcHandler:say("First you need to buy the base addon to unlock this addon.", npc, creature)
 						elseif player:hasOutfit(offerTable.male, 1) or player:hasOutfit(offerTable.female, 1) then
 							npcHandler:say("You already have this addon.", npc, creature)
-						elseif player:useTaskHuntingPoints(points) then
+						elseif player:removeTaskHuntingPoints(points) then
 							-- Add task hunting points history here.
 							player:addOutfitAddon(offerTable.male, 1)
 							player:addOutfitAddon(offerTable.female, 1)
@@ -435,7 +435,7 @@ local function creatureSayCallback(npc, creature, type, message)
 							npcHandler:say("First you need to buy the base addon to unlock this addon.", npc, creature)
 						elseif player:hasOutfit(offerTable.male, 2) or player:hasOutfit(offerTable.female, 2) then
 							npcHandler:say("You already have this addon.", npc, creature)
-						elseif player:useTaskHuntingPoints(points) then
+						elseif player:removeTaskHuntingPoints(points) then
 							-- Add task hunting points history here.
 							player:addOutfitAddon(offerTable.male, 2)
 							player:addOutfitAddon(offerTable.female, 2)
@@ -458,7 +458,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					local points = offerTable.value
 					if player:hasMount(offerTable.mountId) then
 						npcHandler:say("You already have this mount.", npc, creature)
-					elseif player:useTaskHuntingPoints(points) then
+					elseif player:removeTaskHuntingPoints(points) then
 						-- Add task hunting points history here.
 						player:addMount(offerTable.mountId)
 						npcHandler:say("Here you have it.", npc, creature)
