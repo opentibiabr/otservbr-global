@@ -15,33 +15,30 @@ function mission9TheDeepestCatacombTeleport.onStepIn(creature, item, position, f
 	if not player then
 		return true
 	end
-
-	if item.uid == 12129 then
-		if player:getStorageValue(Storage.TheApeCity.Questline) >= 17 then
-			player:teleportTo(Position(32749, 32536, 10))
-			position:sendMagicEffect(CONST_ME_TELEPORT)
-			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-		else
-			player:teleportTo(fromPosition, true)
-			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You don't have access to this area.")
-		end
-	elseif item.uid == 12130 then
+	
+	if item.uid == 9257 and player:getStorageValue(Storage.TheApeCity.Questline) >= 17 then
+		player:teleportTo(Position(32749, 32536, 10))
+		position:sendMagicEffect(CONST_ME_TELEPORT)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	elseif item.uid == 9258 then
 		for i = 1, #config.amphoraPositions do
 			local amphoraItem = Tile(config.amphoraPositions[i]):getItemById(config.brokenAmphoraId)
 			if not amphoraItem then
 				player:teleportTo({x = 32852, y = 32544, z = 10})
 				position:sendMagicEffect(CONST_ME_TELEPORT)
 				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-				player:sendTextMessage(MESSAGE_EVENT_ADVANCE,
-					"There are 4 large amphoras that must be broken in order to open the teleporter.")
+				player:sendTextMessage(MESSAGE_EVENT_ADVANCE,"There are 4 large amphoras that must be broken in order to open the teleporter.")
+				return true
+			else
+				player:teleportTo({x = 32885, y = 32632, z = 11})
+				position:sendMagicEffect(CONST_ME_TELEPORT)
+				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 				return true
 			end
 		end
 	else
-		player:teleportTo({x = 32885, y = 32632, z = 11})
-		position:sendMagicEffect(CONST_ME_TELEPORT)
-		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-		return true
+		player:teleportTo(fromPosition, true)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You don't have access to this area.")
 	end
 end
 
