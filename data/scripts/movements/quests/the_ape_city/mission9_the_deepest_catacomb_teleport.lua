@@ -37,6 +37,7 @@ function mission9TheDeepestCatacombTeleport.onStepIn(creature, item, position, f
 				return true
 			end
 		end
+	else
 		player:teleportTo({x = 32885, y = 32632, z = 11})
 		position:sendMagicEffect(CONST_ME_TELEPORT)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
