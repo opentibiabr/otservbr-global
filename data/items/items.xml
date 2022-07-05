@@ -10232,7 +10232,7 @@
 		<attribute key="destroyto" value="4996"/>
 	</item>
 	<item id="4996" article="the" name="remains of a canopic jar">
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4995"/>
 	</item>
 	<item fromid="4997" toid="5000" article="a" name="hawser"/>
