@@ -112,7 +112,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.InServiceofYalahar.Questline, 16)
 			player:setStorageValue(Storage.InServiceofYalahar.NotesPalimuth, 0)
 			npcHandler:setTopic(playerId, 0)
-		elseif player:getStorageValue(9261) == 1 and player:getStorageValue(Storage.InServiceofYalahar.Questline) == 16 then
+		elseif player:getStorageValue(Storage.InServiceofYalahar.NotesPalimuth) == 1 and player:getStorageValue(Storage.InServiceofYalahar.Questline) == 16 then
 			npcHandler:say({
 				"Now you know as much as we do about the things happening in Yalahar. It's up to you what you do with this information. ...",
 				"Now leave and talk to my superior Azerus in the city centre to get your next mission. I urge you, though, to talk to me whenever he sends you on a new mission. ...",
