@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "the Abomination"
 monster.experience = 25000
 monster.outfit = {
-	lookType = 238,
+	lookType = 1393,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -16,7 +16,7 @@ monster.outfit = {
 monster.health = 38050
 monster.maxHealth = 38050
 monster.race = "venom"
-monster.corpse = 6532
+monster.corpse = 36612
 monster.speed = 340
 monster.manaCost = 0
 
