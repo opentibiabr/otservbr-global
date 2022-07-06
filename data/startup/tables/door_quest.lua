@@ -734,6 +734,10 @@ QuestDoorAction = {
 	[Storage.SecretService.CGBMission06] = {
 		itemId = 6260,
 		itemPos = {{x = 32180, y = 31933, z = 11}}
+	},
+	[Storage.OutfitQuest.Knight.RamsaysHelmetDoor] = {
+		itemId = 5122,
+		itemPos = {{x = 32860, y = 32517, z = 11}}
 	}
 }
 
