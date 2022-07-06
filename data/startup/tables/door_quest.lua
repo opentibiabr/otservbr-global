@@ -755,5 +755,10 @@ QuestDoorUnique = {
 	[22004] = {
 		itemId = 8363,
 		itemPos = {x = 32069, y = 31885, z = 6}
+	},
+	-- Secret Service
+	[22005] = {
+		itemId = 17710,
+		itemPos = {x = 32908, y = 32112, z = 7}
 	}
 }
