@@ -25,9 +25,9 @@ function theHiddenWagonLevers.onUse(player, item, fromPosition, target, toPositi
 			if tile:getItemById(7130) then
 				tile:getItemById(7130):transform(7121)
 			else
-				for loop = 7121, 7130 do
-					if tile:getItemById(loop) then
-						tile:getItemById(loop):transform(loop + 1)
+				for j = 7121, 7130 do
+					if tile:getItemById(j) then
+						tile:getItemById(j):transform(j + 1)
 						return item:transform(item.itemid == 8913 and 8914 or 8913)
 					end
 				end
