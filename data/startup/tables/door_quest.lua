@@ -730,6 +730,10 @@ QuestDoorAction = {
 	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor03] = {
 		itemId = 1644,
 		itemPos = {{x = 33001, y = 32047, z = 12}}
+	},
+	[Storage.SecretService.CGBMission06] = {
+		itemId = 6260,
+		itemPos = {{x = 32180, y = 31933, z = 11}}
 	}
 }
 
