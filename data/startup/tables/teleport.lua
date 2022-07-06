@@ -24,6 +24,10 @@ TeleportUnique = {
 	-- The first dragon quest
 	-- Path: data\scripts\movements\quests\first_dragon\entrance_teleport.lua
 	-- Tazhadur entrance
+	[3244] = {
+		itemId = 1949,
+		itemPos = {x = 33310, y = 31183, z = 7}
+	},
 	[35001] = {
 		itemId = 8649,
 		itemPos = {x = 33234, y = 32276, z = 12}
@@ -130,7 +134,15 @@ TeleportUnique = {
 		itemId = 10840,
 		itemPos = {x = 33498, y = 32613, z = 8}
 	},
-
+	[35021] = {
+		itemId = 1949,
+		itemPos = {x = 32615, y = 32484, z = 9}
+	},
+	[35022] = {
+		itemId = 1949,
+		itemPos = {x = 32615, y = 32484, z = 10}
+	},
+	
 	-- Simple teleports (They are registered automatically, without just configuring the table correctly)
 	-- Path: data\scripts\movements\others\teleport.lua
 
