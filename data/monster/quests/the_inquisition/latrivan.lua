@@ -5,10 +5,10 @@ monster.description = "Latrivan"
 monster.experience = 10000
 monster.outfit = {
 	lookType = 12,
-	lookHead = 120,
-	lookBody = 128,
-	lookLegs = 121,
-	lookFeet = 111,
+	lookHead = 118,
+	lookBody = 33,
+	lookLegs = 118,
+	lookFeet = 91,
 	lookAddons = 0,
 	lookMount = 0
 }
