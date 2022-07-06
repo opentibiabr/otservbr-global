@@ -105,6 +105,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			elseif npcHandler:getTopic(playerId) >= 2 and npcHandler:getTopic(playerId) <= 12 then --tome2 - tome12
 				npcHandler:say("Thank you! I look forward to reading this interesting discovery of yours and learn a few things about {Zao}.", npc, creature)
 				player:setStorageValue(TheNewFrontier.TomeofKnowledge, player:getStorageValue(TheNewFrontier.TomeofKnowledge) + 1)
+				if player:getStorageValue(TheNewFrontier.TomeofKnowledge) == 10 then
+					player:setStorageValue(TheNewFrontier.ZaoPalaceDoors, 1)
+				end
 				npcHandler:setTopic(playerId, player:getStorageValue(TheNewFrontier.TomeofKnowledge) +20)
 			elseif npcHandler:getTopic(playerId) == 13 then -- more then 12 tomes
 				player:addExperience(5000, true)

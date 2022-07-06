@@ -2149,6 +2149,7 @@ Storage = {
 						PigBank = 42728
 					},
 					TomeofKnowledge = 42729,
+					ZaoPalaceDoors = 42730
 				},
 			TomesOfKnowledge = {}, -- 42751 - 42780
 			UnnaturalSelection = {}, -- 42781 - 42830

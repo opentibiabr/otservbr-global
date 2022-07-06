@@ -738,6 +738,13 @@ QuestDoorAction = {
 	[Storage.OutfitQuest.Knight.RamsaysHelmetDoor] = {
 		itemId = 5122,
 		itemPos = {{x = 32860, y = 32517, z = 11}}
+	},
+	[Storage.Quest.U8_54.TheNewFrontier.ZaoPalaceDoors] = {
+		itemId = 9874,
+		itemPos = {
+			{x = 33161, y = 31265, z = 10},
+			{x = 33161, y = 31266, z = 10}
+		}
 	}
 }
 
