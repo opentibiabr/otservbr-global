@@ -5,10 +5,10 @@ monster.description = "a butterfly"
 monster.experience = 0
 monster.outfit = {
 	lookType = 227,
-	lookHead = 20,
-	lookBody = 30,
-	lookLegs = 40,
-	lookFeet = 50,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }

@@ -5,10 +5,10 @@ monster.description = "Grand Commander Soeren"
 monster.experience = 10000
 monster.outfit = {
 	lookType = 1071,
-	lookHead = 38,
-	lookBody = 94,
-	lookLegs = 38,
-	lookFeet = 86,
+	lookHead = 57,
+	lookBody = 96,
+	lookLegs = 76,
+	lookFeet = 105,
 	lookAddons = 2,
 	lookMount = 0
 }

@@ -5,10 +5,10 @@ monster.description = "a Crazed Summer Rearguard"
 monster.experience = 4700
 monster.outfit = {
 	lookType = 1136,
-	lookHead = 1,
+	lookHead = 114,
 	lookBody = 94,
-	lookLegs = 20,
-	lookFeet = 119,
+	lookLegs = 3,
+	lookFeet = 121,
 	lookAddons = 0,
 	lookMount = 0
 }

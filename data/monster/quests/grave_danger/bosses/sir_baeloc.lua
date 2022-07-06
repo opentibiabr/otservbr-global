@@ -5,10 +5,10 @@ monster.description = "a Sir Baeloc"
 monster.experience = 48300
 monster.outfit = {
 	lookType = 1222,
-	lookHead = 19,
-	lookBody = 0,
-	lookLegs = 0,
-	lookFeet = 0,
+	lookHead = 57,
+	lookBody = 81,
+	lookLegs = 3,
+	lookFeet = 93,
 	lookAddons = 1,
 	lookMount = 0
 }

@@ -11,5 +11,5 @@ function dwarvenLadder.onUse(player, item, fromPosition, itemEx, toPosition)
 	return false
 end
 
-dwarvenLadder:aid(42139)
+dwarvenLadder:aid(40022)
 dwarvenLadder:register()

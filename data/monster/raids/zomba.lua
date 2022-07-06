@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "Zomba"
 monster.experience = 300
 monster.outfit = {
-	lookType = 41,
+	lookType = 570,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -16,7 +16,7 @@ monster.outfit = {
 monster.health = 300
 monster.maxHealth = 300
 monster.race = "blood"
-monster.corpse = 5986
+monster.corpse = 19103
 monster.speed = 180
 monster.manaCost = 0
 

@@ -4,11 +4,11 @@ local monster = {}
 monster.description = "a Crazed Winter Vanguard"
 monster.experience = 5400
 monster.outfit = {
-	lookType = 1136,
-	lookHead = 0,
-	lookBody = 123,
-	lookLegs = 28,
-	lookFeet = 20,
+	lookType = 1137,
+	lookHead = 8,
+	lookBody = 67,
+	lookLegs = 8,
+	lookFeet = 1,
 	lookAddons = 1,
 	lookMount = 0
 }

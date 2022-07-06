@@ -108,11 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 						and turquoise sparkle attractors which we will need to actually contain ghost-emissions. ...",
 						"So are you in?"
 					},
-					npc, creature,
-					false,
-					true,
-					200
-				)
+					npc, creature)
 				npcHandler:setTopic(playerId, 18)
 			else
 				npcHandler:say(
@@ -121,11 +117,7 @@ local function creatureSayCallback(npc, creature, type, message)
 						new concepts. ...",
 						"Are you ready to help science once again?"
 					},
-					npc, creature,
-					false,
-					true,
-					200
-				)
+					npc, creature)
 				npcHandler:setTopic(playerId, 12)
 			end
 		elseif qStorage == 1 and tombsStorage >= 2 then
@@ -139,11 +131,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"Take the spirit cage from him and use it on the essence of a common ghost. Its essence will then be \z
 						sucked into the cage and we can study him right here in the safety of the academy walls."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "mission") then
@@ -152,11 +140,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Alright, you look bright enough to fulfil my requests - at least you do not fall asleep while standing there. \z
 					Ahem... I heard about a certain inventor who created a {magic device} to actually sail the {sea of light}. \z
 					Will you help me find him?",
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		elseif player:getStorageValue(Storage.SeaOfLight.Questline) == 1 then
 			npcHandler:say(
@@ -168,11 +152,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say(
 					"o have you talked to the beggar? What did he tell you? Where are the plans...? Wh...? He did? He is? \z
 					You've already got the plans? Beautiful!! Amazing! Alright it will take some time to recapitulate these plans.",
-					npc, creature,
-					false,
-					true,
-					200
-				)
+					npc, creature)
 				return true
 			end
 
@@ -183,54 +163,36 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say(
 				"So have you talked to the beggar? What did he tell you? Where are the plans...? Wh...? He did? He is? \z
 				You've already got the plans? Beautiful!! Amazing! Alright it will take some time to recapitulate these plans.",
-				npc, creature,
-				false,
-				true,
-				200
-			)
-			addEvent(releasePlayer, 1000, npc, creature)
+				npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 		elseif player:getStorageValue(Storage.SeaOfLight.Questline) == 3 then
 			local timeStorage = player:getStorageValue(Storage.SeaOfLight.StudyTimer)
 			if timeStorage > os.time() then
 				npcHandler:say(
 					"It will take some time to work out the initial problem of the device. Come back when I've found the \z
 					component needed to finish it. Alright, B connects to D and another two nails marked with S go... hmmm.",
-					npc, creature,
-					false,
-					true,
-					200
-				)
+					npc, creature)
 			elseif timeStorage > 0 and timeStorage < os.time() then
 				npcHandler:say(
 					"...connects to N942. Alright!! That's it! I just finished a prototype device! And it looks like I \z
 					figured out the initial failure. A very special crystal is needed for the device to work. Aren't \z
 					you as curious as me to know what went wrong?",
-					npc, creature,
-					false,
-					true,
-					200
-				)
+					npc, creature)
 				npcHandler:setTopic(playerId, 2)
 			end
 		elseif player:getStorageValue(Storage.SeaOfLight.Questline) == 4 then
 			npcHandler:say(
 				"Did you enter the Lost Mines yet? They are west of Edron, close to the sea. You will also need a \z
 				pick once you get to the crystal deposit.",
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 		elseif player:getStorageValue(Storage.SeaOfLight.Questline) == 5 then
 			if player:getItemCount(9697) == 0 then
 				npcHandler:say(
 					"Hm, so did you find a rare crystal? Show me... hey! That's not a rare crystal. What... where did \z
 					you get that anyway? Please return to me with the right crystal.",
-					npc, creature,
-					false,
-					true,
-					200
-				)
+					npc, creature)
 				return true
 			end
 			player:addExperience(500, true)
@@ -243,12 +205,10 @@ local function creatureSayCallback(npc, creature, type, message)
 					bringing it to a merchant. ...",
 					"Please return here if you want to continue helping me with another mission."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
-			addEvent(releasePlayer, 1000, npc, creature)
+				npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 3000)
 		elseif player:getStorageValue(Storage.SeaOfLight.Questline) == 6 then
 			npcHandler:say(
 				"Well, the only thing left to do would be to offer the crystal at the well of the collector. There \z
@@ -260,11 +220,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Found the well yet? Look on one of the ice isles near Carlin. I'm perfectly sure that the well \z
 				with the pedestal is located on one of them. And be careful with the carrying device, I only have \z
 				this one prototype.",
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 		elseif player:getStorageValue(Storage.SeaOfLight.Questline) == 8 then
 			npcHandler:say(
 				"So have you found the well and entered the lair? I hope you can find the {mirror crystal}\z
@@ -291,11 +247,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"After the debacle with the crystal, I started focussing on other things. There are also some {tasks} \z
 				that still need to be done. If you can spare the time to continue helping me, it shall not be to your \z
 				disadvantage. So are you in for another mission?",
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 27)
 		elseif player:getStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine) == 2 then
 			npcHandler:say("So you found him? Have you talked to {Jack} yet?", npc, creature)
@@ -340,7 +292,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 10)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif MsgContains(message, "yes") then
+	elseif MsgContains(message, "yes") and player:getStorageValue(Storage.SeaOfLight.Questline) < 1 then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:addExperience(100, true)
 			player:setStorageValue(Storage.SeaOfLight.Questline, 1)
@@ -351,12 +303,10 @@ local function creatureSayCallback(npc, creature, type, message)
 					"A beggar here in Edron brags about how smart he is and that he knows about a man who lost his \z
 					sanity because of an experiment, but he won't tell anyone any details. Maybe he knows more."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
-			addEvent(releasePlayer, 1000, npc, creature)
+				npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 3000)
 		elseif npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say(
 				"The device needs a special crystal. It's called {mirror crystal}. The inventor somehow damaged it \z
@@ -384,11 +334,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"I will mark the location of the mines on your map. Be careful when entering these muddy depths and \z
 					don't forget that you will need a pick to gather the crystals."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 5 then
 			npcHandler:say(
@@ -427,12 +373,10 @@ local function creatureSayCallback(npc, creature, type, message)
 					"...I need some time to get over this. What? Oh, yes you can take the remains if you like. \z
 					Just get it out of my sight."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
-			addEvent(releasePlayer, 1000, npc, creature)
+				npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 5000)
 		elseif npcHandler:getTopic(playerId) == 12 then
 			npcHandler:say(
 				"Of course you are. And here we go. I have to ask some questions first. One: You aint \z
@@ -453,11 +397,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					collective apparitions, ectoplasmic segregations, ecto-magical field phenomena, \z
 					neuro-speculative sub-conscious awareness of spirits, ghosts and/or ghasts."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 15)
 		elseif npcHandler:getTopic(playerId) == 16 then
 			npcHandler:say(
@@ -470,11 +410,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"And that is exactly where we come in! Oh, and you of course. We will not only explain \z
 					them - we will ''remove'' them. Just tell me whenever you are ready to help us with our research."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 17)
 		elseif npcHandler:getTopic(playerId) == 18 then
 			npcHandler:say(
@@ -492,7 +428,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			npc, creature)
 			player:addExperience(500, true)
 			player:addItem(3035, 5)
-			addEvent(releasePlayer, 1000, npc, creature)
+			addEvent(function()
+				releasePlayer(npc, creature)
+			end, 1000)
 			player:setStorageValue(Storage.SpiritHunters.Mission01, 2)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 27 then
@@ -516,11 +454,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					travelling to the future, but to another {dimension}, {parallel} to ours. There is still a chance to rescue \z
 					him - and you can help me. What do you say?"
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 28)
 		elseif npcHandler:getTopic(playerId) == 28 then
 			npcHandler:say(
@@ -539,11 +473,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					course of time where he never was the person I once knew. ...",
 					"Now you know it all. Still want to help?"
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 29)
 		elseif npcHandler:getTopic(playerId) == 29 then
 			npcHandler:say(
@@ -555,11 +485,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					and find out who exactly we are dealing with now. ...",
 					"I will mark his current location on your map, just ask him about me and see what happens - good luck."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			player:setStorageValue(Storage.SeaOfLight.Questline, 11)
 			player:setStorageValue(Storage.TibiaTales.DefaultStart, 1)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 1)
@@ -582,11 +508,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"A rocking horse. He just loved it! Find these items, buy them if you need to and place them \z
 					where {Jack} lives. Ask him about the furniture and don't forget to tell me about his reaction!"
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 3)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 32 then
@@ -601,11 +523,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					"But be careful, the {dimensional} shift could mean that they will not even know what you're \z
 					talking about since they are more closely linked to him than anyone else."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 5)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 33 then
@@ -619,11 +537,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					science - you MUST convince him, no matter what! ...",
 					"Or everything we achieved would be in vain. We can still save Jack! Now go and do what you must do."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			player:setStorageValue(Storage.TibiaTales.JackFutureQuest.QuestLine, 7)
 			npcHandler:setTopic(playerId, 0)
 		end
@@ -693,11 +607,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				laughter anyway - but suddenly there were stairs. Incredibly large stairs that led to the underworld. \z
 				A world deep under the sea - can you believe this?"
 			},
-			npc, creature,
-			false,
-			true,
-			200
-		)
+			npc, creature)
 		npcHandler:setTopic(playerId, 21)
 	elseif
 		MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 21 and
@@ -719,11 +629,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					indeed have my original notes. ...",
 					"Oh and just in case you want to complete what I have started - feel free to do so. Up to it?"
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 22)
 		end
 	elseif
@@ -746,11 +652,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					there will be no further problems for you down there. Except- ah, well youll find \z
 					out yourself soon enough, wont you?"
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			npcHandler:setTopic(playerId, 23)
 		end
 	elseif
@@ -764,11 +666,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					sure you will find support along your way. And - be careful. The sea can \z
 					appear pitch black down there."
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			player:setStorageValue(Storage.LiquidBlackQuest.Visitor, 4)
 			npcHandler:setTopic(playerId, 24)
 		end
@@ -786,11 +684,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					into a temple ruin. If we find that ruin, we could find out if there's a relation. ...",
 				"Are you willing to help me?"
 			},
-			npc, creature,
-			false,
-			true,
-			200
-		)
+			npc, creature)
 		npcHandler:setTopic(playerId, 25)
 	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 25 then
 		if npcHandler:getTopic(playerId) == 25 then
@@ -800,11 +694,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					sunken temple probably half drowned in water. Return to me if you find \z
 					anything interesting!"
 				},
-				npc, creature,
-				false,
-				true,
-				200
-			)
+				npc, creature)
 			player:setStorageValue(Storage.TheSecretLibrary.LiquidDeath, 1)
 			npcHandler:setTopic(playerId, 0)
 		end

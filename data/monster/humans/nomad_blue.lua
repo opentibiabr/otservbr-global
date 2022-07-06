@@ -1,15 +1,16 @@
-local mType = Game.createMonsterType("Nomad")
+local mType = Game.createMonsterType("Nomad Blue")
 local monster = {}
 
+monster.name = "Nomad"
 monster.description = "a nomad"
 monster.experience = 60
 monster.outfit = {
-	lookType = 150,
-	lookHead = 115,
-	lookBody = 39,
-	lookLegs = 59,
-	lookFeet = 2,
-	lookAddons = 2,
+	lookType = 146,
+	lookHead = 104,
+	lookBody = 48,
+	lookLegs = 49,
+	lookFeet = 3,
+	lookAddons = 3,
 	lookMount = 0
 }
 
@@ -29,7 +30,7 @@ monster.Bestiary = {
 monster.health = 160
 monster.maxHealth = 160
 monster.race = "blood"
-monster.corpse = 18181
+monster.corpse = 18322
 monster.speed = 190
 monster.manaCost = 0
 

@@ -5,10 +5,10 @@ monster.description = "an elder mummy"
 monster.experience = 560
 monster.outfit = {
 	lookType = 65,
-	lookHead = 20,
-	lookBody = 30,
-	lookLegs = 40,
-	lookFeet = 50,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }

@@ -5,10 +5,10 @@ monster.description = "an animated snowman"
 monster.experience = 400
 monster.outfit = {
 	lookType = 1159,
-	lookHead = 19,
-	lookBody = 10,
-	lookLegs = 19,
-	lookFeet = 57,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }

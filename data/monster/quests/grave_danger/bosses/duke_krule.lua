@@ -5,10 +5,10 @@ monster.description = "a Duke Krule"
 monster.experience = 46300
 monster.outfit = {
 	lookType = 1221,
-	lookHead = 19,
-	lookBody = 0,
-	lookLegs = 0,
-	lookFeet = 0,
+	lookHead = 8,
+	lookBody = 8,
+	lookLegs = 19,
+	lookFeet = 79,
 	lookAddons = 3,
 	lookMount = 0
 }
