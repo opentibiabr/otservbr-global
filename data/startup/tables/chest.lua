@@ -1097,5 +1097,10 @@ ChestUnique = {
 	[14039] = {
 		itemId = 2469,
 		itemPos = {x = 32701, y = 31082, z = 8}
+	},
+	-- Royal Rescue Quest
+	[14040] = {
+		itemId = 2435,
+		itemPos = {x = 32621, y = 31404, z = 10}
 	}
 }

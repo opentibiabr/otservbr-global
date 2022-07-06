@@ -334,6 +334,39 @@ name = "Manifest of the Yalahari, Part I"}
 		storage = Storage.InServiceofYalahar.AlchemistFormula,
 		formerValue = 0,
 		newValue = 1
+	},
+	[14040] = {
+		items = {
+			{itemId = 2832, text = [[
+Tunnelling guide
+----------------
+by Gromward Hammerfist
+
+'The art of building a tunnel lies in the nature of dwarfes.' That's what my grand grand grandfather used to say. First of all I'd like to give you a small historical review of tunnelling. .....<you skip the first 1000 pages containing dwarfen tunnelling history>.
+
+Repairing collapsed tunnels:
+Equipment: Pick, tree or bricklayers kit
+Before picking away the rubble you need to place a buttress otherwise the tunnel will collapse over and over again. If you don't have a matching tree at hand you could still build a brickwall to stabilize the tunnel. Good luck!
+
+Repairing gaps:
+Equipment: Wood, wooden ties, hammer, nails, metal fitting
+For each missing part (on the basis of a standard rail) I recommend to use three pieces of wood. Lock them in position by at least 6 nails. For the rail itself use a saw on a piece of wood to build your wooden ties. Then place two metal fittings on them and you can make your first ride on your new rail. Congratulations!
+
+Building a rail on lava:
+I advice not to try that until you have at least 20 years experience in rail construction......<Well, seems like you don't match the premises.>
+
+Adventuring old tunnels:
+Be aware that our kind mastered the art of tunnelling. It may take you a whole life to understand the techniques that are used and it takes generations to know all the tunnels of a mine and all their exits. You even may find an exit that you never expected to.
+
+To sum up
+If you are no dwarf don't even try to think that you have a chance of mastering the art of tunnelling. If you are a dwarf I wish you good luck and don't abandon faith. There is a light at the end of the tunnel.
+
+Yours
+
+Gromward Hammerfist]],
+name = "Tunnelling Guide"}
+		},
+		storage = Storage.HiddenCityOfBeregar.TunnellingGuide
 	}
 	-- 65203 reservado
 }
@@ -384,6 +417,7 @@ function questSystem2.onUse(player, item, fromPosition, target, toPosition, isHo
 		if items[1].text then
 			reward:setText(items[1].text)
 		end
+		
 		if items[1].name then
 			reward:setName(items[1].name)
 		end
@@ -411,6 +445,7 @@ function questSystem2.onUse(player, item, fromPosition, target, toPosition, isHo
 				if items[i].text then
 					tmp:setText(items[i].text)
 				end
+				
 				if items[i].name then
 					tmp:setName(items[i].name)
 				end
