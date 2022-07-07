@@ -24,10 +24,6 @@ TeleportUnique = {
 	-- The first dragon quest
 	-- Path: data\scripts\movements\quests\first_dragon\entrance_teleport.lua
 	-- Tazhadur entrance
-	[35000] = {
-		itemId = 1949,
-		itemPos = {x = 32998, y = 31177, z = 6}
-	},
 	[35001] = {
 		itemId = 8649,
 		itemPos = {x = 33234, y = 32276, z = 12}
