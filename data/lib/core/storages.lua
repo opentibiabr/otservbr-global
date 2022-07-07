@@ -2085,7 +2085,9 @@ Storage = {
 			TheHuntForTheSeaSerpent = {},
 			TheInquisition = {},
 			TheThievesGuild = {},
-			TrollSabotage = {},
+			TrollSabotage = {
+			Questline = 41840,
+			JumpTimer = 41841},
 			VampireHunter = {},
 		},
 		U8_4 = { -- update 8.4 - Reserved Storages 41901 - 42150
