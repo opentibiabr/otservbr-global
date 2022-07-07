@@ -30,7 +30,7 @@ end
 local function helmet(player, item, fromPosition, position)
 	local headItem = player:getSlotItem(CONST_SLOT_HEAD)
 	if not headItem then
-	 	player:teleportTo(position)
+		player:teleportTo(position)
 		position:sendMagicEffect(CONST_ME_TELEPORT)
 		return true
 	end
