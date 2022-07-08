@@ -2151,7 +2151,8 @@ Storage = {
 						PigBank = 42728
 					},
 					TomeofKnowledge = 42729,
-					ZaoPalaceDoors = 42730
+					ZaoPalaceDoors = 42730, -- 10th Tome: Zao Palace
+					SnakeHeadTeleport = 42731 -- 7th Tome: Snake Head Teleport
 				},
 			TomesOfKnowledge = {}, -- 42751 - 42780
 			UnnaturalSelection = {}, -- 42781 - 42830
