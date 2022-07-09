@@ -21,8 +21,8 @@ monster.Bestiary = {
 	FirstUnlock = 50,
 	SecondUnlock = 500,
 	CharmsPoints = 25,
-	Stars = 3, 
-	Occurrence = 0, 
+	Stars = 3,
+	Occurrence = 0,
 	Locations = "" --tofix
 	}
 
