@@ -23,6 +23,7 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+local tomes = Storage.Quest.U8_54.TheNewFrontier.TomeofKnowledge
 npcConfig.shop = {
 	{ name = "backpack", clientId = 2854, buy = 20 },
 	{ name = "bag", clientId = 2853, buy = 5 },
@@ -49,38 +50,38 @@ npcConfig.shop = {
 	{ name = "mirror", clientId = 3463, sell=10 },
 	{ name = "sickle", clientId = 3293, sell=3 },
 	-- 1 tome
-	{ name = "arrow", clientId = 3447, buy = 3 },
-	{ name = "bolt", clientId = 3446, buy = 4 },
-	{ name = "bow", clientId = 3350, buy = 400, sell=100 },
-	{ name = "crossbow", clientId = 3349, buy = 500, sell=120 },
-	{ name = "crystalline arrow", clientId = 15793, buy = 20 },
-	{ name = "diamond arrow", clientId = 35901, buy = 100 },
-	{ name = "dragon tapestry", clientId = 10347, buy = 80 },
-	{ name = "drill bolt", clientId = 16142, buy = 12 },
-	{ name = "earth arrow", clientId = 774, buy = 5 },
-	{ name = "envenomed arrow", clientId = 16143, buy = 12 },
-	{ name = "flaming arrow", clientId = 763, buy = 5 },
-	{ name = "flash arrow", clientId = 761, buy = 5 },
-	{ name = "onyx arrow", clientId = 7365, buy = 7 },
-	{ name = "piercing bolt", clientId = 7363, buy = 5 },
-	{ name = "power bolt", clientId = 3450, buy = 7 },
-	{ name = "prismatic bolt", clientId = 16141, buy = 20 },
-	{ name = "royal spear", clientId = 7378, buy = 15 },
-	{ name = "shiver arrow", clientId = 762, buy = 5 },
-	{ name = "sniper arrow", clientId = 7364, buy = 5 },
-	{ name = "spear", clientId = 3277, buy = 9, sell=3 },
-	{ name = "spectral bolt", clientId = 35902, buy = 70 },
-	{ name = "tarsal arrow", clientId = 14251, buy = 6 },
-	{ name = "throwing star", clientId = 3287, buy = 42 },
-	{ name = "vortex bolt", clientId = 14252, buy = 6 },
-	{ name = "corrupted flag", clientId = 10409, sell=700 },
-	{ name = "high guard flag", clientId = 10415, sell=550 },
-	{ name = "legionnaire flags", clientId = 10417, sell=500 },
-	{ name = "zaogun flag", clientId = 10413, sell=600 },
+	{ name = "arrow", clientId = 3447, buy = 3, storageKey = tomes, storageValue = 1 },
+	{ name = "bolt", clientId = 3446, buy = 4, storageKey = tomes, storageValue = 1 },
+	{ name = "bow", clientId = 3350, buy = 400, sell=100, storageKey = tomes, storageValue = 1 },
+	{ name = "crossbow", clientId = 3349, buy = 500, sell=120, storageKey = tomes, storageValue = 1 },
+	{ name = "crystalline arrow", clientId = 15793, buy = 20, storageKey = tomes, storageValue = 1 },
+	{ name = "diamond arrow", clientId = 35901, buy = 100, storageKey = tomes, storageValue = 1 },
+	{ name = "dragon tapestry", clientId = 10347, buy = 80, storageKey = tomes, storageValue = 1 },
+	{ name = "drill bolt", clientId = 16142, buy = 12, storageKey = tomes, storageValue = 1 },
+	{ name = "earth arrow", clientId = 774, buy = 5, storageKey = tomes, storageValue = 1 },
+	{ name = "envenomed arrow", clientId = 16143, buy = 12, storageKey = tomes, storageValue = 1 },
+	{ name = "flaming arrow", clientId = 763, buy = 5, storageKey = tomes, storageValue = 1 },
+	{ name = "flash arrow", clientId = 761, buy = 5, storageKey = tomes, storageValue = 1 },
+	{ name = "onyx arrow", clientId = 7365, buy = 7, storageKey = tomes, storageValue = 1 },
+	{ name = "piercing bolt", clientId = 7363, buy = 5, storageKey = tomes, storageValue = 1 },
+	{ name = "power bolt", clientId = 3450, buy = 7, storageKey = tomes, storageValue = 1 },
+	{ name = "prismatic bolt", clientId = 16141, buy = 20, storageKey = tomes, storageValue = 1 },
+	{ name = "royal spear", clientId = 7378, buy = 15, storageKey = tomes, storageValue = 1 },
+	{ name = "shiver arrow", clientId = 762, buy = 5, storageKey = tomes, storageValue = 1 },
+	{ name = "sniper arrow", clientId = 7364, buy = 5, storageKey = tomes, storageValue = 1 },
+	{ name = "spear", clientId = 3277, buy = 9, sell=3, storageKey = tomes, storageValue = 1 },
+	{ name = "spectral bolt", clientId = 35902, buy = 70, storageKey = tomes, storageValue = 1 },
+	{ name = "tarsal arrow", clientId = 14251, buy = 6, storageKey = tomes, storageValue = 1 },
+	{ name = "throwing star", clientId = 3287, buy = 42, storageKey = tomes, storageValue = 1 },
+	{ name = "vortex bolt", clientId = 14252, buy = 6, storageKey = tomes, storageValue = 1 },
+	{ name = "corrupted flag", clientId = 10409, sell=700, storageKey = tomes, storageValue = 1 },
+	{ name = "high guard flag", clientId = 10415, sell=550, storageKey = tomes, storageValue = 1 },
+	{ name = "legionnaire flags", clientId = 10417, sell=500, storageKey = tomes, storageValue = 1 },
+	{ name = "zaogun flag", clientId = 10413, sell=600, storageKey = tomes, storageValue = 1 },
 	-- 2 tomes
-	{ name = "minotaur backpack", clientId = 10327, buy = 200 },
+	{ name = "minotaur backpack", clientId = 10327, buy = 200, storageKey = tomes, storageValue = 2 },
 	-- 5 tomes
-	{ name = "dragon backpack", clientId = 10326, buy = 200 }
+	{ name = "dragon backpack", clientId = 10326, buy = 200, storageKey = tomes, storageValue = 5 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

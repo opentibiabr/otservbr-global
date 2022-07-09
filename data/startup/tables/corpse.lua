@@ -12,7 +12,7 @@ CorpseAction = {
 	-- Others actions
 	-- Threatened dreams quest
 	[20002] = {
-		itemId = 6082,
+		itemId = 4285,
 		itemPos = {{x = 32949, y = 31810, z = 7}}
 	},
 }

@@ -50,6 +50,29 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local tomes = Storage.Quest.U8_54.TheNewFrontier.TomeofKnowledge
+local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+
+	if not npcHandler:checkInteraction(npc, creature) then
+		return false
+	end
+
+	if MsgContains(message, "rice") and player:getStorageValue(tomes) > 3 then
+		npcHandler:say("Aaargh! Cael and his strange thoughts! He bugged me so long about the lizard culture that I eventually agreed to prepare that rice for you if you need it. I need one ripe rice plant to prepare ten rice balls. OK?", npc, creature)
+		npcHandler:setTopic(playerId, 1)
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
+		if player:removeItem(10328, 1) then
+			npcHandler:say("Here you go. 10 rice balls. Hope you buy a beer with them at least.", npc, creature)
+			player:addItem(10329, 10)
+		else
+			npcHandler:say("You don't have a ripe rice plant. Thank fire and earth I was spared.", npc, creature)
+		end
+	end
+	return true
+end
+
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
@@ -61,7 +84,6 @@ npcConfig.shop = {
 	{ itemName = "meat", clientId = 3577, buy = 5 },
 	{ itemName = "mug of beer", clientId = 2880, buy = 2, count = 3 },
 	{ itemName = "mug of water", clientId = 2880, buy = 1, count = 1 },
-	{ itemName = "rice", clientId = 10329, buy = 1000 },
 	{ itemName = "terramite eggs", clientId = 10453, sell = 50 }
 }
 -- On buy npc shop message
@@ -76,5 +98,18 @@ end
 -- On check npc shop message (look item)
 npcType.onCheckItem = function(npc, player, clientId, subType)
 end
+-- Basic
+keywordHandler:addKeyword({"job"}, StdModule.say, {npcHandler = npcHandler, text = "Well, you see me standing behind a bar. Selling drinks. Food. And stuff. Now try figuring out what I could be making a living of down here."})
+keywordHandler:addKeyword({"food"}, StdModule.say, {npcHandler = npcHandler, text = "I can offer you bread, cheese, ham, or meat. And as drinks we serve beer and water. If you'd like to see what we have to offer, just ask me for a trade."})
+keywordHandler:addAliasKeyword({"offer"})
+keywordHandler:addAliasKeyword({"drinks"})
+keywordHandler:addAliasKeyword({"buy"})
+keywordHandler:addAliasKeyword({"sell"})
+keywordHandler:addAliasKeyword({"equipment"})
+keywordHandler:addAliasKeyword({"goods"})
+keywordHandler:addAliasKeyword({"stuff"})
+keywordHandler:addAliasKeyword({"ware"})
+npcHandler:setMessage(MESSAGE_SENDTRADE, "Take a look, but not a sip before you've paid. And I hope it stays like this and you don't get any strange ideas about {rice}.")
+npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 
 npcType:register(npcConfig)

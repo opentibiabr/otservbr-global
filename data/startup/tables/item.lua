@@ -286,6 +286,13 @@ ItemAction = {
 			{x = 32619, y = 31514, z = 9}
 		}
 	},
+	-- An Uneasy Alliance
+	[40030] = { -- crystal ball
+		itemId = false,
+		itemPos = {
+			{x = 33155, y = 31297, z = 3}
+		}
+	},
 }
 
 ItemUnique = {

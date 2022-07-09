@@ -9453,10 +9453,9 @@
 	<item fromid="4283" toid="4284" article="a" name="pile of bones">
 		<attribute key="weight" value="700"/>
 	</item>
-	<item id="4285" article="a" name="pile of bones">
-		<attribute key="duration" value="60"/>
-		<attribute key="decayTo" value="0"/>
-		<attribute key="weight" value="10000"/>
+	<item id="4285" article="a" name="pile of bones"> <!-- quest item -->
+		<attribute key="moveable" value="0"/>
+		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="4286" article="a" name="dead dragon">
 		<attribute key="fluidsource" value="blood"/>
@@ -19512,7 +19511,7 @@
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="10185" article="a" name="swich"/>
-	<item id="10186" article="a" name="crystal ball">
+	<item id="10186" article="a" name="scrying ball">
 		<attribute key="weight" value="3400"/>
 	</item>
 	<item id="10187" article="a" name="rare crystal">
