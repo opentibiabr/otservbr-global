@@ -109,6 +109,8 @@ local function creatureSayCallback(npc, creature, type, message)
 					player:setStorageValue(TheNewFrontier.ZaoPalaceDoors, 1)
 				elseif player:getStorageValue(TheNewFrontier.TomeofKnowledge) == 7 then
 					player:setStorageValue(TheNewFrontier.SnakeHeadTeleport, 1)
+				elseif player:getStorageValue(TheNewFrontier.TomeofKnowledge) == 8 then
+					player:setStorageValue(TheNewFrontier.CorruptionHole, 1)
 				end
 				npcHandler:setTopic(playerId, player:getStorageValue(TheNewFrontier.TomeofKnowledge) +20)
 			elseif npcHandler:getTopic(playerId) == 13 then -- more then 12 tomes

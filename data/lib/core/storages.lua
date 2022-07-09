@@ -2154,7 +2154,8 @@ Storage = {
 					},
 					TomeofKnowledge = 42729,
 					ZaoPalaceDoors = 42730, -- 10th Tome: Zao Palace
-					SnakeHeadTeleport = 42731 -- 7th Tome: Snake Head Teleport
+					SnakeHeadTeleport = 42731, -- 7th Tome: Snake Head Teleport
+					CorruptionHole = 42732 -- 8th Tome: Corruption Hole
 				},
 			TomesOfKnowledge = {}, -- 42751 - 42780
 			UnnaturalSelection = {}, -- 42781 - 42830

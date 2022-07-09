@@ -1078,6 +1078,12 @@ TileAction = {
 			{x = 33231, y = 31762, z = 2},
 			{x = 33231, y = 31760, z = 2}
 		}
+	},
+	[50366] = { -- Corruption Hole
+		itemId = false,
+		itemPos = {
+			{x = 33345, y = 31116, z = 7}
+		}
 	}
 }
 
