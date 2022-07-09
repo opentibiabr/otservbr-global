@@ -211,6 +211,81 @@ ItemAction = {
 			{x = 32680, y = 31509, z = 12}
 		}
 	},
+	[40023] = { -- wagons
+		itemId = false,
+		itemPos = {
+			{x = 32578, y = 31488, z = 9}, -- start
+			{x = 32577, y = 31508, z = 9}, -- bridge stage after completion
+			{x = 32628, y = 31514, z = 9}, -- rubble stage after completion
+			{x = 32599, y = 31505, z = 13}, -- city's entrance
+			{x = 32603, y = 31339, z = 11}, -- location exit
+			{x = 32700, y = 31452, z = 13}, -- corner maze room
+			{x = 32699, y = 31492, z = 11}, -- coal wagon logic
+			{x = 32688, y = 31471, z = 13}, -- maze logic update map
+			{x = 32570, y = 31508, z = 9}, -- bridge stage
+			{x = 32615, y = 31514, z = 9}, -- rubble stage
+			{x = 32651, y = 31508, z = 10}, -- broken bridge
+			{x = 32633, y = 31508, z = 10}, -- stairs
+			{x = 32693, y = 31502, z = 11}, -- wagon station
+			{x = 32688, y = 31472, z = 13}, -- maze
+			{x = 32683, y = 31508, z = 10}, -- ladder
+			{x = 32548, y = 31408, z = 11}, -- infested tavern
+			{x = 32700, y = 31449, z = 15}, -- npc tehlim
+			{x = 32662, y = 31496, z = 13}, -- mushroom quest
+			{x = 32703, y = 31506, z = 12}, -- small tunnel with golems
+			{x = 32720, y = 31488, z = 15} -- troll tribe's hideout
+		}
+	},
+	[40024] = { -- levers
+		itemId = false,
+		itemPos = {
+			{x = 32689, y = 31470, z = 13}, -- 1
+			{x = 32685, y = 31465, z = 13}, -- 2
+			{x = 32691, y = 31464, z = 13}, -- 3
+			{x = 32696, y = 31465, z = 13}, -- 4
+			{x = 32696, y = 31462, z = 13}, -- 5
+			{x = 32693, y = 31458, z = 13}, -- 6
+			{x = 32687, y = 31457, z = 13}, -- 7
+			{x = 32683, y = 31455, z = 13}, -- 8
+			{x = 32686, y = 31452, z = 13}, -- 9
+			{x = 32691, y = 31452, z = 13}, -- 10
+			{x = 32697, y = 31454, z = 13}, -- 11
+			{x = 32691, y = 31495, z = 11}, -- stastion 1
+			{x = 32693, y = 31495, z = 11}, -- stastion 2
+			{x = 32695, y = 31495, z = 11}, -- stastion 3
+			{x = 32697, y = 31495, z = 11}	-- stastion 4
+		}
+	},
+	[40025] = { -- bellow
+		itemId = false,
+		itemPos = {
+			{x = 32699, y = 31495, z = 11}
+		}
+	},
+	[40026] = { -- crucible
+		itemId = false,
+		itemPos = {
+			{x = 32699, y = 31494, z = 11}
+		}
+	},
+	[40027] = { -- archway
+		itemId = false,
+		itemPos = {
+			{x = 32617, y = 31513, z = 9}
+		}
+	},
+	[40028] = { -- rubble
+		itemId = false,
+		itemPos = {
+			{x = 32619, y = 31514, z = 9}
+		}
+	},
+	[40029] = { -- tunnel
+		itemId = 7122,
+		itemPos = {
+			{x = 32619, y = 31514, z = 9}
+		}
+	},
 }
 
 ItemUnique = {

@@ -12,5 +12,5 @@ function tunnel.onStepIn(creature, item, position, fromPosition)
 end
 
 tunnel:type("stepin")
-tunnel:aid(50116)
+tunnel:aid(40029)
 tunnel:register()
