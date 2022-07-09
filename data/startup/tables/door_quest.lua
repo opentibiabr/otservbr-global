@@ -745,6 +745,10 @@ QuestDoorAction = {
 			{x = 33161, y = 31265, z = 10},
 			{x = 33161, y = 31266, z = 10}
 		}
+	},
+	[Storage.Quest.U8_54.AnUneasyAlliance.QuestDoor] = {
+		itemId = false,
+		itemPos = {{x = 33047, y = 31295, z = 7}}
 	}
 }
 
