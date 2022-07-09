@@ -145,7 +145,6 @@ TeleportUnique = {
 		itemId = 1949,
 		itemPos = {x = 32615, y = 32484, z = 10}
 	},
-	
 	-- Simple teleports (They are registered automatically, without just configuring the table correctly)
 	-- Path: data\scripts\movements\others\teleport.lua
 
