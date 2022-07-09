@@ -18,10 +18,19 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+npcConfig.voices = {
+	interval = 15000,
+	chance = 50,
+	{text = "I wish I could learn more about this strange world."},
+	{text = "Those different cultures are amazing."},
+	{text = "What an interesting continent."}
+}
+
+local tomes = Storage.Quest.U8_54.TheNewFrontier.TomeofKnowledge
 -- Npc shop
 npcConfig.shop = {
-	{ itemName = "didgeridoo", clientId = 2965, count = 1 },
-	{ itemName = "war drum", clientId = 2966, count = 1 }
+	{ itemName = "didgeridoo", clientId = 2965, buy = 5000, storageKey = tomes, storageValue = 6 },
+	{ itemName = "war drum", clientId = 2966, buy = 1000, storageKey = tomes, storageValue = 6 },
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
@@ -372,7 +381,7 @@ local function onTradeRequest(npc, creature)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if player:getStorageValue(TheNewFrontier.TomeofKnowledge) >= 6 then
+	if player:getStorageValue(TheNewFrontier.TomeofKnowledge) < 6 then
 		npcHandler:say("Sorry, I don't have items to trade now.", npc, creature)
 		return false
 	end
