@@ -3871,6 +3871,7 @@
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="2820" article="a" name="sheet of paper">
+		<attribute key="writeable" value="1"/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="2821" article="a" name="book">

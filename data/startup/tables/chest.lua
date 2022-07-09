@@ -1098,5 +1098,23 @@ ChestUnique = {
 	[14036] = {
 		itemId = 12764,
 		itemPos = {x = 32787, y = 31975, z = 11}
+	},
+	-- In Service of Yalahar Quest
+	[14037] = {
+		itemId = 2469,
+		itemPos = {x = 32796, y = 31226, z = 7}
+	},
+	[14038] = {
+		itemId = 2469,
+		itemPos = {x = 32795, y = 31185, z = 7}
+	},
+	[14039] = {
+		itemId = 2469,
+		itemPos = {x = 32701, y = 31082, z = 8}
+	},
+	-- Royal Rescue Quest
+	[14040] = {
+		itemId = 2435,
+		itemPos = {x = 32621, y = 31404, z = 10}
 	}
 }
