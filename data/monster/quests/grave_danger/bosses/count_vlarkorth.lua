@@ -5,10 +5,10 @@ monster.description = "Count Vlarkorth"
 monster.experience = 41300
 monster.outfit = {
 	lookType = 1221,
-	lookHead = 10,
-	lookBody = 19,
-	lookLegs = 19,
-	lookFeet = 19,
+	lookHead = 19,
+	lookBody = 0,
+	lookLegs = 83,
+	lookFeet = 20,
 	lookAddons = 1,
 	lookMount = 0
 }

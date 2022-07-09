@@ -1,22 +1,10 @@
 local config = {
-	leverTime = 15 * 60,
-	leverPositions = {
-		Position(32891, 32590, 11),
-		Position(32843, 32649, 11),
-		Position(32808, 32613, 11),
-		Position(32775, 32583, 11),
-		Position(32756, 32494, 11),
-		Position(32799, 32556, 11)
-	},
-
-	gateLevers = {
-		{position = Position(32862, 32555, 11), duration = 15 * 60, ignoreLevers = true},
-		{position = Position(32862, 32557, 11), duration = 60, ignoreLevers = true}
-	},
-
-	walls = {
-		{position = Position(32864, 32556, 11), itemId = 1563}
-	}
+	{leverpos = Position(32891, 32590, 11)},
+	{leverpos = Position(32843, 32649, 11)},
+	{leverpos = Position(32808, 32613, 11)},
+	{leverpos = Position(32775, 32583, 11)},
+	{leverpos = Position(32756, 32494, 11)},
+	{leverpos = Position(32799, 32556, 11)}
 }
 
 local function revertLever(position)
@@ -26,65 +14,57 @@ local function revertLever(position)
 	end
 end
 
-local function revertWalls(leverPosition)
-	revertLever(leverPosition)
-
-	for i = 1, #config.walls do
-		Game.createItem(config.walls[i].itemId, 1, config.walls[i].position)
+local function revertWall(position)
+	local wallItem = Tile(Position(32864, 32556, 11)):getItemById(1563)
+	if not wallItem then
+		Game.createItem(1563, 1, Position(32864, 32556, 11))
 	end
 end
 
-local theApeMiss9 = Action()
-function theApeMiss9.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if item.itemid ~= 2772 then
-		player:sendTextMessage(MESSAGE_FAILURE, 'It doesn\'t move.')
+local lever = Action()
+function lever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if item.itemid == 2773 then
+		player:say("It doesn't move.", TALKTYPE_MONSTER_SAY)
 		return true
 	end
+	addEvent(revertLever, 10 * 60 * 1000, toPosition)
+	return item:transform(2773)
+end
 
-	if isInArray(config.leverPositions, toPosition) then
-		item:transform(2773)
-		addEvent(revertLever, config.leverTime * 1000, toPosition)
+lever:aid(12129)
+lever:register()
+
+local function wallRemove(player, item)
+	local wall = Tile(Position(32864, 32556, 11)):getItemById(1563)
+	if wall then
+		wall:remove()
+		Position(32864, 32556, 11):sendMagicEffect(CONST_ME_MAGIC_RED)
+		addEvent(revertWall, 10 * 1000, toPosition)
+		return item:transform(item.itemid == 2772 and 2773 or 2772)
+	else
+		player:say("The lever won't budge", TALKTYPE_MONSTER_SAY)
 		return true
 	end
+end
 
-	local gateLever
-	for i = 1, #config.gateLevers do
-		if toPosition == config.gateLevers[i].position then
-			gateLever = config.gateLevers[i]
-			break
-		end
-	end
-
-	if not gateLever then
-		return true
-	end
-
-	if not gateLever.ignoreLevers then
-		for i = 1, #config.leverPositions do
-			-- if lever not pushed, do not continue
-			local leverItem = Tile(config.leverPositions[i]):getItemById(2773)
-			if not leverItem then
-				return false
+local gate = Action()
+function gate.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	local wall = Tile(Position(32864, 32556, 11)):getItemById(1563)
+	for i = 1, #config do
+		local table = config[i]
+		if Tile(table.leverpos):getItemById(2772) then
+			if item.uid == 1041 then
+				wallRemove(player, item)
+				return true
 			end
-		end
-	end
-
-	-- open gate when all levers used
-	for i = 1, #config.walls do
-		local wallItem = Tile(config.walls[i].position):getItemById(config.walls[i].itemId)
-		if not wallItem then
-			player:say('The lever won\'t budge', TALKTYPE_MONSTER_SAY, false, nil, toPosition)
+			return player:say("It doesn't move.", TALKTYPE_MONSTER_SAY)
+		elseif i == #config then
+			wallRemove(player, item)
 			return true
 		end
-
-		wallItem:remove()
-		config.walls[i].position:sendMagicEffect(CONST_ME_MAGIC_RED)
 	end
-
-	addEvent(revertWalls, gateLever.duration * 1000, toPosition)
-	item:transform(2773)
 	return true
 end
 
-theApeMiss9:uid(1040, 1041)
-theApeMiss9:register()
+gate:uid(1040, 1041)
+gate:register()

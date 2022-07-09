@@ -5,10 +5,10 @@ monster.description = "Annihilon"
 monster.experience = 15000
 monster.outfit = {
 	lookType = 12,
-	lookHead = 19,
-	lookBody = 104,
-	lookLegs = 96,
-	lookFeet = 96,
+	lookHead = 3,
+	lookBody = 9,
+	lookLegs = 77,
+	lookFeet = 77,
 	lookAddons = 0,
 	lookMount = 0
 }

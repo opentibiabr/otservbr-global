@@ -1,7 +1,7 @@
 local brickLayerKit = Action()
 
 function brickLayerKit.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if target.actionid ~= 50113 then
+	if target.actionid ~= 40027 then
 		return false
 	end
 

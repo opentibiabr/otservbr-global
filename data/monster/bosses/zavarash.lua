@@ -5,10 +5,10 @@ monster.description = "Zavarash"
 monster.experience = 21000
 monster.outfit = {
 	lookType = 12,
-	lookHead = 19,
-	lookBody = 0,
-	lookLegs = 77,
-	lookFeet = 79,
+	lookHead = 0,
+	lookBody = 15,
+	lookLegs = 57,
+	lookFeet = 85,
 	lookAddons = 0,
 	lookMount = 0
 }

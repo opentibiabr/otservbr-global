@@ -5,10 +5,10 @@ monster.description = "Ghulosh"
 monster.experience = 100000
 monster.outfit = {
 	lookType = 1062,
-	lookHead = 79,
-	lookBody = 94,
+	lookHead = 78,
+	lookBody = 113,
 	lookLegs = 94,
-	lookFeet = 94,
+	lookFeet = 18,
 	lookAddons = 3,
 	lookMount = 0
 }

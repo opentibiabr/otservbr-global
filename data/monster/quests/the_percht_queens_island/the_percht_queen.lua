@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "The Percht Queen"
 monster.experience = 500
 monster.outfit = {
-	lookTypeEx = 30341
+	lookTypeEx = 30340 -- (frozen) // lookTypeEx = 30341 (thawed)
 }
 
 monster.health = 2300

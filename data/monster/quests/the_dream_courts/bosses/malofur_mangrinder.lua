@@ -5,10 +5,10 @@ monster.description = "Malofur Mangrinder"
 monster.experience = 55000
 monster.outfit = {
 	lookType = 1120,
-	lookHead = 19,
-	lookBody = 22,
-	lookLegs = 76,
-	lookFeet = 22,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }

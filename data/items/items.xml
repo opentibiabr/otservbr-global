@@ -3871,6 +3871,7 @@
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="2820" article="a" name="sheet of paper">
+		<attribute key="writeable" value="1"/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="2821" article="a" name="book">
@@ -10231,7 +10232,7 @@
 		<attribute key="destroyto" value="4996"/>
 	</item>
 	<item id="4996" article="the" name="remains of a canopic jar">
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4995"/>
 	</item>
 	<item fromid="4997" toid="5000" article="a" name="hawser"/>

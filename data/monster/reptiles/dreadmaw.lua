@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a dreadmaw"
 monster.experience = 1500
 monster.outfit = {
-	lookType = 119,
+	lookType = 358,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -16,7 +16,7 @@ monster.outfit = {
 monster.health = 2000
 monster.maxHealth = 2000
 monster.race = "blood"
-monster.corpse = 6046
+monster.corpse = 10221
 monster.speed = 190
 monster.manaCost = 0
 

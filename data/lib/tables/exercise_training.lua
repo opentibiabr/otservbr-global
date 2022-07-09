@@ -93,26 +93,15 @@ function ExerciseEvent(playerId, tilePosition, weaponId, dummyId)
 		return false
 	end
 
-	local isMagic = false
+	local isMagic = ExerciseWeaponsTable[weaponId].skill == SKILL_MAGLEVEL
 	local bonusDummy = table.contains(HouseDummies, weaponId) or nil
-	local skillToTraining = skillsStages or nil
-	local skillRateDefault = skillLevelRate
-	local skillLevel = player:getSkillLevel(ExerciseWeaponsTable[weaponId].skill)
 
-	if ExerciseWeaponsTable[weaponId].skill == SKILL_MAGLEVEL then
-		skillToTraining = magicLevelStages or nil
-		skillRateDefault = magicLevelRate
-		skillLevel = player:getBaseMagicLevel()
-		isMagic = true
-	end
-
-	local expRate = getRateFromTable(skillToTraining, skillLevel, skillRateDefault)
 	if bonusDummy then bonusDummy = 1.1 else bonusDummy = 1 end
 
 	if isMagic then
-		player:addManaSpent(math.ceil(500 * expRate) * bonusDummy)
+		player:addManaSpent(500 * bonusDummy)
 	else
-		player:addSkillTries(ExerciseWeaponsTable[weaponId].skill, (7 * expRate) * bonusDummy)
+		player:addSkillTries(ExerciseWeaponsTable[weaponId].skill, 7 * bonusDummy)
 	end
 
 	weapon:setAttribute(ITEM_ATTRIBUTE_CHARGES, (weaponCharges - 1))
