@@ -1,11 +1,14 @@
 -- Sends Discord webhook special notifications.
 -- The URL layout is https://discord.com/api/webhooks/:id/:token
 -- Leave empty if you wish to disable.
+local webHooksAnnouncements = getConfigInfo("webHooksAnnouncements")
+local webHooksRaids = getConfigInfo("webHooksRaids")
+local webHooksDeaths = getConfigInfo("webHooksDeaths")
 
 announcementChannels = {
-	["serverAnnouncements"] = "", -- Used for an announcement channel on your discord
-	["raids"] = "", -- Used to isolate raids on your discord
-	["player-kills"] = "", -- Self-explaining
+	["serverAnnouncements"] = webHooksAnnouncements, -- Used for an announcement channel on your discord
+	["raids"] = webHooksRaids, -- Used to isolate raids on your discord
+	["player-kills"] = webHooksDeaths, -- Self-explaining
 }
 
 --[[

@@ -274,3 +274,7 @@ location = "South America"
 -- The URL layout is https://discord.com/api/webhooks/:id/:token
 -- Leave empty if you wish to disable.
 discordWebhookURL = ""
+webHooksAnnouncements = ""
+webHooksRaids = ""
+webHooksDeaths = ""
+
