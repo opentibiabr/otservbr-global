@@ -895,6 +895,17 @@ CREATE TABLE IF NOT EXISTS `tile_store` (
 		ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- Table structure `towns`
+CREATE TABLE IF NOT EXISTS `towns` (
+    `id` int NOT NULL AUTO_INCREMENT,
+    `name` varchar(255) NOT NULL,
+    `posx` int NOT NULL DEFAULT '0',
+    `posy` int NOT NULL DEFAULT '0',
+    `posz` tinyint NOT NULL DEFAULT '0',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+
 -- --------------------------------------------------------
 
 --

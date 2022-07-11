@@ -45,14 +45,16 @@ function Npc:sayWithDelay(npcId, text, messageType, delay, eventDelay, player)
 end
 
 function SayEvent(npcId, playerId, messageDelayed, npcHandler)
-	local player = Player(playerId)
 	local npc = Npc(npcId)
 	if not npc then
-		return Spdlog.error("[NpcHandler:say] - Npc parameter is missing, nil or not found")
+		Spdlog.debug("[NpcHandler:say] - Npc parameter is missing, nil or not found")
+		return false
 	end
 
+	local player = Player(playerId)
 	if not player then
-		return Spdlog.error("[NpcHandler:say] - Player parameter is missing, nil or not found")
+		Spdlog.debug("[NpcHandler:say] - Player parameter is missing, nil or not found")
+		return false
 	end
 
 	local parseInfo = {
