@@ -6,7 +6,7 @@ function secondSealPearl.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.Quest.TheQueenOfTheBanshees.SecondSeal) >= 1 then
+	if player:getStorageValue(Storage.Quest.U7_2.TheQueenOfTheBanshees.SecondSeal) >= 1 then
 		player:teleportTo(fromPosition, true)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		return true

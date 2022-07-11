@@ -4,11 +4,11 @@ local monster = {}
 monster.description = "a Faceless Bane"
 monster.experience = 30000
 monster.outfit = {
-	lookType = 1122,
+	lookType = 1119,
 	lookHead = 0,
-	lookBody = 4,
+	lookBody = 2,
 	lookLegs = 95,
-	lookFeet = 4,
+	lookFeet = 97,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -87,7 +87,7 @@ monster.loot = {
 	{name = "ectoplasmic shield", chance = 600},
 	{name = "book backpack", chance = 550},
 	{name = "spirit guide", chance = 530},
-	{id = 30345, chance = 500}, -- enchanted pendulet
+	{id = 30344, chance = 500}, -- enchanted pendulet
 }
 
 monster.attacks = {

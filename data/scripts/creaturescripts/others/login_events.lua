@@ -89,6 +89,8 @@ function loginEvents.onLogin(player)
 		"TireczKill",
 		--Thieves Guild
 		"NomadKill",
+		--Threatened Dreams - Nightmare Intruders
+		"ThreatenedDreamsNightmareMonstersKills",
 		--Wrath of the Emperor
 		"LizardMagistratusKill",
 		"LizardNobleKill",
@@ -96,7 +98,9 @@ function loginEvents.onLogin(player)
 		"BossesKill",
 		"ZalamonKill",
 		-- The Rookie Guard
-		"VascalirRatKills"
+		"VascalirRatKills",
+		-- An Uneasy Alliance
+		"RenegadeOrcKill"
 	}
 
 	for i = 1, #events do

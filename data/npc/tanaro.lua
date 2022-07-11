@@ -60,7 +60,7 @@ npcConfig.shop = {
 	{ itemName = "cookie", clientId = 3598, buy = 2 },
 	{ itemName = "egg", clientId = 3606, buy = 2 },
 	{ itemName = "fish", clientId = 3578, buy = 5 },
-	{ itemName = "green flask of wine", clientId = 2877, buy = 3, count = 15 },
+	{ itemName = "green flask of wine", clientId = 2877, buy = 3, count = 2 },
 	{ itemName = "ham", clientId = 3582, buy = 6 },
 	{ itemName = "meat", clientId = 3577, buy = 3 },
 	{ itemName = "roll", clientId = 3601, buy = 2 },

@@ -45,33 +45,28 @@ function hammer.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if not target or type(target) ~= "userdata" or not target:isItem() then
 		return false
 	end
-
-	local targetActionId = target:getActionId()
 	-- Lay down the wood
-	if targetActionId == 50109 then
+	local targetActionId = target:getActionId()
+	local position = Position(32571, 31508, 9)
+	local tile = Tile(position)
+	if targetActionId == 40021 and tile:getItemById(4597) then
 		if player:getItemCount(5901) >= 3 and player:getItemCount(953) >= 3 then
 			player:removeItem(5901, 3)
 			player:removeItem(953, 3)
 			player:say("KLING KLONG!", TALKTYPE_MONSTER_SAY)
-
-			local bridge = Game.createItem(5770, 1, Position(32571, 31508, 9))
-			if bridge then
-				bridge:setActionId(50110)
-			end
+			tile:getItemById(295):remove()
+			tile:getItemById(291):remove()
+			Game.createItem(5770, 1, position):setActionId(40021)
 		end
-	return true
+		return true
 	-- Lay down the rails
-	elseif targetActionId == 50110 then
+	elseif targetActionId == 40021 and tile:getItemById(5770) then
 		if player:getItemCount(9114) >= 1 and player:getItemCount(9115) >= 2 and player:getItemCount(953) >= 3 then
 			player:removeItem(9114, 1)
 			player:removeItem(9115, 2)
 			player:removeItem(953, 3)
 			player:say("KLING KLONG!", TALKTYPE_MONSTER_SAY)
-
-			local rails = Game.createItem(7122, 1, Position(32571, 31508, 9))
-			if rails then
-				rails:setActionId(50111)
-			end
+			Game.createItem(7122, 1, position)
 		end
 		return true
 	end

@@ -141,7 +141,7 @@ local cutItems = {
 	[2452] = 3139,
 	[2524] = 3135,
 	[2904] = 3137,
-	[4995] = 3137,
+	[4995] = 4996,
 	[2997] = 3139,
 	[2998] = 3139,
 	[2999] = 3139,
@@ -363,11 +363,11 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 		local sandTile = Tile(sandPosition)
 		local amuletId = sandTile:getItemById(19401)
 		if amuletId then
-			if player:getStorageValue(Storage.Quest.Dawnport.TheLostAmulet) == 1 then
+			if player:getStorageValue(Storage.Quest.U10_55.Dawnport.TheLostAmulet) == 1 then
 				local rand = math.random(100)
 				if rand <= 10 then
 					player:addItem(21379, 1)
-					player:setStorageValue(Storage.Quest.Dawnport.TheLostAmulet, 2)
+					player:setStorageValue(Storage.Quest.U10_55.Dawnport.TheLostAmulet, 2)
 					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found an ancient amulet. Strange engravings cover it. Maybe Morris can make them out.")
 				elseif rand <= 80 then
 					player:addItem(21395, 1)
@@ -427,7 +427,10 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 	elseif target.actionid == 50118 then
 		local wagonItem = Tile(Position(32717, 31492, 11)):getItemById(7131)
 		if wagonItem then
-			Game.createItem(7921, 1, wagonItem:getPosition())
+			if Tile(Position(32717, 31492, 11)):getItemById(7921) then
+				return true
+			end
+			Game.createItem(7921, 1, wagonItem:getPosition()):setActionId(40023)
 			toPosition:sendMagicEffect(CONST_ME_POFF)
 		end
 	elseif target.itemid == 7921 then
@@ -435,7 +438,7 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 		if coalItem then
 			coalItem:remove(1)
 			toPosition:sendMagicEffect(CONST_ME_POFF)
-
+			Tile(Position(32699, 31492, 11)):getItemById(7131):setActionId(40023)
 			local crucibleItem = Tile(Position(32699, 31494, 11)):getItemById(7814)
 			if crucibleItem then
 				crucibleItem:setActionId(50119)
@@ -673,7 +676,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 		if player:getStorageValue(Storage.hiddenCityOfBeregar.WayToBeregar) == 1 then
 			player:teleportTo(Position(32566, 31338, 10))
 		end
-	elseif target.actionid == 50114 then
+	elseif target.actionid == 40028 then
 		if Tile(Position(32617, 31513, 9)):getItemById(1272)
 		and Tile(Position(32617, 31514, 9)):getItemById(1624) then
 			local rubbleItem = Tile(Position(32619, 31514, 9)):getItemById(5709)
@@ -850,12 +853,12 @@ function onUseCrowbar(player, item, fromPosition, target, toPosition, isHotkey)
 				addEvent(revertCask, 3 * 60 * 1000, toPosition)
 			end
 		end
-	elseif target.actionid == 12566 and player:getStorageValue(Storage.secretService.TBIMission06) == 1 then
+	elseif target.actionid == 12566 and player:getStorageValue(Storage.SecretService.TBIMission06) == 1 then
 		-- Secret service quest
 		local yellPosition = Position(32204, 31157, 8)
 		-- Amazon lookType
 		if player:getOutfit().lookType == 137 then
-			player:setStorageValue(Storage.secretService.TBIMission06, 2)
+			player:setStorageValue(Storage.SecretService.TBIMission06, 2)
 			Game.createMonster("barbarian skullhunter", yellPosition)
 			player:say("Nooooo! What have you done??", TALKTYPE_MONSTER_SAY, false, 0, yellPosition)
 			yellPosition.y = yellPosition.y - 1

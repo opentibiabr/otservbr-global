@@ -4,11 +4,11 @@ local monster = {}
 monster.description = "a ripper spectre"
 monster.experience = 3500
 monster.outfit = {
-	lookType = 1119,
-	lookHead = 101,
-	lookBody = 39,
+	lookType = 1122,
+	lookHead = 81,
+	lookBody = 78,
 	lookLegs = 61,
-	lookFeet = 39,
+	lookFeet = 94,
 	lookAddons = 0,
 	lookMount = 0
 }

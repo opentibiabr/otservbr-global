@@ -50,6 +50,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local ThreatenedDreams = Storage.Quest.U11_40.ThreatenedDreams
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -59,18 +60,27 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "mission") then
-		if (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 4) then
+		if player:getStorageValue(ThreatenedDreams.Mission01[1]) == 1
+			and player:getStorageValue(ThreatenedDreams.Mission01.PoacherChest) == 1 then
+			npcHandler:say({
+				"Uhmn.. Maybe Ahmet in Ankrahmun can help we to fake this book."
+			}, npc, creature)
+		elseif player:getStorageValue(ThreatenedDreams.Mission01[1]) == 2 then
+			npcHandler:say({
+				"The poachers are still chasing me. Please hurry and find a way to help me."
+			}, npc, creature)
+		elseif player:getStorageValue(ThreatenedDreams.Mission01[1]) == 3 then
 			npcHandler:say({
 				"You succeeded! It seems the poachers have read your little faked story about killing white deer and the ensuing doom. They stopped chasing me. Thank you! ...",
 				"You proved yourself trustworthy - at least as far as I am concerned. But as I told you I'm actually not a real animal. If you want to enter our hidden island, you must prove that you are also willing to help real animals. Would you do that?"
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 2)
-		elseif (player:getStorageValue(Storage.ThreatenedDreams.TroubledMission01) == 16) then
+		elseif player:getStorageValue(ThreatenedDreams.Mission01[1]) == 15 then
 			npcHandler:say({
 				"I'm very happy that you could help fae and animals alike. You earned our trust and may now visit our secret realm. I marked you with an arcane fae seal. Hereby you will be able to use the elemental shrines strewn about Tibia. ...",
 				"There are fire, ice, energy and earth shrines. If you don't know their locations you can also reach them by most temples in this world. The elemental shrines will transport you to Feyrist now that you bear the magical seal."
 			}, npc, creature)
-			player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 17)
+			player:setStorageValue(ThreatenedDreams.Mission01[1], 16)
 		else
 			npcHandler:say({
 				"I indeed have some troubles since I'm travelling this part of the world. When I took over the body of a white deer I wasn't aware that such an animal is a sought after quarry for hunters and poachers. ...",
@@ -78,9 +88,9 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end
-	elseif npcHandler:getTopic(playerId) == 1 then
-		if MsgContains(message, "yes") then
-			if (player:getStorageValue(Storage.ThreatenedDreams.Start) == 1) then
+	elseif MsgContains(message, "yes") then
+		if npcHandler:getTopic(playerId) == 1 then
+			if player:getStorageValue(ThreatenedDreams.QuestLine) == 1 then
 				npcHandler:say("You have already started this mission.", npc, creature)
 				npcHandler:setTopic(playerId, 0)
 			else
@@ -89,19 +99,21 @@ local function creatureSayCallback(npc, creature, type, message)
 					"I already have an idea: Some birds told me that poachers are a superstitious lot. Perhaps we can get them with their own misbelief. I know that the poachers have a kind of camp north of the Green Claw Swamps. ...",
 					"Please search it out and examine it closely. Perhaps you will find something you can use against them in order to stop them from hunting white deer."
 				}, npc, creature)
-				player:setStorageValue(Storage.ThreatenedDreams.Start, 1)
-				player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 1)
+				player:setStorageValue(ThreatenedDreams.QuestLine, 1)
+				player:setStorageValue(ThreatenedDreams.Mission01[1], 1)
+				npcHandler:setTopic(playerId, 0)
 			end
-		elseif MsgContains(message, "no") then
-			npcHandler:say("Then not.", npc, creature)
+		elseif npcHandler:getTopic(playerId) == 2 then
+			npcHandler:say({
+				"I heard there is a problem with a wolf mother and her whelps. However, I don't know more about it. One of my sisters, Ikassis, has taken over the body of a snake. ...",
+				"She knows more about the wolf. Seek her out in the north-west of Edron, near a circle of standing stones."
+			}, npc, creature)
+			player:setStorageValue(ThreatenedDreams.Mission01[1], 4)
+			npcHandler:setTopic(playerId, 0)
 		end
+	elseif MsgContains(message, "no") then
+		npcHandler:say("Then not.", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif npcHandler:getTopic(playerId) == 2 then
-		npcHandler:say({
-			"I heard there is a problem with a wolf mother and her whelps. However, I don't know more about it. One of my sisters, Ikassis, has taken over the body of a snake. ...",
-			"She knows more about the wolf. Seek her out in the north-west of Edron, near a circle of standing stones."
-		}, npc, creature)
-		player:setStorageValue(Storage.ThreatenedDreams.TroubledMission01, 5)
 	end
 	return true
 end

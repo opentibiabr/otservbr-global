@@ -227,9 +227,8 @@ TileAction = {
 			{x = 32216, y = 31838, z = 15}
 		}
 	},
-	-- Others actions
 	-- Threatened Dreams Quest
-	[50301] = {
+	[25024] = {
 		itemId = false,
 		itemPos = {
 			{x = 33200, y = 31892, z = 7},
@@ -238,16 +237,16 @@ TileAction = {
 			{x = 33201, y = 31894, z = 7}
 		}
 	},
-	[50302] = {
+	[25025] = {
 		itemId = false,
 		itemPos = {
-			{x = 33258, y = 32402, z = 7},
-			{x = 33257, y = 32402, z = 7},
-			{x = 33257, y = 32401, z = 7},
-			{x = 33259, y = 32402, z = 7}
+			{x = 33265, y = 32422, z = 7},
+			{x = 33265, y = 32423, z = 7},
+			{x = 33266, y = 32423, z = 7},
+			{x = 33267, y = 32423, z = 7}
 		}
 	},
-	[50303] = {
+	[25026] = {
 		itemId = false,
 		itemPos = {
 			{x = 33262, y = 32378, z = 7},
@@ -259,7 +258,7 @@ TileAction = {
 			{x = 33264, y = 32379, z = 7}
 		}
 	},
-	[50304] = {
+	[25027] = {
 		itemId = false,
 		itemPos = {
 			{x = 33257, y = 32315, z = 7},
@@ -268,7 +267,7 @@ TileAction = {
 			{x = 33259, y = 32315, z = 7}
 		}
 	},
-	[50305] = {
+	[25028] = {
 		itemId = false,
 		itemPos = {
 			{x = 33249, y = 32267, z = 6},
@@ -276,6 +275,14 @@ TileAction = {
 			{x = 33250, y = 32268, z = 6}
 		}
 	},
+	[25029] = {
+		itemId = 10840,
+		itemPos = {
+			{x = 33619, y = 32304, z = 9},
+			{x = 33591, y = 32321, z = 10}
+		}
+	},
+	-- Others actions
 	-- Kilmaresh
 	-- First mission
 	[50307] = {
@@ -1052,6 +1059,30 @@ TileAction = {
 		itemPos = {
 			{x = 31951, y = 32173, z = 10},
 			{x = 31951, y = 32174, z = 10}
+		}
+	},
+	-- The New Frontier Quest
+	[50364] = { -- Mission 07 - Hidden Note
+		itemId = false,
+		itemPos = {
+			{x = 33165, y = 31249, z = 11}
+		}
+	},
+	[50365] = {
+		itemId = false,
+		itemPos = {
+			{x = 33234, y = 31748, z = 7},
+			{x = 33234, y = 31749, z = 7},
+			{x = 33241, y = 31772, z = 8},
+			{x = 33231, y = 31765, z = 2},
+			{x = 33231, y = 31762, z = 2},
+			{x = 33231, y = 31760, z = 2}
+		}
+	},
+	[50366] = { -- Corruption Hole
+		itemId = false,
+		itemPos = {
+			{x = 33345, y = 31116, z = 7}
 		}
 	}
 }

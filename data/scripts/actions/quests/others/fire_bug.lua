@@ -59,6 +59,9 @@ function othersFireBug.onUse(player, item, fromPosition, target, toPosition, isH
 		addEvent(revertAshes, 5 * 60 * 1000) -- 5 minutes
 		createTeleport:setDestination(Position(32857, 32234, 11))
 		return true
+	elseif target.actionid == 50119 then
+		target:transform(7813)
+		return true
 	end
 
 	local random = math.random(10)

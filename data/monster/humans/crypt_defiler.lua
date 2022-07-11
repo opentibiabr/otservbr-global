@@ -5,10 +5,10 @@ monster.description = "a crypt defiler"
 monster.experience = 70
 monster.outfit = {
 	lookType = 146,
-	lookHead = 115,
-	lookBody = 115,
-	lookLegs = 61,
-	lookFeet = 96,
+	lookHead = 62,
+	lookBody = 132,
+	lookLegs = 42,
+	lookFeet = 75,
 	lookAddons = 3,
 	lookMount = 0
 }

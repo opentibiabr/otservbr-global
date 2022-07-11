@@ -5,10 +5,10 @@ monster.description = "a Crazed Winter Rearguard"
 monster.experience = 4700
 monster.outfit = {
 	lookType = 1136,
-	lookHead = 86,
-	lookBody = 85,
+	lookHead = 47,
+	lookBody = 7,
 	lookLegs = 0,
-	lookFeet = 0,
+	lookFeet = 85,
 	lookAddons = 0,
 	lookMount = 0
 }

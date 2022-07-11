@@ -9,7 +9,39 @@ LeverAction = {
 			{x = 32107, y = 31901, z = 7},
 			{x = 32104, y = 31906, z = 7}
 		}
-	}
+	},
+	 -- The New Frontier Quest
+	[30002] = { -- Farmine Elevator Levers
+		itemId = false,
+		itemPos = {
+			{x = 33062, y = 31527, z = 14},
+			{x = 33062, y = 31527, z = 12},
+			{x = 33062, y = 31527, z = 10},
+			{x = 32994, y = 31547, z = 4},
+			{x = 32992, y = 31539, z = 4},
+			{x = 32992, y = 31539, z = 1},
+			{x = 33056, y = 31527, z = 12},
+			{x = 33056, y = 31527, z = 10},
+			{x = 33064, y = 31489, z = 15}
+		}
+	},
+	[30003] = { -- Mortal Kombat Arena
+		itemId = false,
+		itemPos = {
+			{x = 33079, y = 31014, z = 2}
+		}
+	},
+	[30004] = { -- Dark catedral
+		itemId = false,
+		itemPos = {
+			{x = 32645, y = 32465, z = 9},
+			{x = 32647, y = 32483, z = 9},
+			{x = 32619, y = 32523, z = 9},
+			{x = 32610, y = 32523, z = 9},
+			{x = 32583, y = 32482, z = 9},
+			{x = 32584, y = 32465, z = 9}
+		}
+	},
 }
 
 LeverUnique = {

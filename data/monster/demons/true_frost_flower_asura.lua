@@ -5,10 +5,10 @@ monster.description = "a true frost flower asura"
 monster.experience = 7069
 monster.outfit = {
 	lookType = 1068,
-	lookHead = 105,
+	lookHead = 9,
 	lookBody = 0,
-	lookLegs = 105,
-	lookFeet = 8,
+	lookLegs = 86,
+	lookFeet = 9,
 	lookAddons = 0,
 	lookMount = 0
 }

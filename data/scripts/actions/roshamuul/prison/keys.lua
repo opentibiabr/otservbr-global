@@ -46,7 +46,7 @@ local function roomIsOccupied(centerPosition, rangeX, rangeY)
 	return false
 end
 
-function clearBossRoom(playerId, centerPosition, rangeX, rangeY, exitPosition)
+local function clearBossRoom(playerId, centerPosition, rangeX, rangeY, exitPosition)
 	local spectators, spectator = Game.getSpectators(centerPosition, false, false, rangeX, rangeX, rangeY, rangeY)
 	for i = 1, #spectators do
 		spectator = spectators[i]

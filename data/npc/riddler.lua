@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	local storage = Storage.Quest.TheParadoxTower
+	local storage = Storage.Quest.U7_24.TheParadoxTower
 	if MsgContains(message, "test") then
 			npcHandler:say("Death awaits those who fail the test of the three seals! Do you really want me to test you?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
