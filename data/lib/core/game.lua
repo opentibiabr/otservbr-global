@@ -5,7 +5,7 @@ function getGlobalStorage(key)
 	if resultId ~= false then
 		local isNumber = tonumber(Result.getString(resultId, "value"))
 		if isNumber then
-			local val = Result.getNumber(resultId, "value")
+			local val = Result.getU32(resultId, "value")
 			Result.free(resultId)
 			return val
 		else
