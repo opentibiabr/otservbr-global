@@ -425,7 +425,7 @@ tasks =
 		},
 		rewards = {
 			{type = "exp", value = {25000}},
-			{type = "achievement", value = {"Dream is Over"}},
+			{type = "achievement", value = {"Dream's Over"}},
 			{type = "storage", value = {34112, 1}},
 			{type = "points", value = {3}}
 		}
