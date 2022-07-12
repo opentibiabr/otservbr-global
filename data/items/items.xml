@@ -1912,7 +1912,7 @@
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="866"/>
-		<attribute key="containersize" value="7"/>
+		<attribute key="containersize" value="14"/>
 	</item>
 	<item id="866" article="a" name="dead troll">
 		<attribute key="fluidsource" value="blood"/>
