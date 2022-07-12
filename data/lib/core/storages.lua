@@ -1199,7 +1199,8 @@ Storage = {
 		DoorNorthMine = 51460,
 		DoorWestMine = 51461,
 		DoorSouthMine = 51462,
-		BrownMushrooms = 51463
+		BrownMushrooms = 51463,
+		TunnellingGuide = 51464
 	},
 	TibiaTales = {
 		-- Reserved storage from 51480 - 51539
@@ -2085,7 +2086,9 @@ Storage = {
 			TheHuntForTheSeaSerpent = {},
 			TheInquisition = {},
 			TheThievesGuild = {},
-			TrollSabotage = {},
+			TrollSabotage = {
+			Questline = 41840,
+			JumpTimer = 41841},
 			VampireHunter = {},
 		},
 		U8_4 = { -- update 8.4 - Reserved Storages 41901 - 42150
@@ -2109,7 +2112,9 @@ Storage = {
 			TreasureHunt = {},
 		},
 		U8_54 = { -- update 8.54 - Reserved Storages 42551 - 42950
-				AnUneasyAlliance = {}, -- 42551 - 42600
+				AnUneasyAlliance = {
+				Questline = 42551,
+				QuestDoor = 42552}, -- 42551 - 42600
 				ChildrenOfTheRevolution = {}, -- 42601 - 42650
 				SeaOfLight = {}, -- 42651 - 42700
 				TheNewFrontier = { -- 42701 - 42750
@@ -2149,6 +2154,9 @@ Storage = {
 						PigBank = 42728
 					},
 					TomeofKnowledge = 42729,
+					ZaoPalaceDoors = 42730, -- 10th Tome: Zao Palace
+					SnakeHeadTeleport = 42731, -- 7th Tome: Snake Head Teleport
+					CorruptionHole = 42732 -- 8th Tome: Corruption Hole
 				},
 			TomesOfKnowledge = {}, -- 42751 - 42780
 			UnnaturalSelection = {}, -- 42781 - 42830

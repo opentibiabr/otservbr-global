@@ -3871,6 +3871,7 @@
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="2820" article="a" name="sheet of paper">
+		<attribute key="writeable" value="1"/>
 		<attribute key="weight" value="50"/>
 	</item>
 	<item id="2821" article="a" name="book">
@@ -9452,10 +9453,9 @@
 	<item fromid="4283" toid="4284" article="a" name="pile of bones">
 		<attribute key="weight" value="700"/>
 	</item>
-	<item id="4285" article="a" name="pile of bones">
-		<attribute key="duration" value="60"/>
-		<attribute key="decayTo" value="0"/>
-		<attribute key="weight" value="10000"/>
+	<item id="4285" article="a" name="pile of bones"> <!-- quest item -->
+		<attribute key="moveable" value="0"/>
+		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="4286" article="a" name="dead dragon">
 		<attribute key="fluidsource" value="blood"/>
@@ -10232,7 +10232,7 @@
 		<attribute key="destroyto" value="4996"/>
 	</item>
 	<item id="4996" article="the" name="remains of a canopic jar">
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="300"/>
 		<attribute key="decayTo" value="4995"/>
 	</item>
 	<item fromid="4997" toid="5000" article="a" name="hawser"/>
@@ -19511,7 +19511,7 @@
 		<attribute key="weight" value="200"/>
 	</item>
 	<item id="10185" article="a" name="swich"/>
-	<item id="10186" article="a" name="crystal ball">
+	<item id="10186" article="a" name="scrying ball">
 		<attribute key="weight" value="3400"/>
 	</item>
 	<item id="10187" article="a" name="rare crystal">
@@ -43803,12 +43803,7 @@
 	<item id="30342" article="an" name="enchanted sleep shawl">
 		<attribute key="showduration" value="1"/>
 		<attribute key="stopduration" value="1"/>
-		<attribute key="showAttributes" value="1"/>
 		<attribute key="transformEquipTo" value="30343"/>
-		<attribute key="absorbpercentphysical" value="7"/>
-		<attribute key="absorbpercentpoison" value="24"/>
-		<attribute key="skilldist" value="3"/>
-		<attribute key="armor" value="3"/>
 		<attribute key="weight" value="430"/>
 	</item>
 	<item id="30343" article="an" name="enchanted sleep shawl">
@@ -43827,11 +43822,6 @@
 		<attribute key="showduration" value="1"/>
 		<attribute key="stopduration" value="1"/>
 		<attribute key="transformEquipTo" value="30345"/>
-		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentphysical" value="5"/>
-		<attribute key="absorbpercentenergy" value="18"/>
-		<attribute key="skilldist" value="3"/>
-		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="650"/>
 	</item>
 	<item id="30345" article="an" name="enchanted pendulet">
@@ -44042,10 +44032,6 @@
 		<attribute key="weight" value="500"/>
 	</item>
 	<item id="30403" name="enchanted theurgic amulet">
-		<attribute key="absorbpercentphysical" value="3"/>
-		<attribute key="absorbpercentpoison" value="14"/>
-		<attribute key="magicpoints" value="3"/>
-		<attribute key="armor" value="2"/>
 		<attribute key="weight" value="500"/>
 		<attribute key="transformEquipTo" value="30402" />
 		<attribute key="stopduration" value="1" />
@@ -45307,8 +45293,6 @@
 	<item id="31557" article="a" name="blister ring">
 		<attribute key="stopduration" value="1"/>
 		<attribute key="showduration" value="1"/>
-		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentfire" value="6"/>
 		<attribute key="transformequipto" value="31616"/>
 		<attribute key="weight" value="90"/>
 	</item>
@@ -46818,9 +46802,6 @@
 	<item id="32621" article="a" name="ring of souls">
 		<attribute key="stopduration" value="1"/>
 		<attribute key="showduration" value="1"/>
-		<attribute key="showAttributes" value="1"/>
-		<attribute key="absorbpercentphysical" value="2"/>
-		<attribute key="absorbpercentlifedrain" value="10"/>
 		<attribute key="transformequipto" value="32635"/>
 		<attribute key="weight" value="80"/>
 	</item>

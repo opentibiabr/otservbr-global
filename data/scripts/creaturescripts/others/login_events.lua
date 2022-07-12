@@ -98,7 +98,9 @@ function loginEvents.onLogin(player)
 		"BossesKill",
 		"ZalamonKill",
 		-- The Rookie Guard
-		"VascalirRatKills"
+		"VascalirRatKills",
+		-- An Uneasy Alliance
+		"RenegadeOrcKill"
 	}
 
 	for i = 1, #events do

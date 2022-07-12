@@ -18,10 +18,19 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+npcConfig.voices = {
+	interval = 15000,
+	chance = 50,
+	{text = "I wish I could learn more about this strange world."},
+	{text = "Those different cultures are amazing."},
+	{text = "What an interesting continent."}
+}
+
+local tomes = Storage.Quest.U8_54.TheNewFrontier.TomeofKnowledge
 -- Npc shop
 npcConfig.shop = {
-	{ itemName = "didgeridoo", clientId = 2965, count = 1 },
-	{ itemName = "war drum", clientId = 2966, count = 1 }
+	{ itemName = "didgeridoo", clientId = 2965, buy = 5000, storageKey = tomes, storageValue = 6 },
+	{ itemName = "war drum", clientId = 2966, buy = 1000, storageKey = tomes, storageValue = 6 },
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
@@ -105,6 +114,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			elseif npcHandler:getTopic(playerId) >= 2 and npcHandler:getTopic(playerId) <= 12 then --tome2 - tome12
 				npcHandler:say("Thank you! I look forward to reading this interesting discovery of yours and learn a few things about {Zao}.", npc, creature)
 				player:setStorageValue(TheNewFrontier.TomeofKnowledge, player:getStorageValue(TheNewFrontier.TomeofKnowledge) + 1)
+				if player:getStorageValue(TheNewFrontier.TomeofKnowledge) == 10 then
+					player:setStorageValue(TheNewFrontier.ZaoPalaceDoors, 1)
+				elseif player:getStorageValue(TheNewFrontier.TomeofKnowledge) == 7 then
+					player:setStorageValue(TheNewFrontier.SnakeHeadTeleport, 1)
+				elseif player:getStorageValue(TheNewFrontier.TomeofKnowledge) == 8 then
+					player:setStorageValue(TheNewFrontier.CorruptionHole, 1)
+				end
 				npcHandler:setTopic(playerId, player:getStorageValue(TheNewFrontier.TomeofKnowledge) +20)
 			elseif npcHandler:getTopic(playerId) == 13 then -- more then 12 tomes
 				player:addExperience(5000, true)
@@ -365,7 +381,7 @@ local function onTradeRequest(npc, creature)
 	local player = Player(creature)
 	local playerId = player:getId()
 
-	if player:getStorageValue(TheNewFrontier.TomeofKnowledge) >= 6 then
+	if player:getStorageValue(TheNewFrontier.TomeofKnowledge) < 6 then
 		npcHandler:say("Sorry, I don't have items to trade now.", npc, creature)
 		return false
 	end

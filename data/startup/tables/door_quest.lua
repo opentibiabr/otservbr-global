@@ -308,7 +308,7 @@ QuestDoorAction = {
 		itemPos = {{x = 33184, y = 32665, z = 15}}
 	},
 	-- The ape city door
-	[Storage.TheApeCity.DworcDoor] = {
+	[Storage.TheApeCity.ChorDoor] = {
 		itemId = false,
 		itemPos = {{x = 32934, y = 32886, z = 7}}
 	},
@@ -328,7 +328,7 @@ QuestDoorAction = {
 			{x = 32861, y = 32507, z = 9}
 		}
 	},
-	[Storage.TheApeCity.Casks] = {
+	[Storage.TheApeCity.DworcDoor] = {
 		itemId = false,
 		itemPos = {{x = 32781, y = 32910, z = 8}}
 	},
@@ -730,6 +730,25 @@ QuestDoorAction = {
 	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor03] = {
 		itemId = 1644,
 		itemPos = {{x = 33001, y = 32047, z = 12}}
+	},
+	[Storage.SecretService.CGBMission06] = {
+		itemId = 6260,
+		itemPos = {{x = 32180, y = 31933, z = 11}}
+	},
+	[Storage.OutfitQuest.Knight.RamsaysHelmetDoor] = {
+		itemId = 5122,
+		itemPos = {{x = 32860, y = 32517, z = 11}}
+	},
+	[Storage.Quest.U8_54.TheNewFrontier.ZaoPalaceDoors] = {
+		itemId = 9874,
+		itemPos = {
+			{x = 33161, y = 31265, z = 10},
+			{x = 33161, y = 31266, z = 10}
+		}
+	},
+	[Storage.Quest.U8_54.AnUneasyAlliance.QuestDoor] = {
+		itemId = false,
+		itemPos = {{x = 33047, y = 31295, z = 7}}
 	}
 }
 
@@ -755,5 +774,10 @@ QuestDoorUnique = {
 	[22004] = {
 		itemId = 8363,
 		itemPos = {x = 32069, y = 31885, z = 6}
+	},
+	-- Secret Service
+	[22005] = {
+		itemId = 17709,
+		itemPos = {x = 32908, y = 32112, z = 7}
 	}
 }
