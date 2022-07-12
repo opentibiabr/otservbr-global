@@ -23,13 +23,13 @@ monster.Bestiary = {
 	CharmsPoints = 25,
 	Stars = 3,
 	Occurrence = 0,
-	Locations = "" --tofix
+	Locations = "Kazordoon Underground"
 	}
 
 monster.health = 350
 monster.maxHealth = 350
 monster.race = "blood"
-monster.corpse = 6007 -- tofix
+monster.corpse = 6007
 monster.speed = 210
 monster.manaCost = 0
 
