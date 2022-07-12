@@ -89,7 +89,7 @@ monster.loot = {
 	{name = "warrior helmet", chance = 560},
 	{name = "strange helmet", chance = 670},
 	{name = "crown armor", chance = 510},
-	{name = "old parchment", chance = 550},
+	{id = 4831, chance = 550}, -- old parchment
 	{name = "royal helmet", chance = 140},
 	{name = "tower shield", chance = 920},
 	{name = "power bolt", chance = 6200},
