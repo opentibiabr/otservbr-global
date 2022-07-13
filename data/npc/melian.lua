@@ -70,7 +70,7 @@ addTravelKeyword('issavi', 'Issavi', 100, Position(33957, 31515, 0))
 -- Basic
 keywordHandler:addKeyword({'lizard'}, StdModule.say, {npcHandler = npcHandler, text = 'There are many of them to the north and south of this continent. I had thought they only existed on Tiquanda, but I was mistaken.'})
 keywordHandler:addKeyword({'zao'}, StdModule.say, {npcHandler = npcHandler, text = 'What a strange and bizarre continent. I\'m glad my landing place is far away from all the mess I\'ve seen from above.'})
-keywordHandler:addKeyword({'fly'}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m a carpet pilot. I can fly you to the {Femor Hills}, to {Kazordoon}, {Svargrond}, {Edron}, {Darashia} or {Issavi}.'})
+keywordHandler:addKeyword({'fly'}, StdModule.say, {npcHandler = npcHandler, text = 'I can fly you to {Darashia}, {Edron}, {Issavi}, {Svargrond}, {Kazordoon}, {Zao} or to {Femor Hills} if you like. Where do you want to go?'})
 keywordHandler:addKeyword({'service'}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m a carpet pilot. I can fly you to the {Femor Hills}, to {Kazordoon}, {Svargrond}, {Edron}, {Darashia} or {Issavi}.'})
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m a carpet pilot. I can fly you to the {Femor Hills}, to {Kazordoon}, {Svargrond}, {Edron}, {Darashia} or {Issavi}.'})
 keywordHandler:addKeyword({'name'}, StdModule.say, {npcHandler = npcHandler, text = 'Melian at your service.'})
