@@ -919,6 +919,20 @@ ChestUnique = {
 		weight = 2.00,
 		storage = Storage.Quest.U11_40.ThreatenedDreams.Mission02.DarkMoonMirror
 	},
+	[6102] = { -- Ape city
+		itemId = 2469,
+		itemPos = {x = 32782, y = 32910, z = 8},
+		reward = {{4827, 1}},
+		weight = 0.20,
+		storage = Storage.QuestChests.WhisperMoss
+	},
+	[6103] = { -- Ape city
+		itemId = 2473,
+		itemPos = {x = 32935, y = 32886, z = 7},
+		reward = {{4831, 1}},
+		weight = 2.00,
+		storage = Storage.QuestChests.OldParchment
+	},
 	-- Reward of others scrips files (varied rewards)
 	-- The First dragon Quest
 	-- Treasure chests (data\scripts\actions\quests\first_dragon\treasure_chests.lua)
@@ -1084,5 +1098,23 @@ ChestUnique = {
 	[14036] = {
 		itemId = 12764,
 		itemPos = {x = 32787, y = 31975, z = 11}
+	},
+	-- In Service of Yalahar Quest
+	[14037] = {
+		itemId = 2469,
+		itemPos = {x = 32796, y = 31226, z = 7}
+	},
+	[14038] = {
+		itemId = 2469,
+		itemPos = {x = 32795, y = 31185, z = 7}
+	},
+	[14039] = {
+		itemId = 2469,
+		itemPos = {x = 32701, y = 31082, z = 8}
+	},
+	-- Royal Rescue Quest
+	[14040] = {
+		itemId = 2435,
+		itemPos = {x = 32621, y = 31404, z = 10}
 	}
 }

@@ -60,6 +60,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.SecretService.Quest, 1)
+			player:addAchievement("Secret Agent")
 			npcHandler:say('I am still a bit sceptical, but well, welcome to the girls brigade.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 2 then
@@ -116,6 +117,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			if player:removeItem(396, 1) then
 				player:setStorageValue(Storage.SecretService.Mission07, 2)
 				player:setStorageValue(Storage.SecretService.Quest, 15)
+				player:addAchievement("Top CGB Agent")
 				player:addItem(898, 1)
 				npcHandler:say({
 				'Excellent. The queen was not amused about this threat. It\'s a good thing that you have saved the city ...',
@@ -132,17 +134,23 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, 'join') then
 		if player:getStorageValue(Storage.SecretService.Quest) < 1 then
-			npcHandler:say({
-				player:getSex() == PLAYERSEX_FEMALE and
-				'The girls brigade is the foremost front on which we fight the numerous enemies of our city ...',
-				'It\'s a constant race to stay ahead of our enemies. Absolute loyalty and the willingness to put ones life at stake are attributes that are vital for this brigade ...',
-				'If you join, you dedicate your service to Carlin alone! Do you truly think that you are girl enough to join the brigade?'
-				or
-				'A man in the girls brigade? Come on this is hilarious, this is outright stupid, this is ...',
-				'exactly what no one would expect. Mhm, on second thought the element of surprise might offset your male inferiority.',
-				'If you join, you dedicate your service to Carlin alone! Do you truly think that you are girl enough to join the brigade?'
-			}, npc, creature)
+			if player:getSex() == PLAYERSEX_FEMALE then
+				npcHandler:say({
+					"The girls brigade is the foremost front on which we fight the numerous enemies of our city ...",
+					"It's a constant race to stay ahead of our enemies. Absolute loyalty and the willingness to put ones life at stake are attributes that are vital for this brigade ...",
+					"If you join, you dedicate your service to Carlin alone! Do you truly think that you are girl enough to join the brigade?"
+				}, npc, creature)
+			else
+				npcHandler:say({
+					"A man in the girls brigade? Come on this is hilarious, this is outright stupid, this is ...",
+					"exactly what no one would expect. Mhm, on second thought the element of surprise might offset your male inferiority. The girls brigade is the foremost front on which we fight the numerous enemies of our city ...",
+					"It's a constant race to stay ahead of our enemies. Absolute loyalty and the willingness to put ones life at stake are attributes that are vital for this brigade ...",
+					"If you join, you dedicate your service to Carlin alone! Do you truly think that you are girl enough to join the brigade?"
+				}, npc, creature)
+			end
 			npcHandler:setTopic(playerId, 1)
+		elseif player:getStorageValue(Storage.SecretService.TBIMission01) > 0 or player:getStorageValue(Storage.SecretService.AVINMission01) > 0 then
+			npcHandler:say("Don't try to fool me. We are perfectly aware to whom you are loyal.", npc, creature)
 		end
 	elseif MsgContains(message, 'mission') then
 		if player:getStorageValue(Storage.SecretService.Quest) == 1 and player:getStorageValue(Storage.SecretService.TBIMission01) < 1 and player:getStorageValue(Storage.SecretService.CGBMission01) < 1 then
@@ -239,6 +247,35 @@ end
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
-
+-- basic
+keywordHandler:addKeyword({"queen"}, StdModule.say, {npcHandler = npcHandler, text = "I am privileged to be in service of our beloved queen!"})
+keywordHandler:addKeyword({"carlin"}, StdModule.say, {npcHandler = npcHandler, text = "We are proud people who fought hard for their freedom and won't allow others to oppress us again."})
+keywordHandler:addKeyword({"service"}, StdModule.say, {npcHandler = npcHandler, text = "I am the head of Carlin's Girls Brigade, also known as CGB."})
+keywordHandler:addKeyword({"cgb"}, StdModule.say, {npcHandler = npcHandler, text = {
+"The CGB is a patriotic organisation that fights our numerous enemies with means that guards or army do not have at their disposal. ...",
+"We work secretly and covertly. We uncover secret plots and we are both the first line of defence of our city and the last. We are joined only by the best of the best."}})
+keywordHandler:addKeyword({"avin"}, StdModule.say, {npcHandler = npcHandler, text = {
+"The AVIN is rather a crime syndicate than anything else. If there is something dirty and illegal, they are most likely involved. ...",
+"They are unscrupulous and also do not back away from blackmailing and assassination."}})
+keywordHandler:addKeyword({"tbi"}, StdModule.say, {npcHandler = npcHandler, text = {
+"The TBI is as old-fashioned, stubborn and inflexible as only males can be. What makes this bureaucracy somewhat dangerous, is the money they have at their disposal. ...",
+"They buy spies and traitors - all of them weak-willed or greedy individuals."}})
+keywordHandler:addKeyword({"job"}, StdModule.say, {npcHandler = npcHandler, text = "I am the head of Carlin's Girls Brigade, also known as CGB."})
+keywordHandler:addKeyword({"name"}, StdModule.say, {npcHandler = npcHandler, text = "I am known as Emma."})
+keywordHandler:addKeyword({"ab'dendriel"}, StdModule.say, {npcHandler = npcHandler, text = {
+"The elves of Ab'Dendriel are our allies. Our druids contribute most to keeping such a good relation. ...",
+"They seem to understand the elves a bit better than we ordinary people do."}})
+keywordHandler:addKeyword({"thais"}, StdModule.say, {npcHandler = npcHandler, text = "The Thaians never got over the fact that we gained our independence. They do everything they can to hinder the prospering of our city."})
+keywordHandler:addKeyword({"venore"}, StdModule.say, {npcHandler = npcHandler, text = "Venore is a hellhole of evil. The trade barons' greed lets them plot against all other cities and even against each other."})
+keywordHandler:addKeyword({"svargrond"}, StdModule.say, {npcHandler = npcHandler, text = "Svargrond is an important project for our city. It's not a colony but many of our people live there alongside those barbarians. If everything works out fine, Carlin and Svargrond will both prosper."})
+keywordHandler:addKeyword({"ankrahmun"}, StdModule.say, {npcHandler = npcHandler, text = "Strange people with strange customs live in this city. Luckily, we rarely have to deal with them."})
+keywordHandler:addKeyword({"darashia"}, StdModule.say, {npcHandler = npcHandler, text = "Darashia never bothers about the affairs of other cities."})
+keywordHandler:addKeyword({"liberty bay"}, StdModule.say, {npcHandler = npcHandler, text = {
+"The name of the city is a cruel joke. The people there are oppressed by Thais and Venore who slowly bleed the isle and its people white. ...",
+"It shows what would have happened to us if our rebellion had failed."}})
+keywordHandler:addKeyword({"port hope"}, StdModule.say, {npcHandler = npcHandler, text = "It's just another Thaian puppet. Still, it is distant enough to stand a fair chance to get rid of Thais's oppression one day."})
+keywordHandler:addKeyword({"kazordoon"}, StdModule.say, {npcHandler = npcHandler, text = "The dwarfs of Kazordoon usually mind their own business. I wish all other cities would do the same."})
+npcHandler:setMessage(MESSAGE_GREET, "HAIL TO THE QUEEN!")
+npcHandler:setMessage(MESSAGE_FAREWELL, "LONG LIVE THE QUEEN! You may leave now!")
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

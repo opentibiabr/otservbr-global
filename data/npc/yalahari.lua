@@ -264,7 +264,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "no") then
-		if npcHandler:getTopic(playerId) == 1 then
+		if npcHandler:getTopic(playerId) == 1 and player:getStorageValue(Storage.InServiceofYalahar.GoodSide) == 0 then
 			player:setStorageValue(Storage.InServiceofYalahar.GoodSide, 1)
 			player:setStorageValue(Storage.InServiceofYalahar.Questline, 22)
 			player:setStorageValue(Storage.InServiceofYalahar.Mission03, 6) -- StorageValue for Questlog "Mission 03: Death to the Deathbringer"

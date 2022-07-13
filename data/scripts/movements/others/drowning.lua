@@ -10,7 +10,7 @@ function drowning.onStepIn(player, item, position, fromPosition)
 	if player:isPlayer() then
 		local headItem = player:getSlotItem(CONST_SLOT_HEAD)
 		if headItem and isInArray({5460, 11585, 13995}, headItem.itemid) then
-			return true 
+			return true
 		elseif math.random(1, 10) == 1 then
 			position:sendMagicEffect(CONST_ME_BUBBLES)
 		end
