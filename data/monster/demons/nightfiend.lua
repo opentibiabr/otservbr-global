@@ -29,7 +29,7 @@ monster.Bestiary = {
 monster.health = 2700
 monster.maxHealth = 2700
 monster.race = "blood"
-monster.corpse = 3580
+monster.corpse = 18952
 monster.speed = 224
 monster.manaCost = 0
 
@@ -75,6 +75,19 @@ monster.voices = {
 }
 
 monster.loot = {
+	{name = "platinum coin", chance = 50000, maxCount = 1},
+	{name = "gold coin", chance = 50000, maxCount = 100},
+	{name = "gold coin", chance = 50000, maxCount = 48},
+	{id = 3030, chance = 1052, maxCount = 3},
+	{name = "tooth file", chance = 564},
+	{name = "blood preservation", chance = 1000},
+	{name = "emerald bangle", chance = 120},
+	{name = "vampire teeth", chance = 10000},
+	{name = "vampire shield", chance = 50},
+	{name = "strong health potion", chance = 4761},
+	{name = "strong mana potion", chance = 5000},
+	{name = "red gem", chance = 55},
+	{name = "ring of healing", chance = 1000},
 }
 
 monster.attacks = {
