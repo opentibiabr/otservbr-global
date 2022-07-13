@@ -92,7 +92,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, player:getStorageValue(TheNewFrontier.TomeofKnowledge) +1)
 			elseif player:getStorageValue(TheNewFrontier.TomeofKnowledge) >= 6 and player:getStorageValue(TheNewFrontier.TomeofKnowledge) <= 11 then --tome7 - tome12
 				--The New Frontier Quest completed to trade more Tomes of Knowledge with NPC Cael.
-				if player:getStorageValue(TheNewFrontier.Mission10[1]) == 1 then
+				if player:getStorageValue(TheNewFrontier.Mission10[1]) == 2 then
 					npcHandler:say("Oh! That sounds fascinating. Have you found a new Tome of Knowledge for me to read?", npc, creature)
 					npcHandler:setTopic(playerId, player:getStorageValue(TheNewFrontier.TomeofKnowledge) +1)
 				else
