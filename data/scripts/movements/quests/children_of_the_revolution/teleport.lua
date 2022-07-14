@@ -1,7 +1,7 @@
 local config = {
 	[3167] = {
 		storage = Storage.ChildrenoftheRevolution.Questline,
-		teleportToPosition = {Position(33257, 31116, 8), Position(33356, 31126, 7)}},
+		teleportToPosition = {Position(33261, 31077, 8), Position(33356, 31126, 7)}},
 	[3168] = {
 		storage = Storage.ChildrenoftheRevolution.Questline,
 		teleportToPosition = {Position(33356, 31125, 7), Position(33356, 31125, 7)}}
