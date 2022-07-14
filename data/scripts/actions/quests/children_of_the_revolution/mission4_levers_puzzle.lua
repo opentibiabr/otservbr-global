@@ -72,7 +72,7 @@ function childrenGrease.onUse(player, item, fromPosition, target, toPosition, is
 			player:say("After a cracking noise a deep humming suddenly starts from somewhere below.", TALKTYPE_MONSTER_SAY)
 			player:setStorageValue(Storage.ChildrenoftheRevolution.Questline, 17)
 			player:setStorageValue(Storage.ChildrenoftheRevolution.Mission04, 5)
-		end		
+		end
 		item:transform(item.itemid == 9125 and 9126 or 9125)
 		if Tile(fromPosition):getItemById(9126) then
 			addEvent(revertLever, 5000, fromPosition)
