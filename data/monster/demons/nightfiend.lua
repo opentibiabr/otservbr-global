@@ -85,8 +85,8 @@ monster.loot = {
 	{name = "vampire shield", chance = 50},
 	{name = "strong health potion", chance = 4761},
 	{name = "strong mana potion", chance = 5000},
-	{name = "red gem", chance = 55},
-	{name = "ring of healing", chance = 1000},
+	{id = 3039, chance = 55}, -- red gem
+	{id = 3098, chance = 1000} -- ring of healing
 }
 
 monster.attacks = {
