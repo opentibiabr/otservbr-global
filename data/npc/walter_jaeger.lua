@@ -404,9 +404,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			if config ~= nil and config.outifts ~= nil and #(config.outifts) > 0 then
 				local offerTable = getOfferByIndex(npcHandler:getTopic(playerId) - config.topics.outfit, config.outifts, config.topics.outfit)
 				if offerTable ~= nil then
-					local points = 0
 					if MsgContains(message, "base") then
-						points = offerTable.base
+						local points = offerTable.base
 						if player:hasOutfit(offerTable.male) or player:hasOutfit(offerTable.female) then
 							npcHandler:say("You already have this outfit.", npc, creature)
 						elseif player:removeTaskHuntingPoints(points) then
@@ -416,7 +415,7 @@ local function creatureSayCallback(npc, creature, type, message)
 							npcHandler:say("Here you have it.", npc, creature)
 						end
 					elseif MsgContains(message, "first") then
-						points = offerTable.firstAddon
+						local points = offerTable.firstAddon
 						if not(player:hasOutfit(offerTable.male)) or not(player:hasOutfit(offerTable.female)) then
 							npcHandler:say("First you need to buy the base addon to unlock this addon.", npc, creature)
 						elseif player:hasOutfit(offerTable.male, 1) or player:hasOutfit(offerTable.female, 1) then
@@ -430,7 +429,7 @@ local function creatureSayCallback(npc, creature, type, message)
 							npcHandler:say("Sorry, but you don't have enough hunting task points.", npc, creature)
 						end
 					elseif MsgContains(message, "second") then
-						points = offerTable.secondAddon
+						local points = offerTable.secondAddon
 						if not(player:hasOutfit(offerTable.male)) or not(player:hasOutfit(offerTable.female)) then
 							npcHandler:say("First you need to buy the base addon to unlock this addon.", npc, creature)
 						elseif player:hasOutfit(offerTable.male, 2) or player:hasOutfit(offerTable.female, 2) then
