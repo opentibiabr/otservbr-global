@@ -159,8 +159,7 @@ pushWhenAttacking = false
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
--- NOTE: unzip the map world.rar
-mapName = "canary"
+mapName = "otservbr"
 mapAuthor = "OpenTibiaBR"
 
 -- Party List limitations
@@ -171,7 +170,7 @@ partyListMaxDistance = 30
 -- Custom Map
 -- NOTE: mapCustomEnabled: true = activate the map, false = disable the map
 toggleMapCustom = true
-mapCustomName = "canary-custom"
+mapCustomName = "otservbr-custom"
 mapCustomAuthor = "OpenTibiaBR"
 
 -- Market
