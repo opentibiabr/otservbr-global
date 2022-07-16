@@ -657,8 +657,6 @@ if not Quests then
 					startValue = 1,
 					endValue = 3,
 					states = {
-						-- [1] = "Your mission is to use the portal in the chamber beyond the mechanism. \z
-							-- It will lead you to the great gate.",
 						[1] = "Zalamon has sent you on a quest to find out what lies beneath the secret portal in the temple. Find it and explore the other side.",
 						[2] = "Eternal guardians and lizard chosen has been awaken. Survive them and report it to Zalamon!",
 						[3] = "You Survived the Waves and reported Zalamon about your success! You got a Serpent Crest as reward!"
