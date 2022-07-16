@@ -20736,7 +20736,16 @@
 		<attribute key="weight" value="950"/>
 	</item>
 	<item fromid="11252" toid="11255" article="a" name="wall lamp"/>
-	<item fromid="11256" toid="11258" article="a" name="unknown item"/>
+		<!-- <item fromid="11256" toid="11258" article="a" name="unknown item"/> -->
+	<item id="11256" article="a" name="unknown item"/>
+	<item id="11257" article="a" name="unknown item">
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="11258"/>
+	</item>
+	<item id="11258" article="a" name="unknown item">
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="11257"/>		
+	</item>
 	<item fromid="11259" toid="11262" article="a" name="banner"/>
 	<item fromid="11263" toid="11264" article="a" name="tapestry"/>
 	<item fromid="11265" toid="11271" article="a" name="dragon statue"/>
