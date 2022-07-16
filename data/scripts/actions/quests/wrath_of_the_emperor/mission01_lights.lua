@@ -29,7 +29,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 				Position(33357, 31077, 8),
 				Position(33360, 31079, 8)
 			}
-			for i = 1, #pos do			
+			for i = 1, #pos do
 				transformLamp(pos[i], 10493, 10478)
 				addEvent(transformLamp, 20 * 1000, pos[i], 10478, 10493)
 			end
