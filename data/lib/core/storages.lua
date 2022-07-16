@@ -2158,7 +2158,18 @@ Storage = {
 					SnakeHeadTeleport = 42731, -- 7th Tome: Snake Head Teleport
 					CorruptionHole = 42732 -- 8th Tome: Corruption Hole
 				},
-			TomesOfKnowledge = {}, -- 42751 - 42780
+			TomesOfKnowledge = {42751, -- storage for all tomes
+			42752,
+			42753, -- 3
+			42754,
+			42755,
+			42756, -- 6
+			42757,
+			42758,
+			42759, -- 9
+			42760,
+			42761,
+			42762}, -- 42751 - 42780
 			UnnaturalSelection = {}, -- 42781 - 42830
 			WarmasterOutfits = {}, -- 42831 - 42840
 		},

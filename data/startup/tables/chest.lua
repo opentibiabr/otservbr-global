@@ -933,6 +933,13 @@ ChestUnique = {
 		weight = 2.00,
 		storage = Storage.QuestChests.OldParchment
 	},
+	[6104] = {
+		itemId = 2472,
+		itemPos = {x = 33154, y = 31297, z = 3},
+		reward = {{10217, 1}},
+		weight = 15.00,
+		storage = Storage.Quest.U8_54.TomesOfKnowledge[5]
+	},
 	-- Reward of others scrips files (varied rewards)
 	-- The First dragon Quest
 	-- Treasure chests (data\scripts\actions\quests\first_dragon\treasure_chests.lua)
