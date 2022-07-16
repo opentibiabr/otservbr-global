@@ -3,7 +3,7 @@ function catchPlayer(player)
 	player:removeItem(11328, 1)
 	player:setStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou, player:getStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou) + 1)
 	player:teleportTo({x = 33361, y = 31206, z = 8}, false)
-	if player:getStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou) == 1 then 
+	if player:getStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou) == 1 then
 		player:say("The guards have spotted you. You were forcibly dragged into a small cell. It looks like you need to build another disguise.", TALKTYPE_MONSTER_SAY)
 	end
 	return true
@@ -30,7 +30,7 @@ function crate.onStepIn(player, item, position, fromPosition, toPosition)
 		-- player:say("You hear guards moving behind doors in the distance. \z
 			-- If you have any sort of disguise with you, this is the moment to use it.", TALKTYPE_MONSTER_SAY)
 	if item.actionid == 50372 then
-		player:setStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou, 0)		
+		player:setStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou, 0)
 		catchPlayer(player)
 	elseif item.actionid == 50369 then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light01) ~= 1 then
