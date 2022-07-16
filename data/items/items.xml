@@ -20737,7 +20737,6 @@
 		<attribute key="weight" value="950"/>
 	</item>
 	<item fromid="11252" toid="11255" article="a" name="wall lamp"/>
-		<!-- <item fromid="11256" toid="11258" article="a" name="unknown item"/> -->
 	<item id="11256" article="a" name="unknown item"/>
 	<item id="11257" article="a" name="unknown item">
 		<attribute key="duration" value="10"/>
