@@ -938,7 +938,7 @@ ChestUnique = {
 		itemPos = {x = 33154, y = 31297, z = 3},
 		reward = {{10217, 1}},
 		weight = 15.00,
-		storage = Storage.Quest.U8_54.TomesOfKnowledge[5]
+		storage = Storage.Quest.U8_54.TomesOfKnowledge.TopTower
 	},
 	-- Reward of others scrips files (varied rewards)
 	-- The First dragon Quest
