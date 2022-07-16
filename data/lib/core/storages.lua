@@ -2158,18 +2158,20 @@ Storage = {
 					SnakeHeadTeleport = 42731, -- 7th Tome: Snake Head Teleport
 					CorruptionHole = 42732 -- 8th Tome: Corruption Hole
 				},
-			TomesOfKnowledge = {42751, -- storage for all tomes
-			42752,
-			42753, -- 3
-			42754,
-			42755,
-			42756, -- 6
-			42757,
-			42758,
-			42759, -- 9
-			42760,
-			42761,
-			42762}, -- 42751 - 42780
+			TomesOfKnowledge = {
+				OrcCamp = 42751,
+				TheNewFrontier = 42752,
+				UneasyAlliance = 42753,
+				LizardCamp = 42754,
+				TopTower = 42755,
+				MortalCombat = 42756,
+				Hills = 42757,
+				ChildrenoftheRevolution = 42758,
+				Arena = 42759,
+				CobraHead = 42760,
+				OrcRaid = 42761,
+				ZaoPalace = 42762
+			},
 			UnnaturalSelection = {}, -- 42781 - 42830
 			WarmasterOutfits = {}, -- 42831 - 42840
 		},
