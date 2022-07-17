@@ -4676,7 +4676,7 @@ if not Quests then
 						On the 4th and final floor you need to assemble the sceptre..",
 						[2] = "After you've assembled the Snake Sceptre and fought your way back out, \z
 						head back to Zalamon and give it to him.",
-						[3] = "You brought the Snake Sceptre to Zalamon and completed the mission. Ask for the next mission."
+						[3] = "You have delievered the recreated sceptre to the rebels."
 					}
 				},
 				[5] = {
