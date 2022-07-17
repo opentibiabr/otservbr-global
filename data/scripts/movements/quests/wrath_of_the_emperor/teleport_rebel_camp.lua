@@ -6,7 +6,7 @@ function teleport.onStepIn(player, item, position, fromPosition)
 		return true
 	end
 	if player:getStorageValue(Storage.WrathoftheEmperor.TeleportAccess) == 1 then
-		if position == config.teleportPos then 
+		if position == config.teleportPos then
 			player:teleportTo(config.campPos)
 			config.campPos:sendMagicEffect(CONST_ME_TELEPORT)
 		else
