@@ -1,74 +1,42 @@
-local puzzle = {
-[1] = Position(33352, 31126, 5),
-[2] = Position(33353, 31126, 5),
-[3] = Position(33354, 31126, 5),
-[4] = Position(33355, 31126, 5)
+local puzzlePositions = {
+	[1] = Position(33352, 31126, 5),
+	[2] = Position(33353, 31126, 5),
+	[3] = Position(33354, 31126, 5),
+	[4] = Position(33355, 31126, 5)
 }
-
+local function puzzle(position, itemId, itemTransform)
+	if Tile(position):getItemById(itemId) then
+		Tile(position):getItemById(itemId):transform(itemTransform)
+	else
+		Tile(position):getItemById(itemTransform):transform(itemId)
+	end
+end
 local function revertLever(fromPosition)
 	if Tile(fromPosition):getItemById(9126) then
 		Tile(fromPosition):getItemById(9126):transform(9125)
 	end
 end
-
-local function puzzle1()
-	if Tile(puzzle[1]):getItemById(9935) then
-		Tile(puzzle[1]):getItemById(9935):transform(9933)
-	else
-		Tile(puzzle[1]):getItemById(9933):transform(9935)
-	end
-end
-
-local function puzzle2()
-	if Tile(puzzle[2]):getItemById(9936) then
-		Tile(puzzle[2]):getItemById(9936):transform(9937)
-	else
-		Tile(puzzle[2]):getItemById(9937):transform(9936)
-	end
-end
-
-local function puzzle3()
-	if Tile(puzzle[3]):getItemById(9939) then
-		Tile(puzzle[3]):getItemById(9939):transform(9934)
-	else
-		Tile(puzzle[3]):getItemById(9934):transform(9939)
-	end
-end
-
-local function puzzle4()
-	if Tile(puzzle[4]):getItemById(9929) then
-		Tile(puzzle[4]):getItemById(9929):transform(9938)
-	else
-		Tile(puzzle[4]):getItemById(9938):transform(9929)
-	end
-end
-
 local childrenGrease = Action()
 function childrenGrease.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if player:getStorageValue(Storage.ChildrenoftheRevolution.Questline) == 14 then
-		if fromPosition == Position(33349, 31123, 5) then
-			puzzle1()
-			puzzle2()
-			puzzle4()
-		end
-		if fromPosition == Position(33349, 31124, 5) then
-			puzzle1()
-			puzzle2()
-			puzzle4()
+		if fromPosition == Position(33349, 31123, 5) or fromPosition == Position(33349, 31124, 5) then
+			puzzle(puzzlePositions[1], 9935, 9933)
+			puzzle(puzzlePositions[2], 9936, 9937)
+			puzzle(puzzlePositions[4], 9929, 9938)
 		end
 		if fromPosition == Position(33349, 31125, 5) then
-			puzzle3()
-			puzzle4()
+			puzzle(puzzlePositions[3], 9939, 9934)
+			puzzle(puzzlePositions[4], 9929, 9938)
 		end
 		if fromPosition == Position(33349, 31126, 5) then
-			puzzle2()
-			puzzle3()
+			puzzle(puzzlePositions[2], 9936, 9937)
+			puzzle(puzzlePositions[3], 9939, 9934)
 		end
 		if fromPosition == Position(33349, 31127, 5) then
-			puzzle1()
-			puzzle3()
+			puzzle(puzzlePositions[1], 9935, 9933)
+			puzzle(puzzlePositions[3], 9939, 9934)
 		end
-		if Tile(puzzle[1]):getItemById(9933) and Tile(puzzle[2]):getItemById(9936) and Tile(puzzle[3]):getItemById(9939) and Tile(puzzle[4]):getItemById(9938) then
+		if Tile(puzzlePositions[1]):getItemById(9933) and Tile(puzzlePositions[2]):getItemById(9936) and Tile(puzzlePositions[3]):getItemById(9939) and Tile(puzzlePositions[4]):getItemById(9938) then
 			player:say("After a cracking noise a deep humming suddenly starts from somewhere below.", TALKTYPE_MONSTER_SAY)
 			player:setStorageValue(Storage.ChildrenoftheRevolution.Questline, 17)
 			player:setStorageValue(Storage.ChildrenoftheRevolution.Mission04, 5)
@@ -81,6 +49,5 @@ function childrenGrease.onUse(player, item, fromPosition, target, toPosition, is
 	end
 	return true
 end
-
 childrenGrease:aid(8013)
 childrenGrease:register()
