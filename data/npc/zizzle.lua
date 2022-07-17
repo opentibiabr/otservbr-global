@@ -57,6 +57,8 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 25 then
 			npcHandler:say("You made it! Az zoon az you are prepared, I will brief you for your nexzt mizzion. ", npc, creature)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission08, 2) --Questlog, Wrath of the Emperor "Mission 08: Uninvited Guests"
+			player:setStorageValue(Storage.WrathoftheEmperor.Mission09, 0) --door access
+			player:setStorageValue(Storage.WrathoftheEmperor.TeleportAccess.Zizzle, 1) --teleport access
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 26)
 			npcHandler:setTopic(playerId, 0)
 		elseif player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 26 then

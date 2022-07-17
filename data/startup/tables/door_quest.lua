@@ -764,6 +764,10 @@ QuestDoorAction = {
 			{x = 33073, y = 31170, z = 7},
 			{x = 33074, y = 31170, z = 7}
 		}
+	},
+	[Storage.WrathoftheEmperor.Mission09] = {
+		itemId = false,
+		itemPos = {{x = 33083, y = 31216, z = 8}}
 	}
 }
 

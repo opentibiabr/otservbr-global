@@ -4632,7 +4632,7 @@ if not Quests then
 						[2] = "Go to the tunnel in eastern Muggy Plains and reach the other side. \z
 						Try to hide in the dark and avoid being seen at all by using the crate. \z
 						After that you need to find the rebel hideout and talk to their leader Chartan.",
-						[3] = "You found the leader of the rebel Chartan and reported him about Zalamon. Ask him for new mission!"
+						[3] = "You passed the maintenance tunnel and successfully made contact with the resistance in their hideout north of the Great Gate."
 					}
 				},
 				[2] = {
@@ -4712,8 +4712,7 @@ if not Quests then
 					endValue = 6,
 					description = function(player)
 						return string.format(
-							"Explore the area where Zlak is to find Lizard Noble and kill 6 of them. \z
-						You currently have %d killed. Report back to Zlak if you finished it.",
+							"Kill six nobles in the city and report back to Zlak. You have killed %d nobles so far.",
 							(math.max(player:getStorageValue(Storage.WrathoftheEmperor.Mission07), 0))
 						)
 					end
@@ -4725,9 +4724,7 @@ if not Quests then
 					startValue = 1,
 					endValue = 2,
 					states = {
-						[1] = "Your mission is to reach your rebel contact Zizzle in the imperial palace. \z
-						You need to take the old escape tunnel that leads from the abandoned basement \z
-						in the north of the ministry to a lift that ends somewhere in the palace.",
+						[1] = "Use the old escape tunnel in the northern basement of the ministry to enter the imperial palace. Fight your way to the basement to meet your new rebel contact.",
 						[2] = "You have reached your rebel contact Zizzle in the imperial palace."
 					}
 				},

@@ -1108,7 +1108,8 @@ Storage = {
 		-- never set just added here
 		TeleportAccess = {
 			Rebel = 51325,
-			Zlak = 51326
+			Zlak = 51326,
+			Zizzle = 51327
 		}
 	},
 	FriendsandTraders = {
