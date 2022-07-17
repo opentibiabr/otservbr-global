@@ -1106,7 +1106,10 @@ Storage = {
 		backpackReward = 51323,
 		mainReward = 51324,
 		-- never set just added here
-		TeleportAccess = 51325
+		TeleportAccess = {
+			Rebel = 51325,
+			Zlak = 51326
+		}
 	},
 	FriendsandTraders = {
 		-- Reserved storage from 51340 - 51359

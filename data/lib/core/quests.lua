@@ -4686,9 +4686,7 @@ if not Quests then
 					startValue = 1,
 					endValue = 3,
 					states = {
-						[1] = "Zalamon tells you that you have to go inside the city. \z
-						From the rebel hideout go out to the gray road and follow it to the southwest. \z
-						Find the Gate Guardian and ask him for a mission to enter the city.",
+						[1] = "Enter the imperial city Razachai to the west and talk to your contact in the ministry there for further missions.",
 						[2] = "Now you only have to walk west until you find Zlak inside the big green building.",
 						[3] = "You went deep inside the city to find Zlak and completed the mission. Ask for the next mission."
 					}
@@ -4701,8 +4699,7 @@ if not Quests then
 					endValue = 4,
 					description = function(player)
 						return string.format(
-							"Explore the area where Zlak is to find Lizard Magistratus and kill 4 of them. \z
-						You currently have %d killed. Report back to Zlak if you finished it.",
+							"Kill four Magistrati in the office building. Then report back to Zlak. You have killed %d magistrati so far.",
 							(math.max(player:getStorageValue(Storage.WrathoftheEmperor.Mission06), 0))
 						)
 					end
