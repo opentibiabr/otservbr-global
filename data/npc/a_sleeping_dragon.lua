@@ -199,7 +199,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Blending the rays, the mirror directs pure white light directly towards the part where you assume the face of the creature. ...",
 				"The growl transforms into a scream, everything around you seems to compress. As you press yourself tightly against the bluff, everything falls silent and in a split second, the dark being dissolves into bursts of blackness. You wake."
 			}, npc, creature)
-			player:addAchievement('Wayfarer')			
+			player:addAchievement('Wayfarer')
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 28)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission09, 2) --Questlog, Wrath of the Emperor "Mission 09: The Sleeping Dragon"
 			npcHandler:setTopic(playerId, 0)
