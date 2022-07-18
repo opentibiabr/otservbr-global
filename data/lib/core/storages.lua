@@ -1105,11 +1105,15 @@ Storage = {
 		platinumReward = 51322,
 		backpackReward = 51323,
 		mainReward = 51324,
-		-- never set just added here
 		TeleportAccess = {
 			Rebel = 51325,
 			Zlak = 51326,
-			Zizzle = 51327
+			Zizzle = 51327,
+			sleepingDragon = 51328,
+			innerSanctum = 51329,
+			awarnessEmperor = 51330,
+			Wote10 = 51331,
+			bossRoom = 51332
 		}
 	},
 	FriendsandTraders = {

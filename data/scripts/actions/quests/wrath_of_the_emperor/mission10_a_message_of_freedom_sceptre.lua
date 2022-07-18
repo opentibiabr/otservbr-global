@@ -39,10 +39,6 @@ function wrathEmperorMiss10Message.onUse(player, item, fromPosition, target, toP
 				player:setStorageValue(Storage.WrathoftheEmperor.BossStatus, 5)
 				player:setStorageValue(Storage.WrathoftheEmperor.Mission10, 6) --Questlog, Wrath of the Emperor "Mission 10: A Message of Freedom"
 				player:say("The sceptre is almost torn from your hand as you banish the presence of the emperor.", TALKTYPE_MONSTER_SAY)
-				local destination = Position(33072, 31151, 15)
-				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-				player:teleportTo(destination)
-				destination:sendMagicEffect(CONST_ME_TELEPORT)
 			end
 		end
 	elseif target.itemid == 11429 then
