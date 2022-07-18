@@ -46,7 +46,6 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	if Player(creature):getStorageValue(Storage.WrathoftheEmperor.Questline) < 31 then
 		npcHandler:setMessage(MESSAGE_GREET, "I am not here to fight you, fool. Like it or not, we will have to work together to stop the catastrophe you and that priest have initiated.")
 	else
