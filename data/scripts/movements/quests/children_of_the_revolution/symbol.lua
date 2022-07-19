@@ -17,5 +17,5 @@ function symbol.onStepIn(creature, item, position, fromPosition)
 end
 
 symbol:type("stepin")
-symbol:uid(3166)
+symbol:position({x = 33349, y = 31123, z = 5})
 symbol:register()
