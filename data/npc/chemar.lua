@@ -80,6 +80,7 @@ keywordHandler:addAliasKeyword({'kazor'})
 addTravelKeyword('issavi', '',100, Position(33957, 31515, 0))
 
 npcHandler:setMessage(MESSAGE_GREET, 'Daraman\'s blessings, traveller |PLAYERNAME|.')
+keywordHandler:addKeyword({'fly'}, StdModule.say, {npcHandler = npcHandler, text ='I can fly you to {Edron}, {Issavi}, {Svargrond}, {Kazordoon}, {Zao} or to {Femor Hills} if you like. Where do you want to go?'})
 npcHandler:setMessage(MESSAGE_FAREWELL, 'It was a pleasure to help you, |PLAYERNAME|.')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'It was a pleasure to help you, |PLAYERNAME|.')
 
