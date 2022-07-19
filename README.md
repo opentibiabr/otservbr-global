@@ -16,9 +16,6 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=opentibiabr_canary&metric=alert_status)](https://sonarcloud.io/dashboard?id=opentibiabr_canary)
 
 ## Builds
-
-[![Build status](https://ci.appveyor.com/api/projects/status/github/opentibiabr/canary?branch=master&passingText=master%20-%20OK&svg=true)](https://ci.appveyor.com/project/opentibiabr/canary/build/artifacts "Download nightly builds for Windows")
-
 [![Build - Ubuntu](https://github.com/opentibiabr/canary/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-ubuntu.yml)
 [![Build - Windows](https://github.com/opentibiabr/canary/actions/workflows/build-windows.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-windows.yml)
 
