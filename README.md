@@ -35,15 +35,16 @@ OpenTibiaBR - Global Server is a free and open-source MMORPG server emulator wri
 
 In this repository it is just the global datapack, and the source code is in the [canary repository](https://github.com/opentibiabr/canary). Our idea is to facilitate the development of the source code, so that it does not need to be directly linked to the global datapack, but that it is compatible.
 
-To connect to the server and to take a stable experience, you can use our [own client](https://forums.otserv.com.br/index.php?/forums/topic/167933-otservbr-global-cliente-tibia-12/) and if you want to edit something, check our [customized tools](https://github.com/opentibiabr/tools).
+To connect to the server and to take a stable experience, you can use [mehah's otclient](https://github.com/mehah/otclient) or [tibia client](https://github.com/dudantas/tibia-client/releases/latest) and if you want to edit something, check our [customized tools](https://majestyotbr.gitbook.io/opentibiabr/others/downloads/tools).
+
+If you want edit the map, use the [own remere's map editor](https://github.com/opentibiabr/remeres-map-editor/).
 
 You are subject to our code of conduct, read at [this link](https://github.com/opentibiabr/otservbr-global/blob/develop/CODE_OF_CONDUCT.md).
 
 ### Getting **Started**
 
-* **WARNING: YOU NEED TO UNZIP THE MAP BEFORE STARTING THE SERVER.**
-* [Compiling on Windows](https://forums.otserv.com.br/index.php?/forums/topic/170157-windowsvc2022-compilando-sources-canary/)
-* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/canary/wiki/Compiling-on-Debian-or-Ubuntu), [Windows](https://github.com/opentibiabr/canary/wiki/Compiling-on-Windows))
+* [Gitbook](https://majestyotbr.gitbook.io/opentibiabr/projects/otservbr-global).
+* [Wiki](https://github.com/opentibiabr/canary/wiki).
 
 ### Issues
 #### NOTE: If your issue is related to source code, please open it in the [canary repository](https://github.com/opentibiabr/canary)
