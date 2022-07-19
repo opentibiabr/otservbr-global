@@ -1065,7 +1065,8 @@ Storage = {
 		SpyBuilding01 = 51267,
 		SpyBuilding02 = 51268,
 		SpyBuilding03 = 51269,
-		StrangeSymbols = 55154
+		StrangeSymbols = 55154,
+		teleportAccess = 55155
 	},
 	UnnaturalSelection = {
 		-- Reserved storage from 55159 - 51299
