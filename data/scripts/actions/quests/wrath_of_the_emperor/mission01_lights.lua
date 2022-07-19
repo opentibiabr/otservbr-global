@@ -1,3 +1,10 @@
+local positions = {
+	{x = 33370, y = 31067, z = 9},
+	{x = 33359, y = 31070, z = 9},
+	{x = 33349, y = 31075, z = 8},
+	{x = 33351, y = 31069, z = 9}
+}
+
 local function transformLamp(position, itemId, transformId)
 	local lampItem = Tile(position):getItemById(itemId)
 	if lampItem then
@@ -7,7 +14,7 @@ end
 
 local wrathEmperorMiss1Light = Action()
 function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if(item.uid == 3171) then
+	if fromPosition == Position(positions[1]) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light01) ~= 1 then
 			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light01, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light01, 0)
@@ -21,7 +28,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 				addEvent(transformLamp, 20 * 1000, pos[i], 10479, 10491)
 			end
 		end
-	elseif(item.uid == 3172) then
+	elseif fromPosition == Position(positions[2]) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light02) ~= 1 then
 			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light02, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light02, 0)
@@ -34,7 +41,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 				addEvent(transformLamp, 20 * 1000, pos[i], 10478, 10493)
 			end
 		end
-	elseif(item.uid == 3173) then
+	elseif fromPosition == Position(positions[3]) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light04) ~= 1 then
 			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light04, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light04, 0)
@@ -64,7 +71,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 				end
 			end
 		end
-	elseif(item.uid == 3174) then
+	elseif fromPosition == Position(positions[4]) then
 		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light03) ~= 1 then
 			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light03, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light03, 0)
@@ -76,5 +83,7 @@ function wrathEmperorMiss1Light.onUse(player, item, fromPosition, target, toPosi
 	return item:transform(item.itemid == 9125 and 9126 or 9125)
 end
 
-wrathEmperorMiss1Light:uid(3171,3172,3173,3174)
+for index, value in pairs(positions) do
+	wrathEmperorMiss1Light:position(value)
+end
 wrathEmperorMiss1Light:register()
