@@ -287,7 +287,7 @@ function crate.onStepIn(player, item, position, fromPosition, toPosition)
 				if player:removeCondition(CONDITION_OUTFIT) then
 					player:say("On reaching the watchtower you remove your temporary disguise.", TALKTYPE_MONSTER_SAY)
 				end
-			end		
+			end
 		end
 	end
 	return true
