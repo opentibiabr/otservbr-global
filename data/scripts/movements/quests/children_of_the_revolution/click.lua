@@ -104,5 +104,7 @@ function click.onStepIn(creature, item, position, fromPosition)
 end
 
 click:type("stepin")
-click:aid(8014)
+for index, value in pairs(config.positions) do
+	click:position(value)
+end
 click:register()
