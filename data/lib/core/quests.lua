@@ -1076,26 +1076,26 @@ if not Quests then
 				},
 				[6] = {
 					name = "Paw and Fur: Tiquandas Revenge",
-					storageId = Storage.KillingInTheNameOf.TiquandasRevengeTeleport,
+					storageId = Storage.KillingInTheNameOf.MissionTiquandasRevenge,
 					missionId = 1086,
 					startValue = 1,
-					endValue = 2,
+					endValue = 3,
 					states = {
-						[1] = "Grizzly Adams told you that there is Tiquandas Revenge hiding somewhere in the jungle of Port Hope. \z
-							Go find its hideout and kill it.",
-						[2] = "You have slained the Tiquandas Revenge."
+						[1] = "You have the special task to bring down Tiquanda's Revenge.",
+						[2] = "You have fought 'Tiquanda's Revenge'. Report to Grizzly Adams about your special task.",
+						[3] = "You found the hideout of Tiquanda's Revenge and managed to kill it."
 					}
 				},
 				[7] = {
 					name = "Paw and Fur: Demodras",
-					storageId = Storage.KillingInTheNameOf.DemodrasTeleport,
+					storageId = Storage.KillingInTheNameOf.MissionDemodras,
 					missionId = 1087,
 					startValue = 1,
-					endValue = 2,
+					endValue = 3,
 					states = {
-						[1] = "Grizzly Adams wanted you to go look for Demodras' hideout. \z
-							He also mentioned that it might be somewhere under the Plains of Havoc.",
-						[2] = "You have slained the Demodras."
+						[1] = "You have the special task to bring down Demodras.",
+						[2] = "You have fought 'Demodras'. Report to Grizzly Adams about your special task.",
+						[3] = "You found the hideout of Demodras and managed to kill it."
 					}
 				},
 				[8] = {
