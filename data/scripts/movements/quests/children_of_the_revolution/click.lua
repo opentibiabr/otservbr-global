@@ -79,13 +79,15 @@ function click.onStepIn(creature, item, position, fromPosition)
 		end
 	end
 
+	for i = 1, #players do
+		players[i]:say('A clicking sound tatters the silence.', TALKTYPE_MONSTER_SAY)
+	end
+
 	if #players ~= #config.positions then
 		return true
 	end
 
-	for i = 1, #players do
-		players[i]:say('A clicking sound tatters the silence.', TALKTYPE_MONSTER_SAY)
-	end
+	player:say("The army is complete again. You hear a hatch opening elsewhere, followed by a grinding sound.", TALKTYPE_MONSTER_SAY, false, 0, Position(33261, 31081, 8))
 
 	local stair = Tile(config.stairPosition):getItemById(1897)
 	if stair then
@@ -102,5 +104,7 @@ function click.onStepIn(creature, item, position, fromPosition)
 end
 
 click:type("stepin")
-click:aid(8014)
+for index, value in pairs(config.positions) do
+	click:position(value)
+end
 click:register()

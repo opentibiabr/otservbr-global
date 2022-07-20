@@ -60,7 +60,7 @@ tasks =
 	[3] = {
 		killsRequired = 300,
 		raceName = "Crocodiles",
-		level = {6, 49},
+		level = {6, 999},
 		premium = true,
 		creatures = {
 			"crocodile"
@@ -88,7 +88,7 @@ tasks =
 	[5] = {
 		killsRequired = 300,
 		raceName = "Tarantulas",
-		level = {6, 49},
+		level = {6, 999},
 		premium = true,
 		creatures = {
 			"tarantula"
@@ -131,7 +131,7 @@ tasks =
 	[8] = {
 		killsRequired = 300,
 		raceName = "Mammoths",
-		level = {6, 49},
+		level = {6, 999},
 		premium = true,
 		creatures = {
 			"mammoth"
@@ -212,7 +212,7 @@ tasks =
 	[14] = {
 		killsRequired = 300,
 		raceName = "Ice Golems",
-		level = {50, 79},
+		level = {50, 999},
 		premium = true,
 		creatures = {
 			"ice golem"
@@ -227,7 +227,7 @@ tasks =
 	[15] = {
 		killsRequired = 400,
 		raceName = "Quara Scouts",
-		level = {50, 999},
+		level = {50, 79},
 		premium = true,
 		creatures = {
 			"quara pincher scout",
@@ -274,7 +274,7 @@ tasks =
 	[18] = {
 		killsRequired = 300,
 		raceName = "Wyverns",
-		level = {50, 999},
+		level = {50, 79},
 		premium = true,
 		creatures = {
 			"wyvern"
@@ -300,7 +300,7 @@ tasks =
 	[20] = {
 		killsRequired = 400,
 		raceName = "Wailing Widows",
-		level = {50, 999},
+		level = {50, 79},
 		premium = true,
 		creatures = {
 			"wailing widow"
@@ -313,7 +313,7 @@ tasks =
 	[21] = {
 		killsRequired = 250,
 		raceName = "Killer Caimans",
-		level = {50, 999},
+		level = {50, 79},
 		premium = true,
 		creatures = {
 			"killer caiman"
@@ -355,7 +355,7 @@ tasks =
 	[24] = {
 		killsRequired = 300,
 		raceName = "Mutated Tigers",
-		level = {50, 999},
+		level = {50, 79},
 		premium = true,
 		creatures = {
 			"mutated tiger"
@@ -425,7 +425,7 @@ tasks =
 		},
 		rewards = {
 			{type = "exp", value = {25000}},
-			{type = "achievement", value = {"Dream is Over"}},
+			{type = "achievement", value = {"Dream's Over"}},
 			{type = "storage", value = {34112, 1}},
 			{type = "points", value = {3}}
 		}
@@ -640,7 +640,7 @@ tasks =
 		},
 		rewards = {
 			{type = "exp", value = {30000}},
-			{type = "achievement", value = {"Best there was!"}},
+			{type = "achievement", value = {"King of the Ring"}},
 			{type = "storage", value = {34126, 1}},
 			{type = "points", value = {4}}
 		}

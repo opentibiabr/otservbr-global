@@ -45,6 +45,15 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local function greetCallback(npc, creature)
+	if Player(creature):getStorageValue(Storage.WrathoftheEmperor.Questline) < 31 then
+		npcHandler:setMessage(MESSAGE_GREET, "I am not here to fight you, fool. Like it or not, we will have to work together to stop the catastrophe you and that priest have initiated.")
+	else
+		npcHandler:setMessage(MESSAGE_GREET, "Greetings, mortal. Be aware that you are trying my patience while we are talking.")
+	end
+	return true
+end
+
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -73,12 +82,17 @@ local function creatureSayCallback(npc, creature, type, message)
 				"I grant you three chests - filled to the lid with platinum coins, a house in the city in which you may reside, a set of the finest armor Zao has to offer, and a casket of never-ending mana. ...",
 				"Speak with magistrate Izsh in the ministry about your reward. And now leave before I change my mind!"
 			}, npc, creature)
+			player:setStorageValue(Storage.WrathoftheEmperor.TeleportAccess.sleepingDragon, 2)
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 33)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission12, 0) --Questlog, Wrath of the Emperor "Mission 12: Just Rewards"
 		end
 	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 1 then
 			local player = Player(creature)
+			player:teleportTo(Position(33360, 31397, 9))
+			player:setStorageValue(Storage.WrathoftheEmperor.TeleportAccess.awarnessEmperor, 1)
+			player:setStorageValue(Storage.WrathoftheEmperor.TeleportAccess.Wote10, 1)
+			player:setStorageValue(Storage.WrathoftheEmperor.TeleportAccess.bossRoom, 1)
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 31)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission11, 1) --Questlog, Wrath of the Emperor "Mission 11: Payback Time"
 			npcHandler:say("So be it!", npc, creature)
@@ -88,6 +102,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 

@@ -32,7 +32,7 @@
 	<item id="105" article="a" name="poison field">
 		<attribute key="type" value="magicfield"/>
 		<attribute key="decayTo" value="0"/>
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="248"/>
 		<attribute key="field" value="poison">
 			<attribute key="ticks" value="5000" />
 			<attribute key="start" value="5" />
@@ -1912,7 +1912,7 @@
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="866"/>
-		<attribute key="containersize" value="7"/>
+		<attribute key="containersize" value="14"/>
 	</item>
 	<item id="866" article="a" name="dead troll">
 		<attribute key="fluidsource" value="blood"/>
@@ -2770,7 +2770,7 @@
 			<attribute key="count" value="7"/>
 			<attribute key="damage" value="20"/>
 		</attribute>
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="200"/>
 		<attribute key="decayTo" value="2119"/>
 	</item>
 	<item id="2119" article="a" name="fire field">
@@ -2780,13 +2780,13 @@
 			<attribute key="count" value="7"/>
 			<attribute key="damage" value="10"/>
 		</attribute>
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="148"/>
 		<attribute key="decayTo" value="2120"/>
 	</item>
 	<item id="2120" article="a" name="fire field">
 		<attribute key="type" value="magicfield"/>
 		<attribute key="field" value="fire"/>
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="98"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="2121" article="a" name="poison field">
@@ -2804,7 +2804,7 @@
 			<attribute key="ticks" value="10000"/>
 			<attribute key="damage" value="25"/>
 		</attribute>
-		<attribute key="duration" value="120"/>
+		<attribute key="duration" value="98"/>
 		<attribute key="decayTo" value="0"/>
 	</item>
 	<item id="2123" article="a" name="fire field">
@@ -3880,6 +3880,7 @@
 		<attribute key="weight" value="1300"/>
 	</item>
 	<item id="2822" article="a" name="map">
+		<attribute key="writeable" value="1"/>
 		<attribute key="weight" value="830"/>
 	</item>
 	<item id="2823" article="a" name="map">
@@ -12855,7 +12856,7 @@
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="6332"/>
-		<attribute key="containersize" value="20"/>
+		<attribute key="containersize" value="32"/>
 	</item>
 	<item id="6332" article="a" name="dead hellhound">
 		<attribute key="duration" value="300"/>
@@ -15607,7 +15608,7 @@
 	<item id="7893" name="demonic residue">
 		<attribute key="duration" value="180"/>
 		<attribute key="decayTo" value="0"/>
-		<attribute key="containersize" value="24"/>
+		<attribute key="containersize" value="60"/>
 	</item>
 	<item id="7894" article="a" name="shovel">
 		<attribute key="weight" value="3500"/>
@@ -20736,7 +20737,15 @@
 		<attribute key="weight" value="950"/>
 	</item>
 	<item fromid="11252" toid="11255" article="a" name="wall lamp"/>
-	<item fromid="11256" toid="11258" article="a" name="unknown item"/>
+	<item id="11256" article="a" name="unknown item"/>
+	<item id="11257" article="a" name="unknown item">
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="11258"/>
+	</item>
+	<item id="11258" article="a" name="unknown item">
+		<attribute key="duration" value="10"/>
+		<attribute key="decayTo" value="11257"/>		
+	</item>
 	<item fromid="11259" toid="11262" article="a" name="banner"/>
 	<item fromid="11263" toid="11264" article="a" name="tapestry"/>
 	<item fromid="11265" toid="11271" article="a" name="dragon statue"/>

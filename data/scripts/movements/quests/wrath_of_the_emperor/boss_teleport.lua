@@ -29,7 +29,11 @@ function bossTeleport.onStepIn(creature, item, position, fromPosition)
 	if not teleport then
 		return true
 	end
-
+	if player:getStorageValue(Storage.WrathoftheEmperor.TeleportAccess.Wote10) == 1 then
+		player:teleportTo(teleport.destination)
+		teleport.destination:sendMagicEffect(CONST_ME_TELEPORT)
+		return true
+	end
 	if player:getStorageValue(Storage.WrathoftheEmperor.BossStatus) == 5 then
 		local destination = Position(33072, 31151, 15)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)

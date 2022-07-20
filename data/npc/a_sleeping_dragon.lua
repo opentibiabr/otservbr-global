@@ -199,6 +199,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Blending the rays, the mirror directs pure white light directly towards the part where you assume the face of the creature. ...",
 				"The growl transforms into a scream, everything around you seems to compress. As you press yourself tightly against the bluff, everything falls silent and in a split second, the dark being dissolves into bursts of blackness. You wake."
 			}, npc, creature)
+			player:addAchievement('Wayfarer')
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 28)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission09, 2) --Questlog, Wrath of the Emperor "Mission 09: The Sleeping Dragon"
 			npcHandler:setTopic(playerId, 0)
@@ -206,8 +207,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 28 then
 		if(MsgContains(message, "wayfarer")) then
 			npcHandler:say("I call you the wayfarer. You travelled through my dreams. You ultimately freed my mind. My mind accepted you and so will I.", npc, creature)
-			npcHandler:setTopic(playerId, 40)
-		elseif(MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 40) then
+		elseif MsgContains(message, "mission") then
 			npcHandler:say({
 				"Aaaah... free at last. Hmmm. ...",
 				"I assume you need to get through the gate to reach the evildoer. I can help you if you trust me, wayfarer. I will share a part of my mind with you which should enable you to step through the gate. ...",
@@ -226,7 +226,6 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 29)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission10, 1) --Questlog, Wrath of the Emperor "Mission 10: A Message of Freedom"
 			player:addItem(10343, 1)
-			player:addAchievement('Wayfarer')
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

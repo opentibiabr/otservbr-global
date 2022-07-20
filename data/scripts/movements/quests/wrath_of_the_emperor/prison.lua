@@ -11,14 +11,17 @@ function prison.onStepIn(creature, item, position, fromPosition)
 	end
 
 	player:setStorageValue(Storage.WrathoftheEmperor.PrisonReleaseStatus, 0)
-
-	local destination = Position(33363, 31188, 8)
+	player:setStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou, -1)
+	local destination = Position(33359, 31183, 8)
 	player:teleportTo(destination)
 	position:sendMagicEffect(CONST_ME_TELEPORT)
 	destination:sendMagicEffect(CONST_ME_TELEPORT)
+	if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 2 then
+		player:addItem(11328)
+	end
 	return true
 end
 
 prison:type("stepin")
-prison:uid(3175)
+prison:position({x = 33362, y = 31202, z = 8})
 prison:register()
