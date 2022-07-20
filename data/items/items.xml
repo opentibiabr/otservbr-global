@@ -24934,7 +24934,7 @@
 	<!-- unconfirmed name -->
 	<item id="15701" name="churned ground">
 		<attribute key="duration" value="40"/>
-		<attribute key="decayTo" value="18340"/>
+		<attribute key="decayTo" value="15829"/>
 	</item>
 	<item id="15702" name="RESERVED SPRITE"/>
 	<item id="15703" article="a" name="gnomish repair crystal">
