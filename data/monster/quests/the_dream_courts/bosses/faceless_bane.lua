@@ -4,11 +4,11 @@ local monster = {}
 monster.description = "a Faceless Bane"
 monster.experience = 30000
 monster.outfit = {
-	lookType = 1122,
+	lookType = 1119,
 	lookHead = 0,
-	lookBody = 4,
+	lookBody = 2,
 	lookLegs = 95,
-	lookFeet = 4,
+	lookFeet = 97,
 	lookAddons = 0,
 	lookMount = 0
 }

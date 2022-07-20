@@ -8,7 +8,7 @@ function iceAntHill.onUse(player, item, fromPosition, target, toPosition, isHotk
 			player:say("You fill the jug with ants.", TALKTYPE_MONSTER_SAY)
 			item:transform(7244)
 		end
-	elseif target.itemid == 4942 and item.itemid == 7244 and toPosition.x == mast.x and toPosition.y == mast.y and toPosition.z == mast.z then
+	elseif target.itemid == 4940 and item.itemid == 7244 and toPosition.x == mast.x and toPosition.y == mast.y and toPosition.z == mast.z then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 6 then
 			toPosition:sendMagicEffect(CONST_ME_GROUNDSHAKER)
 			player:setStorageValue(Storage.TheIceIslands.Questline, 7)

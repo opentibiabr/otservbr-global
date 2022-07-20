@@ -141,7 +141,7 @@ local cutItems = {
 	[2452] = 3139,
 	[2524] = 3135,
 	[2904] = 3137,
-	[4995] = 3137,
+	[4995] = 4996,
 	[2997] = 3139,
 	[2998] = 3139,
 	[2999] = 3139,
@@ -427,7 +427,10 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 	elseif target.actionid == 50118 then
 		local wagonItem = Tile(Position(32717, 31492, 11)):getItemById(7131)
 		if wagonItem then
-			Game.createItem(7921, 1, wagonItem:getPosition())
+			if Tile(Position(32717, 31492, 11)):getItemById(7921) then
+				return true
+			end
+			Game.createItem(7921, 1, wagonItem:getPosition()):setActionId(40023)
 			toPosition:sendMagicEffect(CONST_ME_POFF)
 		end
 	elseif target.itemid == 7921 then
@@ -435,7 +438,7 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 		if coalItem then
 			coalItem:remove(1)
 			toPosition:sendMagicEffect(CONST_ME_POFF)
-
+			Tile(Position(32699, 31492, 11)):getItemById(7131):setActionId(40023)
 			local crucibleItem = Tile(Position(32699, 31494, 11)):getItemById(7814)
 			if crucibleItem then
 				crucibleItem:setActionId(50119)
@@ -673,7 +676,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 		if player:getStorageValue(Storage.hiddenCityOfBeregar.WayToBeregar) == 1 then
 			player:teleportTo(Position(32566, 31338, 10))
 		end
-	elseif target.actionid == 50114 then
+	elseif target.actionid == 40028 then
 		if Tile(Position(32617, 31513, 9)):getItemById(1272)
 		and Tile(Position(32617, 31514, 9)):getItemById(1624) then
 			local rubbleItem = Tile(Position(32619, 31514, 9)):getItemById(5709)

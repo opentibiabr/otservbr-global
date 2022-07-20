@@ -76,7 +76,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue) < 1 and player:getStorageValue(Storage.HiddenCityOfBeregar.JusticeForAll) > 4 then
 			npcHandler:say("As you have proven yourself trustworthy I\'m going to assign you a special mission. Are you interested?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
-		elseif player:getStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue) == 5 then
+		elseif player:getStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue) == 7 then
 			npcHandler:say("My son was captured by trolls? Doesn\'t sound like him, but if you say so. Now you want a reward, huh? ...", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		end	
@@ -89,7 +89,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		elseif npcHandler:getTopic(playerId) == 3 then	
 			npcHandler:say("Look at these dwarven legs. They were forged years ago by a dwarf who was rather tall for our kind. I want you to have them. Thank you for rescuing my son |PLAYERNAME|.", npc, creature)
 			player:addItem(3398, 1)
-			player:setStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue, 6)
+			player:setStorageValue(Storage.HiddenCityOfBeregar.RoyalRescue, 8)
 			npcHandler:setTopic(playerId, 0)
 		end	
 	elseif (MsgContains(message, "no")) then

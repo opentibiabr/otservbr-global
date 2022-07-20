@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a last planegazer"
 monster.experience = 40000
 monster.outfit = {
-	lookType = 1063,
+	lookType = 1044,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -16,7 +16,7 @@ monster.outfit = {
 monster.health = 50000
 monster.maxHealth = 50000
 monster.race = "blood"
-monster.corpse = 465
+monster.corpse = 27613
 monster.speed = 250
 monster.manaCost = 0
 

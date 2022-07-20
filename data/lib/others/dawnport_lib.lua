@@ -62,7 +62,7 @@ function Player.changeVocation(self, newVocationId)
 	if newMagicLevel > 0 then
 		self:setMagicLevel(newMagicLevel, magic.manaSpent)
 	elseif magic.manaSpent > 0 then
-		self:addManaSpent(magic.manaSpent)
+		self:addManaSpent(magic.manaSpent, true)
 	end
 	-- Convert skills from previous vocation
 	for i = 1, #skills do
@@ -80,7 +80,7 @@ function Player.changeVocation(self, newVocationId)
 		if newSkillLevel > 10 then
 			self:setSkillLevel(skills[i].id, newSkillLevel, skills[i].tries)
 		elseif skills[i].tries > 0 then
-			self:addSkillTries(skills[i].id, skills[i].tries)
+			self:addSkillTries(skills[i].id, skills[i].tries, true)
 		end
     end
 	-- Set health, mana and capacity stats based on the vocation if is higher than level 8
