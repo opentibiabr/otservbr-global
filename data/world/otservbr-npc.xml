@@ -2887,4 +2887,7 @@
 	<npc centerx="33456" centery="32296" centerz="7" radius="1">
 		<npc name="Dancing Fairy" x="0" y="0" z="7" spawntime="60" />
 	</npc>
+	<npc centerx="32379" centery="32208" centerz="7" radius="3">
+		<npc name="Walter Jaeger" x="0" y="-1" z="7" spawntime="60" />
+	</npc>
 </npcs>
