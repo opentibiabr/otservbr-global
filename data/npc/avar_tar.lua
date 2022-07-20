@@ -110,11 +110,11 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		elseif MsgContains(message, 'shield') then
 			if player:getStorageValue(Storage.Quest.U7_24.TheAnnihilator.Reward) == 2
-			and player:getStorageValue(Storage.Quest.U6_4.DemonHelmet.DemonHelmet) == 1 then
+			and player:getStorageValue(Storage.Quest.U6_4.DemonHelmet.Rewards.DemonHelmet) == 1 then
 				player:addOutfitAddon(541, 1)
 				player:addOutfitAddon(542, 1)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.Quest.U6_4.DemonHelmet.DemonHelmet, 2)
+				player:setStorageValue(Storage.Quest.U6_4.DemonHelmet.Rewards.DemonHelmet, 2)
 				npcHandler:say('Receive the shield, |PLAYERNAME|.', npc, creature)
 			else
 				npcHandler:say('The shield will only be granted to those adventurers who have finished the demon helmet quest, |PLAYERNAME|.', npc, creature)
