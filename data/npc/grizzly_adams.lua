@@ -399,7 +399,7 @@ local function creatureSayCallback(npc, creature, type, message)
 					player:getPawAndFurRank() == 1 and "are a Member"  or
 					"haven't been ranked yet") .. ".", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif isInArray({"special task"}, message:lower()) then
+	elseif isInArray({"special", "special task"}, message:lower()) then
 		if player:getPawAndFurPoints() >= 70 and player:getLevel() >= 80 then
 			if player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) < 1 then
 				npcHandler:say({
