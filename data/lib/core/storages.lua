@@ -1065,7 +1065,8 @@ Storage = {
 		SpyBuilding01 = 51267,
 		SpyBuilding02 = 51268,
 		SpyBuilding03 = 51269,
-		StrangeSymbols = 55154
+		StrangeSymbols = 55154,
+		teleportAccess = 55155
 	},
 	UnnaturalSelection = {
 		-- Reserved storage from 55159 - 51299
@@ -1093,7 +1094,7 @@ Storage = {
 		Mission10 = 51310,
 		Mission11 = 51311,
 		Mission12 = 51312,
-		CrateStatus = 51313, --1068
+		Message = 51313, --1068
 		GuardcaughtYou = 51314, --1062
 		ZumtahStatus = 51315, --1066
 		PrisonReleaseStatus = 51316, --1067
@@ -1105,8 +1106,16 @@ Storage = {
 		platinumReward = 51322,
 		backpackReward = 51323,
 		mainReward = 51324,
-		-- never set just added here
-		TeleportAccess = 51325
+		TeleportAccess = {
+			Rebel = 51325,
+			Zlak = 51326,
+			Zizzle = 51327,
+			sleepingDragon = 51328,
+			innerSanctum = 51329,
+			awarnessEmperor = 51330,
+			Wote10 = 51331,
+			bossRoom = 51332
+		}
 	},
 	FriendsandTraders = {
 		-- Reserved storage from 51340 - 51359
@@ -2158,7 +2167,20 @@ Storage = {
 					SnakeHeadTeleport = 42731, -- 7th Tome: Snake Head Teleport
 					CorruptionHole = 42732 -- 8th Tome: Corruption Hole
 				},
-			TomesOfKnowledge = {}, -- 42751 - 42780
+			TomesOfKnowledge = {
+				OrcCamp = 42751,
+				TheNewFrontier = 42752,
+				UneasyAlliance = 42753,
+				LizardCamp = 42754,
+				TopTower = 42755,
+				MortalCombat = 42756,
+				Hills = 42757,
+				ChildrenoftheRevolution = 42758,
+				Arena = 42759,
+				CobraHead = 42760,
+				OrcRaid = 42761,
+				ZaoPalace = 42762
+			},
 			UnnaturalSelection = {}, -- 42781 - 42830
 			WarmasterOutfits = {}, -- 42831 - 42840
 		},

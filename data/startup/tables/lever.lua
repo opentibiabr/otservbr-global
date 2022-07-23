@@ -42,6 +42,15 @@ LeverAction = {
 			{x = 32584, y = 32465, z = 9}
 		}
 	},
+	[30005] = { -- the hidden city of beregar
+		itemId = false,
+		itemPos = {
+			{x = 32568, y = 31421, z = 9},
+			{x = 32570, y = 31421, z = 9},
+			{x = 32599, y = 31421, z = 9},
+			{x = 32601, y = 31421, z = 9}
+		}
+	},
 }
 
 LeverUnique = {

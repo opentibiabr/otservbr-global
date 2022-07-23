@@ -95,6 +95,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"You did it! Zere waz zome kind of zparkle and I zink it iz working again - oh pleaze feel free to try it, I uhm, I will wait here and be ready juzt in caze zomezing uhm happenz to you. ... ",
 				"And if you head to Zalamon, be zure to inform him about our zituation. Food rationz are running low and we are ztill not well equipped. We need to eztablish a working zupply line. "
 			}, npc, creature)
+			player:setStorageValue(Storage.WrathoftheEmperor.TeleportAccess.Rebel, 1)
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 6)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission02, 3) --Questlog, Wrath of the Emperor "Mission 02: First Contact"
 			npcHandler:setTopic(playerId, 0)

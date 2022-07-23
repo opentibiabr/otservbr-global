@@ -60,6 +60,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Zo we have to ztrike fazt and quickly. You will have to eliminate zome high ranking key officialz. I zink killing four of zem should be enough. ...",
 				"Ziz will dizrupt ze order in ze zity zignificantly zinze zo much dependz on bureaucracy and ze chain of command. Only chaoz and dizorganization will enable me to help you with ze next ztep in ze plan."
 			}, npc, creature)
+			player:setStorageValue(Storage.WrathoftheEmperor.TeleportAccess.Zlak, 1)
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 23)
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission05, 3) --Questlog, Wrath of the Emperor "Mission 05: New in Town"
 			player:setStorageValue(Storage.WrathoftheEmperor.Mission06, 0) --Questlog, Wrath of the Emperor "Mission 06: The Office Job"
@@ -95,7 +96,10 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 	return true
 end
-
+npcHandler:setMessage(MESSAGE_GREET, {
+"Ah, ze human everyone iz talking about. Your victory over ze champion waz quite imprezzive. ...",
+"Alzough, for many ziz only provez what a huge zreat you blank-zkinz ztill poze. What do you {want}?"})
+npcHandler:setMessage(MESSAGE_FAREWELL, "Juzt leave me alone.")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 

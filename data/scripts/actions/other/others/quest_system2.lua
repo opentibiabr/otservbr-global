@@ -367,6 +367,15 @@ Gromward Hammerfist]],
 name = "Tunnelling Guide"}
 		},
 		storage = Storage.HiddenCityOfBeregar.TunnellingGuide
+	},
+	[14041] = {
+		items = {
+			{itemId = 2822, text = [[
+The map shows the original floor plan of this mine. You recognise your position and that the shaft to the south actually would reach much further.
+
+(In the lower right corner someone scribbled a note how to use the hoist on the first mine floor.)]]}
+		},
+		storage = Storage.QuestChests.FormorgarMinesHoistSkeleton
 	}
 	-- 65203 reservado
 }

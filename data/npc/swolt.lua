@@ -63,9 +63,10 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say("Aaargh! Cael and his strange thoughts! He bugged me so long about the lizard culture that I eventually agreed to prepare that rice for you if you need it. I need one ripe rice plant to prepare ten rice balls. OK?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 1 then
-		if player:removeItem(10328, 1) then
-			npcHandler:say("Here you go. 10 rice balls. Hope you buy a beer with them at least.", npc, creature)
-			player:addItem(10329, 10)
+		if player:getItemCount(10328) > 0 then
+			npcHandler:say(string.format("Here you go. %d rice balls. Hope you buy a beer with them at least.", player:getItemCount(10328)*10), npc, creature)
+			player:addItem(10329, player:getItemCount(10328)*10)
+			player:removeItem(10328, player:getItemCount(10328))
 		else
 			npcHandler:say("You don't have a ripe rice plant. Thank fire and earth I was spared.", npc, creature)
 		end

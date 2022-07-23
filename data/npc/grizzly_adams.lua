@@ -399,42 +399,31 @@ local function creatureSayCallback(npc, creature, type, message)
 					player:getPawAndFurRank() == 1 and "are a Member"  or
 					"haven't been ranked yet") .. ".", npc, creature)
 		npcHandler:setTopic(playerId, 0)
-	elseif isInArray({"special task"}, message:lower()) then
-		if (player:getPawAndFurPoints() >= 70) then
-			if ((player:getLevel() > 90) and
-				(player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) == 1) and
-				(player:getStorageValue(Storage.KillingInTheNameOf.TiquandasRevengeTeleport) ~= 0)) then
-				npcHandler:say("You have already started the task. Go find Tiquandas Revenge and take revenge yourself!", npc, creature)
-			else
-				npcHandler:say({"Have you heard about Tiquandas Revenge? " ..
-							"It is said that the jungle itself is alive and takes revenge for all the bad things people have done to it." ..
-							"...",
-							"I myself believe that there is some truth in this clap trap." ..
-							"Something 'real' which therefore must have a hideout somewhere." ..
-							"Go find it and take revenge yourself!"}, npc, creature)
+	elseif isInArray({"special", "special task"}, message:lower()) then
+		if player:getPawAndFurPoints() >= 70 and player:getLevel() >= 80 then
+			if player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) < 1 then
+				npcHandler:say({
+				"Have you heard about {Tiquanda's Revenge}? It is said that the jungle itself is alive and takes revenge for all the bad things people have done to it. ...",
+				"I myself believe that there is some truth in this clap-trap. Something 'real' which must have a hideout somewhere. Go find it and take revenge yourself! Ask me about the {special} task when you're done."}, npc, creature)
 				player:setStorageValue(Storage.KillingInTheNameOf.TiquandasRevengeTeleport, 1)
 				player:setStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge, 1)
-			end
-
-			if ((player:getLevel() > 100) and
-				(player:getStorageValue(Storage.KillingInTheNameOf.MissionDemodras) == 1) and
-				(player:getStorageValue(Storage.KillingInTheNameOf.DemodrasTeleport) ~= 0)) then
+			elseif player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) == 1 then
+				npcHandler:say("You have already started the task. Go find Tiquandas Revenge and take revenge yourself!", npc, creature)
+				player:setStorageValue(Storage.KillingInTheNameOf.TiquandasRevengeTeleport, 1) -- for death scenario
+			elseif player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) == 2 then
+				npcHandler:say("Great achievement, old chap! You are an outstanding hunter, no doubt about it!", npc, creature)
+				player:setStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge, 3)
+			elseif player:getStorageValue(Storage.KillingInTheNameOf.MissionDemodras) < 1 then
+				npcHandler:say("This task is a very dangerous one. I want you to look for {Demodras'} hideout. It might be somewhere under the {Plains of Havoc}. Good luck, old chap, come back in one piece and ask me about the special task when you're done.", npc, creature)
+				player:setStorageValue(Storage.KillingInTheNameOf.DemodrasTeleport, 1)
+				player:setStorageValue(Storage.KillingInTheNameOf.MissionDemodras, 1)
+			elseif player:getStorageValue(Storage.KillingInTheNameOf.MissionDemodras) == 1 then
 				npcHandler:say("You have already started the special task. Find Demodras and kill it.", npc, creature)
-			else
-				if ((player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) == 1) and
-					(player:getStorageValue(Storage.KillingInTheNameOf.TiquandasRevengeTeleport) == 0)) then
-					npcHandler:say("This task is a very dangerous one. I want you to look for Demodras' hideout. "..
-								"It might be somewhere under the Plains of Havoc. Good luck, old chap.", npc, creature)
-					player:setStorageValue(Storage.KillingInTheNameOf.DemodrasTeleport, 1)
-					player:setStorageValue(Storage.KillingInTheNameOf.MissionDemodras, 1)
-
-				end
-			end
-
-			if (player:getStorageValue(Storage.KillingInTheNameOf.MissionDemodras) == 1 and
-				player:getStorageValue(Storage.KillingInTheNameOf.DemodrasTeleport) == 0 and
-				player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) == 1 and
-				player:getStorageValue(Storage.KillingInTheNameOf.TiquandasRevengeTeleport) == 0) then
+				player:setStorageValue(Storage.KillingInTheNameOf.DemodrasTeleport, 1) -- for death scenario
+			elseif player:getStorageValue(Storage.KillingInTheNameOf.MissionDemodras) == 2 then
+				npcHandler:say("Jolly good show! You can cross swords with any creature in this world! I bow to you.", npc, creature)
+				player:setStorageValue(Storage.KillingInTheNameOf.MissionDemodras, 3)
+			elseif player:getStorageValue(Storage.KillingInTheNameOf.MissionDemodras) == 3 and player:getStorageValue(Storage.KillingInTheNameOf.MissionTiquandasRevenge) == 3 then
 				npcHandler:say("You have already finished all special tasks.", npc, creature)
 			end
 			npcHandler:setTopic(playerId, 0)

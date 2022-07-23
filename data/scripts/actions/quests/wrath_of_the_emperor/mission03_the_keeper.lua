@@ -9,6 +9,7 @@ function wrathEmperorMiss3Keeper.onUse(player, item, fromPosition, target, toPos
 			Game.setStorageValue(Storage.WrathoftheEmperor.Mission03, math.max(0, Game.getStorageValue(Storage.WrathoftheEmperor.Mission03)) + 1)
 			player:say("The plant twines and twiggles even more than before, it almost looks as it would scream great pain.", TALKTYPE_MONSTER_SAY)
 		elseif Game.getStorageValue(Storage.WrathoftheEmperor.Mission03) == 5 then
+			player:removeItem(11364, 1)
 			Game.setStorageValue(Storage.WrathoftheEmperor.Mission03, 6)
 			toPosition:sendMagicEffect(CONST_ME_YELLOW_RINGS)
 			Game.createMonster('the keeper', {x = 33171, y = 31058, z = 11})

@@ -64,6 +64,8 @@ function loginEvents.onLogin(player)
 		--Killing In The Name Of
 		"KillingInTheNameOfKill",
 		"KillingInTheNameOfMinotaurKill",
+		"TiquandasRevengeKill",
+		"DemodrasKill",
 		--Kilmaresh
 		"BragrumolKill",
 		"MozradekKill",

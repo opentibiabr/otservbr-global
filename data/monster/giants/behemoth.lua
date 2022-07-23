@@ -81,8 +81,7 @@ monster.voices = {
 monster.loot = {
 	{id = 2893, chance = 100}, -- amphora
 	{name = "crystal necklace", chance = 2530},
-	{name = "gold coin", chance = 595300, maxCount = 100},
-	{name = "gold coin", chance = 40000, maxCount = 99},
+	{name = "gold coin", chance = 100000, maxCount = 200},
 	{name = "small amethyst", chance = 6380, maxCount = 5},
 	{name = "platinum coin", chance = 59800, maxCount = 5},
 	{name = "strange symbol", chance = 750},
@@ -113,7 +112,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 45,
-	armor = 45,
+	armor = 50,
 	{name ="speed", interval = 2000, chance = 15, speedChange = 300, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000}
 }
 
