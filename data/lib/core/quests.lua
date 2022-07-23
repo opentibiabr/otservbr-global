@@ -657,8 +657,7 @@ if not Quests then
 					startValue = 1,
 					endValue = 3,
 					states = {
-						[1] = "Your mission is to use the portal in the chamber beyond the mechanism. \z
-							It will lead you to the great gate.",
+						[1] = "Zalamon has sent you on a quest to find out what lies beneath the secret portal in the temple. Find it and explore the other side.",
 						[2] = "Eternal guardians and lizard chosen has been awaken. Survive them and report it to Zalamon!",
 						[3] = "You Survived the Waves and reported Zalamon about your success! You got a Serpent Crest as reward!"
 					}
@@ -1077,26 +1076,26 @@ if not Quests then
 				},
 				[6] = {
 					name = "Paw and Fur: Tiquandas Revenge",
-					storageId = Storage.KillingInTheNameOf.TiquandasRevengeTeleport,
+					storageId = Storage.KillingInTheNameOf.MissionTiquandasRevenge,
 					missionId = 1086,
 					startValue = 1,
-					endValue = 2,
+					endValue = 3,
 					states = {
-						[1] = "Grizzly Adams told you that there is Tiquandas Revenge hiding somewhere in the jungle of Port Hope. \z
-							Go find its hideout and kill it.",
-						[2] = "You have slained the Tiquandas Revenge."
+						[1] = "You have the special task to bring down Tiquanda's Revenge.",
+						[2] = "You have fought 'Tiquanda's Revenge'. Report to Grizzly Adams about your special task.",
+						[3] = "You found the hideout of Tiquanda's Revenge and managed to kill it."
 					}
 				},
 				[7] = {
 					name = "Paw and Fur: Demodras",
-					storageId = Storage.KillingInTheNameOf.DemodrasTeleport,
+					storageId = Storage.KillingInTheNameOf.MissionDemodras,
 					missionId = 1087,
 					startValue = 1,
-					endValue = 2,
+					endValue = 3,
 					states = {
-						[1] = "Grizzly Adams wanted you to go look for Demodras' hideout. \z
-							He also mentioned that it might be somewhere under the Plains of Havoc.",
-						[2] = "You have slained the Demodras."
+						[1] = "You have the special task to bring down Demodras.",
+						[2] = "You have fought 'Demodras'. Report to Grizzly Adams about your special task.",
+						[3] = "You found the hideout of Demodras and managed to kill it."
 					}
 				},
 				[8] = {
@@ -4633,7 +4632,7 @@ if not Quests then
 						[2] = "Go to the tunnel in eastern Muggy Plains and reach the other side. \z
 						Try to hide in the dark and avoid being seen at all by using the crate. \z
 						After that you need to find the rebel hideout and talk to their leader Chartan.",
-						[3] = "You found the leader of the rebel Chartan and reported him about Zalamon. Ask him for new mission!"
+						[3] = "You passed the maintenance tunnel and successfully made contact with the resistance in their hideout north of the Great Gate."
 					}
 				},
 				[2] = {
@@ -4677,7 +4676,7 @@ if not Quests then
 						On the 4th and final floor you need to assemble the sceptre..",
 						[2] = "After you've assembled the Snake Sceptre and fought your way back out, \z
 						head back to Zalamon and give it to him.",
-						[3] = "You brought the Snake Sceptre to Zalamon and completed the mission. Ask for the next mission."
+						[3] = "You have delievered the recreated sceptre to the rebels."
 					}
 				},
 				[5] = {
@@ -4687,9 +4686,7 @@ if not Quests then
 					startValue = 1,
 					endValue = 3,
 					states = {
-						[1] = "Zalamon tells you that you have to go inside the city. \z
-						From the rebel hideout go out to the gray road and follow it to the southwest. \z
-						Find the Gate Guardian and ask him for a mission to enter the city.",
+						[1] = "Enter the imperial city Razachai to the west and talk to your contact in the ministry there for further missions.",
 						[2] = "Now you only have to walk west until you find Zlak inside the big green building.",
 						[3] = "You went deep inside the city to find Zlak and completed the mission. Ask for the next mission."
 					}
@@ -4702,8 +4699,7 @@ if not Quests then
 					endValue = 4,
 					description = function(player)
 						return string.format(
-							"Explore the area where Zlak is to find Lizard Magistratus and kill 4 of them. \z
-						You currently have %d killed. Report back to Zlak if you finished it.",
+							"Kill four Magistrati in the office building. Then report back to Zlak. You have killed %d magistrati so far.",
 							(math.max(player:getStorageValue(Storage.WrathoftheEmperor.Mission06), 0))
 						)
 					end
@@ -4716,8 +4712,7 @@ if not Quests then
 					endValue = 6,
 					description = function(player)
 						return string.format(
-							"Explore the area where Zlak is to find Lizard Noble and kill 6 of them. \z
-						You currently have %d killed. Report back to Zlak if you finished it.",
+							"Kill six nobles in the city and report back to Zlak. You have killed %d nobles so far.",
 							(math.max(player:getStorageValue(Storage.WrathoftheEmperor.Mission07), 0))
 						)
 					end
@@ -4729,9 +4724,7 @@ if not Quests then
 					startValue = 1,
 					endValue = 2,
 					states = {
-						[1] = "Your mission is to reach your rebel contact Zizzle in the imperial palace. \z
-						You need to take the old escape tunnel that leads from the abandoned basement \z
-						in the north of the ministry to a lift that ends somewhere in the palace.",
+						[1] = "Use the old escape tunnel in the northern basement of the ministry to enter the imperial palace. Fight your way to the basement to meet your new rebel contact.",
 						[2] = "You have reached your rebel contact Zizzle in the imperial palace."
 					}
 				},

@@ -79,11 +79,11 @@ monster.voices = {
 monster.loot = {
 	{id = 3007, chance = 1560}, -- crystal ring
 	{name = "crystal necklace", chance = 1640},
-	{name = "gold coin", chance = 99998, maxCount = 100},
-	{name = "gold coin", chance = 99998, maxCount = 92},
+	{name = "gold coin", chance = 100000, maxCount = 197},
 	{id = 3053, chance = 1480}, -- time ring
 	{name = "platinum amulet", chance = 130},
 	{name = "steel helmet", chance = 5200},
+	{id = 7441, chance = 5000}, -- ice cube
 	{name = "plate armor", chance = 9993},
 	{name = "knight armor", chance = 560},
 	{name = "knight legs", chance = 760},

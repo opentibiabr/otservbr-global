@@ -8,7 +8,7 @@ end
 local keeper = MoveEvent()
 
 function keeper.onStepIn(creature, item, position, fromPosition)
-	local monster = creature:isMonster()
+	local monster = creature:getMonster()
 	if not monster then
 		return true
 	end

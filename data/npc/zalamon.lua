@@ -335,7 +335,10 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.ChildrenoftheRevolution.Mission04, 6) --Questlog, Children of the Revolution "Mission 4: Zze Way of Zztonezz"
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 13 then
-			npcHandler:say("You did well on your quezzt zzo far. I hope you will reach zze great gate in time. If we are lucky, it will zztill be open. ... Zalamon: If not, it will already be overrun by enemy zzoldierzz. Direct confrontation will be inevitable in zzat cazze, palezzkin. Now clear your mind and approach zze portal.", npc, creature)
+			npcHandler:say({
+			"You did well on your quezzt zzo far. I hope you will reach zze great gate in time. If we are lucky, it will zztill be open. ...",
+			"If not, it will already be overrun by enemy zzoldierzz. Direct confrontation will be inevitable in zzat cazze, palezzkin. Now clear your mind and approach zze portal."}, npc, creature)
+			player:setStorageValue(Storage.ChildrenoftheRevolution.teleportAccess, 1)
 			player:setStorageValue(Storage.ChildrenoftheRevolution.Questline, 19)
 			player:setStorageValue(Storage.ChildrenoftheRevolution.Mission05, 1) --Questlog, Children of the Revolution "Mission 5: Phantom Army"
 			npcHandler:setTopic(playerId, 0)

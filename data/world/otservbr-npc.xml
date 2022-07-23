@@ -1771,6 +1771,9 @@
 	<npc centerx="32190" centery="32293" centerz="7" radius="1">
 		<npc name="Cledwyn" x="0" y="0" z="7" spawntime="60" />
 	</npc>
+	<npc centerx="33456" centery="32296" centerz="7" radius="1">
+		<npc name="Dancing Fairy" x="0" y="0" z="7" spawntime="60" />
+	</npc>
 	<npc centerx="32209" centery="32297" centerz="7" radius="1">
 		<npc name="Rotem Valos" x="0" y="0" z="7" spawntime="60" />
 	</npc>
@@ -2080,23 +2083,23 @@
 	<npc centerx="33198" centery="31060" centerz="8" radius="1">
 		<npc name="Rebel" x="0" y="0" z="8" spawntime="60" />
 	</npc>
-	<npc centerx="33385" centery="31068" centerz="8" radius="1">
-		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" />
+	<npc centerx="33383" centery="31069" centerz="8" radius="1">
+		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" direction="2" />
 	</npc>
-	<npc centerx="33387" centery="31076" centerz="8" radius="1">
-		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" />
+	<npc centerx="33346" centery="31074" centerz="8" radius="1">
+		<npc name="Lizard Tunnel Guard" x="0" y="-1" z="8" spawntime="60" direction="2" />
 	</npc>
-	<npc centerx="33372" centery="31079" centerz="8" radius="1">
-		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" />
+	<npc centerx="33385" centery="31079" centerz="8" radius="1">
+		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" direction="2" />
 	</npc>
-	<npc centerx="33325" centery="31082" centerz="8" radius="1">
-		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" />
+	<npc centerx="33367" centery="31083" centerz="8" radius="1">
+		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" direction="2" />
 	</npc>
-	<npc centerx="33383" centery="31100" centerz="8" radius="1">
-		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" />
+	<npc centerx="33383" centery="31098" centerz="8" radius="1">
+		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" direction="2" />
 	</npc>
-	<npc centerx="33378" centery="31107" centerz="8" radius="1">
-		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" />
+	<npc centerx="33378" centery="31105" centerz="8" radius="1">
+		<npc name="Lizard Tunnel Guard" x="0" y="0" z="8" spawntime="60" direction="2" />
 	</npc>
 	<npc centerx="33181" centery="31198" centerz="8" radius="1">
 		<npc name="Nina" x="0" y="0" z="8" spawntime="60" />
@@ -2635,8 +2638,32 @@
 	<npc centerx="33583" centery="31988" centerz="12" radius="1">
 		<npc name="Elbert" x="0" y="0" z="12" spawntime="60" />
 	</npc>
+	<npc centerx="33058" centery="32007" centerz="12" radius="1">
+		<npc name="Corym Worker (3)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33006" centery="32009" centerz="12" radius="1">
+		<npc name="Corym Worker (2)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
 	<npc centerx="33032" centery="32009" centerz="12" radius="1">
 		<npc name="Corym Servant" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33064" centery="32010" centerz="12" radius="1">
+		<npc name="Corym Butler" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33052" centery="32015" centerz="12" radius="1">
+		<npc name="Corym Worker (4)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="32999" centery="32024" centerz="12" radius="1">
+		<npc name="Corym Slave" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33012" centery="32026" centerz="12" radius="1">
+		<npc name="Corym Worker (1)" x="0" y="-1" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="33008" centery="32051" centerz="12" radius="1">
+		<npc name="Corym Worker (5)" x="0" y="0" z="12" spawntime="60" />
+	</npc>
+	<npc centerx="32999" centery="32053" centerz="12" radius="1">
+		<npc name="Corym Footman" x="0" y="0" z="12" spawntime="60" />
 	</npc>
 	<npc centerx="33032" centery="32070" centerz="12" radius="1">
 		<npc name="Corym Ratter" x="0" y="0" z="12" spawntime="60" />
@@ -2886,5 +2913,8 @@
 	</npc>
 	<npc centerx="33456" centery="32296" centerz="7" radius="1">
 		<npc name="Dancing Fairy" x="0" y="0" z="7" spawntime="60" />
+	</npc>
+	<npc centerx="32379" centery="32208" centerz="7" radius="3">
+		<npc name="Walter Jaeger" x="0" y="-1" z="7" spawntime="60" />
 	</npc>
 </npcs>
