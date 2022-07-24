@@ -1005,24 +1005,24 @@ if not Quests then
 			startStorageValue = 1,
 			missions = {
 				[1] = {
-					name = "Paw and Fur: Member",
-					storageId = 2500,
+					name = "Paw and Fur - Rank: Huntsman",
+					storageId = Storage.KillingInTheNameOf.pawandfurRank,
 					missionId = 1081,
 					startValue = 0,
-					endValue = 10,
+					endValue = 1,
 					description = function(player)
 						return string.format(
-							"You are member of the Paw and Fur hunting elite. You currently have %d Paw and Fur points.",
+							"You are Huntsman of the Paw and Fur hunting elite. You currently have %d Paw and Fur points.",
 							(math.max(player:getStorageValue(2500), 0))
 						)
 					end
 				},
 				[2] = {
-					name = "Paw and Fur: Ranger",
-					storageId = 2500,
+					name = "Paw and Fur - Rank: Ranger",
+					storageId = Storage.KillingInTheNameOf.pawandfurRank,
 					missionId = 1082,
-					startValue = 11,
-					endValue = 40,
+					startValue = 2,
+					endValue = 3,
 					description = function(player)
 						return string.format(
 							"You are Ranger of the Paw and Fur hunting elite. You currently have %d Paw and Fur points.",
@@ -1031,11 +1031,11 @@ if not Quests then
 					end
 				},
 				[3] = {
-					name = "Paw and Fur: Big Game Hunter",
-					storageId = 2500,
+					name = "Paw and Fur - Rank: Big Game Hunter",
+					storageId = Storage.KillingInTheNameOf.pawandfurRank,
 					missionId = 1083,
-					startValue = 41,
-					endValue = 69,
+					startValue = 4,
+					endValue = 5,
 					description = function(player)
 						return string.format(
 							"You are Big Game Hunter in the Paw and Fur hunting elite. \z
@@ -1045,11 +1045,11 @@ if not Quests then
 					end
 				},
 				[4] = {
-					name = "Paw and Fur: Trophy Hunter",
-					storageId = 2500,
+					name = "Paw and Fur - Rank: Trophy Hunter",
+					storageId = Storage.KillingInTheNameOf.pawandfurRank,
 					missionId = 1084,
-					startValue = 70,
-					endValue = 99,
+					startValue = 5,
+					endValue = 6,
 					description = function(player)
 						return string.format(
 							"You are Trophy Hunter in the Paw and Fur hunting elite. \z
@@ -1060,11 +1060,11 @@ if not Quests then
 					end
 				},
 				[5] = {
-					name = "Paw and Fur: Elite Hunter",
-					storageId = 2500,
+					name = "Paw and Fur - Rank: Elite Hunter",
+					storageId = Storage.KillingInTheNameOf.pawandfurRank,
 					missionId = 1085,
-					startValue = 100,
-					endValue = 9999,
+					startValue = 7,
+					endValue = 8,
 					description = function(player)
 						return string.format(
 							"You have obtained the highest possible rank in the Paw and Fur hunting elite, \z
@@ -1103,225 +1103,700 @@ if not Quests then
 					storageId = 34100,
 					missionId = 1088,
 					startValue = 1,
-					endValue = 2,
-					description = "Grizzly told you about the Snapper, a crocodile that already killed many citizens of Port Hope. \z
-						Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about the %s, a %s that already killed many citizens of Port Hope. Try find its hideout and kill it.",
+							tasks[3].bossName,
+							tasks[3].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[3].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed the %s and reported back to Grizzly.",
+							tasks[3].bossName)
+						end
+					}
 				},
 				[9] = {
 					name = "Paw and Fur: Hide",
 					storageId = 34101,
 					missionId = 1089,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[5].bossName,
+							tasks[5].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[5].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[5].bossName)
+						end
+					}
 				},
 				[10] = {
 					name = "Paw and Fur: Deathbine",
 					storageId = 34102,
 					missionId = 1090,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[6].bossName,
+							tasks[6].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[6].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[6].bossName)
+						end
+					}
 				},
 				[11] = {
 					name = "Paw and Fur: The Bloodtusk",
 					storageId = 34103,
 					missionId = 1091,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about the %s, a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[8].bossName,
+							tasks[8].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[8].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed the %s and reported back to Grizzly.",
+							tasks[8].bossName)
+						end
+					}
 				},
 				[12] = {
 					name = "Paw and Fur: Shardhead",
 					storageId = 34104,
 					missionId = 1092,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[14].bossName,
+							tasks[14].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[14].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[14].bossName)
+						end
+					}
 				},
 				[13] = {
 					name = "Paw and Fur: Esmerelda",
 					storageId = 34105,
 					missionId = 1093,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[16].bossName,
+							tasks[16].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[16].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[16].bossName)
+						end
+					}
 				},
 				[14] = {
 					name = "Paw and Fur: Fleshcrawler",
 					storageId = 34106,
 					missionId = 1094,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[17].bossName,
+							tasks[17].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[17].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[17].bossName)
+						end
+					}
 				},
 				[15] = {
 					name = "Paw and Fur: Ribstride",
 					storageId = 34107,
 					missionId = 1095,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[22].bossName,
+							tasks[22].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[22].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[22].bossName)
+						end
+					}
 				},
 				[16] = {
 					name = "Paw and Fur: Bloodweb",
 					storageId = 34108,
 					missionId = 1096,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[23].bossName,
+							tasks[23].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[23].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[23].bossName)
+						end
+					}
 				},
 				[17] = {
 					name = "Paw and Fur: Thul",
 					storageId = 34109,
 					missionId = 1097,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[25].bossName,
+							tasks[25].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[25].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[25].bossName)
+						end
+					}
 				},
 				[18] = {
 					name = "Paw and Fur: The Old Widow",
 					storageId = 34110,
 					missionId = 1098,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about the %s, a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[26].bossName,
+							tasks[26].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[26].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed the %s and reported back to Grizzly.",
+							tasks[26].bossName)
+						end
+					}
 				},
 				[19] = {
 					name = "Paw and Fur: Hemming",
 					storageId = 34111,
 					missionId = 1099,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[27].bossName,
+							tasks[27].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[27].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[27].bossName)
+						end
+					}
 				},
 				[20] = {
 					name = "Paw and Fur: Tormentor",
 					storageId = 34112,
 					missionId = 10100,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[28].bossName,
+							tasks[28].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[28].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[28].bossName)
+						end
+					}
 				},
 				[21] = {
 					name = "Paw and Fur: Flameborn",
 					storageId = 34113,
 					missionId = 10101,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[29].bossName,
+							tasks[29].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[29].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[29].bossName)
+						end
+					}
 				},
 				[22] = {
 					name = "Paw and Fur: Fazzrah",
 					storageId = 34114,
 					missionId = 10102,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[30].bossName,
+							tasks[30].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[30].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[30].bossName)
+						end
+					}
 				},
 				[23] = {
 					name = "Paw and Fur: Tromphonyte",
 					storageId = 34115,
 					missionId = 10103,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[31].bossName,
+							tasks[31].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[31].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[31].bossName)
+						end
+					}
 				},
 				[24] = {
 					name = "Paw and Fur: Sulphur Scuttler",
 					storageId = 34116,
 					missionId = 10104,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[32].bossName,
+							tasks[32].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[32].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[32].bossName)
+						end
+					}
 				},
 				[25] = {
 					name = "Paw and Fur: Bruise Payne",
 					storageId = 34117,
 					missionId = 10105,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[33].bossName,
+							tasks[33].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[33].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[33].bossName)
+						end
+					}
 				},
 				[26] = {
 					name = "Paw and Fur: The Many",
 					storageId = 34118,
 					missionId = 10106,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about the %s, a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[34].bossName,
+							tasks[34].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[34].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed the %s and reported back to Grizzly.",
+							tasks[34].bossName)
+						end
+					}
 				},
 				[27] = {
 					name = "Paw and Fur: The Noxious Spawn",
 					storageId = 34119,
 					missionId = 10107,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about the %s, a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[35].bossName,
+							tasks[35].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[35].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed the %s and reported back to Grizzly.",
+							tasks[35].bossName)
+						end
+					}
 				},
 				[28] = {
 					name = "Paw and Fur: Gorgo",
 					storageId = 34120,
 					missionId = 10108,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[36].bossName,
+							tasks[36].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[36].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[36].bossName)
+						end
+					}
 				},
 				[29] = {
 					name = "Paw and Fur: Stonecracker",
 					storageId = 34121,
 					missionId = 10109,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[37].bossName,
+							tasks[37].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[37].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[37].bossName)
+						end
+					}
 				},
 				[30] = {
 					name = "Paw and Fur: Leviathan",
 					storageId = 34122,
 					missionId = 10110,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[38].bossName,
+							tasks[38].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[38].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[38].bossName)
+						end
+					}
 				},
 				[31] = {
 					name = "Paw and Fur: Kerberos",
 					storageId = 34123,
 					missionId = 10111,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[39].bossName,
+							tasks[39].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[39].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[39].bossName)
+						end
+					}
 				},
 				[32] = {
 					name = "Paw and Fur: Ethershreck",
 					storageId = 34124,
 					missionId = 10112,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[40].bossName,
+							tasks[40].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[40].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[40].bossName)
+						end
+					}
 				},
 				[33] = {
 					name = "Paw and Fur: Paiz the Pauperizer",
 					storageId = 34125,
 					missionId = 10113,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[41].bossName,
+							tasks[41].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[41].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[41].bossName)
+						end
+					}
 				},
 				[34] = {
 					name = "Paw and Fur: Bretzecutioner",
 					storageId = 34126,
 					missionId = 10114,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[42].bossName,
+							tasks[42].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[42].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[42].bossName)
+						end
+					}
 				},
 				[35] = {
 					name = "Paw and Fur: Zanakeph",
 					storageId = 34127,
 					missionId = 10115,
 					startValue = 1,
-					endValue = 2,
-					description = "Try find its hideout and kill it."
+					endValue = 3,
+					states = {
+						[1] =
+						function(player)
+							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							tasks[43].bossName,
+							tasks[43].raceName:sub(1, -2):lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You have found the hideout of %s. Talk to Grizzly again.",
+							tasks[43].bossName)
+						end,
+						[3] =
+						function(player)
+							return string.format("You've killed %s and reported back to Grizzly.",
+							tasks[43].bossName)
+						end
+					}
 				},
 				[36] = {
 					name = "Edron City - Elite Hunting: Trolls",
@@ -1371,429 +1846,1111 @@ if not Quests then
 					storageId = 65003,
 					missionId = 10120,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 crocodiles.", (math.max(player:getStorageValue(65003), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.crocodileCount),
+							tasks[3].killsRequired,
+							tasks[3].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[3].killsRequired,
+							tasks[3].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[3].killsRequired,
+							tasks[3].raceName:lower())
+						end
+					}
 				},
 				[41] = {
 					name = "Paw and Fur: Badgers",
 					storageId = 65004,
 					missionId = 10121,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 badgers.", (math.max(player:getStorageValue(65004), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.badgerCount),
+							tasks[4].killsRequired,
+							tasks[4].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[4].killsRequired,
+							tasks[4].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[4].killsRequired,
+							tasks[4].raceName:lower())
+						end
+					}
 				},
 				[42] = {
 					name = "Paw and Fur: Tarantulas",
 					storageId = 65005,
 					missionId = 10122,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 tarantulas.", (math.max(player:getStorageValue(65005), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.tarantulaCount),
+							tasks[5].killsRequired,
+							tasks[5].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[5].killsRequired,
+							tasks[5].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[5].killsRequired,
+							tasks[5].raceName:lower())
+						end
+					}
 				},
 				[43] = {
 					name = "Paw and Fur: Carniphilas",
 					storageId = 65006,
 					missionId = 10123,
 					startValue = 0,
-					endValue = 150,
-					description = function(player)
-						return string.format("You already hunted %d/150 carniphilas.", (math.max(player:getStorageValue(65006), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.carniphilasCount),
+							tasks[6].killsRequired,
+							tasks[6].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[6].killsRequired,
+							tasks[6].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[6].killsRequired,
+							tasks[6].raceName:lower())
+						end
+					}
 				},
 				[44] = {
 					name = "Paw and Fur: Stone Golems",
 					storageId = 65007,
 					missionId = 10124,
 					startValue = 0,
-					endValue = 200,
-					description = function(player)
-						return string.format("You already hunted %d/200 stone golems.", (math.max(player:getStorageValue(65007), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.stonegolemCount),
+							tasks[7].killsRequired,
+							tasks[7].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[7].killsRequired,
+							tasks[7].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[7].killsRequired,
+							tasks[7].raceName:lower())
+						end
+					}
 				},
 				[45] = {
 					name = "Paw and Fur: Mammoths",
 					storageId = 65008,
 					missionId = 10125,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 mammoths.", (math.max(player:getStorageValue(65008), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mammothCount),
+							tasks[8].killsRequired,
+							tasks[8].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[8].killsRequired,
+							tasks[8].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[8].killsRequired,
+							tasks[8].raceName:lower())
+						end
+					}
 				},
 				[46] = {
 					name = "Paw and Fur: Gnarlhounds",
 					storageId = 65009,
 					missionId = 10126,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 gnarlhounds.", (math.max(player:getStorageValue(65009), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.gnarlhoundCount),
+							tasks[9].killsRequired,
+							tasks[9].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[9].killsRequired,
+							tasks[9].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[9].killsRequired,
+							tasks[9].raceName:lower())
+						end
+					}
 				},
 				[47] = {
 					name = "Paw and Fur: Terramites",
 					storageId = 65010,
 					missionId = 10127,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 terramites.", (math.max(player:getStorageValue(65010), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.terramiteCount),
+							tasks[10].killsRequired,
+							tasks[10].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[10].killsRequired,
+							tasks[10].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[10].killsRequired,
+							tasks[10].raceName:lower())
+						end
+					}
 				},
 				[48] = {
 					name = "Paw and Fur: Apes",
 					storageId = 65011,
 					missionId = 10128,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 apes.", (math.max(player:getStorageValue(65011), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.apesCount),
+							tasks[11].killsRequired,
+							tasks[11].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[11].killsRequired,
+							tasks[11].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[11].killsRequired,
+							tasks[11].raceName:lower())
+						end
+					}
 				},
 				[49] = {
 					name = "Paw and Fur: Thornback Tortoises",
 					storageId = 65012,
 					missionId = 10129,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format(
-							"You already hunted %d/300 thornback tortoises.",
-							(math.max(player:getStorageValue(65012), 0))
-						)
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.thornbacktortoiseCount),
+							tasks[12].killsRequired,
+							tasks[12].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[12].killsRequired,
+							tasks[12].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[12].killsRequired,
+							tasks[12].raceName:lower())
+						end
+					}
 				},
 				[50] = {
 					name = "Paw and Fur: Gargoyles",
 					storageId = 65013,
 					missionId = 10130,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 gargoyles.", (math.max(player:getStorageValue(65013), 0)))
-					end
+					endValue = 2,
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.gargoyleCount),
+							tasks[13].killsRequired,
+							tasks[13].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[13].killsRequired,
+							tasks[13].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[13].killsRequired,
+							tasks[13].raceName:lower())
+						end
+					}
 				},
 				[51] = {
 					name = "Paw and Fur: Ice Golems",
 					storageId = 65014,
 					missionId = 10131,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 ice golems.", (math.max(player:getStorageValue(65014), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.icegolemCount),
+							tasks[14].killsRequired,
+							tasks[14].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[14].killsRequired,
+							tasks[14].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[14].killsRequired,
+							tasks[14].raceName:lower())
+						end
+					}
 				},
 				[52] = {
 					name = "Paw and Fur: Quara Scouts",
 					storageId = 65015,
 					missionId = 10132,
 					startValue = 0,
-					endValue = 400,
-					description = function(player)
-						return string.format("You already hunted %d/400 quara scouts.", (math.max(player:getStorageValue(65015), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.quarascoutsCount),
+							tasks[15].killsRequired,
+							tasks[15].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[15].killsRequired,
+							tasks[15].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[15].killsRequired,
+							tasks[15].raceName:lower())
+						end
+					}
 				},
 				[53] = {
 					name = "Paw and Fur: Mutated Rats",
 					storageId = 65016,
 					missionId = 10133,
 					startValue = 0,
-					endValue = 400,
-					description = function(player)
-						return string.format("You already hunted %d/400 mutated rats.", (math.max(player:getStorageValue(65016), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mutatedratCount),
+							tasks[16].killsRequired,
+							tasks[16].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[16].killsRequired,
+							tasks[16].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[16].killsRequired,
+							tasks[16].raceName:lower())
+						end
+					}
 				},
 				[54] = {
 					name = "Paw and Fur: Ancient Scarabs",
 					storageId = 65017,
 					missionId = 10134,
 					startValue = 0,
-					endValue = 250,
-					description = function(player)
-						return string.format("You already hunted %d/250 ancient scarabs.", (math.max(player:getStorageValue(65017), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.ancientscarabCount),
+							tasks[17].killsRequired,
+							tasks[17].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[17].killsRequired,
+							tasks[17].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[17].killsRequired,
+							tasks[17].raceName:lower())
+						end
+					}
 				},
 				[55] = {
 					name = "Paw and Fur: Wyverns",
 					storageId = 65018,
 					missionId = 10135,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 wyverns.", (math.max(player:getStorageValue(65018), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.wyvernCount),
+							tasks[18].killsRequired,
+							tasks[18].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[18].killsRequired,
+							tasks[18].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[18].killsRequired,
+							tasks[18].raceName:lower())
+						end
+					}
 				},
 				[56] = {
 					name = "Paw and Fur: Lancer Beetles",
 					storageId = 65019,
 					missionId = 10136,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 lancer beetles.", (math.max(player:getStorageValue(65019), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.lancerbeetleCount),
+							tasks[19].killsRequired,
+							tasks[19].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[19].killsRequired,
+							tasks[19].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[19].killsRequired,
+							tasks[19].raceName:lower())
+						end
+					}
 				},
 				[57] = {
 					name = "Paw and Fur: Wailing Widows",
 					storageId = 65020,
 					missionId = 10137,
 					startValue = 0,
-					endValue = 400,
-					description = function(player)
-						return string.format("You already hunted %d/400 wailing widows.", (math.max(player:getStorageValue(65020), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.wailingwidowCount),
+							tasks[20].killsRequired,
+							tasks[20].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[20].killsRequired,
+							tasks[20].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[20].killsRequired,
+							tasks[20].raceName:lower())
+						end
+					}
 				},
 				[58] = {
 					name = "Paw and Fur: Killer Caimans",
 					storageId = 65021,
 					missionId = 10138,
 					startValue = 0,
-					endValue = 250,
-					description = function(player)
-						return string.format("You already hunted %d/250 killer caimans.", (math.max(player:getStorageValue(65021), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.killercaimanCount),
+							tasks[21].killsRequired,
+							tasks[21].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[21].killsRequired,
+							tasks[21].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[21].killsRequired,
+							tasks[21].raceName:lower())
+						end
+					}
 				},
 				[59] = {
 					name = "Paw and Fur: Bonebeasts",
 					storageId = 65022,
 					missionId = 10139,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 bonebeasts.", (math.max(player:getStorageValue(65022), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bonebeastCount),
+							tasks[22].killsRequired,
+							tasks[22].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[22].killsRequired,
+							tasks[22].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[22].killsRequired,
+							tasks[22].raceName:lower())
+						end
+					}
 				},
 				[60] = {
 					name = "Paw and Fur: Crystal Spiders",
 					storageId = 65023,
 					missionId = 10140,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 crystal spiders.", (math.max(player:getStorageValue(65023), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.crystalspiderCount),
+							tasks[23].killsRequired,
+							tasks[23].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[23].killsRequired,
+							tasks[23].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[23].killsRequired,
+							tasks[23].raceName:lower())
+						end
+					}
 				},
 				[61] = {
 					name = "Paw and Fur: Mutated Tigers",
 					storageId = 65024,
 					missionId = 10141,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 mutated tigers.", (math.max(player:getStorageValue(65024), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mutatedtigerCount),
+							tasks[24].killsRequired,
+							tasks[24].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[24].killsRequired,
+							tasks[24].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[24].killsRequired,
+							tasks[24].raceName:lower())
+						end
+					}
 				},
 				[62] = {
 					name = "Paw and Fur: Underwater Quara",
 					storageId = 65025,
 					missionId = 10142,
 					startValue = 0,
-					endValue = 600,
-					description = function(player)
-						return string.format("You already hunted %d/600 underwater quara.", (math.max(player:getStorageValue(65025), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.underwaterquarasCount),
+							tasks[25].killsRequired,
+							tasks[25].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[25].killsRequired,
+							tasks[25].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[25].killsRequired,
+							tasks[25].raceName:lower())
+						end
+					}
 				},
 				[63] = {
 					name = "Paw and Fur: Giant Spiders",
 					storageId = 65026,
 					missionId = 10143,
 					startValue = 0,
-					endValue = 500,
-					description = function(player)
-						return string.format("You already hunted %d/500 giant spiders.", (math.max(player:getStorageValue(65026), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.giantspiderCount),
+							tasks[26].killsRequired,
+							tasks[26].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[26].killsRequired,
+							tasks[26].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[26].killsRequired,
+							tasks[26].raceName:lower())
+						end
+					}
 				},
 				[64] = {
 					name = "Paw and Fur: Werewolves",
 					storageId = 65027,
 					missionId = 10144,
 					startValue = 0,
-					endValue = 300,
-					description = function(player)
-						return string.format("You already hunted %d/300 werewolves.", (math.max(player:getStorageValue(65027), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.werewolveCount),
+							tasks[27].killsRequired,
+							tasks[27].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[27].killsRequired,
+							tasks[27].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[27].killsRequired,
+							tasks[27].raceName:lower())
+						end
+					}
 				},
 				[65] = {
 					name = "Paw and Fur: Nightmares",
 					storageId = 65028,
 					missionId = 10145,
 					startValue = 0,
-					endValue = 400,
-					description = function(player)
-						return string.format("You already hunted %d/400 nightmares.", (math.max(player:getStorageValue(65028), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.nightmareCount),
+							tasks[28].killsRequired,
+							tasks[28].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[28].killsRequired,
+							tasks[28].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[28].killsRequired,
+							tasks[28].raceName:lower())
+						end
+					}
 				},
 				[66] = {
 					name = "Paw and Fur: Hellspawns",
 					storageId = 65029,
 					missionId = 10146,
 					startValue = 0,
-					endValue = 600,
-					description = function(player)
-						return string.format("You already hunted %d/600 hellspawns.", (math.max(player:getStorageValue(65029), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.hellspawnCount),
+							tasks[29].killsRequired,
+							tasks[29].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[29].killsRequired,
+							tasks[29].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[29].killsRequired,
+							tasks[29].raceName:lower())
+						end
+					}
 				},
 				[67] = {
 					name = "Paw and Fur: High Class Lizards",
 					storageId = 65030,
 					missionId = 10147,
 					startValue = 0,
-					endValue = 800,
-					description = function(player)
-						return string.format(
-							"You already hunted %d/800 high class lizards.",
-							(math.max(player:getStorageValue(65030), 0))
-						)
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.highclasslizardCount),
+							tasks[30].killsRequired,
+							tasks[30].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[30].killsRequired,
+							tasks[30].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[30].killsRequired,
+							tasks[30].raceName:lower())
+						end
+					}
 				},
 				[68] = {
 					name = "Paw and Fur: Stampors",
 					storageId = 65031,
 					missionId = 10148,
 					startValue = 0,
-					endValue = 600,
-					description = function(player)
-						return string.format("You already hunted %d/600 stampors.", (math.max(player:getStorageValue(65031), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.stamporCount),
+							tasks[31].killsRequired,
+							tasks[31].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[31].killsRequired,
+							tasks[31].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[31].killsRequired,
+							tasks[31].raceName:lower())
+						end
+					}
 				},
 				[69] = {
 					name = "Paw and Fur: Brimstone Bugs",
 					storageId = 65032,
 					missionId = 10149,
 					startValue = 0,
-					endValue = 500,
-					description = function(player)
-						return string.format("You already hunted %d/500 brimstone bugs.", (math.max(player:getStorageValue(65032), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.brimstonebugCount),
+							tasks[32].killsRequired,
+							tasks[32].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[32].killsRequired,
+							tasks[32].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[32].killsRequired,
+							tasks[32].raceName:lower())
+						end
+					}
 				},
 				[70] = {
 					name = "Paw and Fur: Mutated Bats",
 					storageId = 65033,
 					missionId = 10150,
 					startValue = 0,
-					endValue = 400,
-					description = function(player)
-						return string.format("You already hunted %d/400 mutated bats.", (math.max(player:getStorageValue(65033), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mutatedbatCount),
+							tasks[33].killsRequired,
+							tasks[33].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[33].killsRequired,
+							tasks[33].raceName:lower())
+						end,
+						[2] =
+						function(player)
+							return string.format("You succesfully haunted %d %s.",
+							tasks[33].killsRequired,
+							tasks[33].raceName:lower())
+						end
+					}
 				},
 				[71] = {
 					name = "Paw and Fur: Hydras",
 					storageId = 65034,
 					missionId = 10151,
 					startValue = 0,
-					endValue = 650,
-					description = function(player)
-						return string.format("You already hunted %d/650 hydras.", (math.max(player:getStorageValue(65034), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.hydraCount),
+							tasks[34].killsRequired,
+							tasks[34].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[34].killsRequired,
+							tasks[34].raceName:lower())
+						end
+					}
 				},
 				[72] = {
 					name = "Paw and Fur: Serpent Spawns",
 					storageId = 65035,
 					missionId = 10152,
 					startValue = 0,
-					endValue = 800,
-					description = function(player)
-						return string.format("You already hunted %d/800 serpent spawns.", (math.max(player:getStorageValue(65035), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.serpentspawnCount),
+							tasks[35].killsRequired,
+							tasks[35].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[35].killsRequired,
+							tasks[35].raceName:lower())
+						end
+					}
 				},
 				[73] = {
 					name = "Paw and Fur: Medusas",
 					storageId = 65036,
 					missionId = 10153,
 					startValue = 0,
-					endValue = 500,
-					description = function(player)
-						return string.format("You already hunted %d/500 medusas.", (math.max(player:getStorageValue(65036), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.medusaCount),
+							tasks[36].killsRequired,
+							tasks[36].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[36].killsRequired,
+							tasks[36].raceName:lower())
+						end
+					}
 				},
 				[74] = {
 					name = "Paw and Fur: Behemoths",
 					storageId = 65037,
 					missionId = 10154,
 					startValue = 0,
-					endValue = 700,
-					description = function(player)
-						return string.format("You already hunted %d/700 behemoths.", (math.max(player:getStorageValue(65037), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.behemothCount),
+							tasks[37].killsRequired,
+							tasks[37].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[37].killsRequired,
+							tasks[37].raceName:lower())
+						end
+					}
 				},
 				[75] = {
 					name = "Paw and Fur: Sea Serpents and Young Sea Serpents",
 					storageId = 65038,
 					missionId = 10155,
 					startValue = 0,
-					endValue = 900,
-					description = function(player)
-						return string.format(
-							"You already hunted %d/900 sea serpents and young sea serpents.",
-							(math.max(player:getStorageValue(65038), 0))
-						)
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.seaserpentsCount),
+							tasks[38].killsRequired,
+							tasks[38].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[38].killsRequired,
+							tasks[38].raceName:lower())
+						end
+					}
 				},
 				[76] = {
 					name = "Paw and Fur: Hellhounds",
 					storageId = 65039,
 					missionId = 10156,
 					startValue = 0,
-					endValue = 250,
-					description = function(player)
-						return string.format("You already hunted %d/250 hellhounds.", (math.max(player:getStorageValue(65039), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.hellhoundCount),
+							tasks[39].killsRequired,
+							tasks[39].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[39].killsRequired,
+							tasks[39].raceName:lower())
+						end
+					}
 				},
 				[77] = {
 					name = "Paw and Fur: Ghastly Dragons",
 					storageId = 65040,
 					missionId = 10157,
 					startValue = 0,
-					endValue = 500,
-					description = function(player)
-						return string.format("You already hunted %d/500 ghastly dragons.", (math.max(player:getStorageValue(65040), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.ghastlydragonCount),
+							tasks[40].killsRequired,
+							tasks[40].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[40].killsRequired,
+							tasks[40].raceName:lower())
+						end
+					}
 				},
 				[78] = {
 					name = "Paw and Fur: Drakens",
 					storageId = 65041,
 					missionId = 10158,
 					startValue = 0,
-					endValue = 900,
-					description = function(player)
-						return string.format("You already hunted %d/900 drakens.", (math.max(player:getStorageValue(65041), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.drakenCount),
+							tasks[41].killsRequired,
+							tasks[41].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[41].killsRequired,
+							tasks[41].raceName:lower())
+						end
+					}
 				},
 				[79] = {
 					name = "Paw and Fur: Destroyers",
 					storageId = 65042,
 					missionId = 10159,
 					startValue = 0,
-					endValue = 650,
-					description = function(player)
-						return string.format("You already hunted %d/650 destroyers.", (math.max(player:getStorageValue(65042), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.destroyerCount),
+							tasks[42].killsRequired,
+							tasks[42].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[42].killsRequired,
+							tasks[42].raceName:lower())
+						end
+					}
 				},
 				[80] = {
 					name = "Paw and Fur: Undead Dragons",
 					storageId = 65043,
 					missionId = 10160,
 					startValue = 0,
-					endValue = 400,
-					description = function(player)
-						return string.format("You already hunted %d/400 undead dragons.", (math.max(player:getStorageValue(65043), 0)))
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.undeaddragonCount),
+							tasks[43].killsRequired,
+							tasks[43].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s. If you want to you may complete this task again.",
+							tasks[43].killsRequired,
+							tasks[43].raceName:lower())
+						end
+					}
 				},
 				[81] = {
 					name = "Paw and Fur: Demons",
 					storageId = 65044,
 					missionId = 10161,
 					startValue = 0,
-					endValue = 6666,
-					description = function(player)
-						return string.format("You already hunted %d/6666 demons.", (math.max(player:getStorageValue(65044), 0)))
-					end
+					endValue = 1,
+					states = {
+						[0] =
+						function(player)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.demonCount),
+							tasks[44].killsRequired,
+							tasks[44].raceName:lower())
+						end,
+						[1] =
+						function(player)
+							return string.format("You successfully hunted %d %s.",
+							tasks[44].killsRequired,
+							tasks[44].raceName:lower())
+						end
+					}
 				},
 				[82] = {
 					name = "Paw and Fur: Green Djinns or Efreets",
@@ -1864,6 +3021,20 @@ if not Quests then
 						return string.format(
 							"You already hunted %d/4000 necromancers and priestess.",
 							(math.max(player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount), 0))
+						)
+					end
+				},
+				[88] = {
+					name = "Paw and Fur - Hunting Elite",
+					storageId = Storage.KillingInTheNameOf.questlogEntry,
+					missionId = 10168,
+					startValue = 0,
+					endValue = 1,
+					description = function(player)
+						return string.format(
+							"You joined the 'Paw and Fur - Hunting Elite'. Ask Grizzly Adams for some hunting tasks. You already gained %d points. You currently have %d boss points.",
+							(math.max(player:getStorageValue(2500), 0)),
+							(math.max(player:getStorageValue(Storage.KillingInTheNameOf.bossPoints), 0))
 						)
 					end
 				}

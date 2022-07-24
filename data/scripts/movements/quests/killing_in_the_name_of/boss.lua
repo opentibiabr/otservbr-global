@@ -346,7 +346,7 @@ function boss.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	player:setStorageValue(boss.storage, 0)
+	player:setStorageValue(boss.storage, 2)
 	player:teleportTo(boss.playerPosition)
 	boss.playerPosition:sendMagicEffect(CONST_ME_TELEPORT)
 

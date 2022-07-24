@@ -60,7 +60,10 @@ tasks =
 	[3] = {
 		killsRequired = 300,
 		raceName = "Crocodiles",
-		level = {6, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Snapper",
+		level = {6, 49},
+		bossId = 1,
 		premium = true,
 		creatures = {
 			"crocodile"
@@ -68,13 +71,14 @@ tasks =
 		rewards = {
 			{type = "exp", value = {800}},
 			{type = "achievement", value = {"Blood-Red Snapper"}},
-			{type = "storage", value = {34100, 1}},
+			{type = "storage", value = {34100, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount, 1, 0}}, -- bossTP, bossCount, startValueTP, startValueCount 
 			{type = "points", value = {1}}
 		}
 	},
 	[4] = {
 		killsRequired = 300,
 		raceName = "Badgers",
+		npcName = "Grizzly Adams",
 		level = {6, 49},
 		premium = true,
 		creatures = {
@@ -88,7 +92,10 @@ tasks =
 	[5] = {
 		killsRequired = 300,
 		raceName = "Tarantulas",
-		level = {6, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Hide",
+		level = {6, 49},
+		bossId = 2,
 		premium = true,
 		creatures = {
 			"tarantula"
@@ -96,14 +103,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {1500}},
 			{type = "achievement", value = {"No More Hiding"}},
-			{type = "storage", value = {34101, 1}},
+			{type = "storage", value = {34101, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.hideCount, 1, 0}},
 			{type = "points", value = {2}}
 		}
 	},
 	[6] = {
 		killsRequired = 150,
 		raceName = "Carniphilas",
-		level = {6, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Deathbine",
+		level = {6, 49},
+		bossId = 3,
 		premium = true,
 		creatures = {
 			"carniphila"
@@ -111,13 +121,14 @@ tasks =
 		rewards = {
 			{type = "exp", value = {2500}},
 			{type = "achievement", value = {"Rootless Behaviour"}},
-			{type = "storage", value = {34102, 1}},
+			{type = "storage", value = {34102, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.deathbineCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[7] = {
 		killsRequired = 200,
 		raceName = "Stone Golems",
+		npcName = "Grizzly Adams",
 		level = {6, 49},
 		premium = true,
 		creatures = {
@@ -131,7 +142,10 @@ tasks =
 	[8] = {
 		killsRequired = 300,
 		raceName = "Mammoths",
-		level = {6, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Bloodtusk",
+		level = {6, 49},
+		bossId = 4,
 		premium = true,
 		creatures = {
 			"mammoth"
@@ -139,13 +153,14 @@ tasks =
 		rewards = {
 			{type = "exp", value = {4000}},
 			{type = "achievement", value = {"Meat Skewer"}},
-			{type = "storage", value = {34103, 1}},
+			{type = "storage", value = {34103, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.bloodtuskCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[9] = {
 		killsRequired = 300,
 		raceName = "Gnarlhounds",
+		npcName = "Grizzly Adams",
 		level = {6, 49},
 		premium = true,
 		creatures = {
@@ -159,6 +174,7 @@ tasks =
 	[10] = {
 		killsRequired = 300,
 		raceName = "Terramites",
+		npcName = "Grizzly Adams",
 		level = {6, 49},
 		premium = true,
 		creatures = {
@@ -172,12 +188,13 @@ tasks =
 	[11] = {
 		killsRequired = 300,
 		raceName = "Apes",
+		npcName = "Grizzly Adams",
 		level = {6, 49},
 		premium = true,
 		creatures = {
 			"kongra",
 			"sibang",
-			"merklin"
+			"merlkin"
 		},
 		rewards = {
 			{type = "exp", value = {1000}},
@@ -187,6 +204,7 @@ tasks =
 	[12] = {
 		killsRequired = 300,
 		raceName = "Thornback Tortoises",
+		npcName = "Grizzly Adams",
 		level = {6, 49},
 		premium = true,
 		creatures = {
@@ -200,6 +218,7 @@ tasks =
 	[13] = {
 		killsRequired = 300,
 		raceName = "Gargoyles",
+		npcName = "Grizzly Adams",
 		level = {6, 49},
 		premium = true,
 		creatures = {
@@ -212,7 +231,10 @@ tasks =
 	[14] = {
 		killsRequired = 300,
 		raceName = "Ice Golems",
-		level = {50, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Shardhead",
+		level = {50, 79},
+		bossId = 5,
 		premium = true,
 		creatures = {
 			"ice golem"
@@ -220,13 +242,14 @@ tasks =
 		rewards = {
 			{type = "exp", value = {12000}},
 			{type = "achievement", value = {"Breaking The Ice"}},
-			{type = "storage", value = {34104, 1}},
+			{type = "storage", value = {34104, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.shardheadCount, 1, 0}},
 			{type = "points", value = {2}}
 		}
 	},
 	[15] = {
 		killsRequired = 400,
 		raceName = "Quara Scouts",
+		npcName = "Grizzly Adams",
 		level = {50, 79},
 		premium = true,
 		creatures = {
@@ -244,7 +267,10 @@ tasks =
 	[16] = {
 		killsRequired = 400,
 		raceName = "Mutated Rats",
-		level = {50, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Esmeralda",
+		level = {50, 79},
+		bossId = 6,
 		premium = true,
 		creatures = {
 			"mutated rat"
@@ -252,14 +278,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {10000}},
 			{type = "achievement", value = {"Twisted Mutation"}},
-			{type = "storage", value = {34105, 1}},
+			{type = "storage", value = {34105, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.esmeraldaCount, 1, 0}},
 			{type = "points", value = {2}}
 		}
 	},
 	[17] = {
 		killsRequired = 250,
 		raceName = "Ancient Scarabs",
-		level = {50, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Fleshcrawler",
+		level = {50, 79},
+		bossId = 7,
 		premium = true,
 		creatures = {
 			"ancient scarab"
@@ -267,13 +296,14 @@ tasks =
 		rewards = {
 			{type = "exp", value = {15000}},
 			{type = "achievement", value = {"Crawling Death"}},
-			{type = "storage", value = {34106, 1}},
+			{type = "storage", value = {34106, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.fleshcrawlerCount, 1, 0}},
 			{type = "points", value = {2}}
 		}
 	},
 	[18] = {
 		killsRequired = 300,
 		raceName = "Wyverns",
+		npcName = "Grizzly Adams",
 		level = {50, 79},
 		premium = true,
 		creatures = {
@@ -287,6 +317,7 @@ tasks =
 	[19] = {
 		killsRequired = 300,
 		raceName = "Lancer Beetles",
+		npcName = "Grizzly Adams",
 		level = {50, 79},
 		premium = true,
 		creatures = {
@@ -300,6 +331,7 @@ tasks =
 	[20] = {
 		killsRequired = 400,
 		raceName = "Wailing Widows",
+		npcName = "Grizzly Adams",
 		level = {50, 79},
 		premium = true,
 		creatures = {
@@ -313,6 +345,7 @@ tasks =
 	[21] = {
 		killsRequired = 250,
 		raceName = "Killer Caimans",
+		npcName = "Grizzly Adams",
 		level = {50, 79},
 		premium = true,
 		creatures = {
@@ -326,7 +359,10 @@ tasks =
 	[22] = {
 		killsRequired = 300,
 		raceName = "Bonebeasts",
-		level = {50, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Ribstride",
+		level = {50, 79},
+		bossId = 8,
 		premium = true,
 		creatures = {
 			"bonebeast"
@@ -334,27 +370,31 @@ tasks =
 		rewards = {
 			{type = "exp", value = {12000}},
 			{type = "achievement", value = {"Spareribs for Dinner"}},
-			{type = "storage", value = {34107, 1}},
+			{type = "storage", value = {34107, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.ribstrideCount, 1, 0}},
 			{type = "points", value = {2}}
 		}
 	},
 	[23] = {
 		killsRequired = 300,
 		raceName = "Crystal Spiders",
-		level = {50, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Bloodweb",
+		level = {50, 79},
+		bossId = 9,
 		creatures = {
 		"crystal spider"},
 		premium = true,
 		rewards = {
 			{type = "exp", value = {15000}},
 			{type = "achievement", value = {"Arachnoise"}},
-			{type = "storage", value = {34108, 1}},
+			{type = "storage", value = {34108, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.bloodwebCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[24] = {
 		killsRequired = 300,
 		raceName = "Mutated Tigers",
+		npcName = "Grizzly Adams",
 		level = {50, 79},
 		premium = true,
 		creatures = {
@@ -368,7 +408,10 @@ tasks =
 	[25] = {
 		killsRequired = 600,
 		raceName = "Underwater Quara",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Thul",
+		level = {80, 129},
+		bossId = 10,
 		premium = true,
 		creatures = {
 			"quara hydromancer",
@@ -380,14 +423,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {15000}},
 			{type = "achievement", value = {"Back into the Abyss"}},
-			{type = "storage", value = {34109, 1}},
+			{type = "storage", value = {34109, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.thulCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[26] = {
 		killsRequired = 500,
 		raceName = "Giant Spiders",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Old Widow",
+		level = {80, 129},
+		bossId = 11,
 		premium = true,
 		creatures = {
 			"giant spider"
@@ -395,14 +441,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {20000}},
 			{type = "achievement", value = {"Choking on Her Venom"}},
-			{type = "storage", value = {34110, 1}},
+			{type = "storage", value = {34110, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.widowCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[27] = {
 		killsRequired = 300,
 		raceName = "Werewolves",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Hemming",
+		level = {80, 129},
+		bossId = 12,
 		premium = true,
 		creatures = {
 			"werewolf"
@@ -410,14 +459,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"Howly Silence"}},
-			{type = "storage", value = {34111, 1}},
+			{type = "storage", value = {34111, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.hemmingCount, 1, 0}},
 			{type = "points", value = {4}}
 		}
 	},
 	[28] = {
 		killsRequired = 400,
 		raceName = "Nightmares",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Tormentor",
+		level = {80, 129},
+		bossId = 13,
 		premium = true,
 		creatures = {
 			"nightmare",
@@ -426,14 +478,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {25000}},
 			{type = "achievement", value = {"Dream's Over"}},
-			{type = "storage", value = {34112, 1}},
+			{type = "storage", value = {34112, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.tormentorCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[29] = {
 		killsRequired = 600,
 		raceName = "Hellspawns",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Flameborn",
+		level = {80, 129},
+		bossId = 14,
 		premium = true,
 		creatures = {
 			"hellspawn"
@@ -441,13 +496,16 @@ tasks =
 		rewards = {
 			{type = "exp", value = {25000}},
 			{type = "achievement", value = {"Scorched Flames"}},
-			{type = "storage", value = {34113, 1}}
+			{type = "storage", value = {34113, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.flamebornCount, 1, 0}},
 		}
 	},
 	[30] = {
 		killsRequired = 800,
 		raceName = "High Class Lizards",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Fazzrah",
+		level = {80, 129},
+		bossId = 15,
 		premium = true,
 		creatures = {
 			"lizard chosen",
@@ -458,14 +516,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"Zzztill Zzztanding!"}},
-			{type = "storage", value = {34114, 1}},
+			{type = "storage", value = {34114, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.fazzrahCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[31] = {
 		killsRequired = 600,
 		raceName = "Stampors",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Tromphonyte",
+		level = {80, 129},
+		bossId = 16,
 		premium = true,
 		creatures = {
 			"stampor"
@@ -473,14 +534,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {20000}},
 			{type = "achievement", value = {"Stepped on a Big Toe"}},
-			{type = "storage", value = {34115, 1}},
+			{type = "storage", value = {34115, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.tromphonyteCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[32] = {
 		killsRequired = 500,
 		raceName = "Brimstone Bugs",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Sulphur Scuttler",
+		level = {80, 129},
+		bossId = 17,
 		premium = true,
 		creatures = {
 			"brimstone bug"
@@ -488,14 +552,17 @@ tasks =
 		rewards = {
 			{type = "exp", value = {15000}},
 			{type = "achievement", value = {"Something Smells"}},
-			{type = "storage", value = {34116, 1}},
+			{type = "storage", value = {34116, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.scuttlerCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[33] = {
 		killsRequired = 400,
 		raceName = "Mutated Bats",
-		level = {80, 999},
+		npcName = "Grizzly Adams",
+		bossName = "Bruise Payne",
+		level = {80, 129},
+		bossId = 18,
 		premium = true,
 		creatures = {
 			"mutated bat"
@@ -503,14 +570,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {20000}},
 			{type = "achievement", value = {"Kapow!"}},
-			{type = "storage", value = {34117, 1}},
+			{type = "storage", value = {34117, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.payneCount, 1, 0}},
 			{type = "points", value = {2}}
 		}
 	},
 	[34] = {
 		killsRequired = 650,
 		raceName = "Hydras",
+		npcName = "Grizzly Adams",
+		bossName = "Many",
 		level = {130, 9999},
+		bossId = 19,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"hydra"
@@ -518,14 +589,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"One Less"}},
-			{type = "storage", value = {34118, 1}},
+			{type = "storage", value = {34118, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.manyCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[35] = {
 		killsRequired = 800,
 		raceName = "Serpent Spawns",
+		npcName = "Grizzly Adams",
+		bossName = "Noxious Spawn",
 		level = {130, 9999},
+		bossId = 20,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"serpent spawn"
@@ -533,14 +608,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"Hissing Downfall"}},
-			{type = "storage", value = {34119, 1}},
+			{type = "storage", value = {34119, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.noxiousCount, 1, 0}},
 			{type = "points", value = {4}}
 		}
 	},
 	[36] = {
 		killsRequired = 500,
 		raceName = "Medusas",
+		npcName = "Grizzly Adams",
+		bossName = "Gorgo",
 		level = {130, 9999},
+		bossId = 21,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"medusa"
@@ -548,14 +627,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {40000}},
 			{type = "achievement", value = {"The Serpent's Bride"}},
-			{type = "storage", value = {34120, 1}},
+			{type = "storage", value = {34120, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.gorgoCount, 1, 0}},
 			{type = "points", value = {5}}
 		}
 	},
 	[37] = {
 		killsRequired = 700,
 		raceName = "Behemoths",
+		npcName = "Grizzly Adams",
+		bossName = "Stonecracker",
 		level = {130, 9999},
+		bossId = 22,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"behemoth"
@@ -563,14 +646,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"Just Cracked Me Up!"}},
-			{type = "storage", value = {34121, 1}},
+			{type = "storage", value = {34121, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.stonecrackerCount, 1, 0}},
 			{type = "points", value = {4}}
 		}
 	},
 	[38] = {
 		killsRequired = 900,
 		raceName = "Sea Serpents and Young Sea Serpents",
+		npcName = "Grizzly Adams",
+		bossName = "Leviathan",
 		level = {130, 9999},
+		bossId = 23,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"sea serpent",
@@ -579,14 +666,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"The Drowned Sea God"}},
-			{type = "storage", value = {34122, 1}},
+			{type = "storage", value = {34122, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.leviathanCount, 1, 0}},
 			{type = "points", value = {4}}
 		}
 	},
 	[39] = {
 		killsRequired = 250,
 		raceName = "Hellhounds",
+		npcName = "Grizzly Adams",
+		bossName = "Kerberos",
 		level = {130, 9999},
+		bossId = 24,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"hellhound"
@@ -594,14 +685,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {40000}},
 			{type = "achievement", value = {"The Gates of Hell"}},
-			{type = "storage", value = {34123, 1}},
+			{type = "storage", value = {34123, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.kerberosCount, 1, 0}},
 			{type = "points", value = {5}}
 		}
 	},
 	[40] = {
 		killsRequired = 500,
 		raceName = "Ghastly Dragons",
+		npcName = "Grizzly Adams",
+		bossName = "Ethershreck",
 		level = {130, 9999},
+		bossId = 25,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"ghastly dragon"
@@ -609,14 +704,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"Beautiful Agony"}},
-			{type = "storage", value = {34124, 1}},
+			{type = "storage", value = {34124, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.ethershreckCount, 1, 0}},
 			{type = "points", value = {5}}
 		}
 	},
 	[41] = {
 		killsRequired = 900,
 		raceName = "Drakens",
+		npcName = "Grizzly Adams",
+		bossName = "Paiz the Pauperizer",
 		level = {130, 9999},
+		bossId = 26,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"draken spellweaver",
@@ -626,14 +725,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"Enter zze Draken!"}},
-			{type = "storage", value = {34125, 1}},
+			{type = "storage", value = {34125, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.pauperizerCount, 1, 0}},
 			{type = "points", value = {3}}
 		}
 	},
 	[42] = {
 		killsRequired = 650,
 		raceName = "Destroyers",
+		npcName = "Grizzly Adams",
+		bossName = "Bretzecutioner",
 		level = {130, 9999},
+		bossId = 27,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"destroyer"
@@ -641,14 +744,18 @@ tasks =
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"King of the Ring"}},
-			{type = "storage", value = {34126, 1}},
+			{type = "storage", value = {34126, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.bretzecutionerCount, 1, 0}},
 			{type = "points", value = {4}}
 		}
 	},
 	[43] = {
 		killsRequired = 400,
 		raceName = "Undead Dragons",
+		npcName = "Grizzly Adams",
+		bossName = "Zanakeph",
 		level = {130, 9999},
+		bossId = 28,
+		repeatable = true,
 		premium = true,
 		creatures = {
 			"undead dragon"
@@ -656,13 +763,14 @@ tasks =
 		rewards = {
 			{type = "exp", value = {50000}},
 			{type = "achievement", value = {"Back from the Dead"}},
-			{type = "storage", value = {34127, 1}},
+			{type = "storage", value = {34127, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.zanakephCount, 1, 0}},
 			{type = "points", value = {6}}
 		}
 	},
 	[44] = {
 		killsRequired = 6666,
 		raceName = "Demons",
+		npcName = "Grizzly Adams",
 		level = {130, 9999}, rank = RANK_ELITEHUNTER,
 		premium = true,
 		creatures = {
