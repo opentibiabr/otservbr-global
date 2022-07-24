@@ -366,7 +366,7 @@ local function creatureSayCallback(npc, creature, type, message)
 								player:setStorageValue(Storage.KillingInTheNameOf.bossPoints, player:getStorageValue(Storage.KillingInTheNameOf.bossPoints) + 1)
 							else
 								player:setStorageValue(reward.value[1], reward.value[3])
-								player:setStorageValue(reward.value[2], reward.value[4])								
+								player:setStorageValue(reward.value[2], reward.value[4])
 								messageAlt = true
 								messageAltId = tasks[id].bossId
 							end
@@ -439,7 +439,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				"You can try {crocodiles}, {badgers}, {tarantulas}, {carniphilas}, {stone golems}, {mammoths}, {gnarlhounds}, ...",
 				"as well as {terramites}, {apes}, {thornback tortoises} and {gargoyles}."}, npc, creature)
 			else
-				npcHandler:say("Alright, what would you like to hunt? {Crocodiles}, {badgers}, {tarantulas}, {carniphilas}, {stone golems}, {mammoths}, {gnarlhounds}, {terramites}, {apes}, {thornback tortoises} or {gargoyles}.", npc, creature)			
+				npcHandler:say("Alright, what would you like to hunt? {Crocodiles}, {badgers}, {tarantulas}, {carniphilas}, {stone golems}, {mammoths}, {gnarlhounds}, {terramites}, {apes}, {thornback tortoises} or {gargoyles}.", npc, creature)
 			end
 		elseif player:getLevel() >= 50 and player:getLevel() < 80 then
 			if player:getStorageValue(POINTSSTORAGE) >= 70 then
@@ -457,7 +457,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say({
 				"You may not advance in your rank anymore until you've levelled up. But you can accept tasks without getting Paw & Fur points, just for an experience reward and the possibility to fight a boss from the range lower than level 130. ...",
 				"You can try {underwater quara}, {giant spiders}, {werewolves}, {nightmares}, {hellspawns}, {high class lizards}, {stampors}, ...",
-				"as well as {brimstone bugs} and {mutated bats}."}, npc, creature)				
+				"as well as {brimstone bugs} and {mutated bats}."}, npc, creature)
 			else
 				npcHandler:say({
 				"Alright, what would you like to hunt? {Underwater quara}, {giant spiders}, {werewolves}, {nightmares}, {hellspawns}, ...",
@@ -540,25 +540,25 @@ local function creatureSayCallback(npc, creature, type, message)
 					[1] = "Interesting kind and not so easy to find. The fun begins when you want to hunt {Tiquanda's Revenge}. It's strong and smart like no other carniphila.",
 					[2] = "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. " for our society. Alright?"
 				}
-				npcHandler:say(messageCarniphilas[chanceX], npc, creature)			
+				npcHandler:say(messageCarniphilas[chanceX], npc, creature)
 			else
 				npcHandler:say(messageStartTask[message:lower()], npc, creature)
 			end
 		elseif isInArray({"ice golems", "quara scouts", "mutated rats", "ancient scarabs", "wyverns", "lancer beetles", "wailing widows", "killer caimans", "bonebeasts", "crystal spiders", "mutated tigers"}, message:lower()) then
 			if player:getStorageValue(POINTSSTORAGE) >= 70 and player:getLevel() < 80 then
-				npcHandler:say(messageStartTask["messageElse"], npc, creature)		
+				npcHandler:say(messageStartTask["messageElse"], npc, creature)
 			else
 				npcHandler:say(messageStartTask[message:lower()], npc, creature)
 			end
 		elseif isInArray({"underwater quara", "giant spiders", "werewolves", "nightmares", "hellspawns", "high class lizards", "stampors", "brimstone bugs", "mutated bats"}, message:lower()) then
 			if player:getStorageValue(POINTSSTORAGE) >= 100 and player:getLevel() < 130 then
-				npcHandler:say(messageStartTask["messageElse"], npc, creature)		
+				npcHandler:say(messageStartTask["messageElse"], npc, creature)
 			else
 				npcHandler:say(messageStartTask[message:lower()], npc, creature)
 			end
 		elseif isInArray({"hydras", "serpent spawns", "medusae", "behemoths", "sea serpents", "hellhounds", "ghastly dragons", "undead dragons", "draken", "destroyers"}, message:lower()) then
 			npcHandler:say(messageStartTask[message:lower()], npc, creature)
-		elseif message:lower() == "demons" and player:getStorageValue(Storage.KillingInTheNameOf.pawandfurRank) == 7 then 
+		elseif message:lower() == "demons" and player:getStorageValue(Storage.KillingInTheNameOf.pawandfurRank) == 7 then
 			npcHandler:say("The spawn of pure evil must be erased from Tibia. You'll find demons lurking in the northern ruins of Edron as well as in some other deeper dungeons of Tibia. Slay 6666 demons for the greater good! Do you think you can handle this task?", npc, creature)
 		else 
 			npcHandler:say("In this task you must defeat " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. "."..	" ".."Are you sure that you want to start this task?", npc, creature)
