@@ -560,7 +560,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say(messageStartTask[message:lower()], npc, creature)
 		elseif message:lower() == "demons" and player:getStorageValue(Storage.KillingInTheNameOf.pawandfurRank) == 7 then
 			npcHandler:say("The spawn of pure evil must be erased from Tibia. You'll find demons lurking in the northern ruins of Edron as well as in some other deeper dungeons of Tibia. Slay 6666 demons for the greater good! Do you think you can handle this task?", npc, creature)
-		else 
+		else
 			npcHandler:say("In this task you must defeat " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. "."..	" ".."Are you sure that you want to start this task?", npc, creature)
 		end
 		choose[playerId] = task
@@ -638,13 +638,13 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 5)
 			elseif player:getLevel() >= 80 and player:getLevel() < 130 then
 				npcHandler:say({
-				"You can choose between the {Snapper}, {Hide}, {Deathbine}, the {Bloodtusk}, {Shardhead}, {Fleshcrawler}, {Ribstride}, {Bloodweb}, {Esmeralda}, ...", 
+				"You can choose between the {Snapper}, {Hide}, {Deathbine}, the {Bloodtusk}, {Shardhead}, {Fleshcrawler}, {Ribstride}, {Bloodweb}, {Esmeralda}, ...",
 				"{Thul}, {Flameborn}, {Sulphur Scuttler}, the {Old Widow}, {Hemming}, {Tormentor}, {Fazzrah}, {Tromphonyte} and {Bruise Payne}."}, npc, creature)
 				npcHandler:setTopic(playerId, 6)
 			else
 				npcHandler:say({
-				"You can choose between the {Snapper}, {Hide}, {Deathbine}, the {Bloodtusk}, {Shardhead}, {Fleshcrawler}, {Ribstride}, {Bloodweb}, {Esmeralda}, ...", 
-				"{Thul}, {Flameborn}, {Sulphur Scuttler}, the {Old Widow}, {Hemming}, {Tormentor}, {Fazzrah}, {Tromphonyte}, {Bruise Payne}, ...", 
+				"You can choose between the {Snapper}, {Hide}, {Deathbine}, the {Bloodtusk}, {Shardhead}, {Fleshcrawler}, {Ribstride}, {Bloodweb}, {Esmeralda}, ...",
+				"{Thul}, {Flameborn}, {Sulphur Scuttler}, the {Old Widow}, {Hemming}, {Tormentor}, {Fazzrah}, {Tromphonyte}, {Bruise Payne}, ...",
 				"the {Many}, the {Noxious Spawn}, {Stonecracker}, {Gorgo}, {Kerberos}, {Ethershreck}, {Zanakeph}, {Paiz the Pauperizer}, {Bretzecutioner} and {Leviathan}."}, npc, creature)
 				npcHandler:setTopic(playerId, 7)
 			end

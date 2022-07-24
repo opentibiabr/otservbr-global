@@ -71,7 +71,7 @@ tasks =
 		rewards = {
 			{type = "exp", value = {800}},
 			{type = "achievement", value = {"Blood-Red Snapper"}},
-			{type = "storage", value = {34100, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount, 1, 0}}, -- bossTP, bossCount, startValueTP, startValueCount 
+			{type = "storage", value = {34100, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount, 1, 0}}, -- bossTP, bossCount, startValueTP, startValueCount
 			{type = "points", value = {1}}
 		}
 	},
