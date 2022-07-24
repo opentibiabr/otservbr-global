@@ -2127,7 +2127,6 @@ if not Quests then
 					missionId = 10130,
 					startValue = 0,
 					endValue = 2,
-					endValue = 2,
 					states = {
 						[0] =
 						function(player)
