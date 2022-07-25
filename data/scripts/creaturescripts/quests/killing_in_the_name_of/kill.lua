@@ -26,7 +26,9 @@ local taskBoss = {
 	[24] = "ethershreck",
 	[25] = "paiz the pauperizer",
 	[26] = "bretzecutioner",
-	[27] = "zanakeph"
+	[27] = "zanakeph",
+	[28] = "tiquandas revenge",
+	[29] = "demodras"
 }
 local killCounter = Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.placeHolder00
 local bossKillCount = Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount

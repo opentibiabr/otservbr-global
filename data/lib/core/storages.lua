@@ -1308,12 +1308,10 @@ Storage = {
 		BudrikMinos = 51612,
 		BudrikMinosCount = 51613,
 		MissionTiquandasRevenge = 51614,
-		TiquandasRevengeTeleport = 51615,
-		MissionDemodras = 51616,
-		DemodrasTeleport = 51617,
-		bossPoints = 51618,
-		questlogEntry = 51619,
-		pawandfurRank = 51620
+		MissionDemodras = 51615,
+		bossPoints = 51616,
+		questlogEntry = 51617,
+		pawandfurRank = 51618
 	},
 	HotCuisineQuest = {
 		-- Reserved storage from 51650 - 51659

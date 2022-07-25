@@ -282,7 +282,7 @@ local bosses = {
 	},
 	[3258] = {
 		bossName = 'tiquandas revenge',
-		storage = Storage.KillingInTheNameOf.TiquandasRevengeTeleport,
+		storage = Storage.KillingInTheNameOf.MissionTiquandasRevenge,
 		playerPosition = Position(32888, 32580, 4),
 		bossPosition = Position(32888, 32586, 4),
 		centerPosition = Position(32748, 32293, 10),
@@ -291,7 +291,7 @@ local bosses = {
 	},
 	[3259] = {
 		bossName = 'demodras',
-		storage = Storage.KillingInTheNameOf.DemodrasTeleport,
+		storage = Storage.KillingInTheNameOf.MissionDemodras,
 		playerPosition = Position(32748, 32287, 10),
 		bossPosition = Position(32747, 32294, 10),
 		centerPosition = Position(32887, 32583, 4),
