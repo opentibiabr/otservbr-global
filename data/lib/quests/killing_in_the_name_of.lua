@@ -773,7 +773,7 @@ tasks =
 		killsRequired = 6666,
 		raceName = "Demons",
 		npcName = "Grizzly Adams",
-		level = {130, 9999}, rank = RANK_ELITEHUNTER,
+		level = {130, 9999}, rank = RANK_ELITEHUNTER, norepeatable = true,
 		premium = true,
 		creatures = {
 			"demon"
