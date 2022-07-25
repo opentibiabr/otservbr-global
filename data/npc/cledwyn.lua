@@ -104,7 +104,12 @@ local chargeItem = {
 	['sleep shawl'] = {noChargeID = 29428, ChargeID = 30342},
 	['blister ring'] = {noChargeID = 31621, ChargeID = 31557},
 	['theurgic amulet'] = {noChargeID = 30401, ChargeID = 30403},
-	['ring of souls'] = {noChargeID = 32636, ChargeID = 32621}
+	['ring of souls'] = {noChargeID = 32636, ChargeID = 32621},
+	['spiritthorn ring'] = {noChargeID = 39179, ChargeID = 39177},
+	['alicorn ring'] = {noChargeID = 39182, ChargeID = 39180},
+	['arcanomancer sigil'] = {noChargeID = 39185, ChargeID = 39183},
+	['arboreal ring'] = {noChargeID = 39188, ChargeID = 39187},
+	['turtle amulet'] = {noChargeID = 39235, ChargeID = 39233}
 }
 
 local function creatureSayCallback(npc, creature, type, message)
@@ -132,10 +137,15 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say({"Here's the deal, " .. player:getName() .. ". For 100 of your silver tokens, I can offer you some first-class torso armor. These armors provide a solid boost to your main attack skill, as well as ...",
 		"some elemental protection of your choice! I also sell a magic shield potion for one silver token. So these are my offers."}, npc, creature)
 	elseif MsgContains(message, 'enchant') then
-		npcHandler:say("The following items can be enchanted: {pendulet}, {sleep shawl}, {blister ring}, {theurgic amulet}, {ring of souls}. Make you choice!", npc, creature)
+		npcHandler:say("The following items can be enchanted: {pendulet}, {sleep shawl}, {blister ring}, {theurgic amulet}, {ring of souls}. ...",
+						"For sufficient silver tokens you can also enchant: {spiritthorn ring}, {alicorn ring}, {arcanomancer sigil}, {arboreal ring}, {turtle amulet}. Make you choice!", npc, creature)
 		npcHandler:setTopic(playerId, 1)
-	elseif isInArray({'pendulet', 'sleep shawl', 'blister ring', 'theurgic amulet', 'ring of souls'}, message:lower()) and npcHandler:getTopic(playerId) == 1 then
+	elseif isInArray({'pendulet', 'sleep shawl', 'blister ring', 'theurgic amulet', 'ring of souls', 'turtle amulet'}, message:lower()) and npcHandler:getTopic(playerId) == 1 then
 		npcHandler:say("Should I enchant the item " .. message .. " for 2 ".. ItemType(npc:getCurrency()):getPluralName():lower() .."?", npc, creature)
+		charge = message:lower()
+		npcHandler:setTopic(playerId, 2)
+	elseif isInArray({'spiritthorn ring', 'alicorn ring', 'arcanomancer sigil', 'arboreal ring'}, message:lower()) and npcHandler:getTopic(playerId) == 1 then
+		npcHandler:say("Should I enchant the item " .. message .. " for 5 ".. ItemType(npc:getCurrency()):getPluralName():lower() .."?", npc, creature)
 		charge = message:lower()
 		npcHandler:setTopic(playerId, 2)
 	elseif npcHandler:getTopic(playerId) == 2 then
