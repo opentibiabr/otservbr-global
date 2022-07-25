@@ -2204,9 +2204,44 @@ Storage = {
 					demodrasCount = 42379,
 					necropharusCount = 42380,
 					foxCount = 42381,
-					lissyCount = 42382
-					}
+					lissyCount = 42382,
 				},
+				altKillCount = {
+					-- Apes
+					kongraCount = 42450,
+					merlkinCount = 42451,
+					sibangCount = 42452,
+					-- Quara Scouts
+					quaraconstrictorscoutCount = 42453,
+					quarahydromancerscoutCount = 42454,
+					quaramantassinscoutCount = 42455,
+					quarapincherscoutCount = 42456,
+					quarapredatorscoutCount = 42457,
+					-- Underwater Quara
+					quaraconstrictorCount = 42458,
+					quarahydromancerCount = 42459,
+					quaramantassinCount = 42460,
+					quarapincherCount = 42461,
+					quarapredatorCount = 42462,
+					-- Nightmares
+					nightmareCount = 42463,
+					nightmarescionCount = 42464,
+					-- High Class Lizards
+					lizardchosenCount = 42465,
+					lizarddragonpriestCount = 42466,
+					lizardhighguardCount = 42467,
+					lizardlegionnaireCount = 42468,
+					lizardzaogunCount = 42469,
+					-- Sea Serpents and Young Sea Serpents
+					seaserpentCount = 42470,
+					youngseaserpentCount = 42471,
+					-- Drakens
+					drakenabominationCount = 42472,
+					drakeneliteCount = 42473,
+					drakenspellweaverCount = 42474,
+					drakenwarmasterCount = 42475
+				}
+			},
 			LoneMedusa = {},
 			PilgrimageOfAshes = {},
 			ShadowsOfYalahar = {},

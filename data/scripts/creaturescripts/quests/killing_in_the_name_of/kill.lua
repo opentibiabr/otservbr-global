@@ -40,6 +40,34 @@ function killingInTheNameOfKill.onKill(player, target)
 	for i = 1, #startedTasks do
 		taskId = startedTasks[i]
 		if isInArray(tasks[taskId].creatures, targetName) then
+			if #tasks[taskId].creatures > 1 then
+				for a = 1, #tasks[taskId].creatures do
+					if targetName == tasks[taskId].creatures[a] then
+						if tasks[taskId].raceName == "Apes" then
+							local apes = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.kongraCount + a - 1
+							player:setStorageValue(apes, player:getStorageValue(apes) + 1)
+						elseif	tasks[taskId].raceName == "Quara Scouts" then
+							local scouts = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorscoutCount + a - 1
+							player:setStorageValue(scouts, player:getStorageValue(scouts) + 1)
+						elseif	tasks[taskId].raceName == "Underwater Quara" then
+							local underwater = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorCount + a - 1
+							player:setStorageValue(underwater, player:getStorageValue(underwater) + 1)
+						elseif	tasks[taskId].raceName == "Nightmares" then
+							local nightmares = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmareCount + a - 1
+							player:setStorageValue(nightmares, player:getStorageValue(nightmares) + 1)
+						elseif	tasks[taskId].raceName == "High Class Lizards" then
+							local lizards = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardchosenCount + a - 1
+							player:setStorageValue(lizards, player:getStorageValue(lizards) + 1)
+						elseif	tasks[taskId].raceName == "Sea Serpents and Young Sea Serpents" then
+							local serpents = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount + a - 1
+							player:setStorageValue(serpents, player:getStorageValue(serpents) + 1)
+						elseif	tasks[taskId].raceName == "Drakens" then
+							local drakens = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenabominationCount + a - 1
+							player:setStorageValue(drakens, player:getStorageValue(drakens) + 1)
+						end
+					end
+				end
+			end
 			local killAmount = player:getStorageValue(killCounter + taskId)
 			player:setStorageValue(killCounter + taskId, killAmount + 1)
 			player:setStorageValue(KILLSSTORAGE_BASE + taskId, player:getStorageValue(KILLSSTORAGE_BASE + taskId)) -- fake update quest tracker

@@ -193,8 +193,8 @@ tasks =
 		premium = true,
 		creatures = {
 			"kongra",
-			"sibang",
-			"merlkin"
+			"merlkin",
+			"sibang"
 		},
 		rewards = {
 			{type = "exp", value = {1000}},
@@ -253,11 +253,11 @@ tasks =
 		level = {50, 79},
 		premium = true,
 		creatures = {
-			"quara pincher scout",
-			"quara predator scout",
-			"quara hydromancer scout",
 			"quara constrictor scout",
-			"quara mantassin scout"
+			"quara hydromancer scout",
+			"quara mantassin scout",
+			"quara pincher scout",
+			"quara predator scout"
 		},
 		rewards = {
 			{type = "exp", value = {10000}},
@@ -414,11 +414,11 @@ tasks =
 		bossId = 10,
 		premium = true,
 		creatures = {
-			"quara hydromancer",
-			"quara predator",
 			"quara constrictor",
+			"quara hydromancer",
 			"quara mantassin",
-			"quara pincher"
+			"quara pincher",
+			"quara predator"
 		},
 		rewards = {
 			{type = "exp", value = {15000}},
@@ -511,7 +511,8 @@ tasks =
 			"lizard chosen",
 			"lizard dragon priest",
 			"lizard high guard",
-			"lizard legionnaire"
+			"lizard legionnaire",
+			"lizard zaogun"
 		},
 		rewards = {
 			{type = "exp", value = {30000}},
@@ -718,10 +719,11 @@ tasks =
 		repeatable = true,
 		premium = true,
 		creatures = {
-			"draken spellweaver",
-			"draken warmaster",
 			"draken abomination",
-		"draken elite"} ,
+			"draken elite",
+			"draken spellweaver",
+			"draken warmaster"
+		},
 		rewards = {
 			{type = "exp", value = {30000}},
 			{type = "achievement", value = {"Enter zze Draken!"}},

@@ -172,27 +172,33 @@ local messageBoss = {
 	{"Spiffing work, old chap. Now I have a special task for you. Recently several citizens of Port Hope vanished. It is rumoured that they were killed by a crocodile. The people call it 'Snapper'. Hunt down and kill that evil man-eating beast. ...",
 	"Ask me about new {tasks} if you're up for a further hunting mission. Be aware that you can only have one 'Snapper' task active at the same time!"},
 	"Nicely done! Now I shall assign you a special task. Rumour has it that there is an ancient and evil tarantula who preys on humans. She is called 'Hide'. Track her down and kill her! Good luck, old chap.",
-	"PLACEHOLDER",
+	{"Well done, old chap. Now i shall assign you a special task. Rumour has it that there is an old carniphila somewhere in the jungle. Find Deathbine's hideout and kill it! Good luck, old chap ...",
+	"Ask me about new {tasks} if you're up for further hunting mission. Be aware that you can only have one 'Deathbine' task active at the same time!"},
 	"Jolly good job you did there, but now I have a special task for you. The citizens of Svargrond live in fear because of a frightfully bad-tempered mammoth they call 'Blood Tusk'. Go there and put an end to him. Happy hunting!",
 	{"As I see it, you need more of a challenge! I have heard that there is an ice golem the hunters in Svargrond call 'Shardhead'. It is an extremely dangerous example of its kind! ...",
-	"I believe you are equal to the task, Player! If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Shardhead' task active at the same time!"},
+	"I believe you are equal to the task, |PLAYERNAME|! If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Shardhead' task active at the same time!"},
 	{"Very good work, old chap. Lucky you are here - I have just been told of a task which is perfect for you. ...",
 	"The Yalaharians are having a spot of bother with a huge mutated rat. They call it 'Esmeralda' and you should find her somewhere in the sewers. Good hunting!"},
 	{"Very good work, old chap. Lucky you are here - I have just been told of a task which is perfect for you. ...",
 	"The people of Ankrahmun are having a spot of bother with a huge ancient scarab. They call it 'Fleshcrawler' and you should find and kill it. Good hunting! ...",
 	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Fleshcrawler' task active at the same time!"},
-	"PLACEHOLDER",
-	"PLACEHOLDER",
+	{"Very good work, old chap. Have you heard about 'Ribstride'? It must have a hideout. Try to find it and slay the beast. ...",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Ribstride' task active at the same time!"},
+	{"Very good work, old chap. Have you heard about 'Bloodweb'? It must have a hideout. Try to find it and slay the beast. ...",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Bloodweb' task active at the same time!"},
 	{"Superb work. However, there is something else I want you to do. It is said that there is a quara general named 'Thul' who is responsible for the attacks on Liberty Bay. Find and kill the general and bring peace back to Liberty Bay! ...",
 	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Thul' task active at the same time!"},
 	"Well THAT was a hunt. Good job. Have you heard about the 'Old Widow'? It must have a hideout. Try to find it and slay the beast. You can ask about new {tasks} by the way. Be aware that you can only have one 'Old Widow' task active at the same time!",
-	"PLACEHOLDER",
+	{"What an impressive hunt. Nicely done. By the way there is still something I want you to do for me. 'Hemming' a furious werewolf is up to mischief. Find its hideout and bring it down! ...",
+	"PLACEHOLDER"},
 	{"Thumbs up, nice performance. Have you heard about 'Tormentor'? Find it and slay the beast. ...",
 	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Tormentor' task active at the same time!"},
 	"Well THAT was a hunt. Good job. Have you heard about 'Flameborn'? It must have a hideout. Try to find it and slay the beast. You can ask about new {tasks} by the way. Be aware that you can only have one 'Flameborn' task active at the same time!",
 	{"What an impressive hunt. Nicely done. Have you heard about 'Fazzrah'? Try to find it and slay the beast. ...",
 	"You can ask about new {tasks} by the way. Be aware that you can only have one 'Fazzrah' task active at the same time!"},
-	"PLACEHOLDER",
+	{"Nicely done. However, there is something else I want you to do. I have heard that there is a stampor the hunters in the Muggy Plains call 'Tromphonyte'. It is an extremely dangerous example of its kind! ...",
+	"I believe you are equal to the task, |PLAYERNAME|! Find and kill it and bring peace back! ...",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Tromphonyte' task active at the same time!"},
 	"PLACEHOLDER",
 	"PLACEHOLDER",
 	"PLACEHOLDER",
@@ -235,7 +241,7 @@ local messageBossStart = {
 	"PLACEHOLDER", -- Leviathan
 	"PLACEHOLDER", -- Kerberos
 	"PLACEHOLDER", -- Ethershreck
-	"PLACEHOLDER", -- Paiz the Pauperizer
+	"Okay. Go forth and kill him.", -- Paiz the Pauperizer
 	"PLACEHOLDER", -- Bretzecutioner
 	"PLACEHOLDER" -- Zanakeph
 }
@@ -334,7 +340,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("You are ready to advance one rank in our society Darly. Ask me for a {promotion} first.", npc, creature)
 			return true
 		end
-		local messageAlt, messageAltExtra = false
+		local messageAlt, messageAltPoints, messageAltExtra = false
 		local messageAltId = 1
 		local started = player:getStartedTasks()
 		local finished = 0
@@ -374,7 +380,7 @@ local function creatureSayCallback(npc, creature, type, message)
 							if player:getStorageValue(POINTSSTORAGE) >= 40 and player:getLevel() < 50 or
 							player:getStorageValue(POINTSSTORAGE) >= 70 and player:getLevel() < 80 or
 							player:getStorageValue(POINTSSTORAGE) >= 100 and player:getLevel() < 130 then
-								-- nothing
+								messageAltPoints = true
 							elseif player:getLevel() >= 130 and player:getStorageValue(POINTSSTORAGE) <= 20 then
 								player:setStorageValue(POINTSSTORAGE, getPlayerTasksPoints(creature) + reward.value[1] + 3)
 								player:setStorageValue(Storage.KillingInTheNameOf.questlogEntry, player:getStorageValue(Storage.KillingInTheNameOf.questlogEntry)) -- fake update
@@ -423,7 +429,13 @@ local function creatureSayCallback(npc, creature, type, message)
 			local chanceY = math.random(4)
 			if finished == 1 then
 				if messageAlt == false then
-					npcHandler:say(messageTask[chanceY], npc, creature)
+					if messageAltPoints == true then
+						npcHandler:say({
+						"Ah, okay. This time you'll just get an experience reward, no points for our society as you already gained enough points for your level range. Ask me for a {boss} and the choice is yours. ...",
+						"Level up and new tasks and thus points will be available."}, npc, creature)
+					else
+						npcHandler:say(messageTask[chanceY], npc, creature)
+					end
 				else
 					npcHandler:say(messageBoss[messageAltId], npc, creature)
 				end
@@ -565,15 +577,52 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		choose[playerId] = task
 		npcHandler:setTopic(playerId, 1)
-	elseif isInArray({"crocodiles", "badgers", "tarantulas", "carniphilas", "stone golems", "mammoths", "gnarlhounds", "terramites", "apes", "thornback tortoises", "gargoyles"}, message:lower()) and player:getLevel() < 50 then
+	elseif isInArray({"crocodiles", "badgers", "tarantulas", "carniphilas", "stone golems", "mammoths", "gnarlhounds", "terramites", "apes", "thornback tortoises", "gargoyles"}, message:lower()) and player:getLevel() < 50 and
+	npcHandler:getTopic(playerId) < 2 then
 		checkY(npc, player, message)
-	elseif isInArray({"ice golems", "quara scouts", "mutated rats", "ancient scarabs", "wyverns", "lancer beetles", "wailing widows", "killer caimans", "bonebeasts", "crystal spiders", "mutated tigers"}, message:lower()) and player:getLevel() < 80 then
+	elseif isInArray({"ice golems", "quara scouts", "mutated rats", "ancient scarabs", "wyverns", "lancer beetles", "wailing widows", "killer caimans", "bonebeasts", "crystal spiders", "mutated tigers"}, message:lower()) and player:getLevel() < 80 and npcHandler:getTopic(playerId) < 2 then
 		checkY(npc, player, message)
-	elseif isInArray({"underwater quara", "giant spiders", "werewolves", "nightmares", "hellspawns", "high class lizards", "stampors", "brimstone bugs", "mutated bats"}, message:lower()) and player:getLevel() < 130 then
+	elseif isInArray({"underwater quara", "giant spiders", "werewolves", "nightmares", "hellspawns", "high class lizards", "stampors", "brimstone bugs", "mutated bats"}, message:lower()) and player:getLevel() < 130 and npcHandler:getTopic(playerId) < 2 then
 		checkY(npc, player, message)
 	elseif message:lower() == "yes" and npcHandler:getTopic(playerId) == 1 then
 		player:setStorageValue(QUESTSTORAGE_BASE + choose[playerId], 1)
 		player:setStorageValue(killCounter + choose[playerId], 0)
+		if #tasks[choose[playerId]].creatures > 1 then
+			if tasks[choose[playerId]].raceName == "Apes" then
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.kongraCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.merlkinCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.sibangCount, 0)
+			elseif	tasks[choose[playerId]].raceName == "Quara Scouts" then
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorscoutCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarahydromancerscoutCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaramantassinscoutCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapincherscoutCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapredatorscoutCount, 0)
+			elseif	tasks[choose[playerId]].raceName == "Underwater Quara" then
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarahydromancerCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaramantassinCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapincherCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapredatorCount, 0)
+			elseif	tasks[choose[playerId]].raceName == "Nightmares" then
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmareCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmarescionCount, 0)
+			elseif	tasks[choose[playerId]].raceName == "High Class Lizards" then
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardchosenCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizarddragonpriestCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardhighguardCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardlegionnaireCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardzaogunCount, 0)
+			elseif	tasks[choose[playerId]].raceName == "Sea Serpents and Young Sea Serpents" then
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.youngseaserpentCount, 0)
+			elseif	tasks[choose[playerId]].raceName == "Drakens" then
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenabominationCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakeneliteCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenspellweaverCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenwarmasterCount, 0)
+			end
+		end
 		if player:getStorageValue(KILLSSTORAGE_BASE + choose[playerId]) == 1 then
 			player:setStorageValue(KILLSSTORAGE_BASE + choose[playerId], player:getStorageValue(KILLSSTORAGE_BASE + choose[playerId]) - 1)
 		else

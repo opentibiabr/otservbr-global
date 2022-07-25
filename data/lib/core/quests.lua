@@ -1010,12 +1010,7 @@ if not Quests then
 					missionId = 1081,
 					startValue = 0,
 					endValue = 1,
-					description = function(player)
-						return string.format(
-							"You are Huntsman of the Paw and Fur hunting elite. You currently have %d Paw and Fur points.",
-							(math.max(player:getStorageValue(2500), 0))
-						)
-					end
+					description = "You have been promoted to the rank of a 'Huntsman' in the 'Paw and Fur - Hunting Elite'."
 				},
 				[2] = {
 					name = "Paw and Fur - Rank: Ranger",
@@ -1023,12 +1018,7 @@ if not Quests then
 					missionId = 1082,
 					startValue = 2,
 					endValue = 3,
-					description = function(player)
-						return string.format(
-							"You are Ranger of the Paw and Fur hunting elite. You currently have %d Paw and Fur points.",
-							(math.max(player:getStorageValue(2500), 0))
-						)
-					end
+					description = "You have been promoted to the rank of a 'Ranger' in the 'Paw and Fur - Hunting Elite'."
 				},
 				[3] = {
 					name = "Paw and Fur - Rank: Big Game Hunter",
@@ -1036,13 +1026,7 @@ if not Quests then
 					missionId = 1083,
 					startValue = 4,
 					endValue = 5,
-					description = function(player)
-						return string.format(
-							"You are Big Game Hunter in the Paw and Fur hunting elite. \z
-							You currently have %d Paw and Fur points.",
-							(math.max(player:getStorageValue(2500), 0))
-						)
-					end
+					description = "You have been promoted to the rank of a 'Big Game Hunter' in the 'Paw and Fur - Hunting Elite'."
 				},
 				[4] = {
 					name = "Paw and Fur - Rank: Trophy Hunter",
@@ -1050,14 +1034,7 @@ if not Quests then
 					missionId = 1084,
 					startValue = 5,
 					endValue = 6,
-					description = function(player)
-						return string.format(
-							"You are Trophy Hunter in the Paw and Fur hunting elite. \z
-							You currently have %d Paw and Fur points. \z
-							Ask Grizzly Adams for 'special task' he might have something for you.",
-							(math.max(player:getStorageValue(2500), 0))
-						)
-					end
+					description = "You have been promoted to the rank of a 'Trophy Hunter' in the 'Paw and Fur - Hunting Elite'."
 				},
 				[5] = {
 					name = "Paw and Fur - Rank: Elite Hunter",
@@ -1065,14 +1042,7 @@ if not Quests then
 					missionId = 1085,
 					startValue = 7,
 					endValue = 8,
-					description = function(player)
-						return string.format(
-							"You have obtained the highest possible rank in the Paw and Fur hunting elite, \z
-							you are Elite Hunter. You currently have %d Paw and Fur points. \z
-							Ask Grizzly Adams for 'special task' he might have something for you.",
-							(math.max(player:getStorageValue(2500), 0))
-						)
-					end
+					description = "You have been promoted to the rank of a 'Elite Hunter' in the 'Paw and Fur - Hunting Elite'."
 				},
 				[6] = {
 					name = "Paw and Fur: Tiquandas Revenge",
@@ -1732,7 +1702,7 @@ if not Quests then
 					states = {
 						[1] =
 						function(player)
-							return string.format("Grizzly told you about '%s', a %s that already killed many citizens. Try find its hideout and kill it.",
+							return string.format("Grizzly told you about '%s', a daunting %s that already killed many citizens. Try find its hideout and kill it.",
 							tasks[41].bossName,
 							tasks[41].raceName:sub(1, -2):lower())
 						end,
@@ -2074,8 +2044,13 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.apesCount),
+							return string.format("You already hunted %d %s, %d %s and %d %s. You are supposed to kill %d %s in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.kongraCount),
+							tasks[11].creatures[1]:gsub("a", "as"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.merlkinCount),
+							tasks[11].creatures[2]:gsub("n", "ns"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.sibangCount),
+							tasks[11].creatures[3]:gsub("g", "gs"),
 							tasks[11].killsRequired,
 							tasks[11].raceName:lower())
 						end,
@@ -2186,10 +2161,18 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.quarascoutsCount),
-							tasks[15].killsRequired,
-							tasks[15].raceName:lower())
+							return string.format("You already killed %d %s, %d %s, %d %s, %d %s and %d %s. You are supposed to kill %d in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorscoutCount),
+							tasks[15].creatures[1]:sub(7):gsub("ut", "uts"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarahydromancerscoutCount),
+							tasks[15].creatures[2]:sub(7):gsub("ut", "uts"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaramantassinscoutCount),
+							tasks[15].creatures[3]:sub(7):gsub("ut", "uts"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapincherscoutCount),
+							tasks[15].creatures[4]:sub(7):gsub("ut", "uts"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapredatorscoutCount),
+							tasks[15].creatures[5]:sub(7):gsub("ut", "uts"),
+							tasks[15].killsRequired)
 						end,
 						[1] =
 						function(player)
@@ -2466,10 +2449,18 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.underwaterquarasCount),
-							tasks[25].killsRequired,
-							tasks[25].raceName:lower())
+							return string.format("You already killed %d %s, %d %s, %d %s, %d %s and %d %s. You are supposed to kill %d in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorCount),
+							tasks[25].creatures[1]:gsub("or", "ors"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarahydromancerCount),
+							tasks[25].creatures[2]:gsub("er", "ers"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaramantassinCount),
+							tasks[25].creatures[3]:gsub("in", "ins"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapincherCount),
+							tasks[25].creatures[4]:gsub("er", "ers"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapredatorCount),
+							tasks[25].creatures[5]:gsub("or", "ors"),
+							tasks[25].killsRequired)
 						end,
 						[1] =
 						function(player)
@@ -2550,10 +2541,12 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.nightmareCount),
-							tasks[28].killsRequired,
-							tasks[28].raceName:lower())
+							return string.format("You already hunted %d %s and %d %s. You are supposed to kill %d in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmareCount),
+							tasks[28].creatures[1]:gsub("e", "es"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmarescionCount),
+							tasks[28].creatures[2]:gsub("on", "ons"),
+							tasks[28].killsRequired)
 						end,
 						[1] =
 						function(player)
@@ -2598,7 +2591,7 @@ if not Quests then
 					}
 				},
 				[67] = {
-					name = "Paw and Fur: High Class Lizards",
+					name = "Paw and Fur: Lizards",
 					storageId = 65030,
 					missionId = 10147,
 					startValue = 0,
@@ -2606,8 +2599,17 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.highclasslizardCount),
+							return string.format("You already hunted %d %s, %d %s, %d %s, %d %s and %d %s. You are supposed to kill %d %s in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardchosenCount),
+							tasks[30].creatures[1]:sub(8):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizarddragonpriestCount),
+							tasks[30].creatures[2]:sub(8):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardhighguardCount),
+							tasks[30].creatures[3]:sub(8):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardlegionnaireCount),
+							tasks[30].creatures[4]:sub(8):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardzaogunCount),
+							tasks[30].creatures[5]:sub(8):gsub("^%l", string.upper),
 							tasks[30].killsRequired,
 							tasks[30].raceName:lower())
 						end,
@@ -2740,10 +2742,12 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.serpentspawnCount),
-							tasks[35].killsRequired,
-							tasks[35].raceName:lower())
+							return string.format("You already hunted %d %s and %d %s. You are supposed to kill %d in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount),
+							tasks[35].creatures[1]:gsub("t", "ts"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.youngseaserpentCount),
+							tasks[35].creatures[2]:gsub("t", "ts"),
+							tasks[35].killsRequired)
 						end,
 						[1] =
 						function(player)
@@ -2872,8 +2876,15 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.drakenCount),
+							return string.format("You already hunted %d %s, %d %s, %d %s and %d %s. You are supposed to kill %d %s in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenabominationCount),
+							tasks[41].creatures[1],
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakeneliteCount),
+							tasks[41].creatures[2],
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenspellweaverCount),
+							tasks[41].creatures[3],
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenwarmasterCount),
+							tasks[41].creatures[4],
 							tasks[41].killsRequired,
 							tasks[41].raceName:lower())
 						end,
