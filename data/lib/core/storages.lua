@@ -2232,7 +2232,7 @@ Storage = {
 					lizardhighguardCount = 42467,
 					lizardlegionnaireCount = 42468,
 					lizardzaogunCount = 42469,
-					-- Sea Serpents and Young Sea Serpents
+					-- Sea Serpents
 					seaserpentCount = 42470,
 					youngseaserpentCount = 42471,
 					-- Drakens

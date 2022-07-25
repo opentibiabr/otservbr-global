@@ -615,7 +615,7 @@ tasks =
 	},
 	[36] = {
 		killsRequired = 500,
-		raceName = "Medusas",
+		raceName = "Medusae",
 		npcName = "Grizzly Adams",
 		bossName = "Gorgo",
 		level = {130, 9999},
@@ -653,7 +653,7 @@ tasks =
 	},
 	[38] = {
 		killsRequired = 900,
-		raceName = "Sea Serpents and Young Sea Serpents",
+		raceName = "Sea Serpents",
 		npcName = "Grizzly Adams",
 		bossName = "Leviathan",
 		level = {130, 9999},
@@ -942,7 +942,7 @@ function getTaskByName(name, table)
 				return k
 			end
 		else
-			if v.raceName:lower() == name:lower() then
+			if v.raceName:lower() == name:lower() or v.raceName:lower():sub(1, -2) == name:lower() then
 				return k
 			end
 		end
@@ -995,7 +995,7 @@ function Player.canStartTask(self, name, table)
 				break
 			end
 		else
-			if i.raceName:lower() == name:lower() then
+			if i.raceName:lower() == name:lower() or i.raceName:lower():sub(1, -2) == name:lower() then
 				v = i
 				id = k
 				break

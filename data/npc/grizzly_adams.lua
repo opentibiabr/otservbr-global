@@ -245,6 +245,16 @@ local messageBossStart = {
 	"PLACEHOLDER", -- Bretzecutioner
 	"PLACEHOLDER" -- Zanakeph
 }
+local tier = {
+	{allName = {"crocodiles", "badgers", "tarantulas", "carniphilas", "stone golems", "mammoths", "gnarlhounds", "terramites", "apes", "thornback tortoises", "gargoyles", "crocodile", "badger", "tarantula", "carniphila", "stone golem", "mammoth", "gnarlhound", "terramite", "ape", "thornback tortoise", "gargoyle"},
+	withsName = {"crocodiles", "badgers", "tarantulas", "carniphilas", "stone golems", "mammoths", "gnarlhounds", "terramites", "apes", "thornback tortoises", "gargoyles"}},
+	{allName = {"ice golems", "quara scouts", "mutated rats", "ancient scarabs", "wyverns", "lancer beetles", "wailing widows", "killer caimans", "bonebeasts", "crystal spiders", "mutated tigers", "ice golem", "quara scout", "mutated rat", "ancient scarab", "wyvern", "lancer beetle", "wailing widow", "killer caiman", "bonebeast", "crystal spider", "mutated tiger"},
+	withsName = {"ice golems", "quara scouts", "mutated rats", "ancient scarabs", "wyverns", "lancer beetles", "wailing widows", "killer caimans", "bonebeasts", "crystal spiders", "mutated tigers"}},
+	{allName = {"underwater quara", "giant spiders", "werewolves", "nightmares", "hellspawns", "high class lizards", "stampors", "brimstone bugs", "mutated bats", "giant spider", "werewolve", "nightmare", "hellspawn", "high class lizard", "stampor", "brimstone bug", "mutated bat"},
+	withsName = {"underwater quara", "giant spiders", "werewolves", "nightmares", "hellspawns", "high class lizards", "stampors", "brimstone bugs", "mutated bats"}},
+	{allName = {"hydras", "serpent spawns", "medusae", "behemoths", "sea serpents", "hellhounds", "ghastly dragons", "undead dragons", "drakens", "destroyers", "hydra", "serpent spawn", "medusa", "behemoth", "sea serpent", "hellhound", "ghastly dragon", "undead dragon", "draken", "destroyer"},
+	withsName = {"hydras", "serpent spawns", "medusae", "behemoths", "sea serpents", "hellhounds", "ghastly dragons", "undead dragons", "drakens", "destroyers"}}
+}
 local function checkX(npc, player, d, message)
 	for m = 1, #tasks do
 		if tasks[m].bossName then
@@ -532,7 +542,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			["mutated bats"] = "Recently, I heard of a disturbing development in Yalahar - a plague of monstrous mutated bats! If they were to spread to the rest of Tibia... <shudders> My task for you is to contain their numbers in Yalahar. Hunt " .. tasks[task].killsRequired .. " of them. What do you say?",
 			["hydras"] = "The hydras are located in the eastern jungle of Tiquanda and there are several mountain caves that are inhabited by them. Your task is to hunt a mere " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. ". Are you willing to do that?",
 			["serpent spawns"] = "Very dangerous, nasty and slimy creatures. They live deep in the old ruins of Banuta. I think a mere " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. " should do the trick. What do you say?",
-			["medusae"] = "They live deep in the old ruins of Banuta and they are nasty! I think a mere " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. " should do the trick. What do you say",
+			["medusae"] = "They live deep in the old ruins of Banuta and they are nasty! I think a mere " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. " should do the trick. What do you say?",
 			["behemoths"] = "Behemoths must be kept away from the settlements at all costs. You'll find them east of here in the taboo-area or under Cyclopolis in Edron. Go there and hunt a few of them - shall we say... " .. tasks[task].killsRequired .. "? Are you up for that?",
 			["sea serpents"] = {
 			"The sea serpent threat increases! Captain Haba knows where to find them. ...",
@@ -540,36 +550,87 @@ local function creatureSayCallback(npc, creature, type, message)
 			["hellhounds"] = "These harbingers of darkness can be found in many deep dungeons all over Tibia. Kill " .. tasks[task].killsRequired .. " of them. Are you in?",
 			["ghastly dragons"] = "Ghastly dragons are devastating creatures which can be found in many dangerous places all over Tibia. Kill " .. tasks[task].killsRequired .. " of them. Are you in?",
 			["undead dragons"] = "You are a thrill seeker? Undead dragons belong to one of the most powerful races that can be found in Tibia. Kill " .. tasks[task].killsRequired .. " of them. Are you in?",
-			["draken"] = "Go to the Zaoan landmass and reduce their number! Kill " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. ", I'll accept: draken abomination, draken elite, draken spellweaver and draken warmaster. Are you in?",
+			["drakens"] = "Go to the Zaoan landmass and reduce their number! Kill " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. ", I'll accept: draken abomination, draken elite, draken spellweaver and draken warmaster. Are you in?",
 			["destroyers"] = "You can find those dark creatures on several places all over Tibia. For this task I want you to kill " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. ". Are you in?"
 		}
-		if isInArray({"crocodiles", "badgers", "tarantulas", "carniphilas", "stone golems", "mammoths", "gnarlhounds", "terramites", "apes", "thornback tortoises", "gargoyles"}, message:lower()) then
+		local messageStartTaskAlt = {
+			["crocodile"] = messageStartTask["crocodiles"],
+			["badger"] = messageStartTask["badgers"],
+			["tarantula"] = messageStartTask["tarantulas"],
+			["stone golem"] = messageStartTask["stone golems"],
+			["mammoth"] = messageStartTask["mammoths"],
+			["gnarlhound"] = messageStartTask["gnarlhounds"],
+			["terramite"] = messageStartTask["terramites"],
+			["ape"] = messageStartTask["apes"],
+			["thornback tortoise"] = messageStartTask["thornback tortoises"],
+			["gargoyle"] = messageStartTask["gargoyles"],
+			["ice golem"] = messageStartTask["ice golems"],
+			["quara scout"] = messageStartTask["quara scouts"],
+			["mutated rat"] = messageStartTask["mutated rats"],
+			["ancient scarab"] = messageStartTask["ancient scarabs"],
+			["wyvern"] = messageStartTask["wyverns"],
+			["lancer beetle"] = messageStartTask["lancer beetles"],
+			["wailing widow"] = messageStartTask["wailing widows"],
+			["killer caiman"] = messageStartTask["killer caimans"],
+			["bonebeast"] = messageStartTask["bonebeasts"],
+			["crystal spider"] = messageStartTask["crystal spiders"],
+			["mutated tiger"] = messageStartTask["mutated tigers"],
+			["giant spider"] = messageStartTask["giant spiders"],
+			["werewolve"] = messageStartTask["werewolves"],
+			["nightmare"] = messageStartTask["nightmares"],
+			["hellspawn"] = messageStartTask["hellspawns"],
+			["high class lizard"] = messageStartTask["high class lizards"],
+			["stampor"] = messageStartTask["stampors"],
+			["brimstone bug"] = messageStartTask["brimstone bugs"],
+			["mutated bat"] = messageStartTask["mutated bats"],
+			["hydra"] = messageStartTask["hydras"],
+			["serpent spawn"] = messageStartTask["serpent spawns"],
+			["medusa"] = messageStartTask["medusae"],
+			["behemoth"] = messageStartTask["behemoths"],
+			["sea serpent"] = messageStartTask["sea serpents"],
+			["hellhound"] = messageStartTask["hellhounds"],
+			["ghastly dragon"] = messageStartTask["ghastly dragons"],
+			["undead dragon"] = messageStartTask["undead dragons"],
+			["draken"] = messageStartTask["drakens"],
+			["destroyer"] = messageStartTask["destroyers"],
+		}
+		if isInArray(tier[1].allName, message:lower()) then
 			if player:getStorageValue(POINTSSTORAGE) >= 40 and player:getLevel() < 50 then
 				npcHandler:say(messageStartTask["messageElse"], npc, creature)
-			elseif MsgContains("carniphilas", message:lower()) then
+			elseif isInArray({"carniphilas", "carniphila"}, message:lower()) then
 				local chanceX = math.random(2)
 				local messageCarniphilas = {
 					[1] = "Interesting kind and not so easy to find. The fun begins when you want to hunt {Tiquanda's Revenge}. It's strong and smart like no other carniphila.",
 					[2] = "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out " .. tasks[task].killsRequired .. " " .. tasks[task].raceName .. " for our society. Alright?"
 				}
 				npcHandler:say(messageCarniphilas[chanceX], npc, creature)
-			else
+			elseif isInArray(tier[1].withsName, message:lower()) then
 				npcHandler:say(messageStartTask[message:lower()], npc, creature)
+			else
+				npcHandler:say(messageStartTaskAlt[message:lower()], npc, creature)
 			end
-		elseif isInArray({"ice golems", "quara scouts", "mutated rats", "ancient scarabs", "wyverns", "lancer beetles", "wailing widows", "killer caimans", "bonebeasts", "crystal spiders", "mutated tigers"}, message:lower()) then
+		elseif isInArray(tier[2].allName, message:lower()) then
 			if player:getStorageValue(POINTSSTORAGE) >= 70 and player:getLevel() < 80 then
 				npcHandler:say(messageStartTask["messageElse"], npc, creature)
-			else
+			elseif isInArray(tier[2].withsName, message:lower()) then
 				npcHandler:say(messageStartTask[message:lower()], npc, creature)
+			else
+				npcHandler:say(messageStartTaskAlt[message:lower()], npc, creature)
 			end
-		elseif isInArray({"underwater quara", "giant spiders", "werewolves", "nightmares", "hellspawns", "high class lizards", "stampors", "brimstone bugs", "mutated bats"}, message:lower()) then
+		elseif isInArray(tier[3].allName, message:lower()) then
 			if player:getStorageValue(POINTSSTORAGE) >= 100 and player:getLevel() < 130 then
 				npcHandler:say(messageStartTask["messageElse"], npc, creature)
-			else
+			elseif isInArray(tier[3].withsName, message:lower()) then
 				npcHandler:say(messageStartTask[message:lower()], npc, creature)
+			else
+				npcHandler:say(messageStartTaskAlt[message:lower()], npc, creature)
 			end
-		elseif isInArray({"hydras", "serpent spawns", "medusae", "behemoths", "sea serpents", "hellhounds", "ghastly dragons", "undead dragons", "draken", "destroyers"}, message:lower()) then
-			npcHandler:say(messageStartTask[message:lower()], npc, creature)
+		elseif isInArray(tier[4].allName, message:lower()) then
+			if isInArray(tier[4].withsName, message:lower()) then
+				npcHandler:say(messageStartTask[message:lower()], npc, creature)
+			else
+				npcHandler:say(messageStartTaskAlt[message:lower()], npc, creature)
+			end
 		elseif message:lower() == "demons" and player:getStorageValue(Storage.KillingInTheNameOf.pawandfurRank) == 7 then
 			npcHandler:say("The spawn of pure evil must be erased from Tibia. You'll find demons lurking in the northern ruins of Edron as well as in some other deeper dungeons of Tibia. Slay 6666 demons for the greater good! Do you think you can handle this task?", npc, creature)
 		else
@@ -577,12 +638,11 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 		choose[playerId] = task
 		npcHandler:setTopic(playerId, 1)
-	elseif isInArray({"crocodiles", "badgers", "tarantulas", "carniphilas", "stone golems", "mammoths", "gnarlhounds", "terramites", "apes", "thornback tortoises", "gargoyles"}, message:lower()) and player:getLevel() < 50 and
-	npcHandler:getTopic(playerId) < 2 then
+	elseif isInArray(tier[1].allName, message:lower()) and player:getLevel() < 50 and npcHandler:getTopic(playerId) < 2 then
 		checkY(npc, player, message)
-	elseif isInArray({"ice golems", "quara scouts", "mutated rats", "ancient scarabs", "wyverns", "lancer beetles", "wailing widows", "killer caimans", "bonebeasts", "crystal spiders", "mutated tigers"}, message:lower()) and player:getLevel() < 80 and npcHandler:getTopic(playerId) < 2 then
+	elseif isInArray(tier[2].allName, message:lower()) and player:getLevel() < 80 and npcHandler:getTopic(playerId) < 2 then
 		checkY(npc, player, message)
-	elseif isInArray({"underwater quara", "giant spiders", "werewolves", "nightmares", "hellspawns", "high class lizards", "stampors", "brimstone bugs", "mutated bats"}, message:lower()) and player:getLevel() < 130 and npcHandler:getTopic(playerId) < 2 then
+	elseif isInArray(tier[3].allName, message:lower()) and player:getLevel() < 130 and npcHandler:getTopic(playerId) < 2 then
 		checkY(npc, player, message)
 	elseif message:lower() == "yes" and npcHandler:getTopic(playerId) == 1 then
 		player:setStorageValue(QUESTSTORAGE_BASE + choose[playerId], 1)
@@ -613,7 +673,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardhighguardCount, 0)
 				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardlegionnaireCount, 0)
 				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardzaogunCount, 0)
-			elseif	tasks[choose[playerId]].raceName == "Sea Serpents and Young Sea Serpents" then
+			elseif	tasks[choose[playerId]].raceName == "Sea Serpents" then
 				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount, 0)
 				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.youngseaserpentCount, 0)
 			elseif	tasks[choose[playerId]].raceName == "Drakens" then

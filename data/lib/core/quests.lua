@@ -2742,12 +2742,10 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d %s and %d %s. You are supposed to kill %d in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount),
-							tasks[35].creatures[1]:gsub("t", "ts"),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.youngseaserpentCount),
-							tasks[35].creatures[2]:gsub("t", "ts"),
-							tasks[35].killsRequired)
+							return string.format("You already hunted %d/%d %s.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.serpentspawnCount),
+							tasks[35].killsRequired,
+							tasks[35].raceName:lower())
 						end,
 						[1] =
 						function(player)
@@ -2758,7 +2756,7 @@ if not Quests then
 					}
 				},
 				[73] = {
-					name = "Paw and Fur: Medusas",
+					name = "Paw and Fur: Medusae",
 					storageId = 65036,
 					missionId = 10153,
 					startValue = 0,
@@ -2802,7 +2800,7 @@ if not Quests then
 					}
 				},
 				[75] = {
-					name = "Paw and Fur: Sea Serpents and Young Sea Serpents",
+					name = "Paw and Fur: Sea Serpents",
 					storageId = 65038,
 					missionId = 10155,
 					startValue = 0,
@@ -2810,10 +2808,12 @@ if not Quests then
 					states = {
 						[0] =
 						function(player)
-							return string.format("You already hunted %d/%d %s.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.seaserpentsCount),
-							tasks[38].killsRequired,
-							tasks[38].raceName:lower())
+							return string.format("You already hunted %d %s and %d %s. You are supposed to kill %d in total.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount),
+							tasks[38].creatures[1]:gsub("t", "ts"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.youngseaserpentCount),
+							tasks[38].creatures[2]:gsub("t", "ts"),
+							tasks[38].killsRequired)
 						end,
 						[1] =
 						function(player)

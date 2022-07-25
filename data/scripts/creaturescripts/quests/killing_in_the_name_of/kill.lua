@@ -58,7 +58,7 @@ function killingInTheNameOfKill.onKill(player, target)
 						elseif	tasks[taskId].raceName == "High Class Lizards" then
 							local lizards = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardchosenCount + a - 1
 							player:setStorageValue(lizards, player:getStorageValue(lizards) + 1)
-						elseif	tasks[taskId].raceName == "Sea Serpents and Young Sea Serpents" then
+						elseif	tasks[taskId].raceName == "Sea Serpents" then
 							local serpents = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount + a - 1
 							player:setStorageValue(serpents, player:getStorageValue(serpents) + 1)
 						elseif	tasks[taskId].raceName == "Drakens" then
