@@ -12,6 +12,57 @@ local items = {
 		slot = "backpack"
 	},
 	{
+		-- turtle amulet
+		itemid = 39235,
+		type = "equip",
+		slot = "necklace",
+		level = 200,
+		vocation = {
+			{"Knight", true},
+			{"Elite Knight"}
+		},
+	},
+	{
+		-- enchanted turtle amulet
+		itemid = 39235,
+		type = "deequip",
+		slot = "necklace"
+	},
+	{
+		-- enchanted turtle amulet
+		itemid = 39234,
+		type = "equip",
+		slot = "necklace",
+		level = 200,
+		vocation = {
+			{"Knight", true},
+			{"Elite Knight"}
+		},
+	},
+	{
+		-- enchanted turtle amulet
+		itemid = 39234,
+		type = "deequip",
+		slot = "necklace"
+	},
+	{
+		-- enchanted turtle amulet
+		itemid = 39233,
+		type = "equip",
+		slot = "necklace",
+		level = 200,
+		vocation = {
+			{"Knight", true},
+			{"Elite Knight"}
+		},
+	},
+	{
+		-- enchanted turtle amulet
+		itemid = 39233,
+		type = "deequip",
+		slot = "necklace"
+	},
+	{
 		-- arboreal ring
 		itemid = 39188,
 		type = "equip",
