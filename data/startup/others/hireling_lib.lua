@@ -334,7 +334,10 @@ end
 
 function Hireling:spawn()
 	self.active = 1
-	local npc = Npc(Game.generateNpc('hireling'))
+	-- Creating new hireling with player choose name
+	createHirelingType(self:getName())
+
+	local npc = Npc(Game.generateNpc(self:getName()))
 	npc:setName(self:getName())
 	local creature = Creature(npc)
 	creature:setOutfit(self:getOutfit())
