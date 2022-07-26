@@ -113,6 +113,36 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say('Don\'t give up! May Daraman watch over you!', npc, creature)
 		end
 		npcHandler:setTopic(playerId, 0)
+	elseif MsgContains(message, "task") and player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission03) == 3 then
+		if player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) < 0 or player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 3 then
+			npcHandler:say({
+				"You've proven to be an experienced soldier, human. Though I still hope the war to be over soon, the Efreet are still threatening our tower. ...",
+				"Thus we need your help in killing the green ones. If you kill "..tasks[45].killsRequired.." green djinns or Efreet for us, I'll reward you with bonus experience and some extra gold pieces. Do you agree?"}, npc, creature)
+			npcHandler:setTopic(playerId, 3)
+		elseif player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 0 then
+			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount) >= 500 then
+				npcHandler:say({
+					"You've done it, human! Daraman be praised! Take this for your efforts. ...",
+					"What's left to do now is seek out Merikh the Slaughterer, an especially cruel Efreet. He hides somewhere in Yalahar. I don't know if you can kill him, but you should at least try."}, npc, creature)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.merikhCount, 0)
+				player:setStorageValue(Storage.KillingInTheNameOf.greendjinnTask, 1)
+			else
+				npcHandler:say("Come back when you kill "..tasks[45].killsRequired.." "..tasks[46].raceName..".", npc, creature)
+			end
+		elseif player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 2 then
+			npcHandler:say({
+				"So you've been there and faced Merikh the Slaughterer! Whether you killed him or not, I hope your presence at least scared him. He is so mighty that we can only hope to truly defeat him one day. ...",
+				"When you've recovered from your fight and would like to kill green djinns in our service again, just talk to me about that task."}, npc, creature)
+			player:setStorageValue(Storage.KillingInTheNameOf.greendjinnTask, 3)
+			player:addExperience(10000, true)
+			player:addMoney(5000)
+		end
+	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
+		npcHandler:say("All right. May Daraman bless your hunt, human.", npc, creature)
+		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount, 0)
+		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.greendjinnCount, 0)
+		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.efreetCount, 0)
+		player:setStorageValue(Storage.KillingInTheNameOf.greendjinnTask, 0)
 	end
 	return true
 end

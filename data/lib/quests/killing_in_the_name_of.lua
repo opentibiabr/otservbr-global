@@ -786,7 +786,7 @@ tasks =
 	[45] = {
 		killsRequired = 500,
 		raceName = "Green Djinns or Efreets",
-		level = {1, 9999}, storage = {12500, 1},
+		level = {1, 9999},
 		premium = true,
 		creatures = {
 			"green djinn",
@@ -801,7 +801,7 @@ tasks =
 	[46] = {
 		killsRequired = 500,
 		raceName = "Blue Djinns or Marids",
-		level = {1, 9999}, storage = {12501, 1},
+		level = {1, 9999},
 		premium = true,
 		creatures = {
 			"blue djinn",

@@ -112,6 +112,33 @@ function killingInTheNameOfKill.onKill(player, target)
 			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers)) -- fake update quest tracker
 		end
 	end
+-- Green Djinns or Efreets / Blue Djinns or Marids
+	if player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 0 or player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 3 then
+		if isInArray(tasks[45].creatures, targetName) then
+			for d = 1, #tasks[45].creatures do
+				if targetName == tasks[45].creatures[d] then
+					local greendjinns = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.greendjinnCount + d - 1
+					player:setStorageValue(greendjinns, player:getStorageValue(greendjinns) + 1)
+				end
+			end
+			local killAmountGreenDjinns = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount, killAmountGreenDjinns + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.greendjinnTask, player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask)) -- fake update quest tracker
+		end
+	end
+	if player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 0 or player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 3 then
+		if isInArray(tasks[46].creatures, targetName) then
+			for e = 1, #tasks[46].creatures do
+				if targetName == tasks[46].creatures[e] then
+					local bluedjinns = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bluedjinnCount + e - 1
+					player:setStorageValue(bluedjinns, player:getStorageValue(bluedjinns) + 1)
+				end
+			end
+			local killAmountBlueDjinns = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount, killAmountBlueDjinns + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.bluedjinnTask, player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask)) -- fake update quest tracker
+		end
+	end
 	return true
 end
 

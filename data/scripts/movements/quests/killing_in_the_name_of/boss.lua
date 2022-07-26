@@ -28,6 +28,24 @@ local function clearBossRoom(playerId, bossId,
 end
 
 local bosses = {
+	[3228] = {
+		bossName = "merikh the slaughterer",
+		storage = Storage.KillingInTheNameOf.greendjinnTask,
+		playerPosition = Position(32876, 31120, 8),
+		bossPosition = Position(32875, 31112, 8),
+		centerPosition = Position(32875, 31116, 8),
+		rangeX = 6, rangeY = 6,
+		flamePosition = Position(32875, 31124, 8)
+	},
+	[3229] = {
+		bossName = "fahim the wise",
+		storage = Storage.KillingInTheNameOf.bluedjinnTask,
+		playerPosition = Position(32811, 31121, 2),
+		bossPosition = Position(32811, 31114, 2),
+		centerPosition = Position(32811, 31118, 2),
+		rangeX = 5, rangeY = 5,
+		flamePosition = Position(32807, 31117, 2)
+	},
 	[3230] = {
 		bossName = 'the snapper',
 		storage = 34100,

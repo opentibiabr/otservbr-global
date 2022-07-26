@@ -1309,7 +1309,9 @@ Storage = {
 		MissionDemodras = 51613,
 		bossPoints = 51614,
 		questlogEntry = 51615,
-		pawandfurRank = 51616
+		pawandfurRank = 51616,
+		greendjinnTask = 51617,
+		bluedjinnTask = 51618
 	},
 	HotCuisineQuest = {
 		-- Reserved storage from 51650 - 51659
@@ -2201,6 +2203,8 @@ Storage = {
 					necropharusCount = 42380,
 					foxCount = 42381,
 					lissyCount = 42382,
+					merikhCount = 42383,
+					fahimCount = 42384,
 				},
 				altKillCount = {
 					-- Apes
@@ -2246,7 +2250,13 @@ Storage = {
 					priestessCount = 42481,
 					bloodpriestCount = 42482,
 					bloodhandCount = 42483,
-					shadowpupilCount = 42484
+					shadowpupilCount = 42484,
+					-- Green Djinns or Efreets
+					greendjinnCount = 42485,
+					efreetCount = 42486,
+					-- Blue Djinns or Marids
+					bluedjinnCount = 42487,
+					maridCount = 42488
 				}
 			},
 			LoneMedusa = {},

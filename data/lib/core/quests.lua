@@ -2963,30 +2963,60 @@ if not Quests then
 					}
 				},
 				[82] = {
-					name = "Paw and Fur: Green Djinns or Efreets",
-					storageId = 65045,
+					name = "The Marid: Green Djinns",
+					storageId = Storage.KillingInTheNameOf.greendjinnTask,
 					missionId = 10162,
 					startValue = 0,
-					endValue = 500,
-					description = function(player)
-						return string.format(
-							"You already hunted %d/500 green djinns or efreets.",
-							(math.max(player:getStorageValue(65045), 0))
-						)
-					end
+					endValue = 3,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Gabel sent you to kill %d %s or %s. You have killed %d %s and %d %s so far.",
+							tasks[45].killsRequired,
+							tasks[45].creatures[1]:gsub("nn", "nns"),
+							tasks[45].creatures[2]:gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.greendjinnCount),
+							tasks[45].creatures[1]:gsub("nn", "nns"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.efreetCount),
+							tasks[45].creatures[2]:gsub("^%l", string.upper))
+						end,
+						[1] = "If you dare, you can try finding and fighting Merikh the Slaughterer.",
+						[2] = "You faced Merikh the Slaughterer. Go back to Gabel.",
+						[3] =
+						function(player)
+							return string.format("You've finished this task. If you want to kill %s or %s again, talk to Gabel about this task.",
+							tasks[45].creatures[1]:gsub("nn", "nns"),
+							tasks[45].creatures[2]:gsub("^%l", string.upper))
+						end
+					}
 				},
 				[83] = {
-					name = "Paw and Fur: Blue Djinns or Marids",
-					storageId = 65046,
+					name = "The Efreet: Blue Djinns",
+					storageId = Storage.KillingInTheNameOf.bluedjinnTask,
 					missionId = 10163,
 					startValue = 0,
-					endValue = 500,
-					description = function(player)
-						return string.format(
-							"You already hunted %d/500 blue djinns or marids.",
-							(math.max(player:getStorageValue(65046), 0))
-						)
-					end
+					endValue = 3,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Malor sent you to kill %d %s or %s. You have killed %d %s and %d %s so far.",
+							tasks[46].killsRequired,
+							tasks[46].creatures[1]:gsub("nn", "nns"),
+							tasks[46].creatures[2]:gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bluedjinnCount),
+							tasks[46].creatures[1]:gsub("nn", "nns"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.maridCount),
+							tasks[46].creatures[2]:gsub("^%l", string.upper))
+						end,
+						[1] = "If you dare, you can try finding and fighting Fahim the wise.",
+						[2] = "You faced Fahim the wise. Go back to Malor.",
+						[3] =
+						function(player)
+							return string.format("You've finished this task. If you want to kill %s again, talk to Malor about this task.",
+							tasks[46].creatures[1]:gsub("nn", "nns"),
+							tasks[46].creatures[2]:gsub("^%l", string.upper))
+						end
+					}
 				},
 				[84] = {
 					name = "Paw and Fur: Pirates",
