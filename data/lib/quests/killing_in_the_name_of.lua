@@ -854,29 +854,26 @@ tasks =
 	[49] = {
 		killsRequired = 5000,
 		raceName = "Minotaurs",
-		level = {1, 9999}, storage = {12700, 1}, norepeatable = true,
+		level = {1, 40}, norepeatable = true,
 		premium = false,
 		creatures = {
 			"minotaur",
+			"minotaur guard",
 			"minotaur mage",
 			"minotaur archer"
-		},
-		rewards = {
-			{type = "storage", value = {17522, 1}}
 		}
 	},
 	[50] = {
 		killsRequired = 4000,
-		raceName = "Necromancers and Priestess",
+		raceName = "Necromancers and Priestesses",
 		level = {60, 9999}, norepeatable = true,
 		premium = true,
 		creatures = {
 			"necromancer",
-			"priestess"
-		},
-		rewards = {
-			{type = "storage", value = {34133, 1}},
-			{type = "storage", value = {17521, 1}}
+			"priestess",
+			"blood priest",
+			"blood hand",
+			"shadow pupil"
 		}
 	},
 	[51] = {

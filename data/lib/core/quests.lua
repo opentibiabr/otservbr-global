@@ -3013,26 +3013,78 @@ if not Quests then
 					storageId = Storage.KillingInTheNameOf.BudrikMinos,
 					missionId = 10166,
 					startValue = 0,
-					endValue = 5000,
-					description = function(player)
-						return string.format(
-							"Budrik asked you to kill 5000 minotaurs for him. You already killed %d minotaurs.",
-							(math.max(player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinosCount), 0))
-						)
-					end
+					endValue = 2,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Budrik asked you to kill %d %s for him. You already killed %d %s, %d %s, %d %s and %d %s.",
+							tasks[49].killsRequired,
+							tasks[49].raceName:lower(),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurCount),
+							tasks[49].creatures[1]:gsub("r", "rs"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurguardCount),
+							tasks[49].creatures[2]:gsub("d", "ds"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurmageCount),
+							tasks[49].creatures[3]:gsub("e", "es"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurarcherCount),
+							tasks[49].creatures[4]:gsub("er", "ers"))
+						end,
+						[1] = "Budrik found the hideout of The Horned Fox! You have a single chance of bringing him down. Go for it.",
+						[2] =
+						function(player)
+							return string.format("You have slain %d %s and fought The Horned Fox for Budrik and the whole dwarven kind.",
+							tasks[49].killsRequired,
+							tasks[49].raceName:lower())
+						end
+					}
 				},
 				[87] = {
-					name = "Paw and Fur: Necromancers and Priestess",
+					name = "Lugri: Necromancers and Priestesses",
 					storageId = Storage.KillingInTheNameOf.LugriNecromancers,
 					missionId = 10167,
 					startValue = 0,
-					endValue = 4000,
-					description = function(player)
-						return string.format(
-							"You already hunted %d/4000 necromancers and priestess.",
-							(math.max(player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount), 0))
-						)
-					end
+					endValue = 4,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Lugri sent you to kill %d %s, though he said 'no reward'. So far you killed %d %s, %d %s, %d %s, %d %s and %d %s.",
+							tasks[50].killsRequired,
+							tasks[50].raceName:lower():sub(1, -17),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount),
+							tasks[50].creatures[1]:gsub("er", "ers"):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.priestessCount),
+							tasks[50].creatures[2]:gsub("ss", "sses"):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodpriestCount),
+							tasks[50].creatures[3]:gsub("t", "ts"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodhandCount),
+							tasks[50].creatures[4]:gsub("nd", "nds"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.shadowpupilCount),
+							tasks[50].creatures[5]:gsub("l", "ls"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end))
+						end,
+						[1] = "If you dare, you can try finding and fighting Necropharus in his Halls of Sacrifice, deep under Drefia. Note that this will be the only time you're allowed to enter his room, so be well prepared.",
+						[2] = "You faced Necropharus. Go back to Lugri if you like.",
+						[3] =
+						function(player)
+							return string.format("Lugri sent you to kill %d %s. So far you killed %d %s, %d %s, %d %s, %d %s and %d %s.",
+							tasks[50].killsRequired - 3000,
+							tasks[50].raceName:lower():sub(1, -17),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount),
+							tasks[50].creatures[1]:gsub("er", "ers"):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.priestessCount),
+							tasks[50].creatures[2]:gsub("ss", "sses"):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodpriestCount),
+							tasks[50].creatures[3]:gsub("t", "ts"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodhandCount),
+							tasks[50].creatures[4]:gsub("nd", "nds"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.shadowpupilCount),
+							tasks[50].creatures[5]:gsub("l", "ls"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end))
+						end,						
+						[4] =
+						function(player)
+							return string.format("You've finished this task - for now. If you want to kill the different %s again for an experience and money bonus, talk to Lugri about this task.",
+							tasks[50].raceName:lower())
+						end
+					}
 				},
 				[88] = {
 					name = "Paw and Fur - Hunting Elite",
@@ -3206,7 +3258,7 @@ if not Quests then
 						[2] = "Lynda send you to bring her a sample of all five wands and five rods \z
 							(Snakebite, Moonlight, Necrotic, Terra, Hailstorm, Vortex, Dragonbreath, Decay, Cosmic Energy and Inferno)",
 						[3] = "Bring Lynda 10 ounces of magic sulphur",
-						[4] = "Bring Lynda the Necromancer\'s soul stone",
+						[4] = "Bring Lynda the Necromancer's soul stone",
 						[5] = "Bring Lynda 20 ankhs now to complete the ritual.",
 						[6] = "You need to wait 3 hours for the ritual to be completed",
 						[7] = "You got the Outfit!"
@@ -5529,6 +5581,17 @@ if not Quests then
 						and asked you to bring 20 units of rare earth.",
 						[5] = "You have brought 20 units of rare earth to Corym Servant. He was very thankful and gave you  \z
 						a reward. The revolution should now take place as intended."
+					}
+				},
+				[14] = {
+					name = "To Outfox a Fox",
+					storageId = Storage.toOutfoxAFoxQuest,
+					missionId = 10432,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Budrik asked you to look for the hideout of the Horned Fox and bring his stolen mining helmet back. The Fox's lair is presumed to be west of Kazordoon near the coast.",
+						[2] = "You succesfully helped Budrik in stealing back his old mining helemt."
 					}
 				}
 			}

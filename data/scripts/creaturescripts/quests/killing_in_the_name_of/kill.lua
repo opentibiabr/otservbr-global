@@ -28,7 +28,9 @@ local taskBoss = {
 	[26] = "bretzecutioner",
 	[27] = "zanakeph",
 	[28] = "tiquandas revenge",
-	[29] = "demodras"
+	[29] = "demodras",
+	[30] = "necropharus",
+	[31] = "the horned fox"
 }
 local killCounter = Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.placeHolder00
 local bossKillCount = Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount
@@ -82,22 +84,32 @@ function killingInTheNameOfKill.onKill(player, target)
 			end
 		end
 	end
-	if(isMonster(target)) then
-		local killAmount = player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount)
-		if(string.lower(getCreatureName(target)) == "necromancer") and killAmount < 4000 and player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 1 then
-			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount, killAmount + 1)
-
-		elseif(string.lower(getCreatureName(target)) == "priestess") and killAmount < 4000 and player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 1 then
-			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount, killAmount + 1)
-
-		elseif(string.lower(getCreatureName(target)) == "blood priest") and killAmount < 4000 and player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 1 then
-			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount, killAmount + 1)
-
-		elseif(string.lower(getCreatureName(target)) == "blood hand") and killAmount < 4000 and player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 1 then
-			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount, killAmount + 1)
-
-		elseif(string.lower(getCreatureName(target)) == "shadow pupil") and killAmount < 4000 and player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 1 then
-			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancerCount, killAmount + 1)
+-- Minotaurs
+	if player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinos) == 0 then
+		if isInArray(tasks[49].creatures, targetName) then
+			for b = 1, #tasks[49].creatures do
+				if targetName == tasks[49].creatures[b] then
+					local minotaurs = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurCount + b - 1
+					player:setStorageValue(minotaurs, player:getStorageValue(minotaurs) + 1)
+				end
+			end
+			local killAmountMinotaurs = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.minotaurCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.minotaurCount, killAmountMinotaurs + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.BudrikMinos, player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinos)) -- fake update quest tracker		
+		end
+	end
+-- Necromancers and Priestesses
+	if player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 0 or player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 3 then
+		if isInArray(tasks[50].creatures, targetName) then
+			for c = 1, #tasks[50].creatures do
+				if targetName == tasks[50].creatures[c] then
+					local necromancers = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount + c - 1
+					player:setStorageValue(necromancers, player:getStorageValue(necromancers) + 1)
+				end
+			end
+			local killAmountNecromancers = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount, killAmountNecromancers + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers)) -- fake update quest tracker		
 		end
 	end
 	return true

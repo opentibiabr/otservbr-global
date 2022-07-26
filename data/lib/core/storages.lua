@@ -1304,14 +1304,12 @@ Storage = {
 	KillingInTheNameOf = {
 		-- Reserved storage from 51610 - 51629
 		LugriNecromancers = 51610,
-		LugriNecromancerCount = 51611,
-		BudrikMinos = 51612,
-		BudrikMinosCount = 51613,
-		MissionTiquandasRevenge = 51614,
-		MissionDemodras = 51615,
-		bossPoints = 51616,
-		questlogEntry = 51617,
-		pawandfurRank = 51618
+		BudrikMinos = 51611,
+		MissionTiquandasRevenge = 51612,
+		MissionDemodras = 51613,
+		bossPoints = 51614,
+		questlogEntry = 51615,
+		pawandfurRank = 51616
 	},
 	HotCuisineQuest = {
 		-- Reserved storage from 51650 - 51659
@@ -2237,7 +2235,18 @@ Storage = {
 					drakenabominationCount = 42472,
 					drakeneliteCount = 42473,
 					drakenspellweaverCount = 42474,
-					drakenwarmasterCount = 42475
+					drakenwarmasterCount = 42475,
+					-- Minotaurs
+					minotaurCount = 42476,
+					minotaurguardCount = 42477,
+					minotaurmageCount = 42478,
+					minotaurarcherCount = 42479,
+					-- Necromancers and Priestesses
+					necromancerCount = 42480,
+					priestessCount = 42481,
+					bloodpriestCount = 42482,
+					bloodhandCount = 42483,
+					shadowpupilCount = 42484
 				}
 			},
 			LoneMedusa = {},

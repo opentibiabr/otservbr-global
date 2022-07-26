@@ -336,7 +336,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("PLACEHOLDER-NOTHING-TO-REPORT", npc, creature)
 		end
 	elseif isInArray({"tasks", "task", "mission"}, message:lower()) then
-		if player:getStorageValue(JOIN_STOR) == -1 then
+		if player:getStorageValue(JOIN_STOR) == -1 or player:getStorageValue(Storage.KillingInTheNameOf.questlogEntry) == -1 then
 			return npcHandler:say("You'll have to {join}, to get any {tasks}.", npc, creature)
 		end
 		if checkZ(npc, player, message) == true then

@@ -300,7 +300,7 @@ local bosses = {
 	},
 	[3260] = {
 		bossName = 'necropharus',
-		storage = 17521,
+		storage = Storage.KillingInTheNameOf.LugriNecromancers,
 		playerPosition = Position(33028, 32426, 12),
 		bossPosition = Position(33026, 32422, 12),
 		centerPosition = Position(33028, 32424, 12),
@@ -309,7 +309,7 @@ local bosses = {
 	},
 	[3261] = {
 		bossName = 'the horned fox',
-		storage = 17522,
+		storage = Storage.KillingInTheNameOf.BudrikMinos,
 		playerPosition = Position(32458, 31994, 9),
 		bossPosition = Position(32458, 32005, 9),
 		centerPosition = Position(32450, 31400, 9),
@@ -317,7 +317,7 @@ local bosses = {
 		flamePosition = Position(33070, 31029, 12)
 	},
 	[3262] = {
-		bossName = 'lethal lissy',
+		bossName = {"Brutus Bloodbeard","Deadeye Devious","lethal lissy", "Ron The Ripper"},
 		storage = 17523,
 		playerPosition = Position(31976, 32896, 0),
 		bossPosition = Position(31983, 32897, 0),
@@ -349,8 +349,12 @@ function boss.onStepIn(creature, item, position, fromPosition)
 	player:setStorageValue(boss.storage, 2)
 	player:teleportTo(boss.playerPosition)
 	boss.playerPosition:sendMagicEffect(CONST_ME_TELEPORT)
-
-	local monster = Game.createMonster(boss.bossName, boss.bossPosition)
+	if item.uid == 3262 then
+		local randomBoss = math.random(4)
+		local monster = Game.createMonster(boss.bossName[randomBoss], boss.bossPosition)
+	else
+		local monster = Game.createMonster(boss.bossName, boss.bossPosition)
+	end
 	if not monster then
 		return true
 	end
