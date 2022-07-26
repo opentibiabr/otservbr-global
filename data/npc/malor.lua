@@ -130,7 +130,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) < 0 or player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 3 then
 			npcHandler:say("There are still blue djinns everywhere! We can't let a single one of them live. I guess a start would be for you to kill "..tasks[46].killsRequired.." blue djinns and Marid. Will you assist us?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
-		elseif player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 0 then 
+		elseif player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 0 then
 			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount) >= 500 then
 				npcHandler:say({
 					"Well well, human. Not bad. I'm not surprised, since you have done acceptably well in the past. So I suppose I can ask you for another thing. ...",
