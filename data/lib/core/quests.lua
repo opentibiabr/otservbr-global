@@ -3078,7 +3078,7 @@ if not Quests then
 							tasks[50].creatures[4]:gsub("nd", "nds"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end),
 							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.shadowpupilCount),
 							tasks[50].creatures[5]:gsub("l", "ls"):gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end))
-						end,						
+						end,
 						[4] =
 						function(player)
 							return string.format("You've finished this task - for now. If you want to kill the different %s again for an experience and money bonus, talk to Lugri about this task.",

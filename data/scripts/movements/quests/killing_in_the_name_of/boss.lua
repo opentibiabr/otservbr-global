@@ -349,11 +349,12 @@ function boss.onStepIn(creature, item, position, fromPosition)
 	player:setStorageValue(boss.storage, 2)
 	player:teleportTo(boss.playerPosition)
 	boss.playerPosition:sendMagicEffect(CONST_ME_TELEPORT)
+	local monster
 	if item.uid == 3262 then
 		local randomBoss = math.random(4)
-		local monster = Game.createMonster(boss.bossName[randomBoss], boss.bossPosition)
+		monster = Game.createMonster(boss.bossName[randomBoss], boss.bossPosition)
 	else
-		local monster = Game.createMonster(boss.bossName, boss.bossPosition)
+		monster = Game.createMonster(boss.bossName, boss.bossPosition)
 	end
 	if not monster then
 		return true

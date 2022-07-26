@@ -95,7 +95,7 @@ function killingInTheNameOfKill.onKill(player, target)
 			end
 			local killAmountMinotaurs = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.minotaurCount)
 			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.minotaurCount, killAmountMinotaurs + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.BudrikMinos, player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinos)) -- fake update quest tracker		
+			player:setStorageValue(Storage.KillingInTheNameOf.BudrikMinos, player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinos)) -- fake update quest tracker
 		end
 	end
 -- Necromancers and Priestesses
@@ -109,7 +109,7 @@ function killingInTheNameOfKill.onKill(player, target)
 			end
 			local killAmountNecromancers = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount)
 			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount, killAmountNecromancers + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers)) -- fake update quest tracker		
+			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers)) -- fake update quest tracker
 		end
 	end
 	return true
