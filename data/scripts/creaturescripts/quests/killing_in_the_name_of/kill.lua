@@ -113,7 +113,7 @@ function killingInTheNameOfKill.onKill(player, target)
 		end
 	end
 -- Green Djinns or Efreets / Blue Djinns or Marids
-	if player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 0 or player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 3 then
+	if player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 0 then
 		if isInArray(tasks[45].creatures, targetName) then
 			for d = 1, #tasks[45].creatures do
 				if targetName == tasks[45].creatures[d] then
@@ -126,7 +126,7 @@ function killingInTheNameOfKill.onKill(player, target)
 			player:setStorageValue(Storage.KillingInTheNameOf.greendjinnTask, player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask)) -- fake update quest tracker
 		end
 	end
-	if player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 0 or player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 3 then
+	if player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 0 then
 		if isInArray(tasks[46].creatures, targetName) then
 			for e = 1, #tasks[46].creatures do
 				if targetName == tasks[46].creatures[e] then
@@ -137,6 +137,20 @@ function killingInTheNameOfKill.onKill(player, target)
 			local killAmountBlueDjinns = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount)
 			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount, killAmountBlueDjinns + 1)
 			player:setStorageValue(Storage.KillingInTheNameOf.bluedjinnTask, player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask)) -- fake update quest tracker
+		end
+	end
+-- Pirates
+	if player:getStorageValue(Storage.KillingInTheNameOf.pirateTask) == 0 then
+		if isInArray(tasks[47].creatures, targetName) then
+			for f = 1, #tasks[47].creatures do
+				if targetName == tasks[47].creatures[f] then
+					local pirates = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratemarauderCount + f - 1
+					player:setStorageValue(pirates, player:getStorageValue(pirates) + 1)
+				end
+			end
+			local killAmountPirates = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.pirateCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.pirateCount, killAmountPirates + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.pirateTask, player:getStorageValue(Storage.KillingInTheNameOf.pirateTask)) -- fake update quest tracker
 		end
 	end
 	return true

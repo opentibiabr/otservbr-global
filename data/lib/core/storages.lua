@@ -1311,7 +1311,8 @@ Storage = {
 		questlogEntry = 51615,
 		pawandfurRank = 51616,
 		greendjinnTask = 51617,
-		bluedjinnTask = 51618
+		bluedjinnTask = 51618,
+		pirateTask = 51619
 	},
 	HotCuisineQuest = {
 		-- Reserved storage from 51650 - 51659
@@ -2161,13 +2162,12 @@ Storage = {
 					demonCount = 42194,
 					greendjinnCount = 42195,
 					bluedjinnCount = 42196,
-					pirateICount = 42197,
-					pirateIICount = 42198,
-					minotaurCount = 42199,
-					necromancerCount = 42200,
-					mountaintrollCount = 42201,
-					muglexclanfootmanCount = 42202,
-					minotaurbruisersCount = 42203,
+					pirateCount = 42197,
+					minotaurCount = 42198,
+					necromancerCount = 42199,
+					mountaintrollCount = 42200,
+					muglexclanfootmanCount = 42201,
+					minotaurbruisersCount = 42202,
 				},
 				bossKillCount = {
 					snapperCount = 42350,
@@ -2202,7 +2202,7 @@ Storage = {
 					demodrasCount = 42379,
 					necropharusCount = 42380,
 					foxCount = 42381,
-					lissyCount = 42382,
+					piratesCount = 42382,
 					merikhCount = 42383,
 					fahimCount = 42384,
 				},
@@ -2256,7 +2256,12 @@ Storage = {
 					efreetCount = 42486,
 					-- Blue Djinns or Marids
 					bluedjinnCount = 42487,
-					maridCount = 42488
+					maridCount = 42488,
+					-- Pirates
+					piratemarauderCount = 42489,
+					piratecutthroadCount = 42490,
+					piratebuccaneerCount = 42491,
+					piratecorsairCount = 42492
 				}
 			},
 			LoneMedusa = {},

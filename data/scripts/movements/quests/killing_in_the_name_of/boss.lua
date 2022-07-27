@@ -335,8 +335,8 @@ local bosses = {
 		flamePosition = Position(33070, 31029, 12)
 	},
 	[3262] = {
-		bossName = {"Brutus Bloodbeard","Deadeye Devious","lethal lissy", "Ron The Ripper"},
-		storage = 17523,
+		bossName = {"Brutus Bloodbeard", "Deadeye Devious", "lethal lissy", "Ron The Ripper"},
+		storage = Storage.KillingInTheNameOf.pirateTask,
 		playerPosition = Position(31976, 32896, 0),
 		bossPosition = Position(31983, 32897, 0),
 		centerPosition = Position(31982, 32897, 0),

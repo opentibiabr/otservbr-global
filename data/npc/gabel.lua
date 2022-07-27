@@ -139,6 +139,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
 		npcHandler:say("All right. May Daraman bless your hunt, human.", npc, creature)
+		player:setStorageValue(JOIN_STOR, 1)
 		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount, 0)
 		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.greendjinnCount, 0)
 		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.efreetCount, 0)

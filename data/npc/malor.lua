@@ -151,6 +151,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 3 then
 		npcHandler:say("Good, then show those pathetic Marid what you're made of.", npc, creature)
+		player:setStorageValue(JOIN_STOR, 1)
 		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount, 0)
 		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bluedjinnCount, 0)
 		player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.maridCount, 0)

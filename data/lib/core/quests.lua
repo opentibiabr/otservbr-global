@@ -3019,14 +3019,40 @@ if not Quests then
 					}
 				},
 				[84] = {
-					name = "Paw and Fur: Pirates",
-					storageId = 65047,
+					name = "Meriana Rebels: Pirates",
+					storageId = Storage.KillingInTheNameOf.pirateTask,
 					missionId = 10164,
 					startValue = 0,
-					endValue = 3000,
-					description = function(player)
-						return string.format("You already hunted %d/3000 pirates.", (math.max(player:getStorageValue(65047), 0)))
-					end
+					endValue = 3,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Kill %d %s in total to help the rebels on Meriana. So far, you have killed %d %s, %d %s, %d %s and %d %s.",
+							tasks[47].killsRequired,
+							tasks[47].raceName:lower(),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratemarauderCount),
+							tasks[47].creatures[1]:sub(8):gsub("er", "ers"):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratecutthroadCount),
+							tasks[47].creatures[2]:sub(8):gsub("oat", "oats"):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratebuccaneerCount),
+							tasks[47].creatures[3]:sub(8):gsub("er", "ers"):gsub("^%l", string.upper),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratecorsairCount),
+							tasks[47].creatures[4]:sub(8):gsub("ir", "irs"):gsub("^%l", string.upper))
+						end,
+						[1] =
+						function(player)
+							return string.format("You succesfully killed %d %s. Striker sent you to find the secret hideout of the pirate leaders on Nargor and vanquish whoever you find inside.",
+							tasks[47].killsRequired,
+							tasks[47].raceName:lower())
+						end,
+						[2] = "You discovered the secret hideout of a pirate leader. Talk to Ray Striker if you like.",
+						[3] =
+						function(player)
+							return string.format("You succesfully killed %d %s.",
+							tasks[47].killsRequired,
+							tasks[47].raceName:lower())
+						end
+					}
 				},
 				[85] = {
 					name = "Paw and Fur: Pirates Second",

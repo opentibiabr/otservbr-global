@@ -816,20 +816,17 @@ tasks =
 	[47] = {
 		killsRequired = 3000,
 		raceName = "Pirates",
-		level = {1, 9999}, storage = {65047, 1},
+		level = {1, 9999},
 		premium = true,
 		creatures = {
-			"pirate ghost",
 			"pirate marauder",
-			"pirate cutthroad",
+			"pirate cutthroat",
 			"pirate buccaneer",
-			"pirate corsair",
-			"pirate skeleton"
+			"pirate corsair"
 		},
 		rewards = {
 			{type = "exp", value = {10000}},
-			{type = "money", value = {5000}},
-			{type = "storage", value = {17523, 1}}
+			{type = "money", value = {5000}}
 		}
 	},
 	[48] = {
