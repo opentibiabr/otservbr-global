@@ -118,7 +118,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say("Your current task is to kill "..tasks[55].killsRequired.." "..tasks[55].raceName:lower()..". You have already killed "..player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.cyclopsCount).." of them. Keep going!", npc, creature)
 				return true
 			end
-		end	
+		end
 		if player:getLevel() < 20 then
 			if player:getStorageValue(Storage.KillingInTheNameOf.trollTask) < 0 then
 				npcHandler:say({
