@@ -33,9 +33,7 @@ tasks =
 		premium = true,
 		creatures = {
 			"troll",
-			"troll champion",
-			"island troll",
-			"swamp troll"
+			"troll champion"
 		},
 		rewards = {
 			{type = "exp", value = {200}},
@@ -49,8 +47,8 @@ tasks =
 		premium = true,
 		creatures = {
 			"goblin",
-			"goblin assassin",
-			"goblin leader"
+			"goblin scavenger",
+			"goblin assassin"
 		},
 		rewards = {
 			{type = "exp", value = {300}},
@@ -907,6 +905,35 @@ tasks =
 		},
 		rewards = {
 			{type = "storage", value = {17526, 1}}
+		}
+	},
+	[54] = {
+		killsRequired = 300,
+		raceName = "Rotworms",
+		level = {20, 39},
+		premium = true,
+		creatures = {
+			"rotworm",
+			"carrion worm"
+		},
+		rewards = {
+			{type = "exp", value = {1000}},
+			{type = "money", value = {400}}
+		}
+	},
+	[55] = {
+		killsRequired = 500,
+		raceName = "Cyclops",
+		level = {30, 59},
+		premium = true,
+		creatures = {
+			"cyclops",
+			"cyclops drone",
+			"cyclops smith"
+		},
+		rewards = {
+			{type = "exp", value = {3000}},
+			{type = "money", value = {800}}
 		}
 	},
 }

@@ -1769,24 +1769,56 @@ if not Quests then
 					}
 				},
 				[36] = {
-					name = "Edron City - Elite Hunting: Trolls",
-					storageId = 1501,
+					name = "Edron City: Trolls",
+					storageId = Storage.KillingInTheNameOf.trollTask,
 					missionId = 10116,
 					startValue = 0,
-					endValue = 100,
-					description = function(player)
-						return string.format("You already hunted %d/100 Trolls.", (math.max(player:getStorageValue(1501), 0)))
-					end
+					endValue = 1,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Daniel Steelsoul sent you to kill %d %s, preferably west of Edron city. You have killed %d %s and %d %s so far.",
+							tasks[1].killsRequired,
+							tasks[1].raceName:lower(),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.trollCount),
+							tasks[1].creatures[1]:gsub("ll", "lls"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.trollchampionCount),
+							tasks[1].creatures[2]:gsub("n", "ns"))
+						end,
+						[1] =
+						function(player)
+							return string.format("You succesfully killed %d %s. As long as you are level 20 or lower, you may repeat this task by talking to Daniel Steelsoul about it.",
+							tasks[1].killsRequired,
+							tasks[1].raceName:lower())
+						end
+					}
 				},
 				[37] = {
-					name = "Edron City - Elite Hunting: Goblins",
-					storageId = 1502,
+					name = "Edron City: Goblins",
+					storageId = Storage.KillingInTheNameOf.goblinTask,
 					missionId = 10117,
 					startValue = 0,
-					endValue = 150,
-					description = function(player)
-						return string.format("You already hunted %d/150 Goblins.", (math.max(player:getStorageValue(1502), 0)))
-					end
+					endValue = 1,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Daniel Steelsoul sent you to kill %d %s, preferably west of Edron city. You have killed %d %s so far, %d %s and %d %s.",
+							tasks[2].killsRequired,
+							tasks[2].raceName:lower(),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinCount),
+							tasks[2].creatures[1]:gsub("n", "ns"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinscavengerCount),
+							tasks[2].creatures[2]:gsub("r", "rs"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinassassinCount),
+							tasks[2].creatures[3]:gsub("sin", "sins"))
+						end,
+						[1] =
+						function(player)
+							return string.format("You succesfully killed %d %s. As long as you are level 20 or lower, you may repeat this task by talking to Daniel Steelsoul about it.",
+							tasks[2].killsRequired,
+							tasks[2].raceName:lower())
+						end
+					}
 				},
 				[38] = {
 					name = "Paw and Fur: Minotaurs",
@@ -3145,7 +3177,7 @@ if not Quests then
 				[88] = {
 					name = "Paw and Fur - Hunting Elite",
 					storageId = Storage.KillingInTheNameOf.questlogEntry,
-					missionId = 10168,
+					missionId = 10099,
 					startValue = 0,
 					endValue = 1,
 					description = function(player)
@@ -3155,7 +3187,59 @@ if not Quests then
 							(math.max(player:getStorageValue(Storage.KillingInTheNameOf.bossPoints), 0))
 						)
 					end
-				}
+				},
+				[89] = {
+					name = "Edron City: Rotworms",
+					storageId = Storage.KillingInTheNameOf.rotwormTask,
+					missionId = 10098,
+					startValue = 0,
+					endValue = 1,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Daniel Steelsoul sent you to kill %d %s, preferably in their tunnels south of Edron city. You have killed %d %s and %d %s so far.",
+							tasks[54].killsRequired,
+							tasks[54].raceName:lower(),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.rotwormCount),
+							tasks[54].creatures[1]:gsub("m", "ms"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.carrionwormnCount),
+							tasks[54].creatures[2]:gsub("m", "ms"))
+						end,
+						[1] =
+						function(player)
+							return string.format("You succesfully killed %d %s. As long as you are level 40 or lower, you may repeat this task by talking to Daniel Steelsoul about it.",
+							tasks[54].killsRequired,
+							tasks[54].raceName:lower())
+						end
+					}
+				},
+				[90] = {
+					name = "Edron City: Cyclops",
+					storageId = Storage.KillingInTheNameOf.cyclopsTask,
+					missionId = 10097,
+					startValue = 0,
+					endValue = 1,
+					states = {
+						[0] =
+						function(player)
+							return string.format("Daniel Steelsoul sent you to kill %d %s, preferably in Cyclopolis north of Edron city. You have killed %d %s, %d %s and %d %s so far.",
+							tasks[55].killsRequired,
+							tasks[55].raceName:lower(),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopsCount),
+							tasks[55].creatures[1]:gsub("p", "ps"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopsdroneCount),
+							tasks[55].creatures[2]:sub(9):gsub("e", "es"),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopssmithCount),
+							tasks[55].creatures[3]:sub(9):gsub("h", "hs"))
+						end,
+						[1] =
+						function(player)
+							return string.format("You succesfully killed %d %s. As long as you are level 60 or lower, you may repeat this task by talking to Daniel Steelsoul about it.",
+							tasks[55].killsRequired,
+							tasks[55].raceName:lower())
+						end
+					}
+				},
 			}
 		},
 		[13] = {

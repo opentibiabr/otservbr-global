@@ -1312,7 +1312,11 @@ Storage = {
 		pawandfurRank = 51616,
 		greendjinnTask = 51617,
 		bluedjinnTask = 51618,
-		pirateTask = 51619
+		pirateTask = 51619,
+		trollTask = 51620,
+		goblinTask = 51621,
+		rotwormTask = 51622,
+		cyclopsTask = 51623
 	},
 	HotCuisineQuest = {
 		-- Reserved storage from 51650 - 51659
@@ -2116,8 +2120,8 @@ Storage = {
 			KillingInTheNameOf = {
 				monsterKillCount = {
 					placeHolder00 = 42150,
-					trollCount = 42151,
-					goblinCount = 42152,
+					placeHolder01 = 42151,
+					placeHolder02 = 42152,
 					crocodileCount = 42153,
 					badgerCount = 42154,
 					tarantulaCount = 42155,
@@ -2165,9 +2169,10 @@ Storage = {
 					pirateCount = 42197,
 					minotaurCount = 42198,
 					necromancerCount = 42199,
-					mountaintrollCount = 42200,
-					muglexclanfootmanCount = 42201,
-					minotaurbruisersCount = 42202,
+					trollCount = 42200,
+					goblinCount = 42201,
+					rotwormCount = 42202,
+					cyclopsCount = 42203,
 				},
 				bossKillCount = {
 					snapperCount = 42350,
@@ -2261,7 +2266,21 @@ Storage = {
 					piratemarauderCount = 42489,
 					piratecutthroadCount = 42490,
 					piratebuccaneerCount = 42491,
-					piratecorsairCount = 42492
+					piratecorsairCount = 42492,
+					-- Trolls
+					trollCount = 42493,
+					trollchampionCount = 42494,
+					-- Goblins
+					goblinCount = 42495,
+					goblinscavengerCount = 42496,
+					goblinassassinCount = 42497,
+					-- Rotworms
+					rotwormCount = 42498,
+					carrionwormnCount = 42499,
+					-- Cyclops
+					cyclopsCount = 42500,
+					cyclopsdroneCount = 42501,
+					cyclopssmithCount = 42502
 				}
 			},
 			LoneMedusa = {},

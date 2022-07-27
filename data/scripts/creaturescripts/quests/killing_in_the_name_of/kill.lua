@@ -153,6 +153,62 @@ function killingInTheNameOfKill.onKill(player, target)
 			player:setStorageValue(Storage.KillingInTheNameOf.pirateTask, player:getStorageValue(Storage.KillingInTheNameOf.pirateTask)) -- fake update quest tracker
 		end
 	end
+-- Trolls
+	if player:getStorageValue(Storage.KillingInTheNameOf.trollTask) == 0 then
+		if isInArray(tasks[1].creatures, targetName) then
+			for g = 1, #tasks[1].creatures do
+				if targetName == tasks[1].creatures[g] then
+					local trolls = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.trollCount + g - 1
+					player:setStorageValue(trolls, player:getStorageValue(trolls) + 1)
+				end
+			end
+			local killAmountTrolls = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.trollCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.trollCount, killAmountTrolls + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.trollTask, player:getStorageValue(Storage.KillingInTheNameOf.trollTask)) -- fake update quest tracker
+		end
+	end
+-- Goblins
+	if player:getStorageValue(Storage.KillingInTheNameOf.goblinTask) == 0 then
+		if isInArray(tasks[2].creatures, targetName) then
+			for h = 1, #tasks[2].creatures do
+				if targetName == tasks[2].creatures[h] then
+					local goblins = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinCount + h - 1
+					player:setStorageValue(goblins, player:getStorageValue(goblins) + 1)
+				end
+			end
+			local killAmountGoblins = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.goblinCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.goblinCount, killAmountGoblins + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.goblinTask, player:getStorageValue(Storage.KillingInTheNameOf.goblinTask)) -- fake update quest tracker
+		end
+	end
+-- Rotworms
+	if player:getStorageValue(Storage.KillingInTheNameOf.rotwormTask) == 0 then
+		if isInArray(tasks[54].creatures, targetName) then
+			for j = 1, #tasks[54].creatures do
+				if targetName == tasks[54].creatures[j] then
+					local rotworms = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.rotwormCount + j - 1
+					player:setStorageValue(rotworms, player:getStorageValue(rotworms) + 1)
+				end
+			end
+			local killAmountRotworms = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.rotwormCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.rotwormCount, killAmountRotworms + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.rotwormTask, player:getStorageValue(Storage.KillingInTheNameOf.rotwormTask)) -- fake update quest tracker
+		end
+	end
+-- Cyclops
+	if player:getStorageValue(Storage.KillingInTheNameOf.cyclopsTask) == 0 then
+		if isInArray(tasks[55].creatures, targetName) then
+			for k = 1, #tasks[55].creatures do
+				if targetName == tasks[55].creatures[k] then
+					local cyclops = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopsCount + k - 1
+					player:setStorageValue(cyclops, player:getStorageValue(cyclops) + 1)
+				end
+			end
+			local killAmountCyclops = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.cyclopsCount)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.cyclopsCount, killAmountCyclops + 1)
+			player:setStorageValue(Storage.KillingInTheNameOf.cyclopsTask, player:getStorageValue(Storage.KillingInTheNameOf.cyclopsTask)) -- fake update quest tracker
+		end
+	end
 	return true
 end
 
