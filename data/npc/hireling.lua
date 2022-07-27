@@ -323,7 +323,6 @@ function createHirelingType(HirelingName)
 		npcHandler:onAppear(npc, creature)
 
 		if not hireling then
-			local creature = Creature(creature)
 			local position = creature:getPosition()
 
 			hireling = getHirelingByPosition(position)
@@ -687,6 +686,11 @@ function createHirelingType(HirelingName)
 			npcHandler:setTopic(playerId, 1445)
 			return true
 		elseif MsgContains(message, "deposit") then
+			if not isValidMoney(count[playerId]) then
+				npcHandler:say("Sorry, but you can't deposit that much.", npc, creature)
+				npcHandler:setTopic(playerId, 1445)
+				return false
+			end
 			count[playerId] = player:getMoney()
 			if count[playerId] < 1 then
 				npcHandler:say("You do not have enough gold.", npc, creature)
@@ -714,11 +718,6 @@ function createHirelingType(HirelingName)
 					npcHandler:setTopic(playerId, 1446)
 					return true
 				end
-			end
-			if not isValidMoney(count[playerId]) then
-				npcHandler:say("Sorry, but you can't deposit that much.", npc, creature)
-				npcHandler:setTopic(playerId, 1445)
-				return false
 			end
 		elseif npcHandler:getTopic(playerId) == 1446 then
 			count[playerId] = getMoneyCount(message)
@@ -1335,13 +1334,12 @@ function createHirelingType(HirelingName)
 
 	local function handleFoodActions(npc, creature, message)
 		local playerId = creature:getId()
-		if npcHandler:getTopic(playerId) == TOPIC.FOOD then --initial node
+		if npcHandler:getTopic(playerId) == TOPIC.FOOD then
 			if MsgContains(message, "yes") then
 				cookFood(npc, creature)
 			elseif MsgContains(message, "no") then
 				npcHandler:setTopic(playerId, TOPIC.SERVICES)
 				npcHandler:say("Alright then, ask me for other {services}, if you want.", npc, creature)
-			else --invalid word
 			end
 		elseif npcHandler:getTopic(playerId) == TOPIC_FOOD.SKILL_CHOOSE then
 			if MsgContains(message, "magic") then
