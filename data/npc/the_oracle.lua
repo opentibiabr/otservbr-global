@@ -144,14 +144,13 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-local function onAddFocus(creature)
-	local playerId = creature:getId()
+local function onAddFocus(npc, player)
+	local playerId = player:getId()
 	town[playerId] = 0
 	vocation[playerId] = 0
 end
 
-local function onReleaseFocus(creature)
-	local player = Player(creature)
+local function onReleaseFocus(npc, player)
 	local playerId = player:getId()
 	town[playerId] = nil
 	vocation[playerId] = nil

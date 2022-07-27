@@ -232,7 +232,7 @@ local function onTradeRequest(npc, creature)
 	return true
 end
 
-local function onReleaseFocus(creature)
+local function onReleaseFocus(npc, creature)
 	local playerId = creature:getId()
 	storeTalkCid[playerId] = nil
 end
