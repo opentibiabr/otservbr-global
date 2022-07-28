@@ -7,7 +7,8 @@ local function roomIsOccupied(centerPosition, rangeX, rangeY)
 end
 
 local function clearBossRoom(playerId, bossId, centerPosition, rangeX, rangeY, exitPosition)
-	local spectators, spectator = Game.getSpectators(centerPosition, false, false, rangeX, rangeX, rangeY, rangeY)
+	local spectators = Game.getSpectators(centerPosition, false, false, rangeX, rangeX, rangeY, rangeY)
+	local spectator
 	for i = 1, #spectators do
 		spectator = spectators[i]
 		if spectator:isPlayer() and spectator.uid == playerId then
@@ -381,26 +382,25 @@ function boss.onStepIn(player, item, position, fromPosition)
 	end
 	for a = 1, #bosses do
 		if player:getPosition() == Position(bosses[a].teleportPosition) then
-			local boss = bosses[a]
-			if player:getStorageValue(boss.storage) ~= 1 or roomIsOccupied(boss.centerPosition, boss.rangeX, boss.rangeY) then
+			if player:getStorageValue(bosses[a].storage) ~= 1 or roomIsOccupied(bosses[a].centerPosition, bosses[a].rangeX, bosses[a].rangeY) then
 				player:teleportTo(position)
 				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 				return true
 			end
-			player:setStorageValue(boss.storage, 2)
-			player:teleportTo(boss.playerPosition)
-			boss.playerPosition:sendMagicEffect(CONST_ME_TELEPORT)
+			player:setStorageValue(bosses[a].storage, 2)
+			player:teleportTo(bosses[a].playerPosition)
+			bosses[a].playerPosition:sendMagicEffect(CONST_ME_TELEPORT)
 			local monster
 			if player:getPosition() == Position({x = 31978, y = 32853, z = 1}) then
 				local randomBoss = math.random(4)
-				monster = Game.createMonster(boss.bossName[randomBoss], boss.bossPosition)
+				monster = Game.createMonster(bosses[a].bossName[randomBoss], bosses[a].bossPosition)
 			else
-				monster = Game.createMonster(boss.bossName, boss.bossPosition)
+				monster = Game.createMonster(bosses[a].bossName, bosses[a].bossPosition)
 			end
 			if not monster then
 				return true
 			end
-			addEvent(clearBossRoom, 60 * 10 * 1000, player.uid, monster.uid, boss.centerPosition, boss.rangeX, boss.rangeY, fromPosition)
+			addEvent(clearBossRoom, 60 * 10 * 1000, player.uid, monster.uid, bosses[a].centerPosition, bosses[a].rangeX, bosses[a].rangeY, fromPosition)
 			player:say("You have ten minutes to kill and loot this boss. Otherwise you will lose that chance and will be kicked out.", TALKTYPE_MONSTER_SAY)
 		end
 	end
