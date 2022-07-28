@@ -167,7 +167,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-local function onReleaseFocus(creature)
+local function onReleaseFocus(npc, creature)
 	local playerId = creature:getId()
 	topic[playerId] = nil
 end
