@@ -45,7 +45,6 @@ local function killCheck(player, targetName, taskName, taskStage, taskInfo, task
 		end
 	end
 end
-local taskName, taskStage, taskInfo, taskaltkillCount, taskkillCount 
 local killCounter = Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.killCount
 local bossKillCount = Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount
 local killingInTheNameOfKill = CreatureEvent("KillingInTheNameOfKill")
