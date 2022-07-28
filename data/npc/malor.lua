@@ -128,7 +128,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:setTopic(playerId, 0)
 	elseif MsgContains(message, "task") and player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03) == 3 then
 		if player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) < 0 or player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 3 then
-			npcHandler:say("There are still blue djinns everywhere! We can't let a single one of them live. I guess a start would be for you to kill "..tasks[46].killsRequired.." blue djinns and Marid. Will you assist us?", npc, creature)
+			npcHandler:say("There are still blue djinns everywhere! We can't let a single one of them live. I guess a start would be for you to kill 500 blue djinns and Marid. Will you assist us?", npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 0 then
 			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount) >= 500 then
@@ -139,7 +139,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.fahimCount, 0)
 				player:setStorageValue(Storage.KillingInTheNameOf.bluedjinnTask, 1)
 			else
-				npcHandler:say("Come back when you kill "..tasks[46].killsRequired.." "..tasks[46].raceName..".", npc, creature)
+				npcHandler:say("Come back when you kill 500 blue djinns and Marid.", npc, creature)
 			end
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 2 then
 			npcHandler:say({

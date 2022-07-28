@@ -159,7 +159,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 2)
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.pirateTask) == 0 then
 			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.pirateCount) >= 3000 then
-				if player:getStorageValue(REPEATSTORAGE_BASE + 47) <= 2 then
+				if player:getStorageValue(REPEATSTORAGE_BASE + #tasks.GrizzlyAdams + 1) <= 2 then
 					npcHandler:say({
 						"Hey, great. You've done well! As a small reward I give you some coins from our treasure box. Also, let me tell you an interesting piece of information. ...",
 						"One of our spies told us about a secret hideout somewhere on Nargor. Supposedly, one of the four pirate leaders can be found there sometimes. If you dare go there, you might be able to face him or her in one on one combat. ...",
@@ -167,14 +167,14 @@ local function creatureSayCallback(npc, creature, type, message)
 					player:setStorageValue(Storage.KillingInTheNameOf.pirateTask, 1)
 					player:addExperience(10000, true)
 					player:addMoney(5000)
-				elseif player:getStorageValue(REPEATSTORAGE_BASE + 47) == 3 then
+				elseif player:getStorageValue(REPEATSTORAGE_BASE + #tasks.GrizzlyAdams + 1) == 3 then
 					npcHandler:say({
 						"This was probably the last time you will be able to enter that hideout. Well done, my friend, our thanks are with you. ...",
 						"You are most welcome to keep on killing pirates for us though for some bucks and experience. If you want to do so, just ask me about a {task} anytime."}, npc, creature)
 					player:setStorageValue(Storage.KillingInTheNameOf.pirateTask, 1)
 					player:addExperience(10000, true)
 					player:addMoney(5000)
-				elseif player:getStorageValue(REPEATSTORAGE_BASE + 47) > 3 then
+				elseif player:getStorageValue(REPEATSTORAGE_BASE + #tasks.GrizzlyAdams + 1) > 3 then
 					npcHandler:say("Ahh, thank you, my friend! What would we do without you? Here, take this reward for your efforts. If you want to continue to help us killing pirates, just ask me about that {task}.", npc, creature)
 					player:setStorageValue(Storage.KillingInTheNameOf.pirateTask, 3)
 					player:addExperience(10000, true)
@@ -202,8 +202,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratebuccaneerCount, 0)
 			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratecorsairCount, 0)
 			player:setStorageValue(Storage.KillingInTheNameOf.pirateTask, 0)
-			player:setStorageValue(REPEATSTORAGE_BASE + 47, math.max(player:getStorageValue(REPEATSTORAGE_BASE + 47), 0))
-			player:setStorageValue(REPEATSTORAGE_BASE + 47, player:getStorageValue(REPEATSTORAGE_BASE + 47) + 1)
+			player:setStorageValue(REPEATSTORAGE_BASE + #tasks.GrizzlyAdams + 1, math.max(player:getStorageValue(REPEATSTORAGE_BASE + #tasks.GrizzlyAdams + 1), 0))
+			player:setStorageValue(REPEATSTORAGE_BASE + #tasks.GrizzlyAdams + 1, player:getStorageValue(REPEATSTORAGE_BASE + #tasks.GrizzlyAdams + 1) + 1)
 			npcHandler:setTopic(playerId, 0)
 		end
 	end

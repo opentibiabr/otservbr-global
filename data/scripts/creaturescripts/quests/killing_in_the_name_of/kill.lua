@@ -32,40 +32,53 @@ local taskBoss = {
 	[30] = "necropharus",
 	[31] = "the horned fox"
 }
-local killCounter = Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.placeHolder00
+local function killCheck(player, targetName, taskName, taskStage, taskInfo, taskaltkillCount, taskkillCount)
+	if player:getStorageValue(taskName) == taskStage then
+		if isInArray(taskInfo, targetName) then
+			for k = 1, #taskInfo do
+				if targetName == taskInfo[k] then
+					player:setStorageValue(taskaltkillCount + k - 1, player:getStorageValue(taskaltkillCount + k - 1) + 1)
+				end
+			end
+			player:setStorageValue(taskkillCount, player:getStorageValue(taskkillCount) + 1)
+			player:setStorageValue(taskName, player:getStorageValue(taskName)) -- fake update quest tracker
+		end
+	end
+end
+local taskName, taskStage, taskInfo, taskaltkillCount, taskkillCount 
+local killCounter = Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.killCount
 local bossKillCount = Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount
 local killingInTheNameOfKill = CreatureEvent("KillingInTheNameOfKill")
 function killingInTheNameOfKill.onKill(player, target)
 	if target:isPlayer() or target:getMaster() then
 		return true
 	end
-
 	local targetName, startedTasks, taskId = target:getName():lower(), player:getStartedTasks()
 	for i = 1, #startedTasks do
 		taskId = startedTasks[i]
-		if isInArray(tasks[taskId].creatures, targetName) then
-			if #tasks[taskId].creatures > 1 then
-				for a = 1, #tasks[taskId].creatures do
-					if targetName == tasks[taskId].creatures[a] then
-						if tasks[taskId].raceName == "Apes" then
+		if isInArray(tasks.GrizzlyAdams[taskId].creatures, targetName) then
+			if #tasks.GrizzlyAdams[taskId].creatures > 1 then
+				for a = 1, #tasks.GrizzlyAdams[taskId].creatures do
+					if targetName == tasks.GrizzlyAdams[taskId].creatures[a] then
+						if tasks.GrizzlyAdams[taskId].raceName == "Apes" then
 							local apes = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.kongraCount + a - 1
 							player:setStorageValue(apes, player:getStorageValue(apes) + 1)
-						elseif	tasks[taskId].raceName == "Quara Scouts" then
+						elseif	tasks.GrizzlyAdams[taskId].raceName == "Quara Scouts" then
 							local scouts = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorscoutCount + a - 1
 							player:setStorageValue(scouts, player:getStorageValue(scouts) + 1)
-						elseif	tasks[taskId].raceName == "Underwater Quara" then
+						elseif	tasks.GrizzlyAdams[taskId].raceName == "Underwater Quara" then
 							local underwater = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorCount + a - 1
 							player:setStorageValue(underwater, player:getStorageValue(underwater) + 1)
-						elseif	tasks[taskId].raceName == "Nightmares" then
+						elseif	tasks.GrizzlyAdams[taskId].raceName == "Nightmares" then
 							local nightmares = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmareCount + a - 1
 							player:setStorageValue(nightmares, player:getStorageValue(nightmares) + 1)
-						elseif	tasks[taskId].raceName == "High Class Lizards" then
+						elseif	tasks.GrizzlyAdams[taskId].raceName == "High Class Lizards" then
 							local lizards = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardchosenCount + a - 1
 							player:setStorageValue(lizards, player:getStorageValue(lizards) + 1)
-						elseif	tasks[taskId].raceName == "Sea Serpents" then
+						elseif	tasks.GrizzlyAdams[taskId].raceName == "Sea Serpents" then
 							local serpents = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount + a - 1
 							player:setStorageValue(serpents, player:getStorageValue(serpents) + 1)
-						elseif	tasks[taskId].raceName == "Drakens" then
+						elseif	tasks.GrizzlyAdams[taskId].raceName == "Drakens" then
 							local drakens = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenabominationCount + a - 1
 							player:setStorageValue(drakens, player:getStorageValue(drakens) + 1)
 						end
@@ -85,130 +98,24 @@ function killingInTheNameOfKill.onKill(player, target)
 		end
 	end
 -- Minotaurs
-	if player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinos) == 0 then
-		if isInArray(tasks[49].creatures, targetName) then
-			for b = 1, #tasks[49].creatures do
-				if targetName == tasks[49].creatures[b] then
-					local minotaurs = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurCount + b - 1
-					player:setStorageValue(minotaurs, player:getStorageValue(minotaurs) + 1)
-				end
-			end
-			local killAmountMinotaurs = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.minotaurCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.minotaurCount, killAmountMinotaurs + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.BudrikMinos, player:getStorageValue(Storage.KillingInTheNameOf.BudrikMinos)) -- fake update quest tracker
-		end
-	end
+	killCheck(player, targetName, Storage.KillingInTheNameOf.BudrikMinos, 0, tasks.Budrik[1].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.minotaurCount)
 -- Necromancers and Priestesses
-	if player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 0 or player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 3 then
-		if isInArray(tasks[50].creatures, targetName) then
-			for c = 1, #tasks[50].creatures do
-				if targetName == tasks[50].creatures[c] then
-					local necromancers = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount + c - 1
-					player:setStorageValue(necromancers, player:getStorageValue(necromancers) + 1)
-				end
-			end
-			local killAmountNecromancers = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount, killAmountNecromancers + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers)) -- fake update quest tracker
-		end
-	end
--- Green Djinns or Efreets / Blue Djinns or Marids
-	if player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 0 then
-		if isInArray(tasks[45].creatures, targetName) then
-			for d = 1, #tasks[45].creatures do
-				if targetName == tasks[45].creatures[d] then
-					local greendjinns = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.greendjinnCount + d - 1
-					player:setStorageValue(greendjinns, player:getStorageValue(greendjinns) + 1)
-				end
-			end
-			local killAmountGreenDjinns = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount, killAmountGreenDjinns + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.greendjinnTask, player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask)) -- fake update quest tracker
-		end
-	end
-	if player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask) == 0 then
-		if isInArray(tasks[46].creatures, targetName) then
-			for e = 1, #tasks[46].creatures do
-				if targetName == tasks[46].creatures[e] then
-					local bluedjinns = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bluedjinnCount + e - 1
-					player:setStorageValue(bluedjinns, player:getStorageValue(bluedjinns) + 1)
-				end
-			end
-			local killAmountBlueDjinns = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount, killAmountBlueDjinns + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.bluedjinnTask, player:getStorageValue(Storage.KillingInTheNameOf.bluedjinnTask)) -- fake update quest tracker
-		end
-	end
+	killCheck(player, targetName, Storage.KillingInTheNameOf.LugriNecromancers, 0, tasks.Lugri[1].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount)
+	killCheck(player, targetName, Storage.KillingInTheNameOf.LugriNecromancers, 3, tasks.Lugri[1].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount)
+-- Green Djinns or Efreets
+	killCheck(player, targetName, Storage.KillingInTheNameOf.greendjinnTask, 0, tasks.Gabel[1].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.greendjinnCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount)
+-- Blue Djinns or Marids
+	killCheck(player, targetName, Storage.KillingInTheNameOf.bluedjinnTask, 0, tasks.Malor[1].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bluedjinnCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bluedjinnCount)
 -- Pirates
-	if player:getStorageValue(Storage.KillingInTheNameOf.pirateTask) == 0 then
-		if isInArray(tasks[47].creatures, targetName) then
-			for f = 1, #tasks[47].creatures do
-				if targetName == tasks[47].creatures[f] then
-					local pirates = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratemarauderCount + f - 1
-					player:setStorageValue(pirates, player:getStorageValue(pirates) + 1)
-				end
-			end
-			local killAmountPirates = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.pirateCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.pirateCount, killAmountPirates + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.pirateTask, player:getStorageValue(Storage.KillingInTheNameOf.pirateTask)) -- fake update quest tracker
-		end
-	end
+	killCheck(player, targetName, Storage.KillingInTheNameOf.pirateTask, 0, tasks.RaymondStriker[1].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratemarauderCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.pirateCount)
 -- Trolls
-	if player:getStorageValue(Storage.KillingInTheNameOf.trollTask) == 0 then
-		if isInArray(tasks[1].creatures, targetName) then
-			for g = 1, #tasks[1].creatures do
-				if targetName == tasks[1].creatures[g] then
-					local trolls = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.trollCount + g - 1
-					player:setStorageValue(trolls, player:getStorageValue(trolls) + 1)
-				end
-			end
-			local killAmountTrolls = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.trollCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.trollCount, killAmountTrolls + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.trollTask, player:getStorageValue(Storage.KillingInTheNameOf.trollTask)) -- fake update quest tracker
-		end
-	end
+	killCheck(player, targetName, Storage.KillingInTheNameOf.trollTask, 0, tasks.DanielSteelsoul[1].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.trollCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.trollCount)
 -- Goblins
-	if player:getStorageValue(Storage.KillingInTheNameOf.goblinTask) == 0 then
-		if isInArray(tasks[2].creatures, targetName) then
-			for h = 1, #tasks[2].creatures do
-				if targetName == tasks[2].creatures[h] then
-					local goblins = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinCount + h - 1
-					player:setStorageValue(goblins, player:getStorageValue(goblins) + 1)
-				end
-			end
-			local killAmountGoblins = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.goblinCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.goblinCount, killAmountGoblins + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.goblinTask, player:getStorageValue(Storage.KillingInTheNameOf.goblinTask)) -- fake update quest tracker
-		end
-	end
+	killCheck(player, targetName, Storage.KillingInTheNameOf.goblinTask, 0, tasks.DanielSteelsoul[2].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.goblinCount)
 -- Rotworms
-	if player:getStorageValue(Storage.KillingInTheNameOf.rotwormTask) == 0 then
-		if isInArray(tasks[54].creatures, targetName) then
-			for j = 1, #tasks[54].creatures do
-				if targetName == tasks[54].creatures[j] then
-					local rotworms = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.rotwormCount + j - 1
-					player:setStorageValue(rotworms, player:getStorageValue(rotworms) + 1)
-				end
-			end
-			local killAmountRotworms = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.rotwormCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.rotwormCount, killAmountRotworms + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.rotwormTask, player:getStorageValue(Storage.KillingInTheNameOf.rotwormTask)) -- fake update quest tracker
-		end
-	end
+	killCheck(player, targetName, Storage.KillingInTheNameOf.rotwormTask, 0, tasks.DanielSteelsoul[3].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.rotwormCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.rotwormCount)
 -- Cyclops
-	if player:getStorageValue(Storage.KillingInTheNameOf.cyclopsTask) == 0 then
-		if isInArray(tasks[55].creatures, targetName) then
-			for k = 1, #tasks[55].creatures do
-				if targetName == tasks[55].creatures[k] then
-					local cyclops = Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopsCount + k - 1
-					player:setStorageValue(cyclops, player:getStorageValue(cyclops) + 1)
-				end
-			end
-			local killAmountCyclops = player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.cyclopsCount)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.cyclopsCount, killAmountCyclops + 1)
-			player:setStorageValue(Storage.KillingInTheNameOf.cyclopsTask, player:getStorageValue(Storage.KillingInTheNameOf.cyclopsTask)) -- fake update quest tracker
-		end
-	end
+	killCheck(player, targetName, Storage.KillingInTheNameOf.cyclopsTask, 0, tasks.DanielSteelsoul[4].creatures, Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopsCount, Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.cyclopsCount)
 	return true
 end
 

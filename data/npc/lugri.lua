@@ -96,7 +96,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 0 then
 			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount) >= 4000 then
 				npcHandler:say({
-					"You've slain a mere "..player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount).." "..tasks[50].raceName:lower()..". Still, you've shown some dedication. Maybe that means you can kill one of those so-called 'leaders' too. ...",
+					"You've slain a mere "..player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount).." necromancers and priestesses. Still, you've shown some dedication. Maybe that means you can kill one of those so-called 'leaders' too. ...",
 					"Deep under Drefia, a necromancer called Necropharus is hiding in the Halls of Sacrifice. I'll place a spell on you with which you will be able to pass his weak protective gate. ...",
 					"Know that this will be your only chance to enter his room. If you leave it or die, you won't be able to return. We'll see if you really dare enter those halls."
 				}, npc, creature)
@@ -120,7 +120,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say("Come back when you have slain 1000 necromancers and priestesses!", npc, creature)
 			end
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 4 then
-			npcHandler:say("You can't live without serving, can you? Although you are quite annoying, you're still somewhat useful. Continue killing "..tasks[50].raceName.." for me. 1000 are enough this time. What do you say?", npc, creature)
+			npcHandler:say("You can't live without serving, can you? Although you are quite annoying, you're still somewhat useful. Continue killing Necromancers and Priestesses for me. 1000 are enough this time. What do you say?", npc, creature)
 			npcHandler:setTopic(playerId, 8)
 		end
 	elseif MsgContains(message, "yes") then

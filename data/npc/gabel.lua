@@ -117,7 +117,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		if player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) < 0 or player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 3 then
 			npcHandler:say({
 				"You've proven to be an experienced soldier, human. Though I still hope the war to be over soon, the Efreet are still threatening our tower. ...",
-				"Thus we need your help in killing the green ones. If you kill "..tasks[45].killsRequired.." green djinns or Efreet for us, I'll reward you with bonus experience and some extra gold pieces. Do you agree?"}, npc, creature)
+				"Thus we need your help in killing the green ones. If you kill 500 green djinns or Efreet for us, I'll reward you with bonus experience and some extra gold pieces. Do you agree?"}, npc, creature)
 			npcHandler:setTopic(playerId, 3)
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 0 then
 			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.greendjinnCount) >= 500 then
@@ -127,7 +127,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.merikhCount, 0)
 				player:setStorageValue(Storage.KillingInTheNameOf.greendjinnTask, 1)
 			else
-				npcHandler:say("Come back when you kill "..tasks[45].killsRequired.." "..tasks[46].raceName..".", npc, creature)
+				npcHandler:say("Come back when you kill 500 green djinns or Efreet.", npc, creature)
 			end
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.greendjinnTask) == 2 then
 			npcHandler:say({
