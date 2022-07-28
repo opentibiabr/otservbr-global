@@ -190,7 +190,7 @@ local messageBoss = {
 	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Thul' task active at the same time!"},
 	"Well THAT was a hunt. Good job. Have you heard about the 'Old Widow'? It must have a hideout. Try to find it and slay the beast. You can ask about new {tasks} by the way. Be aware that you can only have one 'Old Widow' task active at the same time!",
 	{"What an impressive hunt. Nicely done. By the way there is still something I want you to do for me. 'Hemming' a furious werewolf is up to mischief. Find its hideout and bring it down! ...",
-	"PLACEHOLDER"},
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Hemming' task active at the same time!"},
 	{"Thumbs up, nice performance. Have you heard about 'Tormentor'? Find it and slay the beast. ...",
 	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Tormentor' task active at the same time!"},
 	"Well THAT was a hunt. Good job. Have you heard about 'Flameborn'? It must have a hideout. Try to find it and slay the beast. You can ask about new {tasks} by the way. Be aware that you can only have one 'Flameborn' task active at the same time!",
@@ -199,22 +199,22 @@ local messageBoss = {
 	{"Nicely done. However, there is something else I want you to do. I have heard that there is a stampor the hunters in the Muggy Plains call 'Tromphonyte'. It is an extremely dangerous example of its kind! ...",
 	"I believe you are equal to the task, |PLAYERNAME|! Find and kill it and bring peace back! ...",
 	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Tromphonyte' task active at the same time!"},
-	"PLACEHOLDER",
-	"PLACEHOLDER",
-	"PLACEHOLDER",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Sulphur Scuttler' task active at the same time!",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Bruise Payne' task active at the same time!",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Many' task active at the same time!",
 	{"My - you can be proud of yourself! However, you're not finished yet. There are rumours about a being called 'The Noxious Spawn' which was seen deep down in the ruins of Banuta. Try to find its hideout. ...",
 	"You can ask about new {tasks} bye the way. Be aware that you can only have one 'Noxious Spawn' task active at the same time!"},
-	"PLACEHOLDER",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Gorgo' task active at the same time!",
 	{"Such marvellous hunting skills! Perhaps you can help me with this one. Have you heard about 'Stonecracker'? ...",
 	"It's the oldest and most dangerous of all behemoths and was last seen under the Cyclopolis in Edron. What do you think? Are you hunter enough? I think you are!"},
 	{"Good job, old chap! Are you up for a challenge? Have you heard of the legendary sea serpent called the 'Leviathan'? It must be somewhere near the spot you found. ...",
 	"This is a true test of your hunting skills - find it and kill it. Good hunting! ...", "You can ask about new {tasks} by the way. Be aware that you can only have one 'Leviathan' task active at the same time!"},
 	{"Outstanding! You do have impressive hunting skills. Have you already heard about Kerberos the oldest and most dangerous of all hellhounds? He must have a hideout somewhere. Try to find him and slay the beast. ...",
 	"You can ask about new tasks by the way. Be aware that you can only have one Kerberos task active at the same time!"},
-	"PLACEHOLDER",
-	"PLACEHOLDER",
-	"PLACEHOLDER",
-	"PLACEHOLDER"
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Ethershreck' task active at the same time!",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Paiz the Pauperizer' task active at the same time!",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Bretzecutioner' task active at the same time!",
+	"If you're up for another hunting mission, just ask me for a {task}. Be aware that you can only have one 'Zanakeph' task active at the same time!"
 }
 local messageBossStart = {
 	"Okay. Go forth and kill him.", -- Snapper
@@ -603,9 +603,6 @@ local function creatureSayCallback(npc, creature, type, message)
 		local task = getTaskByName(message)
 		if task and player:getStorageValue(QUESTSTORAGE_BASE + task) > 0 then
 			return false
-		end
-		if tasks.GrizzlyAdams[task].npcName ~= internalNpcName then
-			return true
 		end
 		local messageElse = "You already achieved the maximum rank for your level range. If you accept this task, you won't gain points for our society. Hunt "..tasks.GrizzlyAdams[task].killsRequired.." "..tasks.GrizzlyAdams[task].raceName.." and you'll be rewarded with experience and the possibility to choose a {boss}. Are you in, old chap?"
 		if isInArray(tier[1].allName, message:lower()) then
