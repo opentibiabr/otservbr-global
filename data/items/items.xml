@@ -31107,11 +31107,8 @@
 	<item id="20323" article="an" name="old flying carpet"/>
 	<item id="20324" name="unknown tile"/>
 	<item fromid="20325" toid="20327" article="a" name="sand"/>
-	<item fromid="20328" toid="20332" article="a" name="stairs">
+	<item fromid="20328" toid="20336" article="a" name="stairs">
 		<attribute key="floorchange" value="down"/>
-	</item>
-	<item fromid="20333" toid="20336" article="a" name="stairs">
-		<attribute key="floorchange" value="south"/>
 	</item>
 	<item id="20337" article="a" name="dead wounded cave draptor">
 		<attribute key="fluidsource" value="blood"/>
