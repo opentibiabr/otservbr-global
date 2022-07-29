@@ -309,7 +309,7 @@ local bosses = {
 	},
 	[3261] = {
 		bossName = 'the horned fox',
-		storage = 17522,
+		storage = 14896,
 		playerPosition = Position(32458, 31994, 9),
 		bossPosition = Position(32458, 32005, 9),
 		centerPosition = Position(32450, 31400, 9),
