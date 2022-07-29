@@ -344,7 +344,7 @@ local bosses = {
 	},
 	{
 		bossName = {"Brutus Bloodbeard", "Deadeye Devious", "lethal lissy", "Ron The Ripper"},
-		storage = Storage.KillingInTheNameOf.pirateTask,
+		storage = Storage.KillingInTheNameOf.PirateTask,
 		teleportPosition = {x = 31978, y = 32853, z = 1},
 		playerPosition = Position(31976, 32896, 0),
 		bossPosition = Position(31983, 32897, 0),
@@ -354,7 +354,7 @@ local bosses = {
 	},
 	{
 		bossName = "merikh the slaughterer",
-		storage = Storage.KillingInTheNameOf.greendjinnTask,
+		storage = Storage.KillingInTheNameOf.GreenDjinnTask,
 		teleportPosition = {x = 32870, y = 31112, z = 4},
 		playerPosition = Position(32876, 31120, 8),
 		bossPosition = Position(32875, 31112, 8),
@@ -364,7 +364,7 @@ local bosses = {
 	},
 	{
 		bossName = "fahim the wise",
-		storage = Storage.KillingInTheNameOf.bluedjinnTask,
+		storage = Storage.KillingInTheNameOf.BlueDjinnTask,
 		teleportPosition = {x = 32815, y = 31119, z = 3},
 		playerPosition = Position(32811, 31121, 2),
 		bossPosition = Position(32811, 31114, 2),

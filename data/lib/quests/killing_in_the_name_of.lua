@@ -225,7 +225,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {800}},
 				{type = "achievement", value = {"Blood-Red Snapper"}},
-				{type = "storage", value = {34100, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.snapperCount, 1, 0}}, -- bossTP, bossCount, startValueTP, startValueCount
+				{type = "storage", value = {34100, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.SnapperCount, 1, 0}}, -- bossTP, bossCount, startValueTP, startValueCount
 				{type = "points", value = {1}}
 			}
 		},
@@ -255,7 +255,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {1500}},
 				{type = "achievement", value = {"No More Hiding"}},
-				{type = "storage", value = {34101, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.hideCount, 1, 0}},
+				{type = "storage", value = {34101, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.HideCount, 1, 0}},
 				{type = "points", value = {2}}
 			}
 		},
@@ -272,7 +272,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {2500}},
 				{type = "achievement", value = {"Rootless Behaviour"}},
-				{type = "storage", value = {34102, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.deathbineCount, 1, 0}},
+				{type = "storage", value = {34102, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.DeathbineCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -302,7 +302,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {4000}},
 				{type = "achievement", value = {"Meat Skewer"}},
-				{type = "storage", value = {34103, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.bloodtuskCount, 1, 0}},
+				{type = "storage", value = {34103, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.BloodtuskCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -385,7 +385,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {12000}},
 				{type = "achievement", value = {"Breaking The Ice"}},
-				{type = "storage", value = {34104, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.shardheadCount, 1, 0}},
+				{type = "storage", value = {34104, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.ShardheadCount, 1, 0}},
 				{type = "points", value = {2}}
 			}
 		},
@@ -419,7 +419,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {10000}},
 				{type = "achievement", value = {"Twisted Mutation"}},
-				{type = "storage", value = {34105, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.esmeraldaCount, 1, 0}},
+				{type = "storage", value = {34105, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.EsmeraldaCount, 1, 0}},
 				{type = "points", value = {2}}
 			}
 		},
@@ -436,7 +436,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {15000}},
 				{type = "achievement", value = {"Crawling Death"}},
-				{type = "storage", value = {34106, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.fleshcrawlerCount, 1, 0}},
+				{type = "storage", value = {34106, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.FleshcrawlerCount, 1, 0}},
 				{type = "points", value = {2}}
 			}
 		},
@@ -505,7 +505,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {12000}},
 				{type = "achievement", value = {"Spareribs for Dinner"}},
-				{type = "storage", value = {34107, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.ribstrideCount, 1, 0}},
+				{type = "storage", value = {34107, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.RibstrideCount, 1, 0}},
 				{type = "points", value = {2}}
 			}
 		},
@@ -522,7 +522,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {15000}},
 				{type = "achievement", value = {"Arachnoise"}},
-				{type = "storage", value = {34108, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.bloodwebCount, 1, 0}},
+				{type = "storage", value = {34108, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.BloodwebCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -556,7 +556,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {15000}},
 				{type = "achievement", value = {"Back into the Abyss"}},
-				{type = "storage", value = {34109, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.thulCount, 1, 0}},
+				{type = "storage", value = {34109, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.ThulCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -573,7 +573,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {20000}},
 				{type = "achievement", value = {"Choking on Her Venom"}},
-				{type = "storage", value = {34110, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.widowCount, 1, 0}},
+				{type = "storage", value = {34110, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.WidowCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -590,7 +590,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"Howly Silence"}},
-				{type = "storage", value = {34111, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.hemmingCount, 1, 0}},
+				{type = "storage", value = {34111, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.HemmingCount, 1, 0}},
 				{type = "points", value = {4}}
 			}
 		},
@@ -608,7 +608,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {25000}},
 				{type = "achievement", value = {"Dream's Over"}},
-				{type = "storage", value = {34112, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.tormentorCount, 1, 0}},
+				{type = "storage", value = {34112, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.TormentorCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -625,7 +625,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {25000}},
 				{type = "achievement", value = {"Scorched Flames"}},
-				{type = "storage", value = {34113, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.flamebornCount, 1, 0}},
+				{type = "storage", value = {34113, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.FlamebornCount, 1, 0}},
 			}
 		},
 		[28] = {
@@ -645,7 +645,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"Zzztill Zzztanding!"}},
-				{type = "storage", value = {34114, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.fazzrahCount, 1, 0}},
+				{type = "storage", value = {34114, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.FazzrahCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -662,7 +662,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {20000}},
 				{type = "achievement", value = {"Stepped on a Big Toe"}},
-				{type = "storage", value = {34115, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.tromphonyteCount, 1, 0}},
+				{type = "storage", value = {34115, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.TromphonyteCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -679,7 +679,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {15000}},
 				{type = "achievement", value = {"Something Smells"}},
-				{type = "storage", value = {34116, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.scuttlerCount, 1, 0}},
+				{type = "storage", value = {34116, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.ScuttlerCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -696,7 +696,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {20000}},
 				{type = "achievement", value = {"Kapow!"}},
-				{type = "storage", value = {34117, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.payneCount, 1, 0}},
+				{type = "storage", value = {34117, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.PayneCount, 1, 0}},
 				{type = "points", value = {2}}
 			}
 		},
@@ -714,7 +714,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"One Less"}},
-				{type = "storage", value = {34118, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.manyCount, 1, 0}},
+				{type = "storage", value = {34118, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.ManyCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -732,7 +732,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"Hissing Downfall"}},
-				{type = "storage", value = {34119, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.noxiousCount, 1, 0}},
+				{type = "storage", value = {34119, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.NoxiousCount, 1, 0}},
 				{type = "points", value = {4}}
 			}
 		},
@@ -750,7 +750,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {40000}},
 				{type = "achievement", value = {"The Serpent's Bride"}},
-				{type = "storage", value = {34120, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.gorgoCount, 1, 0}},
+				{type = "storage", value = {34120, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.GorgoCount, 1, 0}},
 				{type = "points", value = {5}}
 			}
 		},
@@ -768,7 +768,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"Just Cracked Me Up!"}},
-				{type = "storage", value = {34121, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.stonecrackerCount, 1, 0}},
+				{type = "storage", value = {34121, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.StonecrackerCount, 1, 0}},
 				{type = "points", value = {4}}
 			}
 		},
@@ -787,7 +787,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"The Drowned Sea God"}},
-				{type = "storage", value = {34122, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.leviathanCount, 1, 0}},
+				{type = "storage", value = {34122, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.LeviathanCount, 1, 0}},
 				{type = "points", value = {4}}
 			}
 		},
@@ -805,7 +805,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {40000}},
 				{type = "achievement", value = {"The Gates of Hell"}},
-				{type = "storage", value = {34123, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.kerberosCount, 1, 0}},
+				{type = "storage", value = {34123, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.KerberosCount, 1, 0}},
 				{type = "points", value = {5}}
 			}
 		},
@@ -823,7 +823,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"Beautiful Agony"}},
-				{type = "storage", value = {34124, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.ethershreckCount, 1, 0}},
+				{type = "storage", value = {34124, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.EthershreckCount, 1, 0}},
 				{type = "points", value = {5}}
 			}
 		},
@@ -844,7 +844,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"Enter zze Draken!"}},
-				{type = "storage", value = {34125, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.pauperizerCount, 1, 0}},
+				{type = "storage", value = {34125, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.PauperizerCount, 1, 0}},
 				{type = "points", value = {3}}
 			}
 		},
@@ -862,7 +862,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {30000}},
 				{type = "achievement", value = {"King of the Ring"}},
-				{type = "storage", value = {34126, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.bretzecutionerCount, 1, 0}},
+				{type = "storage", value = {34126, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.BretzecutionerCount, 1, 0}},
 				{type = "points", value = {4}}
 			}
 		},
@@ -880,7 +880,7 @@ tasks =
 			rewards = {
 				{type = "exp", value = {50000}},
 				{type = "achievement", value = {"Back from the Dead"}},
-				{type = "storage", value = {34127, Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.zanakephCount, 1, 0}},
+				{type = "storage", value = {34127, Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.ZanakephCount, 1, 0}},
 				{type = "points", value = {6}}
 			}
 		},

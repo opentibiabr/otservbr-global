@@ -1006,7 +1006,7 @@ if not Quests then
 			missions = {
 				[1] = {
 					name = "Paw and Fur - Hunting Elite",
-					storageId = Storage.KillingInTheNameOf.questlogEntry,
+					storageId = Storage.KillingInTheNameOf.QuestLogEntry,
 					missionId = 1081,
 					startValue = 0,
 					endValue = 1,
@@ -1014,13 +1014,13 @@ if not Quests then
 						return string.format(
 							"You joined the 'Paw and Fur - Hunting Elite'. Ask Grizzly Adams for some hunting tasks. You already gained %d points. You currently have %d boss points.",
 							(math.max(player:getStorageValue(POINTSSTORAGE), 0)),
-							(math.max(player:getStorageValue(Storage.KillingInTheNameOf.bossPoints), 0))
+							(math.max(player:getStorageValue(Storage.KillingInTheNameOf.BossPoints), 0))
 						)
 					end
 				},
 				[2] = {
 					name = "Paw and Fur - Rank: Huntsman",
-					storageId = Storage.KillingInTheNameOf.pawandfurRank,
+					storageId = Storage.KillingInTheNameOf.PawAndFurRank,
 					missionId = 1082,
 					startValue = 0,
 					endValue = 1,
@@ -1028,7 +1028,7 @@ if not Quests then
 				},
 				[3] = {
 					name = "Paw and Fur - Rank: Ranger",
-					storageId = Storage.KillingInTheNameOf.pawandfurRank,
+					storageId = Storage.KillingInTheNameOf.PawAndFurRank,
 					missionId = 1083,
 					startValue = 2,
 					endValue = 3,
@@ -1036,7 +1036,7 @@ if not Quests then
 				},
 				[4] = {
 					name = "Paw and Fur - Rank: Big Game Hunter",
-					storageId = Storage.KillingInTheNameOf.pawandfurRank,
+					storageId = Storage.KillingInTheNameOf.PawAndFurRank,
 					missionId = 1084,
 					startValue = 4,
 					endValue = 5,
@@ -1044,7 +1044,7 @@ if not Quests then
 				},
 				[5] = {
 					name = "Paw and Fur - Rank: Trophy Hunter",
-					storageId = Storage.KillingInTheNameOf.pawandfurRank,
+					storageId = Storage.KillingInTheNameOf.PawAndFurRank,
 					missionId = 1085,
 					startValue = 5,
 					endValue = 6,
@@ -1052,7 +1052,7 @@ if not Quests then
 				},
 				[6] = {
 					name = "Paw and Fur - Rank: Elite Hunter",
-					storageId = Storage.KillingInTheNameOf.pawandfurRank,
+					storageId = Storage.KillingInTheNameOf.PawAndFurRank,
 					missionId = 1086,
 					startValue = 7,
 					endValue = 8,
@@ -1068,7 +1068,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 crocodiles.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.crocodileCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.CrocodileCount))
 						end,
 						[1] = "You successfully hunted 300 crocodiles. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 crocodiles."
@@ -1084,7 +1084,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 badgers.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.badgerCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.BadgerCount))
 						end,
 						[1] = "You successfully hunted 300 badgers. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 badgers."
@@ -1100,7 +1100,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 tarantulas.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.tarantulaCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.TarantulaCount))
 						end,
 						[1] = "You successfully hunted 300 tarantulas. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 tarantulas."
@@ -1116,7 +1116,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/150 carniphilas.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.carniphilasCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.CarniphilasCount))
 						end,
 						[1] = "You successfully hunted 150 carniphilas. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 150 carniphilas."
@@ -1132,7 +1132,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/200 stone golems.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.stonegolemCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.StoneGolemCount))
 						end,
 						[1] = "You successfully hunted 200 stone golems. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 200 stone golems."
@@ -1148,7 +1148,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 mammoths.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mammothCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.MammothCount))
 						end,
 						[1] = "You successfully hunted 300 mammoths. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 mammoths."
@@ -1164,7 +1164,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 gnarlhounds.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.gnarlhoundCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.GnarlhoundCount))
 						end,
 						[1] = "You successfully hunted 300 gnarlhounds. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 gnarlhounds."
@@ -1180,7 +1180,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 terramites.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.terramiteCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.TerramiteCount))
 						end,
 						[1] = "You successfully hunted 300 terramites. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 terramites."
@@ -1196,9 +1196,9 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d kongras, %d merlkins and %d sibangs. You are supposed to kill 300 apes in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.kongraCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.merlkinCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.sibangCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.KongraCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.MerlkinCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.SibangCount))
 						end,
 						[1] = "You successfully hunted 300 apes. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 apes."
@@ -1214,7 +1214,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 thornback tortoises.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.thornbacktortoiseCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.ThornbackTortoiseCount))
 						end,
 						[1] = "You successfully hunted 300 thornback tortoises. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 thornback tortoises."
@@ -1230,7 +1230,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 gargoyles.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.gargoyleCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.GargoyleCount))
 						end,
 						[1] = "You successfully hunted 300 gargoyles. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 gargoyles."
@@ -1246,7 +1246,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 ice golems.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.icegolemCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.IceGolemCount))
 						end,
 						[1] = "You successfully hunted 300 ice golems. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 ice golems."
@@ -1262,11 +1262,11 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already killed %d constrictor scouts, %d hydromancer scouts, %d mantassin scouts, %d pincher scouts and %d predator scouts. You are supposed to kill 400 in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorscoutCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarahydromancerscoutCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaramantassinscoutCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapincherscoutCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapredatorscoutCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraConstrictorScoutCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraHydromancerScoutCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaramMntassinScoutCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraPincherScoutCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraPredatorScoutCount))
 						end,
 						[1] = "You successfully hunted 400 quara scouts. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 400 quara scouts."
@@ -1282,7 +1282,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/400 mutated rats.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mutatedratCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.MutatedRatCount))
 						end,
 						[1] = "You successfully hunted 400 mutated rats. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 400 mutated rats."
@@ -1298,7 +1298,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/250 ancient scarabs.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.ancientscarabCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.AncientScarabCount))
 						end,
 						[1] = "You successfully hunted 250 ancient scarabs. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 250 ancient scarabs."
@@ -1314,7 +1314,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 wyverns.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.wyvernCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.WyvernCount))
 						end,
 						[1] = "You successfully hunted 300 wyverns. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 wyverns."
@@ -1330,7 +1330,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 lancer beetles.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.lancerbeetleCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.LancerBeetleCount))
 						end,
 						[1] = "You successfully hunted 300 lancer beetles. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 lancer beetles."
@@ -1346,7 +1346,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/400 wailing widows.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.wailingwidowCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.WailingWidowCount))
 						end,
 						[1] = "You successfully hunted 400 wailing widows. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 400 wailing widows."
@@ -1362,7 +1362,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/250 killer caimans.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.killercaimanCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.KillerCaimanCount))
 						end,
 						[1] = "You successfully hunted 250 killer caimans. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 250 killer caimans."
@@ -1378,7 +1378,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 bonebeasts.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.bonebeastCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.BonebeastCount))
 						end,
 						[1] = "You successfully hunted 300 bonebeasts. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 bonebeasts."
@@ -1394,7 +1394,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 crystal spiders.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.crystalspiderCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.CrystalSpiderCount))
 						end,
 						[1] = "You successfully hunted 300 crystal spiders. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 crystal spiders."
@@ -1410,7 +1410,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 mutated tigers.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mutatedtigerCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.MutatedTigerCount))
 						end,
 						[1] = "You successfully hunted 300 mutated tigers. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 mutated tigers."
@@ -1426,11 +1426,11 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already killed %d constrictors, %d hydromancers, %d mantassins, %d pinchers and %d predators. You are supposed to kill 600 in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaraconstrictorCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarahydromancerCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quaramantassinCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapincherCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.quarapredatorCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraConstrictorCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraHydromancerCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraMantassinCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraPincherCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.QuaraPredatorCount))
 						end,
 						[1] = "You successfully hunted 600 underwater quara. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 600 underwater quara."
@@ -1446,7 +1446,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/500 giant spiders.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.giantspiderCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.GiantSpiderCount))
 						end,
 						[1] = "You successfully hunted 500 giant spiders. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 500 giant spiders."
@@ -1462,7 +1462,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/300 werewolves.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.werewolveCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.WerewolveCount))
 						end,
 						[1] = "You successfully hunted 300 werewolves. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 300 werewolves."
@@ -1478,8 +1478,8 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d nightmares and %d nightmare scions. You are supposed to kill 400 in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmareCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.nightmarescionCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.NightmareCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.NightmareScionCount))
 						end,
 						[1] = "You successfully hunted 400 nightmares. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 400 nightmares."
@@ -1495,7 +1495,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/600 hellspawns.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.hellspawnCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.HellspawnCount))
 						end,
 						[1] = "You successfully hunted 600 hellspawns. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 600 hellspawns."
@@ -1511,11 +1511,11 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d Chosen, %d Dragon Priest, %d High Guard, %d Legionnaire and %d Zaogun. You are supposed to kill 800 high class lizards in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardchosenCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizarddragonpriestCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardhighguardCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardlegionnaireCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.lizardzaogunCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.LizardChosenCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.LizardDragonPriestCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.LizardHighGuardCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.LizardLegionnaireCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.LizardZaogunCount))
 						end,
 						[1] = "You successfully hunted 800 high class lizards. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 800 high class lizards."
@@ -1531,7 +1531,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/600 stampors.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.stamporCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.StamporCount))
 						end,
 						[1] = "You successfully hunted 600 stampors. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 600 stampors."
@@ -1547,7 +1547,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/500 brimstone bugs.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.brimstonebugCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.BrimstoneBugCount))
 						end,
 						[1] = "You successfully hunted 500 brimstone bugs. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 500 brimstone bugs."
@@ -1563,7 +1563,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/400 mutated bats.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.mutatedbatCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.MutatedBatCount))
 						end,
 						[1] = "You successfully hunted 400 mutated bats. If you want to you may complete this task again.",
 						[2] = "You succesfully hunted 400 mutated bats."
@@ -1579,7 +1579,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/650 hydras.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.hydraCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.HydraCount))
 						end,
 						[1] = "You successfully hunted 650 hydras. If you want to you may complete this task again."
 					}
@@ -1594,7 +1594,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/800 serpent spawns.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.serpentspawnCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.SerpentSpawnCount))
 						end,
 						[1] = "You successfully hunted 800 serpent spawns. If you want to you may complete this task again."
 					}
@@ -1609,7 +1609,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/500 medusae.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.medusaCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.MedusaCount))
 						end,
 						[1] = "You successfully hunted 500 medusae. If you want to you may complete this task again."
 					}
@@ -1624,7 +1624,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/700 behemoths.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.behemothCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.BehemothCount))
 						end,
 						[1] = "You successfully hunted 700 behemoths. If you want to you may complete this task again."
 					}
@@ -1639,8 +1639,8 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d sea serpents and %d young sea serpents. You are supposed to kill 900 in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.seaserpentCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.youngseaserpentCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.SeaSerpentCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.YoungSeaSerpentCount))
 						end,
 						[1] = "You successfully hunted 900 sea serpents. If you want to you may complete this task again."
 					}
@@ -1655,7 +1655,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/250 hellhounds.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.hellhoundCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.HellhoundCount))
 						end,
 						[1] = "You successfully hunted 250 hellhounds. If you want to you may complete this task again."
 					}
@@ -1670,7 +1670,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/500 ghastly dragons.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.ghastlydragonCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.GhastlyDragonCount))
 						end,
 						[1] = "You successfully hunted 500 ghastly dragons. If you want to you may complete this task again."
 					}
@@ -1685,10 +1685,10 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d draken abomination, %d draken elite, %d draken spellweaver and %d draken warmaster. You are supposed to kill 900 drakens in total.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenabominationCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakeneliteCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenspellweaverCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.drakenwarmasterCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.DrakenAbominationCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.DrakenEliteCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.DrakenSpellweaverCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.DrakenWarmasterCount))
 						end,
 						[1] = "You successfully hunted 900 drakens. If you want to you may complete this task again."
 					}
@@ -1703,7 +1703,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/650 destroyers.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.destroyerCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.DestroyerCount))
 						end,
 						[1] = "You successfully hunted 650 destroyers. If you want to you may complete this task again."
 					}
@@ -1718,7 +1718,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/400 undead dragons.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.undeaddragonCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.UndeadDragonCount))
 						end,
 						[1] = "You successfully hunted 400 undead dragons. If you want to you may complete this task again."
 					}
@@ -1733,7 +1733,7 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("You already hunted %d/6666 demons.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.demonCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.DemonCount))
 						end,
 						[1] = "You successfully hunted 6666 demons."
 					}
@@ -2100,7 +2100,7 @@ if not Quests then
 				},
 				[79] = { -- Others
 					name = "The Marid: Green Djinns",
-					storageId = Storage.KillingInTheNameOf.greendjinnTask,
+					storageId = Storage.KillingInTheNameOf.GreenDjinnTask,
 					missionId = 10159,
 					startValue = 0,
 					endValue = 3,
@@ -2108,8 +2108,8 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("Gabel sent you to kill 500 green djinns or Efreet. You have killed %d green djinns and %d Efreet so far.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.greendjinnCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.efreetCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.GreenDjinnCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.EfreetCount))
 						end,
 						[1] = "If you dare, you can try finding and fighting Merikh the Slaughterer.",
 						[2] = "You faced Merikh the Slaughterer. Go back to Gabel.",
@@ -2118,7 +2118,7 @@ if not Quests then
 				},
 				[80] = {
 					name = "The Efreet: Blue Djinns",
-					storageId = Storage.KillingInTheNameOf.bluedjinnTask,
+					storageId = Storage.KillingInTheNameOf.BlueDjinnTask,
 					missionId = 10160,
 					startValue = 0,
 					endValue = 3,
@@ -2126,8 +2126,8 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("Malor sent you to kill 500 blue djinns or Marid. You have killed %d blue djinns and %d Marid so far.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bluedjinnCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.maridCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BlueDjinnCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.MaridCount))
 						end,
 						[1] = "If you dare, you can try finding and fighting Fahim the wise.",
 						[2] = "You faced Fahim the wise. Go back to Malor.",
@@ -2136,7 +2136,7 @@ if not Quests then
 				},
 				[81] = {
 					name = "Meriana Rebels: Pirates",
-					storageId = Storage.KillingInTheNameOf.pirateTask,
+					storageId = Storage.KillingInTheNameOf.PirateTask,
 					missionId = 10161,
 					startValue = 0,
 					endValue = 3,
@@ -2144,10 +2144,10 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("Kill 3000 pirates in total to help the rebels on Meriana. So far, you have killed %d Marauders, %d Cutthroats, %d Buccaneers and %d Corsairs.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratemarauderCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratecutthroadCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratebuccaneerCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.piratecorsairCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PirateMarauderCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PirateCutthroadCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PirateBuccaneerCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PirateCorsairCount))
 						end,
 						[1] = "You succesfully killed 3000 pirates. Striker sent you to find the secret hideout of the pirate leaders on Nargor and vanquish whoever you find inside.",
 						[2] = "You discovered the secret hideout of a pirate leader. Talk to Ray Striker if you like.",
@@ -2164,10 +2164,10 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("Budrik asked you to kill 5000 minotaurs for him. You already killed %d minotaurs, %d minotaur guards, %d minotaur mages and %d minotaur archers.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurguardCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurmageCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.minotaurarcherCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.MinotaurCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.MinotaurGuardCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.MinotaurMageCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.MinotaurArcherCount))
 						end,
 						[1] = "Budrik found the hideout of The Horned Fox! You have a single chance of bringing him down. Go for it.",
 						[2] = "You have slain 5000 minotaurs and fought The Horned Fox for Budrik and the whole dwarven kind."
@@ -2183,29 +2183,29 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("Lugri sent you to kill 4000 necromancers, though he said 'no reward'. So far you killed %d Necromancers, %d Priestesses, %d Blood Priests, %d Blood Hands and %d Shadow Pupils.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.priestessCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodpriestCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodhandCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.shadowpupilCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.NecromancerCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PriestessCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodPriestCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodHandCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.ShadowPupilCount))
 						end,
 						[1] = "If you dare, you can try finding and fighting Necropharus in his Halls of Sacrifice, deep under Drefia. Note that this will be the only time you're allowed to enter his room, so be well prepared.",
 						[2] = "You faced Necropharus. Go back to Lugri if you like.",
 						[3] =
 						function(player)
 							return string.format("Lugri sent you to kill 1000 necromancers. So far you killed %d Necromancers, %d Priestesses, %d Blood Priests, %d Blood Hands and %d Shadow Pupils.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.priestessCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodpriestCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodhandCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.shadowpupilCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.NecromancerCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PriestessCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodPriestCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodHandCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.ShadowPupilCount))
 						end,
 						[4] = "You've finished this task - for now. If you want to kill the different necromancers and priestesses again for an experience and money bonus, talk to Lugri about this task."
 					}
 				},
 				[84] = {
 					name = "Edron City: Trolls",
-					storageId = Storage.KillingInTheNameOf.trollTask,
+					storageId = Storage.KillingInTheNameOf.TrollTask,
 					missionId = 10164,
 					startValue = 0,
 					endValue = 1,
@@ -2213,15 +2213,15 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("Daniel Steelsoul sent you to kill 100 trolls, preferably west of Edron city. You have killed %d trolls and %d troll champions so far.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.trollCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.trollchampionCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.TrollCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.TrollChampionCount))
 						end,
 						[1] = "You succesfully killed 100 trolls. As long as you are level 20 or lower, you may repeat this task by talking to Daniel Steelsoul about it."
 					}
 				},
 				[85] = {
 					name = "Edron City: Goblins",
-					storageId = Storage.KillingInTheNameOf.goblinTask,
+					storageId = Storage.KillingInTheNameOf.GoblinTask,
 					missionId = 10165,
 					startValue = 0,
 					endValue = 1,
@@ -2229,63 +2229,44 @@ if not Quests then
 						[0] =
 						function(player)
 							return string.format("Daniel Steelsoul sent you to kill 150 goblins, preferably west of Edron city. You have killed %d goblins so far, %d goblin scavengers and %d goblin assassins.",
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinscavengerCount),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.goblinassassinCount))
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.GoblinCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.GoblinScavengerCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.GoblinAssassinCount))
 						end,
 						[1] = "You succesfully killed 150 goblins. As long as you are level 20 or lower, you may repeat this task by talking to Daniel Steelsoul about it."
 					}
 				},
 				[86] = {
 					name = "Edron City: Rotworms",
-					storageId = Storage.KillingInTheNameOf.rotwormTask,
+					storageId = Storage.KillingInTheNameOf.RotwormTask,
 					missionId = 10166,
 					startValue = 0,
 					endValue = 1,
 					states = {
 						[0] =
 						function(player)
-							return string.format("Daniel Steelsoul sent you to kill %d %s, preferably in their tunnels south of Edron city. You have killed %d %s and %d %s so far.",
-							tasks.DanielSteelsoul[3].killsRequired,
-							tasks.DanielSteelsoul[3].raceName:lower(),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.rotwormCount),
-							tasks.DanielSteelsoul[3].creatures[1]:gsub("m", "ms"),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.carrionwormnCount),
-							tasks.DanielSteelsoul[3].creatures[2]:gsub("m", "ms"))
+							return string.format("Daniel Steelsoul sent you to kill 300 rotworms, preferably in their tunnels south of Edron city. You have killed %d rotworms and %d carrion worms so far.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.RotwormCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.CarrionWormnCount))
 						end,
-						[1] =
-						function(player)
-							return string.format("You succesfully killed %d %s. As long as you are level 40 or lower, you may repeat this task by talking to Daniel Steelsoul about it.",
-							tasks.DanielSteelsoul[3].killsRequired,
-							tasks.DanielSteelsoul[3].raceName:lower())
-						end
+						[1] = "You succesfully killed 300 rotworms. As long as you are level 40 or lower, you may repeat this task by talking to Daniel Steelsoul about it."
 					}
 				},
 				[87] = {
 					name = "Edron City: Cyclops",
-					storageId = Storage.KillingInTheNameOf.cyclopsTask,
+					storageId = Storage.KillingInTheNameOf.CyclopsTask,
 					missionId = 10167,
 					startValue = 0,
 					endValue = 1,
 					states = {
 						[0] =
 						function(player)
-							return string.format("Daniel Steelsoul sent you to kill %d %s, preferably in Cyclopolis north of Edron city. You have killed %d %s, %d %s and %d %s so far.",
-							tasks.DanielSteelsoul[4].killsRequired,
-							tasks.DanielSteelsoul[4].raceName:lower(),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopsCount),
-							tasks.DanielSteelsoul[4].creatures[1],
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopsdroneCount),
-							tasks.DanielSteelsoul[4].creatures[2]:sub(9):gsub("e", "es"),
-							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.cyclopssmithCount),
-							tasks.DanielSteelsoul[4].creatures[3]:sub(9):gsub("h", "hs"))
+							return string.format("Daniel Steelsoul sent you to kill 500 cyclops, preferably in Cyclopolis north of Edron city. You have killed %d cyclops, %d drones and %d smiths so far.",
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.CyclopsCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.CyclopsDroneCount),
+							player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.CyclopsSmithCount))
 						end,
-						[1] =
-						function(player)
-							return string.format("You succesfully killed %d %s. As long as you are level 60 or lower, you may repeat this task by talking to Daniel Steelsoul about it.",
-							tasks.DanielSteelsoul[4].killsRequired,
-							tasks.DanielSteelsoul[4].raceName:lower())
-						end
+						[1] = "You succesfully killed 500 cyclops. As long as you are level 60 or lower, you may repeat this task by talking to Daniel Steelsoul about it."
 					}
 				},
 			}

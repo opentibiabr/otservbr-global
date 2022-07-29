@@ -94,14 +94,14 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 7)
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 0 then
-			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount) >= 4000 then
+			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.NecromancerCount) >= 4000 then
 				npcHandler:say({
-					"You've slain a mere "..player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount).." necromancers and priestesses. Still, you've shown some dedication. Maybe that means you can kill one of those so-called 'leaders' too. ...",
+					"You've slain a mere "..player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.NecromancerCount).." necromancers and priestesses. Still, you've shown some dedication. Maybe that means you can kill one of those so-called 'leaders' too. ...",
 					"Deep under Drefia, a necromancer called Necropharus is hiding in the Halls of Sacrifice. I'll place a spell on you with which you will be able to pass his weak protective gate. ...",
 					"Know that this will be your only chance to enter his room. If you leave it or die, you won't be able to return. We'll see if you really dare enter those halls."
 				}, npc, creature)
 				player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, 1)
-				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.bossKillCount.necropharusCount, 0)
+				player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.BossKillCount.NecropharusCount, 0)
 			else
 				npcHandler:say("Come back when you have slain 4000 necromancers and priestesses!", npc, creature)
 			end
@@ -112,7 +112,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, 4)
 		elseif player:getStorageValue(Storage.KillingInTheNameOf.LugriNecromancers) == 3 then
-			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount) >= 1000 then
+			if player:getStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.NecromancerCount) >= 1000 then
 				npcHandler:say("Good job!", npc, creature)
 				player:addExperience(40000, true)
 				player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, 4)
@@ -173,21 +173,21 @@ local function creatureSayCallback(npc, creature, type, message)
 				"What is left are mainly pseudo-dark pretenders, the old wisdom and power being far beyond their grasp. They think they have the right to tap that dark power, but they don't. ...",
 				"I want you to eliminate them. As many as you can. All of the upstart necromancer orders, and those priestesses. And as I said, don't expect a reward - this is what has to be done to cleanse Tibia of its false dark prophets."}, npc, creature)
 			player:setStorageValue(JOIN_STOR, 1)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.priestessCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodpriestCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodhandCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.shadowpupilCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.NecromancerCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.NecromancerCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PriestessCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodPriestCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodHandCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.ShadowPupilCount, 0)
 			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, 0)
 		elseif npcHandler:getTopic(playerId) == 8 then
 			npcHandler:say("Good. Then go.", npc, creature)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.monsterKillCount.necromancerCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.necromancerCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.priestessCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodpriestCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.bloodhandCount, 0)
-			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.altKillCount.shadowpupilCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.MonsterKillCount.NecromancerCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.NecromancerCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.PriestessCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodPriestCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.BloodHandCount, 0)
+			player:setStorageValue(Storage.Quest.U8_5.KillingInTheNameOf.AltKillCount.ShadowPupilCount, 0)
 			player:setStorageValue(Storage.KillingInTheNameOf.LugriNecromancers, 3)
 		end
 	elseif MsgContains(message, "no") then
