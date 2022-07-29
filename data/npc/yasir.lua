@@ -591,7 +591,7 @@ npcConfig.shop = {
 	{ itemName = "werewolf fur", clientId = 10317, sell = 380 },
 	{ itemName = "white piece of cloth", clientId = 5909, sell = 100 },
 	{ itemName = "widow's mandibles", clientId = 10411, sell = 110 },
-	{ itemName = "wild flowers", clientId = 25684, sell = 120 },
+	{ itemName = "wild flowers", clientId = 25691, sell = 120 },
 	{ itemName = "wimp tooth chain", clientId = 17847, sell = 120 },
 	{ itemName = "winged tail", clientId = 10313, sell = 800 },
 	{ itemName = "winter wolf fur", clientId = 10295, sell = 20 },
