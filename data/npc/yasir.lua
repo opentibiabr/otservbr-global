@@ -294,7 +294,7 @@ npcConfig.shop = {
 	{ itemName = "hazardous heart", clientId = 34140, sell = 5000 },
 	{ itemName = "hazardous robe", clientId = 34147, sell = 3000 },
 	{ itemName = "head", clientId = 33937, sell = 3500 },
-	{ itemName = "heaven blossom", clientId = 3657, sell = 50 },
+	{ itemName = "heaven blossom", clientId = 5921, sell = 50 },
 	{ itemName = "hellhound slobber", clientId = 9637, sell = 500 },
 	{ itemName = "hellspawn tail", clientId = 10304, sell = 475 },
 	{ itemName = "hemp rope", clientId = 20206, sell = 350 },
