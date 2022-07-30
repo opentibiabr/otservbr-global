@@ -140,7 +140,7 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 
 npcConfig.shop = {
-	{ itemName = "ankh", clientId = 3214, sell = 100 },
+	{ itemName = "ankh", clientId = 3077, sell = 100 },
 	{ itemName = "dragon necklace", clientId = 3085, buy = 1000, sell = 100, count = 200 },
 	{ itemName = "dwarven ring", clientId = 3097, buy = 2000, sell = 100 },
 	{ itemName = "energy ring", clientId = 3051, buy = 2000, sell = 100 },
