@@ -811,6 +811,10 @@ QuestDoorAction = {
 			{x = 33366, y = 31343, z = 7},
 			{x = 33363, y = 31346, z = 7}
 		}
+	},
+	[Storage.Quest.U12_20.GraveDanger.KingZelosDoor] = {
+		itemId = false,
+		itemPos = {{x = 32173, y = 31922, z = 8}}
 	}
 }
 

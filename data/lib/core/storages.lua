@@ -2696,8 +2696,25 @@ Storage = {
 					Darashia = 46860,
 					Thais = 46861,
 					Orclands = 46862,
-					IceIslands = 46863},
-				Cobra = 46864},
+					IceIslands = 46863
+				},
+				Bosses = {
+					BaelocNictrosTimer = 46865,
+					BaelocNictrosKilled = 46866,
+					CountVlarkorthTimer = 46867,
+					CountVlarkorthKilled = 46868,
+					DukeKruleTimer = 46869,
+					DukeKruleKilled = 46870,
+					EarlOsamTimer = 46871,
+					EarlOsamKilled = 46872,
+					LordAzaramTimer = 46873,
+					LordAzaramKilled = 46874,
+					KingZelosDoor = 46875,
+					KingZelosTimer = 46876,
+					KingZelosKilled = 46877,
+				}
+				Cobra = 46864
+			},
 			HandOfTheInquisitionOutfits = {},
 			-- Kilmaresh = {}, done earlier in the file
 		},
