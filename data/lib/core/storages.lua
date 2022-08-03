@@ -2106,14 +2106,14 @@ Storage = {
 			JumpTimer = 41841},
 			VampireHunter = {},
 		},
-		U8_4 = { -- update 8.4 - Reserved Storages 41901 - 42150
+		U8_4 = { -- update 8.4 - Reserved Storages 41901 - 42145
 			BloodBrothers = {},
 			InServiceOfYalahar = {},
 			TheHiddenCityOfBeregar = {},
 			TopOfTheCity = {},
 			YalaharianOutfits = {},
 		},
-		U8_5 = { -- update 8.5 - Reserved Storages 42151 - 42550
+		U8_5 = { -- update 8.5 - Reserved Storages 42146 - 42550
 			Braindeath = {},
 			DarashiaDragon = {},
 			HotCuisine = {},
