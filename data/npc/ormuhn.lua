@@ -260,7 +260,7 @@ keywordHandler:addKeyword({'spells'}, StdModule.say,
 	}
 )
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -98,7 +98,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "May Daraman be with you on your travels
 npcHandler:setMessage(MESSAGE_WALKAWAY, "May Daraman be with you on your travels.")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

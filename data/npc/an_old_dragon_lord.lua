@@ -75,7 +75,7 @@ local function greetCallback(npc, creature)
 end
 
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

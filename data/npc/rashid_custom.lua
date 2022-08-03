@@ -274,7 +274,7 @@ end
 
 npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "abyss hammer", clientId = 7414, sell = 20000 },

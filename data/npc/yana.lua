@@ -191,10 +191,16 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif MsgContains(message, "tokens") then
 		npc:openShopWindow(creature)
 		npcHandler:say("If you have any gold tokens with you, let's have a look! These are my offers.", npc, creature)
-	elseif products[message:lower()] then
-		npcHandler:say({"You have chosen "..message..". {Basic}, {intricate} or {powerful}?"}, npc, creature)
-		answerType[playerId] = message
-		npcHandler:setTopic(playerId, 2)
+	elseif MsgContains(message, "trade") then
+		npcHandler:say({"I have creature products for the imbuements {strike}, {vampirism} and {void}. Make your choice, please!"}, npc, creature)
+		npcHandler:setTopic(playerId, 1)
+	elseif npcHandler:getTopic(playerId) == 1 then
+		local imbueType = products[message:lower()]
+		if imbueType then
+			npcHandler:say({"You have chosen "..message..". {Basic}, {intricate} or {powerful}?"}, npc, creature)
+			answerType[playerId] = message
+			npcHandler:setTopic(playerId, 2)
+		end
 	elseif npcHandler:getTopic(playerId) == 2 then
 		local imbueLevel = products[answerType[playerId]][message:lower()]
 		if imbueLevel then
@@ -235,14 +241,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-keywordHandler:addKeyword({'trade'}, StdModule.say, {npcHandler = npcHandler, text = "I have creature products for the imbuements {strike}, {vampirism} and {void}. Make your choice, please!"})
-
 npcHandler:setCallback(CALLBACK_SET_INTERACTION, onAddFocus)
 npcHandler:setCallback(CALLBACK_REMOVE_INTERACTION, onReleaseFocus)
 
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, false)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

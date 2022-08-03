@@ -84,7 +84,7 @@ keywordHandler:addKeyword({'fly'}, StdModule.say, {npcHandler = npcHandler, text
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

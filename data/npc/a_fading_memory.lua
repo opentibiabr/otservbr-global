@@ -52,7 +52,7 @@ end
 
 npcHandler:setMessage(MESSAGE_GREET, 'Oh...')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

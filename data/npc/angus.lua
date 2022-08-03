@@ -691,7 +691,7 @@ end
 npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 npcConfig.shop = {
 	{ itemName = "atlas", clientId = 6108, buy = 150 },
 	{ itemName = "botanist s container", clientId = 4867, buy = 500 },

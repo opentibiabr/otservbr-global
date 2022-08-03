@@ -251,10 +251,11 @@ if NpcHandler == nil then
 	end
 
 	-- Adds a module to this npc handler and inits it
-	function NpcHandler:addModule(module)
+	-- Variables "greetCallback, farewellCallback and tradeCallback" are boolean value, true by default
+	function NpcHandler:addModule(module, greetCallback, farewellCallback, tradeCallback)
 		if self.modules ~= nil then
 			self.modules[#self.modules + 1] = module
-			module:init(self)
+			module:init(self, greetCallback, farewellCallback, tradeCallback)
 		end
 	end
 

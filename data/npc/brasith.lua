@@ -59,7 +59,7 @@ keywordHandler:addKeyword({'tree'}, StdModule.say, {npcHandler = npcHandler, tex
 npcHandler:setMessage(MESSAGE_GREET, "Ashari, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Asha Thrazi.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Asha Thrazi.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "banana", clientId = 3587, buy = 2 },

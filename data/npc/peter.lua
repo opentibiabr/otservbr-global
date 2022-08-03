@@ -67,15 +67,31 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "pass")) then
 		npcHandler:say("You can {pass} either to the {Factory Quarter} or {Trade Quarter}. Which one will it be?", npc, creature)
+		npcHandler:setTopic(playerId, 1)
+	elseif(MsgContains(message, "factory")) then
+		if(npcHandler:getTopic(playerId) == 1) then
+			local destination = Position(32859, 31302, 7)
+			player:teleportTo(destination)
+			destination:sendMagicEffect(CONST_ME_TELEPORT)
+			npcHandler:setTopic(playerId, 0)
+		end
+	elseif(MsgContains(message, "trade")) then
+		if(npcHandler:getTopic(playerId) == 1) then
+			local destination = Position(32854, 31302, 7)
+			player:teleportTo(destination)
+			destination:sendMagicEffect(CONST_ME_TELEPORT)
+			npcHandler:setTopic(playerId, 0)
+		end
 	end
 	return true
 end
 
+-- Travel without the need to say "pass", remove or comment this two lines if you want to keep the rpg
 keywordHandler:addKeyword({'factory'}, StdModule.travel, {npcHandler = npcHandler, destination = Position(32859, 31302, 7)})
 keywordHandler:addKeyword({'trade'}, StdModule.travel, {npcHandler = npcHandler, destination = Position(32854, 31302, 7)})
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, false)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

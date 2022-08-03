@@ -46,7 +46,7 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "great health potion", clientId = 239, buy = 300 },

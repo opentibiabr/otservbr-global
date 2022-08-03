@@ -46,7 +46,7 @@ npcType.onThink = function(npc, interval)
 	npcHandler:onThink(npc, interval)
 end
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "banana", clientId = 3587, buy = 2 },

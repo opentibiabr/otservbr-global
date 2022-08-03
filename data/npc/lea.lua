@@ -60,7 +60,7 @@ keywordHandler:addKeyword({'arcane'}, StdModule.say, {npcHandler = npcHandler, t
 
 npcHandler:setMessage(MESSAGE_GREET, "Greetings, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Take care on your journeys.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

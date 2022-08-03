@@ -268,9 +268,17 @@ if Modules == nil then
 		return obj
 	end
 
-	-- Inits the module and associates handler to it.
-	function FocusModule:init(handler)
+	-- Inits the module and associates handler to it
+	-- Variables "greetCallback, farewellCallback and tradeCallback" are boolean value, true by default
+	function FocusModule:init(handler, greetCallback, farewellCallback, tradeCallback)
 		self.npcHandler = handler
+		if greetCallback == nil then
+			Spdlog.warn("[FocusModule:init] - Greet callback is nil, setting to true")
+			greetCallback = true
+		end
+		if greetCallback == false then
+			return false
+		end
 		for i, word in pairs(FOCUS_GREETWORDS) do
 			local obj = {}
 			obj[#obj + 1] = word
@@ -278,6 +286,13 @@ if Modules == nil then
 			handler.keywordHandler:addKeyword(obj, FocusModule.onGreet, {module = self})
 		end
 
+		if farewellCallback == nil then
+			Spdlog.warn("[FocusModule:init] - Farewell callback is nil, setting to true")
+			farewellCallback = true
+		end
+		if farewellCallback == false then
+			return false
+		end
 		for i, word in pairs(FOCUS_FAREWELLWORDS) do
 			local obj = {}
 			obj[#obj + 1] = word
@@ -285,6 +300,13 @@ if Modules == nil then
 			handler.keywordHandler:addKeyword(obj, FocusModule.onFarewell, {module = self})
 		end
 
+		if tradeCallback == nil then
+			Spdlog.warn("[FocusModule:init] - Trade callback is nil, setting to true")
+			tradeCallback = true
+		end
+		if tradeCallback == false then
+			return false
+		end
 		for i, word in pairs(FOCUS_TRADE_MESSAGE) do
 			local obj = {}
 			obj[#obj + 1] = word
