@@ -526,12 +526,12 @@ if NpcHandler == nil then
 				local message_female = self:parseMessage(msg_female, parseInfo)
 				if message_female ~= message_male then
 					if playerSex == PLAYERSEX_FEMALE then
-						npc:sayWithDelay(npc:getId(), message_female, TALKTYPE_SAY, 1000, self.eventDelayedSay)
+						npc:sayWithDelay(npc:getId(), message_female, TALKTYPE_SAY, self.talkDelay, self.eventDelayedSay)
 					else
-						npc:sayWithDelay(npc:getId(), message_male, TALKTYPE_SAY, 1000, self.eventDelayedSay)
+						npc:sayWithDelay(npc:getId(), message_male, TALKTYPE_SAY, self.talkDelay, self.eventDelayedSay)
 					end
 				elseif message ~= "" then
-					npc:sayWithDelay(npc:getId(), message, TALKTYPE_SAY, 1000, self.eventDelayedSay)
+					npc:sayWithDelay(npc:getId(), message, TALKTYPE_SAY, self.talkDelay, self.eventDelayedSay)
 				end
 				self:resetNpc(player)
 				self:removeInteraction(npc, player)
