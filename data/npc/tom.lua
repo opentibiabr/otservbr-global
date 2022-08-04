@@ -268,7 +268,7 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'D\'oh?')
 npcHandler:setMessage(MESSAGE_SENDTRADE, 'Sure, check what I buy.')
 
-npcHandler:addModule(FocusModule:new(), true, true, true)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "antlers", clientId = 10297, sell = 5 },

@@ -55,7 +55,7 @@ end
 npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
-npcHandler:addModule(FocusModule:new(), true, true, true)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bread", clientId = 3600, buy = 4 },

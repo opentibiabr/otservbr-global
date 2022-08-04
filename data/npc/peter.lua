@@ -91,7 +91,7 @@ keywordHandler:addKeyword({'factory'}, StdModule.travel, {npcHandler = npcHandle
 keywordHandler:addKeyword({'trade'}, StdModule.travel, {npcHandler = npcHandler, destination = Position(32854, 31302, 7)})
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new(), true, true, false)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, false)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

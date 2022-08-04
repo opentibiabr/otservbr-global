@@ -58,7 +58,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Can I interest you in a trip to {Vengoth}?
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye then.")
 
-npcHandler:addModule(FocusModule:new(), true, true, true)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

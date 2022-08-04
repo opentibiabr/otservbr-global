@@ -93,7 +93,7 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_GREET, "Greetings and Banor be with you, |PLAYERNAME|!")
 npcHandler:setMessage(MESSAGE_FAREWELL, "PRAISE TO BANOR!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "PRAISE TO BANOR!")
-npcHandler:addModule(FocusModule:new(), true, true, true)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

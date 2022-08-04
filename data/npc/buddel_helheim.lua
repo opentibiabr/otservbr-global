@@ -74,7 +74,7 @@ keywordHandler:addKeyword({'trip'}, StdModule.say, {npcHandler = npcHandler, tex
 keywordHandler:addKeyword({'go'}, StdModule.say, {npcHandler = npcHandler, text = "Where are we at the moment? Is this Svargrond? Ahh yes!*HICKS* Where do you want to go?"})
 keywordHandler:addKeyword({'sail'}, StdModule.say, {npcHandler = npcHandler, text = "Where are we at the moment? Is this Svargrond? Ahh yes!*HICKS* Where do you want to go?"})
 
-npcHandler:addModule(FocusModule:new(), true, true, true)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "compass", clientId = 10302, sell = 45 }

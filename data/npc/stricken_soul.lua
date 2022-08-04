@@ -47,7 +47,7 @@ end
 
 keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = "Esperando Script."})
 npcHandler:setMessage(MESSAGE_GREET, "Greetings, |PLAYERNAME|.")
-npcHandler:addModule(FocusModule:new(), true, true, true)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)
