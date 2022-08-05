@@ -404,6 +404,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	message = message:gsub("(%l)(%w*)", function(a,b) return string.upper(a)..b end)
+
 	if MsgContains("join", message) or MsgContains("yes", message) and npcHandler:getTopic(playerId) == 0 and player:getStorageValue(Storage.KillingInTheNameOf.QuestLogEntry) ~= 0 then
 		player:setStorageValue(JOIN_STOR, 1)
 		player:setStorageValue(Storage.KillingInTheNameOf.BossPoints, 0)
@@ -927,7 +928,7 @@ end
 npcHandler:setMessage(MESSAGE_FAREWELL, "Happy hunting, old chap!")
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)
