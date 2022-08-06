@@ -65,8 +65,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.InServiceofYalahar.Mission02, player:getStorageValue(Storage.InServiceofYalahar.Mission02) + 1) -- StorageValue for Questlog "Mission 02: Watching the Watchmen"
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif(MsgContains(message, "pass")) then
-		npcHandler:say("You can {pass} either to the {Factory Quarter} or {Trade Quarter}. Which one will it be?", npc, creature)
+	elseif isInArray({"pass", "gate"}, message:lower()) then
+		npcHandler:say("Pass the gate? If it must be. Are you headed for the {factory} or the former {trade} quarter?", npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif(MsgContains(message, "factory")) then
 		if(npcHandler:getTopic(playerId) == 1) then
@@ -75,17 +75,44 @@ local function creatureSayCallback(npc, creature, type, message)
 			destination:sendMagicEffect(CONST_ME_TELEPORT)
 			npcHandler:setTopic(playerId, 0)
 		end
-	elseif(MsgContains(message, "trade")) then
-		if(npcHandler:getTopic(playerId) == 1) then
-			local destination = Position(32854, 31302, 7)
-			player:teleportTo(destination)
-			destination:sendMagicEffect(CONST_ME_TELEPORT)
-			npcHandler:setTopic(playerId, 0)
-		end
+	else
+		npcHandler:say("Listen, I don't get paid enough to chat with citizens. Move on.", npc, creature)
 	end
 	return true
 end
 
+local function onTradeRequest(npc, creature)
+	local player = Player(creature)
+	local playerId = player:getId()
+	if(npcHandler:getTopic(playerId) == 1) then
+		local destination = Position(32854, 31302, 7)
+		player:teleportTo(destination)
+		destination:sendMagicEffect(CONST_ME_TELEPORT)
+		npcHandler:setTopic(playerId, 0)
+		npcHandler:say("Be on your guard. Some people are nice, some... aren't.", npc, creature)
+	end
+	return true
+end
+--Basic
+keywordHandler:addKeyword({"alchemist quarter"}, StdModule.say, {npcHandler = npcHandler, text = "There it's even more smelly than in the factory quarter. Smells a bit like rotten eggs."})
+keywordHandler:addKeyword({"arena quarter"}, StdModule.say, {npcHandler = npcHandler, text = "You don't look as if you would last one second there."})
+keywordHandler:addKeyword({"augur"}, StdModule.say, {npcHandler = npcHandler, text = "One day I will walk into the office of my superior and announce my resignment. Probably not long from now."})
+keywordHandler:addKeyword({"cemetery quarter"}, StdModule.say, {npcHandler = npcHandler, text = "Good idea. Go for a walk there. Preferably six feet down."})
+keywordHandler:addKeyword({"factory quarter"}, StdModule.say, {npcHandler = npcHandler, text = "It's too noisy and smelly."})
+keywordHandler:addKeyword({"foreign quarter"}, StdModule.say, {npcHandler = npcHandler, text = "Go there if you wanna get beaten up."})
+keywordHandler:addKeyword({"job"}, StdModule.say, {npcHandler = npcHandler, text = "Sergeant first class of the Yalaharian Guard Force. But I don't care about ranks and titles."})
+keywordHandler:addAliasKeyword({"official"})
+keywordHandler:addKeyword({"magician quarter"}, StdModule.say, {npcHandler = npcHandler, text = "I can't stand those arrogant fools."})
+keywordHandler:addKeyword({"mission"}, StdModule.say, {npcHandler = npcHandler, text = "Leave me alone with your 'mission' unless you have precise orders from my superiors."})
+keywordHandler:addKeyword({"name"}, StdModule.say, {npcHandler = npcHandler, text = "Peter."})
+keywordHandler:addKeyword({"sunken quarter"}, StdModule.say, {npcHandler = npcHandler, text = "That quara brood should be extinguished."})
+keywordHandler:addKeyword({"trade quarter"}, StdModule.say, {npcHandler = npcHandler, text = "The leader of their pack is the biggest criminal among them all."})
+keywordHandler:addKeyword({"quarter"}, StdModule.say, {npcHandler = npcHandler, text = "Count them yourself."})
+keywordHandler:addKeyword({"yalahar"}, StdModule.say, {npcHandler = npcHandler, text = "You're here. So what?"})
+
+npcHandler:setMessage(MESSAGE_FAREWELL, "Goodbye citizen!")
+npcHandler:setMessage(MESSAGE_GREET, "Hello. Unless you have official business here or want to pass the gate, please move on.")
+npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 

@@ -11637,7 +11637,7 @@
 	<item id="5964" article="a" name="dead rat">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4255"/>
+		<attribute key="decayTo" value="3994"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5965" article="a" name="dead human">
@@ -11670,7 +11670,7 @@
 	<item id="5970" article="a" name="dead deer">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4277"/>
+		<attribute key="decayTo" value="4016"/>
 		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="5971" article="a" name="dead dog">
@@ -12214,7 +12214,7 @@
 		<attribute key="fluidsource" value="slime"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="4385"/>
-		<attribute key="containersize" value="5"/>
+		<attribute key="containersize" value="8"/>
 	</item>
 	<item id="6061" article="a" name="dead serpent spawn">
 		<attribute key="fluidsource" value="blood"/>
