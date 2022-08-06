@@ -24,9 +24,10 @@ npcConfig.flags = {
 }
 
 npcConfig.voices = {
-	interval = 15000,
+	interval = 30000,
 	chance = 50,
-	{text = 'Trading tokens! First-class equipment available!'}
+	{text = 'Trading tokens! First-class equipment available!'},
+	{text = 'Tokens! Looking for gold tokens!'}
 }
 
 npcConfig.currency = 22721
@@ -185,13 +186,22 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say({"{Tokens} are small objects made of metal or other materials. You can use them to buy superior equipment from token traders like me.",
 						"There are several ways to obtain the tokens I'm interested in - killing certain bosses, for example. In exchange for a certain amount of tokens, I can offer you some first-class items."}, npc, creature)
 	elseif MsgContains(message, "worth") then
-	-- to do: check if Heart of Destruction was killed
-	-- after kill message: 'You disrupted the Heart of Destruction, defeated the World Devourer and bought our world some time. You have proven your worth.'
-	npcHandler:say({"Disrupt the Heart of Destruction, fell the World Devourer to prove your worth and you will be granted the power to imbue 'Powerful Strike', 'Powerful Void' and --'Powerful Vampirism'."}, npc, creature)
+		npcHandler:say({"Disrupt the Heart of Destruction, fell the World Devourer to prove your worth and you will be granted the power to imbue 'Powerful Strike', 'Powerful Void' and 'Powerful Vampirism'."}, npc, creature)
+
+	--[[ to do... (after Heart of Destruction scripts rework):
+	
+	if player:getStorageValue(Storage.to do...) == ? then
+	npcHandler:say({"I see, you disrupted the Heart of Destruction, defeated the World Devourer and bought our world some time. You are truly worthy.",
+	"You are granted the power to imbue 'Powerful Strike', 'Powerful Epiphany', 'Powerful Void', 'Powerful Vampirism', 'Power Lich Shroud', 'Power Reap', 'Power Dragon Hide' and 'Power Scorch'."}, npc, creature)
+	
+	else npcHandler:say({"Disrupt the Heart of Destruction, fell the World Devourer to prove your worth and you will be granted the power to imbue 'Powerful Strike', 'Powerful Void' and 'Powerful Vampirism'."}, npc, creature)
+		end
+]]--
+
 	elseif MsgContains(message, "tokens") then
 		npc:openShopWindow(creature)
 		npcHandler:say("If you have any gold tokens with you, let's have a look! These are my offers.", npc, creature)
-	elseif MsgContains(message, "ofert") then
+	elseif MsgContains(message, "trade") then
 		npcHandler:say({"I have creature products for the imbuements {strike}, {vampirism} and {void}. Make your choice, please!"}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif npcHandler:getTopic(playerId) == 1 then
@@ -241,12 +251,14 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+npcHandler:addModule(FocusModule:new(), true, true, false)
 npcHandler:setCallback(CALLBACK_SET_INTERACTION, onAddFocus)
 npcHandler:setCallback(CALLBACK_REMOVE_INTERACTION, onReleaseFocus)
-
-npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+
+npcHandler:setMessage(MESSAGE_GREET, "Blessings, |PLAYERNAME|! How may I help you? Do you wish to {trade} some {tokens}, prove your {worth} to receive powerful imbuements, or do you need some {information}?")
+npcHandler:setMessage(MESSAGE_WALKAWAY, "Farewell and come back any time!")
+npcHandler:setMessage(MESSAGE_FAREWELL, "Farewell, |PLAYERNAME|.")
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)
