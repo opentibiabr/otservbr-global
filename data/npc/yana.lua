@@ -189,19 +189,16 @@ local function creatureSayCallback(npc, creature, type, message)
 		npcHandler:say({"Disrupt the Heart of Destruction, fell the World Devourer to prove your worth and you will be granted the power to imbue 'Powerful Strike', 'Powerful Void' and 'Powerful Vampirism'."}, npc, creature)
 
 	--[[ to do... (after Heart of Destruction scripts rework):
-	
 	if player:getStorageValue(Storage.to do...) == ? then
 	npcHandler:say({"I see, you disrupted the Heart of Destruction, defeated the World Devourer and bought our world some time. You are truly worthy.",
 	"You are granted the power to imbue 'Powerful Strike', 'Powerful Epiphany', 'Powerful Void', 'Powerful Vampirism', 'Power Lich Shroud', 'Power Reap', 'Power Dragon Hide' and 'Power Scorch'."}, npc, creature)
-	
 	else npcHandler:say({"Disrupt the Heart of Destruction, fell the World Devourer to prove your worth and you will be granted the power to imbue 'Powerful Strike', 'Powerful Void' and 'Powerful Vampirism'."}, npc, creature)
 		end
 ]]--
-
 	elseif MsgContains(message, "tokens") then
 		npc:openShopWindow(creature)
 		npcHandler:say("If you have any gold tokens with you, let's have a look! These are my offers.", npc, creature)
-	elseif MsgContains(message, "trade") then
+	elseif MsgContains(message, "trade") or MsgContains(message, "creature products") then
 		npcHandler:say({"I have creature products for the imbuements {strike}, {vampirism} and {void}. Make your choice, please!"}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif npcHandler:getTopic(playerId) == 1 then
