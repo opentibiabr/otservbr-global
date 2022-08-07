@@ -88,7 +88,8 @@ function useOfferConfigure(type)
 	local types = {
 		[GameStore.OfferTypes.OFFER_TYPE_NAMECHANGE] = GameStore.ConfigureOffers.SHOW_CONFIGURE,
 		[GameStore.OfferTypes.OFFER_TYPE_HIRELING] = GameStore.ConfigureOffers.SHOW_CONFIGURE,
-		[GameStore.OfferTypes.OFFER_TYPE_HIRELING_NAMECHANGE] = GameStore.ConfigureOffers.SHOW_CONFIGURE
+		[GameStore.OfferTypes.OFFER_TYPE_HIRELING_NAMECHANGE] = GameStore.ConfigureOffers.SHOW_CONFIGURE,
+		[GameStore.OfferTypes.OFFER_TYPE_HIRELING_SEXCHANGE] = GameStore.ConfigureOffers.SHOW_CONFIGURE
 	}
 
 	if not types[type] then
@@ -366,18 +367,12 @@ function parseBuyStoreOffer(playerId, msg)
 
 	-- At this point the purchase is assumed to be formatted correctly
 	local offerPrice = offer.type == GameStore.OfferTypes.OFFER_TYPE_EXPBOOST and GameStore.ExpBoostValues[player:getStorageValue(GameStore.Storages.expBoostCount)] or offer.price
-
+	local offerCoinType = offer.coinType
 	
-	if offer.coinType == GameStore.CointType.Tournament then
-		if not player:canRemoveTournament(offerPrice) then
-			return queueSendStoreAlertToUser("You don't have enough coins. Your purchase has been cancelled.", 250, playerId)
-		end
-	else
-		if not player:canRemoveCoins(offerPrice) then
-			return queueSendStoreAlertToUser("You don't have enough coins. Your purchase has been cancelled.", 250, playerId)
-		end
+	-- Check if offer can be honored
+	if not player:canPayForOffer(offerPrice, offerCoinType) then
+		return queueSendStoreAlertToUser("You don't have enough coins. Your purchase has been cancelled.", 250, playerId)
 	end
-
 
 	-- Use pcall to catch unhandled errors and send an alert to the user because the client expects it at all times; (OTClient will unlock UI)
 	-- Handled errors are thrown to indicate that the purchase has failed;
@@ -395,7 +390,7 @@ function parseBuyStoreOffer(playerId, msg)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_OUTFIT         then GameStore.processOutfitPurchase(player, offer.sexId, offer.addon)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_OUTFIT_ADDON   then GameStore.processOutfitPurchase(player, offer.sexId, offer.addon)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_MOUNT          then GameStore.processMountPurchase(player, offer.id)
-		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_NAMECHANGE     then local newName = msg:getString(); GameStore.processNameChangePurchase(player, offer.id, productType, newName, offer.name, offerPrice, offer.coinType)
+		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_NAMECHANGE     then local newName = msg:getString(); GameStore.processNameChangePurchase(player, offer, productType, newName)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_SEXCHANGE      then GameStore.processSexChangePurchase(player)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_EXPBOOST       then GameStore.processExpBoostPuchase(player)
 		elseif offer.type == GameStore.OfferTypes.OFFER_TYPE_PREYSLOT       then GameStore.processPreyThirdSlot(player)
@@ -427,13 +422,8 @@ function parseBuyStoreOffer(playerId, msg)
 
 	local configure = useOfferConfigure(offer.type)
 	if configure ~= GameStore.ConfigureOffers.SHOW_CONFIGURE then
-		if offer.coinType == GameStore.CointType.Tournament then
-			player:removeTournamentBalance(offerPrice)
-			GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offer.name, (offerPrice) * -1, GameStore.CointType.Tournament)
-		else
-			player:removeCoinsBalance(offerPrice)
-			GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offer.name, (offerPrice) * -1, GameStore.CointType.Coin)
-		end
+
+		player:makeCoinTransaction(offer)
 
 		local message = string.format("You have purchased %s for %d coins.", offer.name, offerPrice)
 		sendUpdateCoinBalance(playerId)
@@ -1415,7 +1405,7 @@ function GameStore.processMountPurchase(player, offerId)
 	player:addMount(offerId)
 end
 
-function GameStore.processNameChangePurchase(player, offerId, productType, newName, offerName, offerPrice, offerType)
+function GameStore.processNameChangePurchase(player, offer, productType, newName)
 	local playerId = player:getId()
 
 	if productType == GameStore.ClientOfferTypes.CLIENT_STORE_OFFER_NAMECHANGE then
@@ -1436,15 +1426,9 @@ function GameStore.processNameChangePurchase(player, offerId, productType, newNa
 			return error({code = 1, message = result.reason})
 		end
 
-		if offerType == GameStore.CointType.Tournament then
-			player:removeTournamentBalance(offerPrice)
-			GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offerName, (offerPrice) * -1, GameStore.CointType.Tournament)
-		else
-			player:removeCoinsBalance(offerPrice)
-			GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offerName, (offerPrice) * -1, GameStore.CointType.Coin)
-		end
+		player:makeCoinTransaction(offer)
 
-		local message = string.format("You have purchased %s for %d coins.", offerName, offerPrice)
+		local message = string.format("You have purchased %s for %d coins.", offer.name, offer.price)
 		addPlayerEvent(sendStorePurchaseSuccessful, 500, playerId, message)
 
 		newName = newName:lower():gsub("(%l)(%w*)", function(a, b) return string.upper(a) .. b end)
@@ -1460,7 +1444,7 @@ function GameStore.processNameChangePurchase(player, offerId, productType, newNa
 		end, 1000)
 	-- If not, we ask him to do!
 	else
-		return addPlayerEvent(sendRequestPurchaseData, 250, playerId, offerId, GameStore.ClientOfferTypes.CLIENT_STORE_OFFER_NAMECHANGE)
+		return addPlayerEvent(sendRequestPurchaseData, 250, playerId, offer.id, GameStore.ClientOfferTypes.CLIENT_STORE_OFFER_NAMECHANGE)
 	end
 end
 
@@ -1532,13 +1516,7 @@ function GameStore.processHirelingPurchase(player, offer, productType, hirelingN
 			return error({code = 1, message = "Error delivering your hireling lamp, try again later."})
 		end
 
-		if offer.coinType == GameStore.CointType.Tournament then
-			player:removeTournamentBalance(offer.price)
-			GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offer.name .. ' ('.. hirelingName ..')', (offer.price) * -1, GameStore.CointType.Tournament)
-		else
-			player:removeCoinsBalance(offer.price)
-			GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offer.name .. ' ('.. hirelingName ..')', (offer.price) * -1, GameStore.CointType.Coin)
-		end
+		player:makeCoinTransaction(offer, hirelingName)
 		
 		local message = "You have successfully bought " .. hirelingName
 		return addPlayerEvent(sendStorePurchaseSuccessful, 650, playerId, message)
@@ -1567,7 +1545,7 @@ function GameStore.processHirelingChangeNamePurchase(player, offer, productType,
 		local message = 'Close the store window to select which hireling should be renamed to '.. newHirelingName
 		addPlayerEvent(sendStorePurchaseSuccessful, 200, playerId, message)
 
-		addPlayerEvent(HandleHirelingNameChange,550, playerId, offer, newHirelingName)
+		addPlayerEvent(HandleHirelingNameChange, 550, playerId, offer, newHirelingName)
 
 	else
 		return addPlayerEvent(sendRequestPurchaseData, 250, playerId, offerId, GameStore.ClientOfferTypes.CLIENT_STORE_OFFER_NAMECHANGE)
@@ -1663,6 +1641,39 @@ function Player.addTournamentBalance(self, tournament, update)
 	self:setTournamentBalance(self:getTournamentBalance() + tournament)
 	if update then sendTournamentBalanceUpdating(self, true) end
 	return true
+end
+
+--- Support Functions
+function Player.makeCoinTransaction(self, offer, desc)
+	local op = true
+
+	if desc then
+		desc = offer.name .. ' (' .. desc ..')'
+	else
+		desc = offer.name
+	end
+	
+	-- Remove coins
+	if offer.coinType == GameStore.CointType.Tournament then
+		op = self:removeTournamentBalance(offer.price)
+	else
+		op = self:removeCoinsBalance(offer.price)
+	end
+
+	-- When the transaction is suscessfull add to the history
+	if op then
+		GameStore.insertHistory(self:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, desc, (offer.price) * -1, offer.coinType)
+	end
+
+	return op
+end
+
+function Player.canPayForOffer(self, coins, type)
+	if type == GameStore.CointType.Tournament then
+		return self:canRemoveTournament(coins)
+	else
+		return self:canRemoveCoins(coins)
+	end
 end
 
 --- Other players functions
@@ -1824,20 +1835,20 @@ function HandleHirelingNameChange(playerId, offer, newHirelingName)
 			return player:showInfoModal("Error", "Your hireling must be inside his/her lamp.")
 		end
 
-		--- The commented bits bellow caused the value to be removed twice and added two different history
-
-		--if not player:removeCoinsBalance(offer.price) then
-		--	return player:showInfoModal("Error", "Transaction error")
-		--end
 		local oldName = hireling.name
 		hireling.name = newHirelingName
+
+		if not player:makeCoinTransaction(data.offer, oldName .. ' to ' .. newHirelingName) then
+			return player:showInfoModal("Error", "Transaction error")
+		end
+
 		local lamp = player:findHirelingLamp(hireling:getId())
 		if lamp then
 			lamp:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "This mysterious lamp summons your very own personal hireling.\nThis item cannot be traded.\nThis magic lamp is the home of " .. hireling:getName() .. ".")
 		end
-		--GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offer.name .. ' ('.. oldName .. '->' .. newHirelingName ..')', (offer.price) * -1, GameStore.CointType.Coin)
-
-		player:showInfoModal('Info',string.format('%s has been renamed to %s', oldName, newHirelingName))
+		
+		--player:showInfoModal('Info',string.format('%s has been renamed to %s', oldName, newHirelingName))
+		sendUpdateCoinBalance(playerId)
 	end
 
 	player:sendHirelingSelectionModal('Choose a Hireling', 'Select a hireling below', cb, {offer=offer, newHirelingName=newHirelingName})
@@ -1856,10 +1867,9 @@ function HandleHirelingSexChange(playerId, offer)
 			return player:showInfoModal("Error", "Your hireling must be inside his/her lamp.")
 		end
 
-		--- The commented bits bellow caused the value to be removed twice and added two different history
-		--if not player:removeCoinsBalance(data.offer.price) then
-		--	return player:showInfoModal("Error", "Transaction error")
-		--end
+		if not player:makeCoinTransaction(data.offer, hireling:getName()) then
+			return player:showInfoModal("Error", "Transaction error")
+		end
 
 		local changeTo,sexString,lookType
 		if hireling.sex == HIRELING_SEX.FEMALE then
@@ -1875,9 +1885,8 @@ function HandleHirelingSexChange(playerId, offer)
 		hireling.sex = changeTo
 		hireling.looktype = lookType
 
-		--GameStore.insertHistory(player:getAccountId(), GameStore.HistoryTypes.HISTORY_TYPE_NONE, offer.name .. ' ('.. hireling:getName() ..')', (offer.price) * -1, GameStore.CointType.Coin)
-
-		player:showInfoModal('Info',string.format('%s sex was changed to %s', hireling:getName(), sexString))
+		--player:showInfoModal('Info',string.format('%s sex was changed to %s', hireling:getName(), sexString))
+		sendUpdateCoinBalance(playerId)
 	end
 
 	player:sendHirelingSelectionModal('Choose a Hireling', 'Select a hireling below', cb, {offer=offer})
