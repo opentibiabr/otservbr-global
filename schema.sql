@@ -866,14 +866,14 @@ CREATE TABLE IF NOT EXISTS `player_storage` (
 --
 
 CREATE TABLE IF NOT EXISTS `store_history` (
-	`id`          int(11) NOT NULL AUTO_INCREMENT,
-	`account_id`  int(11) UNSIGNED NOT NULL,
-	`mode`        smallint(2) NOT NULL DEFAULT '0',
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`account_id` int(11) UNSIGNED NOT NULL,
+	`mode` smallint(2) NOT NULL DEFAULT '0',
 	`description` varchar(3500) NOT NULL,
-	`coin_type`   tinyint(1) NOT NULL DEFAULT '0',
+	`coin_type` tinyint(1) NOT NULL DEFAULT '0',
 	`coin_amount` int(12) NOT NULL,
-	`time`        bigint(20) UNSIGNED NOT NULL,
-	`timestamp`   int(11) NOT NULL DEFAULT '0',
+	`time` bigint(20) UNSIGNED NOT NULL,
+	`timestamp` int(11) NOT NULL DEFAULT '0',
 	INDEX `account_id` (`account_id`),
 	CONSTRAINT `store_history_pk`
 		PRIMARY KEY (`id`),
