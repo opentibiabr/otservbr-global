@@ -69,8 +69,8 @@ local config = {
 
 local mission2AllAroundTheWorld = MoveEvent()
 
-function mission2AllAroundTheWorld.onStepIn(player, item, position, fromPosition)
-	local player = player:getPlayer() -- working without that but gives errors in console
+function mission2AllAroundTheWorld.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
 	if not player then
 		return true
 	end
