@@ -1882,7 +1882,7 @@ function HandleHirelingSexChange(playerId, offer)
 		hireling.sex = changeTo
 		hireling.looktype = lookType
 
-		--player:showInfoModal('Info',string.format('%s sex was changed to %s', hireling:getName(), sexString))
+		Spdlog.debug(string.format('%s sex was changed to %s', hireling:getName(), sexString))
 		sendUpdateCoinBalance(playerId)
 	end
 
