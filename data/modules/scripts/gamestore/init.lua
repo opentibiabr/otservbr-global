@@ -910,9 +910,9 @@ function sendUpdateCoinBalance(playerId)
 	msg:addByte(GameStore.SendingPackets.S_CoinBalance)
 	msg:addByte(0x01)
 
-	msg:addU32(player:getCoinsBalance())      -- Tibia Coins
-	msg:addU32(player:getCoinsBalance()) 	  -- How many are Transferable
-	msg:addU32(0) 							  -- How many are reserved for a Character Auction
+	msg:addU32(player:getCoinsBalance()) -- Tibia Coins
+	msg:addU32(player:getCoinsBalance()) -- How many are Transferable
+	msg:addU32(0) -- How many are reserved for a Character Auction
 	msg:addU32(player:getTournamentBalance()) -- Tournament Coins
 
 	msg:sendToPlayer(player)
