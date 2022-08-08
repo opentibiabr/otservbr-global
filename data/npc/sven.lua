@@ -93,7 +93,6 @@ local function creatureSayCallback(npc, creature, type, message)
 				"Return to me and talk about the {mammoth} pushing when you are done."
 			}, npc, creature)
 			player:setStorageValue(Storage.BarbarianTest.Questline, 6)
-			player:setStorageValue(Storage.BarbarianTest.Mission02, 3) -- Questlog Barbarian Test Quest Barbarian Test 2: The Bear Hugging
 			player:setStorageValue(Storage.BarbarianTest.Mission03, 1) -- Questlog Barbarian Test Quest Barbarian Test 3: The Mammoth Pushing
 			npcHandler:setTopic(playerId, 0)
 		end
@@ -104,7 +103,6 @@ local function creatureSayCallback(npc, creature, type, message)
 				"We usually solve our problems on our own but some of the people might have a mission for you. Old Iskan, on the ice in the northern part of the town had some trouble with his dogs lately."
 			}, npc, creature)
 			player:setStorageValue(Storage.BarbarianTest.Questline, 8)
-			player:setStorageValue(Storage.BarbarianTest.Mission03, 3) -- Questlog Barbarian Test Quest Barbarian Test 3: The Mammoth Pushing
 			player:addAchievement('Honorary Barbarian')
 			npcHandler:setTopic(playerId, 0)
 		end
@@ -123,6 +121,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
 			player:setStorageValue(Storage.BarbarianTest.Questline, 1)
+			player:setStorageValue(Storage.TheIceIslands.Questline, 1)
 			player:setStorageValue(Storage.BarbarianTest.Mission01, 1) -- Questlog Barbarian Test Quest Barbarian Test 1: Barbarian Booze
 		elseif npcHandler:getTopic(playerId) == 4 then
 			if player:removeItem(5902, 1) then

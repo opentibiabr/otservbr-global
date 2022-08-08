@@ -54,7 +54,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "sniffler") then
-		if player:getStorageValue(Storage.TheIceIslands.Questline) == 1 then
+		if player:getStorageValue(Storage.TheIceIslands.Mission01) == 1 then
 			npcHandler:say("!", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		end

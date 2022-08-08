@@ -65,7 +65,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 2)
 	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.BarbarianTest.Questline) >= 8 then -- if Barbarian Test absolved
-			if player:getStorageValue(Storage.TheIceIslands.Questline) < 1 then
+			if player:getStorageValue(Storage.TheIceIslands.Questline) == 1 then
 				npcHandler:say({
 					"Well, one of the boys has run away. I think he got the scent of some beast. He's young and inexperienced so I can't blame the cub ...",
 					"I would like you to see after him. He should be somewhere north west of the town. He is probably marking his territory so you should be able to find his trace. Are you willing to do that?"

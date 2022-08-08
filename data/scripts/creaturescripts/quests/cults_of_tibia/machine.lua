@@ -43,14 +43,14 @@ function machineDeath.onDeath(creature, attacker)
 					tile:getItemById(7805):remove()
 				end
 				local crystal = Game.createMonster("Containment Crystal", position)
-				crystal:registerEvent("machineHealth")
-				crystal:registerEvent("machineDeath")
+				crystal:registerEvent("MachineHealth")
+				crystal:registerEvent("MachineDeath")
 			end
 		end
 	elseif name == "containment crystal" then
 		Game.createItem(7809,1, creaturePosition)
 	elseif name == "the armored voidborn" then
-		Game.createMonster("The Unarmored Voidborn", creaturePosition):registerEvent("bossesMission")
+		Game.createMonster("The Unarmored Voidborn", creaturePosition):registerEvent("bossesMission") --to fix/check
 	end
 
 	return true

@@ -288,11 +288,11 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 		Game.createMonster("Pillar of Protection", Position(33103, 31919, 15))
 		Game.createMonster("Pillar of Healing", Position(33101, 31925, 15))
 		Game.createMonster("Pillar of Draining", Position(33095, 31925, 15))
-		Game.createMonster("Dorokoll The Mystic STOP", Position(33095, 31924, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Eshtaba The Conjurer STOP", Position(33094, 31919, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Eliz The Unyielding STOP", Position(33102, 31919, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Mezlon The Defiler STOP", Position(33101, 31924, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Malkhar Deathbringer STOP", Position(33098, 31916, 15)):registerEvent("pilaresHealth")
+		Game.createMonster("Dorokoll The Mystic STOP", Position(33095, 31924, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Eshtaba The Conjurer STOP", Position(33094, 31919, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Eliz The Unyielding STOP", Position(33102, 31919, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Mezlon The Defiler STOP", Position(33101, 31924, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Malkhar Deathbringer STOP", Position(33098, 31916, 15)):registerEvent("HealthPillar")
 		end
 	end
 
@@ -424,8 +424,8 @@ end
 			Game.createMonster("Security Golem", Position(33141, 31863, 15))
 			Game.createMonster("Security Golem", Position(33132, 31863, 15))
 
-			Game.createMonster("Containment Machine", Position(33133, 31864, 15)):registerEvent("machineDeath")
-			Game.createMonster("The Armored Voidborn", Position(33135, 31859, 15)):registerEvent("machineDeath")
+			Game.createMonster("Containment Machine", Position(33133, 31864, 15)):registerEvent("MachineDeath")
+			Game.createMonster("The Armored Voidborn", Position(33135, 31859, 15)):registerEvent("MachineDeath")
 			kickerPlayerRoomAfferMin(convertTable, frompos, topos, Position(33179, 31840, 15), "You were kicked for exceeding the time limit within the boss room.", '', 60, true, ittable, blockmonsters)
 		end
 	end
@@ -480,7 +480,7 @@ end
 				end
 			end
 
-			Game.createMonster("the sandking fake", Position(33099, 31858, 15)):registerEvent("sandkingThink")
+			Game.createMonster("the sandking fake", Position(33099, 31858, 15)):registerEvent("SandkingThink")
 			Game.setStorageValue("sandking", 1)
 			kickerPlayerRoomAfferMin(convertTable, frompos, topos, Position(33459, 32269, 10), "You were kicked for exceeding the time limit within the boss room.", '', 60, true, ittable, blockmonsters)
 		end
@@ -522,7 +522,7 @@ end
 			end
 
 			Game.createMonster('The Remorseless Corruptor', Position(33039, 31922, 15))
-			Game.createMonster('Zarcorix Of Yalahar', Position(33039, 31921, 15)):registerEvent("yalahariHealth")
+			Game.createMonster('Zarcorix Of Yalahar', Position(33039, 31921, 15)):registerEvent("YalahariHealth")
 			Game.createMonster('Stolen Soul', Position(33039, 31920, 15))
 			Game.createMonster('Soul Reaper', Position(33039, 31919, 15))
 			spawnDarkSoul(1, 30)
