@@ -1611,7 +1611,9 @@ end
 --- Tournament Coins
 function Player.getTournamentBalance(self)
 	resultId = db.storeQuery("SELECT `tournament_coins` FROM `accounts` WHERE `id` = " .. self:getAccountId())
-	if not resultId then return 0 end
+	if not resultId then
+		return 0
+	end
 	return result.getDataInt(resultId, "tournament_coins")
 end
 
