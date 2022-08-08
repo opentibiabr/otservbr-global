@@ -1516,7 +1516,6 @@ function GameStore.processHirelingPurchase(player, offer, productType, hirelingN
 		end
 
 		player:makeCoinTransaction(offer, hirelingName)
-		
 		local message = "You have successfully bought " .. hirelingName
 		return addPlayerEvent(sendStorePurchaseSuccessful, 650, playerId, message)
 		-- If not, we ask him to do!
