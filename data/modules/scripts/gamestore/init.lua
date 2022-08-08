@@ -368,7 +368,6 @@ function parseBuyStoreOffer(playerId, msg)
 	-- At this point the purchase is assumed to be formatted correctly
 	local offerPrice = offer.type == GameStore.OfferTypes.OFFER_TYPE_EXPBOOST and GameStore.ExpBoostValues[player:getStorageValue(GameStore.Storages.expBoostCount)] or offer.price
 	local offerCoinType = offer.coinType
-	
 	-- Check if offer can be honored
 	if not player:canPayForOffer(offerPrice, offerCoinType) then
 		return queueSendStoreAlertToUser("You don't have enough coins. Your purchase has been cancelled.", 250, playerId)
