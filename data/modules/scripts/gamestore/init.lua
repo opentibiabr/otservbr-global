@@ -1844,7 +1844,7 @@ function HandleHirelingNameChange(playerId, offer, newHirelingName)
 		if lamp then
 			lamp:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "This mysterious lamp summons your very own personal hireling.\nThis item cannot be traded.\nThis magic lamp is the home of " .. hireling:getName() .. ".")
 		end
-		--player:showInfoModal('Info',string.format('%s has been renamed to %s', oldName, newHirelingName))
+		Spdlog.debug(string.format('%s has been renamed to %s', oldName, newHirelingName))
 		sendUpdateCoinBalance(playerId)
 	end
 
