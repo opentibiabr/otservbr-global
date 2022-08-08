@@ -30,6 +30,7 @@ function loginEvents.onLogin(player)
 		"DestroyedPillar",
 		"HealthPillar",
 		"YalahariHealth",
+		"EssenceOfMalice",
 		--Dangerous Depths Quest
 		"LostExileKill",
 		"SnailSlimeKill",
