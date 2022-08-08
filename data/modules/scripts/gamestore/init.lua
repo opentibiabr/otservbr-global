@@ -425,7 +425,7 @@ function parseBuyStoreOffer(playerId, msg)
 		player:makeCoinTransaction(offer)
 
 		local message = string.format("You have purchased %s for %d coins.", offer.name, offerPrice)
-		sendUpdateCoinBalance(playerId)
+		sendUpdatedStoreBalances(playerId)
 		return addPlayerEvent(sendStorePurchaseSuccessful, 650, playerId, message)
 	end
 	return true
@@ -494,7 +494,7 @@ function openStore(playerId)
 		end
 
 		msg:sendToPlayer(player)
-		sendCoinBalanceUpdating(playerId, true)
+		sendStoreBalanceUpdating(playerId, true)
 	end
 end
 
@@ -881,7 +881,7 @@ function sendStoreError(playerId, errorType, message)
 	msg:sendToPlayer(player)
 end
 
-function sendCoinBalanceUpdating(playerId, updating)
+function sendStoreBalanceUpdating(playerId, updating)
 	local player = Player(playerId)
 	if not player then
 		return false
@@ -893,11 +893,11 @@ function sendCoinBalanceUpdating(playerId, updating)
 	msg:sendToPlayer(player)
 
 	if updating == true then
-		sendUpdateCoinBalance(playerId)
+		sendUpdatedStoreBalances(playerId)
 	end
 end
 
-function sendUpdateCoinBalance(playerId)
+function sendUpdatedStoreBalances(playerId)
 	local player = Player(playerId)
 	if not player then
 		return false
@@ -1604,7 +1604,7 @@ end
 
 function Player.addCoinsBalance(self, coins, update)
 	self:setCoinsBalance(self:getCoinsBalance() + coins)
-	if update then sendCoinBalanceUpdating(self, true) end
+	if update then sendStoreBalanceUpdating(self, true) end
 	return true
 end
 
@@ -1637,7 +1637,7 @@ end
 
 function Player.addTournamentBalance(self, tournament, update)
 	self:setTournamentBalance(self:getTournamentBalance() + tournament)
-	if update then sendTournamentBalanceUpdating(self, true) end
+	if update then sendStoreBalanceUpdating(self, true) end
 	return true
 end
 
@@ -1845,7 +1845,7 @@ function HandleHirelingNameChange(playerId, offer, newHirelingName)
 			lamp:setAttribute(ITEM_ATTRIBUTE_DESCRIPTION, "This mysterious lamp summons your very own personal hireling.\nThis item cannot be traded.\nThis magic lamp is the home of " .. hireling:getName() .. ".")
 		end
 		Spdlog.debug(string.format('%s has been renamed to %s', oldName, newHirelingName))
-		sendUpdateCoinBalance(playerId)
+		sendUpdatedStoreBalances(playerId)
 	end
 
 	player:sendHirelingSelectionModal('Choose a Hireling', 'Select a hireling below', cb, {offer=offer, newHirelingName=newHirelingName})
@@ -1883,7 +1883,7 @@ function HandleHirelingSexChange(playerId, offer)
 		hireling.looktype = lookType
 
 		Spdlog.debug(string.format('%s sex was changed to %s', hireling:getName(), sexString))
-		sendUpdateCoinBalance(playerId)
+		sendUpdatedStoreBalances(playerId)
 	end
 
 	player:sendHirelingSelectionModal('Choose a Hireling', 'Select a hireling below', cb, {offer=offer})
