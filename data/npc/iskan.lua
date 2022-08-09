@@ -55,6 +55,8 @@ local function greetCallback(npc, player)
 		npcHandler:setMessage(MESSAGE_GREET, "You are not one of us. I don't want to talk to you.")
 	elseif player:getStorageValue(Storage.TheIceIslands.HuskyKill) >= 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "I was told you have been killing huskies here in Svargrond! Never do that again, okay? They are precious animals for us. Give me 500 gold and I will forget that incident without telling it to Jarl Sven. Okay?")
+	elseif player:hasAchievement("Warlord of Svargrond") then
+		npcHandler:setMessage(MESSAGE_GREET, "HAIL to the Warlord of the arena! |PLAYERNAME|, Hero of Svargrond! What can I {do for you}?")
 	elseif player:getStorageValue(Storage.BarbarianTest.Questline) == 8 then
 		npcHandler:setMessage(MESSAGE_GREET, "Greetings. What can I {do for you}?")
 	end
@@ -71,7 +73,11 @@ local function creatureSayCallback(npc, creature, type, message)
 		return true
 	end
 	if MsgContains(message, "passage") then
+		if player:getStorageValue(Storage.TheIceIslands.Questline) >= 3 then
+			npcHandler:say("So, do you want a passage to Nibelor my friend?", npc, creature)
+		else
 			npcHandler:say("Do you want to Nibelor?", npc, creature)
+		end
 			npcHandler:setTopic(playerId, 2)
 	elseif MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.BarbarianTest.Questline) >= 8 then -- if Barbarian Test absolved
@@ -111,14 +117,14 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.TheIceIslands.Mission01, 1) -- Questlog The Ice Islands Quest, Befriending the Musher
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 2 then
-			--if player:getStorageValue(Storage.TheIceIslands.Questline) >= 3 then
-			player:teleportTo(Position(32325, 31049, 7))
-			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-			npcHandler:setTopic(playerId, 0)
-			--else
-			--npcHandler:say("Sorry, first time you have to do a mission for me.", npc, creature)
-			--npcHandler:setTopic(playerId, 0)
-			--end
+			if player:getStorageValue(Storage.TheIceIslands.Questline) >= 3 then
+				player:teleportTo(Position(32325, 31049, 7))
+				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+				npcHandler:setTopic(playerId, 0)
+			else
+				npcHandler:say("Sorry, first time you have to do a mission for me.", npc, creature)
+				npcHandler:setTopic(playerId, 0)
+			end
 		end
 	elseif MsgContains(message, "no") then
 		if player:getStorageValue(Storage.TheIceIslands.HuskyKill) >= 1 then
