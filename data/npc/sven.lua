@@ -50,6 +50,14 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
+local function greetCallback(npc, player)
+	if player:getStorageValue(Storage.TheIceIslands.HuskyKillStatus) == 1 then
+		npcHandler:setMessage(MESSAGE_GREET, "Iskan told me that you killed huskies here in Svargrond. I will be lenient towards you and won't ban you from Svargrond. But you have to pay me a compensation of 1500 gold for each husky you have killed. Are you willing to pay "..player:getStorageValue(Storage.TheIceIslands.HuskyKill) * 1500 .."?")
+	else
+		npcHandler:setMessage(MESSAGE_GREET, "Be greeted, |PLAYERNAME|! What brings you {here}?")
+	end
+	return true
+end
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -107,7 +115,17 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		end
 	elseif MsgContains(message, "yes") then
-		if npcHandler:getTopic(playerId) == 2 then
+		if player:getStorageValue(Storage.TheIceIslands.HuskyKillStatus) == 1 and player:getStorageValue(Storage.BarbarianTest.Questline) == 8 then
+			if player:removeMoneyBank(player:getStorageValue(Storage.TheIceIslands.HuskyKill) * 1500) then
+				npcHandler:say("Alright, we are even!", npc, creature)
+				player:setStorageValue(Storage.TheIceIslands.HuskyKillStatus, 0)
+				player:setStorageValue(Storage.TheIceIslands.HuskyKill, 0)
+				npcHandler:setTopic(playerId, 0)
+			else
+				npcHandler:say("You don't have enough. Bring me the money and I will forget about it.", npc, creature)
+				npcHandler:setTopic(playerId, 0)
+			end
+		elseif npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say({
 				"That's the spirit! The barbarian test consists of a few tasks you will have to fulfill. All are rather simple - for a barbarian that is...",
 				"Your first task is to drink some barbarian mead. But be warned, it's a strong brew that could even knock out a bear. You need to make at least ten sips of mead in a row without passing out to pass the test ...",
@@ -132,10 +150,22 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(Storage.BarbarianTest.MeadTotalSips, 0)
 			end
 		end
+	elseif MsgContains(message, "no") then
+		if player:getStorageValue(Storage.TheIceIslands.HuskyKillStatus) == 1 and npcHandler:getTopic(playerId) == 0 then
+			npcHandler:say("I don't know if you realise the consequences. You won't be a member of our community anymore. I ask you for the last time: Are you willing to pay "..player:getStorageValue(Storage.TheIceIslands.HuskyKill) * 1500 .." gold as a compensation?", npc, creature)
+			npcHandler:setTopic(playerId, 10)
+		elseif npcHandler:getTopic(playerId) == 10 then
+			npcHandler:say("Alright, it's your choice. If you regret your decision and want to be a barbarian again, talk to me about the {barbarian} test.", npc, creature)
+			player:setStorageValue(Storage.BarbarianTest.Questline, -1)
+			player:setStorageValue(Storage.BarbarianTest.Mission01, -1)
+			player:setStorageValue(Storage.BarbarianTest.Mission02, -1)
+			player:setStorageValue(Storage.BarbarianTest.Mission03, -1)
+		end
 	end
 	return true
 end
 
+npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 

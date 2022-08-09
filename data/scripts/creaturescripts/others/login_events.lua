@@ -84,6 +84,8 @@ function loginEvents.onLogin(player)
 		"MiddleSpikeKill",
 		--Svargrond Arena
 		"SvargrondArenaKill",
+		--The Ice Islands Quest
+		"HuskyKill",
 		--The First Dragon
 		"KillDragon",
 		"SomewhatBeatableDeath",

@@ -1,3 +1,6 @@
+local condition = Condition(CONDITION_OUTFIT)
+condition:setOutfit({lookTypeEx = 111})
+condition:setTicks(1000)
 local barbarianMead = Action()
 function barbarianMead.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if player:getStorageValue(Storage.BarbarianTest.Questline) == 2 and player:getStorageValue(Storage.BarbarianTest.MeadTotalSips) <= 20 then
@@ -12,6 +15,8 @@ function barbarianMead.onUse(player, item, fromPosition, target, toPosition, isH
 			end
 		else
 			player:say('The mead was too strong. You passed out for a moment.', TALKTYPE_MONSTER_SAY)
+			player:addCondition(condition)
+			player:getPosition():sendMagicEffect(CONST_ME_HITBYPOISON)
 			player:setStorageValue(Storage.BarbarianTest.MeadSuccessSips, 0)
 		end
 		player:setStorageValue(Storage.BarbarianTest.MeadTotalSips, player:getStorageValue(Storage.BarbarianTest.MeadTotalSips) + 1)
@@ -25,5 +30,5 @@ function barbarianMead.onUse(player, item, fromPosition, target, toPosition, isH
 	return true
 end
 
-barbarianMead:uid(3110)
+barbarianMead:position({x = 32201, y = 31154, z = 7})
 barbarianMead:register()
