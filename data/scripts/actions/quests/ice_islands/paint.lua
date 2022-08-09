@@ -13,7 +13,7 @@ function icePaint.onUse(player, item, fromPosition, target, toPosition, isHotkey
 	end
 
 	if player:getStorageValue(Storage.TheIceIslands.Questline) == 8 then
-		toPosition:sendMagicEffect(CONST_ME_MAGIC_GREEN)
+		toPosition:sendMagicEffect(CONST_ME_GREEN_RINGS)
 		player:setStorageValue(Storage.TheIceIslands.PaintSeal, player:getStorageValue(Storage.TheIceIslands.PaintSeal) + 1)
 		if player:getStorageValue(Storage.TheIceIslands.PaintSeal) == 2 then
 			player:setStorageValue(Storage.TheIceIslands.Questline, 9)
