@@ -4,7 +4,7 @@ A random portal to [Fury Hell](https://www.tibiawiki.com.br/wiki/Fury_Hell) will
 
 __References__:
 
-- [Tibia Wiki](https://www.tibiawiki.com.br/wiki/Mini_World_Changes#Oriental_Trader)
+- [Tibia Wiki](https://www.tibiawiki.com.br/wiki/Mini_World_Changes#Fury_Gates)
 
 ## Carlin
 
