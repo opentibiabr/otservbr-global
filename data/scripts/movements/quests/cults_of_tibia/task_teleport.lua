@@ -1,10 +1,10 @@
 local setting = {
-	[23482] = {
+	[23726] = {
 		storage = Storage.CultsOfTibia.Humans.Decaying,
 		max = 10,
 		text = "You absorb the energetic remains of this decaying soul. Its power is very fragile and fleeting"
 	},
-	[23484] = {
+	[23728] = {
 		storage = Storage.CultsOfTibia.Humans.Vaporized,
 		max = 10,
 		text = "You absorb the energetic remains of this whitering soul. Its power is very fragile and fleeting."

@@ -12,22 +12,22 @@ function vortexCarlin.onKill(creature, target, item)
 		local corpsePosition = target:getPosition()
 		local rand = math.random(1,2)
 		if rand == 1 then
-			Game.createItem(23484, 1, corpsePosition):setActionId(5580)
+			Game.createItem(23728, 1, corpsePosition):setActionId(5580)
 			addEvent(function()
-				local teleport1 = Tile(corpsePosition):getItemById(23484)
+				local teleport1 = Tile(corpsePosition):getItemById(23728)
 				if teleport1 then
 					teleport1:remove(1)
 				end
-			end, (1*60*1000), 23484, 1, corpsePosition)
+			end, (1*60*1000), 23728, 1, corpsePosition)
 		end
 		if rand == 2 then
-			Game.createItem(23482, 1, corpsePosition):setActionId(5580)
+			Game.createItem(23726, 1, corpsePosition):setActionId(5580)
 			addEvent(function()
-				local teleport2 = Tile(corpsePosition):getItemById(23482)
+				local teleport2 = Tile(corpsePosition):getItemById(23726)
 				if teleport2 then
 					teleport2:remove(1)
 				end
-			end, (1*60*1000), 23482, 1, corpsePosition)
+			end, (1*60*1000), 23726, 1, corpsePosition)
 		end
 	end
 	return true
