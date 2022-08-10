@@ -18,6 +18,10 @@ function icePaint.onUse(player, item, fromPosition, target, toPosition, isHotkey
 		if player:getStorageValue(Storage.TheIceIslands.PaintSeal) == 2 then
 			player:setStorageValue(Storage.TheIceIslands.Questline, 9)
 			player:setStorageValue(Storage.TheIceIslands.Mission04, 2) -- Questlog The Ice Islands Quest, Nibelor 3: Artful Sabotage
+			player:removeItem(7253, 1)
+			if player:getStorageValue(Storage.TheShatteredIsles.TortoiseEggNargorDoor) >= 2 then
+				player:addAchievement("Animal Activist")
+			end
 		end
 		player:say('You painted a baby seal.', TALKTYPE_MONSTER_SAY)
 		target:transform(7252)

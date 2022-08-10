@@ -906,7 +906,7 @@ function onUseSpoon(player, item, fromPosition, target, toPosition, isHotkey)
 				-- Fine sulphur
 				player:addItem(7247, 1)
 				player:setStorageValue(Storage.TheIceIslands.SulphurLava, 1)
-				toPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
+				toPosition:sendMagicEffect(CONST_ME_YELLOW_RINGS)
 				player:say("You retrive a fine sulphur from a lava hole.", TALKTYPE_MONSTER_SAY)
 			end
 		end
@@ -916,7 +916,7 @@ function onUseSpoon(player, item, fromPosition, target, toPosition, isHotkey)
 			if player:getStorageValue(Storage.TheIceIslands.SporesMushroom) < 1 then
 				player:addItem(7251, 1)
 				player:setStorageValue(Storage.TheIceIslands.SporesMushroom, 1)
-				toPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
+				toPosition:sendMagicEffect(CONST_ME_MAGIC_GREEN)
 				player:say("You retrive spores from a mushroom.", TALKTYPE_MONSTER_SAY)
 			end
 		end
@@ -970,7 +970,7 @@ function onUseKitchenKnife(player, item, fromPosition, target, toPosition, isHot
 			if player:getStorageValue(Storage.TheIceIslands.FrostbiteHerb) < 1 then
 				player:addItem(7248, 1)
 				player:setStorageValue(Storage.TheIceIslands.FrostbiteHerb, 1)
-				toPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
+				toPosition:sendMagicEffect(CONST_ME_HITBYPOISON)
 				player:say("You cut a leaf from a frostbite herb.", TALKTYPE_MONSTER_SAY)
 			end
 		end
