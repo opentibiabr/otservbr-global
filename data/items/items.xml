@@ -45051,10 +45051,22 @@
 		<attribute key="duration" value="200"/>
 		<attribute key="decayTo" value="31464"/>
 	</item>
-	<item id="31466" article="a" name="tournament carpet"/>
-	<item id="31467" article="a" name="sublime tournament carpet"/>
-	<item id="31468" article="a" name="tournament carpet"/>
-	<item id="31469" article="a" name="sublime tournament carpet"/>
+	<item id="31466" article="a" name="rolled-up tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="31467" article="a" name="rolled-up sublime tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="31468" article="a" name="tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="31469" article="a" name="sublime tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
 	<item fromid="31470" toid="31471" article="a" name="tournament accolade"/>
 	<item fromid="31472" toid="31473" article="a" name="sublime tournament accolade"/>
 	<item fromid="31474" toid="31477" article="a" name="pillar"/>
