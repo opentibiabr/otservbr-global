@@ -51,9 +51,12 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 -- Travel
-local function addTravelKeyword(keyword, text, destination, randomDestination, randomNumber, condition, ringCheck, ringRemove)
+local function addTravelKeyword(keyword, text, destination, randomDestination, randomNumber, condition, ringCheck, ringRemove, helheimAccess)
 	if condition then
 		keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = 'No, no, no, you even are no barb....barba...er.. one of us!!!! Talk to the Jarl first!'}, condition)
+	end
+	if helheimAccess then
+		keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = text}, helheimAccess)
 	end
 	if ringCheck then
 		local ring = keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = "Ohh, you got a nice ring there! Ya don't have to pay if you gimme the ring and I promise you I will bring you to the correct spot!*HICKS* Alright?"}, ringCheck)
@@ -91,7 +94,8 @@ addTravelKeyword('helheim', "T'at is a small island to the east.", Position(3246
 	function() return math.random(5) > 1 end,
 	function(player) return player:getStorageValue(Storage.BarbarianTest.Questline) < 8 end,
 	function(player) return player:getItemCount(3097) > 0 end,
-	function(player) return player:removeItem(3097, 1) end)
+	function(player) return player:removeItem(3097, 1) end,
+	function(player) return player:getStorageValue(Storage.TheIceIslands.Questline) < 30 end)
 addTravelKeyword('camp', 'Both of you look like you could defend yourself! If you want to go there, ask me for a passage.', Position(32021, 31294, 7),
 	function() return randomDestination[math.random(#randomDestination)] end,
 	function() return math.random(5) > 1 end,
