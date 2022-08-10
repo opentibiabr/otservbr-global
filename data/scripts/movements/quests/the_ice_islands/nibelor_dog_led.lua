@@ -30,6 +30,9 @@ local nibelorDogLed = MoveEvent()
 
 function nibelorDogLed.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
 	for b = 1, #setting do
 		if player:getPosition() == setting[b].sledPosition then
 			if player:getStorageValue(setting[b].storage) == setting[b].value and player:removeItem(3582, 1) then
