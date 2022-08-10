@@ -4,19 +4,19 @@ The NPC [Yasir](https://www.tibiawiki.com.br/wiki/Yasir), during this mini-world
 
 __References__:
 
-- [Tibia Wiki](https://www.tibiawiki.com.br/wiki/Mini_World_Changes#Oriental_Trader)
+- [Tibia Wiki](https://www.tibiawiki.com.br/wiki/Mini_World_Changes#Fury_Gates)
 
-# Carlin
+## Carlin
 
 ### General Position 
 [32400,31815,6](https://tibiamaps.io/map#32400,31815,6:1)
 
-# Libery Bay
+## Libery Bay
 
 ### General Position 
 [32314,32895,6](https://tibiamaps.io/map#32314,32895,6:1)
 
-# Ankrahmun
+## Ankrahmun
 
 ### General Position 
 [33102,32884,6](https://tibiamaps.io/map#33768,31051,7:1)

@@ -122,7 +122,7 @@ function furygates.onStartup(interval)
 		end
 	end
 
-	Game.loadMap('data/world/furygates/' .. gates[gateId].mapName .. '.otbm')
+	Game.loadMap('data/world/world_changes/fury_gates/' .. gates[gateId].mapName .. '.otbm')
 
 	setGlobalStorageValue(GlobalStorage.FuryGates, gateId)
 
