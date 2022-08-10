@@ -5,7 +5,7 @@ During this World Change that usually happens between 12, 13 and 14 of each mont
 
 During the boss fight, the arena will change as the battle progress.
 
-![fexore map](https://s2.ezgif.com/save/ezgif-2-d3274d29e7.gif)
+![fexore map](https://user-images.githubusercontent.com/16576236/183953891-3b298de6-fcca-46b6-9ee0-e8df1c216a2e.gif)
 
 __References__:
 
