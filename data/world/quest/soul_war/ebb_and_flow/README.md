@@ -11,7 +11,7 @@ __References__:
 The empty version is where the hunting grounds are available.
 
 ### General Position 
-`33919,31047,8`
+[33919,31047,8](https://tibiamaps.io/map#33919,31047,8:2) (TibiaMaps shows a mix of both maps)
 
 
 ## Inundate
@@ -20,4 +20,4 @@ The inundate map where the hunting grounds are unavailable and everyone on the h
 
 
 ### General Position 
-`33919,31047,8`
+[33919,31047,8](https://tibiamaps.io/map#33919,31047,8:2) (TibiaMaps shows a mix of both maps)

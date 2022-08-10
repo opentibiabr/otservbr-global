@@ -1,6 +1,6 @@
 # Annual Events - Winterlight Solstice
 
-During this event it is possible to challenge [The Percht Queen](https://www.tibiawiki.com.br/wiki/The_Percht_Queen).
+During this event, it is possible to challenge [The Percht Queen](https://www.tibiawiki.com.br/wiki/The_Percht_Queen).
 
 
 __References__:
