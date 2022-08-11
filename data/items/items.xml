@@ -11637,7 +11637,7 @@
 	<item id="5964" article="a" name="dead rat">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4255"/>
+		<attribute key="decayTo" value="3994"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5965" article="a" name="dead human">
@@ -11670,7 +11670,7 @@
 	<item id="5970" article="a" name="dead deer">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4277"/>
+		<attribute key="decayTo" value="4016"/>
 		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="5971" article="a" name="dead dog">
@@ -12214,7 +12214,7 @@
 		<attribute key="fluidsource" value="slime"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="4385"/>
-		<attribute key="containersize" value="5"/>
+		<attribute key="containersize" value="8"/>
 	</item>
 	<item id="6061" article="a" name="dead serpent spawn">
 		<attribute key="fluidsource" value="blood"/>
@@ -19086,7 +19086,7 @@
 	<item fromid="9628" toid="9629" article="a" name="telescope"/>
 	<item id="9630" article="an" name="energy field"/>
 	<item id="9631" article="a" name="scarab pincers" plural="scarab pincers">
-		<attribute key="weight" value="229"/>
+		<attribute key="weight" value="230"/>
 	</item>
 	<item id="9632" article="an" name="ancient stone" plural="ancient stones">
 		<attribute key="weight" value="160"/>
@@ -19493,6 +19493,7 @@
 	<item id="10180" article="a" name="groud"/>
 	<item id="10181" article="a" name="magic wall">
 		<attribute key="type" value="magicfield"/>
+		<attribute key="blockProjectile" value="1"/>
 		<attribute key="blocking" value="1"/>
 		<attribute key="duration" value="20"/>
 		<attribute key="decayTo" value="0"/>

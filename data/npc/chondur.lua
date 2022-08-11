@@ -537,7 +537,7 @@ addCounterspellKeyword(
 		"Very good! <chants and dances> 'You shall face black magic without fear!' Now, I need a fresh dead black sheep."
 	},
 	2,
-	4255
+	3994
 )
 addCounterspellKeyword(
 	{

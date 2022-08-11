@@ -83,7 +83,7 @@ monster.loot = {
 	{id = 3051, chance = 990}, -- energy ring
 	{name = "battle shield", chance = 7760},
 	{name = "black shield", chance = 70},
-	{name = "star herb", chance = 7260},
+	{name = "obsidian lance", chance = 7260},
 	{name = "star herb", chance = 5060},
 	{name = "bat wing", chance = 4900, maxCount = 2},
 	{name = "mercenary sword", chance = 110},

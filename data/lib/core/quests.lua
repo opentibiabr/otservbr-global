@@ -529,52 +529,6 @@ if not Quests then
 			}
 		},
 		[6] = {
-			name = "Barbarian Test Quest",
-			startStorageId = Storage.BarbarianTest.Questline,
-			startStorageValue = 1,
-			missions = {
-				[1] = {
-					name = "Barbarian Test 1: Barbarian Booze",
-					storageId = Storage.BarbarianTest.Mission01,
-					missionId = 1055,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "Talk to Sven about mead and give him a honeycomb. For each honeycomb you will be allowed 20 sips.",
-						[2] = "Now drink from the bucket until you drink 10 sips in a row without passing out",
-						[3] = "You have completed this Test! Talk to Sven about the mead."
-					}
-				},
-				[2] = {
-					name = "Barbarian Test 2: The Bear Hugging",
-					storageId = Storage.BarbarianTest.Mission02,
-					missionId = 1056,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "Sven gave you a Mead Horn. Fill it with mead from the bucket behind Sven (brown contents) \z
-							and then proceed to the sleeping bear. The bear is inside a small ice cave in the north. \z
-							Use the full mead horn on the bear so it becomes unconscious, then use the bear to hug it.",
-						[2] = "You hugging the bear! Go tell Sven that you hugged the bear!",
-						[3] = "You have completed this Test!"
-					}
-				},
-				[3] = {
-					name = "Barbarian Test 3: The Mammoth Pushing",
-					storageId = Storage.BarbarianTest.Mission03,
-					missionId = 1057,
-					startValue = 1,
-					endValue = 3,
-					states = {
-						[1] = "Go to the north-west of Svargrond and find the Mammoth. Drink your three mugs of mead, \z
-							stand in front of the Mammoth and push it. Just use it...",
-						[2] = "You pushed the Mammoth! Go tell Sven that you pushed the Mammoth!",
-						[3] = "You have completed this Test! You can now be a citizen of Svargrond!"
-					}
-				}
-			}
-		},
-		[7] = {
 			name = "Children of the Revolution",
 			startStorageId = Storage.ChildrenoftheRevolution.Questline,
 			startStorageValue = 1,
@@ -664,7 +618,7 @@ if not Quests then
 				}
 			}
 		},
-		[8] = {
+		[7] = {
 			name = "Factions",
 			startStorageId = Storage.Factions,
 			startStorageValue = 1,
@@ -707,7 +661,7 @@ if not Quests then
 				}
 			}
 		},
-		[9] = {
+		[8] = {
 			name = "Friends and Traders",
 			startStorageId = Storage.FriendsandTraders.DefaultStart,
 			startStorageValue = 1,
@@ -745,37 +699,23 @@ if not Quests then
 					startValue = 1,
 					endValue = 12,
 					states = {
-						[1] = "Quentin told you about an old prayer which can bind holy energy to an object. \z
-							Each of its ten lines has to be recited by a different priest though. \z
-							Bring Quentin a wooden stake from Gamon to start.",
-						[2] = "You received Quentin\'s prayer: &quot;Light shall be near - and darkness afar&quot;. \z
-							Now, bring your stake to Tibra in the Carlin church for the next line of the prayer.",
-						[3] = "You received Tibra\'s prayer: &quot;Hope may fill your heart - doubt shall be banned&quot;. \z
-							Now, bring your stake to Maealil in the Elven settlement for the next line of the prayer.",
-						[4] = "You received Maealil\'s prayer: &quot;Peace may fill your soul - evil shall be cleansed&quot;. \z
-							Now, bring your stake to Yberius in the Venore temple for the next line of the prayer.",
-						[5] = "You received Yberius' prayer: &quot;Protection will be granted - from dangers at hand&quot;. \z
-							Now, bring your stake to Isimov in the dwarven settlement for the next line of the prayer.",
-						[6] = "You received Isimov\'s prayer: &quot;Unclean spirits shall be repelled&quot;. \z
-							Now, bring your stake to Amanda in Edron for the next line of the prayer.",
-						[7] = "You received Amanda\'s prayer: &quot;Wicked curses shall be broken&quot;. \z
-							Now, bring your stake to Kasmir in Darashia for the next line of the prayer.",
-						[8] = "You received Kasmir\'s prayer: &quot;Let there be honor and humility&quot;. \z
-							Now, bring your stake to Rahkem in Ankrahmun for the next line of the prayer.",
-						[9] = "You received Rahkem\'s prayer: &quot;Let there be power and compassion&quot;. \z
-							Now, bring your stake to Brewster in Port Hope for the next line of the prayer.",
-						[10] = "You received Brewster\'s prayer: &quot;Your hand shall be guided - your feet shall \z
-							walk in harmony&quot;. Now, bring your stake to Tyrias in Liberty Bay for the next line of the prayer.",
-						[11] = "You received Tyrias' prayer: &quot;Your mind shall be a vessel for joy, light \z
-							and wisdom&quot;. He wasn't exactly happy though and said that if you need some mumbo jumbo again, \z
-							you should rather go to Chondur.",
-						[12] = "Chondur was surprised to hear that you had to travel through all of Tibia to have your \z
-							wooden stake blessed. He offered you help with the blessing if you should need one again in the future."
+						[1] = "Quentin told you about an old prayer which can bind holy energy to an object. Each of its ten lines has to be recited by a different priest though. Bring Quentin a wooden stake from Gamon to start.",
+						[2] = 'You received Quentin\'s prayer: "Light shall be near - and darkness afar". Now, bring your stake to Tibra in the Carlin church for the next line of the prayer.',
+						[3] = 'You received Tibra\'s prayer: "Hope may fill your heart - doubt shall be banned". Now, bring your stake to Maealil in the Elven settlement for the next line of the prayer.',
+						[4] = 'You received Maealil\'s prayer: "Peace may fill your soul - evil shall be cleansed". Now, bring your stake to Yberius in the Venore temple for the next line of the prayer.',
+						[5] = 'You received Yberius\' prayer: "Protection will be granted - from dangers at hand". Now, bring your stake to Isimov in the dwarven settlement for the next line of the prayer.',
+						[6] = 'You received Isimov\'s prayer: "Unclean spirits shall be repelled". Now, bring your stake to Amanda in Edron for the next line of the prayer.',
+						[7] = 'You received Amanda\'s prayer: "Wicked curses shall be broken". Now, bring your stake to Kasmir in Darashia for the next line of the prayer.',
+						[8] = 'You received Kasmir\'s prayer: "Let there be honor and humility". Now, bring your stake to Rahkem in Ankrahmun for the next line of the prayer.',
+						[9] = 'You received Rahkem\'s prayer: "Let there be power and compassion". Now, bring your stake to Brewster in Port Hope for the next line of the prayer.',
+						[10] = 'You received Brewster\'s prayer: "Your hand shall be guided - your feet shall walk in harmony". Now, bring your stake to Tyrias in Liberty Bay for the next line of the prayer.',
+						[11] = 'You received Tyrias\' prayer: "Your mind shall be a vessel for joy, light and wisdom". He wasn\'t exactly happy though and said that if you need some mumbo jumbo again, you should rather go to Chondur.',
+						[12] = "Chondur was surprised to hear that you had to travel through all of Tibia to have your wooden stake blessed. He offered you help with the blessing if you should need one again in the future."
 					}
 				}
 			}
 		},
-		[10] = {
+		[9] = {
 			name = "Hot Cuisine",
 			startStorageId = Storage.HotCuisineQuest.QuestStart,
 			startStorageValue = 1,
@@ -822,7 +762,7 @@ if not Quests then
 				}
 			}
 		},
-		[11] = {
+		[10] = {
 			name = "In Service of Yalahar",
 			startStorageId = Storage.InServiceofYalahar.Questline,
 			startStorageValue = 5,
@@ -999,7 +939,7 @@ if not Quests then
 				}
 			}
 		},
-		[12] = {
+		[11] = {
 			name = "Killing in the Name of...",
 			startStorageId = 100157,
 			startStorageValue = 1,
@@ -2271,7 +2211,7 @@ if not Quests then
 				},
 			}
 		},
-		[13] = {
+		[12] = {
 			name = "Outfit and Addon Quests",
 			startStorageId = Storage.OutfitQuest.DefaultStart,
 			startStorageValue = 1,
@@ -2588,7 +2528,7 @@ if not Quests then
 				}
 			}
 		},
-		[14] = {
+		[13] = {
 			name = "Sam\'s Old Backpack",
 			startStorageId = Storage.SamsOldBackpack,
 			startStorageValue = 1,
@@ -2609,7 +2549,7 @@ if not Quests then
 				}
 			}
 		},
-		[15] = {
+		[14] = {
 			name = "Sea of Light",
 			startStorageId = Storage.SeaOfLight.Questline,
 			startStorageValue = 1,
@@ -2667,7 +2607,7 @@ if not Quests then
 				}
 			}
 		},
-		[16] = {
+		[15] = {
 			name = "Secret Service",
 			startStorageId = Storage.SecretService.Quest,
 			startStorageValue = 1,
@@ -2902,7 +2842,7 @@ if not Quests then
 				}
 			}
 		},
-		[17] = {
+		[16] = {
 			name = "The Ancient Tombs",
 			startStorageId = Storage.TheAncientTombs.DefaultStart,
 			startStorageValue = 1,
@@ -2965,7 +2905,7 @@ if not Quests then
 				}
 			}
 		},
-		[18] = {
+		[17] = {
 			name = "The Ape City",
 			startStorageId = Storage.TheApeCity.Started,
 			startStorageValue = 1,
@@ -3019,7 +2959,7 @@ if not Quests then
 				}
 			}
 		},
-		[19] = {
+		[18] = {
 			name = "The Beginning",
 			startStorageId = Storage.RookgaardTutorialIsland.SantiagoQuestLog,
 			startStorageValue = 1,
@@ -3098,7 +3038,7 @@ if not Quests then
 				}
 			}
 		},
-		[20] = {
+		[19] = {
 			name = "The Djinn War - Efreet Faction",
 			startStorageId = Storage.DjinnWar.EfreetFaction.Start,
 			startStorageValue = 1,
@@ -3146,7 +3086,7 @@ if not Quests then
 				}
 			}
 		},
-		[21] = {
+		[20] = {
 			name = "The Djinn War - Marid Faction",
 			startStorageId = Storage.DjinnWar.MaridFaction.Start,
 			startStorageValue = 1,
@@ -3202,7 +3142,7 @@ if not Quests then
 				}
 			}
 		},
-		[22] = {
+		[21] = {
 			name = "The Hidden City of Beregar",
 			startStorageId = Storage.HiddenCityOfBeregar.DefaultStart,
 			startStorageValue = 1,
@@ -3274,7 +3214,7 @@ if not Quests then
 				}
 			}
 		},
-		[23] = {
+		[22] = {
 			name = "The Ice Islands Quest",
 			startStorageId = Storage.TheIceIslands.Questline,
 			startStorageValue = 1,
@@ -3458,10 +3398,54 @@ if not Quests then
 						[5] = "Once all 4 obelisks are marked report back to Hjaern.",
 						[6] = "You got the Norseman outfit and you have access to the Yakchal room deep in the Formorgar Mines."
 					}
+				},
+				[13] = {
+					name = "Barbarian Test 1: Barbarian Booze",
+					storageId = Storage.BarbarianTest.Mission01,
+					missionId = 1055,
+					startValue = 1,
+					endValue = 3,
+					states = {
+						[1] = "You participate in the drinking challenge. Now you can get the permission for a few sips of barbarian mead in exchange for some honey.",
+						[2] = "Now drink from the bucket until you drink 10 sips in a row without passing out",
+						[3] = "You have mastered the first task of the barbarian test. If you haven't done so yet, talk to Sven about it."
+					}
+				},
+				[14] = {
+					name = "Barbarian Test 2: The Bear Hugging",
+					storageId = Storage.BarbarianTest.Mission02,
+					missionId = 1056,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Somewhere north of Svargrond you will find a lonely bear which you have to hug. You wonder what you were thinking when accepting this quest...",
+						[2] = "You passed the bear hugging test (and should take a bath). If you haven't done so yet, talk to Sven about it."
+					}
+				},
+				[15] = {
+					name = "Barbarian Test 3: The Mammoth Pushing",
+					storageId = Storage.BarbarianTest.Mission03,
+					missionId = 1057,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "Find a mammoth north-west of Svargrond and knock it over. You wonder whether your mission is becoming a barbarian or rather commiting suicide.",
+						[2] = "You have knocked over a mammoth - though you wonder what this crushing noise at your spine was. If you haven't done so yet, talk to Sven about the mammoth pushing."
+					}
+				},
+				[16] = {
+					name = "The Honorary Barbarian",
+					storageId = Storage.BarbarianTest.Questline,
+					missionId = 10099,
+					startValue = 8,
+					endValue = 8,
+					states = {
+						[8] = "You are now a honorary barbarian and can become a citizen of Svargrond. If you haven't done so yet, you should look for a barbarian in need of help in the north of the town."
+					}
 				}
 			}
 		},
-		[24] = {
+		[23] = {
 			name = "The Inquisition",
 			startStorageId = Storage.TheInquisition.Questline,
 			startStorageValue = 2,
@@ -3570,7 +3554,7 @@ if not Quests then
 				}
 			}
 		},
-		[25] = {
+		[24] = {
 			name = "The Postman Missions",
 			startStorageId = Storage.Postman.Mission01,
 			startStorageValue = 1,
@@ -3734,7 +3718,7 @@ if not Quests then
 				}
 			}
 		},
-		[26] = {
+		[25] = {
 			name = "The Shattered Isles",
 			startStorageId = Storage.TheShatteredIsles.DefaultStart,
 			startStorageValue = 1,
@@ -3977,7 +3961,7 @@ if not Quests then
 				}
 			}
 		},
-		[27] = {
+		[26] = {
 			name = "The Thieves Guild",
 			startStorageId = Storage.ThievesGuild.Quest,
 			startStorageValue = 1,
@@ -4087,7 +4071,7 @@ if not Quests then
 				}
 			}
 		},
-		[28] = {
+		[27] = {
 			name = "The Travelling Trader Quest",
 			startStorageId = Storage.TravellingTrader.Mission01,
 			startStorageValue = 1,
@@ -4183,7 +4167,7 @@ if not Quests then
 				}
 			}
 		},
-		[29] = {
+		[28] = {
 			name = "The Explorer Society",
 			startStorageId = Storage.ExplorerSociety.QuestLine,
 			startStorageValue = 1,
@@ -4424,7 +4408,7 @@ if not Quests then
 				}
 			}
 		},
-		[30] = {
+		[29] = {
 			name = "The Ultimate Challenges",
 			startStorageId = Storage.SvargrondArena.QuestLogGreenhorn,
 			startStorageValue = 1,
@@ -4464,7 +4448,7 @@ if not Quests then
 				}
 			}
 		},
-		[31] = {
+		[30] = {
 			name = "The White Raven Monastery",
 			startStorageId = Storage.WhiteRavenMonastery.QuestLog,
 			startStorageValue = 1,
@@ -4494,7 +4478,7 @@ if not Quests then
 				}
 			}
 		},
-		[32] = {
+		[31] = {
 			name = "Tibia Tales",
 			startStorageId = Storage.TibiaTales.DefaultStart,
 			startStorageValue = 1,
@@ -4765,7 +4749,7 @@ if not Quests then
 				}
 			}
 		},
-		[33] = {
+		[32] = {
 			name = "Unnatural Selection",
 			startStorageId = Storage.UnnaturalSelection.Questline,
 			startStorageValue = 1,
@@ -4869,7 +4853,7 @@ if not Quests then
 				}
 			}
 		},
-		[34] = {
+		[33] = {
 			name = "What a foolish Quest",
 			startStorageId = Storage.WhatAFoolish.Questline,
 			startStorageValue = 1,
@@ -5029,7 +5013,7 @@ if not Quests then
 				}
 			}
 		},
-		[35] = {
+		[34] = {
 			name = "Wrath of the Emperor",
 			startStorageId = Storage.WrathoftheEmperor.Questline,
 			startStorageValue = 1,
@@ -5200,7 +5184,7 @@ if not Quests then
 				}
 			}
 		},
-		[36] = {
+		[35] = {
 			name = "Oramond",
 			startStorageId = Storage.Oramond.QuestLine,
 			startStorageValue = 1,
@@ -5216,7 +5200,7 @@ if not Quests then
 				}
 			}
 		},
-		[37] = {
+		[36] = {
 			name = "Forgotten Knowledge",
 			startStorageId = Storage.ForgottenKnowledge.Tomes,
 			startStorageValue = 1,
@@ -5297,7 +5281,7 @@ if not Quests then
 				}
 			}
 		},
-		[38] = {
+		[37] = {
 			name = "The First Dragon",
 			startStorageId = Storage.FirstDragon.Questline,
 			startStorageValue = 1,
@@ -5341,7 +5325,7 @@ if not Quests then
 				}
 			}
 		},
-		[39] = {
+		[38] = {
 			name = "Cults of Tibia",
 			startStorageId = Storage.CultsOfTibia.Questline,
 			startStorageValue = 1,
@@ -5515,7 +5499,7 @@ if not Quests then
 				}
 			}
 		},
-		[40] = {
+		[39] = {
 			name = "Dangerous Depths",
 			startStorageId = Storage.DangerousDepths.Questline,
 			startStorageValue = 1,
@@ -5661,7 +5645,7 @@ if not Quests then
 				}
 			}
 		},
-		[41] = { -- FREE SLOT FOR A SIMPLE QUEST
+		[40] = { -- FREE SLOT FOR A SIMPLE QUEST
 			name = "XXXXXXXXXXXX",
 			startStorageId = Storage.AdventurersGuild.GreatDragonHunt.WarriorSkeleton,
 			startStorageValue = 1,
@@ -5679,7 +5663,7 @@ if not Quests then
 				}
 			}
 		},
-		[42] = {
+		[41] = {
 			name = "Adventurers Guild",
 			startStorageId = Storage.AdventurersGuild.GreatDragonHunt.WarriorSkeleton,
 			startStorageValue = 1,
@@ -5699,7 +5683,7 @@ if not Quests then
 				}
 			}
 		},
-		[43] = {
+		[42] = {
 			name = "Dawnport",
 			startStorageId = Storage.Quest.U10_55.Dawnport.Questline,
 			startStorageValue = 1,
@@ -5800,7 +5784,7 @@ if not Quests then
 				},
 			}
 		},
-		[44] = {
+		[43] = {
 			name = "The Rookie Guard",
 			startStorageId = Storage.TheRookieGuard.Questline,
 			startStorageValue = 1,
@@ -5984,7 +5968,7 @@ if not Quests then
 				}
 			}
 		},
-		[45] = {
+		[44] = {
 			name = "The New Frontier",
 			startStorageId = Storage.Quest.U8_54.TheNewFrontier.Questline,
 			startStorageValue = 1,
@@ -6227,7 +6211,7 @@ if not Quests then
 				}
 			}
 		},
-		[46] = {
+		[45] = {
 			name = "Spirithunters Quest",
 			startStorageId = Storage.SpiritHunters.Mission01,
 			startStorageValue = 1,
@@ -6267,7 +6251,7 @@ if not Quests then
 				}
 			}
 		},
-		[47] = {
+		[46] = {
 			name = "Threatened Dreams",
 			startStorageId = Storage.Quest.U11_40.ThreatenedDreams.QuestLine,
 			startStorageValue = 1,

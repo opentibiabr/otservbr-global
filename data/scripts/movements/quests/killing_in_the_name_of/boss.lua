@@ -383,7 +383,7 @@ function boss.onStepIn(player, item, position, fromPosition)
 	for a = 1, #bosses do
 		if player:getPosition() == Position(bosses[a].teleportPosition) then
 			if player:getStorageValue(bosses[a].storage) ~= 1 or roomIsOccupied(bosses[a].centerPosition, bosses[a].rangeX, bosses[a].rangeY) then
-				player:teleportTo(position)
+				player:teleportTo(fromPosition)
 				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 				return true
 			end
