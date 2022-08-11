@@ -58,11 +58,11 @@ local function greetCallback(npc, creature)
 	-- Se estiver na 1º missão
 	if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "The Druid of Crunor? He told you that a new cave appeared here? That's right. I'm the head of a {project} that tries to find out more about this new {area}.")
-		npcHandler:setTopic(playerId, 1)
+	elseif player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 9 then
+		npcHandler:setMessage(MESSAGE_GREET, "Just get out of my way! You killed this beautiful creature. I have nothing more to say. Damn druid of Crunor!")
 	-- Se já tiver após a 1º missão
 	elseif player:getStorageValue(Storage.CultsOfTibia.Life.Mission) > 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "How is your {mission} going?")
-		npcHandler:setTopic(playerId, 6)
 	end
 	return true
 end
@@ -76,7 +76,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 
 -- Sequência para pegar a quest
-if npcHandler:getTopic(playerId) == 1 and MsgContains(message, "project") then
+	if MsgContains(message, "project") then
 		npcHandler:say({"The project is called 'Sandy {Cave} Project' and is funded by the {MoTA}. Its goal is the investigation of this {cave}."}, npc, creature)
 		npcHandler:setTopic(playerId, 2)
 
@@ -106,57 +106,57 @@ if npcHandler:getTopic(playerId) == 1 and MsgContains(message, "project") then
 	elseif npcHandler:getTopic(playerId) == 11 and MsgContains(message, "dark pyramid") then
 		npcHandler:say({"We don't know yet to wich extent the cave and the dark pyramid belong together. Thisi s what we try to find out. Maybe the history of this place has to be rewritten."}, npc, creature)
 		npcHandler:setTopic(playerId, 0)
-end
+	end
 
 	-- Depois de encontrar o Oasis
-if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 3 then
-	if MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 6 then
-		npcHandler:say({"The scientists are still missing? You just found some strange green shining mummies and a big oasis? I give you this analysis tool for the water of the oasis. Maybe that's the key. Could you bring me a sample of this water?"}, npc, creature)
-		npcHandler:setTopic(playerId, 15)
-			elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 15 then
+	if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 3 then
+		if MsgContains(message, "mission") then
+			npcHandler:say({"The scientists are still missing? You just found some strange green shining mummies and a big oasis? I give you this analysis tool for the water of the oasis. Maybe that's the key. Could you bring me a sample of this water?"}, npc, creature)
+			npcHandler:setTopic(playerId, 15)
+		elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 15 then
 			npcHandler:say({"Very good. Hopefully analysing this sample will get us closer to the solution of this mistery."}, npc, creature)
 			player:addItem(25305, 1)
 			player:setStorageValue(Storage.CultsOfTibia.Life.Mission, 4)
+		end
 	end
-end
 
 -- Depois de usar o analyzing tool
-if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 5 then
-	if MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 6 then
-		npcHandler:say({"Do you have the sample I asked you for?"}, npc, creature)
-		npcHandler:setTopic(playerId, 16)
-			elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 16 then
+	if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 5 then
+		if MsgContains(message, "mission") then
+			npcHandler:say({"Do you have the sample I asked you for?"}, npc, creature)
+			npcHandler:setTopic(playerId, 16)
+		elseif MsgContains(message, "yes") and npcHandler:getTopic(playerId) == 16 then
 			npcHandler:say({"Thanks a lot. Let me check the result. Well, I think you need the counteragent. Please apply it to the oasis!"}, npc, creature)
 			player:addItem(25304, 1)
 			player:setStorageValue(Storage.CultsOfTibia.Life.Mission, 6)
+		end
 	end
-end
 
 -- Depois de usar o conteragent
-if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 7 then
-	if MsgContains(message, "mission") and npcHandler:getTopic(playerId) == 6 then
-		npcHandler:say({"What has happened? You applied the counteragent to the oasis and then it was destroyed by a sandstorm? Keep on investigating the place."}, npc, creature)
-		npcHandler:setTopic(playerId, 17)
+	if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 7 then
+		if MsgContains(message, "mission") then
+			npcHandler:say({"What has happened? You applied the counteragent to the oasis and then it was destroyed by a sandstorm? Keep on investigating the place."}, npc, creature)
+			npcHandler:setTopic(playerId, 17)
+		end
 	end
-end
 
 -- after killing the boss the sandking
-if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 8 then
-		npcHandler:setMessage(MESSAGE_GREET, "Just get out of my way! You killed this beautiful creature. I have nothing more to say. Damn druid of Crunor!")
+	if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) == 8 then
+		npcHandler:say("Just get out of my way! You killed this beautiful creature. I have nothing more to say. Damn druid of Crunor!", npc, creature)
 		player:setStorageValue(Storage.CultsOfTibia.Life.Mission, 9)
-end
+	end
 ----------------------------------------- MOTA -------------------------------
 	-- Pedindo o Magnifier de Gareth
-if player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 6 then
-	if MsgContains(message, "magnifier") then
+	if player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 6 then
+		if MsgContains(message, "magnifier") then
 			npcHandler:say({"{Gareth} told you that there are rumours about fake artefacts in the MoTA? And it is your task to check that with a magnifier? I see. I don't need one right now, so you can have one of mine. You find one in the crate over there."}, npc, creature)
 			player:setStorageValue(Storage.CultsOfTibia.MotA.Mission, 7)
 		end
 	end
 
 	-- Pedindo a pintura de Gareth para Angelo
-if player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 10 then
-	if MsgContains(message, "picture") then
+	if player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) == 10 then
+		if MsgContains(message, "picture") then
 			npcHandler:say({"So you found out that one artefact in the MoTA is fake? And {Gareth} sent you to me to get a new artefact as a replacement? Sorry, I hardly know you so I don't trust you. I won't help you with that!"}, npc, creature)
 			player:setStorageValue(Storage.CultsOfTibia.MotA.Mission, 11)
 		end

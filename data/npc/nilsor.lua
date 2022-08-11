@@ -59,11 +59,11 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if MsgContains(message, "svargrond") or MsgContains(message, "passage") then
-		npcHandler:say("Do you want to go back to Svargrond?", npc, creature)
+		npcHandler:say("Do you want to travel to Svargrond?", npc, creature)
 		npcHandler:setTopic(playerId, 10)
 	elseif MsgContains(message, "yes") then
 		if npcHandler:getTopic(playerId) == 10 then
-			player:teleportTo(Position(32306, 31082, 7))
+			player:teleportTo(Position(32312, 31074, 7))
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			npcHandler:setTopic(playerId, 0)
 		end
@@ -227,6 +227,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+npcHandler:setMessage(MESSAGE_GREET, "Greetings, traveller |PLAYERNAME|. Is there anything I can {do for you}?")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 

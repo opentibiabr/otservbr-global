@@ -1,13 +1,15 @@
 local setting = {
-	[23482] = {
+	[32415] = {
 		storage = Storage.CultsOfTibia.Humans.Decaying,
 		max = 10,
-		text = "You absorb the energetic remains of this decaying soul. Its power is very fragile and fleeting"
+		text = "You absorb the energetic remains of this decaying soul. Its power is very fragile and fleeting",
+		effect = CONST_ME_GREEN_ENERGY_SPARK
 	},
-	[23484] = {
+	[32414] = {
 		storage = Storage.CultsOfTibia.Humans.Vaporized,
 		max = 10,
-		text = "You absorb the energetic remains of this whitering soul. Its power is very fragile and fleeting."
+		text = "You absorb the energetic remains of this whitering soul. Its power is very fragile and fleeting.",
+		effect = CONST_ME_BLUE_ENERGY_SPARK
 	}
 }
 
@@ -39,7 +41,7 @@ function taskTeleport.onStepIn(creature, item, position, fromPosition)
 			attribute = string.format("%s, %s", attribute, player:getName())
 			teleport:setSpecialAttribute("task", attribute)
 			player:setStorageValue(value.storage, storage + 1)
-			player:getPosition():sendMagicEffect(CONST_ME_ENERGYHIT)
+			player:getPosition():sendMagicEffect(value.effect)
 			teleport:remove()
 			player:say(value.text, TALKTYPE_MONSTER_SAY)
 		end

@@ -211,6 +211,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+npcHandler:setMessage(MESSAGE_GREET, "Be greeted, |PLAYERNAME|. If you are in need of potions or magical equipment, just ask me about my {offers}.")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())
 

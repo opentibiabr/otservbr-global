@@ -621,7 +621,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 			MESSAGE_EVENT_ADVANCE,"You are still exhausted from earlier attempts. \z
 				Getting liquid silver out of the mountain needs concentration and a steady hand.")
 		end
-	elseif target.itemid == 1865 and target.actionid == 12026 then
+	elseif target.itemid == 7185 then
 		--The Ice Islands Quest, Nibelor 1: Breaking the Ice
 		local missionProgress = player:getStorageValue(Storage.TheIceIslands.Mission02)
 		local pickAmount = player:getStorageValue(Storage.TheIceIslands.PickAmount)
@@ -642,12 +642,38 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 		local crackItem = Tile(toPosition):getItemById(7185)
 		if crackItem then
 			crackItem:transform(7186)
+			toPosition:sendMagicEffect(CONST_ME_POFF)
 			addEvent(revertItem, 60 * 1000, toPosition, 7186, 7185)
 		end
-
 		local chakoyas = {"chakoya toolshaper", "chakoya tribewarden", "chakoya windcaller"}
-		Game.createMonster(chakoyas[math.random(#chakoyas)], toPosition)
-		toPosition:sendMagicEffect(CONST_ME_TELEPORT)
+		if toPosition == Position(32399, 31051, 7) then
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32397, 31048, 7))
+			Position(32397, 31048, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32399, 31048, 7))
+			Position(32399, 31048, 7):sendMagicEffect(CONST_ME_TELEPORT)
+		elseif toPosition == Position(32394, 31062, 7) then
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32388, 31059, 7))
+			Position(32388, 31059, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32390, 31062, 7))
+			Position(32390, 31062, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32389, 31062, 7))
+			Position(32389, 31062, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32387, 31064, 7))
+			Position(32387, 31064, 7):sendMagicEffect(CONST_ME_TELEPORT)
+		elseif toPosition == Position(32393, 31072, 7) then
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32391, 31071, 7))
+			Position(32391, 31071, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32390, 31069, 7))
+			Position(32390, 31069, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32389, 31069, 7))
+			Position(32389, 31069, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32388, 31074, 7))
+			Position(32388, 31074, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32386, 31073, 7))
+			Position(32386, 31073, 7):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster(chakoyas[math.random(#chakoyas)], Position(32387, 31072, 7))
+			Position(32387, 31072, 7):sendMagicEffect(CONST_ME_TELEPORT)
+		end
 	elseif target.itemid == 1791 then
 		-- The Pits of Inferno Quest
 		if toPosition == Position(32808, 32334, 11) then
@@ -880,7 +906,7 @@ function onUseSpoon(player, item, fromPosition, target, toPosition, isHotkey)
 				-- Fine sulphur
 				player:addItem(7247, 1)
 				player:setStorageValue(Storage.TheIceIslands.SulphurLava, 1)
-				toPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
+				toPosition:sendMagicEffect(CONST_ME_YELLOW_RINGS)
 				player:say("You retrive a fine sulphur from a lava hole.", TALKTYPE_MONSTER_SAY)
 			end
 		end
@@ -890,7 +916,7 @@ function onUseSpoon(player, item, fromPosition, target, toPosition, isHotkey)
 			if player:getStorageValue(Storage.TheIceIslands.SporesMushroom) < 1 then
 				player:addItem(7251, 1)
 				player:setStorageValue(Storage.TheIceIslands.SporesMushroom, 1)
-				toPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
+				toPosition:sendMagicEffect(CONST_ME_MAGIC_GREEN)
 				player:say("You retrive spores from a mushroom.", TALKTYPE_MONSTER_SAY)
 			end
 		end
@@ -944,7 +970,7 @@ function onUseKitchenKnife(player, item, fromPosition, target, toPosition, isHot
 			if player:getStorageValue(Storage.TheIceIslands.FrostbiteHerb) < 1 then
 				player:addItem(7248, 1)
 				player:setStorageValue(Storage.TheIceIslands.FrostbiteHerb, 1)
-				toPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
+				toPosition:sendMagicEffect(CONST_ME_HITBYPOISON)
 				player:say("You cut a leaf from a frostbite herb.", TALKTYPE_MONSTER_SAY)
 			end
 		end

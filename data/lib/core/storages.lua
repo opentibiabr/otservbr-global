@@ -1004,7 +1004,9 @@ Storage = {
 		Obelisk02 = 51182,
 		Obelisk03 = 51183,
 		Obelisk04 = 51184,
-		yakchalDoor = 51185
+		yakchalDoor = 51185,
+		HuskyKill = 51186,
+		HuskyKillStatus = 51187
 	},
 	TheWayToYalahar = {
 		-- Reserved storage from 51200 - 51209
