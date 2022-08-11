@@ -1,4 +1,4 @@
-# Ferrumbras Ascendant Quest
+# Ferumbras Ascendant Quest
 
 # Zamulosh Puzzle Habitats
 Used to reset to their original view after being corrupted during the puzzle.
