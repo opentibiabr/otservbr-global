@@ -40,7 +40,7 @@ function bossTimer.onStepIn(creature, item, position, fromPosition)
 				return false
 			end
 		player:teleportTo(Position(setting[b].tpDestination))
-		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)			
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		end
 	end
 	return true
