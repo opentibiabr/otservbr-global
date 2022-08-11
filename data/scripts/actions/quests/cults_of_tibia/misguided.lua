@@ -29,7 +29,7 @@ local function changeMap(mapName)
 	cleanMMap(frompos, topos)
 	cleanMMap(Position(32512, 32364, 10), Position(32526, 32474, 10))
 	if mapName:lower() == "illusion" then
-		Game.setStorageValue("cultsMisguidedMap", "llusion")
+		Game.setStorageValue("cultsMisguidedMap", "illusion")
 		Game.loadMap('data/world/quest/cults_of_tibia/misguided/illusion.otbm')
 	else
 		Game.setStorageValue("cultsMisguidedMap", "reality")
