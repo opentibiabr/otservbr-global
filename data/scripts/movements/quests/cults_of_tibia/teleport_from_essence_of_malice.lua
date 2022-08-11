@@ -4,10 +4,10 @@ function Teleport.onStepIn(player)
 	if not player then
 		return true
 	end
-	player:teleportTo(Position(33492, 31546, 13))
+	player:teleportTo(Position(32349, 31668, 10))
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
 
-Teleport:position({x = 32174, y = 31916, z = 8})
+Teleport:position({x = 33085, y = 31963, z = 15})
 Teleport:register()
