@@ -10314,7 +10314,10 @@
 	</item>
 	<item id="5060" article="a" name="small snake head"/>
 	<item fromid="5061" toid="5067" article="a" name="burning wall"/>
-	<item fromid="5068" toid="5070" name="electric sparks"/>
+	<item fromid="5068" toid="5070" name="electric sparks">
+		<attribute key="blocking" value="1"/>
+		<attribute key="blockProjectile" value="1"/>
+	</item>
 	<item fromid="5071" toid="5073" article="an" name="energy fence"/>
 	<item fromid="5074" toid="5075" article="a" name="lava fountain"/>
 	<item fromid="5076" toid="5079" article="a" name="stony pond">

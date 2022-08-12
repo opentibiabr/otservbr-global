@@ -402,6 +402,9 @@
 	<npc centerx="32255" centery="31080" centerz="6" radius="1">
 		<npc name="Hawkyr" x="0" y="0" z="6" spawntime="60" />
 	</npc>
+	<npc centerx="32877" centery="31087" centerz="6" radius="1">
+		<npc name="Ortheus" x="0" y="0" z="6" spawntime="60" />
+	</npc>
 	<npc centerx="32264" centery="31090" centerz="6" radius="1">
 		<npc name="Thorwulf" x="0" y="0" z="6" spawntime="60" />
 	</npc>
