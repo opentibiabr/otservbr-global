@@ -52,7 +52,6 @@ end
 
 local BloodBrothers = Storage.Quest.U8_4.BloodBrothers
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
 
 	if player:getStorageValue(BloodBrothers.QuestLine) < 0 then
