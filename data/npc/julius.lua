@@ -52,7 +52,6 @@ end
 
 local BloodBrothers = Storage.Quest.U8_4.BloodBrothers
 local function greetCallback(npc, creature)
-	local playerId = creature:getId()
 	local player = Player(creature)
 
 	if player:getStorageValue(BloodBrothers.QuestLine) < 0 then
@@ -66,7 +65,7 @@ end
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
-	if isInArray({"mission", "note"}, message:lower()) then
+	if isInArray({"mission", "note", "vampire"}, message:lower()) then
 		if player:getStorageValue(BloodBrothers.QuestLine) < 0 then
 			npcHandler:say("Our nightly blood-sucking visitors put the inhabitants of Yalahar in constant danger. The worst thing is that anyone in this city could be a vampire. Maybe an outsider like you could help us. Would you try?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
@@ -174,6 +173,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(BloodBrothers.Cookies.Maris, 2)
 			elseif player:getStorageValue(BloodBrothers.Cookies.Maris) == 2 then
 				npcHandler:say("You already reported that name. Any new ones?", npc, creature)
+			else
+				npcHandler:say("Hm. You don't look so sure about that one. You should not report suspects that you did not confirm yourself! Any others?", npc, creature)
 			end
 		elseif MsgContains(message, "ortheus") then
 			if player:getStorageValue(BloodBrothers.Cookies.Ortheus) == 1 then
@@ -181,6 +182,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(BloodBrothers.Cookies.Ortheus, 2)
 			elseif player:getStorageValue(BloodBrothers.Cookies.Ortheus) == 2 then
 				npcHandler:say("You already reported that name. Any new ones?", npc, creature)
+			else
+				npcHandler:say("Hm. You don't look so sure about that one. You should not report suspects that you did not confirm yourself! Any others?", npc, creature)
 			end
 		elseif MsgContains(message, "serafin") then
 			if player:getStorageValue(BloodBrothers.Cookies.Serafin) == 1 then
@@ -188,6 +191,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(BloodBrothers.Cookies.Serafin, 2)
 			elseif player:getStorageValue(BloodBrothers.Cookies.Serafin) == 2 then
 				npcHandler:say("You already reported that name. Any new ones?", npc, creature)
+			else
+				npcHandler:say("Hm. You don't look so sure about that one. You should not report suspects that you did not confirm yourself! Any others?", npc, creature)
 			end
 		elseif MsgContains(message, "lisander") then
 			if player:getStorageValue(BloodBrothers.Cookies.Lisander) == 1 then
@@ -195,6 +200,8 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(BloodBrothers.Cookies.Lisander, 2)
 			elseif player:getStorageValue(BloodBrothers.Cookies.Lisander) == 2 then
 				npcHandler:say("You already reported that name. Any new ones?", npc, creature)
+			else
+				npcHandler:say("Hm. You don't look so sure about that one. You should not report suspects that you did not confirm yourself! Any others?", npc, creature)
 			end
 		elseif MsgContains(message, "armenius") then
 			if player:getStorageValue(BloodBrothers.Cookies.Armenius) == 1 then
@@ -202,9 +209,9 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(BloodBrothers.Cookies.Armenius, 2)
 			elseif player:getStorageValue(BloodBrothers.Cookies.Armenius) == 2 then
 				npcHandler:say("You already reported that name. Any new ones?", npc, creature)
+			else
+				npcHandler:say("Hm. You don't look so sure about that one. You should not report suspects that you did not confirm yourself! Any others?", npc, creature)
 			end
-		else
-			npcHandler:say("Hm. You don't look so sure about that one. You should not report suspects that you did not confirm yourself! Any others?", npc, creature)
 		end
 	elseif npcHandler:getTopic(playerId) == 7 then
 		npcHandler:say("Then try harder.", npc, creature)
@@ -227,7 +234,6 @@ end
 --Basic
 keywordHandler:addKeyword({"distracted"}, StdModule.say, {npcHandler = npcHandler, text = "I come from a family of {vampire} hunters, but to be honest, I'm more into the theoretic part and strategic planning."})
 keywordHandler:addAliasKeyword({"job"})
-keywordHandler:addKeyword({"vampire"}, StdModule.say, {npcHandler = npcHandler, text = "Our nightly blood-sucking visitors put the inhabitants of Yalahar in constant danger."})
 keywordHandler:addKeyword({"yalahar"}, StdModule.say, {npcHandler = npcHandler, text = "A better name would be Gomorrah, if you ask me."})
 keywordHandler:addKeyword({"name"}, StdModule.say, {npcHandler = npcHandler, text = "My name is Julius."})
 keywordHandler:addKeyword({"storkus"}, StdModule.say, {npcHandler = npcHandler, text = "Storkus? Oh yes, I know him. A long time ago we used to hunt together... sometimes."})

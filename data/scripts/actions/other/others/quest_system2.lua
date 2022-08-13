@@ -368,7 +368,7 @@ name = "Tunnelling Guide"}
 		},
 		storage = Storage.HiddenCityOfBeregar.TunnellingGuide
 	},
-	[14041] = {
+	[20003] = {
 		items = {
 			{itemId = 2822, text = [[
 The map shows the original floor plan of this mine. You recognise your position and that the shaft to the south actually would reach much further.
@@ -376,6 +376,12 @@ The map shows the original floor plan of this mine. You recognise your position 
 (In the lower right corner someone scribbled a note how to use the hoist on the first mine floor.)]]}
 		},
 		storage = Storage.QuestChests.FormorgarMinesHoistSkeleton
+	},
+	[20004] = {
+		items = {
+			{itemId = 3266}
+		},
+		storage = Storage.BattleAxeQuest
 	}
 	-- 65203 reservado
 }

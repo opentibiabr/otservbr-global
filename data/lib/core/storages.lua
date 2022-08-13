@@ -138,6 +138,7 @@ Storage = {
 	ChayenneKeyTime = 30056,
 	FreeQuests = 30057,
 	PremiumAccount = 30058,
+	BattleAxeQuest = 30059,
 
 	--[[
 	Old storages

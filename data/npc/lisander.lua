@@ -59,7 +59,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("A cookie? Sure, is it for free?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
 		else
-			npcHandler:say("It'd be better for you to leave now.", npc, creature)
+			npcHandler:say("Whatever you have there, I think I don't want it.", npc, creature)
 		end
 	elseif message == "yes" then
 		if npcHandler:getTopic(playerId) == 1 and player:removeItem(8199, 1) then -- garlic cookie
