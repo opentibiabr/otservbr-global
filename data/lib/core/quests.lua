@@ -4498,7 +4498,7 @@ if not Quests then
 					}
 				},
 				[2] = {
-					name = "Arito\'s Task",
+					name = "Arito's Task",
 					storageId = Storage.TibiaTales.AritosTask,
 					missionId = 10318,
 					startValue = 1,
@@ -4510,7 +4510,7 @@ if not Quests then
 					}
 				},
 				[3] = {
-					name = "Lion\'s Rock",
+					name = "Lion's Rock",
 					storageId = Storage.LionsRock.Questline,
 					missionId = 10319,
 					startValue = 1,
@@ -4745,6 +4745,31 @@ if not Quests then
 					states = {
 						[1] = "Budrik asked you to look for the hideout of the Horned Fox and bring his stolen mining helmet back. The Fox's lair is presumed to be west of Kazordoon near the coast.",
 						[2] = "You succesfully helped Budrik in stealing back his old mining helemt."
+					}
+				},
+				[15] = {
+					name = "Fish for a Serpent",
+					storageId = Storage.Quest.U8_2.FishForASerpent.QuestLine,
+					missionId = 10097,
+					startValue = 1,
+					endValue = 5,
+					states = {
+						[1] = "Your first task is to bring 5 fish.",
+						[2] = "Your second task is to bring 5 northern pike.",
+						[3] = "Your third task is to bring 5 green perch.",
+						[4] = "Your forth task is to bring 5 rainbow trout.",
+						[5] = "You bring enough fish to make the bait. Now you're ready for the hunt."
+					}
+				},
+				[16] = {
+					name = "The hunt for the Sea Serpent",
+					storageId = Storage.Quest.U8_2.TheHuntForTheSeaSerpent.QuestLine,
+					missionId = 10098,
+					startValue = 1,
+					endValue = 2,
+					states = {
+						[1] = "",
+						[2] = "You navigated the ship to the right location. You are now able to dive down and explore the caves."
 					}
 				}
 			}
