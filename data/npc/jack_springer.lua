@@ -71,8 +71,7 @@ end
 
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
-	local playerId = player:getId()
-	
+
 	if MsgContains(message, "late") then
 		if player:getStorageValue(GraveDanger.QuestLine) < 1 then
 			npcHandler:say({
