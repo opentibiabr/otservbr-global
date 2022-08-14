@@ -242,7 +242,7 @@ keywordHandler:addKeyword({"news"}, StdModule.say, {npcHandler = npcHandler, tex
 keywordHandler:addKeyword({"thank"}, StdModule.say, {npcHandler = npcHandler, text = "Well, I should be the one to thank you I guess."})
 
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye, |PLAYERNAME|. Never trust anyone.")
-npcHandler:setMessage(MESSAGE_TRADE, "I'll reward you for every pair of vampire teeth you bring me.")
+npcHandler:setMessage(MESSAGE_SENDTRADE, "I'll reward you for every pair of vampire teeth you bring me.")
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

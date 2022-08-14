@@ -23,6 +23,15 @@ npcConfig.flags = {
 	floorchange = false
 }
 
+npcConfig.voices = {
+	interval = 15000,
+	chance = 50,
+	{text = "Is this a mutiny or what? Move, move!!"},
+	{text = "In the rigging ya lazy fools!"},
+	{text = "I wanna see you movin' ya lazy fools!!"},
+	{text = "Full sails!! There's a sea serpent to catch!!"}
+}
+
 local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 
@@ -95,7 +104,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 2 then
 			npcHandler:say("Let's go fo' a {hunt} and bring the beast down!", npc, creature) --test
-			player:teleportTo(Position(31947, 31045, 6))
+			player:teleportTo(Position(31942, 31047, 6))
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			if player:getStorageValue(TheHuntForTheSeaSerpent.QuestLine) < 0 then
 				player:setStorageValue(TheHuntForTheSeaSerpent.QuestLine, 1)

@@ -2368,6 +2368,9 @@
 	<npc centerx="33216" centery="32143" centerz="9" radius="1">
 		<npc name="Denominator" x="0" y="0" z="9" spawntime="60" />
 	</npc>
+	<npc centerx="32326" centery="32261" centerz="9" radius="1">
+		<npc name="Jack Springer" x="0" y="0" z="9" spawntime="60" />
+	</npc>
 	<npc centerx="32289" centery="32294" centerz="9" radius="1">
 		<npc name="A Confused Frog" x="0" y="0" z="9" spawntime="60" />
 	</npc>

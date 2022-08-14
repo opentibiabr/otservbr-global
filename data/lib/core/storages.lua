@@ -2649,7 +2649,22 @@ Storage = {
 			GoldenOutfits = {},
 		},
 		U12_20 = { -- update 12.20 - Reserved Storages 46851 - 47000
-			GraveDanger = {},
+			GraveDanger = {
+				QuestLine = 46851,
+				Graves = {
+					Edron = 46852,
+					DarkCathedral = 46853,
+					Ghostlands = 46854,
+					Cormaya = 46855,
+					FemorHills = 46856,
+					Ankrahmun = 46857,
+					Kilmaresh = 46858,
+					Vengoth = 46859,
+					Darashia = 46860,
+					Thais = 46861,
+					Orclands = 46862,
+					IceIslands = 46863},
+				Cobra = 46864},
 			HandOfTheInquisitionOutfits = {},
 			-- Kilmaresh = {}, done earlier in the file
 		},
