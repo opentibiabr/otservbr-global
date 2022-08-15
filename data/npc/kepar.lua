@@ -26,7 +26,7 @@ npcConfig.flags = {
 npcConfig.voices = {
 	interval = 15000,
 	chance = 50,
-	{text = 'Don\'t forget to deposit your money here in the Tibian Bank before you head out for adventure.', yell = false}
+	{text = 'Always on guard.', yell = false}
 }
 
 local keywordHandler = KeywordHandler:new()
@@ -73,12 +73,12 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-npcHandler:setMessage(MESSAGE_GREET, "Yes? What may I do for you, |PLAYERNAME|? Bank business, perhaps?")
-npcHandler:setMessage(MESSAGE_FAREWELL, "Have a nice day.")
-npcHandler:setMessage(MESSAGE_WALKAWAY, "Have a nice day.")
+npcHandler:setMessage(MESSAGE_GREET, "Hi there. Our trophies are off-limits to you, but perhaps you want to access our {banking} service?")
+npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye.")
+npcHandler:setMessage(MESSAGE_WALKAWAY, "Tsk. Those impolite youngsters.")
 npcHandler:setCallback(CALLBACK_GREET, NpcBankGreetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)
