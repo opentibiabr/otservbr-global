@@ -28,7 +28,8 @@ end
 
 local iceCrack = MoveEvent()
 
-function iceCrack.onStepIn(player, item, position, fromPosition)
+function iceCrack.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
 	if not player then
 		return true
 	end
