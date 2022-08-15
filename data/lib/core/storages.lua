@@ -2838,6 +2838,7 @@ GlobalStorage = {
 	Inquisition = 65013,
 	Yasir = 65014,
 	NightmareIsle = 65015,
+	IceCrack = 65016,
 	KeysUpdate = 40000, -- Reserved storage from 40000 - 40000
 }
 
