@@ -7,7 +7,8 @@ local config = {
 }
 
 local teleports = MoveEvent()
-function teleports.onStepIn(player, item, position, fromPosition)
+function teleports.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
 	if not player then
 		return true
 	end
