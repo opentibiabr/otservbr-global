@@ -1,5 +1,6 @@
 local config = {
 	{position = {x = 32164, y = 31293, z = 6}, itemId = 1066},
+	{position = {x = 32164, y = 31292, z = 6}, itemId = 6291},
 	{position = {x = 32163, y = 31292, z = 6}, itemId = 6284},
 	{position = {x = 32162, y = 31292, z = 6}, itemId = 6295},
 	{position = {x = 32162, y = 31293, z = 6}, itemId = 6298},
