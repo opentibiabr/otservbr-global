@@ -1,5 +1,5 @@
 local levers = {
-	{leverPos = {x = 33515, y = 31444, z = 13}, teleportTo = Position({x = 33489, y = 31441, z = 13}), bossName = "Duke Krule", bossPos = Position({x = 33488, y = 31435, z = 13})},--Cormaya
+	{leverPos = {x = 33515, y = 31444, z = 13}, teleportTo = Position({x = 33489, y = 31441, z = 13}), bossName = "Earl Osam", bossPos = Position({x = 33488, y = 31435, z = 13})},--Cormaya
 	{leverPos = {x = 33454, y = 31413, z = 13}, teleportTo = Position({x = 33457, y = 31442, z = 13}), bossName = "Count Vlarkorth", bossPos = Position({x = 33457, y = 31433, z = 13})},--Edron
 	{leverPos = {x = 33421, y = 31493, z = 13}, teleportTo = Position({x = 33425, y = 31480, z = 13}), bossName = "Lord Azaram", bossPos = Position({x = 33425, y = 31466, z = 13})},--Ghostland
 	{leverPos = {x = 33423, y = 31413, z = 13}, teleportTo = Position({x = 33425, y = 31431, z = 13}), bossNames = {"Sir Baeloc", "Sir Nictros"}, bossPos = {Position({x = 33422, y = 31428, z = 13}), Position({x = 33427, y = 31428, z = 13})}},--Darashia
