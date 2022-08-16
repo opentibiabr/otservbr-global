@@ -29,7 +29,7 @@ function geyser.onStepIn(creature, item, position, fromPosition)
 	end
 
 	local monsterType = creature:getType()
-	if monsterType and monsterType:getTypeName():lower() == "the sinister hermit dirty" and creature:getOutfit().lookBody == 63 then
+	if monsterType and monsterType:getTypeName():lower() == "the sinister hermit dirty" and creature:getOutfit().lookBody == 97 then
 		local currentLife = creature:getHealth()
 		local bossTransform = Game.createMonster("the sinister hermit", creature:getPosition(), true, true)
 		if bossTransform then

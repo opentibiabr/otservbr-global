@@ -26,10 +26,10 @@ function machineDeath.onDeath(creature, attacker)
 	local creaturePosition = creature:getPosition()
 	if name == "containment machine" then
 		-- destruindo os raios
-		DestruirRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 29087, 1)
-		DestruirRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 29087, 1)
-		DestruirRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 29087, 2)
-		DestruirRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 29087, 2)
+		DestruirRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 5068, 1)
+		DestruirRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 5068, 1)
+		DestruirRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 5069, 2)
+		DestruirRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 5069, 2)
 		local itensToMonster = {--8633
 			Position(33133, 31856, 15),
 			Position(33140, 31856, 15),
@@ -43,14 +43,14 @@ function machineDeath.onDeath(creature, attacker)
 					tile:getItemById(7805):remove()
 				end
 				local crystal = Game.createMonster("Containment Crystal", position)
-				crystal:registerEvent("machineHealth")
-				crystal:registerEvent("machineDeath")
+				crystal:registerEvent("MachineHealth")
+				crystal:registerEvent("MachineDeath")
 			end
 		end
 	elseif name == "containment crystal" then
 		Game.createItem(7809,1, creaturePosition)
 	elseif name == "the armored voidborn" then
-		Game.createMonster("The Unarmored Voidborn", creaturePosition):registerEvent("bossesMission")
+		Game.createMonster("The Unarmored Voidborn", creaturePosition):registerEvent("bossesMission") --to fix/check
 	end
 
 	return true

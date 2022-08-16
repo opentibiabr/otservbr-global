@@ -141,7 +141,6 @@ npcConfig.shop = {
 	{ itemName = "blue crystal splinter", clientId = 16124, sell = 400 },
 	{ itemName = "bronze goblet", clientId = 5807, buy = 2000 },
 	{ itemName = "brown crystal splinter", clientId = 16123, sell = 400 },
-	{ itemName = "brown shimmering pearl", clientId = 282, sell = 3000 },
 	{ itemName = "coral brooch", clientId = 24391, sell = 750 },
 	{ itemName = "crunor idol", clientId = 30055, sell = 30000 },
 	{ itemName = "cyan crystal fragment", clientId = 16125, sell = 800 },
@@ -151,6 +150,8 @@ npcConfig.shop = {
 	{ itemName = "giant emerald", clientId = 30060, sell = 90000 },
 	{ itemName = "giant ruby", clientId = 30059, sell = 70000 },
 	{ itemName = "giant sapphire", clientId = 30061, sell = 50000 },
+	{ itemName = "giant shimmering pearl", clientId = 281, sell = 3000 }, -- green
+	{ itemName = "giant shimmering pearl", clientId = 282, sell = 3000 }, -- brown
 	{ itemName = "giant topaz", clientId = 32623, sell = 80000 },
 	{ itemName = "gold ingot", clientId = 9058, sell = 5000 },
 	{ itemName = "gold nugget", clientId = 3040, sell = 850 },
@@ -159,7 +160,6 @@ npcConfig.shop = {
 	{ itemName = "green crystal fragment", clientId = 16127, sell = 800 },
 	{ itemName = "green crystal shard", clientId = 16121, sell = 1500 },
 	{ itemName = "green crystal splinter", clientId = 16122, sell = 400 },
-	{ itemName = "green giant shimmering pearl", clientId = 281, sell = 3000 },
 	{ itemName = "lion figurine", clientId = 33781, sell = 10000 },
 	{ itemName = "onyx chip", clientId = 22193, sell = 400 },
 	{ itemName = "opal", clientId = 22194, sell = 500 },
@@ -183,8 +183,8 @@ npcConfig.shop = {
 	{ itemName = "unicorn figurine", clientId = 30054, sell = 50000 },
 	{ itemName = "violet crystal shard", clientId = 16120, sell = 1500 },
 	{ itemName = "white silk flower", clientId = 34008, sell = 9000 },
-	{ itemName = "wedding ring", clientId = 3004, buy = 990 },
-	{ itemName = "white pearl", clientId = 3026, buy = 320 }
+	{ itemName = "wedding ring", clientId = 3004, buy = 990, sell = 100 },
+	{ itemName = "white pearl", clientId = 3026, buy = 320, sell = 160 }
 }
 -- On buy npc shop message
 npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)

@@ -11637,7 +11637,7 @@
 	<item id="5964" article="a" name="dead rat">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4255"/>
+		<attribute key="decayTo" value="3994"/>
 		<attribute key="containersize" value="10"/>
 	</item>
 	<item id="5965" article="a" name="dead human">
@@ -11670,7 +11670,7 @@
 	<item id="5970" article="a" name="dead deer">
 		<attribute key="fluidsource" value="blood"/>
 		<attribute key="duration" value="10"/>
-		<attribute key="decayTo" value="4277"/>
+		<attribute key="decayTo" value="4016"/>
 		<attribute key="containersize" value="5"/>
 	</item>
 	<item id="5971" article="a" name="dead dog">
@@ -12214,7 +12214,7 @@
 		<attribute key="fluidsource" value="slime"/>
 		<attribute key="duration" value="10"/>
 		<attribute key="decayTo" value="4385"/>
-		<attribute key="containersize" value="5"/>
+		<attribute key="containersize" value="8"/>
 	</item>
 	<item id="6061" article="a" name="dead serpent spawn">
 		<attribute key="fluidsource" value="blood"/>
@@ -19086,7 +19086,7 @@
 	<item fromid="9628" toid="9629" article="a" name="telescope"/>
 	<item id="9630" article="an" name="energy field"/>
 	<item id="9631" article="a" name="scarab pincers" plural="scarab pincers">
-		<attribute key="weight" value="229"/>
+		<attribute key="weight" value="230"/>
 	</item>
 	<item id="9632" article="an" name="ancient stone" plural="ancient stones">
 		<attribute key="weight" value="160"/>
@@ -19493,6 +19493,7 @@
 	<item id="10180" article="a" name="groud"/>
 	<item id="10181" article="a" name="magic wall">
 		<attribute key="type" value="magicfield"/>
+		<attribute key="blockProjectile" value="1"/>
 		<attribute key="blocking" value="1"/>
 		<attribute key="duration" value="20"/>
 		<attribute key="decayTo" value="0"/>
@@ -31107,8 +31108,11 @@
 	<item id="20323" article="an" name="old flying carpet"/>
 	<item id="20324" name="unknown tile"/>
 	<item fromid="20325" toid="20327" article="a" name="sand"/>
-	<item fromid="20328" toid="20336" article="a" name="stairs">
+	<item fromid="20328" toid="20332" article="a" name="stairs">
 		<attribute key="floorchange" value="down"/>
+	</item>
+	<item fromid="20333" toid="20336" article="a" name="stairs">
+		<attribute key="floorchange" value="south"/>
 	</item>
 	<item id="20337" article="a" name="dead wounded cave draptor">
 		<attribute key="fluidsource" value="blood"/>
@@ -45048,10 +45052,22 @@
 		<attribute key="duration" value="200"/>
 		<attribute key="decayTo" value="31464"/>
 	</item>
-	<item id="31466" article="a" name="tournament carpet"/>
-	<item id="31467" article="a" name="sublime tournament carpet"/>
-	<item id="31468" article="a" name="tournament carpet"/>
-	<item id="31469" article="a" name="sublime tournament carpet"/>
+	<item id="31466" article="a" name="rolled-up tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="31467" article="a" name="rolled-up sublime tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="31468" article="a" name="tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="31469" article="a" name="sublime tournament carpet">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
 	<item fromid="31470" toid="31471" article="a" name="tournament accolade"/>
 	<item fromid="31472" toid="31473" article="a" name="sublime tournament accolade"/>
 	<item fromid="31474" toid="31477" article="a" name="pillar"/>

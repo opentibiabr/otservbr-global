@@ -60,6 +60,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	if MsgContains(message, 'yes') then
 		if npcHandler:getTopic(playerId) == 1 then
 			player:setStorageValue(Storage.SecretService.Quest, 1)
+			player:addAchievement("Secret Agent")
 			npcHandler:say('Then welcome to the family.', npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		elseif npcHandler:getTopic(playerId) == 2 then
@@ -104,6 +105,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			if player:removeItem(396, 1) then
 				player:setStorageValue(Storage.SecretService.Mission07, 2)
 				player:setStorageValue(Storage.SecretService.Quest, 15)
+				player:addAchievement("Top AVIN Agent")
 				player:addItem(899, 1)
 				npcHandler:say({
 				'You have proven yourself as very efficient. The future may hold great things for you in store ...',
