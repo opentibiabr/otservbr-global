@@ -263,7 +263,7 @@ Blessings.DropLoot = function(player, corpse, chance, skulled)
 		if item then
 			local thisChance = chance
 			local thisRandom = math.random(100*multiplier)
-			if not item:isinbox() then
+			if not item:isContainer() then
 				thisChance = chance/10
 			end
 			Blessings.DebugPrint(thisChance/multiplier .. "%" .. " | thisRandom "..thisRandom/multiplier.."%", "DropLoot item "..item:getName() .. " |")
