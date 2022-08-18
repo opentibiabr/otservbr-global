@@ -277,7 +277,7 @@ Blessings.DropLoot = function(player, corpse, chance, skulled)
 		local inbox = player:getSlotItem(CONST_SLOT_STORE_INBOX)
 		local inboxsize = inbox:getSize() - 1
 		for i = 0, inboxsize do
-			inbox:getItem(i):destroy()
+			inbox:getItem(i):remove()
 		end
 	end
 end
