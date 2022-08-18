@@ -81,6 +81,10 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+-- Travel without the need to say "pass", remove or comment this two lines if you want to keep the rpg
+keywordHandler:addKeyword({'factory'}, StdModule.travel, {npcHandler = npcHandler, destination = Position(32859, 31302, 7)})
+keywordHandler:addKeyword({'trade'}, StdModule.travel, {npcHandler = npcHandler, destination = Position(32854, 31302, 7)})
+
 local function onTradeRequest(npc, creature)
 	local player = Player(creature)
 	local playerId = player:getId()
@@ -114,7 +118,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Goodbye citizen!")
 npcHandler:setMessage(MESSAGE_GREET, "Hello. Unless you have official business here or want to pass the gate, please move on.")
 npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, false)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

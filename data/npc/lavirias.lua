@@ -56,7 +56,7 @@ keywordHandler:addFarewellKeyword({"asgha thrazi"}, {npcHandler = npcHandler, te
 
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -152,7 +152,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, 'Bye, bye, |PLAYERNAME|.')
 npcHandler:setMessage(MESSAGE_SENDTRADE, 'Sure, take a look, honey.')
 npcHandler:setMessage(MESSAGE_GREET, 'Nice to see you, |PLAYERNAME|! Ask me for a {trade} if you like to see my exclusive offers.')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "axe", clientId = 3274, buy = 18, sell = 7 },

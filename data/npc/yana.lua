@@ -191,7 +191,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	elseif MsgContains(message, "tokens") then
 		npc:openShopWindow(creature)
 		npcHandler:say("If you have any gold tokens with you, let's have a look! These are my offers.", npc, creature)
-	elseif MsgContains(message, "ofert") then
+	elseif MsgContains(message, "trade") then
 		npcHandler:say({"I have creature products for the imbuements {strike}, {vampirism} and {void}. Make your choice, please!"}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif npcHandler:getTopic(playerId) == 1 then
@@ -246,7 +246,7 @@ npcHandler:setCallback(CALLBACK_REMOVE_INTERACTION, onReleaseFocus)
 
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, false)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

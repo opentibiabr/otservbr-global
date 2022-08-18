@@ -60,7 +60,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Be mourned pilgrim in flesh. Talking of fl
 npcHandler:setMessage(MESSAGE_FAREWELL, "May enlightenment be your path.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "May enlightenment be your path.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Sure, take a look at my offers.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "banana", clientId = 3587, buy = 5 },

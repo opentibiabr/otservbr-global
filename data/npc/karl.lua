@@ -98,7 +98,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Please come back, but don't tell others
 npcHandler:setMessage(MESSAGE_FAREWELL, "Please come back, but don't tell others.")
 npcHandler:setMessage(MESSAGE_GREET, 'Pshhhht! Not that loud ... but welcome.')
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bottle of whisper beer", clientId = 6106, buy = 80 },

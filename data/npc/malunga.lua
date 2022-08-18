@@ -56,7 +56,7 @@ npcType.onCloseChannel = function(npc, creature)
 end
 
 npcHandler:setMessage(MESSAGE_GREET, "Greetings. I have only little time to {spare}, so the conversation will be short. I teach sorcerer {spells} and buy a few magical {ingredients}.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "boggy dreads", clientId = 9667, sell = 200 },

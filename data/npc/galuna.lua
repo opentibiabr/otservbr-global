@@ -60,7 +60,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Oh, please come in, |PLAYERNAME|. What do 
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "arrow", clientId = 3447, buy = 3 },

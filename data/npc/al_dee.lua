@@ -174,6 +174,6 @@ npcHandler:setMessage(MESSAGE_GREET, {
 	'You can also ask me about each {citizen} of the isle.'
 })
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcType:register(npcConfig)

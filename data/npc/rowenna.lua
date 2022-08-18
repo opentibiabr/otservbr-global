@@ -60,7 +60,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Welcome to the finest weaponshop in the la
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye. Come back soon.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye. Come back soon.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my wares.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "axe", clientId = 3274, buy = 20, sell = 7 },

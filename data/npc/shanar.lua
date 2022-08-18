@@ -63,7 +63,7 @@ keywordHandler:addFarewellKeyword({"asgha thrazi"}, {npcHandler = npcHandler, te
 
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "axe", clientId = 3274, buy = 20, sell = 7 },

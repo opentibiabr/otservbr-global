@@ -55,7 +55,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Oh, good bye.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Oh, good bye.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my wares.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "belted cape", clientId = 8044, buy = 1300, sell = 500 },

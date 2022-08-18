@@ -79,7 +79,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Who is next?")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Who is next?")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Here. Don't forget that you need to buy a label too if you want to send a parcel. Always write the name of the {receiver} in the first line.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "label", clientId = 3507, buy = 1 },

@@ -65,7 +65,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Welcome to Imbuement's shop!")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye and come again.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye and come again.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "battle stone", clientId = 11447, buy = 290 },

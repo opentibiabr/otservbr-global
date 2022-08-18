@@ -106,7 +106,7 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, 'At your service, just browse through m
 
 npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "angelic axe", clientId = 7436, sell = 5000 },

@@ -104,7 +104,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my wares. \z
 	Or do you want to look only at {potions}, {wands} or {runes}?")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },

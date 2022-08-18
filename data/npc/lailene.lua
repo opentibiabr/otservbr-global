@@ -56,7 +56,7 @@ npcHandler:setMessage(MESSAGE_GREET, "What do you want in my magical robe store?
 npcHandler:setMessage(MESSAGE_FAREWELL, "See ya, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "See ya, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Here.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "batwing hat", clientId = 9103, sell = 8000 },

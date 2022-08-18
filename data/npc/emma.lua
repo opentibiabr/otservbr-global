@@ -246,7 +246,7 @@ local function creatureSayCallback(npc, creature, type, message)
 end
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 -- basic
 keywordHandler:addKeyword({"queen"}, StdModule.say, {npcHandler = npcHandler, text = "I am privileged to be in service of our beloved queen!"})
 keywordHandler:addKeyword({"carlin"}, StdModule.say, {npcHandler = npcHandler, text = "We are proud people who fought hard for their freedom and won't allow others to oppress us again."})

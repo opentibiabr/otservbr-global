@@ -62,7 +62,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Greetings, traveller. Maybe you'd like to 
 npcHandler:setMessage(MESSAGE_FAREWELL, "Goodbye, traveller.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Goodbye, traveller.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my wares.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bamboo stick", clientId = 11445, sell = 30 },

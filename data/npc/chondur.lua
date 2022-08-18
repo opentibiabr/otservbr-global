@@ -584,7 +584,7 @@ keywordHandler:addKeyword(
 )
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "black skull", clientId = 9056, sell = 4000 },

@@ -86,6 +86,6 @@ npcHandler:setMessage(MESSAGE_GREET, "Welcome to Valentine's Store. Let's {trade
 npcHandler:setMessage(MESSAGE_FAREWELL, "Please come back from time to time.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Please come back from time to time.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcType:register(npcConfig)

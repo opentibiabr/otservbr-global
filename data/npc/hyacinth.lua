@@ -232,7 +232,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, 'May Crunor bless you.')
 npcHandler:setMessage(MESSAGE_SENDTRADE, 'Here. Don\'t forget, if you buy potions, there\'s a {deposit} of 5 gold on the empty flask.')
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "empty potion flask", clientId = 283, sell = 5 },

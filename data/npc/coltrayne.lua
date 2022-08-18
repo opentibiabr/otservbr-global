@@ -142,7 +142,7 @@ keywordHandler:addKeyword({'plunderpurse'}, StdModule.say,
 npcHandler:setMessage(MESSAGE_GREET, "Hey there. Need some armor or weapon? Then ask me for a {trade}.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Yeah, bye..")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "arrow", clientId = 3447, buy = 3 },

@@ -225,7 +225,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Bye, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Bye, |PLAYERNAME|.")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "sniper gloves", clientId = 5875, sell = 2000 }

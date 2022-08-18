@@ -62,7 +62,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Good day, |PLAYERNAME|. I hope you bring a
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye and please come back soon.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye and please come back soon.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Sure, take a look. Apart from those, I also buy some of the possessions from famous demonlords and bosses. Ask me about it if you found anything interesting.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "basalt fetish", clientId = 17856, sell = 210 },

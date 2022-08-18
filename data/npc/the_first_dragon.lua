@@ -165,7 +165,7 @@ keywordHandler:addKeyword({'concept'}, StdModule.say, {npcHandler = npcHandler, 
 keywordHandler:addKeyword({'lava'}, StdModule.say, {npcHandler = npcHandler, text = "Lava is only fun as long as it doesn't harden - then it turns into an annoyance."})
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

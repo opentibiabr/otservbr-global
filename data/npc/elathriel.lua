@@ -301,7 +301,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Be greeted |PLAYERNAME|. What is your {bus
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Asha Thrazi, stranger!")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Asha Thrazi, stranger!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

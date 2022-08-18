@@ -65,7 +65,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Good Bye, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "May God show you the path, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my offers.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 npcConfig.shop = {
 	{ itemName = "basket", clientId = 2855, buy = 6 },
 	{ itemName = "bottle", clientId = 2875, buy = 3 },

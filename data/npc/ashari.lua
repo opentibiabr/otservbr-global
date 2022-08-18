@@ -52,7 +52,7 @@ end
 npcHandler:setMessage(MESSAGE_GREET, "Hello, stranger! These caves must seem strange to you. I wonder what brings you here... maybe you are interested in some work? There are several tasks I could need a hand with.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Bye!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Bye!")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

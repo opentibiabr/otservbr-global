@@ -96,7 +96,7 @@ keywordHandler:addAliasKeyword({'wisdom'})
 
 npcHandler:setMessage(MESSAGE_GREET, 'Welcome, pilgrim. How may I {help} you? Are you in need of {healing}?')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

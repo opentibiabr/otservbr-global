@@ -61,7 +61,7 @@ keywordHandler:addKeyword({'wine'}, StdModule.say, {npcHandler = npcHandler, tex
 
 npcHandler:setMessage(MESSAGE_GREET, "Welcome to the wave cellar, |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Please come back from time to time.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bottle of lemonade", clientId = 2875, buy = 12, count = 12 },

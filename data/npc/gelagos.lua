@@ -60,7 +60,7 @@ keywordHandler:addKeyword({'cyclops'}, StdModule.say, {npcHandler = npcHandler, 
 
 npcHandler:setMessage(MESSAGE_GREET, "Hehehe.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Hope you die and lose it.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -472,7 +472,7 @@ npcHandler:setMessage(
 	"You sure you want to spend time on this piece of rock? I can show you the world! Huh."
 )
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

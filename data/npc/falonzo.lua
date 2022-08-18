@@ -126,7 +126,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Greetings, adventurer!")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Well, bye then.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

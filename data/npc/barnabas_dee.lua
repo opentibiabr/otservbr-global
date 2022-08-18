@@ -129,7 +129,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Welcome to my humble abode. If you come fo
 npcHandler:setMessage(MESSAGE_FAREWELL, "Take care, child")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "'The impetuosity of youth', as my friend Mordecai would say.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

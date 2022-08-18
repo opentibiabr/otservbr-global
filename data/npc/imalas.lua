@@ -54,7 +54,7 @@ keywordHandler:addKeyword({'food'}, StdModule.say, {npcHandler = npcHandler, tex
 
 npcHandler:setMessage(MESSAGE_GREET, "Hello |PLAYERNAME|! What do you need? If it's {food}, you've come to the right place.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Yep, take a good look.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "banana", clientId = 3587, buy = 2 },

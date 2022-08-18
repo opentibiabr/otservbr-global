@@ -79,7 +79,7 @@ keywordHandler:addKeyword({'excalibug'}, StdModule.say, {npcHandler = npcHandler
 npcHandler:setMessage(MESSAGE_GREET, "Hello, mighty adventurer |PLAYERNAME|. Can I teach you something you don't know?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Go and be careful. Remember what you have learned!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Did the bell ring?")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

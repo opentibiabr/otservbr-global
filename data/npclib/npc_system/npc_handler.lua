@@ -70,6 +70,7 @@ if NpcHandler == nil then
 		talkDelayTimeForOutgoingMessages = 1, -- Seconds to delay outgoing messages
 		callbackFunctions = nil,
 		modules = nil,
+		npcName = nil,
 		eventSay = nil,
 		eventDelayedSay = nil,
 		topic = nil,
@@ -101,6 +102,7 @@ if NpcHandler == nil then
 		local obj = {}
 		obj.callbackFunctions = {}
 		obj.modules = {}
+		obj.npcName = ""
 		obj.eventSay = {}
 		obj.eventDelayedSay = {}
 		obj.topic = {}
@@ -251,10 +253,24 @@ if NpcHandler == nil then
 	end
 
 	-- Adds a module to this npc handler and inits it
-	function NpcHandler:addModule(module)
+	-- Variables "greetCallback, farewellCallback and tradeCallback" are boolean value, true by default
+	function NpcHandler:addModule(module, initNpcName, greetCallback, farewellCallback, tradeCallback)
 		if self.modules ~= nil then
 			self.modules[#self.modules + 1] = module
-			module:init(self)
+			self.npcName = initNpcName
+			if greetCallback == nil then
+				Spdlog.warn("[NpcHandler:addModule] - Greet callback is missing for npc with name: ".. initNpcName ..", setting to true")
+				greetCallback = true
+			end
+			if farewellCallback == nil then
+				Spdlog.warn("[NpcHandler:addModule] - Farewell callback is missing for npc with name: ".. initNpcName ..", setting to true")
+				farewellCallback = true
+			end
+			if tradeCallback == nil then
+				Spdlog.warn("[NpcHandler:addModule] - Trade callback is missing for npc with name: ".. initNpcName ..", setting to true")
+				tradeCallback = true
+			end
+			module:init(self, greetCallback, farewellCallback, tradeCallback)
 		end
 	end
 
