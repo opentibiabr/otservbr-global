@@ -198,7 +198,7 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, 'Take all the time you need to decide w
 npcHandler:setMessage(MESSAGE_GREET, 'Welcome, welcome! Have a seat! If you like a drink or something to eat, just ask me for a {trade}!')
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bread", clientId = 3600, buy = 3 },

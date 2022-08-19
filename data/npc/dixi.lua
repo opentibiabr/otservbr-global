@@ -141,7 +141,7 @@ keywordHandler:addAliasKeyword({'zerbrus'})
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Um yeah, good day.')
 npcHandler:setMessage(MESSAGE_SENDTRADE, 'Here, take a look and choose something nice for you!')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "brass helmet", clientId = 3354, sell = 22 },

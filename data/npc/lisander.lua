@@ -74,7 +74,7 @@ keywordHandler:addKeyword({"alori mort"}, StdModule.say, {npcHandler = npcHandle
 
 npcHandler:setMessage(MESSAGE_GREET, "I'd rather be left in {peace}. Keep it short.")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

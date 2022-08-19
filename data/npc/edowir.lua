@@ -62,7 +62,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Oh, hello |PLAYERNAME|! How nice of you to
 npcHandler:setMessage(MESSAGE_FAREWELL, "Come back whenever you're in need of wisdom.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Come back whenever you're in need of wisdom.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

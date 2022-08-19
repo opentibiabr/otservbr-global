@@ -178,7 +178,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye and please stay away, okay?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "At last! Good things come to those who wait.")
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "energy soil", clientId = 945, sell = 2000 },

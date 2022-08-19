@@ -75,6 +75,6 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Chh...")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Chh...")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Chchch. Chh! <you're not sure, but it seems that squirrel wants to trade your valuable acorns for useless stones that it found and considered uneatable>")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcType:register(npcConfig)

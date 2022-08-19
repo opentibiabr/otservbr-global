@@ -62,7 +62,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Beware, if you go any further you will hav
 npcHandler:setMessage(MESSAGE_FAREWELL, "Goodbye. Human. Being!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Goodbye. Human. Being!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

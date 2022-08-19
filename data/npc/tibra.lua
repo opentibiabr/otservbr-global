@@ -128,7 +128,7 @@ keywordHandler:addKeyword({'ruthless seven'}, StdModule.say, {npcHandler = npcHa
 npcHandler:setMessage(MESSAGE_GREET, 'Welcome in the name of the gods, pilgrim |PLAYERNAME|!')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Good bye, |PLAYERNAME|. May the gods be with you to guard and guide you, my child!')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -85,7 +85,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Yes, goodbye |PLAYERNAME|, just leave m
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Silence at last.")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "scroll of heroic deeds", clientId = 11510, sell = 230 },

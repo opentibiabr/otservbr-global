@@ -63,7 +63,7 @@ addTravelKeyword('centre', 'centre', 7, Position(32628, 32771, 7))
 -- Basic
 keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = 'I can bring you either to the {east} end of Port Hope or to the {centre} of the town, where would you like to go?'})
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

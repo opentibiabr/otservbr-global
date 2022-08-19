@@ -111,7 +111,7 @@ keywordHandler:addAliasKeyword({"go"})
 keywordHandler:addAliasKeyword({"sail"})
 
 npcHandler:setMessage(MESSAGE_GREET, "Where are we at the moment? Is this {Svargrond}? NO,*HICKS* it's Okolnir! Anyway, where do you want to go?")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "compass", clientId = 10302, sell = 45 }

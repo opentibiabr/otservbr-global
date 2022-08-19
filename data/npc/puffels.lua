@@ -269,7 +269,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Yeah, another fool {disturbing} me, what a
 npcHandler:setMessage(MESSAGE_FAREWELL, "Whatever.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Whatever.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

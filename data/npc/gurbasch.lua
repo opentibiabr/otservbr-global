@@ -92,7 +92,7 @@ npcHandler:setMessage(MESSAGE_GREET, 'Welcome, |PLAYERNAME|! Lovely steamboat, a
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Until next time.')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Until next time.')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

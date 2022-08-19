@@ -99,7 +99,7 @@ end
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_GREET, "Ahhh, welcome |PLAYERNAME|! Say, have you already heard the latest news about the {seamonster}, {Aneus}, or the {rumours} in this area?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye and come again for another small talk! *waves*")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -107,7 +107,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, 'STAY AWAY FROM THAT HOLE!')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'May the gods protect you! And stay away from that hole!')
 npcHandler:setMessage(MESSAGE_GREET, 'BEWARE! Beware of that {hole}!')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

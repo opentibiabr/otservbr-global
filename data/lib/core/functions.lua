@@ -323,7 +323,7 @@ function functionRevert()
 		end
 	end
 
-	Game.loadMap('data/world/worldchanges/habitats.otbm')
+	Game.loadMap('data/world/quest/ferumbras_ascendant/habitats.otbm')
 	return true
 end
 

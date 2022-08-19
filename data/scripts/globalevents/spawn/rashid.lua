@@ -44,13 +44,14 @@ function rashidSpawnOnTime.onTime(interval)
 	local today = os.date("*t").wday
 
 	local rashidTarget = Npc("rashid")
+	local config = positionByDay[today]
 
 	if rashidTarget then
 		Spdlog.info("Rashid is traveling to " .. os.date("%A") .. "s location.")
 		local message = ("Rashid is traveling to " .. os.date("%A") .. "s location.")
 		rashidTarget:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-		rashidTarget:teleportTo(positionByDay[today])
-		rashidTarget:setMasterPos(positionByDay[today])
+		rashidTarget:teleportTo(config.position)
+		rashidTarget:setMasterPos(config.position)
 		rashidTarget:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		addEvent(rashidwebhook, 60000, message) -- Event with 1 minute delay to send webhook message after server starts.
 	end

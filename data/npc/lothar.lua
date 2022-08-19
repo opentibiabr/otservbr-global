@@ -128,7 +128,7 @@ end
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_GREET, "Welcome to my humble hut, |PLAYERNAME|. What brings you {here}?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Take care of yourself.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

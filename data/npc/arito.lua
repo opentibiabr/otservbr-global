@@ -93,7 +93,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Be mourned, pilgrim in flesh. Be mourned i
 npcHandler:setMessage(MESSAGE_FAREWELL, "Do visit us again.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Do visit us again.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Sure, browse through my offers.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bread", clientId = 3600, buy = 8 },

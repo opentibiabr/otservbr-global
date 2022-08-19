@@ -61,7 +61,7 @@ keywordHandler:addKeyword({'graubart'}, StdModule.say, {npcHandler = npcHandler,
 npcHandler:setMessage(MESSAGE_GREET, "Ahoi, |PLAYERNAME|. You want to buy some fresh fish?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye and come again!")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Buy all the fish you want. It's fresh and healthy, promised.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

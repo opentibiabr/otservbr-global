@@ -105,7 +105,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "Bye. Tell others about... my little sho
 npcHandler:setMessage(MESSAGE_FAREWELL, "Bye. Tell others about... my little shop here.")
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "axe", clientId = 3274, buy = 20, sell = 7 },
