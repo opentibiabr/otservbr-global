@@ -232,7 +232,8 @@ Storage = {
 		BlackTel = 50059,
 		PinkTel = 50060,
 		Peacock = 50061,
-		HighDry = 50062
+		HighDry = 50062,
+		FalconBastionAccess = 50063
 	},
 	DeeplingBosses = {
 		-- Reserved storage from 50070 - 50079

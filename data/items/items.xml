@@ -30656,7 +30656,10 @@
 	<item id="20133" article="a" name="fine gravel"/>
 	<item id="20134" article="a" name="crushed stone"/>
 	<item id="20135" article="a" name="stone"/>
-	<item id="20136" article="a" name="chalk residues"/>
+	<item id="20136" article="a" name="chalk residues">
+		<attribute key="duration" value="30"/>
+		<attribute key="decayTo" value="20125"/>
+	</item>
 	<item id="20137" article="a" name="flowing water"/>
 	<item id="20138" article="an" name="essence of dread">
 		<attribute key="description" value="You don't like holding it. Really don't. As if something bad was just waiting to happen"/>
@@ -40432,6 +40435,7 @@
 	<item fromid="28431" toid="28436" name="fiery metal eye"/>
 	<item fromid="28437" toid="28460" name="fiery metal eye"/>
 	<item id="28461" article="a" name="page from a mystic book">
+		<attribute key="writeable" value="1"/>
 		<attribute key="description" value="A page from an extremely old book. It somehow feels very heavy, as if it was still part of the original book it was torn out of"/>
 		<attribute key="weight" value="200"/>
 	</item>
