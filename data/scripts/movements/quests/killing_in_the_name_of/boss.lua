@@ -376,7 +376,8 @@ local bosses = {
 
 local boss = MoveEvent()
 
-function boss.onStepIn(player, item, position, fromPosition)
+function boss.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
 	if not player then
 		return true
 	end

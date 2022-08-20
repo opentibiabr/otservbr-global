@@ -138,6 +138,7 @@ Storage = {
 	ChayenneKeyTime = 30056,
 	FreeQuests = 30057,
 	PremiumAccount = 30058,
+	BattleAxeQuest = 30059,
 
 	--[[
 	Old storages
@@ -231,7 +232,8 @@ Storage = {
 		BlackTel = 50059,
 		PinkTel = 50060,
 		Peacock = 50061,
-		HighDry = 50062
+		HighDry = 50062,
+		FalconBastionAccess = 50063
 	},
 	DeeplingBosses = {
 		-- Reserved storage from 50070 - 50079
@@ -1169,7 +1171,6 @@ Storage = {
 	},
 	TheHuntForTheSeaSerpent = {
 		-- Reserved storage from 51410 - 51419
-		CaptainHaba = 51410
 	},
 	SecretService = {
 		-- Reserved storage from 51420 - 51449
@@ -2100,16 +2101,36 @@ Storage = {
 			MachineryOfWar = {},
 			TheBeginning = {},
 			TheDemonOak = {},
-			TheHuntForTheSeaSerpent = {},
+			FishForASerpent = {
+				QuestLine = 41651},
+			TheHuntForTheSeaSerpent = {
+				QuestLine = 41652,
+				SuccessSwitch = 41653,
+				Bait = 41654,
+				Direction = 41655,
+				Access = 41656},
 			TheInquisition = {},
 			TheThievesGuild = {},
 			TrollSabotage = {
-			Questline = 41840,
-			JumpTimer = 41841},
+				Questline = 41840,
+				JumpTimer = 41841},
 			VampireHunter = {},
 		},
 		U8_4 = { -- update 8.4 - Reserved Storages 41901 - 42145
-			BloodBrothers = {},
+			BloodBrothers = {
+				QuestLine = 41901,
+				Mission01 = 41902,
+				GarlicBread = 41903,
+				Mission02 = 41904,
+				Cookies = {
+					Serafin = 41905,
+					Lisander = 41906,
+					Ortheus = 41907,
+					Maris = 41908,
+					Armenius = 41909},
+				Mission03 = 41910,
+				Mission04 = 41911,
+				VengothAccess = 41912},
 			InServiceOfYalahar = {},
 			TheHiddenCityOfBeregar = {},
 			TopOfTheCity = {},
@@ -2629,7 +2650,22 @@ Storage = {
 			GoldenOutfits = {},
 		},
 		U12_20 = { -- update 12.20 - Reserved Storages 46851 - 47000
-			GraveDanger = {},
+			GraveDanger = {
+				QuestLine = 46851,
+				Graves = {
+					Edron = 46852,
+					DarkCathedral = 46853,
+					Ghostlands = 46854,
+					Cormaya = 46855,
+					FemorHills = 46856,
+					Ankrahmun = 46857,
+					Kilmaresh = 46858,
+					Vengoth = 46859,
+					Darashia = 46860,
+					Thais = 46861,
+					Orclands = 46862,
+					IceIslands = 46863},
+				Cobra = 46864},
 			HandOfTheInquisitionOutfits = {},
 			-- Kilmaresh = {}, done earlier in the file
 		},
@@ -2803,6 +2839,8 @@ GlobalStorage = {
 	Inquisition = 65013,
 	Yasir = 65014,
 	NightmareIsle = 65015,
+	IceCrack = 65016,
+	UglyMonster = 65017,
 	KeysUpdate = 40000, -- Reserved storage from 40000 - 40000
 }
 

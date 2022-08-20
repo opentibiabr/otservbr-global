@@ -1125,7 +1125,7 @@ ChestUnique = {
 		itemPos = {x = 32621, y = 31404, z = 10}
 	},
 	[14041] = {
-		itemId = 4285,
-		itemPos = {x = 32211, y = 31273, z = 10}
+		itemId = 11810,
+		itemPos = {x = 33195, y = 31765, z = 1}
 	}
 }

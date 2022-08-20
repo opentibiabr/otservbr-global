@@ -531,7 +531,6 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 	if table.contains({354, 355}, target.itemid) and target.actionid == 101 then
 		target:transform(394)
 		target:decay()
-		toPosition:sendMagicEffect(CONST_ME_POFF)
 	elseif target.itemid == 10310 then
 		-- shiny stone refining
 		local chance = math.random(1, 100)
