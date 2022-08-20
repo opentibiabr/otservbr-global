@@ -99,7 +99,7 @@ end
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, my friend.")
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "vial of potent holy water", clientId = 31612, buy = 100 }
