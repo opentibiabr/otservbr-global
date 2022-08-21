@@ -20,6 +20,10 @@ monster.corpse = 28737
 monster.speed = 210
 monster.manaCost = 0
 
+monster.events = {
+	"GrandCanonDominusDeath"
+}
+
 monster.changeTarget = {
 	interval = 4000,
 	chance = 10

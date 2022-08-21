@@ -20,6 +20,10 @@ monster.corpse = 28643
 monster.speed = 210
 monster.manaCost = 0
 
+monster.events = {
+	"PreceptorLazareDeath"
+}
+
 monster.changeTarget = {
 	interval = 2000,
 	chance = 10
