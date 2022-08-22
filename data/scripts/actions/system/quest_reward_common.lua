@@ -128,7 +128,11 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The ".. getItemName(setting.itemId) .. " is empty.")
 		return true
 	end
-
+	if setting.randomReward then
+		local randomReward = math.random(#setting.randomReward)
+		setting.reward[1][1] = setting.randomReward[randomReward][1]
+		setting.reward[1][2] = setting.randomReward[randomReward][2]
+	end
 	local container = player:addItem(setting.container)
 	for i = 1, #setting.reward do
 		local itemid = setting.reward[i][1]

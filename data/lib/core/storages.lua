@@ -2650,7 +2650,16 @@ Storage = {
 			BattleMageOutfits = {},
 			DiscovererOutfits = {},
 			MeasuringTibia = {},
-			TheSecretLibrary = {},
+			TheSecretLibrary = {
+				FalconBastionChestsTimer = {
+					Coast = 46281,
+					Island = 46282,
+					ThroneHall = 46283,
+					Shortcut = 46284,
+					LowerBastion = 46285,
+					UndergroundBastion = 46286
+				},
+			},
 		},
 		U12_00 = { -- update 12.00 - Reserved Storages 46301 - 46600
 			DreamWarriorOutfits = {},
