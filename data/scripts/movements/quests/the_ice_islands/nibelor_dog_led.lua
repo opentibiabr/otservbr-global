@@ -1,21 +1,25 @@
 local setting = {
 	-- Nibelor 5: Cure the Dogs needed or Barbarian Test Quest needed
-	[12025] = {
+	{
+		sledPosition = Position(32367, 31058, 7),
 		destination = Position(32407, 31067, 7),
 		storage = Storage.TheIceIslands.Mission06,
 		value = 8
 	},
-	[12026] = {
+	{
+		sledPosition = Position(32409, 31066, 7),
 		destination = Position(32365, 31059, 7),
 		storage = Storage.TheIceIslands.Mission06,
 		value = 8
 	},
-	[12027] = {
+	{
+		sledPosition = Position(32303, 31081, 7),
 		destination = Position(32329, 31045, 7),
 		storage = Storage.TheIceIslands.Mission03,
 		value = 3
 	},
-	[12028] = {
+	{
+		sledPosition = Position(32327, 31045, 7),
 		destination = Position(32301, 31080, 7),
 		storage = Storage.TheIceIslands.Mission03,
 		value = 3
@@ -29,20 +33,20 @@ function nibelorDogLed.onStepIn(creature, item, position, fromPosition)
 	if not player then
 		return true
 	end
-
-	local sled = setting[item.uid]
-	if not sled then
-		return true
-	end
-
-	if player:getStorageValue(sled.storage) == sled.value and player:removeItem(3582, 1) then
-		player:getPosition():sendMagicEffect(CONST_ME_POFF)
-		player:teleportTo(sled.destination)
-		sled.destination:sendMagicEffect(CONST_ME_TELEPORT)
+	for b = 1, #setting do
+		if player:getPosition() == setting[b].sledPosition then
+			if player:getStorageValue(setting[b].storage) == setting[b].value and player:removeItem(3582, 1) then
+				player:teleportTo(setting[b].destination)
+				setting[b].destination:sendMagicEffect(CONST_ME_TELEPORT)
+			else
+				player:teleportTo(fromPosition)
+			end
+		end
 	end
 	return true
 end
 
-nibelorDogLed:type("stepin")
-nibelorDogLed:uid(1057, 1058, 1059, 1060)
+for a = 1, #setting do
+	nibelorDogLed:position({x = setting[a].sledPosition.x, y = setting[a].sledPosition.y, z = 7})
+end
 nibelorDogLed:register()

@@ -106,7 +106,7 @@ keywordHandler:addKeyword({'help'}, StdModule.say, {npcHandler = npcHandler, onl
 	local node2 = keywordHandler:addKeyword({'second addon'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'To achieve the second storage addon you need to give me the Sedge Hat. Do you have them with you?'})
 	node2:addChildKeyword({'yes'}, WayfarerSecond, {})
 	node2:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, onlyFocus = true, text = 'Alright then. Come back when you got all neccessary items.', reset = true})
- npcHandler:addModule(FocusModule:new())
+ npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

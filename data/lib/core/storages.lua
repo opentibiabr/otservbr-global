@@ -138,6 +138,7 @@ Storage = {
 	ChayenneKeyTime = 30056,
 	FreeQuests = 30057,
 	PremiumAccount = 30058,
+	BattleAxeQuest = 30059,
 
 	--[[
 	Old storages
@@ -231,7 +232,8 @@ Storage = {
 		BlackTel = 50059,
 		PinkTel = 50060,
 		Peacock = 50061,
-		HighDry = 50062
+		HighDry = 50062,
+		FalconBastionAccess = 50063
 	},
 	DeeplingBosses = {
 		-- Reserved storage from 50070 - 50079
@@ -1004,7 +1006,9 @@ Storage = {
 		Obelisk02 = 51182,
 		Obelisk03 = 51183,
 		Obelisk04 = 51184,
-		yakchalDoor = 51185
+		yakchalDoor = 51185,
+		HuskyKill = 51186,
+		HuskyKillStatus = 51187
 	},
 	TheWayToYalahar = {
 		-- Reserved storage from 51200 - 51209
@@ -1167,7 +1171,6 @@ Storage = {
 	},
 	TheHuntForTheSeaSerpent = {
 		-- Reserved storage from 51410 - 51419
-		CaptainHaba = 51410
 	},
 	SecretService = {
 		-- Reserved storage from 51420 - 51449
@@ -1304,13 +1307,19 @@ Storage = {
 	KillingInTheNameOf = {
 		-- Reserved storage from 51610 - 51629
 		LugriNecromancers = 51610,
-		LugriNecromancerCount = 51611,
-		BudrikMinos = 51612,
-		BudrikMinosCount = 51613,
-		MissionTiquandasRevenge = 51614,
-		TiquandasRevengeTeleport = 51615,
-		MissionDemodras = 51616,
-		DemodrasTeleport = 51617
+		BudrikMinos = 51611,
+		MissionTiquandasRevenge = 51612,
+		MissionDemodras = 51613,
+		BossPoints = 51614,
+		QuestLogEntry = 51615,
+		PawAndFurRank = 51616,
+		GreenDjinnTask = 51617,
+		BlueDjinnTask = 51618,
+		PirateTask = 51619,
+		TrollTask = 51620,
+		GoblinTask = 51621,
+		RotwormTask = 51622,
+		CyclopsTask = 51623
 	},
 	HotCuisineQuest = {
 		-- Reserved storage from 51650 - 51659
@@ -2092,26 +2101,215 @@ Storage = {
 			MachineryOfWar = {},
 			TheBeginning = {},
 			TheDemonOak = {},
-			TheHuntForTheSeaSerpent = {},
+			FishForASerpent = {
+				QuestLine = 41651},
+			TheHuntForTheSeaSerpent = {
+				QuestLine = 41652,
+				SuccessSwitch = 41653,
+				Bait = 41654,
+				Direction = 41655,
+				Access = 41656},
 			TheInquisition = {},
 			TheThievesGuild = {},
 			TrollSabotage = {
-			Questline = 41840,
-			JumpTimer = 41841},
+				Questline = 41840,
+				JumpTimer = 41841},
 			VampireHunter = {},
 		},
-		U8_4 = { -- update 8.4 - Reserved Storages 41901 - 42150
-			BloodBrothers = {},
+		U8_4 = { -- update 8.4 - Reserved Storages 41901 - 42145
+			BloodBrothers = {
+				QuestLine = 41901,
+				Mission01 = 41902,
+				GarlicBread = 41903,
+				Mission02 = 41904,
+				Cookies = {
+					Serafin = 41905,
+					Lisander = 41906,
+					Ortheus = 41907,
+					Maris = 41908,
+					Armenius = 41909},
+				Mission03 = 41910,
+				Mission04 = 41911,
+				VengothAccess = 41912},
 			InServiceOfYalahar = {},
 			TheHiddenCityOfBeregar = {},
 			TopOfTheCity = {},
 			YalaharianOutfits = {},
 		},
-		U8_5 = { -- update 8.5 - Reserved Storages 42151 - 42550
+		U8_5 = { -- update 8.5 - Reserved Storages 42146 - 42550
 			Braindeath = {},
 			DarashiaDragon = {},
 			HotCuisine = {},
-			KillingInTheNameOf = {},
+			KillingInTheNameOf = {
+				MonsterKillCount = {
+					KillCount = 42150,
+					-- Grizzly Adams
+					CrocodileCount = 42151,
+					BadgerCount = 42152,
+					TarantulaCount = 42153,
+					CarniphilasCount = 42154,
+					StoneGolemCount = 42155,
+					MammothCount = 42156,
+					GnarlhoundCount = 42157,
+					TerramiteCount = 42158,
+					ApesCount = 42159,
+					ThornbackTortoiseCount = 42160,
+					GargoyleCount = 42161,
+					IceGolemCount = 42162,
+					QuaraScoutsCount = 42163,
+					MutatedRatCount = 42164,
+					AncientScarabCount = 42165,
+					WyvernCount = 42166,
+					LancerBeetleCount = 42167,
+					WailingWidowCount = 42168,
+					KillerCaimanCount = 42169,
+					BonebeastCount = 42170,
+					CrystalSpiderCount = 42171,
+					MutatedTigerCount = 42172,
+					UnderwaterQuarasCount = 42173,
+					GiantSpiderCount = 42174,
+					WerewolveCount = 42175,
+					NightmareCount = 42176,
+					HellspawnCount = 42177,
+					HighClassLizardCount = 42178,
+					StamporCount = 42179,
+					BrimstoneBugCount = 42180,
+					MutatedBatCount = 42181,
+					HydraCount = 42182,
+					SerpentSpawnCount = 42183,
+					MedusaCount = 42184,
+					BehemothCount = 42185,
+					SeaSerpentsCount = 42186,
+					HellhoundCount = 42187,
+					GhastlyDragonCount = 42188,
+					DrakenCount = 42189,
+					DestroyerCount = 42190,
+					UndeadDragonCount = 42191,
+					DemonCount = 42192,
+					-- Others
+					GreenDjinnCount = 42193,
+					BlueDjinnCount = 42194,
+					PirateCount = 42195,
+					MinotaurCount = 42196,
+					NecromancerCount = 42197,
+					TrollCount = 42198,
+					GoblinCount = 42199,
+					RotwormCount = 42200,
+					CyclopsCount = 42201,
+				},
+				BossKillCount = {
+					-- Grizzly Adams
+					SnapperCount = 42350,
+					HideCount = 42351,
+					DeathbineCount = 42352,
+					BloodtuskCount = 42353,
+					ShardheadCount = 42354,
+					EsmeraldaCount = 42355,
+					FleshcrawlerCount = 42356,
+					RibstrideCount = 42357,
+					BloodwebCount = 42358,
+					ThulCount = 42359,
+					WidowCount = 42360,
+					HemmingCount = 42361,
+					TormentorCount = 42362,
+					FlamebornCount = 42363,
+					FazzrahCount = 42364,
+					TromphonyteCount = 42365,
+					ScuttlerCount = 42366,
+					PayneCount = 42367,
+					ManyCount = 42368,
+					NoxiousCount = 42369,
+					GorgoCount = 42370,
+					StonecrackerCount = 42371,
+					LeviathanCount = 42372,
+					KerberosCount = 42373,
+					EthershreckCount = 42374,
+					PauperizerCount = 42375,
+					BretzecutionerCount = 42376,
+					ZanakephCount = 42377,
+					TiquandasCount = 42378,
+					DemodrasCount = 42379,
+					-- Others
+					NecropharusCount = 42380,
+					FoxCount = 42381,
+					PiratesCount = 42382,
+					MerikhCount = 42383,
+					FahimCount = 42384,
+				},
+				AltKillCount = {
+				-- Grizzly Adams
+					-- Apes
+					KongraCount = 42450,
+					MerlkinCount = 42451,
+					SibangCount = 42452,
+					-- Quara Scouts
+					QuaraConstrictorScoutCount = 42453,
+					QuaraHydromancerScoutCount = 42454,
+					QuaramMntassinScoutCount = 42455,
+					QuaraPincherScoutCount = 42456,
+					QuaraPredatorScoutCount = 42457,
+					-- Underwater Quara
+					QuaraConstrictorCount = 42458,
+					QuaraHydromancerCount = 42459,
+					QuaraMantassinCount = 42460,
+					QuaraPincherCount = 42461,
+					QuaraPredatorCount = 42462,
+					-- Nightmares
+					NightmareCount = 42463,
+					NightmareScionCount = 42464,
+					-- High Class Lizards
+					LizardChosenCount = 42465,
+					LizardDragonPriestCount = 42466,
+					LizardHighGuardCount = 42467,
+					LizardLegionnaireCount = 42468,
+					LizardZaogunCount = 42469,
+					-- Sea Serpents
+					SeaSerpentCount = 42470,
+					YoungSeaSerpentCount = 42471,
+					-- Drakens
+					DrakenAbominationCount = 42472,
+					DrakenEliteCount = 42473,
+					DrakenSpellweaverCount = 42474,
+					DrakenWarmasterCount = 42475,
+				-- Others
+					-- Minotaurs
+					MinotaurCount = 42476,
+					MinotaurGuardCount = 42477,
+					MinotaurMageCount = 42478,
+					MinotaurArcherCount = 42479,
+					-- Necromancers and Priestesses
+					NecromancerCount = 42480,
+					PriestessCount = 42481,
+					BloodPriestCount = 42482,
+					BloodHandCount = 42483,
+					ShadowPupilCount = 42484,
+					-- Green Djinns or Efreets
+					GreenDjinnCount = 42485,
+					EfreetCount = 42486,
+					-- Blue Djinns or Marids
+					BlueDjinnCount = 42487,
+					MaridCount = 42488,
+					-- Pirates
+					PirateMarauderCount = 42489,
+					PirateCutthroadCount = 42490,
+					PirateBuccaneerCount = 42491,
+					PirateCorsairCount = 42492,
+					-- Trolls
+					TrollCount = 42493,
+					TrollChampionCount = 42494,
+					-- Goblins
+					GoblinCount = 42495,
+					GoblinScavengerCount = 42496,
+					GoblinAssassinCount = 42497,
+					-- Rotworms
+					RotwormCount = 42498,
+					CarrionWormnCount = 42499,
+					-- Cyclops
+					CyclopsCount = 42500,
+					CyclopsDroneCount = 42501,
+					CyclopsSmithCount = 42502
+				}
+			},
 			LoneMedusa = {},
 			PilgrimageOfAshes = {},
 			ShadowsOfYalahar = {},
@@ -2452,7 +2650,22 @@ Storage = {
 			GoldenOutfits = {},
 		},
 		U12_20 = { -- update 12.20 - Reserved Storages 46851 - 47000
-			GraveDanger = {},
+			GraveDanger = {
+				QuestLine = 46851,
+				Graves = {
+					Edron = 46852,
+					DarkCathedral = 46853,
+					Ghostlands = 46854,
+					Cormaya = 46855,
+					FemorHills = 46856,
+					Ankrahmun = 46857,
+					Kilmaresh = 46858,
+					Vengoth = 46859,
+					Darashia = 46860,
+					Thais = 46861,
+					Orclands = 46862,
+					IceIslands = 46863},
+				Cobra = 46864},
 			HandOfTheInquisitionOutfits = {},
 			-- Kilmaresh = {}, done earlier in the file
 		},
@@ -2626,6 +2839,8 @@ GlobalStorage = {
 	Inquisition = 65013,
 	Yasir = 65014,
 	NightmareIsle = 65015,
+	IceCrack = 65016,
+	UglyMonster = 65017,
 	KeysUpdate = 40000, -- Reserved storage from 40000 - 40000
 }
 

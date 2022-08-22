@@ -100,7 +100,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Be mourned pilgrim in flesh and welcome to
 npcHandler:setMessage(MESSAGE_FAREWELL, "May enlightenment be your path.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "May enlightenment be your path.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my wares. Or do you want to look only at wands or runes?")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "avalanche rune", clientId = 3161, buy = 57 },

@@ -6,8 +6,7 @@ function sandEntrance.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if (player:getStorageValue(Storage.CultsOfTibia.Life.Mission) < 1 and
-	player:getStorageValue(Storage.CultsOfTibia.MotA.Mission)) < 1 then
+	if player:getStorageValue(Storage.CultsOfTibia.Life.Mission) < 1 and player:getStorageValue(Storage.CultsOfTibia.MotA.Mission) < 1 then
 	player:teleportTo(fromPosition, true)
 	player:sendCancelMessage("You can't go there yet.")
 	end
@@ -15,5 +14,5 @@ function sandEntrance.onStepIn(creature, item, position, fromPosition)
 end
 
 sandEntrance:type("stepin")
-sandEntrance:aid(4999)
+sandEntrance:position{x=33296, y=32291, z=11}
 sandEntrance:register()

@@ -122,7 +122,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, 'Daraman\'s blessings and good bye.')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Daraman\'s blessings and good bye.')
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "amber", clientId = 32626, sell = 20000 },

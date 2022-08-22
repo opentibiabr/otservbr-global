@@ -129,7 +129,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Hello, I am the warden of this {monument}.
 
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

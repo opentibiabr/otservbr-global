@@ -58,7 +58,7 @@ end
 
 npcHandler:setMessage(MESSAGE_GREET, "Welcome, |PLAYERNAME|. What can I do for you?")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Of course, just browse through my wares.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bowl of evergreen flowers", clientId = 8763, buy = 150 },

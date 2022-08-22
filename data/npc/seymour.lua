@@ -223,7 +223,7 @@ keywordHandler:addKeyword({'zerbrus'}, StdModule.say, {npcHandler = npcHandler, 
 
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Good bye! And remember: No running up and down in the academy!')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

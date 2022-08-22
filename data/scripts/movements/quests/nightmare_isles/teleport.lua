@@ -1,7 +1,7 @@
 local setting = {
 	{storage = 210001, teleportPosition = Position(33032, 32400, 7)}, -- entrance teleport Darashia Northwest
 	{storage = 210002, teleportPosition = Position(33215, 32273, 7)}, -- entrance teleport Darashia North
-	{storage = 210016, teleportPosition = Position(33255, 32678, 7)} -- {x = 33255, y = 32678, z = 7}
+	{storage = 210016, teleportPosition = Position(33255, 32678, 7)} -- entrance teleport Ankrahmun
 }
 
 local teleports = {

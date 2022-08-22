@@ -79,7 +79,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Oh, you're still alive. Hello, |PLAYERNAME
 npcHandler:setMessage(MESSAGE_FAREWELL, "Yeah, bye or whatever.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Bye.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

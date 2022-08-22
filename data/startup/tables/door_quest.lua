@@ -173,7 +173,11 @@ QuestDoorAction = {
 	},
 	[Storage.DjinnWar.MaridFaction.DoorToEfreetTerritory] = {
 		itemId = false,
-		itemPos = {{x = 33034, y = 32620, z = 6}}
+		itemPos = {
+			{x = 33034, y = 32620, z = 6},
+			{x = 32869, y = 31105, z = 7},
+			{x = 32869, y = 31106, z = 7}
+		}
 	},
 	-- Efreet faction
 	[Storage.DjinnWar.EfreetFaction.DoorToLamp] = {
@@ -182,7 +186,11 @@ QuestDoorAction = {
 	},
 	[Storage.DjinnWar.EfreetFaction.DoorToMaridTerritory] = {
 		itemId = false,
-		itemPos = {{x = 33100, y = 32518, z = 7}}
+		itemPos = {
+			{x = 33100, y = 32518, z = 7},
+			{x = 32821, y = 31112, z = 7},
+			{x = 32822, y = 31112, z = 7}
+		}
 	},
 	-- Bigfoot burden quest
 	[Storage.BigfootBurden.DoorGoldenFruits] = {
@@ -768,6 +776,23 @@ QuestDoorAction = {
 	[Storage.WrathoftheEmperor.Mission09] = {
 		itemId = false,
 		itemPos = {{x = 33083, y = 31216, z = 8}}
+	},
+	[Storage.Quest.U12_20.GraveDanger.QuestLine] = {
+		itemId = false,
+		itemPos = {
+			{x = 33264, y = 31993, z = 7},
+			{x = 33197, y = 31684, z = 7},
+			{x = 32644, y = 32388, z = 8},
+			{x = 32191, y = 31823, z = 8},
+			{x = 32543, y = 31856, z = 6},
+			{x = 33376, y = 32798, z = 8},
+			{x = 33812, y = 31639, z = 10},
+			{x = 32959, y = 31541, z = 7},
+			{x = 33288, y = 32479, z = 9},
+			{x = 32355, y = 32163, z = 11},
+			{x = 32773, y = 31823, z = 8},
+			{x = 32012, y = 31565, z = 7}
+		}
 	}
 }
 

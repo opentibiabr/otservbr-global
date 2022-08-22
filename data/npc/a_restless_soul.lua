@@ -50,8 +50,10 @@ local function greetCallback(npc, creature)
 	local playerId = player:getId()
 
 	if player:getStorageValue(Storage.TheIceIslands.Questline) < 37 then
-		npcHandler:say("Uhhhh...", npc, creature)
+		npcHandler:setMessage(MESSAGE_GREET, "Uhhhh...")
 		return false
+	elseif player:getStorageValue(Storage.TheIceIslands.Questline) == 37 then
+		npcHandler:setMessage(MESSAGE_GREET, "Ahhhh! At last someone that can listen to my {story}!")
 	end
 	return true
 end
@@ -82,7 +84,7 @@ end
 
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

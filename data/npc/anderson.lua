@@ -112,7 +112,7 @@ keywordHandler:addKeyword({"captain"}, StdModule.say,
 npcHandler:setMessage(MESSAGE_GREET, "Ahoi, young man |PLAYERNAME| and welcome to the Nordic Tibia Ferries. If you need a {passage}, let me know.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye. You are welcome.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

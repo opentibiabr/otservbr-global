@@ -176,7 +176,7 @@ end
 npcHandler:setMessage(MESSAGE_GREET, "Hm. Greetings.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Praise the gods, I bid you farewell.")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, false)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

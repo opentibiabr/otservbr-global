@@ -57,7 +57,7 @@ keywordHandler:addKeyword({'ribbit'}, StdModule.say, {npcHandler = npcHandler, t
 npcHandler:setMessage(MESSAGE_GREET, "*sigh* Yet another dumb adventurer.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Yeah, good bye and don't come again!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Hah! That idiot finally left.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -51,7 +51,44 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-npcHandler:addModule(FocusModule:new())
+local BloodBrothers = Storage.Quest.U8_4.BloodBrothers
+local function creatureSayCallback(npc, creature, type, message)
+	local player = Player(creature)
+	local playerId = player:getId()
+	if message == "cookie" then
+		if player:getStorageValue(BloodBrothers.Mission02) == 1 and player:getItemCount(8199) > 0 and player:getStorageValue(BloodBrothers.Cookies.Armenius) < 0 then
+			npcHandler:say("What kind of strange offer is this? You're actually offering me a cookie?", npc, creature)
+			npcHandler:setTopic(playerId, 1)
+		else
+			npcHandler:say("It'd be better for you to leave now.", npc, creature)
+		end
+	elseif message == "yes" then
+		if npcHandler:getTopic(playerId) == 1 and player:removeItem(8199, 1) then -- garlic cookie
+			npcHandler:say("Errrkss - coughcough - what the - heck did you put in there? Get out of my sight!", npc, creature)
+			player:setStorageValue(BloodBrothers.Cookies.Armenius, 1)
+			npcHandler:setTopic(playerId, 0)
+		end
+	elseif message:lower() == "alori mort" and player:getStorageValue(BloodBrothers.Mission03) == 1 then
+		if npcHandler:getTopic(playerId) == 2 then
+			local rand = math.random(2)
+			local randMessage = {"Oh, the nerve. Go to the rats which raised you.", "Oh, the nerve. Sod off."}
+			npcHandler:setMessage(MESSAGE_WALKAWAY, randMessage[rand])
+			player:teleportTo(Position(32759, 31241, 9))
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:setStorageValue(BloodBrothers.Mission03, 2)
+		else
+			npcHandler:say({
+			"...... ...... ....",
+			"HAHAHAHAHA! What the... HAHAHAHA! Come on, say it again, just because it's so funny - and then I'll get rid of you, little mouse!"}, npc, creature)
+			npcHandler:setTopic(playerId, 2)
+		end
+	end
+end
+-- Basic
+
+npcHandler:setMessage(MESSAGE_GREET, "Ah, an adventurer. Be greeted and have a seat. How may I {serve} you?")
+npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bread", clientId = 3600, buy = 3 },

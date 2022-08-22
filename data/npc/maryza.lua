@@ -91,7 +91,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye!")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 npcConfig.shop = {
 	{ itemName = "bread", clientId = 3600, buy = 4 },
 	{ itemName = "brown bread", clientId = 3602, buy = 3 },

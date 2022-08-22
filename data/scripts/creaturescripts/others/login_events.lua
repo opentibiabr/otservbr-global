@@ -30,6 +30,7 @@ function loginEvents.onLogin(player)
 		"DestroyedPillar",
 		"HealthPillar",
 		"YalahariHealth",
+		"EssenceOfMalice",
 		--Dangerous Depths Quest
 		"LostExileKill",
 		"SnailSlimeKill",
@@ -83,6 +84,8 @@ function loginEvents.onLogin(player)
 		"MiddleSpikeKill",
 		--Svargrond Arena
 		"SvargrondArenaKill",
+		--The Ice Islands Quest
+		"HuskyKill",
 		--The First Dragon
 		"KillDragon",
 		"SomewhatBeatableDeath",

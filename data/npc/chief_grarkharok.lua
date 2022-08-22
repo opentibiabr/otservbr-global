@@ -160,7 +160,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Grarkharok be {chief}!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Grarkharok be {chief}!")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 
 npcType:register(npcConfig)

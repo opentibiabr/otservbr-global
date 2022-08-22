@@ -72,7 +72,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Ashari |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Asha Thrazi.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Asha Thrazi.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 npcConfig.shop = {
 	{ itemName = "ham", clientId = 3582, buy = 6 },
 	{ itemName = "meat", clientId = 3577, buy = 4 }

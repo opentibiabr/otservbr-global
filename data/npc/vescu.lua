@@ -154,7 +154,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-local function onReleaseFocus(creature)
+local function onReleaseFocus(npc, creature)
 	local playerId = creature:getId()
 	topic[playerId] = nil
 end
@@ -173,7 +173,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, 'Oh, two t-trolls. Hellooo, wittle twoll
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setCallback(CALLBACK_REMOVE_INTERACTION, onReleaseFocus)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

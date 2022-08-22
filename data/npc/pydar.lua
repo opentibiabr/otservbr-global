@@ -95,7 +95,7 @@ npcHandler:setMessage(MESSAGE_GREET, 'Be greeted |PLAYERNAME|! I can smell the s
 npcHandler:setMessage(MESSAGE_FAREWELL, 'May the fire in your heart never die, |PLAYERNAME|!')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'May the fire in your heart never die.')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

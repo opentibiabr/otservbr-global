@@ -1,13 +1,8 @@
 function onUpdateDatabase()
-	Spdlog.info("Updating database to version 20 (Binary Save), items, depot locker items,depot items and inbox items")
-	db.query("ALTER TABLE `players` ADD `items` longblob DEFAULT NULL")
-	db.query("ALTER TABLE `players` ADD `depot_locker_items` longblob DEFAULT NULL")
-	db.query("ALTER TABLE `players` ADD `depot_items` longblob DEFAULT NULL")
-	db.query("ALTER TABLE `players` ADD `inbox_items` longblob DEFAULT NULL")
-	db.query("ALTER TABLE `players` ADD `rewards` longblob DEFAULT NULL")
-	db.query("DROP TABLE `player_items`")
-	db.query("DROP TABLE `player_depotitems`")
-	db.query("DROP TABLE `player_inboxitems`")
-	db.query("DROP TABLE `player_rewards`")
+	Spdlog.info("Updating database to version 20 (Gamestore accepting Tournament Coins)")
+
+	db.query("ALTER TABLE `accounts` ADD `tournament_coins` int(11) NOT NULL DEFAULT 0 AFTER `coins`")
+	db.query("ALTER TABLE `store_history` ADD `coin_type` tinyint(1) NOT NULL DEFAULT 0 AFTER `description`")
+	db.query("ALTER TABLE `store_history` DROP COLUMN `coins`") -- Not in use anywhere.
 	return true
 end

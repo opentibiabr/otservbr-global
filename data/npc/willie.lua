@@ -380,7 +380,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Yeah, bye |PLAYERNAME|.")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Ya take a good look.")
 npcHandler:setMessage(MESSAGE_GREET, "Hiho |PLAYERNAME|. I hope you're here to {trade}.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

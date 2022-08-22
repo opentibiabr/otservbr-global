@@ -53,7 +53,7 @@ function Npc:sayWithDelay(npcId, text, messageType, delay, eventDelay, player)
 	eventDelay.event = addEvent(sayFunction, delay < 1 and 1000 or delay, npcId, text, messageType, eventDelay, player)
 end
 
-function SayEvent(npcId, playerId, messageDelayed, npcHandler)
+function SayEvent(npcId, playerId, messageDelayed, npcHandler, textType)
 	local npc = Npc(npcId)
 	if not npc then
 		Spdlog.debug("[NpcHandler:say] - Npc parameter is missing, nil or not found")

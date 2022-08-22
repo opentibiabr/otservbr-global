@@ -68,7 +68,7 @@ keywordHandler:addKeyword({'?'}, StdModule.say, {npcHandler = npcHandler, text =
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setMessage(MESSAGE_FAREWELL, "Farewell, and may Justice be with you!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Wait... will you take me a diamond when you're back?")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "cake", clientId = 6277, buy = 1 },

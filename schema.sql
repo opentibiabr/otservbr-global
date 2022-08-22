@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `server_config` (
 	CONSTRAINT `server_config_pk` PRIMARY KEY (`config`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '19'), ('motd_hash', ''), ('motd_num', '0'), ('players_record', '0');
+INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '20'), ('motd_hash', ''), ('motd_num', '0'), ('players_record', '0');
 
 -- --------------------------------------------------------
 
@@ -23,16 +23,17 @@ INSERT INTO `server_config` (`config`, `value`) VALUES ('db_version', '19'), ('m
 --
 
 CREATE TABLE IF NOT EXISTS `accounts` (
-  `id`        int(11)       UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name`      varchar(32)   NOT NULL,
-  `password`  char(40)      NOT NULL,
-  `email`     varchar(255)  NOT NULL DEFAULT '',
-  `premdays`  int(11)       NOT NULL DEFAULT '0',
-  `lastday`   int(10)       UNSIGNED NOT NULL DEFAULT '0',
-  `type`      tinyint(1)    UNSIGNED NOT NULL DEFAULT '1',
-  `coins`     int(12)       UNSIGNED NOT NULL DEFAULT '0',
-  `creation`  int(11)       UNSIGNED NOT NULL DEFAULT '0',
-  `recruiter` INT(6)        DEFAULT 0,
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  `password` char(40) NOT NULL,
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `premdays` int(11) NOT NULL DEFAULT '0',
+  `lastday` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `type` tinyint(1) UNSIGNED NOT NULL DEFAULT '1',
+  `coins` int(12) UNSIGNED NOT NULL DEFAULT '0',
+  `tournament_coins` int(12) UNSIGNED NOT NULL DEFAULT '0',
+  `creation` int(11) UNSIGNED NOT NULL DEFAULT '0',
+  `recruiter` INT(6) DEFAULT 0,
   CONSTRAINT `accounts_pk` PRIMARY KEY (`id`),
   CONSTRAINT `accounts_unique` UNIQUE (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -865,20 +866,21 @@ CREATE TABLE IF NOT EXISTS `player_storage` (
 --
 
 CREATE TABLE IF NOT EXISTS `store_history` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `account_id` int(11) UNSIGNED NOT NULL,
-  `mode` smallint(2) NOT NULL DEFAULT '0',
-  `description` varchar(3500) NOT NULL,
-  `coin_amount` int(12) NOT NULL,
-  `time` bigint(20) UNSIGNED NOT NULL,
-  `timestamp` int(11) NOT NULL DEFAULT '0',
-  `coins` int(11) NOT NULL DEFAULT '0',
-  INDEX `account_id` (`account_id`),
-  CONSTRAINT `store_history_pk` PRIMARY KEY (`id`),
-  CONSTRAINT `store_history_account_fk`
-    FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`)
-    ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`account_id` int(11) UNSIGNED NOT NULL,
+	`mode` smallint(2) NOT NULL DEFAULT '0',
+	`description` varchar(3500) NOT NULL,
+	`coin_type` tinyint(1) NOT NULL DEFAULT '0',
+	`coin_amount` int(12) NOT NULL,
+	`time` bigint(20) UNSIGNED NOT NULL,
+	`timestamp` int(11) NOT NULL DEFAULT '0',
+	INDEX `account_id` (`account_id`),
+	CONSTRAINT `store_history_pk`
+		PRIMARY KEY (`id`),
+	CONSTRAINT `store_history_account_fk`
+		FOREIGN KEY (`account_id`) REFERENCES `accounts` (`id`)
+		ON DELETE CASCADE
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
 
 -- --------------------------------------------------------
 

@@ -136,7 +136,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, 'Hey, you can\'t leave. Luck is smiling 
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Hey, you can\'t leave, |PLAYERNAME|. Luck is smiling on you. I can feel it!')
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

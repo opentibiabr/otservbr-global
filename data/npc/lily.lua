@@ -292,7 +292,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, 'Take care, |PLAYERNAME|.')
 npcHandler:setMessage(MESSAGE_SENDTRADE, 'Of course, just browse through my offers. If you buy a potion, don\'t forget that there\'s a {deposit} of 5 gold on the empty flask.')
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "antidote potion", clientId = 7644, buy = 50 },

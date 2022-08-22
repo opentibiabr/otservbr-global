@@ -52,7 +52,7 @@ end
 
 npcHandler:setMessage(MESSAGE_GREET, "So you have come, |PLAYERNAME|. I hoped you would not...")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

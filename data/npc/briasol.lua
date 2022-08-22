@@ -95,7 +95,7 @@ keywordHandler:addGreetKeyword({"ashari"}, {npcHandler = npcHandler, text = "Gre
 --Farewell message
 keywordHandler:addFarewellKeyword({"asgha thrazi"}, {npcHandler = npcHandler, text = "Good bye, |PLAYERNAME|."})
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 npcConfig.shop = {
 	{ itemName = "amber", clientId = 32626, sell = 20000 },
 	{ itemName = "amber with a bug", clientId = 32624, sell = 41000 },

@@ -63,7 +63,7 @@ npcHandler:setMessage(MESSAGE_GREET, "I feel you. I hear your thoughts. You are 
 npcHandler:setMessage(MESSAGE_FAREWELL, "Alone ... so alone. So cold.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Alone ... so alone. So cold.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

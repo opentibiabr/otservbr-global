@@ -85,7 +85,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Hello. How may I help you |PLAYERNAME|? As
 npcHandler:setMessage(MESSAGE_FAREWELL, "It was a pleasure to help you, |PLAYERNAME|.")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "label", clientId = 3507, buy = 1 },

@@ -368,7 +368,23 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "Always be on guard, |PLAYERNAME|!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "This ungraceful haste is most suspicious!")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
+
+npcConfig.shop = {
+	{ itemName = "holy water", clientId = 133, buy = 1000 }
+}
+-- On buy npc shop message
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
+	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Bought %ix %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
+end
+-- On sell npc shop message
+npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Sold %ix %s for %i gold.", amount, name, totalCost))
+end
+-- On check npc shop message (look item)
+npcType.onCheckItem = function(npc, player, clientId, subType)
+end
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -172,7 +172,7 @@ keywordHandler:addAliasKeyword({'zerbrus'})
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Well, bye then.')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Farewell, |PLAYERNAME|!')
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

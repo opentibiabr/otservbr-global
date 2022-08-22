@@ -103,7 +103,7 @@ npcHandler:setMessage(MESSAGE_GREET, "Finally! A c...c...customer! Wh... where d
 npcHandler:setMessage(MESSAGE_FAREWELL, "D...Daraman's blessings... oh, how I m...miss my warm Darashia...")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)
