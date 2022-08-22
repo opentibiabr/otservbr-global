@@ -26,10 +26,10 @@ function machineDeath.onDeath(creature, attacker)
 	local creaturePosition = creature:getPosition()
 	if name == "containment machine" then
 		-- destruindo os raios
-		DestruirRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 5068, 1)
-		DestruirRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 5068, 1)
-		DestruirRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 5069, 2)
-		DestruirRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 5069, 2)
+		DestruirRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 6116, 1)
+		DestruirRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 6116, 1)
+		DestruirRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 6117, 2)
+		DestruirRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 6117, 2)
 		local itensToMonster = {--8633
 			Position(33133, 31856, 15),
 			Position(33140, 31856, 15),
