@@ -34,7 +34,6 @@ dofile('data/modules/scripts/blessings/assets.lua')
 --
 -- Table structure `blessings_history`
 --
-
 CREATE TABLE IF NOT EXISTS `blessings_history` (
   `id` int(11) NOT NULL,
   `player_id` int(11) NOT NULL,
@@ -43,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `blessings_history` (
   `timestamp` int(11) NOT NULL,
   CONSTRAINT `blessings_history_pk` PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 --]=====]
 
 Blessings.DebugPrint = function(content, pre, pos)
@@ -248,7 +246,7 @@ Blessings.getInquisitionPrice = function(player)
 	-- Find how many missing bless we have and give out the price
 	inquifilter = function(b) return b.inquisition end
 	donthavefilter = function(p, b) return not p:hasBlessing(b) end
-	local missing = #player:getBlessings(filter, donthavefilter)
+	local missing = #player:getBlessings(inquifilter, donthavefilter)
 	local totalBlessPrice = Blessings.getBlessingsCost(player:getLevel()) * missing * Blessings.Config.InquisitonBlessPriceMultiplier
 	return missing, totalBlessPrice
 end
