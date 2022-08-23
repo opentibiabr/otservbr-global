@@ -1,6 +1,7 @@
 local Teleport = MoveEvent()
 
-function Teleport.onStepIn(player)
+function Teleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
 	if not player then
 		return true
 	end
