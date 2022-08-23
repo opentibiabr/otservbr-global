@@ -1,8 +1,0 @@
-{
-  "name": "otservbr-global",
-  "version": "1.4.5",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/opentibiabr/otservbr-global.git"
-  }
-}
