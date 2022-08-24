@@ -2741,7 +2741,22 @@ Storage = {
 		},
 		U12_40 = { -- update 12.40 - Reserved Storages 47201 - 47500
 			RevenantOutfits = {},
-			SoulWar = {},
+			SoulWar = {
+				GoshnarMaliceTimer = 47210,
+				GoshnarMaliceKilled = 47211,
+				GoshnarHatredTimer = 47212,
+				GoshnarHatredKilled = 47213,
+				GoshnarSpiteTimer = 47214,
+				GoshnarSpiteKilled = 47215,
+				GoshnarCrueltyTimer = 47216,
+				GoshnarCrueltyKilled = 47217,
+				GoshnarGreedTimer = 47218,
+				GoshnarGreedKilled = 47219,
+				GoshnarMegalomaniaAccess = 47220,
+				GoshnarMegalomaniaTimer = 47221,
+				GoshnarMegalomaniaKilled = 47222,
+				QuestReward = 47223,
+			},
 			TheOrderOfTheLion = {}
 		},
 		U12_60 = { -- update 12.60 - Reserved Storages 47501 - 47600

@@ -110,6 +110,8 @@ function loginEvents.onLogin(player)
 		"bossesGraveDangerKill",
 		-- Feaster of Souls
 		"bossesFeasterOfSoulsKill",
+		-- Soul War
+		"bossesSoulWarKill",
 	}
 
 	for i = 1, #events do
