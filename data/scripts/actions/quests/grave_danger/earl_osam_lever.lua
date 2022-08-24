@@ -20,23 +20,19 @@ local config = {
 }
 
 local earlOsamLever = Action()
-
 function earlOsamLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if config.playerPositions[1].pos ~= player:getPosition() then
 		return false
 	end
-
 	local spec = Spectators()
 	spec:setOnlyPlayer(false)
 	spec:setRemoveDestination(config.exit)
 	spec:setCheckPosition(config.specPos)
 	spec:check()
-
 	if spec:getPlayers() > 0 then
 		player:say("There's someone fighting with " .. config.bossName .. ".", TALKTYPE_MONSTER_SAY)
 		return true
 	end
-
 	local lever = Lever()
 	lever:setPositions(config.playerPositions)
 	lever:setCondition(function(creature)
