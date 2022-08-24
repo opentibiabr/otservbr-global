@@ -114,6 +114,8 @@ function loginEvents.onLogin(player)
 		"bossesSoulWarKill",
 		-- Secret Library
 		"bossesSecretLibraryKill",
+		-- The Dream Courts
+		"bossesDreamCourtsKill"
 	}
 
 	for i = 1, #events do

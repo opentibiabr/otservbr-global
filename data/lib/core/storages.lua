@@ -215,7 +215,11 @@ Storage = {
 		Fourteen = {
 			Remains = 50041
 		},
-		UrmahlulluTimer = 50042
+		UrmahlulluTimer = 50042,
+		AccessDoor = 50043,
+		NeferiTheSpyTimer = 50044,
+		SisterHetaiTimer = 55045,
+		AmenefTimer = 55046
 	},
 	TheSecretLibrary = {
 		-- Reserved storage from 50050 - 50074
@@ -2694,7 +2698,16 @@ Storage = {
 			DreamWarriorOutfits = {},
 			TheDreamCourts = {
 				AndrewDoor = 14900,
-				FacelessBaneTime = 50283
+				FacelessBaneTime = 50283,
+				AccessDoors = 46309,
+				ArenaTimer = 46310,
+				PlaguerootKilled = 46311,
+				MalofurKilled = 46312,
+				MaxxeniusKilled = 46313,
+				AlptramunKilled = 46314,
+				IzcandarKilled = 46315,
+				NightmareBeastTimer = 46316,
+				NightmareBeastKilled = 46317
 			},
 		},
 		U12_02 = { -- update 12.02 - Reserved Storages 46601 - 46800

@@ -833,6 +833,10 @@ QuestDoorAction = {
 			{x = 33159, y = 32322, z = 12}
 		}
 	},
+	[Storage.Kilmaresh.AccessDoor] = {
+		itemId = false,
+		itemPos = {{x = 33886, y = 31476, z = 7}}
+	},
 }
 
 QuestDoorUnique = {
