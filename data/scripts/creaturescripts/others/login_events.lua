@@ -107,7 +107,9 @@ function loginEvents.onLogin(player)
 		-- An Uneasy Alliance
 		"RenegadeOrcKill",
 		-- Grave Danger
-		"bossesGraveDangerKill"
+		"bossesGraveDangerKill",
+		-- Feaster of Souls
+		"bossesFeasterOfSoulsKill",
 	}
 
 	for i = 1, #events do

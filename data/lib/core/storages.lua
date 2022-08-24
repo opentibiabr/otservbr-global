@@ -2720,7 +2720,23 @@ Storage = {
 		},
 		U12_30 = { -- update 12.30 - Reserved Storages 47001 - 47200
 			FalconerOutfits = {},
-			FeasterOfSouls = {},
+			FeasterOfSouls = {
+				IrgixTimer = 47005,
+				IrgixKilled = 47006,
+				UnazTimer = 47007,
+				UnazKilled = 47008,
+				VokTimer = 47009,
+				VokKilled = 47010,
+				FearFeasterTimer = 47011,
+				FearFeasterKilled = 47012,
+				DreadMaidenTimer = 47013,
+				DreadMaidenKilled = 47014,
+				UnwelcomeTimer = 47015,
+				UnwelcomeKilled = 47016,
+				PaleWormEntrance = 47017,
+				PaleWormTimer = 47018,
+				PaleWormKilled = 47019,
+			},
 			PoltergeistOutfits = {}
 		},
 		U12_40 = { -- update 12.40 - Reserved Storages 47201 - 47500
