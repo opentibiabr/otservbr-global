@@ -2771,11 +2771,17 @@ Storage = {
 			TheOrderOfTheLion = {}
 		},
 		U12_60 = { -- update 12.60 - Reserved Storages 47501 - 47600
-			APiratesTail = {},
+			APiratesTail = {
+				TentuglyTimer = 47515,
+				RatmiralTimer = 47516,
+			},
 			RascoohanOutfits = {}
 		},
 		U12_70 = { -- update 12.70 - Reserved Storages 47601 - 47800
-			AdventuresOfGalthen = {},
+			AdventuresOfGalthen = {
+				AccessDoor = 47601,
+				MegasylvanYseldaTimer = 47602,
+			},
 			CitizenOfIssaviOutfits = {},
 			RoyalBounaceanAdvisorOutfits= {},
 			TooHotToHandle = {}
