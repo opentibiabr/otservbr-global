@@ -112,6 +112,8 @@ function loginEvents.onLogin(player)
 		"bossesFeasterOfSoulsKill",
 		-- Soul War
 		"bossesSoulWarKill",
+		-- Secret Library
+		"bossesSecretLibraryKill",
 	}
 
 	for i = 1, #events do

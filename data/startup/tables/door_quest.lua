@@ -816,7 +816,11 @@ QuestDoorAction = {
 	[Storage.Quest.U12_20.GraveDanger.KingZelosDoor] = {
 		itemId = false,
 		itemPos = {{x = 32173, y = 31922, z = 8}}
-	}
+	},
+	[Storage.Quest.U11_80.TheSecretLibrary.ScourgeOfOblivionDoor] = {
+		itemId = false,
+		itemPos = {{x = 32480, y = 32591, z = 15}}
+	},
 }
 
 QuestDoorUnique = {

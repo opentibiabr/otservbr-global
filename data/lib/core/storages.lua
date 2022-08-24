@@ -2665,6 +2665,17 @@ Storage = {
 					LowerBastion = 46285,
 					UndergroundBastion = 46286
 				},
+				GhuloshTimer = 46015,
+				GhuloshKilled = 46016,
+				GorzindelTimer = 46017,
+				GorzindelKilled = 46018,
+				LokathmorTimer = 46019,
+				LokathmorKilled = 46020,
+				MazzinorTimer = 46021,
+				MazzinorKilled = 46022,
+				ScourgeOfOblivionDoor = 46023,
+				ScourgeOfOblivionTimer = 46024,
+				ScourgeOfOblivionKilled = 46025,
 			},
 		},
 		U12_00 = { -- update 12.00 - Reserved Storages 46301 - 46600
