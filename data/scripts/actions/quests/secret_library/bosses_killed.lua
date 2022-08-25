@@ -7,7 +7,7 @@ local bosses = {
 }
 
 local bossesSecretLibraryKill = CreatureEvent("bossesSecretLibraryKill")
-function bossesSecretLibraryKill.onKill(creature, target)
+function bossesSecretLibraryKill.onKill(player, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster or targetMonster:getMaster() then
 		return true

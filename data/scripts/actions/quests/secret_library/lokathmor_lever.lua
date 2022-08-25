@@ -15,7 +15,7 @@ local config = {
 		from = Position(32742, 32681, 10),
 		to = Position(32758, 32696, 10)
 	},
-	exit = Position(),
+	exit = Position(32466, 32654, 12),
 	storage = Storage.Quest.U11_80.TheSecretLibrary.LokathmorTimer
 }
 

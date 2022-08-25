@@ -15,7 +15,7 @@ local config = {
 		from = Position(32716, 32713, 10),
 		to = Position(32732, 32728, 10)
 	},
-	exit = Position(),
+	exit = Position(32616, 32531, 13),
 	storage = Storage.Quest.U11_80.TheSecretLibrary.MazzinorTimer
 }
 

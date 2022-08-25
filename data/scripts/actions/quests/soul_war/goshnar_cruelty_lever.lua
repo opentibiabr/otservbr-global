@@ -89,5 +89,5 @@ function goshnarsCrueltyLever.onUse(player, item, fromPosition, target, toPositi
 	end
 end
 
-goshnarsCrueltyLever:position({x = 33853, y = 31853, z = 6})
+goshnarsCrueltyLever:position({x = 33853, y = 31854, z = 6})
 goshnarsCrueltyLever:register()

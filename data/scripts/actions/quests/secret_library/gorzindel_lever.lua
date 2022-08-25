@@ -15,7 +15,7 @@ local config = {
 		from = Position(32680, 32711, 10),
 		to = Position(32695, 32726, 10)
 	},
-	exit = Position(),
+	exit = Position(32660, 32734, 12),
 	storage = Storage.Quest.U11_80.TheSecretLibrary.GorzindelTimer
 }
 

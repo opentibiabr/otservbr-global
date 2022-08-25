@@ -15,7 +15,7 @@ local config = {
 		from = Position(32748, 32713, 10),
 		to = Position(32763, 32729, 10)
 	},
-	exit = Position(),
+	exit = Position(32660, 32713, 13),
 	storage = Storage.Quest.U11_80.TheSecretLibrary.GhuloshTimer
 }
 
