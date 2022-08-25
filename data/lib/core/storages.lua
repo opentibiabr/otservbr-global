@@ -217,7 +217,7 @@ Storage = {
 		UrmahlulluTimer = 50042
 	},
 	TheSecretLibrary = {
-		-- Reserved storage from 50050 - 50069
+		-- Reserved storage from 50050 - 50074
 		TheOrderOfTheFalcon = {
 			OberonTimer = 50050
 		},
@@ -233,14 +233,28 @@ Storage = {
 		PinkTel = 50060,
 		Peacock = 50061,
 		HighDry = 50062,
-		FalconBastionAccess = 50063
+		FalconBastionAccess = 50063,
+		FalconBastionChestsTimer = {
+			Key0909 = 50064
+		},
+		MiniBosses = {
+			GrandCommanderSoeren = 50065,
+			PreceptorLazare = 50066,
+			GrandChaplainGaunder = 50067,
+			GrandCanonDominus = 50068,
+			DazedLeafGolem = 50069
+		},
+		LowerBastionAccess = 50070,
+		UndergroundBastionAccess = 50071,
+		OberonAccess = 50072,
+		ShortcutToBastion = 50073
 	},
 	DeeplingBosses = {
-		-- Reserved storage from 50070 - 50079
-		Jaul = 50070,
-		Tanjis = 50071,
-		Obujos = 50072,
-		DeeplingStatus = 50073
+		-- Reserved storage from 50075 - 50079
+		Jaul = 50075,
+		Tanjis = 50076,
+		Obujos = 50077,
+		DeeplingStatus = 50078
 	},
 	DangerousDepths = {
 		-- Reserved storage from 50080 - 50199
@@ -1717,6 +1731,8 @@ Storage = {
 	Quest = {
 		Key = {
 			ID0010 = 103,
+			ID0808 = 808,
+			ID0909 = 909,
 			ID3001 = 3001,
 			ID3002 = 3002,
 			ID3003 = 3003,
@@ -1726,6 +1742,7 @@ Storage = {
 			ID3007 = 3007,
 			ID3008 = 3008,
 			ID3012 = 3012,
+			ID3600 = 3600,
 			ID3620 = 3620,
 			ID3666 = 3666,
 			ID3702 = 3702,
@@ -2633,7 +2650,16 @@ Storage = {
 			BattleMageOutfits = {},
 			DiscovererOutfits = {},
 			MeasuringTibia = {},
-			TheSecretLibrary = {},
+			TheSecretLibrary = {
+				FalconBastionChestsTimer = {
+					Coast = 46281,
+					Island = 46282,
+					ThroneHall = 46283,
+					Shortcut = 46284,
+					LowerBastion = 46285,
+					UndergroundBastion = 46286
+				},
+			},
 		},
 		U12_00 = { -- update 12.00 - Reserved Storages 46301 - 46600
 			DreamWarriorOutfits = {},

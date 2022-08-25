@@ -125,5 +125,19 @@ KeyDoorAction = {
 	[Storage.Quest.Key.ID6010] = {
 		itemId = false,
 		itemPos = {{x = 33211, y = 31634, z = 13}}
+	},
+	[Storage.Quest.Key.ID0808] = {
+		itemId = false,
+		itemPos = {{x = 33363, y = 31360, z = 3}}
+	},
+	[Storage.Quest.Key.ID0909] = {
+		itemId = false,
+		itemPos = {
+			{x = 33368, y = 31331, z = 7},
+			{x = 33360, y = 31350, z = 7}}
+	},
+	[Storage.Quest.Key.ID3600] = {
+		itemId = false,
+		itemPos = {{x = 32506, y = 32175, z = 14}}
 	}
 }

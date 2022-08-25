@@ -413,10 +413,10 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 				end
 			end
 			-- criando os raios
-			criarRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 5068, 1)
-			criarRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 5068, 1)
-			criarRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 5069, 2)
-			criarRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 5069, 2)
+			criarRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 6116, 1)
+			criarRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 6116, 1)
+			criarRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 6117, 2)
+			criarRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 6117, 2)
 
 			-- criando os securys
 			Game.createMonster("Security Golem", Position(33131, 31855, 15))

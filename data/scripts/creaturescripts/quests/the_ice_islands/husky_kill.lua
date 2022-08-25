@@ -5,10 +5,9 @@ function huskyKill.onKill(player, target)
 		return true
 	end
 
-	if not target:getName():lower() == "husky" then
-		return true
+	if target:getName():lower() == "husky" then
+		player:setStorageValue(Storage.TheIceIslands.HuskyKill, player:getStorageValue(Storage.TheIceIslands.HuskyKill) + 1)
 	end
-	player:setStorageValue(Storage.TheIceIslands.HuskyKill, player:getStorageValue(Storage.TheIceIslands.HuskyKill) + 1)
 	return true
 end
 

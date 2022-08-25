@@ -59,7 +59,11 @@ local function playerAddItem(params, item)
 	end
 
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, params.message .. ".")
-	player:setStorageValue(params.storage, 1)
+	if params.timer then
+		player:setStorageValue(params.timer, os.time() + params.time * 3600)
+	else
+		player:setStorageValue(params.storage, 1)
+	end
 	return true
 end
 
@@ -115,11 +119,20 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 		end
 	end
 
-	if player:getStorageValue(setting.storage) >= 0 then
+	if setting.timerStorage then
+		if player:getStorageValue(setting.timerStorage) > os.time() then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The ".. getItemName(setting.itemId) .. " is empty.")
+			return true
+		end
+	elseif player:getStorageValue(setting.storage) >= 0 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The ".. getItemName(setting.itemId) .. " is empty.")
 		return true
 	end
-
+	if setting.randomReward then
+		local randomReward = math.random(#setting.randomReward)
+		setting.reward[1][1] = setting.randomReward[randomReward][1]
+		setting.reward[1][2] = setting.randomReward[randomReward][2]
+	end
 	local container = player:addItem(setting.container)
 	for i = 1, #setting.reward do
 		local itemid = setting.reward[i][1]
@@ -137,7 +150,9 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 				count = count,
 				weight = getItemWeight(itemid) * count,
 				storage = setting.storage,
-				key = setting.isKey
+				key = setting.isKey,
+				timer = setting.timerStorage,
+				time = setting.time,
 			}
 
 			if count > 1 and ItemType(itemid):isStackable() then

@@ -20,6 +20,10 @@ monster.corpse = 28726
 monster.speed = 210
 monster.manaCost = 0
 
+monster.events = {
+	"GrandCommanderSoerenDeath"
+}
+
 monster.changeTarget = {
 	interval = 5000,
 	chance = 8

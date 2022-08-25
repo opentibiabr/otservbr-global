@@ -691,15 +691,15 @@ QuestDoorAction = {
 		itemPos = {{x = 32761, y = 32630, z = 7}}
 	},
 	-- Kilmaresh doors
-	[Storage.Kilmaresh.First.Title] = {
-		itemId = false,
-		itemPos = {
-			{x = 33959, y = 31501, z = 4},
-			{x = 33375, y = 31346, z = 5},
-			{x = 33371, y = 31349, z = 4},
-			{x = 33376, y = 31335, z = 3}
-		}
-	},
+	-- [Storage.Kilmaresh.First.Title] = {
+		-- itemId = false,
+		-- itemPos = {
+			-- {x = 33959, y = 31501, z = 4},
+			-- {x = 33375, y = 31346, z = 5},
+			-- {x = 33371, y = 31349, z = 4},
+			-- {x = 33376, y = 31335, z = 3}
+		-- }
+	-- },
 	-- The Rookie Guard Quest - Mission 07: Attack!
 	-- The library vault door
 	[Storage.TheRookieGuard.LibraryDoor] = {
@@ -792,6 +792,24 @@ QuestDoorAction = {
 			{x = 32355, y = 32163, z = 11},
 			{x = 32773, y = 31823, z = 8},
 			{x = 32012, y = 31565, z = 7}
+		}
+	},
+	[Storage.TheSecretLibrary.MiniBosses.PreceptorLazare] = {
+		itemId = 6260,
+		itemPos = {{x = 33376, y = 31335, z = 3}}
+	},
+	[Storage.TheSecretLibrary.LowerBastionAccess] = {
+		itemId = 6260,
+		itemPos = {
+			{x = 33371, y = 31349, z = 4},
+			{x = 33375, y = 31346, z = 5}
+		}
+	},
+	[Storage.TheSecretLibrary.UndergroundBastionAccess] = {
+		itemId = false,
+		itemPos = {
+			{x = 33366, y = 31343, z = 7},
+			{x = 33363, y = 31346, z = 7}
 		}
 	}
 }
