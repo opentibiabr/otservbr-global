@@ -82,7 +82,7 @@ monster.loot = {
 	{name = "war axe", chance = 2000},
 	{name = "demonrage sword", chance = 90},
 	{id = 23531, chance = 156}, -- ring of green plasma
-	{name = "gold nugget", chance = 90},
+	{id = 3040, chance = 90}, -- gold nugget
 	{name = "red silk flower", chance = 14800},
 	{name = "raw watermelon tourmaline", chance = 960}
 }

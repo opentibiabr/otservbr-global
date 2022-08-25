@@ -20,7 +20,7 @@ local rewards = {
 }
 
 local rewardSoulWar = Action()
-function rewardSoulWar.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function rewardSoulWar.onUse(creature, item, fromPosition, target, toPosition, isHotkey)
 	local randId = math.random(1, #rewards)
 	local rewardItem = rewards[randId]
 	local player = creature:getPlayer()

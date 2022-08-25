@@ -78,7 +78,7 @@ local config = {
 		exitPosition = Position(33055, 31911, 9)
 	},
 	[8] = {
-		teleportPosition = {x = 33128, y = 31971, z = 9},
+		teleportPosition = {x = 33120, y = 31996, z = 9},
 		exitPosition = Position(33128, 31972, 9)
 	},
 	[9] = {

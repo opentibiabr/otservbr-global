@@ -78,7 +78,7 @@ monster.loot = {
 	{name = "giant topaz", chance = 10000, maxCount = 1},
 	{name = "violet gem", chance = 6000, maxCount = 1},
 	{name = "blue gem", chance = 10000, maxCount = 3},
-	{name = "red gem", chance = 10000, maxCount = 3},
+	{id= 3039, chance = 10000, maxCount = 3}, -- red gem
 	{name = "green gem", chance = 10000, maxCount = 3},
 	{name = "yellow gem", chance = 10000, maxCount = 3},
 	{name = "white gem", chance = 6000, maxCount = 3},
@@ -91,7 +91,7 @@ monster.loot = {
 	{name = "ultimate spirit potion", chance = 18000, minCount = 50, maxCount = 100},
 	{name = "malice's spine", chance = 2000, maxCount = 1},
 	{name = "malice's horn", chance = 2000, maxCount = 1},
-	{name = "bracelet of strenghthening", chance = 400, unique = true},
+	{name = "bracelet of strengthening", chance = 400, unique = true},
 	{name = "spectral horseshoe", chance = 400, unique = true},
 	{name = "the skull of a beast", chance = 400, unique = true},
 	{name = "figurine of malice", chance = 400, unique = true},

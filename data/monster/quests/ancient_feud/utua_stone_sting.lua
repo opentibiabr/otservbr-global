@@ -87,7 +87,7 @@ monster.loot = {
 	{name = "mastermind potion", chance = 4620},
 	{id = 23531, chance = 156}, -- ring of green plasma
 	{name = "magma legs", chance = 5100},
-	{name = "raw water tourmaline", chance = 4620},
+	{name = "raw watermelon tourmaline", chance = 4620},
 	{name = "red silk flower", chance = 1820},
 	{name = "fist on a stick", chance = 220}
 }

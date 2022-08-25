@@ -71,7 +71,7 @@ monster.loot = {
 	{name = "bullseye potion", chance = 7300, maxCount = 16},
 	{name = "violet gem", chance = 1200, maxCount = 1},
 	{name = "yellow gem", chance = 1200, maxCount = 1},
-	{name = "red gem", chance = 1200, maxCount = 1},
+	{id= 3039, chance = 1200, maxCount = 1},
 	{name = "blue gem", chance = 1200, maxCount = 1},
 	{name = "green gem", chance = 1200, maxCount = 1},
 	{name = "giant emerald", chance = 1200, maxCount = 1},

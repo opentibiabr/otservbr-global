@@ -80,7 +80,7 @@ monster.loot = {
 	{name = "giant topaz", chance = 10000, maxCount = 1},
 	{name = "violet gem", chance = 6000, maxCount = 1},
 	{name = "blue gem", chance = 10000, maxCount = 3},
-	{name = "red gem", chance = 10000, maxCount = 3},
+	{id= 3039, chance = 10000, maxCount = 3}, -- red gem
 	{name = "green gem", chance = 10000, maxCount = 3},
 	{name = "yellow gem", chance = 10000, maxCount = 3},
 	{name = "white gem", chance = 6000, maxCount = 3},
@@ -89,13 +89,13 @@ monster.loot = {
 	{name = "mastermind potion", chance = 15000, minCount = 10, maxCount = 25},
 	{name = "berserk potion", chance = 15000, minCount = 10, maxCount = 25},
 	{name = "ultimate mana potion", chance = 18000, minCount = 50, maxCount = 100},
-	{name = "supreme halth potion", chance = 18000, minCount = 50, maxCount = 100},
+	{name = "supreme health potion", chance = 18000, minCount = 50, maxCount = 100},
 	{name = "ultimate spirit potion", chance = 18000, minCount = 50, maxCount = 100},
 	{name = "vial of hatred", chance = 25000, maxCount = 1},
 	{name = "figurine of hatred", chance = 400, unique = true}, 
 	{name = "spectral horseshoe", chance = 400, unique = true},
 	{name = "spectral horse tack", chance = 400, unique = true},
-	{name = "bracelet of strenghtening", chance = 400, unique = true},
+	{name = "bracelet of strengthening", chance = 400, unique = true},
 	{name = "bag you desire", chance = 100, unique = true}
 }
 

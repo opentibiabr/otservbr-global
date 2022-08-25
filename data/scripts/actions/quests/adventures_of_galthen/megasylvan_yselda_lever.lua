@@ -16,7 +16,7 @@ local config = {
 		to = Position(32633, 32509, 12)
 	},
 	exit = Position(32580, 32480, 12),
-	storage = Storage.Quest.U12_70,AdventuresOfGalthen.MegasylvanYseldaTimer
+	storage = Storage.Quest.U12_70.AdventuresOfGalthen.MegasylvanYseldaTimer
 }
 
 local megasylvanYseldaLever = Action()

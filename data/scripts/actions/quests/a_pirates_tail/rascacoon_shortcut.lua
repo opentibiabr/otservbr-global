@@ -1,7 +1,7 @@
 local config = {
-	{position = {x = 32941, y = 32030, z = 7}, destination = {x = 33774, y = 31347, z = 7},
-	{position = {x = 33774, y = 31348, z = 7}, destination = {x = 32941, y = 32031, z = 7},
-	}
+	{position = {x = 32941, y = 32030, z = 7}, destination = {x = 33774, y = 31347, z = 7}},
+	{position = {x = 33774, y = 31348, z = 7}, destination = {x = 32941, y = 32031, z = 7}},
+}
 
 local rascacoonShortcut = Action()
 function rascacoonShortcut.onUse(creature, item, position, fromPosition)
@@ -17,9 +17,11 @@ function rascacoonShortcut.onUse(creature, item, position, fromPosition)
 	end
 	doSendMagicEffect(item:getPosition(), CONST_ME_TELEPORT)
 	player:teleportTo(Position(config.destination))
-	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)		
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
 
-rascacoonShortcut:position(config.position)
+for value in pairs(config) do
+	rascacoonShortcut:position(config[value].position)
+end
 rascacoonShortcut:register()
