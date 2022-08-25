@@ -4,16 +4,16 @@ local config = {
 	timeToFightAgain = 20, -- In hour
 	timeToDefeatBoss = 20, -- In minutes
 	playerPositions = {
-		{pos = Position(33854, 31853, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
-		{pos = Position(33855, 31853, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
-		{pos = Position(33856, 31853, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
-		{pos = Position(33857, 31853, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
-		{pos = Position(33858, 31853, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT}
+		{pos = Position(33854, 31854, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
+		{pos = Position(33855, 31854, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
+		{pos = Position(33856, 31854, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
+		{pos = Position(33857, 31854, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT},
+		{pos = Position(33858, 31854, 6), teleport = Position(33856, 31872, 7), effect = CONST_ME_TELEPORT}
 	},
 	bossPosition = Position(33856, 31866, 7),
 	specPos = {
 		from = Position(33847, 31858, 7),
-		to = Position(33621, 31427, 10)
+		to = Position(33864, 31874, 7)
 	},
 	exit = Position(33621, 31427, 10),
 	storage = Storage.Quest.U12_40.SoulWar.GoshnarCrueltyTimer
