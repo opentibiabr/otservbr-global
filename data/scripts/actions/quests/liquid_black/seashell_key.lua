@@ -4,7 +4,7 @@ local seashellKey = Action()
 
 function seashellKey.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     if target:getId() ~= seashellId then
-        return false
+        return true
     end
 
     local bookChance = math.random(0, 100)
@@ -12,7 +12,7 @@ function seashellKey.onUse(player, item, fromPosition, target, toPosition, isHot
         player:sendTextMessage(MESSAGE_EVENT_ADVANCE,
             'You turn the key in the small lock at the side of the shelf and... the key breaks. Other than that absolutely nothing happens.')
         item:remove(1)
-        return false
+        return true
     end
 
     local bookColor = math.random(0, 1000)
