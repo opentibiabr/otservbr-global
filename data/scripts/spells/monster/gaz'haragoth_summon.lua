@@ -18,11 +18,11 @@ function spell.onCastSpell(creature, var)
         return false
     else
         if (check < GazVariables.MinionsNow) then
-	    local monster
+            local monster
             for i = 1, (GazVariables.MinionsNow - check) do
                 monster = Game.createMonster("Minion of Gaz'haragoth", creature:getPosition(), true, false)
-		creature:say("Minions! Follow my call!", TALKTYPE_ORANGE_1)
-		if monster then
+                creature:say("Minions! Follow my call!", TALKTYPE_ORANGE_1)
+                if monster then
                     creature:setSummon(monster)
                 end
             end
