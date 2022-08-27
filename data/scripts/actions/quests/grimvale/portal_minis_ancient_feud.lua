@@ -78,13 +78,12 @@ local config = {
 }
 
 local teleportBoss = MoveEvent()
-
 function teleportBoss.onStepIn(creature, item, position, fromPosition)
 	if not creature or not creature:isPlayer() then
 		return false
 	end
 	for index, value in pairs(config) do
-		if creature:getPosition() == Tile(value.teleportPosition) then
+		if Tile(position) == Tile(value.teleportPosition) then
 			if not value.specPos then
 				creature:teleportTo(value.exitPosition)
 				creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)

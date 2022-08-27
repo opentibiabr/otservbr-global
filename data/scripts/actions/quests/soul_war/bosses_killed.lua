@@ -7,8 +7,8 @@ local bosses = {
 	["goshnar's megalomania"] = {storage = Storage.Quest.U12_40.SoulWar.GoshnarMegalomaniaKilled},
 }
 
-local bossesSoulWarKill = CreatureEvent("bossesSoulWarKill")
-function bossesSoulWarKill.onKill(creature, target)
+local bossesSoulWar = CreatureEvent("SoulWarKill")
+function bossesSoulWar.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster or targetMonster:getMaster() then
 		return true
@@ -27,4 +27,4 @@ function bossesSoulWarKill.onKill(creature, target)
 	end
 	return true
 end
-bossesSoulWarKill:register()
+bossesSoulWar:register()

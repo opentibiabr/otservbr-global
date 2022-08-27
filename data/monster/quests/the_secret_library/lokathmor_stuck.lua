@@ -1,4 +1,4 @@
-local mType = Game.createMonsterType("Lokathmor test")
+local mType = Game.createMonsterType("Lokathmor Stuck")
 local monster = {}
 
 monster.description = "Lokathmor"

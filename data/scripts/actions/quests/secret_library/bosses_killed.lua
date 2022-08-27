@@ -6,8 +6,8 @@ local bosses = {
 	["scourge of oblivion"] = {storage = Storage.Quest.U11_80.TheSecretLibrary.ScourgeOfOblivionKilled},
 }
 
-local bossesSecretLibraryKill = CreatureEvent("bossesSecretLibraryKill")
-function bossesSecretLibraryKill.onKill(player, target)
+local bossesSecretLibrary = CreatureEvent("SecretLibraryKill")
+function bossesSecretLibrary.onKill(player, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster or targetMonster:getMaster() then
 		return true
@@ -24,15 +24,15 @@ function bossesSecretLibraryKill.onKill(player, target)
 			end
 		end
 	end
-	local bosseskilled = 0
+	local bossesKilled = 0
 	for value in pairs(bosses) do
 		if player:getStorageValue(bosses[value].storage) > 0 then
-			bosseskilled = bosseskilled + 1
+			bossesKilled = bossesKilled + 1
 		end
 	end
-	if bosseskilled == 4 then
+	if bossesKilled >= 4 then -- number of mini bosses
 		player:setStorageValue(Storage.Quest.U11_80.TheSecretLibrary.ScourgeOfOblivionDoor, 1)
 	end
 	return true
 end
-bossesSecretLibraryKill:register()
+bossesSecretLibrary:register()

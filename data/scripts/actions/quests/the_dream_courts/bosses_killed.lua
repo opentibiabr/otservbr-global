@@ -7,8 +7,8 @@ local bosses = {
 	["the nightmare beast"] = {storage = Storage.Quest.U12_00.TheDreamCourts.NightmareBeastKilled},
 }
 
-local bossesDreamCourtsKill = CreatureEvent("bossesDreamCourtsKill")
-function bossesDreamCourtsKill.onKill(creature, target)
+local bossesDreamCourts = CreatureEvent("DreamCourtsKill")
+function bossesDreamCourts.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster or targetMonster:getMaster() then
 		return true
@@ -27,4 +27,4 @@ function bossesDreamCourtsKill.onKill(creature, target)
 	end
 	return true
 end
-bossesDreamCourtsKill:register()
+bossesDreamCourts:register()

@@ -5,8 +5,8 @@ local bosses = {
 	["the pale worm"] = {storage = Storage.Quest.U12_30.FeasterOfSouls.PaleWormKilled},
 }
 
-local bossesFeasterOfSoulsKill = CreatureEvent("bossesFeasterOfSoulsKill")
-function bossesFeasterOfSoulsKill.onKill(creature, target)
+local bossesFeasterOfSouls = CreatureEvent("FeasterOfSoulsKill")
+function bossesFeasterOfSouls.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster or targetMonster:getMaster() then
 		return true
@@ -25,4 +25,4 @@ function bossesFeasterOfSoulsKill.onKill(creature, target)
 	end
 	return true
 end
-bossesFeasterOfSoulsKill:register()
+bossesFeasterOfSouls:register()

@@ -2,7 +2,7 @@ local config = {
 	bossName = "The Pale Worm",
 	requiredLevel = 250,
 	timeToFightAgain = 20, -- In hour
-	timeToDefeatBoss = 20, -- In minutes
+	timeToDefeatBoss = 25, -- In minutes
 	playerPositions = {
 		{pos = Position(33772, 31504, 14), teleport = Position(33808, 31515, 14), effect = CONST_ME_TELEPORT},
 		{pos = Position(33773, 31504, 14), teleport = Position(33808, 31515, 14), effect = CONST_ME_TELEPORT},

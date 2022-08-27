@@ -92,7 +92,6 @@ local config = {
 }
 
 local teleportBoss = MoveEvent()
-
 function teleportBoss.onStepIn(creature, item, position, fromPosition)
 	if not creature or not creature:isPlayer() then
 		return false

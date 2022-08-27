@@ -107,15 +107,15 @@ function loginEvents.onLogin(player)
 		-- An Uneasy Alliance
 		"RenegadeOrcKill",
 		-- Grave Danger
-		"bossesGraveDangerKill",
+		"GraveDangerKill",
 		-- Feaster of Souls
-		"bossesFeasterOfSoulsKill",
+		"FeasterOfSoulsKill",
 		-- Soul War
-		"bossesSoulWarKill",
+		"SoulWarKill",
 		-- Secret Library
-		"bossesSecretLibraryKill",
+		"SecretLibraryKill",
 		-- The Dream Courts
-		"bossesDreamCourtsKill"
+		"DreamCourtsKill"
 	}
 
 	for i = 1, #events do

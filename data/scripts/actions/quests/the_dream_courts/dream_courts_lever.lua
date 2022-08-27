@@ -1,5 +1,5 @@
 local config = {
-	day = {
+	bossName = {
 		['Monday'] = 'Plagueroot',
 		['Tuesday'] = 'Malofur Mangrinder',
 		['Wednesday'] = 'Maxxenius',
@@ -8,7 +8,6 @@ local config = {
 		['Saturday'] = 'Maxxenius',
 		['Sunday'] = 'Alptramun'
 	},
-	bossName = config.day[os.date("%A")],
 	requiredLevel = 250,
 	timeToFightAgain = 20, -- In hour
 	timeToDefeatBoss = 20, -- In minutes
@@ -39,7 +38,7 @@ function dreamCourtsLever.onUse(player, item, fromPosition, target, toPosition, 
 	spec:setCheckPosition(config.specPos)
 	spec:check()
 	if spec:getPlayers() > 0 then
-		player:say("There's someone fighting with " .. config.bossName .. ".", TALKTYPE_MONSTER_SAY)
+		player:say("There's someone fighting with " .. config.bossName[os.date("%A")] .. ".", TALKTYPE_MONSTER_SAY)
 		return true
 	end
 	local lever = Lever()
@@ -57,7 +56,7 @@ function dreamCourtsLever.onUse(player, item, fromPosition, target, toPosition, 
 			for _, v in pairs(info) do
 				local newPlayer = v.creature
 				if newPlayer then
-					newPlayer:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You or a member in your team have to wait " .. config.timeToFightAgain .. " hours to face ".. config.bossName .. " again!")
+					newPlayer:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You or a member in your team have to wait " .. config.timeToFightAgain .. " hours to face ".. config.bossName[os.date("%A")] .. " again!")
 					if newPlayer:getStorageValue(config.storage) > os.time() then
 						newPlayer:getPosition():sendMagicEffect(CONST_ME_POFF)
 					end
@@ -70,7 +69,7 @@ function dreamCourtsLever.onUse(player, item, fromPosition, target, toPosition, 
 	lever:checkPositions()
 	if lever:checkConditions() then
 		spec:removeMonsters()
-		local monster = Game.createMonster(config.bossName, config.bossPosition, true, true)
+		local monster = Game.createMonster(config.bossName[os.date("%A")], config.bossPosition, true, true)
 		if not monster then
 			return true
 		end
