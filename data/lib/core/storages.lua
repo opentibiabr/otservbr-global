@@ -139,6 +139,7 @@ Storage = {
 	FreeQuests = 30057,
 	PremiumAccount = 30058,
 	BattleAxeQuest = 30059,
+	ShrineEntrance = 30060,
 
 	--[[
 	Old storages
