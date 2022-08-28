@@ -1680,15 +1680,19 @@ Storage = {
 	LionsRock = {
 		-- Reserved storage from 52290 - 52309
 		Questline = 52290,
-		LionsStrength = 52291,
-		LionsBeauty = 52292,
-		LionsTears = 52293,
-		GetLionsMane = 52294,
-		GetHolyWater = 52295,
-		SnakeSign = 52296,
-		LizardSign = 52297,
-		ScorpionSign = 52298,
-		HyenaSign = 52299,
+		OuterSanctum = {
+			Skeleton = 52291,
+			LionsStrength = 52292,
+			LionsBeauty = 52293,
+			LionsTears = 52294,
+		},
+		InnerSanctum = {
+			SnakeSign = 52295,
+			LizardSign = 52296,
+			ScorpionSign = 52297,
+			HyenaSign = 52298,
+			Message = 52299
+		},
 		Time = 52300
 	},
 	GraveDanger = {
