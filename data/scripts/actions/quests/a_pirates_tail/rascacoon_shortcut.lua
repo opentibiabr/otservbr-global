@@ -15,10 +15,13 @@ function rascacoonShortcut.onUse(creature, item, position, fromPosition)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		return false
 	end
-	doSendMagicEffect(item:getPosition(), CONST_ME_TELEPORT)
-	player:teleportTo(Position(config.destination))
-	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	return true
+	for value in pairs(config) do
+		if Position(config[value].position) == item:getPosition() then
+			player:teleportTo(Position(config[value].destination))
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			return true
+		end
+	end
 end
 
 for value in pairs(config) do

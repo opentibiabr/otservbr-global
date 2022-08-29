@@ -60,8 +60,8 @@ monster.light = {
 monster.summon = {
 	maxSummons = 4,
 	summons = {
-		{name = "dreadful harvester", chance = 10, interval = 1000, max = 2},
-		{name = "malicious soul", chance = 10, interval = 1000, max = 2}
+		{name = "dreadful harvester", chance = 40, interval = 1000, max = 2},
+		{name = "malicious soul", chance = 30, interval = 1000, max = 2}
 	}
 }
 

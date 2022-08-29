@@ -837,6 +837,10 @@ QuestDoorAction = {
 		itemId = false,
 		itemPos = {{x = 33886, y = 31476, z = 7}}
 	},
+	[Storage.Quest.U12_60.APiratesTail.TentuglyDoor] = {
+		itemId = false,
+		itemPos = {{x = 33793, y = 31388, z = 6}}
+	},
 }
 
 QuestDoorUnique = {
