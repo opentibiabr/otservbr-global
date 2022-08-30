@@ -400,8 +400,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 1)
 		elseif npcHandler:getTopic(playerId) == 3 then
 			if player:removeItem(4845, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.JoiningTheExplorers, 4)
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 4)
+				player:setStorageValue(Storage.ExplorerSociety.JoiningTheExplorers, 5)
+				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 5)
 				npcHandler:say({
 					"Excellent, you brought just the tool we need! Of course it was only a simple task. However ...",
 					"I officially welcome you to the explorer society. From now on you can ask for missions to improve your rank."
