@@ -682,7 +682,8 @@ Storage = {
 		DoorGoldenFruits = 50706,
 		BossWarzone1 = 50707,
 		BossWarzone2 = 50708,
-		BossWarzone3 = 50709
+		BossWarzone3 = 50709,
+		GnomedixMsg = 50710
 	},
 	TheirMastersVoice = {
 		-- Reserved storage from 50720 - 50739

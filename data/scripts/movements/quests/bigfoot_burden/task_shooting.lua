@@ -17,7 +17,7 @@ local function doCreateDummy(cid, position, storv)
 	end
 
 	position:sendMagicEffect(CONST_ME_POFF)
-	Game.createItem(math.random(18226, 18227), 1, position)
+	Game.createItem(math.random(15710, 15711), 1, position)
 	addEvent(doCreateDummy, 4 * 1000, cid, position, storv)
 end
 
@@ -32,6 +32,15 @@ function taskShooting.onStepIn(creature, item, position, fromPosition)
 	if player:getStorageValue(Storage.BigfootBurden.QuestLine) ~= 13 then
 		player:teleportTo(fromPosition)
 		return true
+	end
+
+	thingpos = Position(position.x, position.y - 5, position.z)
+	local tile = Tile(thingpos)
+	if tile then
+		local thing = tile:getTopVisibleThing()
+		if thing and isInArray({15710, 15711}, thing.itemid) then
+			thing:remove()
+		end
 	end
 
 	Game.setStorageValue(position.x, 1) -- Set global storage for the script to know if someone is there shooting

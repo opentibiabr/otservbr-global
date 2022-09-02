@@ -17,7 +17,7 @@ function warzoneTeleport.onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.BigfootBurden.QuestLine) < 30 then
+	if player:getStorageValue(Storage.BigfootBurden.Rank) < 1440 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are not permitted to enter.")
 		player:teleportTo(fromPosition)
 		position:sendMagicEffect(CONST_ME_TELEPORT)
