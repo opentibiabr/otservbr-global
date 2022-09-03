@@ -16,7 +16,7 @@ local Crystals = {
 }
 
 local bigfootMusic = Action()
-function bigfootMusic.onUse(player, item, fromPosition, target, toPosition, isHotskey)
+function bigfootMusic.onUse(player, item, fromPosition, target, toPosition, isHotkey)
     if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 21 then
         local value = player:getStorageValue(Storage.BigfootBurden.MelodyStatus)
         if Position(Crystals[player:getStorageValue(cToneStorages[value])]) == item:getPosition() then
