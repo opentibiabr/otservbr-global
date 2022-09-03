@@ -8,6 +8,13 @@ local cToneStorages = {
 	Storage.BigfootBurden.MelodyTone7
 }
 
+local Crystals = {
+	{x = 32776, y = 31804, z = 10}, -- Dark Blue Cystal
+	{x = 32781, y = 31807, z = 10}, -- Red Crystal
+	{x = 32777, y = 31812, z = 10}, -- Green Crystal
+	{x = 32771, y = 31810, z = 10}  -- Light Blue Crystal
+}
+
 local bigfootMusic = Action()
 function bigfootMusic.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 21 then
@@ -30,5 +37,7 @@ function bigfootMusic.onUse(player, item, fromPosition, target, toPosition, isHo
 	return true
 end
 
-bigfootMusic:uid(3124,3125,3126,3127)
+for b = 1, #Crystals do
+    bigfootMusic:position(Crystals[b])
+end
 bigfootMusic:register()
