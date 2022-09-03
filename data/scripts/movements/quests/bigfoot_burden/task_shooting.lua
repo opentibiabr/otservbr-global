@@ -21,8 +21,13 @@ local function doCreateDummy(cid, position, storv)
 	addEvent(doCreateDummy, 4 * 1000, cid, position, storv)
 end
 
-local taskShooting = MoveEvent()
+local shootingPos = {
+	{x = 32751, y = 31789, z = 10},
+	{x = 32753, y = 31789, z = 10},
+	{x = 32755, y = 31789, z = 10}
+}
 
+local taskShooting = MoveEvent()
 function taskShooting.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
@@ -50,12 +55,12 @@ function taskShooting.onStepIn(creature, item, position, fromPosition)
 	return true
 end
 
-taskShooting:type("stepin")
-taskShooting:aid(8030)
+for a = 1, #shootingPos do
+	taskShooting:position(shootingPos[a])
+end
 taskShooting:register()
 
 taskShooting = MoveEvent()
-
 function taskShooting.onStepOut(creature, item, position, fromPosition)
 	Game.setStorageValue(fromPosition.x, 0)
 
@@ -70,6 +75,7 @@ function taskShooting.onStepOut(creature, item, position, fromPosition)
 	end
 end
 
-taskShooting:type("stepout")
-taskShooting:aid(8030)
+for b = 1, #shootingPos do
+	taskShooting:position(shootingPos[b])
+end
 taskShooting:register()
