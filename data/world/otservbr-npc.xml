@@ -2558,6 +2558,9 @@
 		<npc name="Isimov" x="0" y="0" z="11" spawntime="60" />
 	</npc>
 	<npc centerx="33008" centery="31939" centerz="11" radius="1">
+		<npc name="Gnomole" x="0" y="0" z="11" spawntime="60" />
+	</npc>
+	<npc centerx="32988" centery="31911" centerz="12" radius="1">
 		<npc name="Gnomercy" x="0" y="0" z="11" spawntime="60" />
 	</npc>
 	<npc centerx="32931" centery="32075" centerz="11" radius="1">
