@@ -75,7 +75,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(Storage.BigfootBurden.MelodyStatus, 1)
 			if player:getStorageValue(Storage.BigfootBurden.MelodyTone1) < 1 then
 				for i = 0, 6 do
-					player:setStorageValue(Storage.BigfootBurden.MelodyTone1 + i, math.random(3124, 3127))
+					player:setStorageValue(Storage.BigfootBurden.MelodyTone1 + i, math.random(1, 4))
 				end
 			end
 		elseif player:getStorageValue(Storage.BigfootBurden.QuestLine) == 21 then
@@ -99,6 +99,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+npcHandler:setMessage(MESSAGE_GREET, "Hello. Is it me you're {looking} for?")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 

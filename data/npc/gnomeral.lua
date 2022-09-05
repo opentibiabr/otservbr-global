@@ -11,7 +11,12 @@ npcConfig.walkInterval = 1000
 npcConfig.walkRadius = 2
 
 npcConfig.outfit = {
-	lookType = 493
+	lookType = 493,
+	lookHead = 78,
+	lookBody = 57,
+	lookLegs = 78,
+	lookFeet = 76,
+	lookAddons = 0
 }
 
 npcConfig.flags = {
@@ -57,18 +62,18 @@ local function creatureSayCallback(npc, creature, type, message)
 		return false
 	end
 
-	if(MsgContains(message, "mission")) then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 27 then
+	if(MsgContains(message, "mission") and player:getStorageValue(Storage.BigfootBurden.QuestLineComplete) >= 2) then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 120 and player:getStorageValue(Storage.BigfootBurden.Rank) < 480 then
 			npcHandler:say("For your rank there are two missions available: {matchmaker} and golem {repair}. You can undertake each mission, but you can turn in a specific mission only once every 20 hours. ", npc, creature)
 			npcHandler:setTopic(playerId, 0)
-		elseif player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 28 then
+		elseif player:getStorageValue(Storage.BigfootBurden.Rank) >= 480 then
 			npcHandler:say("For your rank there are four missions available: {matchmaker}, golem {repair}, {spore} gathering and {grindstone} hunt. You can undertake each mission, but you can turn in a specific mission only once every 20 hours.", npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 
 	--  Matchmaker
 	elseif MsgContains(message, "matchmaker") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 27 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 120 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionMatchmaker) < 1 and player:getStorageValue(Storage.BigfootBurden.MatchmakerTimeout) < os.time() then
 				npcHandler:say({
 				"You will have to find a lonely crystal a perfect match. I don't understand the specifics but the gnomes told me that even crystals need a mate to produce offspring. ...",
@@ -77,7 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			}, npc, creature)
 				player:setStorageValue(Storage.BigfootBurden.MissionMatchmaker, 1)
 				player:setStorageValue(Storage.BigfootBurden.MatchmakerStatus, 0)
-				player:setStorageValue(Storage.BigfootBurden.MatchmakerIdNeeded, math.random(18320, 18326))
+				player:setStorageValue(Storage.BigfootBurden.MatchmakerIdNeeded, math.random(15809, 15815))
 				player:addItem(15802, 1)   --- taking missions
 			elseif player:getStorageValue(Storage.BigfootBurden.MatchmakerTimeout) > os.time() then  -- trying to take mission while in cooldown
 				npcHandler:say("Sorry, you will have to wait before you can undertake this mission again.", npc, creature)
@@ -110,7 +115,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Golem Repair
 	elseif MsgContains(message, "repair") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 27 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 120 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionTinkersBell) < 1 and player:getStorageValue(Storage.BigfootBurden.TinkerBellTimeout) < os.time() then
 				npcHandler:say("Our gnomish crystal golems sometimes go nuts. A recent earthquake has disrupted the entire production of a golem factory. ... ", npc, creature)
 				npcHandler:say({
@@ -152,7 +157,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Spore Gathering
 	elseif MsgContains(message, "spore") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 28 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 480 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionSporeGathering) < 1 and player:getStorageValue(Storage.BigfootBurden.SporeGatheringTimeout) < os.time() then
 				npcHandler:say({
 					"We gnomes want you to gather a special collection of spores. All you have to do is use a puffball mushroom and use the spore gathering kit I gave you to gather the spores. ...",
@@ -194,7 +199,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Grindstone Hunt
 	elseif MsgContains(message, "grindstone") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 28 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 480 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionGrindstoneHunt) < 1 and player:getStorageValue(Storage.BigfootBurden.GrindstoneTimeout) < os.time() then
 				npcHandler:say({
 					"We gnomes need some special grindstones to cut and polish specific crystals. The thing is, they can only be found in a quite dangerous lava cave full of vile monsters. You'll reach it via the hot spot teleporter. ...",
@@ -233,10 +238,10 @@ local function creatureSayCallback(npc, creature, type, message)
 	-- Grindstone Hunt
 
 	elseif(MsgContains(message, "report")) then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 27 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 120 and player:getStorageValue(Storage.BigfootBurden.Rank) < 480 then
 			npcHandler:say("Which mission do you want to report: {matchmaker}, golem {repair}?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
-		elseif player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 28 then
+		elseif player:getStorageValue(Storage.BigfootBurden.Rank) >= 480 then
 			npcHandler:say("Which mission do you want to report: {matchmaker}, golem {repair}, {spore} gathering or {grindstone} hunt?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
@@ -244,6 +249,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+npcHandler:setMessage(MESSAGE_GREET, 'Hello there recruit!')
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 

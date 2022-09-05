@@ -59,19 +59,19 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 
-	if(MsgContains(message, "mission")) then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 25 then
+	if(MsgContains(message, "mission") and player:getStorageValue(Storage.BigfootBurden.QuestLineComplete) >= 2) then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) < 30 then
 			npcHandler:say({"Two missions are available for your {rank}: crystal {keeper} and {spark} hunting. You can undertake each mission but you can turn in a specific mission only once each 20 hours. ...",
 				"If you lose a mission item you can probably buy it from Gnomally."}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
-		elseif player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 26 then
+		elseif player:getStorageValue(Storage.BigfootBurden.Rank) >= 30 then
 			npcHandler:say({"For your {rank} there are four missions avaliable: crystal {keeper}, {spark} hunting, monster {extermination} and mushroom {digging}. By the way, you {rank} now allows you to take aditional missions from {Gnomeral} in {Gnomebase Alpha}. ... ", "If you lose a mission item you can probably buy it from Gnomally."}, npc, creature)
 			npcHandler:setTopic(playerId, 0)
 		end
 
 	-- Crystal Kepper
 	elseif MsgContains(message, "keeper") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 25 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) < 30 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionCrystalKeeper) < 1 and player:getStorageValue(Storage.BigfootBurden.CrystalKeeperTimout) < os.time() then
 				npcHandler:say("You will have to repair some damaged crystals. Go into the Crystal grounds and repair them, using this harmonic crystal. Repair five of them and return to me. ", npc, creature)
 				player:setStorageValue(Storage.BigfootBurden.MissionCrystalKeeper, 1)
@@ -108,7 +108,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Raiders of the Lost Spark
 	elseif MsgContains(message, "spark") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 25 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) < 30 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionRaidersOfTheLostSpark) < 1 and player:getStorageValue(Storage.BigfootBurden.RaidersOfTheLostSparkTimeout) < os.time() then
 				npcHandler:say({"Take this extractor and drive it into a body of a slain crystal crusher. This will charge your own body with energy sparks. Charge it with seven sparks and return to me. ...",
 					"Don't worry. The gnomes assured me you'd be save. That is if nothing strange or unusual occurs! "}, npc, creature)
@@ -146,7 +146,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Exterminators
 	elseif MsgContains(message, "extermination") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 26 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 30 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionExterminators) < 1 and player:getStorageValue(Storage.BigfootBurden.ExterminatorsTimeout) < os.time() then
 				npcHandler:say("The wigglers have become a pest that threaten our resources and supplies. Kill 10 wigglers in the caves like the mushroon gardens or the truffles ground. {Report} back to me when you are done. ", npc, creature)
 				player:setStorageValue(Storage.BigfootBurden.MissionExterminators, 1)
@@ -181,7 +181,7 @@ local function creatureSayCallback(npc, creature, type, message)
 
 	-- Mushroom Digger
 	elseif MsgContains(message, "digging") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 26 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) >= 30 then
 			if player:getStorageValue(Storage.BigfootBurden.MissionMushroomDigger) < 1 and player:getStorageValue(Storage.BigfootBurden.MushroomDiggerTimeout) < os.time() then
 				npcHandler:say({
 					"Take this little piggy here. It will one day become a great mushroom hunter for sure. For now it is depended on you and other pigs. ...",
@@ -222,10 +222,10 @@ local function creatureSayCallback(npc, creature, type, message)
 	-- Mushroom Digger
 
 	elseif(MsgContains(message, "report")) then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 25 then
+		if player:getStorageValue(Storage.BigfootBurden.Rank) < 30 then
 			npcHandler:say("Which mission do you want to report: crystal {keeper}, {spark} hunting?", npc, creature)
 			npcHandler:setTopic(playerId, 1)
-		elseif player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 26 then
+		elseif player:getStorageValue(Storage.BigfootBurden.Rank) >= 30 then
 			npcHandler:say("Which mission do you want to report: crystal {keeper}, {spark} hunting, monster {extermination} or mushroom {digging}?", npc, creature)
 			npcHandler:setTopic(playerId, 2)
 		end
@@ -233,6 +233,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
+npcHandler:setMessage(MESSAGE_GREET, 'Hello recruit.')
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 

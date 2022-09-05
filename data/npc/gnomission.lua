@@ -64,7 +64,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			"There are three warzones. In each warzone you will find fearsome foes. At the end you'll find their mean master. The masters is well protected though. ...",
 			"Make sure to talk to our gnomish agent in there for specifics of its' protection. ...",
 			"Oh, and to be able to enter the second warzone you have to best the first. To enter the third you have to best the second. ...",
-			"And you can enter each one only once every twenty hours. Your normal teleport crystals won't work on these teleporters. You will have to get mission crystals from Gnomally."
+			"And you can enter each one only once every twenty hours. Your normal teleport crystals won't work on these teleporters. You will have to get {mission} crystals from Gnomally."
 		}, npc, creature)
 		npcHandler:setTopic(playerId, 1)
 	elseif(MsgContains(message, "job")) then
@@ -80,7 +80,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "snippet")) then
 		if npcHandler:getTopic(playerId) == 3 then
-			if player:getStorageValue(Storage.BigfootBurden.QuestLine) < 30 then
+			if player:getStorageValue(Storage.BigfootBurden.Rank) < 1440 then
 				npcHandler:say("It seems you did not even set one big foot into the warzone, I am sorry.")
 			else
 				if player:getStorageValue(Storage.BigfootBurden.Warzone1Access) < 1 then
@@ -98,7 +98,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "lash")) then
 		if npcHandler:getTopic(playerId) == 3 then
-			if player:getStorageValue(Storage.BigfootBurden.QuestLine) < 30 then
+			if player:getStorageValue(Storage.BigfootBurden.Rank) < 1440 then
 				npcHandler:say("It seems you did not even set one big foot into the warzone, I am sorry.")
 			else
 				if player:getStorageValue(Storage.BigfootBurden.Warzone3Access) < 1 then
@@ -120,7 +120,7 @@ local function creatureSayCallback(npc, creature, type, message)
 		end
 	elseif(MsgContains(message, "hat")) then
 		if npcHandler:getTopic(playerId) == 3 then
-			if player:getStorageValue(Storage.BigfootBurden.QuestLine) < 30 then
+			if player:getStorageValue(Storage.BigfootBurden.Rank) < 1440 then
 				npcHandler:say("It seems you did not even set one big foot into the warzone, I am sorry.")
 			else
 				if player:getStorageValue(Storage.BigfootBurden.Warzone2Access) < 1 then
@@ -141,28 +141,31 @@ local function creatureSayCallback(npc, creature, type, message)
 			end
 		end
 	elseif(MsgContains(message, "mission")) then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 30 then
-			if player:getStorageValue(Storage.BigfootBurden.WarzoneStatus) < 1 then
-				npcHandler:say("Fine, I grant you the permission to enter the warzones. Be warned though, this will be not a picnic. Better bring some friends with you. Bringing a lot of them sounds like a good idea.", npc, creature)
-				player:setStorageValue(Storage.BigfootBurden.WarzoneStatus, 1)
+		if npcHandler:getTopic(playerId) == 1 then
+			if player:getStorageValue(Storage.BigfootBurden.Rank) >= 1440 then
+				if player:getStorageValue(Storage.BigfootBurden.WarzoneStatus) < 1 then
+					npcHandler:say("Fine, I grant you the permission to enter the warzones. Be warned though, this will be not a picnic. Better bring some friends with you. Bringing a lot of them sounds like a good idea.", npc, creature)
+					player:setStorageValue(Storage.BigfootBurden.WarzoneStatus, 1)
+				else
+					npcHandler:say("You have already accepted this mission.", npc, creature)
+				end
+				npcHandler:setTopic(playerId, 0)
 			else
-				npcHandler:say("You have already accepted this mission.", npc, creature)
+				npcHandler:say("Sorry, you have not yet earned enough renown that we would risk your life in such a dangerous mission.", npc, creature)
+				npcHandler:setTopic(playerId, 0)
 			end
-			npcHandler:setTopic(playerId, 0)
-		else
-			npcHandler:say("Sorry, you have not yet earned enough renown that we would risk your life in such a dangerous mission.", npc, creature)
-			npcHandler:setTopic(playerId, 0)
 		end
 	end
 	return true
 end
+
+npcHandler:setMessage(MESSAGE_GREET, 'Hello |PLAYERNAME|. You are probably eager to enter the {warzones}.')
 
 local function onTradeRequest(npc, creature)
 	if Player(creature):getStorageValue(Storage.BigfootBurden.BossKills) < 20 then
 		npcHandler:say('Only if you have killed 20 of our major enemies in the warzones I am allowed to trade with you.', npc, creature)
 		return false
 	end
-
 	return true
 end
 
