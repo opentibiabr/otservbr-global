@@ -73,7 +73,7 @@ keywordHandler:addKeyword({'lizard'}, StdModule.say, {npcHandler = npcHandler, t
 keywordHandler:addKeyword({'zao'}, StdModule.say, {npcHandler = npcHandler, text = 'What a strange and bizarre continent. I\'m glad my landing place is far away from all the mess I\'ve seen from above.'})
 keywordHandler:addKeyword({'fly'}, StdModule.say, {npcHandler = npcHandler, text = 'I can fly you to {Darashia}, {Edron}, {Issavi}, {Svargrond}, {Kazordoon}, {Femor Hills} or to {Marapur} if you like. Where do you want to go?'})
 keywordHandler:addKeyword({'service'}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m a carpet pilot. I can fly you to the {Femor Hills}, to {Kazordoon}, {Svargrond}, {Edron}, {Darashia}, {Issavi} or {Marapur}.'})
-keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m a carpet pilot. I can fly you to the {Femor Hills}, to {Kazordoon}, {Svargrond}, {Edron}, {Darashia}, {Issavi} or {Marapur}.'.'})
+keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text = 'I\'m a carpet pilot. I can fly you to the {Femor Hills}, to {Kazordoon}, {Svargrond}, {Edron}, {Darashia}, {Issavi} or {Marapur}.'})
 keywordHandler:addKeyword({'name'}, StdModule.say, {npcHandler = npcHandler, text = 'Melian at your service.'})
 keywordHandler:addKeyword({'mountain'}, StdModule.say, {npcHandler = npcHandler, text = 'These mountains don\'t look friendly. I prefer not staying long inbetween my carpet trips.'})
 keywordHandler:addKeyword({'carpet'}, StdModule.say, {npcHandler = npcHandler, text = 'Only licensed carpet pilots are allowed to fly those.'})

@@ -11,7 +11,12 @@ npcConfig.walkInterval = 2000
 npcConfig.walkRadius = 2
 
 npcConfig.outfit = {
-	lookType = 1537
+	lookType = 1537,
+	lookHead = 114,
+	lookBody = 6,
+	lookLegs = 67,
+	lookFeet = 49,
+	lookAddons = 1
 }
 
 npcConfig.flags = {

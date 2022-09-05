@@ -12,11 +12,11 @@ npcConfig.walkRadius = 2
 
 npcConfig.outfit = {
 	lookType = 150,
-	lookHead = 95,
-	lookBody = 61,
-	lookLegs = 39,
-	lookFeet = 115,
-	lookAddons = 0
+	lookHead = 66,
+	lookBody = 93,
+	lookLegs = 66,
+	lookFeet = 19,
+	lookAddons = 1
 }
 
 npcConfig.flags = {
