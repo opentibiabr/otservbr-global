@@ -242,6 +242,16 @@ local transformItems = {
 	[39697] = 39698, [39698] = 39697, -- rainbow torch
 	[39699] = 39700, [39700] = 39699, -- rainbow torch
 	[39701] = 39702, [39702] = 39701, -- rainbow torch
+	[39757] = 39758, -- yeti doll
+	[39759] = 39760, [39761] = 39762, -- the gods' twilight doll
+	[39772] = 39773, [39773] = 39774, -- flower table
+	[39774] = 39772, -- flower table
+	[39793] = 39794, [39794] = 39793, -- turquoise flower lamp
+	[39795] = 39796, [39796] = 39795, -- purple flower lamp
+	[39801] = 39802, [39802] = 39801, -- wall leaves
+	[39803] = 39804, [39804] = 39803, -- tendrils
+	[39805] = 39806, [39807] = 39808, -- water nymph
+	[39810] = 39809, -- water nymph
 }
 
 local transformTo = Action()

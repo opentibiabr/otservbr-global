@@ -55504,5 +55504,149 @@
 		<attribute key="weight" value="1000"/>
 	</item>
 	<item id="39756" article="a" name="naga boat"/>
+	<item id="39757" article="a" name="yeti doll">
+		<attribute key="description" value="It may be a little too cool to handle. It is entrusted by TibiaFanart.com"/>
+	</item>
+	<item id="39758" article="a" name="yeti doll">
+		<attribute key="description" value="It may be a little too cool to handle. It is entrusted by TibiaFanart.com"/>
+		<attribute key="decayTo" value="39757" />
+		<attribute key="duration" value="5" />
+	</item>
+	<item id="39759" article="a" name="the gods' twilight doll">
+		<attribute key="description" value="It represents Valiant on behalf of Fardos and Ragna on behalf of Variphor. It symbolizes the fight between light and darkness, wisdom and ignorance, freedom and domination. Granted by TibiaLight.com"/>
+	</item>
+	<item id="39760" article="a" name="the gods' twilight doll">
+		<attribute key="description" value="It represents Valiant on behalf of Fardos and Ragna on behalf of Variphor. It symbolizes the fight between light and darkness, wisdom and ignorance, freedom and domination. Granted by TibiaLight.com"/>
+		<attribute key="decayTo" value="39761" />
+		<attribute key="duration" value="3" />
+	</item>
+	<item id="39761" article="a" name="the gods' twilight doll">
+		<attribute key="description" value="It represents Valiant on behalf of Fardos and Ragna on behalf of Variphor. It symbolizes the fight between light and darkness, wisdom and ignorance, freedom and domination. Granted by TibiaLight.com"/>
+	</item>
+	<item id="39762" article="a" name="the gods' twilight doll">
+		<attribute key="description" value="It represents Valiant on behalf of Fardos and Ragna on behalf of Variphor. It symbolizes the fight between light and darkness, wisdom and ignorance, freedom and domination. Granted by TibiaLight.com"/>
+		<attribute key="decayTo" value="39759" />
+		<attribute key="duration" value="3" />
+	</item>
 	<item id="39763" article="a" name="huge lilypad"/>
+	<item fromid="39764" toid="39766" article="a" name="pillar"/>
+	<item id="39767" article="a" name="gilded warlord sword">
+		<attribute key="description" value="This is a gilded replica of the famous warlord sword"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39768" article="a" name="flower chair">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39769"/>
+	</item>
+	<item id="39769" article="a" name="flower chair">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39770"/>
+	</item>
+	<item id="39770" article="a" name="flower chair">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39771"/>
+	</item>
+	<item id="39771" article="a" name="flower chair">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39768"/>
+	</item>
+	<item id="39772" article="a" name="flower table">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39773" article="a" name="flower table">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39774" article="a" name="flower table">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39775" article="a" name="flower cabinet">
+		<attribute key="containersize" value="8"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39776"/>
+	</item>
+	<item id="39776" article="a" name="flower cabinet">
+		<attribute key="containersize" value="8"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39775"/>
+	</item>
+	<item id="39777" article="a" name="flower chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39778"/>
+	</item>
+	<item id="39778" article="a" name="flower chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39779"/>
+	</item>
+	<item id="39779" article="a" name="flower chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39780"/>
+	</item>
+	<item id="39780" article="a" name="flower chest">
+		<attribute key="containersize" value="18"/>
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="rotateto" value="39777"/>
+	</item>
+	<item fromid="39793" toid="39794" article="a" name="turquoise flower lamp">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item fromid="39795" toid="39796" article="a" name="purple flower lamp">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item fromid="39797" toid="39798" name="flowery grass">
+		<attribute key="type" value="carpet"/>
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39799" article="a" name="wall flowers">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="The small blossoms are of a deep purple hue"/>
+	</item>
+	<item id="39800" article="a" name="wall fern">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="Its leaves are fresh and lush"/>
+	</item>
+	<item id="39801" name="wall leaves">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39802" name="flowering wall leaves">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39803" name="tendrils">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39804" name="blooming tendrils">
+		<attribute key="wrapableto" value="23398"/>
+	</item>
+	<item id="39805" name="water nymph">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="Well, you almost see her. At the moment, she is hiding beneath the water surface"/>
+	</item>
+	<item id="39806" name="water nymph">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="She is just emerging from the water"/>
+		<attribute key="decayTo" value="39807" />
+		<attribute key="duration" value="3" />
+	</item>
+	<item id="39807" name="water nymph">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="She is enjoying her bath between the lily pads"/>
+	</item>
+	<item id="39808" name="water nymph">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="She is enjoying her bath between the lily pads"/>
+		<attribute key="decayTo" value="39810" />
+		<attribute key="duration" value="5" />
+	</item>
+	<item id="39809" name="water nymph">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="She is submerging just now"/>
+		<attribute key="decayTo" value="39805" />
+		<attribute key="duration" value="3" />
+	</item>
+	<item id="39810" name="water nymph">
+		<attribute key="wrapableto" value="23398"/>
+		<attribute key="description" value="She is enjoying her bath between the lily pads"/>
+	</item>
 </items>

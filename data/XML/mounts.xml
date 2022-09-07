@@ -202,4 +202,7 @@
 	<mount id="200" clientid="1528" name="Cinnamon ibex" speed="20" premium="no" type="store" />
 	<mount id="201" clientid="1536" name="Giant Beaver" speed="20" premium="yes" type="quest" />
 	<mount id="202" clientid="1577" name="Noxious Ripptor" speed="20" premium="yes" type="quest" />
+	<mount id="203" clientid="1578" name="Parade Horse" speed="20" premium="no" type="store" />
+	<mount id="204" clientid="1579" name="Jousting Horse" speed="20" premium="no" type="store" />
+	<mount id="205" clientid="1580" name="Tourney Horse" speed="20" premium="no" type="store" />
 </mounts>
