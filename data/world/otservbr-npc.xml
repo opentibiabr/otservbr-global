@@ -60,6 +60,9 @@
 	<npc centerx="32479" centery="31901" centerz="2" radius="1">
 		<npc name="Riddler" x="0" y="0" z="2" spawntime="60" />
 	</npc>
+	<npc centerx="33805" centery="32768" centerz="2" radius="1">
+		<npc name="Ziyad" x="0" y="0" z="1" spawntime="60" />
+	</npc>
 	<npc centerx="33103" centery="32520" centerz="2" radius="1">
 		<npc name="Nah'Bob" x="0" y="0" z="2" spawntime="60" />
 	</npc>
@@ -161,6 +164,15 @@
 	</npc>
 	<npc centerx="33625" centery="31894" centerz="4" radius="1">
 		<npc name="Edmund" x="0" y="0" z="4" spawntime="60" />
+	</npc>
+	<npc centerx="33819" centery="32768" centerz="4" radius="1">
+		<npc name="Giri" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33811" centery="32771" centerz="4" radius="1">
+		<npc name="Haani" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33822" centery="32773" centerz="4" radius="1">
+		<npc name="Sundara" x="0" y="0" z="1" spawntime="60" />
 	</npc>
 	<npc centerx="32071" centery="31897" centerz="4" radius="1">
 		<npc name="Mr Morris" x="0" y="0" z="4" spawntime="60" />
@@ -294,6 +306,9 @@
 	<npc centerx="33613" centery="31895" centerz="5" radius="1">
 		<npc name="Christine" x="0" y="0" z="5" spawntime="60" />
 	</npc>
+	<npc centerx="33800" centery="32756" centerz="5" radius="1">
+		<npc name="Amra" x="0" y="0" z="1" spawntime="60" />
+	</npc>
 	<npc centerx="32057" centery="31900" centerz="5" radius="1">
 		<npc name="Hamish" x="0" y="0" z="5" spawntime="60" />
 	</npc>
@@ -341,6 +356,12 @@
 	</npc>
 	<npc centerx="32096" centery="32219" centerz="5" radius="1">
 		<npc name="Asralius" x="0" y="0" z="5" spawntime="60" />
+	</npc>
+	<npc centerx="33741" centery="32769" centerz="5" radius="1">
+		<npc name="Sessek" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33794" centery="32756" centerz="5" radius="1">
+		<npc name="Sessek" x="0" y="0" z="1" spawntime="60" />
 	</npc>
 	<npc centerx="33618" centery="32372" centerz="5" radius="1">
 		<npc name="Eruaran" x="0" y="0" z="5" spawntime="60" />
@@ -785,6 +806,15 @@
 	</npc>
 	<npc centerx="33716" centery="32376" centerz="6" radius="1">
 		<npc name="Dream Butterfly" x="0" y="0" z="6" spawntime="60" />
+	</npc>
+	<npc centerx="33778" centery="32837" centerz="6" radius="1">
+		<npc name="Nipuna" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33773" centery="32840" centerz="6" radius="1">
+		<npc name="Isika" x="0" y="0" z="1" spawntime="60" />
+	</npc>
+	<npc centerx="33777" centery="32844" centerz="6" radius="1">
+		<npc name="Asphota" x="0" y="0" z="1" spawntime="60" />
 	</npc>
 	<npc centerx="33231" centery="32389" centerz="6" radius="1">
 		<npc name="Kazzan" x="0" y="0" z="6" spawntime="60" />
@@ -2779,6 +2809,9 @@
 	<npc centerx="33533" centery="31950" centerz="14" radius="1">
 		<npc name="Strange Pipe" x="0" y="0" z="14" spawntime="60" />
 	</npc>
+	<npc centerx="33517" centery="32856" centerz="14" radius="1">
+		<npc name="Urks The Mute" x="0" y="0" z="1" spawntime="60" />
+	</npc>
 	<npc centerx="32683" centery="31987" centerz="14" radius="1">
 		<npc name="Rapanaio" x="0" y="0" z="14" spawntime="60" />
 	</npc>
@@ -2898,35 +2931,5 @@
 	</npc>
 	<npc centerx="32174" centery="32598" centerz="15" radius="1">
 		<npc name="A Wyrm" x="0" y="0" z="15" spawntime="60" />
-	</npc>
-	<npc centerx="33800" centery="32756" centerz="5" radius="1">
-		<npc name="Amra" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33819" centery="32768" centerz="4" radius="1">
-		<npc name="Giri" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33811" centery="32771" centerz="4" radius="1">
-		<npc name="Haani" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33822" centery="32773" centerz="4" radius="1">
-		<npc name="Sundara" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33805" centery="32768" centerz="2" radius="1">
-		<npc name="Ziyad" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33778" centery="32837" centerz="6" radius="1">
-		<npc name="Nipuna" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33773" centery="32840" centerz="6" radius="1">
-		<npc name="Isika" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33777" centery="32844" centerz="6" radius="1">
-		<npc name="Asphota" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33741" centery="32769" centerz="5" radius="1">
-		<npc name="Sessek" x="0" y="0" z="1" spawntime="60" />
-	</npc>
-	<npc centerx="33794" centery="32756" centerz="5" radius="1">
-		<npc name="Sessek" x="0" y="0" z="1" spawntime="60" />
 	</npc>
 </npcs>
