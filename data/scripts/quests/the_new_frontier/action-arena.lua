@@ -70,13 +70,12 @@ function theNewFrontierArena.onUse(player, item, fromPosition, target, toPositio
 	Game.setStorageValue(TheNewFrontier.Mission09[1], 1)
 	addEvent(clearArena, 30 * 60 * 1000)
 
-	local player2 = Tile(config.playerPos[2]):getTopCreature()
-	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player:teleportTo(config.teleportPositions[1])
-	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player2:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player2:teleportTo(config.teleportPositions[2])
-	player2:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	for b = 1, #config.playerPos do
+		local creature = Tile(config.playerPos[b]):getTopCreature()
+		creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		creature:teleportTo(config.teleportPositions[b])
+		creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	end
 
 	for i = 1, #config.bosses do
 		for j = 1, #config.bosses[i] do
