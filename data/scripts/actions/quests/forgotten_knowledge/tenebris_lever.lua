@@ -53,7 +53,7 @@ function forgottenKnowledgeTenebris.onUse(player, item, fromPosition, target, to
 				end
 			end
 		end
-		addEvent(clearTenebris, 20 * 60 * 1000, Position(32902, 31589, 14), Position(32922, 31589, 14), Position(32924, 31610, 14))
+		addEvent(clearTenebris, 15 * 60 * 1000, Position(32902, 31589, 14), Position(32922, 31589, 14), Position(32924, 31610, 14))
 		item:transform(8912)
 	elseif item.itemid == 8912 then
 		item:transform(8911)

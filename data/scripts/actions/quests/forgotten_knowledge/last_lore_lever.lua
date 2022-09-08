@@ -48,7 +48,7 @@ function forgottenKnowledgeLastLore.onUse(player, item, fromPosition, target, to
 		Game.setStorageValue(GlobalStorage.ForgottenKnowledge.AstralPowerCounter, 1)
 		Game.setStorageValue(GlobalStorage.ForgottenKnowledge.AstralGlyph, 0)
 		player:say('The Astral Glyph begins to draw upon bound astral power to expel you from the room!', TALKTYPE_MONSTER_SAY)
-		addEvent(clearForgotten, 30 * 60 * 1000, Position(31968, 32821, 14), Position(32004, 32865, 15), Position(32035, 32859, 14))
+		addEvent(clearForgotten, 17 * 60 * 1000, Position(31968, 32821, 14), Position(32004, 32865, 15), Position(32035, 32859, 14))
 		item:transform(8912)
 		elseif item.itemid == 8912 then
 		item:transform(8911)

@@ -43,7 +43,7 @@ function forgottenKnowledgeGuardianLever.onUse(player, item, fromPosition, targe
 				end
 			end
 		end
-		addEvent(clearForgotten, 30 * 60 * 1000, Position(32967, 31654, 13), Position(32989, 31677, 14), Position(32870, 32724, 14))
+		addEvent(clearForgotten, 15 * 60 * 1000, Position(32967, 31654, 13), Position(32989, 31677, 14), Position(32870, 32724, 14))
 		item:transform(8912)
 		elseif item.itemid == 8912 then
 		item:transform(8911)

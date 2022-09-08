@@ -49,7 +49,7 @@ function forgottenKnowledgeDragonking.onUse(player, item, fromPosition, target, 
 				end
 			end
 		end
-		addEvent(clearForgotten, 30 * 60 * 1000, Position(33348, 31172, 10), Position(33368, 31190, 12), Position(33407, 31172, 10))
+		addEvent(clearForgotten, 15 * 60 * 1000, Position(33348, 31172, 10), Position(33368, 31190, 12), Position(33407, 31172, 10))
 		item:transform(8912)
 	elseif item.itemid == 8912 then
 		item:transform(8911)

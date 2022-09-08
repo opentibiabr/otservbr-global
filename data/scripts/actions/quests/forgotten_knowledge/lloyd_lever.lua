@@ -5,10 +5,10 @@ local config = {
 }
 
 local monsters = {
-	{cosmic = 'cosmic energy prism a', pos = Position(32801, 32827, 14)},
-	{cosmic = 'cosmic energy prism b', pos = Position(32798, 32827, 14)},
-	{cosmic = 'cosmic energy prism c', pos = Position(32803, 32826, 14)},
-	{cosmic = 'cosmic energy prism d', pos = Position(32796, 32826, 14)}
+	{cosmic = 'cosmic energy prism a invu', pos = Position(32801, 32827, 14)},
+	{cosmic = 'cosmic energy prism b invu', pos = Position(32798, 32827, 14)},
+	{cosmic = 'cosmic energy prism c invu', pos = Position(32803, 32826, 14)},
+	{cosmic = 'cosmic energy prism d invu', pos = Position(32796, 32826, 14)}
 }
 
 local function clearForgottenLloyd()
@@ -60,7 +60,7 @@ function forgottenKnowledgeLever.onUse(player, item, fromPosition, target, toPos
 				end
 			end
 		end
-		addEvent(clearForgottenLloyd, 30 * 60 * 1000)
+		addEvent(clearForgottenLloyd, 10 * 60 * 1000)
 		item:transform(8912)
 	elseif item.itemid == 8912 then
 		item:transform(8911)

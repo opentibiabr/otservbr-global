@@ -46,7 +46,7 @@ function forgottenKnowledgeHorror.onUse(player, item, fromPosition, target, toPo
 				end
 			end
 		end
-		addEvent(clearForgotten, 30 * 60 * 1000, Position(32264, 31070, 14), Position(32284, 31104, 14), Position(32319, 31091, 14))
+		addEvent(clearForgotten, 15 * 60 * 1000, Position(32264, 31070, 14), Position(32284, 31104, 14), Position(32319, 31091, 14))
 		item:transform(8912)
 	elseif item.itemid == 8912 then
 		item:transform(8911)

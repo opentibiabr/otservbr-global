@@ -39,7 +39,7 @@ function forgottenKnowledgeThorn.onUse(player, item, fromPosition, target, toPos
 				end
 			end
 		end
-		addEvent(clearForgotten, 30 * 60 * 1000, Position(32613, 32869, 14), Position(32636, 32892, 14), Position(32678, 32888, 14))
+		addEvent(clearForgotten, 15 * 60 * 1000, Position(32613, 32869, 14), Position(32636, 32892, 14), Position(32678, 32888, 14))
 		item:transform(8912)
 		elseif item.itemid == 8912 then
 		item:transform(8911)
