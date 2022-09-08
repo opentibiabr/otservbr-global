@@ -546,7 +546,8 @@ Storage = {
 		Chalice = 50505,
 		Tomes = 50506,
 		BabyDragon = 50507,
-		SpiderWeb = 50508
+		SpiderWeb = 50508,
+		LloydEvent = 50509
 	},
 	SweetyCyclops = {
 		-- Reserved storage from 50520 - 50529
