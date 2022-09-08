@@ -8,7 +8,7 @@ local monsters = {
 local function revertLloyd(prismId)
     local lloyd = Tile(Position(32799, 32826, 14)):getTopCreature()
 	if lloyd then
-		lloyd:teleportTo(Position(32799, 32828, 14))
+		lloyd:teleportTo(Position(32799, 32829, 14))
 		lloyd:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
     end
 
@@ -31,14 +31,14 @@ function lloydPrepareDeath.onPrepareDeath(creature, lastHitKiller, mostDamageKil
         end
     end
 
-    local again = false
+    local reborn = false
     if prismCount <= 4 then
         Tile(monsters[prismCount].pos):getTopCreature():remove()
         Game.createMonster(monsters[prismCount].cosmicNormal, Position(monsters[prismCount].pos), true, true)
-        again = true
+        reborn = true
     end
 
-    if again then
+    if reborn then
         creature:teleportTo(Position(32799, 32826, 14))
         creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
         creature:addHealth(300000, true)
