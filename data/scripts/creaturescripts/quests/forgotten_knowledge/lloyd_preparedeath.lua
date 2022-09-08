@@ -31,14 +31,14 @@ function lloydPrepareDeath.onPrepareDeath(creature, lastHitKiller, mostDamageKil
         end
     end
 
-    local reborn = false
+    local again = false
     if prismCount <= 4 then
         Tile(monsters[prismCount].pos):getTopCreature():remove()
         Game.createMonster(monsters[prismCount].cosmicNormal, Position(monsters[prismCount].pos), true, true)
-        reborn = true
+        again = true
     end
 
-    if reborn then
+    if again then
         creature:teleportTo(Position(32799, 32826, 14))
         creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
         creature:addHealth(300000, true)
