@@ -147,20 +147,6 @@ ItemAction = {
 			{x = 31988, y = 32155, z = 8}
 		}
 	},
-	-- The New Frontier Quest
-	[40013] = { -- Vines to escalte mountain
-		itemId = false,
-		itemPos = {
-			{x = 33021, y = 31536, z = 6},
-			{x = 33021, y = 31536, z = 4}
-		}
-	},
-	[40014] = { -- Jail Trap - Secret Door
-		itemId = 10111,
-		itemPos = {
-			{x = 33170, y = 31248, z = 11}
-		}
-	},
 	-- Threatened Dreams Quest
 	[40016] = { -- Fairy 01
 		itemId = false,
