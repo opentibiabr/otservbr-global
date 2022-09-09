@@ -11,6 +11,21 @@ local monsters = {
 	{monster = 'melting frozen horror', pos = Position(32267, 31071, 14)}
 }
 
+local function clearForgottenHorror()
+	local spectators = Game.getSpectators(config.centerRoom, false, false, 15, 15, 15, 15)
+	for i = 1, #spectators do
+		local spectator = spectators[i]
+		if spectator:isPlayer() then
+			spectator:teleportTo(Position(32271, 31097, 14))
+			spectator:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			spectator:say('Time out! You were teleported out by strange forces.', TALKTYPE_MONSTER_SAY)
+		elseif spectator:isMonster() and spectator:getName():lower() ~= 'frozen minion' then
+			spectator:remove()
+		end
+	end
+end
+
+
 local forgottenKnowledgeHorror = Action()
 function forgottenKnowledgeHorror.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 8911 then
@@ -28,9 +43,11 @@ function forgottenKnowledgeHorror.onUse(player, item, fromPosition, target, toPo
 				return true
 			end
 		end
+		clearForgottenHorror()
 		for n = 1, #monsters do
 			Game.createMonster(monsters[n].monster, monsters[n].pos, true, true)
 		end
+		Tile(monsters[3].pos):getTopCreature():setHealth(1)
 		Game.createMonster("solid frozen horror", config.bossPosition, true, true)
 		for y = 31088, 31092 do
 			local playerTile = Tile(Position(32302, y, 14)):getTopCreature()
@@ -46,7 +63,7 @@ function forgottenKnowledgeHorror.onUse(player, item, fromPosition, target, toPo
 				end
 			end
 		end
-		addEvent(clearForgotten, 15 * 60 * 1000, Position(32264, 31070, 14), Position(32284, 31104, 14), Position(32319, 31091, 14))
+		addEvent(clearForgottenHorror, 15 * 60 * 1000)
 		item:transform(8912)
 	elseif item.itemid == 8912 then
 		item:transform(8911)
