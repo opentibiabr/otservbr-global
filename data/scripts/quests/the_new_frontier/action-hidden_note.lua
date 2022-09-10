@@ -12,5 +12,5 @@ function hiddenNote.onUse(player, item, fromPosition, target, toPosition, isHotk
 	end
 end
 
-hiddenNote:aid(50364)
+hiddenNote:position(Position(33165, 31249, 11))
 hiddenNote:register()
