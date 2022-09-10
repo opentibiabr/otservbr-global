@@ -32,7 +32,7 @@ OpenTibiaBR - Global Server is a free and open-source MMORPG server emulator wri
 
 In this repository it is just the global datapack, and the source code is in the [canary repository](https://github.com/opentibiabr/canary). Our idea is to facilitate the development of the source code, so that it does not need to be directly linked to the global datapack, but that it is compatible.
 
-To connect to the server and to take a stable experience, you can use [mehah's otclient](https://github.com/mehah/otclient) or [tibia client](https://github.com/dudantas/tibia-client/releases/latest) and if you want to edit something, check our [customized tools](https://majestyotbr.gitbook.io/opentibiabr/others/downloads/tools).
+To connect to the server and to take a stable experience, you can use [mehah's otclient](https://github.com/mehah/otclient) or [tibia client](https://github.com/dudantas/tibia-client/releases/latest) and if you want to edit something, check our [customized tools](https://majestyotbr.gitbook.io/opentibiabr/others/downloads#tools).
 
 If you want edit the map, use the [own remere's map editor](https://github.com/opentibiabr/remeres-map-editor/).
 
