@@ -29,7 +29,7 @@ function forgottenKnowledgeLever.onUse(player, item, fromPosition, target, toPos
     if config.playerPositions[1].pos ~= player:getPosition() then
         return false
     end
-    
+
 	local spec = Spectators()
 	spec:setOnlyPlayer(false)
 	spec:setRemoveDestination(config.exit)
@@ -98,5 +98,5 @@ function forgottenKnowledgeLever.onUse(player, item, fromPosition, target, toPos
     end
 end
 
-forgottenKnowledgeLever:aid(24881)
+forgottenKnowledgeLever:position(Position(32759, 32867, 14))
 forgottenKnowledgeLever:register()

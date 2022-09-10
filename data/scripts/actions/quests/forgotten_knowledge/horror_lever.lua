@@ -29,7 +29,7 @@ function forgottenKnowledgeHorror.onUse(player, item, fromPosition, target, toPo
     if config.playerPositions[1].pos ~= player:getPosition() then
         return false
     end
-    
+
 	local spec = Spectators()
 	spec:setOnlyPlayer(false)
 	spec:setRemoveDestination(config.exit)
@@ -99,5 +99,5 @@ function forgottenKnowledgeHorror.onUse(player, item, fromPosition, target, toPo
     end
 end
 
-forgottenKnowledgeHorror:aid(24882)
+forgottenKnowledgeHorror:position(Position(32302, 31087, 14))
 forgottenKnowledgeHorror:register()
