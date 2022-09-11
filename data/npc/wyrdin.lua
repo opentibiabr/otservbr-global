@@ -133,11 +133,11 @@ local function creatureSayCallback(npc, creature, type, message)
         player:getStorageValue(TheNewFrontier.Mission05.Wyrdin) == 1 then
         if npcHandler:getTopic(playerId) == 2 then
             local chance = math.random(1, 3)
-            if change == 1 then
+            if chance == 1 then
                 npcHandler:say(
                     "Hm, you are right, we are at the forefront of knowledge and innovation. Our dwarven friends could learn much from one of our representatives.",
                     npc, creature)
-            elseif change == 2 then
+            elseif chance == 2 then
                 npcHandler:say(
                     "<sighs> Okay, sending some trader there won't hurt. I hope it will be worth the effort, though.",
                     npc, creature)

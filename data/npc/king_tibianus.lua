@@ -54,7 +54,6 @@ local function creatureSayCallback(npc, creature, type, message)
         return false
     end
 
-    local player = Player(creature)
     if MsgContains(message, "farmine") and player:getStorageValue(TheNewFrontier.Questline) == 14 then
         if player:getStorageValue(TheNewFrontier.Mission05.KingTibianus) == 1 then
             npcHandler:say(
