@@ -6075,7 +6075,7 @@ if not Quests then
 					endValue = 2,
 					states = {
 						[1] = "Try getting the support of the people mentioned. Talk to them about \"farmine\", then \z
-							choose the \"flaatter\", \"threaten\", \"impress\", \"bluff\", \"reason\" or \"plea\" and report \z
+							choose the \"flatter\", \"threaten\", \"impress\", \"bluff\", \"reason\" or \"plea\" and report \z
 							any progress to Ongulf.",
 						[2] = "You have gained the necessary support for Farmine."
 					}
@@ -6085,9 +6085,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission05.Humgolf,
 					missionId = 10414,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Talk to the worm tamer in Kazordoon."
+						[1] = "Talk to the worm tamer in Kazordoon.",
+						[2] = "Find an item that interests Humgolf to get another chance."
 					}
 				},
 				[7] = {
@@ -6095,9 +6096,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission05.Wyrdin,
 					missionId = 10415,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Talk to the magician Wyrdin in the Edron Academy."
+						[1] = "Talk to the magician Wyrdin in the Edron Academy.",
+						[2] = "Find an item that interests Wyrdin to get another chance."
 					}
 				},
 				[8] = {
@@ -6105,9 +6107,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission05.Angus,
 					missionId = 10416,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Talk to the representative of the Explorer Society in Port Hope."
+						[1] = "Talk to the representative of the Explorer Society in Port Hope.",
+						[2] = "Find an item that interests Angus to get another chance."
 					}
 				},
 				[9] = {
@@ -6115,9 +6118,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission05.Telas,
 					missionId = 10417,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Talk to the inventor Telas in Edron."
+						[1] = "Talk to the inventor Telas in Edron.",
+						[2] = "Find an item that interests Telas to get another chance."
 					}
 				},
 				[10] = {
@@ -6125,9 +6129,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission05.KingTibianus,
 					missionId = 10418,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Talk to king Tibianus in the thaian castle."
+						[1] = "Talk to King Tibianus in the Thaian Castle.",
+						[2] = "Find an item that interests King Tibianus to get another chance."
 					}
 				},
 				[11] = {
@@ -6135,9 +6140,10 @@ if not Quests then
 					storageId = Storage.Quest.U8_54.TheNewFrontier.Mission05.Leeland,
 					missionId = 10419,
 					startValue = 1,
-					endValue = 1,
+					endValue = 2,
 					states = {
-						[1] = "Talk to Leeland Slim, the representative of the Venorean Traders."
+						[1] = "Talk to Leeland Slim, the representative of the Venorean Traders.",
+						[2] = "Find an item that interests Leeland Slim to get another chance."
 					}
 				},
 				[12] = {

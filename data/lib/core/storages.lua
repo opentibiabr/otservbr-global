@@ -546,7 +546,8 @@ Storage = {
 		Chalice = 50505,
 		Tomes = 50506,
 		BabyDragon = 50507,
-		SpiderWeb = 50508
+		SpiderWeb = 50508,
+		LloydEvent = 50509
 	},
 	SweetyCyclops = {
 		-- Reserved storage from 50520 - 50529
@@ -2342,52 +2343,57 @@ Storage = {
 			TreasureHunt = {},
 		},
 		U8_54 = { -- update 8.54 - Reserved Storages 42551 - 42950
-				AnUneasyAlliance = {
+			AnUneasyAlliance = {
 				Questline = 42551,
 				QuestDoor = 42552}, -- 42551 - 42600
-				ChildrenOfTheRevolution = {}, -- 42601 - 42650
-				SeaOfLight = {}, -- 42651 - 42700
-				TheNewFrontier = { -- 42701 - 42750
-					Questline = 42701,
-					FarmineFirstTravel = 42702,
-					Mission01 = 42703,
-					Mission02 = {42704,
-						Beaver1 = 42705,
-						Beaver2 = 42706,
-						Beaver3 = 42707,
-						},
-					Mission03 = 42708,
-					Mission04 = 42709,
-					Mission05 = {42710,
-						KingTibianus = 42711,
-						Leeland = 42712,
-						Angus = 42713,
-						Wyrdin = 42714,
-						Telas = 42715,
-						Humgolf = 42716,
-						},
-					Mission06 = 42717,
-					Mission07 = {42718,
-						HiddenNote = 42719,
-						},
-					Mission08 = 42720,
-					Mission09 = {42721,
-						ArenaDoor = 42722,
-						RewardDoor = 42723,
-						},
-					Mission10 = {42724,
-						MagicCarpetDoor = 42725,
-						},
-					Reward = {
-						Potions = 42726,
-						GoldIngot = 42727,
-						PigBank = 42728
-					},
-					TomeofKnowledge = 42729,
-					ZaoPalaceDoors = 42730, -- 10th Tome: Zao Palace
-					SnakeHeadTeleport = 42731, -- 7th Tome: Snake Head Teleport
-					CorruptionHole = 42732 -- 8th Tome: Corruption Hole
+			ChildrenOfTheRevolution = {}, -- 42601 - 42650
+			SeaOfLight = {}, -- 42651 - 42700
+			TheNewFrontier = { -- 42701 - 42750
+				Questline = 42701,
+				FarmineFirstTravel = 42702,
+				Mission01 = 42703,
+				Mission02 = {42704,
+					Beaver1 = 42705,
+					Beaver2 = 42706,
+					Beaver3 = 42707,
 				},
+				Mission03 = 42708,
+				Mission04 = 42709,
+				Mission05 = {42710,
+					KingTibianus = 42711,
+					Leeland = 42712,
+					Angus = 42713,
+					Wyrdin = 42714,
+					Telas = 42715,
+					Humgolf = 42716,
+					LeelandKeyword = 42841,
+					AngusKeyword = 42842,
+					WyrdinKeyword = 42843,
+					TelasKeyword = 42844,
+					HumgolfKeyword = 42845,
+				},
+				Mission06 = 42717,
+				Mission07 = {42718,
+					HiddenNote = 42719,
+				},
+				Mission08 = 42720,
+				Mission09 = {42721,
+					ArenaDoor = 42722,
+					RewardDoor = 42723,
+				},
+				Mission10 = {42724,
+					MagicCarpetDoor = 42725,
+				},
+				Reward = {
+					Potions = 42726,
+					GoldIngot = 42727,
+					PigBank = 42728
+				},
+				TomeofKnowledge = 42729,
+				ZaoPalaceDoors = 42730, -- 10th Tome: Zao Palace
+				SnakeHeadTeleport = 42731, -- 7th Tome: Snake Head Teleport
+				CorruptionHole = 42732 -- 8th Tome: Corruption Hole
+			},
 			TomesOfKnowledge = {
 				OrcCamp = 42751,
 				TheNewFrontier = 42752,
