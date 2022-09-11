@@ -203,12 +203,12 @@ local function creatureSayCallback(npc, creature, type, message)
             player:setStorageValue(TheNewFrontier.Mission05.HumgolfKeyword, math.random(1, 2)) -- The New Frontier Quest "Mission 5-6"
             npcHandler:setTopic(playerId, 0)
         elseif player:getStorageValue(TheNewFrontier.Questline) == 14 then
-            if player:getStorageValue(TheNewFrontier.Mission05.KingTibianus) == 2 and
-                player:getStorageValue(TheNewFrontier.Mission05.Leeland) == 2 and
-                player:getStorageValue(TheNewFrontier.Mission05.Angus) == 2 and
-                player:getStorageValue(TheNewFrontier.Mission05.Wyrdin) == 2 and
-                player:getStorageValue(TheNewFrontier.Mission05.Telas) == 2 and
-                player:getStorageValue(TheNewFrontier.Mission05.Humgolf) == 2 then
+            if player:getStorageValue(TheNewFrontier.Mission05.KingTibianus) == 3 and
+                player:getStorageValue(TheNewFrontier.Mission05.Leeland) == 3 and
+                player:getStorageValue(TheNewFrontier.Mission05.Angus) == 3 and
+                player:getStorageValue(TheNewFrontier.Mission05.Wyrdin) == 3 and
+                player:getStorageValue(TheNewFrontier.Mission05.Telas) == 3 and
+                player:getStorageValue(TheNewFrontier.Mission05.Humgolf) == 3 then
                 npcHandler:say(
                     "You did an excellent job! With all this help Farmine will grow and prosper. While we put all available resources into building this base, I have another urgent {mission} for you.",
                     npc, creature)
