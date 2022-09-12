@@ -18,8 +18,8 @@ monster.Bestiary = {
 	class = "Reptile",
 	race = BESTY_RACE_AMPHIBIC,
 	toKill = 2500,
-	FirstUnlock = 25,
-	SecondUnlock = 250,
+	FirstUnlock = 100,
+	SecondUnlock = 1000,
 	CharmsPoints = 50,
 	Stars = 4,
 	Occurrence = 1,
@@ -56,7 +56,7 @@ monster.flags = {
 	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 4,
-	runHealth = 10,
+	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
 	canWalkOnEnergy = true,
@@ -94,7 +94,7 @@ monster.loot = {
 }
 
 monster.attacks = {
-    {name ="combat", interval = 2000, chance = 100, minDamage = -300, maxDamage = -600, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_PURPLEENERGY},
+    {name ="combat", interval = 2000, chance = 100, minDamage = -300, maxDamage = -600, shootEffect = CONST_ANI_EXPLOSION, effect = CONST_ME_PURPLEENERGY, target = true},
     {name ="nagadeath", interval = 6000, chance = 39, target = false, minDamage = -1000, maxDamage = -2200},
     {name ="nagadeathattack", interval = 3000, chance = 68, target = true, minDamage = -400, maxDamage = -600},
 }

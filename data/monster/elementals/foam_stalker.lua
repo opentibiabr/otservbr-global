@@ -9,7 +9,7 @@ monster.outfit = {
 
 monster.raceId = 2259
 monster.Bestiary = {
-	class = "elemental",
+	class = "Elemental",
 	race = BESTY_RACE_ELEMENTAL,
 	toKill = 2500,
 	FirstUnlock = 100,
