@@ -11,7 +11,7 @@ npcConfig.walkInterval = 2000
 npcConfig.walkRadius = 2
 
 npcConfig.outfit = {
-    lookType = 128,
+    lookType = 133,
     lookHead = 57,
     lookBody = 132,
     lookLegs = 114,
@@ -730,7 +730,8 @@ local function creatureSayCallback(npc, creature, type, message)
             end
             -- The New Frontier
         elseif npcHandler:getTopic(playerId) == 35 then
-            if player:setStorageValue(TheNewFrontier.Mission05.Angus) == 2 and player:removeItem(10011, 1) then
+            if player:getStorageValue(TheNewFrontier.Questline) == 14 and
+                player:getStorageValue(TheNewFrontier.Mission05.Angus) == 2 and player:removeItem(10011, 1) then
                 npcHandler:say(
                     "What a strange map. I wonder if any of our explorers recognises this coastal lines. However, you earned yourself another chance to convince me. Why do you think that Farmine would be interesting for us?",
                     npc, creature)

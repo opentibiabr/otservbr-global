@@ -82,6 +82,7 @@ local function creatureSayCallback(npc, creature, type, message)
                     npc, creature)
                 player:setStorageValue(TheNewFrontier.Mission05.Leeland, 3)
             else
+		npcHandler:say("Wrong Word.", npc, creature)
                 player:setStorageValue(TheNewFrontier.Mission05.LeelandKeyword, math.random(3, 4))
                 player:setStorageValue(TheNewFrontier.Mission05.Leeland, 2)
             end
@@ -96,8 +97,7 @@ local function creatureSayCallback(npc, creature, type, message)
                     "The idea of a promising market and new resources suits us quite well. I think it is reasonable to send some assistance.",
                     npc, creature)
                 player:setStorageValue(TheNewFrontier.Mission05.Leeland, 3)
-            elseif MsgContains(message, "flatter") and player:getStorageValue(TheNewFrontier.Mission05.LeelandKeyword) ==
-                4 then
+            elseif MsgContains(message, "flatter") and player:getStorageValue(TheNewFrontier.Mission05.LeelandKeyword) == 4 then
                 npcHandler:say(
                     "Oh yes, that project the whole dwarven community is so excited about. I guess I already know why you are here, but speak up.",
                     npc, creature)
