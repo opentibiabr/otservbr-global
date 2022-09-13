@@ -210,7 +210,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:say("Come back when you have slain {20 mountain trolls!}", npc, creature)
 			end
 		end
-	elseif MsgContains(message, "globin") then
+	elseif MsgContains(message, "goblins") then
 		if player:getStorageValue(Storage.Quest.U10_55.Dawnport.MorrisGoblin) < 1 then
 			npcHandler:say(
 				{
