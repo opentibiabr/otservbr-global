@@ -16,6 +16,7 @@ function leaveHouse.onSay(player, words, param)
 		return false
 	end
 
+	Hireling_removeNPCs()
 	house:setOwnerGuid(0)
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have successfully left your house.")
 	position:sendMagicEffect(CONST_ME_POFF)

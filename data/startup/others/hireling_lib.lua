@@ -125,6 +125,15 @@ local function spawnNPCs()
 	end
 end
 
+function Hireling_removeNPCs()
+    Spdlog.info("Removing Hirelings")
+    local hireling
+    for i=1,#HIRELINGS do
+        hireling = HIRELINGS[i]
+        checkHouseAccess(hireling)
+    end
+end
+
 local function addStorageCacheValue(player_id, storage, value)
 	if not HIRELING_CACHE_STORAGE[player_id] then
 		HIRELING_CACHE_STORAGE[player_id] = {}
