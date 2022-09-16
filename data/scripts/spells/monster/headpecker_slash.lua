@@ -16,7 +16,7 @@ function spell.onCastSpell(creature, var)
 end
 
 spell:name("headpeckerslash")
-spell:words("###494")
+spell:words("###492")
 spell:blockWalls(true)
 spell:needDirection(true)
 spell:needLearn(true)

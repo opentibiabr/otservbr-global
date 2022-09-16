@@ -18,7 +18,7 @@ function spell.onCastSpell(creature, var)
 end
 
 spell:name("singleenergychain")
-spell:words("###496")
+spell:words("###493")
 spell:isAggressive(true)
 spell:needTarget(true)
 spell:needLearn(true)
