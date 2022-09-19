@@ -36,6 +36,7 @@ function forgottenKnowledgeDragonking.onUse(player, item, fromPosition, target, 
 	spec:setOnlyPlayer(false)
 	spec:setRemoveDestination(config.exit)
 	spec:setCheckPosition(config.specPos)
+    spec:setMultiFloor(true)
 	spec:check()
 
     if spec:getPlayers() > 0 then
