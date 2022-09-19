@@ -137,10 +137,10 @@ npcHandler:setMessage(MESSAGE_SENDTRADE, 'At your service, just browse through m
 npcHandler:setCallback(CALLBACK_ON_TRADE_REQUEST, onTradeRequest)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
-	{ itemName = "ankh", clientId = 3214, sell = 100 },
+	{ itemName = "ankh", clientId = 3077, sell = 100 },
 	{ itemName = "dragon necklace", clientId = 3085, buy = 1000, sell = 100, count = 200 },
 	{ itemName = "dwarven ring", clientId = 3097, buy = 2000, sell = 100 },
 	{ itemName = "energy ring", clientId = 3051, buy = 2000, sell = 100 },
@@ -164,12 +164,12 @@ npcConfig.shop = {
 	{ itemName = "underworld rod", clientId = 8082, sell = 4400 }
 }
 -- On buy npc shop message
-npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
-	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, ignore, inBackpacks, totalCost)
+	npc:sellItem(player, itemId, amount, subType, 0, ignore, inBackpacks)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Bought %ix %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, itemId, subtype, amount, ignore, name, totalCost)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Sold %ix %s for %i gold.", amount, name, totalCost))
 end
 -- On check npc shop message (look item)

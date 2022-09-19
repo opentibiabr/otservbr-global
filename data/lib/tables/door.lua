@@ -68,7 +68,9 @@ KeyDoorTable = {
 	{ lockedDoor = 28364, closedDoor = 28365, openDoor = 28368 },
 	{ lockedDoor = 28366, closedDoor = 28367, openDoor = 28369 },
 	{ lockedDoor = 30772, closedDoor = 30773, openDoor = 30776 },
-	{ lockedDoor = 30774, closedDoor = 30775, openDoor = 30777 }
+	{ lockedDoor = 30774, closedDoor = 30775, openDoor = 30777 },
+	{ lockedDoor = 37982, closedDoor = 37981, openDoor = 37985 },
+	{ lockedDoor = 37984, closedDoor = 37983, openDoor = 37986 },
 }
 
 -- These are the common doors, the ones that just open and close without any special requirements.
@@ -216,6 +218,8 @@ QuestDoorTable = {
 	{ closedDoor = 30047, openDoor = 30048 },
 	{ closedDoor = 31568, openDoor = 31569 },
 	{ closedDoor = 31570, openDoor = 31571 },
+	{ closedDoor = 39351, openDoor = 39353 },
+	{ closedDoor = 39352, openDoor = 39354 },
 }
 
 -- Level doors.

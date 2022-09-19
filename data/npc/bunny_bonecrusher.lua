@@ -67,7 +67,7 @@ keywordHandler:addKeyword({'green ferrets'}, StdModule.say, {npcHandler = npcHan
 keywordHandler:addKeyword({'join'}, StdModule.say, {npcHandler = npcHandler, text = "Join what?"})
 keywordHandler:addKeyword({'join army'}, StdModule.say, {npcHandler = npcHandler, text = "Sorry, we don't recruit foreigners. Maybe you can join if you prove yourself in a mission for the queen."})
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

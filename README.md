@@ -1,9 +1,9 @@
 # OpenTibiaBR - Global Server
 ## The source code to run this server can be found in another repository, which is the MMORPG engine. Access the links below to see the most current release:
 ## [![Canary Engine](https://raw.githubusercontent.com/opentibiabr/canary/master/cmake/canary.ico)](https://github.com/opentibiabr/canary) [Canary Repository](https://github.com/opentibiabr/canary)
-## [Latest Release - Stable-v1.4.0](https://github.com/opentibiabr/canary/releases/tag/stable-v1.4.0)
+## [Latest Release - v1.5.0](https://github.com/opentibiabr/canary/releases/tag/v1.5.0)
 
-[![Discord Channel](https://img.shields.io/discord/528117503952551936.svg?style=flat-square&logo=discord)](https://discord.gg/3NxYnyV)
+[![Discord Channel](https://img.shields.io/discord/528117503952551936.svg?style=flat-square&logo=discord)](https://discord.gg/X3mSnMH8jg)
 [![GitHub issues](https://img.shields.io/github/issues/opentibiabr/otservbr-global)](https://github.com/opentibiabr/otservbr-global/issues)
 [![GitHub pull request](https://img.shields.io/github/issues-pr/opentibiabr/otservbr-global)](https://github.com/opentibiabr/otservbr-global/pulls)
 [![Contributors](https://img.shields.io/github/contributors/opentibiabr/otservbr-global.svg?style=flat-square)](https://github.com/opentibiabr/otservbr-global/graphs/contributors)
@@ -16,9 +16,6 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=opentibiabr_canary&metric=alert_status)](https://sonarcloud.io/dashboard?id=opentibiabr_canary)
 
 ## Builds
-
-[![Build status](https://ci.appveyor.com/api/projects/status/github/opentibiabr/canary?branch=master&passingText=master%20-%20OK&svg=true)](https://ci.appveyor.com/project/opentibiabr/canary/build/artifacts "Download nightly builds for Windows")
-
 [![Build - Ubuntu](https://github.com/opentibiabr/canary/actions/workflows/build-ubuntu.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-ubuntu.yml)
 [![Build - Windows](https://github.com/opentibiabr/canary/actions/workflows/build-windows.yml/badge.svg)](https://github.com/opentibiabr/canary/actions/workflows/build-windows.yml)
 
@@ -35,15 +32,16 @@ OpenTibiaBR - Global Server is a free and open-source MMORPG server emulator wri
 
 In this repository it is just the global datapack, and the source code is in the [canary repository](https://github.com/opentibiabr/canary). Our idea is to facilitate the development of the source code, so that it does not need to be directly linked to the global datapack, but that it is compatible.
 
-To connect to the server and to take a stable experience, you can use our [own client](https://forums.otserv.com.br/index.php?/forums/topic/167933-otservbr-global-cliente-tibia-12/) and if you want to edit something, check our [customized tools](https://github.com/opentibiabr/tools).
+To connect to the server and to take a stable experience, you can use [mehah's otclient](https://github.com/mehah/otclient) or [tibia client](https://github.com/dudantas/tibia-client/releases/latest) and if you want to edit something, check our [customized tools](https://majestyotbr.gitbook.io/opentibiabr/others/downloads#tools).
+
+If you want edit the map, use the [own remere's map editor](https://github.com/opentibiabr/remeres-map-editor/).
 
 You are subject to our code of conduct, read at [this link](https://github.com/opentibiabr/otservbr-global/blob/develop/CODE_OF_CONDUCT.md).
 
 ### Getting **Started**
 
-* **WARNING: YOU NEED TO UNZIP THE MAP BEFORE STARTING THE SERVER.**
-* [Compiling on Windows](https://forums.otserv.com.br/index.php?/forums/topic/170157-windowsvc2022-compilando-sources-canary/)
-* Wiki: Compiling ([Ubuntu/Debian](https://github.com/opentibiabr/canary/wiki/Compiling-on-Debian-or-Ubuntu), [Windows](https://github.com/opentibiabr/canary/wiki/Compiling-on-Windows))
+* [Gitbook](https://majestyotbr.gitbook.io/opentibiabr/projects/otservbr-global).
+* [Wiki](https://github.com/opentibiabr/canary/wiki).
 
 ### Issues
 #### NOTE: If your issue is related to source code, please open it in the [canary repository](https://github.com/opentibiabr/canary)

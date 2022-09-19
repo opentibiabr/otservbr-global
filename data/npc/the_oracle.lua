@@ -144,14 +144,13 @@ local function creatureSayCallback(npc, creature, type, message)
 	return true
 end
 
-local function onAddFocus(creature)
-	local playerId = creature:getId()
+local function onAddFocus(npc, player)
+	local playerId = player:getId()
 	town[playerId] = 0
 	vocation[playerId] = 0
 end
 
-local function onReleaseFocus(creature)
-	local player = Player(creature)
+local function onReleaseFocus(npc, player)
 	local playerId = player:getId()
 	town[playerId] = nil
 	vocation[playerId] = nil
@@ -165,7 +164,7 @@ npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setMessage(MESSAGE_FAREWELL, "COME BACK WHEN YOU ARE PREPARED TO FACE YOUR DESTINY!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "COME BACK WHEN YOU ARE PREPARED TO FACE YOUR DESTINY!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -12,7 +12,7 @@ function bigfootMushroom.onUse(player, item, fromPosition, target, toPosition, i
 		return true
 	end
 
-	local spore = Game.createItem(math.random(18221, 18224), 1, toPosition)
+	local spore = Game.createItem(math.random(15705, 15708), 1, toPosition)
 	if spore then
 		spore:decay()
 		item:setActionId(100)

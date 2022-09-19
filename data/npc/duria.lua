@@ -59,7 +59,7 @@ npcHandler:setMessage(MESSAGE_GREET, 'Hiho, fellow knight |PLAYERNAME|!')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Goodbye.')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Be carefull out there, jawoll.')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

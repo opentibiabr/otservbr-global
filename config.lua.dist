@@ -50,7 +50,7 @@ packetCompressionLevel = 6
 -- Depot Limit
 freeDepotLimit = 2000
 premiumDepotLimit = 10000
-depotBoxes = 18
+depotBoxes = 20
 
 -- GameStore
 gamestoreByModules = true
@@ -163,7 +163,7 @@ pushWhenAttacking = false
 -- NOTE: If a map with the name already exists in the world folder, the map will not be downloaded even if the toggleDownloadMap is true
 toggleDownloadMap = true
 mapName = "otservbr"
-mapDownloadUrl = "https://github.com/opentibiabr/otservbr-global/releases/download/stable-v1.4.0/otservbr.otbm"
+mapDownloadUrl = "https://github.com/opentibiabr/otservbr-global/releases/download/v1.5.0/otservbr.otbm"
 mapAuthor = "OpenTibiaBR"
 
 -- Party List limitations

@@ -144,7 +144,7 @@ local function creatureSayCallback(npc, creature, type, message)
 	end
 
 	if player:getPosition() ~= config.playerPosition then
-		npcHandler:unGreet(creature)
+		npcHandler:unGreet(npc, creature)
 		return false
 	end
 	if table.contains({"low", "high", "h", "l", "1", "2", "3", "4", "5", "6", "odd", "impar", "par", "even"}, message) then
@@ -265,7 +265,7 @@ npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:setCallback(CALLBACK_ON_MOVE, creatureMoveCallback)
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -52,9 +52,9 @@ function ferumbrasAscendantFlowerPuzzle.onUse(player, item, fromPosition, target
 				end
 				addEvent(revertItem, 30 * 1000, gate.position, gate.itemid, gate.transform)
 			end
-			local wall = Tile(Position(33477, 32698, 14)):getItemById(6116)
+			local wall = Tile(Position(33477, 32698, 14)):getItemById(5068)
 			if not wall then
-				Game.createItem(6116, 1, Position(33477, 32698, 14))
+				Game.createItem(5068, 1, Position(33477, 32698, 14))
 			end
 		end
 		item:transform(9111)

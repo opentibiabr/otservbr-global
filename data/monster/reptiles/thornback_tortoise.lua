@@ -81,7 +81,7 @@ monster.loot = {
 	{name = "white mushroom", chance = 1200},
 	{name = "brown mushroom", chance = 700},
 	{name = "tortoise egg", chance = 790, maxCount = 3},
-	{name = "turtle shell", chance = 800},
+	{id = 5899, chance = 800}, -- turtle shell
 	{name = "health potion", chance = 1600},
 	{name = "thorn", chance = 15980}
 }

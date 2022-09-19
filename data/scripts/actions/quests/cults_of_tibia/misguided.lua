@@ -20,7 +20,7 @@ local function cleanMMap(frompos, topos)
 end
 
 local function changeMap(mapName)
-	local map = (type(Game.getStorageValue("cultsMap")) == "string" and Game.getStorageValue("cultsMap") or 'gold')
+	local map = (type(Game.getStorageValue("cultsMisguidedMap")) == "string" and Game.getStorageValue("cultsMisguidedMap") or 'illusion')
 	if map:lower() == mapName:lower() then
 		return true
 	end
@@ -28,13 +28,13 @@ local function changeMap(mapName)
 	local topos = Position( 32573, 32477, 10)
 	cleanMMap(frompos, topos)
 	cleanMMap(Position(32512, 32364, 10), Position(32526, 32474, 10))
-	if mapName:lower() == "gold" then
-		Game.setStorageValue("cultsMap", "gold")
-		Game.loadMap('data/world/worldchanges/gold.otbm')
+	if mapName:lower() == "illusion" then
+		Game.setStorageValue("cultsMisguidedMap", "illusion")
+		Game.loadMap('data/world/quest/cults_of_tibia/misguided/illusion.otbm')
 	else
-		Game.setStorageValue("cultsMap", "leaves")
-		Game.loadMap('data/world/worldchanges/leaves.otbm')
-		addEvent(changeMap, 15000, "gold")
+		Game.setStorageValue("cultsMisguidedMap", "reality")
+		Game.loadMap('data/world/quest/cults_of_tibia/misguided/reality.otbm')
+		addEvent(changeMap, 15000, "illusion")
 	end
 end
 
@@ -44,7 +44,7 @@ function cultsOfTibiaMisguided.onUse(player, item, position, target, targetPosit
 	if not monster then
 		return false
 	end
-	local map = (type(Game.getStorageValue("cultsMap")) == "string" and Game.getStorageValue("cultsMap") or 'gold')
+	local map = (type(Game.getStorageValue("cultsMap")) == "string" and Game.getStorageValue("cultsMap") or 'illusion')
 	if monster:getName():lower() == "misguided bully" or monster:getName():lower() == "misguided thief" then
 		player:setStorageValue(Storage.CultsOfTibia.Misguided.Monsters, 0)
 		item:remove(1)
@@ -57,8 +57,8 @@ function cultsOfTibiaMisguided.onUse(player, item, position, target, targetPosit
 		end
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You paralyse the bully and the amulet reveals the true face of the creature behind the possession of this misguided creature.")
 		local it = player:addItem(25296, 1)
-		if map == "gold" then
-			changeMap("leaves")
+		if map == "illusion" then
+			changeMap("reality")
 		end
 		it:decay()
 	end

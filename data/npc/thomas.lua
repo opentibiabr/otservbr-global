@@ -50,7 +50,7 @@ npcType.onCloseChannel = function(npc, creature)
 	npcHandler:onCloseChannel(npc, creature)
 end
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "black book", clientId = 2838, buy = 15 },
@@ -70,12 +70,12 @@ npcConfig.shop = {
 	{ itemName = "valentines card", clientId = 6538, buy = 30 }
 }
 -- On buy npc shop message
-npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
-	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, ignore, inBackpacks, totalCost)
+	npc:sellItem(player, itemId, amount, subType, 0, ignore, inBackpacks)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Bought %ix %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, itemId, subtype, amount, ignore, name, totalCost)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Sold %ix %s for %i gold.", amount, name, totalCost))
 end
 -- On check npc shop message (look item)

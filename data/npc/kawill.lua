@@ -84,7 +84,7 @@ npcHandler:setMessage(MESSAGE_GREET, 'Welcome |PLAYERNAME|! May earth protect yo
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Earth under your feet, |PLAYERNAME|!')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Earth under your feet, pilgrim. What brings you here?')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

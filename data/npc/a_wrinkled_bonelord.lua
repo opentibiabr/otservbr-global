@@ -76,7 +76,7 @@ keywordHandler:addKeyword({'language'}, StdModule.say, {npcHandler = npcHandler,
 npcHandler:setMessage(MESSAGE_GREET, "What is this? An optically challenged entity called |PLAYERNAME|. How fascinating!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Wait right there. I will eat you after writing down what I found out.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Wait right there. I will eat you after writing down what I found out.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

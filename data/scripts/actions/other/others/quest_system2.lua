@@ -368,7 +368,7 @@ name = "Tunnelling Guide"}
 		},
 		storage = Storage.HiddenCityOfBeregar.TunnellingGuide
 	},
-	[14041] = {
+	[20003] = {
 		items = {
 			{itemId = 2822, text = [[
 The map shows the original floor plan of this mine. You recognise your position and that the shaft to the south actually would reach much further.
@@ -376,6 +376,65 @@ The map shows the original floor plan of this mine. You recognise your position 
 (In the lower right corner someone scribbled a note how to use the hoist on the first mine floor.)]]}
 		},
 		storage = Storage.QuestChests.FormorgarMinesHoistSkeleton
+	},
+	[20004] = {
+		items = {
+			{itemId = 3266}
+		},
+		storage = Storage.BattleAxeQuest
+	},
+	[14041] = {
+		items = {
+			{itemId = 28461, text = [[
+This page seems to be part of a book about ancient rituals, mystic incantations and far away places. Besides a very prominent symbol, embedded in the text, a spell can be deciphered from the strange script:
+
+~ As daylight fades, mix chalk or bone meal with your own blood and water ~
+~ Draw with it a circle in the middle of the room ~
+~ Stand in this sphere when drawing the symbol "Of Night And Day Intersecting Ostensum Est"
+~ Utter all of the following words loudly with clear voice: CERTAGIA SALABANTHR DANNHE GENT'HO" ~
+~ Looking upward, repeat the incatation and you shall teleport the periphery of your body ~]],
+name = "Falcon Bastion Access"}
+		},
+		storage = Storage.TheSecretLibrary.FalconBastionAccess
+	},
+	[20002] = {
+		items = {
+			{itemId = 21413, text = [[
+"Still it is hard to believe that I finally
+found the mystical rock formations near
+Darashia, known as Lion's Rock.
+According to ancient records there is a
+temple for an unknown, probably long
+forgotten deity, built in the tunnels deep
+below the rock centuries ago. This holy
+site was once guarded by mystical lions
+and they may still be down there. But
+yet I haven't succeeded in entering the
+inner sanctum. The entrance to the
+lower temple areas is protected by an
+old and powerful enchantment. I
+studied the inscriptions on the temple
+walls and thus learned that the key to
+the inner sanctum is the passing of
+three tests. The first test is the Lion's
+Strength. In order to honour the site's
+mystical cats of prey one has to hunt
+and slay a cobra. The cobra's tongue
+must be laid down at a stone statue as
+a sacrifice. The second test is the
+Lion's Beauty. One has to burn the
+petals of a lion's mane flower on a coal
+basin. In the sand at the rock's foot I
+saw some dried lion's mane petals.
+Maybe these flowers grow somewhere
+upwards. The third test is called the
+Lion's Tears. It seems one has to purify
+an ornamented stone pedestal with ..."
+At this point the records end because
+the parchment is destroyed. It seems
+that is was torn by a big paw ...]]}
+		},
+		storage = Storage.LionsRock.OuterSanctum.Skeleton
 	}
 	-- 65203 reservado
 }

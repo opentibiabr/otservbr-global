@@ -62,7 +62,7 @@ npcHandler:setMessage(MESSAGE_FAREWELL, "LONG LIVE THE KING!")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "LONG LIVE THE KING!")
 npcHandler:setMessage(MESSAGE_SENDTRADE, "Do you bring freshly killed rats for a bounty of 1 gold each? By the way, I also buy orc teeth and other stuff you ripped from their bloody corp... I mean... well, you know what I mean.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "bricklayers kit", clientId = 7785, buy = 100 },
@@ -76,12 +76,12 @@ npcConfig.shop = {
 	{ itemName = "skull belt", clientId = 11480, sell = 80 }
 }
 -- On buy npc shop message
-npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
-	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, ignore, inBackpacks, totalCost)
+	npc:sellItem(player, itemId, amount, subType, 0, ignore, inBackpacks)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Bought %ix %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, itemId, subtype, amount, ignore, name, totalCost)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Sold %ix %s for %i gold.", amount, name, totalCost))
 end
 -- On check npc shop message (look item)

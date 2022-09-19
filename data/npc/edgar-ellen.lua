@@ -83,7 +83,7 @@ keywordHandler:addKeyword({'job'}, StdModule.say, {npcHandler = npcHandler, text
 
 npcHandler:setMessage(MESSAGE_GREET, "This world is nothing without poetry, don't you think? It gives us hope, it envokes love. It's inciting and invigorating all the same.")
 npcHandler:setMessage(MESSAGE_FAREWELL, " Goodbye and farewell, my friend.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

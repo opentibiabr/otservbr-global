@@ -20,6 +20,10 @@ monster.corpse = 28733
 monster.speed = 210
 monster.manaCost = 0
 
+monster.events = {
+	"GrandChaplainGaunderDeath"
+}
+
 monster.changeTarget = {
 	interval = 3000,
 	chance = 10

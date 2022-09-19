@@ -85,14 +85,14 @@ end
 )
 
 addTravelKeyword('kazordoon', {'Do you want to go to Kazordoon to try the beer there? |TRAVELCOST|?', 'Set the sails!', 'Then not.'}, 160, 'postman', Position(32660, 31957, 15))
-
-keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = 'Where do you want me to take you? To {Kazordoon} or to {Farmine}?'})
+addTravelKeyword('gnomprona', {'Would you like to travel to Gnomprona for |TRAVELCOST|?', 'Full steam ahead!', 'Then not.'}, 200, 'postman', Position(33516, 32856, 14))
+keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = 'Where do you want me to take you? To {Kazordoon}, {Farmine} or {Gnomprona}?'})
 
 npcHandler:setMessage(MESSAGE_GREET, 'Welcome, |PLAYERNAME|! Lovely steamboat, ain\'t it? I can even offer you a {passage} if you like.')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Until next time.')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Until next time.')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

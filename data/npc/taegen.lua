@@ -85,12 +85,12 @@ npcConfig.shop = {
 	{ itemName = "vortex bolt", clientId = 14252, buy = 6 }
 }
 -- On buy npc shop message
-npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
-	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, ignore, inBackpacks, totalCost)
+	npc:sellItem(player, itemId, amount, subType, 0, ignore, inBackpacks)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Bought %ix %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, itemId, subtype, amount, ignore, name, totalCost)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Sold %ix %s for %i gold.", amount, name, totalCost))
 end
 -- On check npc shop message (look item)
@@ -211,7 +211,7 @@ npcHandler:setMessage(MESSAGE_WALKAWAY, "May enlightenment be your path, |PLAYER
 npcHandler:setMessage(MESSAGE_SENDTRADE, " Im carving bolts and arrows and i also craft bows anda spears.If you'd like to buy some ammunition, take a look.")
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

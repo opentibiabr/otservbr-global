@@ -135,7 +135,7 @@ keywordHandler:addKeyword({'plundering'}, StdModule.say, {npcHandler = npcHandle
 
 npcHandler:setMessage(MESSAGE_GREET, "GET ME OUT OF HERE! NOW!")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

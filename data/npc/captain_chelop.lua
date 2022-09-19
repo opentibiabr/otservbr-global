@@ -75,7 +75,7 @@ keywordHandler:addKeyword({'roshamuul'}, StdModule.say, {npcHandler = npcHandler
 npcHandler:setMessage(MESSAGE_GREET, "Welcome on board, recruit |PLAYERNAME|. Where can I {sail} you today?")
 npcHandler:setMessage(MESSAGE_FAREWELL, "On behalf of the inquisition, I bid you farewell.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye then.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

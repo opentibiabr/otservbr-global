@@ -20,6 +20,10 @@ monster.corpse = 19117
 monster.speed = 350
 monster.manaCost = 0
 
+monster.events = {
+	"DazedLeafGolemDeath"
+}
+
 monster.changeTarget = {
 	interval = 0,
 	chance = 0

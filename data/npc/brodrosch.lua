@@ -128,14 +128,15 @@ function(player)
 end
 )
 
-keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you want me take you to {Cormaya} or {Farmine}?'})
+addTravelKeyword('gnomprona', {'Would you like to travel to Gnomprona for |TRAVELCOST|?', 'Full steam ahead!', 'Then not.'}, 200, 'postman', Position(33516, 32856, 14))
+keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you want me take you to {Cormaya}, {Farmine} or to {Gnomprona}?'})
 
 npcHandler:setMessage(MESSAGE_GREET, 'Welcome, |PLAYERNAME|! May earth protect you on the rocky grounds. If you need a {passage}, I can help you.')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Good bye.')
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Good bye then.')
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

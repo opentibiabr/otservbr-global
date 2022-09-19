@@ -64,7 +64,7 @@ keywordHandler:addKeyword({'bruno'}, StdModule.say, {npcHandler = npcHandler, te
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye and don't forget me!")
 npcHandler:setMessage(MESSAGE_GREET, "Ahoi, young man |PLAYERNAME|. Looking for work on my ship?")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

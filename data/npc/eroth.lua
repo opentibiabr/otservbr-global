@@ -64,7 +64,7 @@ npcHandler:setMessage(MESSAGE_GREET, "I greet thee, outsider.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Asha Thrazi. Go, where you have to go.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Asha Thrazi.")
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

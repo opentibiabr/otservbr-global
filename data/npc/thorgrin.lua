@@ -60,13 +60,14 @@ end
 
 addTravelKeyword('kazordoon', 210, Position(32659, 31957, 15))
 addTravelKeyword('cormaya', 110, Position(33310, 31988, 15))
+addTravelKeyword('gnomprona', {'Would you like to travel to Gnomprona for |TRAVELCOST|?', 'Full steam ahead!', 'Then not.'}, 200, 'postman', Position(33516, 32856, 14))
 
-keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = "Do you want me take you to {Cormaya} or {Kazordoon}?"})
+keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = "Do you want me take you to {Cormaya}, {Kazordoon} or {Gnomprona}?"})
 
 npcHandler:setMessage(MESSAGE_GREET, "Welcome, |PLAYERNAME|! May earth protect you on the rocky grounds. If you need a {passage} back, I can help you.")
 npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye.")
 npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye then.")
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

@@ -101,7 +101,7 @@ npcHandler:setMessage(MESSAGE_GREET, {
 "Alzough, for many ziz only provez what a huge zreat you blank-zkinz ztill poze. What do you {want}?"})
 npcHandler:setMessage(MESSAGE_FAREWELL, "Juzt leave me alone.")
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

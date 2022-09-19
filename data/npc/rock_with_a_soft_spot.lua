@@ -122,7 +122,7 @@ npcHandler:setMessage(MESSAGE_GREET, 'Welcome, this is the {Gray Beach temple}, 
 npcHandler:setMessage(MESSAGE_WALKAWAY, 'Only the best for you.')
 npcHandler:setMessage(MESSAGE_FAREWELL, 'Goodbye then, |PLAYERNAME|!')
 
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

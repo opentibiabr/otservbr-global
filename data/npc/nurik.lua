@@ -106,7 +106,7 @@ end
 npcHandler:setMessage(MESSAGE_GREET, 'It\'s .. It\'s YOU! At last!! So what\'s this special proposal you would like to make, my friend?')
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 -- npcType registering the npcConfig table
 npcType:register(npcConfig)

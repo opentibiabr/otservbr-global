@@ -189,8 +189,10 @@ local function creatureSayCallback(npc, creature, type, message)
 					npcHandler:say('A real tortoise egg ... I guess you are more accustomed to rescue some \z
 						noblewoman in distress but you did something goodtoday.', npc, creature)
 					player:setStorageValue(Storage.TheShatteredIsles.TortoiseEggNargorDoor, 2)
-					player:addAchievement('Animal Activist')
 					player:setStorageValue(Storage.TheShatteredIsles.ReputationInSabrehaven, 16)
+					if player:getStorageValue(Storage.TheIceIslands.Questline) >= 9 then
+						player:addAchievement('Animal Activist')
+					end
 					npcHandler:setTopic(playerId, 0)
 				else
 					npcHandler:say("You don't have it...", npc, creature)
@@ -208,18 +210,18 @@ local function creatureSayCallback(npc, creature, type, message)
 end
 
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
-npcHandler:addModule(FocusModule:new())
+npcHandler:addModule(FocusModule:new(), npcConfig.name, true, true, true)
 
 npcConfig.shop = {
 	{ itemName = "pirate tapestry", clientId = 5615, buy = 40 }
 }
 -- On buy npc shop message
-npcType.onBuyItem = function(npc, player, itemId, subType, amount, inBackpacks, name, totalCost)
-	npc:sellItem(player, itemId, amount, subType, true, inBackpacks, 2854)
+npcType.onBuyItem = function(npc, player, itemId, subType, amount, ignore, inBackpacks, totalCost)
+	npc:sellItem(player, itemId, amount, subType, 0, ignore, inBackpacks)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Bought %ix %s for %i %s.", amount, name, totalCost, ItemType(npc:getCurrency()):getPluralName():lower()))
 end
 -- On sell npc shop message
-npcType.onSellItem = function(npc, player, clientId, subtype, amount, name, totalCost)
+npcType.onSellItem = function(npc, player, itemId, subtype, amount, ignore, name, totalCost)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format("Sold %ix %s for %i gold.", amount, name, totalCost))
 end
 -- On check npc shop message (look item)
