@@ -29,9 +29,6 @@ local config = {
 		{pos = Position(31986, 32823, 15), monster = 'the distorted astral source'},
 		{pos = Position(31989, 32823, 15), monster = 'an astral glyph'}
     },
-	blacklist = {
-		monster = 'animated sword'
-	},
     specPos = {
         from = Position(31968, 32821, 14),
         to = Position(32004, 32865, 15)
@@ -51,7 +48,6 @@ function forgottenKnowledgeLastLore.onUse(player, item, fromPosition, target, to
 	spec:setRemoveDestination(config.exit)
 	spec:setCheckPosition(config.specPos)
 	spec:setMultiFloor(true)
-	spec:setBlacklistPos(blacklist)
 	spec:check()
 
 
