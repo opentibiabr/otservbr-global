@@ -301,7 +301,6 @@ local questTable = {
 	{storage = Storage.ForgottenKnowledge.AccessIce, storageValue = 1},
 	{storage = Storage.ForgottenKnowledge.AccessGolden, storageValue = 1},
 	{storage = Storage.Quest.U12_00.TheDreamCourts.AccessDoors, storageValue = 1},
-	{storage = Storage.Quest.U12_20.GraveDanger.AccessDoors, storageValue = 1},
 	{storage = Storage.Quest.U12_60.APiratesTail.TentuglyDoor, storageValue = 1},
 	{storage = Storage.Quest.U12_70.AdventuresOfGalthen.AccessDoor, storageValue = 1},
 	{storage = Storage.Quest.U10_80.Grimvale.AncientFeudDoors, storageValue = 1},

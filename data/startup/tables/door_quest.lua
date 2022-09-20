@@ -809,7 +809,7 @@ QuestDoorAction = {
 		itemId = false,
 		itemPos = {
 			{x = 33366, y = 31343, z = 7},
-			{x = 33363, y = 31346, z = 7}
+			{x = 33363, y = 31346, z = 7},
 			{x = 32191, y = 31823, z = 8}
 		}
 	},

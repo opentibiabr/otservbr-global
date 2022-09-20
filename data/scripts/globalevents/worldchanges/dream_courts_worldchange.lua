@@ -13,7 +13,7 @@ local DreamCourts = GlobalEvent("DreamCourts")
 function DreamCourts.onStartup()
 	if spawnByDay then
 		Spdlog.info(string.format("[WorldChanges] Dream Courts loaded: " .. config[os.date("%A")] ..".otbm"))
-		Game.loadMap('data/world/worldchanges/dream_courts_bosses/' .. config[os.date("%A")] ..'.otbm')
+		Game.loadMap('data/world/world_changes/dream_courts_bosses/' .. config[os.date("%A")] ..'.otbm')
 	end
 	return true
 end

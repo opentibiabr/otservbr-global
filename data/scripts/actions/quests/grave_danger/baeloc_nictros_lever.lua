@@ -11,7 +11,8 @@ local config = {
 		{pos = Position(33427, 31413, 13), teleport = Position(33423, 31448, 13), effect = CONST_ME_TELEPORT},
 		{pos = Position(33428, 31413, 13), teleport = Position(33423, 31448, 13), effect = CONST_ME_TELEPORT}
 	},
-	bossPosition = Position(33424, 31438, 13),
+	boss1Position = Position(33427, 31428, 13),
+	boss2Position = Position(33422, 31428, 13),
 	specPos = {
 		from = Position(33414, 31430, 13),
 		to = Position(33433, 31449, 13)
@@ -62,8 +63,8 @@ function baelocNictrosLever.onUse(player, item, fromPosition, target, toPosition
 	lever:checkPositions()
 	if lever:checkConditions() then
 		spec:removeMonsters()
-		local monster = Game.createMonster(config.bossName, config.bossPosition, true, true)
-		local monster2 = Game.createMonster(config.bossName2, config.bossPosition, true, true)
+		local monster = Game.createMonster(config.bossName, config.boss1Position, true, true):registerEvent("SirNictrosThink")
+		local monster2 = Game.createMonster(config.bossName2, config.boss2Position, true, true):registerEvent("SirBaelocThink")
 		if not monster and not monster2 then
 			return true
 		end
