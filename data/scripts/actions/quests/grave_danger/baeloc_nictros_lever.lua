@@ -18,7 +18,7 @@ local config = {
 		to = Position(33433, 31449, 13)
 	},
 	exit = Position(33290, 32474, 9),
-	storage = Storage.Quest.U12_20.GraveDanger.BaelocNictrosTimer
+	storage = Storage.Quest.U12_20.GraveDanger.Bosses.BaelocNictrosTimer
 }
 
 local baelocNictrosLever = Action()

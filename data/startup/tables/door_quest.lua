@@ -813,7 +813,7 @@ QuestDoorAction = {
 			{x = 32191, y = 31823, z = 8}
 		}
 	},
-	[Storage.Quest.U12_20.GraveDanger.KingZelosDoor] = {
+	[Storage.Quest.U12_20.GraveDanger.Bosses.KingZelosDoor] = {
 		itemId = false,
 		itemPos = {{x = 32173, y = 31922, z = 8}}
 	},

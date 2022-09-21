@@ -16,7 +16,7 @@ local config = {
 		to = Position(33497, 31446, 13)
 	},
 	exit = Position(33261, 31986, 8),
-	storage = Storage.Quest.U12_20.GraveDanger.EarlOsamTimer
+	storage = Storage.Quest.U12_20.GraveDanger.Bosses.EarlOsamTimer
 }
 
 local earlOsamLever = Action()
