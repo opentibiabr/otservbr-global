@@ -47457,6 +47457,14 @@
 	<item id="32974" article="a" name="carved table">
 		<attribute key="wrapableto" value="23398"/>
 	</item>
+	<item id="32979" name="fog portal">
+		<attribute key="type" value="teleport"/>
+		<attribute key="effect" value="teleport"/>
+	</item>
+	<item fromid="33004" toid="33007" name="fog portal">
+		<attribute key="type" value="teleport"/>
+		<attribute key="effect" value="teleport"/>
+	</item>
 	<item fromid="33026" toid="33027" name="heart lamp">
 		<attribute key="wrapableto" value="23398"/>
 	</item>
