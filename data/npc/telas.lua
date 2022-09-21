@@ -54,11 +54,11 @@ local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
-	
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	
+
 	if MsgContains(message, "farmine") and player:getStorageValue(TheNewFrontier.Questline) == 14 then
 		if player:getStorageValue(TheNewFrontier.Mission05.Telas) == 1 then
 			npcHandler:say(

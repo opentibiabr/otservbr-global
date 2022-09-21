@@ -49,11 +49,11 @@ local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
-	
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	
+
 	if MsgContains(message, "farmine") and player:getStorageValue(TheNewFrontier.Questline) == 14 then
 		if player:getStorageValue(TheNewFrontier.Mission05.KingTibianus) == 1 then
 			npcHandler:say(
@@ -186,7 +186,7 @@ local function creatureSayCallback(npc, creature, type, message)
 				player:setStorageValue(TheNewFrontier.Mission05.KingTibianus, 1)
 				npcHandler:setTopic(playerId, 10)
 			end
-			
+
 		end
 		-- inicio das opções armor/helmet/boots
 		-- caso o player não diga YES, dirá alguma das seguintes palavras:

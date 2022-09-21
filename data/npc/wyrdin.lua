@@ -71,11 +71,11 @@ local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
-	
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	
+
 	if MsgContains(message, "mission") then
 		if player:getStorageValue(Storage.TheWayToYalahar.QuestLine) < 1 and
 		player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) >= 4 and
@@ -167,7 +167,7 @@ local function creatureSayCallback(npc, creature, type, message)
 			player:setStorageValue(TheNewFrontier.Mission05.Wyrdin, 2)
 		end
 	end
-	
+
 	return true
 end
 

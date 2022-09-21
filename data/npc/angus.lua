@@ -54,11 +54,11 @@ local TheNewFrontier = Storage.Quest.U8_54.TheNewFrontier
 local function creatureSayCallback(npc, creature, type, message)
 	local player = Player(creature)
 	local playerId = player:getId()
-	
+
 	if not npcHandler:checkInteraction(npc, creature) then
 		return false
 	end
-	
+
 	-- Joining
 	if MsgContains(message, "join") then
 		if player:getStorageValue(Storage.ExplorerSociety.JoiningTheExplorers) < 1 and
@@ -379,9 +379,8 @@ local function creatureSayCallback(npc, creature, type, message)
 			npcHandler:say("Did you acquire a copy of 'Songs of the Forest' for us?", npc, creature)
 			npcHandler:setTopic(playerId, 22)
 		end
-		-- ELVEN POETRY
-		
-		-- MEMORY STONE
+		-- Elven Poetry
+		-- Memory Stone
 	elseif MsgContains(message, "memory stone") then
 		if player:getStorageValue(Storage.ExplorerSociety.TheElvenPoetry) == 38 and
 		player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 38 then
@@ -462,7 +461,6 @@ local function creatureSayCallback(npc, creature, type, message)
 			"*Sigh* I think the time is right to grant you another chance to get that ice. Hurry up this time.",
 			npc, creature)
 			npcHandler:setTopic(playerId, 0)
-			
 			-- Butterfly Hunt
 		elseif npcHandler:getTopic(playerId) == 7 then
 			player:setStorageValue(Storage.ExplorerSociety.TheButterflyHunt, 9)
@@ -690,7 +688,6 @@ local function creatureSayCallback(npc, creature, type, message)
 				npcHandler:setTopic(playerId, 0)
 			end
 			-- Spectral Dress
-			
 			-- Spectral Stone
 		elseif npcHandler:getTopic(playerId) == 32 then
 			npcHandler:say(
