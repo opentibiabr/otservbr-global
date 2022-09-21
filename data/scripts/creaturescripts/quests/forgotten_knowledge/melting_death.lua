@@ -5,6 +5,10 @@ local monster = {
 
 local meltingDeath = CreatureEvent("MeltingDeath")
 function meltingDeath.onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjustified, mostdamageunjustified)
+    if not creature then
+        return
+    end
+   
     if creature:isMonster() and creature:getName():lower() ~= 'melting frozen horror' then
         return true
     end
