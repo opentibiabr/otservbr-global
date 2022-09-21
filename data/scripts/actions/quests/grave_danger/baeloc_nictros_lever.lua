@@ -14,7 +14,7 @@ local config = {
 	boss1Position = Position(33427, 31428, 13),
 	boss2Position = Position(33422, 31428, 13),
 	specPos = {
-		from = Position(33414, 31430, 13),
+		from = Position(33414, 31426, 13),
 		to = Position(33433, 31449, 13)
 	},
 	exit = Position(33290, 32474, 9),
@@ -70,6 +70,10 @@ function baelocNictrosLever.onUse(player, item, fromPosition, target, toPosition
 		end
 		lever:teleportPlayers()
 		lever:setStorageAllPlayers(config.storage, os.time() + config.timeToFightAgain * 3600)
+		local boss = Tile(config.boss1Position):getTopCreature()
+		addEvent(function()
+			boss:teleportTo(Position(33427, 31436, 13))
+		end, 5*1000)
 		addEvent(function()
 			local old_players = lever:getInfoPositions()
 			spec:clearCreaturesCache()
