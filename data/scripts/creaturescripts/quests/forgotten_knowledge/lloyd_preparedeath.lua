@@ -19,7 +19,7 @@ end
 local lloydPrepareDeath = CreatureEvent("LloydPrepareDeath")
 function lloydPrepareDeath.onPrepareDeath(creature, lastHitKiller, mostDamageKiller)
     local targetMonster = creature:getMonster()
-    if not targetMonster then
+    if not creature or not targetMonster then
         return true
     end
 
