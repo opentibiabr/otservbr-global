@@ -1,7 +1,6 @@
 local mType = Game.createMonsterType("Headpecker")
 local monster = {}
 
-monster.name = "Headpecker"
 monster.description = "a headpecker"
 monster.experience = 13950
 monster.outfit = {
@@ -15,13 +14,24 @@ monster.outfit = {
 }
 
 monster.raceId = 2275
+monster.Bestiary = {
+	class = "Bird",
+	race = BESTY_RACE_BIRD,
+	toKill = 5000,
+	FirstUnlock = 100,
+	SecondUnlock = 1000,
+	CharmsPoints = 100,
+	Stars = 5,
+	Occurrence = 0,
+	Locations = "Crystal Enigma"
+}
+
 monster.health = 14700
 monster.maxHealth = 14700
-monster.runHealth = 0
 monster.race = "blood"
 monster.corpse = 39319
 monster.speed = 217
-monster.summonCost = 0
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -29,19 +39,20 @@ monster.changeTarget = {
 }
 
 monster.flags = {
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	summonable = false,
 	convinceable = false,
-	illusionable = false,
-	boss = false,
-	ignoreSpawnBlock = false,
 	pushable = false,
+	rewardBoss = false,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 1,
+	runHealth = 0,
 	healthHidden = false,
+	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false
