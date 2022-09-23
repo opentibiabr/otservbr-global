@@ -68,12 +68,30 @@ monster.voices = {
 	chance = 10,
 }
 
-monster.immunities = {
-	{type = "paralyze", condition = true},
-	{type = "outfit", condition = false},
-	{type = "invisible", condition = true},
-	{type = "drunk", condition = true},
-	{type = "bleed", condition = false}
+monster.loot = {
+	{ name= "crystal coin", chance = 42857, maxCount = 1},
+	{ name= "headpecker feather", chance = 15000},
+	{ name= "headpecker beak", chance = 14286},
+	{ name= "wand of starstorm", chance = 7500},
+	{ name= "gold ingot", chance = 7500},
+	{ name= "furry club", chance = 7143},
+	{ id= 3595 , chance = 7143, maxCount = 7}, -- carrot
+	{ name= "blue gem", chance = 2500},
+	{ name= "spike sword", chance = 2500},
+	{ name= "war hammer", chance = 2500},
+	{ name= "knife", chance = 2500},
+	{ name= "titan axe", chance = 2500}
+}
+
+monster.attacks = {
+    {name ="combat", interval = 2000, chance = 100, minDamage = -250, maxDamage = -600 } ,
+    {name ="headpeckerslash", interval = 4000, chance = 25, target = false, minDamage = -500, maxDamage = -1000},
+    {name ="combat", interval = 3500, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -950, maxDamage = -1500, range = 1, radius = 3, effect = CONST_ME_POISONAREA, target = false},
+}
+
+monster.defenses = {
+	defense = 68,
+	armor = 68
 }
 
 monster.elements = {
@@ -89,30 +107,12 @@ monster.elements = {
 	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 
-monster.attacks = {
-    {name ="combat", interval = 2000, chance = 100, minDamage = -250, maxDamage = -600 } ,
-    {name ="headpeckerslash", interval = 4000, chance = 25, target = false, minDamage = -500, maxDamage = -1000},
-    {name ="combat", interval = 3500, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -950, maxDamage = -1500, range = 1, radius = 3, effect = CONST_ME_POISONAREA, target = false},
-}
-
-monster.defenses = {
-	defense = 68,
-	armor = 68
-}
-
-monster.loot = {
-	{ name= "crystal coin", chance = 42857, maxCount = 1},
-	{ name= "headpecker feather", chance = 15000},
-	{ name= "headpecker beak", chance = 14286},
-	{ name= "wand of starstorm", chance = 7500},
-	{ name= "gold ingot", chance = 7500},
-	{ name= "furry club", chance = 7143},
-	{ id= 3595 , chance = 7143, maxCount = 7}, -- carrot
-	{ name= "blue gem", chance = 2500},
-	{ name= "spike sword", chance = 2500},
-	{ name= "war hammer", chance = 2500},
-	{ name= "knife", chance = 2500},
-	{ name= "titan axe", chance = 2500}
+monster.immunities = {
+	{type = "paralyze", condition = true},
+	{type = "outfit", condition = false},
+	{type = "invisible", condition = true},
+	{type = "drunk", condition = true},
+	{type = "bleed", condition = false}
 }
 
 mType:register(monster)
