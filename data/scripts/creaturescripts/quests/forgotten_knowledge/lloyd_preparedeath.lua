@@ -6,11 +6,12 @@ local monsters = {
 }
 
 local function revertLloyd(prismId)
-    local lloyd = Tile(Position(32799, 32826, 14)):getTopCreature()
-	if lloyd then
+	local lloydTile = Tile(Position(32799, 32826, 14))
+	if lloydTile then
+		local lloyd = lloydTile:getTopCreature()
 		lloyd:teleportTo(Position(32799, 32829, 14))
 		lloyd:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-    end
+	end
 
 	Tile(monsters[prismId].pos):getTopCreature():remove()
 	Game.createMonster(monsters[prismId].cosmicInvu, Position(monsters[prismId].pos), true, true)
