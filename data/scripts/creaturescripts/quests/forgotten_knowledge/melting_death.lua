@@ -8,7 +8,7 @@ function meltingDeath.onDeath(creature, corpse, lasthitkiller, mostdamagekiller,
 	if not creature then
 		return
 	end
-   
+
 	if creature:isMonster() and creature:getName():lower() ~= 'melting frozen horror' then
 		return true
 	end
