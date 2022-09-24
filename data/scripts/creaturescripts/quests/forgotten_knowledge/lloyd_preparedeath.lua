@@ -1,8 +1,8 @@
 local monsters = {
-    {cosmicNormal = 'cosmic energy prism a', cosmicInvu = 'cosmic energy prism a invu', pos = Position(32801, 32827, 14)},
-    {cosmicNormal = 'cosmic energy prism b', cosmicInvu = 'cosmic energy prism b invu', pos = Position(32798, 32827, 14)},
-    {cosmicNormal = 'cosmic energy prism c', cosmicInvu = 'cosmic energy prism c invu', pos = Position(32803, 32826, 14)},
-    {cosmicNormal = 'cosmic energy prism d', cosmicInvu = 'cosmic energy prism d invu', pos = Position(32796, 32826, 14)}
+	{cosmicNormal = 'cosmic energy prism a', cosmicInvu = 'cosmic energy prism a invu', pos = Position(32801, 32827, 14)},
+	{cosmicNormal = 'cosmic energy prism b', cosmicInvu = 'cosmic energy prism b invu', pos = Position(32798, 32827, 14)},
+	{cosmicNormal = 'cosmic energy prism c', cosmicInvu = 'cosmic energy prism c invu', pos = Position(32803, 32826, 14)},
+	{cosmicNormal = 'cosmic energy prism d', cosmicInvu = 'cosmic energy prism d invu', pos = Position(32796, 32826, 14)}
 }
 
 local function revertLloyd(prismId)
