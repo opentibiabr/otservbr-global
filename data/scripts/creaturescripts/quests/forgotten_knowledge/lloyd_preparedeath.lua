@@ -19,10 +19,10 @@ end
 
 local lloydPrepareDeath = CreatureEvent("LloydPrepareDeath")
 function lloydPrepareDeath.onPrepareDeath(creature, lastHitKiller, mostDamageKiller)
-    local targetMonster = creature:getMonster()
-    if not creature or not targetMonster then
-        return true
-    end
+	local targetMonster = creature:getMonster()
+	if not creature or not targetMonster then
+		return true
+	end
 
     local prismCount = 1
     for m = 1, #monsters do
