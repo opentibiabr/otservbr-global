@@ -12,8 +12,8 @@ local function revertLloyd(prismId)
 		lloyd:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
     end
 
-    Tile(monsters[prismId].pos):getTopCreature():remove()
-    Game.createMonster(monsters[prismId].cosmicInvu, Position(monsters[prismId].pos), true, true)
+	Tile(monsters[prismId].pos):getTopCreature():remove()
+	Game.createMonster(monsters[prismId].cosmicInvu, Position(monsters[prismId].pos), true, true)
 end
 
 local lloydPrepareDeath = CreatureEvent("LloydPrepareDeath")
