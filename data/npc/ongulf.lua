@@ -1,4 +1,4 @@
-local internalNpcName = "Leeland"
+local internalNpcName = "Ongulf"
 local npcType = Game.createNpcType(internalNpcName)
 local npcConfig = {}
 
