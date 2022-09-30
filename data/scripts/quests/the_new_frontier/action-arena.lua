@@ -9,6 +9,11 @@ local config = {
 		{'Tirecz'}
 	},
 
+	playerPos = {
+		Position(33080, 31014, 2),
+		Position(33081, 31014, 2)
+	},
+
 	teleportPositions = {
 		Position(33059, 31032, 3),
 		Position(33057, 31034, 3)
@@ -47,32 +52,30 @@ end
 
 local theNewFrontierArena = Action()
 function theNewFrontierArena.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local player1 = Tile(Position(33080, 31014, 2)):getTopCreature()
-	if not(player1 and player1:isPlayer()) then
-		return false
-	end
+	for a = 1, #config.playerPos do
+		local creature = Tile(config.playerPos[a]):getTopCreature()
+		if not creature then
+			return false
+		end
 
-	local player2 = Tile(Position(33081, 31014, 2)):getTopCreature()
-	if not(player2 and player2:isPlayer()) then
-		return false
-	end
-
-	if player1:getStorageValue(TheNewFrontier.Questline) >= 26 then
-		return player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You already finished this battle.')
+		if creature:getStorageValue(TheNewFrontier.Questline) >= 26 then
+			return player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You already finished this battle.')
+		end
 	end
 
 	if Game.getStorageValue(TheNewFrontier.Mission09[1]) == 1 then
-		return player1:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'The arena is already in use.')
+		return player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'The arena is already in use.')
 	end
 
 	Game.setStorageValue(TheNewFrontier.Mission09[1], 1)
 	addEvent(clearArena, 30 * 60 * 1000)
-	player1:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player1:teleportTo(config.teleportPositions[1])
-	player1:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player2:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-	player2:teleportTo(config.teleportPositions[2])
-	player2:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+
+	for b = 1, #config.playerPos do
+		local creature = Tile(config.playerPos[b]):getTopCreature()
+		creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		creature:teleportTo(config.teleportPositions[b])
+		creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	end
 
 	for i = 1, #config.bosses do
 		for j = 1, #config.bosses[i] do
