@@ -86,7 +86,7 @@ monster.loot = {
 	{id = 3038, chance = 5000}, -- green gem
 	{id = 3037, chance = 5000}, -- yellow gem
 	{id = 3079, chance = 5000}, -- boots of haste
-	{id = 23526, chance = 5000}, -- collar of blue plasma
+	{id = 23542, chance = 5000}, -- collar of blue plasma
 	{id = 5891, chance = 5000}, -- enchanted chicken wing
 	{id = 822, chance = 5000}, -- lightning legs
 	{id = 11454, chance = 5000}, -- luminous orb
