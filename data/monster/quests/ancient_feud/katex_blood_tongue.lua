@@ -73,7 +73,7 @@ monster.loot = {
 	{name = "werehyaena nose", chance = 14800},
 	{name = "werehyaena trophy", chance = 12000},
 	{name = "katex' blood", chance = 12000},
-	{name = "violet gem", chance = 510},	
+	{name = "violet gem", chance = 510},
 	{name = "werehyaena talisman", chance = 12000},
 	{name = "demon shield", chance = 800},
 	{name = "skull helmet", chance = 930},

@@ -27205,7 +27205,9 @@
 	</item>
 	<item fromid="18011" toid="18012" article="a" name="stone wall"/>
 	<!-- gate -->
-	<item id="18013" article="a" name="stone floor"/>
+	<item id="18013" article="a" name="stone floor">
+		<attribute key="walkstack" value="0"/>
+	</item>
 	<item id="18014" name="RESERVED SPRITE"/>
 	<item id="18015" article="a" name="cabinet">
 		<attribute key="containersize" value="8"/>

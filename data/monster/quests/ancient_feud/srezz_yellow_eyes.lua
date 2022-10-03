@@ -92,7 +92,6 @@ monster.attacks = {
 	{name = "combat", type = COMBAT_EARTHDAMAGE, interval = 2000, chance = 40, minDamage = -400, maxDamage = -500, range = 5, radius = 4, target = true, shootEffect = CONST_ANI_EARTH, effect = CONST_ME_GREEN_RINGS},
 	{name = "combat", type = COMBAT_LIFEDRAIN, interval = 2000, chance = 30, minDamage = -200, maxDamage = -300, length = 4, spread = 2, effect = CONST_ME_DRAWBLOOD},
 	{name = "combat", type = COMBAT_LIFEDRAIN, interval = 2000, chance = 70, minDamage = -200, maxDamage = -350, radius = 4, effect = CONST_ME_DRAWBLOOD}
-	
 }
 
 monster.defenses = {
