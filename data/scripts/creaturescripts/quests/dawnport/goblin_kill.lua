@@ -1,11 +1,10 @@
 local goblinKill = CreatureEvent("MorrisGoblinKill")
-
-function onKill(player, target)
+function goblinKill.onKill(player, target)
 	if target:isPlayer() or target:getMaster() then
 		return true
 	end
 
-	if not target:getName():lower() == "muglex clan footman" then
+	if target:getName():lower() ~= "muglex clan footman" then
 		return true
 	end
 

@@ -93,14 +93,12 @@ monster.attacks = {
 	{name ="combat", interval = 1000, chance = 10, type = COMBAT_ICEDAMAGE, minDamage = -320, maxDamage = -320, range = 7, shootEffect = CONST_ANI_SMALLICE, effect = CONST_ME_ICEATTACK, target = true},
 	{name ="combat", interval = 2000, chance = 50, type = COMBAT_ICEDAMAGE, minDamage = -282, maxDamage = -315, range = 7, shootEffect = CONST_ANI_SMALLICE, effect = CONST_ME_WATERSPLASH, target = true},
 	{name ="combat", interval = 6000, chance = 50, type = COMBAT_EARTHDAMAGE, minDamage = -282, maxDamage = -315, range = 7, shootEffect = CONST_ME_STONES, effect = CONST_ANI_EARTH, target = false},
-	{name ="makarawatersplash", interval = 6000, chance = 38, minDamage = -800, maxDamage = -1300},
-	
+	{name ="makarawatersplash", interval = 6000, chance = 38, minDamage = -800, maxDamage = -1300}
 }
 
 monster.defenses = {
 	defense = 74,
 	armor = 74
-	
 }
 
 monster.elements = {

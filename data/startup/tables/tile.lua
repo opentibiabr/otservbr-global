@@ -1061,13 +1061,7 @@ TileAction = {
 			{x = 31951, y = 32174, z = 10}
 		}
 	},
-	-- The New Frontier Quest
-	[50364] = { -- Mission 07 - Hidden Note
-		itemId = false,
-		itemPos = {
-			{x = 33165, y = 31249, z = 11}
-		}
-	},
+	-- Troll Sabotage Quest
 	[50365] = {
 		itemId = false,
 		itemPos = {
@@ -1077,12 +1071,6 @@ TileAction = {
 			{x = 33231, y = 31765, z = 2},
 			{x = 33231, y = 31762, z = 2},
 			{x = 33231, y = 31760, z = 2}
-		}
-	},
-	[50366] = { -- Corruption Hole
-		itemId = false,
-		itemPos = {
-			{x = 33345, y = 31116, z = 7}
 		}
 	}
 }

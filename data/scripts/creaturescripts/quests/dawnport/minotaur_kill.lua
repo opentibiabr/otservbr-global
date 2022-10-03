@@ -1,11 +1,10 @@
 local minotaurKill = CreatureEvent("MorrisMinotaurKill")
-
 function minotaurKill.onKill(player, target)
 	if target:isPlayer() or target:getMaster() then
 		return true
 	end
 
-	if not target:getName():lower() == "minotaur bruiser" then
+	if target:getName():lower() ~= "minotaur bruiser" then
 		return true
 	end
 

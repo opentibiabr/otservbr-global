@@ -52,6 +52,10 @@ monster.flags = {
 	canWalkOnPoison = true
 }
 
+monster.events = {
+	"MeltingDeath"
+}
+
 monster.light = {
 	level = 0,
 	color = 0

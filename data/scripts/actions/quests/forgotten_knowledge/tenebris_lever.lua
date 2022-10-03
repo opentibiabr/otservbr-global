@@ -1,65 +1,96 @@
 local config = {
-	centerRoom = Position(32912, 31599, 14),
+	bossName = "Lady Tenebris",
+	timeToFightAgain = 20, -- In hour
+	timeToDefeatBoss = 15, -- In minutes
+	playerPositions = {
+		{ pos = Position(32902, 31623, 14), teleport = Position(32911, 31603, 14), effect = CONST_ME_TELEPORT },
+		{ pos = Position(32902, 31624, 14), teleport = Position(32911, 31603, 14), effect = CONST_ME_TELEPORT },
+		{ pos = Position(32902, 31625, 14), teleport = Position(32911, 31603, 14), effect = CONST_ME_TELEPORT },
+		{ pos = Position(32902, 31626, 14), teleport = Position(32911, 31603, 14), effect = CONST_ME_TELEPORT },
+		{ pos = Position(32902, 31627, 14), teleport = Position(32911, 31603, 14), effect = CONST_ME_TELEPORT }
+	},
 	bossPosition = Position(32912, 31599, 14),
-	newPosition = Position(32911, 31603, 14)
+	specPos = {
+		from = Position(32895, 31585, 14),
+		to = Position(32830, 32855, 14)
+	},
+	exit = Position(32902, 31629, 14),
+	storage = Storage.ForgottenKnowledge.LadyTenebrisTimer
 }
-
-local function clearTenebris()
-	local spectators = Game.getSpectators(config.centerRoom, false, false, 15, 15, 15, 15)
-	for i = 1, #spectators do
-		local spectator = spectators[i]
-		if spectator:isPlayer() then
-			spectator:teleportTo(Position(32902, 31629, 14))
-			spectator:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-			spectator:say('Time out! You were teleported out by strange forces.', TALKTYPE_MONSTER_SAY)
-		elseif spectator:isMonster() then
-			spectator:remove()
-		end
-	end
-end
 
 local forgottenKnowledgeTenebris = Action()
 function forgottenKnowledgeTenebris.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if item.itemid == 8911 then
-		if player:getPosition() ~= Position(32902, 31623, 14) then
+	if config.playerPositions[1].pos ~= player:getPosition() then
+		return false
+	end
+
+	local spec = Spectators()
+	spec:setOnlyPlayer(false)
+	spec:setRemoveDestination(config.exit)
+	spec:setCheckPosition(config.specPos)
+	spec:check()
+
+	if spec:getPlayers() > 0 then
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "There's someone fighting with " .. config.bossName .. ".")
+		return true
+	end
+
+	local lever = Lever()
+	lever:setPositions(config.playerPositions)
+	lever:setCondition(function(creature)
+		if not creature or not creature:isPlayer() then
 			return true
 		end
-	end
-	if item.itemid == 8911 then
-		local specs, spec = Game.getSpectators(config.centerRoom, false, false, 15, 15, 15, 15)
-		for i = 1, #specs do
-			spec = specs[i]
-			if spec:isPlayer() then
-				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Someone is fighting with Lloyd.")
-				return true
+
+		if creature:getStorageValue(config.storage) > os.time() then
+			local info = lever:getInfoPositions()
+			for _, v in pairs(info) do
+				local newPlayer = v.creature
+				if newPlayer then
+					newPlayer:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You or a member in your team have to wait " .. config.timeToFightAgain .. " hours to face " .. config.bossName .. " again!")
+					if newPlayer:getStorageValue(config.storage) > os.time() then
+						newPlayer:getPosition():sendMagicEffect(CONST_ME_POFF)
+					end
+				end
 			end
+			return false
 		end
+		return true
+	end)
+
+	lever:checkPositions()
+	if lever:checkConditions() then
+		spec:removeMonsters()
 		for d = 1, 6 do
 			Game.createMonster('shadow tentacle', Position(math.random(32909, 32914), math.random(31596, 31601), 14), true, true)
 		end
-		Game.createMonster("lady tenebris", config.bossPosition, true, true)
-		for y = 31623, 31627 do
-			local playerTile = Tile(Position(32902, y, 14)):getTopCreature()
-			if playerTile and playerTile:isPlayer() then
-				if playerTile:getStorageValue(Storage.ForgottenKnowledge.LadyTenebrisTimer) < os.time() then
-					playerTile:getPosition():sendMagicEffect(CONST_ME_POFF)
-					playerTile:teleportTo(config.newPosition)
-					playerTile:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-					playerTile:setStorageValue(Storage.ForgottenKnowledge.LadyTenebrisTimer, os.time() + 20 * 3600)
-					playerTile:say('You have 20 minutes to kill and loot this boss. Otherwise you will lose that chance and will be kicked out.', TALKTYPE_MONSTER_SAY)
-				else
-					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You need to wait a while, recently someone challenge Lady Tenebris.")
-					return true
+		local monster = Game.createMonster(config.bossName, config.bossPosition, true, true)
+		if not monster then
+			return true
+		end
+		lever:teleportPlayers()
+		lever:setStorageAllPlayers(config.storage, os.time() + config.timeToFightAgain * 3600)
+		addEvent(function()
+			local old_players = lever:getInfoPositions()
+			spec:clearCreaturesCache()
+			spec:setOnlyPlayer(true)
+			spec:check()
+			local player_remove = {}
+			for i, v in pairs(spec:getCreatureDetect()) do
+				for _, v_old in pairs(old_players) do
+					if v_old.creature == nil or v_old.creature:isMonster() then
+						break
+					end
+					if v:getName() == v_old.creature:getName() then
+						table.insert(player_remove, v_old.creature)
+						break
+					end
 				end
 			end
-		end
-		addEvent(clearTenebris, 20 * 60 * 1000, Position(32902, 31589, 14), Position(32922, 31589, 14), Position(32924, 31610, 14))
-		item:transform(8912)
-	elseif item.itemid == 8912 then
-		item:transform(8911)
+			spec:removePlayers(player_remove)
+		end, config.timeToDefeatBoss * 60 * 1000)
 	end
-	return true
 end
 
-forgottenKnowledgeTenebris:aid(24878)
+forgottenKnowledgeTenebris:position(Position(32902, 31622, 14))
 forgottenKnowledgeTenebris:register()

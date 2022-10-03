@@ -122,25 +122,3 @@ monster.loot = {
 }
 
 mType:register(monster)
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
