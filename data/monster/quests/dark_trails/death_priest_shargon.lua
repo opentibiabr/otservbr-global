@@ -53,7 +53,7 @@ monster.flags = {
 }
 
 monster.events = {
-	"DeathPriestShargonDeath"
+	"ShargonKill"
 }
 
 monster.light = {
