@@ -1,5 +1,14 @@
+local config = {
+	teleportId = 1949,
+	teleportPosition = {x = 33487, y = 32101, z = 9},
+	destinationPosition = Position(33489, 32088, 9),
+	storageKey = Storage.DarkTrails.Mission18,
+	getStorageValue = 1,
+	setStorageValue = 2
+}
+
 local function removeTeleport(position)
-	local teleportItem = Tile({x = 33487, y = 32101, z = 9}):getItemById(1949)
+	local teleportItem = Tile(config.teleportPosition):getItemById(config.teleportId)
 	if teleportItem then
 		teleportItem:remove()
 		position:sendMagicEffect(CONST_ME_POFF)
@@ -14,12 +23,14 @@ function deathPriestShargon.onKill(creature, target)
 
 	local position = target:getPosition()
 	position:sendMagicEffect(CONST_ME_TELEPORT)
-	local item = Game.createItem(1949, 1, {x = 33487, y = 32101, z = 9})
+	local item = Game.createItem(config.teleportId, 1, config.teleportPosition)
 	if item:isTeleport() then
-		item:setDestination(Position(33489,32088,9))
+		item:setDestination(config.destinationPosition)
 	end
-	if creature:getStorageValue(Storage.DarkTrails.Mission18) < 1 then
-		creature:setStorageValue(Storage.DarkTrails.Mission18, 1)
+	if config.storageKey ~= nil then
+		if creature:getStorageValue(config.storageKey) < config.getStorageValue then
+			creature:setStorageValue(config.storageKey, config.setStorageValue)
+		end
 	end
 	addEvent(removeTeleport, 5 * 60 * 1000, position)
 	return true
