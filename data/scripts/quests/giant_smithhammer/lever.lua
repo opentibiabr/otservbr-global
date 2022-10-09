@@ -8,10 +8,10 @@ function lever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			tile:getItemById(389):remove()
 			item:transform(2773)
 		else
-			Game.createItem(387, 1, position)
+			Game.createItem(389, 1, position)
 		end
 	else
-		Game.createItem(387, 1, position)
+		Game.createItem(389, 1, position)
 		item:transform(2772)
 	end
 	return true
