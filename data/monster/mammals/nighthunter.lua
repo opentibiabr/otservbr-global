@@ -1,7 +1,6 @@
 local mType = Game.createMonsterType("Nighthunter")
 local monster = {}
 
-monster.name = "Nighthunter"
 monster.description = "a nighthunter"
 monster.experience = 12647
 monster.outfit = {
@@ -15,13 +14,24 @@ monster.outfit = {
 }
 
 monster.raceId = 2270
+monster.Bestiary = {
+	class = "Mammal",
+	race = BESTY_RACE_MAMMAL,
+	toKill = 5000,
+	FirstUnlock = 100,
+	SecondUnlock = 1000,
+	CharmsPoints = 100,
+	Stars = 5,
+	Occurrence = 0,
+	Locations = "Monster Graveyard"
+}
+
 monster.health = 17290
 monster.maxHealth = 17290
-monster.runHealth = 0
 monster.race = "blood"
 monster.corpse = 39299
 monster.speed = 410
-monster.summonCost = 0
+monster.manaCost = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -29,19 +39,20 @@ monster.changeTarget = {
 }
 
 monster.flags = {
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	summonable = false,
 	convinceable = false,
-	illusionable = false,
-	boss = false,
-	ignoreSpawnBlock = false,
 	pushable = false,
+	rewardBoss = false,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
 	targetDistance = 1,
+	runHealth = 0,
 	healthHidden = false,
+	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false
@@ -58,12 +69,26 @@ monster.voices = {
 	{text = "Shriiiiek! Shriiiiek!", yell = false}
 }
 
-monster.immunities = {
-	{type = "paralyze", condition = true},
-	{type = "outfit", condition = false},
-	{type = "invisible", condition = true},
-	{type = "drunk", condition = true},
-	{type = "bleed", condition = false}
+monster.loot = {
+	{ name = "crystal coin", chance = 30898},
+	{ name = "nighthunter wing", chance = 23591, maxCount = 2},
+	{ name = "ultimate health potion", chance = 15449, maxCount = 3},
+	{ name = "cyan crystal fragment", chance = 3758},
+	{ name = "red crystal fragment", chance = 3758},
+	{ name = "green crystal shard", chance = 2923},
+	{ name = "yellow gem", chance = 2088},
+	{ name = "warrior's axe", chance = 1253},
+	{ name = "stone skin amulet", chance = 1044},
+	{ name = "crystal sword", chance = 835},
+	{ name = "spellbook of mind control", chance = 626}
+}
+
+monster.attacks = {
+}
+
+monster.defenses = {
+	defense = 81,
+	armor = 81
 }
 
 monster.elements = {
@@ -79,26 +104,12 @@ monster.elements = {
 	{type = COMBAT_DEATHDAMAGE , percent = 20}
 }
 
-monster.attacks = {
-}
-
-monster.defenses = {
-	defense = 81,
-	armor = 81
-}
-
-monster.loot = {
-	{ name = "crystal coin", chance = 30898},
-	{ name = "nighthunter wing", chance = 23591, maxCount = 2},
-	{ name = "ultimate health potion", chance = 15449, maxCount = 3},
-	{ name = "cyan crystal fragment", chance = 3758},
-	{ name = "red crystal fragment", chance = 3758},
-	{ name = "green crystal shard", chance = 2923},
-	{ name = "yellow gem", chance = 2088},
-	{ name = "warrior's axe", chance = 1253},
-	{ name = "stone skin amulet", chance = 1044},
-	{ name = "crystal sword", chance = 835},
-	{ name = "spellbook of mind control", chance = 626}
+monster.immunities = {
+	{type = "paralyze", condition = true},
+	{type = "outfit", condition = false},
+	{type = "invisible", condition = true},
+	{type = "drunk", condition = true},
+	{type = "bleed", condition = false}
 }
 
 mType:register(monster)
