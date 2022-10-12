@@ -23,7 +23,7 @@ monster.Bestiary = {
 	CharmsPoints = 100,
 	Stars = 5,
 	Occurrence = 0,
-	Locations = "Crystal Enigma"
+	Locations = "Monster Graveyard"
 }
 monster.health = 18100
 monster.maxHealth = 18100
