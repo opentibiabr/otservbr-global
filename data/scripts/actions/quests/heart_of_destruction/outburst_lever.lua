@@ -88,6 +88,9 @@ function heartDestructionOutburst.onUse(player, item, fromPosition, itemEx, toPo
 
 					for i = 1, #storePlayers do
 						players = storePlayers[i]
+						if players:getStorageValue(14331) >= os.time() then
+							return players:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You need wait to fight again")
+						end
 						config.playerPositions[i]:sendMagicEffect(CONST_ME_POFF)
 						players:teleportTo(config.newPos)
 						players:setStorageValue(14331, os.time() + 20*60*60)
