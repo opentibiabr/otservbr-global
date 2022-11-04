@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 400
 monster.maxHealth = 400
 monster.race = "blood"
-monster.corpse = 20566
+monster.corpse = 18285
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "War Wolf", chance = 13, interval = 1000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "War Wolf", chance = 13, interval = 1000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -71,25 +73,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 10563, chance = 100000},
-	{id = 2148, chance = 100000, maxCount = 95},
-	{id = 2152, chance = 93000, maxCount = 3},
-	{id = 2800, chance = 86000},
-	{id = 12448, chance = 53000},
-	{id = 2166, chance = 40000},
-	{id = 12449, chance = 40000},
-	{id = 2154, chance = 33000},
-	{id = 2015, chance = 20000},
-	{id = 7589, chance = 20000},
-	{id = 2044, chance = 13000},
-	{id = 2401, chance = 13000},
-	{id = 5786, chance = 13000},
-	{id = 2260, chance = 7000},
-	{id = 2689, chance = 7000},
-	{id = 2652, chance = 7000},
-	{id = 2177, chance = 7000},
-	{id = 2802, chance = 7000},
-	{id = 2129, chance = 7000}
+	{id = 9646, chance = 100000}, -- book of prayers
+	{id = 3031, chance = 100000, maxCount = 95}, -- gold coin
+	{id = 3035, chance = 93000, maxCount = 3}, -- platinum coin
+	{id = 3736, chance = 86000}, -- star herb
+	{id = 11492, chance = 53000}, -- rope belt
+	{id = 3050, chance = 40000}, -- power ring
+	{id = 11493, chance = 40000}, -- safety pin
+	{id = 3037, chance = 33000}, -- yellow gem
+	{id = 2885, chance = 20000}, -- brown flask
+	{id = 237, chance = 20000}, -- strong mana potion
+	{id = 2914, chance = 13000}, -- lamp
+	{id = 3289, chance = 13000}, -- staff
+	{id = 5786, chance = 13000}, -- wooden whistle
+	{id = 3147, chance = 7000}, -- blank rune
+	{id = 3600, chance = 7000}, -- bread
+	{id = 3563, chance = 7000}, -- green tunic
+	{id = 3061, chance = 7000}, -- life crystal
+	{id = 3738, chance = 7000}, -- sling herb
+	{id = 3012, chance = 7000} -- wolf tooth chain
 }
 
 monster.attacks = {

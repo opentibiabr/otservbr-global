@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 675
 monster.maxHealth = 675
 monster.race = "blood"
-monster.corpse = 20475
+monster.corpse = 18194
 monster.speed = 238
 monster.manaCost = 775
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,13 +43,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -85,7 +84,7 @@ monster.loot = {
 	{name = "dark shield", chance = 1000},
 	{name = "pirate boots", chance = 220},
 	{name = "rum flask", chance = 130},
-	{id = 5813, chance = 130},
+	{id = 5813, chance = 130}, -- skull candle
 	{name = "pirate backpack", chance = 930},
 	{name = "pirate hat", chance = 1150},
 	{name = "hook", chance = 600},

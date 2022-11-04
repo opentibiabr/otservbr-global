@@ -5,11 +5,11 @@ monster.description = "a nomad"
 monster.experience = 60
 monster.outfit = {
 	lookType = 146,
-	lookHead = 114,
-	lookBody = 20,
-	lookLegs = 22,
-	lookFeet = 2,
-	lookAddons = 2,
+	lookHead = 97,
+	lookBody = 39,
+	lookLegs = 40,
+	lookFeet = 3,
+	lookAddons = 3,
 	lookMount = 0
 }
 
@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 160
 monster.maxHealth = 160
 monster.race = "blood"
-monster.corpse = 20466
+monster.corpse = 18185
 monster.speed = 190
 monster.manaCost = 420
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -49,7 +48,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = true,
-	pushable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,

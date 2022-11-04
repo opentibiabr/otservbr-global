@@ -5,7 +5,7 @@ monster.description = "Lady Tenebris"
 monster.experience = 50000
 monster.outfit = {
 	lookType = 433,
-	lookHead = 57,
+	lookHead = 76,
 	lookBody = 95,
 	lookLegs = 38,
 	lookFeet = 94,
@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6560
 monster.speed = 370
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -69,41 +68,41 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 10000, maxCount = 50},
-	{id = 2152, chance = 10000, maxCount = 50},
-	{id = 2150, chance = 10000, maxCount = 10},
-	{id = 2145, chance = 10000, maxCount = 10},
-	{id = 2147, chance = 10000, maxCount = 10},
-	{id = 9970, chance = 10000, maxCount = 10},
-	{id = 7590, chance = 10000, maxCount = 100},
-	{id = 8472, chance = 10000, maxCount = 100},
-	{id = 22396, chance = 2000, maxCount = 2},
-	{id = 18413, chance = 2000, maxCount = 3},
-	{id = 18415, chance = 5000, maxCount = 5},
-	{id = 22396, chance = 2000, maxCount = 2},
-	{id = 18414, chance = 5000, maxCount = 3},
-	{id = 7632, chance = 6000},
-	{id = 2155, chance = 2000},
-	{id = 7440, chance = 2000},
-	{id = 24851, chance = 2000},
-	{id = 2156, chance = 1000},
-	{id = 2123, chance = 2000},
-	{id = 7451, chance = 2000},
-	{id = 8903, chance = 1000},
-	{id = 8901, chance = 1000},
-	{id = 2436, chance = 1000},
-	{id = 2154, chance = 1000},
-	{id = 18390, chance = 1000},
-	{id = 25377, chance = 100000},
-	{id = 25172, chance = 100000},
-	{id = 2453, chance = 200},
-	{id = 27641, chance = 200},
-	{id = 27642, chance = 200},
-	{id = 25411, chance = 200},
-	{id = 22422, chance = 200},
-	{id = 27625, chance = 500, unique = true},
-	{id = 2138, chance = 200},
-	{id = 22423, chance = 200}
+	{id = 3031, chance = 10000, maxCount = 50}, -- gold coin
+	{id = 3035, chance = 10000, maxCount = 50}, -- platinum coin
+	{id = 3033, chance = 10000, maxCount = 10}, -- small amethyst
+	{id = 3028, chance = 10000, maxCount = 10}, -- small diamond
+	{id = 3030, chance = 10000, maxCount = 10}, -- small ruby
+	{id = 9057, chance = 10000, maxCount = 10}, -- small topaz
+	{id = 238, chance = 10000, maxCount = 100}, -- great mana potion
+	{id = 7642, chance = 10000, maxCount = 100}, -- great spirit potion
+	{id = 20062, chance = 2000, maxCount = 2}, -- cluster of solace
+	{id = 16119, chance = 2000, maxCount = 3}, -- blue crystal shard
+	{id = 16121, chance = 5000, maxCount = 5}, -- green crystal shard
+	{id = 20062, chance = 2000, maxCount = 2}, -- cluster of solace
+	{id = 16120, chance = 5000, maxCount = 3}, -- violet crystal shard
+	{id = 281, chance = 6000}, -- giant shimmering pearl (green)
+	{id = 3038, chance = 2000}, -- green gem
+	{id = 7440, chance = 2000}, -- mastermind potion
+	{id = 22195, chance = 2000}, -- onyx pendant
+	{id = 3039, chance = 1000}, -- red gem
+	{id = 3006, chance = 2000}, -- ring of the sky
+	{id = 7451, chance = 2000}, -- shadow sceptre
+	{id = 8075, chance = 1000}, -- spellbook of lost souls
+	{id = 8073, chance = 1000}, -- spellbook of warding
+	{id = 3324, chance = 1000}, -- skull staff
+	{id = 3037, chance = 1000}, -- yellow gem
+	{id = 16096, chance = 1000}, -- wand of defiance
+	{id = 22721, chance = 100000}, -- gold token
+	{id = 22516, chance = 100000}, -- silver token
+	{id = 3341, chance = 200}, -- arcane staff
+	{id = 24973, chance = 200}, -- shadow mask
+	{id = 24974, chance = 200}, -- shadow paint
+	{id = 22755, chance = 200}, -- book of lies
+	{id = 20088, chance = 200}, -- crude umbral spellbook
+	{id = 24957, chance = 500, unique = true}, -- part of a rune
+	{id = 3021, chance = 200}, -- sapphire amulet
+	{id = 20089, chance = 200} -- umbral spellbook
 }
 
 monster.attacks = {

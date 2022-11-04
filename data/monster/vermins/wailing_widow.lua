@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 850
 monster.maxHealth = 850
 monster.race = "venom"
-monster.corpse = 11310
+monster.corpse = 10393
 monster.speed = 254
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -52,7 +51,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -83,7 +82,7 @@ monster.loot = {
 	{name = "green mushroom", chance = 3208},
 	{name = "health potion", chance = 4761},
 	{name = "mana potion", chance = 4785},
-	{name = "Zaoan halberd", chance = 2210},
+	{name = "zaoan halberd", chance = 2210},
 	{name = "widow's mandibles", chance = 20950},
 	{name = "wailing widow's necklace", chance = 900}
 }

@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2500
 monster.maxHealth = 2500
 monster.race = "undead"
-monster.corpse = 11300
+monster.corpse = 10383
 monster.speed = 204
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -87,12 +86,12 @@ monster.loot = {
 	{name = "iron ore", chance = 1700},
 	{name = "ancient stone", chance = 20020},
 	{name = "shiny stone", chance = 800},
-	{name = "Zaoan sword", chance = 100},
-	{name = "Zaoan halberd", chance = 1860},
+	{name = "zaoan sword", chance = 100},
+	{name = "zaoan halberd", chance = 1860},
 	{name = "spiked iron ball", chance = 9960},
 	{name = "clay lump", chance = 720},
 	{name = "piece of marble rock", chance = 430},
-	{id = 13757, chance = 400}
+	{id = 12600, chance = 400} -- coal
 }
 
 monster.attacks = {
@@ -105,7 +104,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
 	{type = COMBAT_ENERGYDAMAGE, percent = 10},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 70},

@@ -19,7 +19,6 @@ monster.race = "fire"
 monster.corpse = 6068
 monster.speed = 480
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -71,40 +70,40 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 18413, chance = 37500, maxCount = 5},
-	{id = 22396, chance = 62500, maxCount = 4},
-	{id = 18419, chance = 43750, maxCount = 3},
-	{id = 5954, chance = 100000},
-	{id = 6500, chance = 812500, maxCount = 4},
-	{id = 22612, chance = 6250},
-	{id = 22397, chance = 81250, maxCount = 2},
-	{id = 22610, chance = 3250, unique = true},
-	{id = 22613, chance = 2500},
-	{id = 7632, chance = 43750},
-	{id = 7633, chance = 43750},
-	{id = 2148, chance = 18750, maxCount = 100},
-	{id = 7590, chance = 6250, maxCount = 8},
-	{id = 8472, chance = 56250, maxCount = 8},
-	{id = 18421, chance = 37500, maxCount = 3},
-	{id = 18415, chance = 18750, maxCount = 5},
-	{id = 2155, chance = 18750},
-	{id = 7893, chance = 12500},
-	{id = 7898, chance = 18750},
-	{id = 22616, chance = 12500},
-	{id = 22608, chance = 100000, unique = true},
-	{id = 2152, chance = 93750, maxCount = 20},
-	{id = 22611, chance = 6250},
-	{id = 18420, chance = 6250, maxCount = 3},
-	{id = 2214, chance = 6250},
-	{id = 5741, chance = 6250},
-	{id = 2645, chance = 6250},
-	{id = 8473, chance = 31250, maxCount = 8},
-	{id = 22598, chance = 81250, maxCount = 3},
-	{id = 18414, chance = 18750, maxCount = 5}
+	{id = 16119, chance = 37500, maxCount = 5}, -- blue crystal shard
+	{id = 20062, chance = 62500, maxCount = 4}, -- cluster of solace
+	{id = 16125, chance = 43750, maxCount = 3}, -- cyan crystal fragment
+	{id = 5954, chance = 100000}, -- demon horn
+	{id = 6499, chance = 812500, maxCount = 4}, -- demonic essence
+	{id = 20278, chance = 6250}, -- demonic tapestry
+	{id = 20063, chance = 81250, maxCount = 2}, -- dream matter
+	{id = 20276, chance = 3250, unique = true}, -- dream warden mask
+	{id = 20279, chance = 2500}, -- eye pod
+	{id = 281, chance = 43750}, -- giant shimmering pearl (green)
+	{id = 282, chance = 43750}, -- giant shimmering pearl (brown)
+	{id = 3031, chance = 18750, maxCount = 100}, -- gold coin
+	{id = 238, chance = 6250, maxCount = 8}, -- great mana potion
+	{id = 7642, chance = 56250, maxCount = 8}, -- great spirit potion
+	{id = 16127, chance = 37500, maxCount = 3}, -- green crystal fragment
+	{id = 16121, chance = 18750, maxCount = 5}, -- green crystal shard
+	{id = 3038, chance = 18750}, -- green gem
+	{id = 820, chance = 12500}, -- lightning boots
+	{id = 825, chance = 18750}, -- lightning robe
+	{id = 20282, chance = 12500}, -- nightmare hook
+	{id = 20274, chance = 100000, unique = true}, -- nightmare horn
+	{id = 3035, chance = 93750, maxCount = 20}, -- platinum coin
+	{id = 20277, chance = 6250}, -- psychedelic tapestry
+	{id = 16126, chance = 6250, maxCount = 3}, -- red crystal fragment
+	{id = 3098, chance = 6250}, -- ring of healing
+	{id = 5741, chance = 6250}, -- skull helmet
+	{id = 3554, chance = 6250}, -- steel boots
+	{id = 7643, chance = 31250, maxCount = 8}, -- ultimate health potion
+	{id = 20264, chance = 81250, maxCount = 3}, -- unrealized dream
+	{id = 16120, chance = 18750, maxCount = 5} -- violet crystal shard
 }
 
 monster.attacks = {
-	{name ="melee", interval = 2000, chance = 100, skill = 390, attack = 500},
+	{name ="melee", interval = 2000, chance = 100, skill = 392, attack = 500},
 	{name ="omrafir wave", interval = 2000, chance = 17, minDamage = -500, maxDamage = -1000, target = false},
 	{name ="omrafir beam", interval = 2000, chance = 15, minDamage = -7000, maxDamage = -10000, target = false},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -1000, maxDamage = -3000, length = 10, spread = 3, effect = CONST_ME_FIREATTACK, target = false},

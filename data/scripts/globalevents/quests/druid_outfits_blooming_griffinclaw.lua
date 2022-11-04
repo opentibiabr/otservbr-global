@@ -1,8 +1,9 @@
 local flowerPosition = Position(32024, 32830, 4)
 
 local function decayFlower()
-	local item = Tile(flowerPosition):getItemById(5659)
-	if item then
+	local tile = Tile(flowerPosition)
+	local item = tile:getItemById(5658)
+	if tile and item then
 		item:transform(5687)
 	end
 end
@@ -15,7 +16,7 @@ local function bloom()
 
 	local item = Tile(flowerPosition):getItemById(5687)
 	if item then
-		item:transform(5659)
+		item:transform(5658)
 		flowerPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
 	end
 
@@ -25,6 +26,7 @@ local function bloom()
 end
 
 local druidOutfit = GlobalEvent("blooming griffinclaw")
+
 function druidOutfit.onStartup()
 	bloom()
 	return true

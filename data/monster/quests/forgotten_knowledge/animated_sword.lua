@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "an animated sword"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 26895
+	lookTypeEx = 24227
 }
 
 monster.health = 2000
@@ -13,7 +13,6 @@ monster.race = "fire"
 monster.corpse = 0
 monster.speed = 360
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

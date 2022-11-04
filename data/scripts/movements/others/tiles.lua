@@ -1,5 +1,5 @@
-local increasing = {[416] = 417, [426] = 425, [446] = 447, [3216] = 3217, [3202] = 3215, [11062] = 11063}
-local decreasing = {[417] = 416, [425] = 426, [447] = 446, [3217] = 3216, [3215] = 3202, [11063] = 11062}
+local increasing = {[419] = 420, [431] = 430, [452] = 453, [563] = 564, [549] = 562, [10145] = 10146}
+local decreasing = {[420] = 419, [430] = 431, [453] = 452, [564] = 563, [562] = 549, [10146] = 10145}
 
 -- onStepIn
 local tiles = MoveEvent()
@@ -38,7 +38,7 @@ function tiles.onStepIn(creature, item, position, fromPosition)
 
 			player:sendTextMessage(MESSAGE_FAILURE, "Your depot contains " .. depotItems .. " item" .. (depotItems > 1 and "s." or ".") .. "\
 			Your supply stash contains " .. player:getStashCount() .. " item" .. (player:getStashCount()	 > 1 and "s." or "."))
-			player:setSpecialContainersAvailable(true, true)
+			player:setSpecialContainersAvailable(true, true, true)
 			return true
 		end
 	end
@@ -72,7 +72,7 @@ function tiles.onStepOut(creature, item, position, fromPosition)
 	end
 
 	item:transform(decreasing[item.itemid])
-	player:setSpecialContainersAvailable(false, false)
+	player:setSpecialContainersAvailable(false, false, false)
 	return true
 end
 

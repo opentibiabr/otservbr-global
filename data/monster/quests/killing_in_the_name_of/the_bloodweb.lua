@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 7344
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 20000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 60,
@@ -65,17 +64,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7589, chance = 100000},
-	{id = 5879, chance = 50000},
-	{id = 7902, chance = 33333},
-	{id = 7896, chance = 33333},
-	{id = 11306, chance = 20000},
-	{id = 7437, chance = 20000},
-	{id = 5801, chance = 7692},
-	{id = 2476, chance = 7692},
-	{id = 2477, chance = 5555},
-	{id = 7290, chance = 3703},
-	{id = 2169, chance = 3703}
+	{id = 237, chance = 100000}, -- strong mana potion
+	{id = 5879, chance = 50000}, -- spider silk
+	{id = 829, chance = 33333}, -- glacier mask
+	{id = 823, chance = 33333}, -- glacier kilt
+	{id = 10389, chance = 20000}, -- sai
+	{id = 7437, chance = 20000}, -- sapphire hammer
+	{id = 5801, chance = 7692}, -- jewelled backpack
+	{id = 3370, chance = 7692}, -- knight armor
+	{id = 3371, chance = 5555}, -- knight legs
+	{id = 7290, chance = 3703}, -- shard
+	{id = 3053, chance = 3703} -- time ring
 }
 
 monster.attacks = {

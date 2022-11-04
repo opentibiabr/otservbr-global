@@ -41,9 +41,9 @@ function doClearMissionArea()
 end
 
 local function removeStairs()
-	local stair = Tile(config.stairPosition):getItemById(3687)
+	local stair = Tile(config.stairPosition):getItemById(1977)
 	if stair then
-		stair:transform(3653)
+		stair:transform(1897)
 	end
 end
 
@@ -79,17 +79,19 @@ function click.onStepIn(creature, item, position, fromPosition)
 		end
 	end
 
-	if #players ~= #config.positions then
-		return true
-	end
-
 	for i = 1, #players do
 		players[i]:say('A clicking sound tatters the silence.', TALKTYPE_MONSTER_SAY)
 	end
 
-	local stair = Tile(config.stairPosition):getItemById(3653)
+	if #players ~= #config.positions then
+		return true
+	end
+
+	player:say("The army is complete again. You hear a hatch opening elsewhere, followed by a grinding sound.", TALKTYPE_MONSTER_SAY, false, 0, Position(33261, 31081, 8))
+
+	local stair = Tile(config.stairPosition):getItemById(1897)
 	if stair then
-		stair:transform(3687)
+		stair:transform(1977)
 	end
 	Game.setStorageValue(Storage.ChildrenoftheRevolution.Mission05, 1)
 
@@ -102,5 +104,7 @@ function click.onStepIn(creature, item, position, fromPosition)
 end
 
 click:type("stepin")
-click:aid(8014)
+for index, value in pairs(config.positions) do
+	click:position(value)
+end
 click:register()

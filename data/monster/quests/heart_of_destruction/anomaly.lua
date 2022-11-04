@@ -5,9 +5,9 @@ monster.description = "Anomaly"
 monster.experience = 50000
 monster.outfit = {
 	lookType = 876,
-	lookHead = 19,
-	lookBody = 98,
-	lookLegs = 19,
+	lookHead = 38,
+	lookBody = 79,
+	lookLegs = 76,
 	lookFeet = 79,
 	lookAddons = 1,
 	lookMount = 0
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 290000
 monster.maxHealth = 290000
 monster.race = "venom"
-monster.corpse = 26220
+monster.corpse = 23564
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -70,40 +69,40 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 25377, chance = 100000, maxCount = 4},
-	{id = 26165, chance = 100000},
-	{id = 26166, chance = 100000},
-	{id = 2148, chance = 100000, maxCount = 200},
-	{id = 2152, chance = 100000, maxCount = 30},
-	{id = 18413, chance = 8000, maxCount = 3},
-	{id = 18414, chance = 8000, maxCount = 3},
-	{id = 18415, chance = 8000, maxCount = 3},
-	{id = 2150, chance = 8000, maxCount = 10},
-	{id = 2145, chance = 8000, maxCount = 10},
-	{id = 9970, chance = 8000, maxCount = 10},
-	{id = 7590, chance = 8000, maxCount = 10},
-	{id = 8472, chance = 8000, maxCount = 5},
-	{id = 8473, chance = 8000, maxCount = 5},
-	{id = 26201, chance = 8000, maxCount = 5},
-	{id = 2154, chance = 8000},
-	{id = 2158, chance = 6000},
-	{id = 2155, chance = 6000},
-	{id = 26198, chance = 3500},-- collar of blue plasma
-	{id = 26185, chance = 3500},
-	{id = 26187, chance = 3500},
-	{id = 26167, chance = 8000},
-	{id = 26175, chance = 8000},
-	{id = 18450, chance = 4000, unique = true},
-	{id = 7901, chance = 4000},
-	{id = 7427, chance = 3000},
-	{id = 7451, chance = 3000},
-	{id = 8901, chance = 3000},
-	{id = 7895, chance = 2500},
-	{id = 7898, chance = 2500},
-	{id = 26130, chance = 1600, unique = true},
-	{id = 26133, chance = 1600, unique = true},
-	{id = 6553, chance = 1600, unique = true},
-	{id = 7633, chance = 1600, maxCount = 3}
+	{id = 22721, chance = 100000, maxCount = 4}, -- gold token
+	{id = 23509, chance = 100000}, -- mysterious remains
+	{id = 23510, chance = 100000}, -- odd organ
+	{id = 3031, chance = 100000, maxCount = 200}, -- gold coin
+	{id = 3035, chance = 100000, maxCount = 30}, -- platinum coin
+	{id = 16119, chance = 8000, maxCount = 3}, -- blue crystal shard
+	{id = 16120, chance = 8000, maxCount = 3}, -- violet crystal shard
+	{id = 16121, chance = 8000, maxCount = 3}, -- green crystal shard
+	{id = 3033, chance = 8000, maxCount = 10}, -- small amethyst
+	{id = 3028, chance = 8000, maxCount = 10}, -- small diamond
+	{id = 9057, chance = 8000, maxCount = 10}, -- small topaz
+	{id = 238, chance = 8000, maxCount = 10}, -- great mana potion
+	{id = 7642, chance = 8000, maxCount = 5}, -- great spirit potion
+	{id = 7643, chance = 8000, maxCount = 5}, -- ultimate health potion
+	{id = 23545, chance = 8000, maxCount = 5}, -- energy drink
+	{id = 3037, chance = 8000}, -- yellow gem
+	{id = 3041, chance = 6000}, -- blue gem
+	{id = 3038, chance = 6000}, -- green gem
+	{id = 23542, chance = 3500}, -- collar of blue plasma
+	{id = 23529, chance = 3500}, -- ring of blue plasma
+	{id = 23531, chance = 3500}, -- ring of green plasma
+	{id = 23511, chance = 8000}, -- curious matter
+	{id = 23519, chance = 8000}, -- frozen lightning
+	{id = 16160, chance = 4000, unique = true}, -- crystalline sword
+	{id = 828, chance = 4000}, -- lightning headband
+	{id = 7427, chance = 3000}, -- chaos mace
+	{id = 7451, chance = 3000}, -- shadow sceptre
+	{id = 8073, chance = 3000}, -- spellbook of warding
+	{id = 822, chance = 2500}, -- lightning legs
+	{id = 825, chance = 2500}, -- lightning robe
+	{id = 23474, chance = 1600, unique = true}, -- tiara of power
+	{id = 23477, chance = 1600, unique = true}, -- void boots
+	{id = 6553, chance = 1600, unique = true}, -- ruthless axe
+	{id = 282, chance = 1600, maxCount = 3} -- giant shimmering pearl (brown)
 }
 
 monster.attacks = {

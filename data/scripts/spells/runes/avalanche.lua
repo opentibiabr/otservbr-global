@@ -19,9 +19,8 @@ function rune.onCastSpell(creature, var, isHotkey)
 end
 
 rune:group("attack")
-rune:id(115)
-rune:name("Avalanche")
-rune:runeId(2274)
+rune:name("avalanche rune")
+rune:runeId(3161)
 rune:allowFarUse(true)
 rune:charges(4)
 rune:level(30)

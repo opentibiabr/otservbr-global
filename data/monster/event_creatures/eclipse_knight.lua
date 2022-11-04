@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 45000
 monster.maxHealth = 45000
 monster.race = "undead"
-monster.corpse = 6328
+monster.corpse = 6327
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,7 +61,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Midnight Shard", chance = 25000}
+	{name = "midnight shard", chance = 25000}
 }
 
 monster.attacks = {

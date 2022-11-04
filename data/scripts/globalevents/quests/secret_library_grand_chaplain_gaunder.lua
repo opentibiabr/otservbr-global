@@ -26,8 +26,7 @@ function chaplaingaunder.onThink(interval, lastExecution)
         return true
     end
 
-    local boss =
-    Game.createMonster(config.monsterName, config.bossPosition, true, true)
+    local boss = Game.createMonster(config.monsterName, config.bossPosition, true, true)
     boss:setReward(true)
     return true
 end

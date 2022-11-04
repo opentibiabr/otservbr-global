@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6006
 monster.speed = 370
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -65,8 +64,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 40000, maxCount = 98},
-	{id = 8752, chance = 100000}
+	{id = 3031, chance = 40000, maxCount = 98}, -- gold coin
+	{id = 7924, chance = 100000} -- ring of the count
 }
 
 monster.attacks = {

@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 5000
 monster.maxHealth = 5000
 monster.race = "blood"
-monster.corpse = 11316
+monster.corpse = 10399
 monster.speed = 336
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -79,19 +78,18 @@ monster.voices = {
 monster.loot = {
 	{name = "ring of the sky", chance = 370},
 	{name = "small ruby", chance = 6910, maxCount = 5},
-	{name = "gold coin", chance = 41000, maxCount = 100},
-	{name = "gold coin", chance = 58000, maxCount = 100},
+	{name = "gold coin", chance = 100000, maxCount = 200},
 	{name = "platinum coin", chance = 25510, maxCount = 5},
 	{name = "green gem", chance = 970},
 	{name = "wand of inferno", chance = 1660},
 	{name = "meat", chance = 30400},
 	{name = "great mana potion", chance = 4970},
 	{name = "focus cape", chance = 1450},
-	{name = "Zaoan shoes", chance = 1980},
+	{name = "zaoan shoes", chance = 1980},
 	{name = "weaver's wandtip", chance = 19790},
 	{name = "draken trophy", chance = 10},
 	{name = "spellweaver's robe", chance = 620},
-	{name = "Zaoan robe", chance = 770},
+	{name = "zaoan robe", chance = 770},
 	{name = "luminous orb", chance = 1980},
 	{name = "draken sulphur", chance = 3930},
 	{name = "harness", chance = 30},
@@ -104,7 +102,7 @@ monster.attacks = {
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_FIREDAMAGE, minDamage = -100, maxDamage = -250, range = 7, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_ENERGYDAMAGE, minDamage = -150, maxDamage = -300, range = 7, shootEffect = CONST_ANI_ENERGY, effect = CONST_ME_ENERGYHIT, target = true},
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_EARTHDAMAGE, minDamage = -200, maxDamage = -380, radius = 4, effect = CONST_ME_POFF, target = true},
-	{name ="soulfire", interval = 2000, chance = 10, target = false},
+	{name ="soulfire rune", interval = 2000, chance = 10, target = false},
 	-- poison
 	{name ="condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -280, maxDamage = -360, shootEffect = CONST_ANI_POISON, target = true}
 }
@@ -126,7 +124,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = -10},
 	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 75}
+	{type = COMBAT_DEATHDAMAGE , percent = 80}
 }
 
 monster.immunities = {

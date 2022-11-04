@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 435
 monster.maxHealth = 435
 monster.race = "blood"
-monster.corpse = 7740
+monster.corpse = 656
 monster.speed = 204
 monster.manaCost = 695
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -46,13 +45,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 95,
@@ -80,7 +79,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 82920, maxCount = 70},
-	{name = "club ring", chance = 90},
+	{id = 3093, chance = 90}, -- club ring
 	{name = "battle axe", chance = 5450},
 	{name = "double axe", chance = 880},
 	{name = "battle hammer", chance = 5200},
@@ -89,7 +88,7 @@ monster.loot = {
 	{name = "plate shield", chance = 2000},
 	{name = "battle shield", chance = 6190},
 	{name = "meat", chance = 49950},
-	{id = 7398, chance = 140},
+	{id = 7398, chance = 140}, -- cyclops trophy
 	{name = "spiked squelcher", chance = 150},
 	{name = "strong health potion", chance = 390},
 	{name = "cyclops toe", chance = 10280}
@@ -115,7 +114,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 1},
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
 	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 

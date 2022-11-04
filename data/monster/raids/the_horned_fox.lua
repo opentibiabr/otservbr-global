@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "the Horned Fox"
 monster.experience = 300
 monster.outfit = {
-	lookType = 29,
+	lookType = 202,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5983
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 6
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,10 +56,13 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Minotaur Archer", chance = 13, interval = 1000, max = 2},
-	{name = "Minotaur Guard", chance = 13, interval = 1000, max = 2},
-	{name = "Minotaur Mage", chance = 13, interval = 1000, max = 2}
+monster.summon = {
+	maxSummons = 6,
+	summons = {
+		{name = "Minotaur Archer", chance = 13, interval = 1000, count = 2},
+		{name = "Minotaur Guard", chance = 13, interval = 1000, count = 2},
+		{name = "Minotaur Mage", chance = 13, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -73,19 +75,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 5804, chance = 100000},
-	{id = 2148, chance = 96000, maxCount = 99},
-	{id = 5878, chance = 96000},
-	{id = 12428, chance = 92590, maxCount = 2},
-	{id = 12438, chance = 85000},
-	{id = 7363, chance = 48000, maxCount = 14},
-	{id = 2465, chance = 25000},
-	{id = 2666, chance = 18000, maxCount = 2},
-	{id = 2513, chance = 14000},
-	{id = 2502, chance = 5000},
-	{id = 2580, chance = 7410},
-	{id = 7588, chance = 7410},
-	{id = 2387, chance = 3700}
+	{id = 5804, chance = 100000}, -- nose ring
+	{id = 3031, chance = 96000, maxCount = 99}, -- gold coin
+	{id = 5878, chance = 96000}, -- minotaur leather
+	{id = 11472, chance = 92590, maxCount = 2}, -- minotaur horn
+	{id = 11482, chance = 85000}, -- piece of warrior armor
+	{id = 7363, chance = 48000, maxCount = 14}, -- piercing bolt
+	{id = 3359, chance = 25000}, -- brass armor
+	{id = 3577, chance = 18000, maxCount = 2}, -- meat
+	{id = 3413, chance = 14000}, -- battle shield
+	{id = 3396, chance = 5000}, -- dwarven helmet
+	{id = 3483, chance = 7410}, -- fishing rod
+	{id = 236, chance = 7410}, -- strong health potion
+	{id = 3275, chance = 3700} -- double axe
 }
 
 monster.attacks = {

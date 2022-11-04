@@ -34,7 +34,6 @@ monster.race = "venom"
 monster.corpse = 5989
 monster.speed = 320
 monster.manaCost = 280
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,

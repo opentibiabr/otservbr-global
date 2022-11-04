@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 5972
 monster.speed = 146
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -37,7 +36,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -61,16 +60,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2230, chance = 49870},
-	{id = 2511, chance = 2920},
-	{id = 2148, chance = 100000, maxCount = 5},
-	{id = 2388, chance = 4770},
-	{id = 2398, chance = 4770},
-	{id = 12437, chance = 9280},
-	{id = 2484, chance = 2920},
-	{id = 2376, chance = 6100},
-	{id = 2050, chance = 10610},
-	{id = 2473, chance = 3980}
+	{id = 3115, chance = 49870}, -- bone
+	{id = 3411, chance = 2920}, -- brass shield
+	{id = 3031, chance = 100000, maxCount = 5}, -- gold coin
+	{id = 3276, chance = 4770}, -- hatchet
+	{id = 3286, chance = 4770}, -- mace
+	{id = 11481, chance = 9280}, -- pelvis bone
+	{id = 3378, chance = 2920}, -- studded armor
+	{id = 3264, chance = 6100}, -- sword
+	{id = 2920, chance = 10610}, -- torch
+	{id = 3367, chance = 3980} -- viking helmet
 }
 
 monster.attacks = {

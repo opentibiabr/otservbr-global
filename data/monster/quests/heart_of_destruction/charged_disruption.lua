@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a charged disruption"
 monster.experience = 400
 monster.outfit = {
-	lookTypeEx = 1387
+	lookTypeEx = 1949
 }
 
 monster.health = 128000
@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 360
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -34,7 +33,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,

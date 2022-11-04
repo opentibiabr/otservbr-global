@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 70
 monster.maxHealth = 70
 monster.race = "blood"
-monster.corpse = 19707
+monster.corpse = 17427
 monster.speed = 120
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -48,7 +47,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -78,12 +77,12 @@ monster.loot = {
 	{name = "gold coin", chance = 72000, maxCount = 15},
 	{name = "gold coin", chance = 72000, maxCount = 15},
 	{name = "mace", chance = 3780},
-	{id = 2120, chance = 5190},-- rope
+	{id = 3003, chance = 5190}, -- rope
 	{name = "bow", chance = 740},
 	{name = "brass helmet", chance = 2180},
 	{name = "arrow", chance = 7890, maxCount = 3},
 	{name = "health potion", chance = 1480},
-	{id = 2419, chance = 490}-- scimitar
+	{id = 3307, chance = 490} -- scimitar
 }
 
 monster.attacks = {

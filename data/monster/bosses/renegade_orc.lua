@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6001
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,21 +64,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2667, chance = 30000},
-	{id = 2148, chance = 28000, maxCount = 35},
-	{id = 12435, chance = 19000},
-	{id = 2510, chance = 10000},
-	{id = 2410, chance = 9850, maxCount = 4},
-	{id = 2789, chance = 9650},
-	{id = 2207, chance = 3920},
-	{id = 2397, chance = 2800},
-	{id = 7378, chance = 2600},
-	{id = 2419, chance = 2100},
-	{id = 11113, chance = 890},
-	{id = 2413, chance = 830},
-	{id = 7618, chance = 550},
-	{id = 2647, chance = 420},
-	{id = 2475, chance = 160}
+	{id = 3578, chance = 30000}, -- fish
+	{id = 3031, chance = 28000, maxCount = 35}, -- gold coin
+	{id = 11479, chance = 19000}, -- orc leather
+	{id = 3410, chance = 10000}, -- plate shield
+	{id = 3298, chance = 9850, maxCount = 4}, -- throwing knife
+	{id = 3725, chance = 9650}, -- brown mushroom
+	{id = 3091, chance = 3920}, -- sword ring
+	{id = 3285, chance = 2800}, -- longsword
+	{id = 7378, chance = 2600}, -- royal spear
+	{id = 3307, chance = 2100}, -- scimitar
+	{id = 10196, chance = 890}, -- orc tooth
+	{id = 3301, chance = 830}, -- broadsword
+	{id = 266, chance = 550}, -- health potion
+	{id = 3557, chance = 420}, -- plate legs
+	{id = 3369, chance = 160} -- warrior helmet
 }
 
 monster.attacks = {

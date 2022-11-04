@@ -1,34 +1,34 @@
 local config = {
 	[2246] = {
-		[1] = {pos = Position(32763, 32292, 14), id = 1026},
-		[2] = {pos = Position(32762, 32292, 14), id = 1026},
-		[3] = {pos = Position(32761, 32292, 14), id = 1026}
+		[1] = {pos = Position(32763, 32292, 14), id = 1271},
+		[2] = {pos = Position(32762, 32292, 14), id = 1271},
+		[3] = {pos = Position(32761, 32292, 14), id = 1271}
 	},
 	[2247] = {
-		[1] = {pos = Position(32760, 32289, 14), id = 1025},
-		[2] = {pos = Position(32760, 32290, 14), id = 1025},
-		[3] = {pos = Position(32760, 32291, 14), id = 1025},
-		[4] = {pos = Position(32760, 32292, 14), id = 1030}
+		[1] = {pos = Position(32760, 32289, 14), id = 1270},
+		[2] = {pos = Position(32760, 32290, 14), id = 1270},
+		[3] = {pos = Position(32760, 32291, 14), id = 1270},
+		[4] = {pos = Position(32760, 32292, 14), id = 1275}
 	},
 	[2248] = {
-		[1] = {pos = Position(32764, 32292, 14), id = 1029},
-		[2] = {pos = Position(32764, 32291, 14), id = 1025},
-		[3] = {pos = Position(32764, 32290, 14), id = 1025},
-		[4] = {pos = Position(32764, 32289, 14), id = 1025}
+		[1] = {pos = Position(32764, 32292, 14), id = 1274},
+		[2] = {pos = Position(32764, 32291, 14), id = 1270},
+		[3] = {pos = Position(32764, 32290, 14), id = 1270},
+		[4] = {pos = Position(32764, 32289, 14), id = 1270}
 	},
 	[2249] = {
 		[1] = {pos = Position(32760, 32288, 14), id = 1027},
-		[2] = {pos = Position(32761, 32288, 14), id = 1026},
-		[3] = {pos = Position(32762, 32288, 14), id = 1026},
-		[4] = {pos = Position(32763, 32288, 14), id = 1026},
-		[5] = {pos = Position(32764, 32288, 14), id = 1028}
+		[2] = {pos = Position(32761, 32288, 14), id = 1271},
+		[3] = {pos = Position(32762, 32288, 14), id = 1271},
+		[4] = {pos = Position(32763, 32288, 14), id = 1271},
+		[5] = {pos = Position(32764, 32288, 14), id = 1273}
 	}
 }
 
 local function revertLever(position)
-	local leverItem = Tile(position):getItemById(1946)
+	local leverItem = Tile(position):getItemById(2773)
 	if leverItem then
-		leverItem:transform(1945)
+		leverItem:transform(2772)
 	end
 end
 
@@ -39,11 +39,11 @@ function dreamerWalls.onUse(player, item, fromPosition, target, toPosition, isHo
 		return true
 	end
 
-	if item.itemid ~= 1945 then
+	if item.itemid ~= 2772 then
 		return false
 	end
 
-	item:transform(1946)
+	item:transform(2773)
 	addEvent(revertLever, 8 * 1000, toPosition)
 
 	local wallItem

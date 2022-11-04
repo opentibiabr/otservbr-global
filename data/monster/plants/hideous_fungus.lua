@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 4600
 monster.maxHealth = 4600
 monster.race = "venom"
-monster.corpse = 17428
+monster.corpse = 16083
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -71,8 +70,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "humorless fungus", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "humorless fungus", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -131,7 +133,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 15},
 	{type = COMBAT_HOLYDAMAGE , percent = 5},
-	{type = COMBAT_DEATHDAMAGE , percent = 1}
+	{type = COMBAT_DEATHDAMAGE , percent = 35}
 }
 
 monster.immunities = {

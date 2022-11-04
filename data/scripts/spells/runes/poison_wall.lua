@@ -12,9 +12,8 @@ function rune.onCastSpell(creature, var, isHotkey)
 end
 
 rune:group("attack")
-rune:id(32)
-rune:name("Poison Wall")
-rune:runeId(2289)
+rune:name("poison wall rune")
+rune:runeId(3176)
 rune:allowFarUse(true)
 rune:setPzLocked(true)
 rune:charges(4)

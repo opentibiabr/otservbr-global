@@ -5,45 +5,50 @@ Look README.md for look the reserved action/unique
 ]]
 QuestDoorAction = {
 	-- The queens of the banshee door
-	[Storage.Quest.TheQueenOfTheBanshees.BansheeDoor] = {
-		itemId = 5114,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.BansheeDoor] = {
+		itemId = 5113,
 		itemPos = {
 			{x = 32246, y = 31861, z = 14},
 			{x = 32246, y = 31862, z = 14}
 		}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FirstSealDoor] = {
-		itemId = 5105,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FirstSealDoor] = {
+		itemId = 5104,
 		itemPos = {{x = 32223, y = 31872, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.SecondSealDoor] = {
-		itemId = 5105,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.SecondSealDoor] = {
+		itemId = 5104,
 		itemPos = {{x = 32223, y = 31875, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.ThirdSealDoor] = {
-		itemId = 5105,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.ThirdSealDoor] = {
+		itemId = 5104,
 		itemPos = {{x = 32223, y = 31878, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FourthSealDoor] = {
-		itemId = 5105,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FourthSealDoor] = {
+		itemId = 5104,
 		itemPos = {{x = 32223, y = 31881, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.FifthSealDoor] = {
-		itemId = 5105,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.FifthSealDoor] = {
+		itemId = 5104,
 		itemPos = {{x = 32223, y = 31884, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.SixthSealDoor] = {
-		itemId = 5105,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.SixthSealDoor] = {
+		itemId = 5104,
 		itemPos = {{x = 32223, y = 31887, z = 14}}
 	},
-	[Storage.Quest.TheQueenOfTheBanshees.LastSealDoor] = {
-		itemId = 5105,
+	[Storage.Quest.U7_2.TheQueenOfTheBanshees.LastSealDoor] = {
+		itemId = 5104,
 		itemPos = {{x = 32223, y = 31890, z = 14}}
 	},
 	-- Sams old backpack door
 	[Storage.SamsOldBackpackDoor] = {
 		itemId = false,
 		itemPos = {{x = 32455, y = 31967, z = 14}}
+	},
+	-- To Outfox a Fox Quest, mining helmet door
+	[Storage.toOutfoxAFoxQuest] = {
+		itemId = false,
+		itemPos = {{x = 32467, y = 31969, z = 5}}
 	},
 	-- Edron
 	[Storage.Kilmaresh.Sixth.Favor] = {
@@ -168,7 +173,11 @@ QuestDoorAction = {
 	},
 	[Storage.DjinnWar.MaridFaction.DoorToEfreetTerritory] = {
 		itemId = false,
-		itemPos = {{x = 33034, y = 32620, z = 6}}
+		itemPos = {
+			{x = 33034, y = 32620, z = 6},
+			{x = 32869, y = 31105, z = 7},
+			{x = 32869, y = 31106, z = 7}
+		}
 	},
 	-- Efreet faction
 	[Storage.DjinnWar.EfreetFaction.DoorToLamp] = {
@@ -177,7 +186,11 @@ QuestDoorAction = {
 	},
 	[Storage.DjinnWar.EfreetFaction.DoorToMaridTerritory] = {
 		itemId = false,
-		itemPos = {{x = 33100, y = 32518, z = 7}}
+		itemPos = {
+			{x = 33100, y = 32518, z = 7},
+			{x = 32821, y = 31112, z = 7},
+			{x = 32822, y = 31112, z = 7}
+		}
 	},
 	-- Bigfoot burden quest
 	[Storage.BigfootBurden.DoorGoldenFruits] = {
@@ -303,7 +316,7 @@ QuestDoorAction = {
 		itemPos = {{x = 33184, y = 32665, z = 15}}
 	},
 	-- The ape city door
-	[Storage.TheApeCity.DworcDoor] = {
+	[Storage.TheApeCity.ChorDoor] = {
 		itemId = false,
 		itemPos = {{x = 32934, y = 32886, z = 7}}
 	},
@@ -323,11 +336,12 @@ QuestDoorAction = {
 			{x = 32861, y = 32507, z = 9}
 		}
 	},
-	[Storage.TheApeCity.Casks] = {
+	[Storage.TheApeCity.DworcDoor] = {
 		itemId = false,
 		itemPos = {{x = 32781, y = 32910, z = 8}}
 	},
-	[Storage.TheNewFrontier.Mission01] = {
+	-- The New Frontier Doors
+	[Storage.Quest.U8_54.TheNewFrontier.Mission01] = {
 		itemId = false,
 		itemPos = {
 			{x = 33060, y = 31529, z = 10},
@@ -341,7 +355,7 @@ QuestDoorAction = {
 			{x = 33062, y = 31529, z = 14}
 		}
 	},
-	[Storage.TheNewFrontier.Mission04] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission04] = {
 		itemId = false,
 		itemPos = {
 			{x = 33055, y = 31529, z = 10},
@@ -355,18 +369,28 @@ QuestDoorAction = {
 			{x = 33057, y = 31529, z = 14}
 		}
 	},
-	[Storage.TheNewFrontier.Mission07] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission07[1]] = {
 		itemId = false,
 		itemPos = {
 			{x = 33170, y = 31260, z = 10},
 			{x = 33171, y = 31260, z = 10}
 		}
 	},
-	[Storage.TheNewFrontier.Mission09] = {
+	[Storage.Quest.U8_54.TheNewFrontier.Mission09.ArenaDoor] = {
 		itemId = false,
 		itemPos = {
-			{x = 33061, y = 31025, z = 7},
-			{x = 33080, y = 31019, z = 2},
+			{x = 33080, y = 31019, z = 2}
+		}
+	},
+	[Storage.Quest.U8_54.TheNewFrontier.Mission09.RewardDoor] = {
+		itemId = false,
+		itemPos = {
+			{x = 33061, y = 31025, z = 7}
+		}
+	},
+	[Storage.Quest.U8_54.TheNewFrontier.Mission10.MagicCarpetDoor] = {
+		itemId = false,
+		itemPos = {
 			{x = 32990, y = 31547, z = 4}
 		}
 	},
@@ -572,6 +596,10 @@ QuestDoorAction = {
 		itemId = false,
 		itemPos = {{x = 33007, y = 31536, z = 10}}
 	},
+	[Storage.TibiaTales.AritosTaskDoor] = {
+		itemId = false,
+		itemPos = {{x = 33247, y = 32534, z = 8}}
+	},
 	-- THe shattered isles door
 	[Storage.TheShatteredIsles.TortoiseEggNargorDoor] = {
 		itemId = false,
@@ -590,8 +618,8 @@ QuestDoorAction = {
 		}
 	},
 	-- The annihilator door
-	[Storage.Quest.TheAnnihilator.Reward] = {
-		itemId = 5114,
+	[Storage.Quest.U7_24.TheAnnihilator.Reward] = {
+		itemId = 5113,
 		itemPos = {{x = 33216, y = 31671, z = 13}}
 	},
 	-- Svargrond arena door
@@ -658,20 +686,20 @@ QuestDoorAction = {
 		}
 	},
 	-- The dream courts door (Andrew Lyze npc)
-	[Storage.Quest.TheDreamCourts.AndrewDoor] = {
-		itemId = 22821,
+	[Storage.Quest.U12_00.TheDreamCourts.AndrewDoor] = {
+		itemId = 20450,
 		itemPos = {{x = 32761, y = 32630, z = 7}}
 	},
 	-- Kilmaresh doors
-	[Storage.Kilmaresh.First.Title] = {
-		itemId = false,
-		itemPos = {
-			{x = 33959, y = 31501, z = 4},
-			{x = 33375, y = 31346, z = 5},
-			{x = 33371, y = 31349, z = 4},
-			{x = 33376, y = 31335, z = 3}
-		}
-	},
+	-- [Storage.Kilmaresh.First.Title] = {
+		-- itemId = false,
+		-- itemPos = {
+			-- {x = 33959, y = 31501, z = 4},
+			-- {x = 33375, y = 31346, z = 5},
+			-- {x = 33371, y = 31349, z = 4},
+			-- {x = 33376, y = 31335, z = 3}
+		-- }
+	-- },
 	-- The Rookie Guard Quest - Mission 07: Attack!
 	-- The library vault door
 	[Storage.TheRookieGuard.LibraryDoor] = {
@@ -689,6 +717,100 @@ QuestDoorAction = {
 	[Storage.TheRookieGuard.AcademyDoor] = {
 		itemId = false,
 		itemPos = {{x = 32109, y = 32189, z = 8}}
+	},
+	-- Hidden Threats Quest
+	[Storage.Quest.U11_50.HiddenThreats.RatterDoor] = {
+		itemId = 1644,
+		itemPos = {{x = 33046, y = 32066, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.ServantDoor] = {
+		itemId = 1642,
+		itemPos = {{x = 33036, y = 32008, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor01] = {
+		itemId = 1642,
+		itemPos = {{x = 33025, y = 32008, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor02] = {
+		itemId = 1642,
+		itemPos = {{x = 33045, y = 32007, z = 12}}
+	},
+	[Storage.Quest.U11_50.HiddenThreats.CorymWorksDoor03] = {
+		itemId = 1644,
+		itemPos = {{x = 33001, y = 32047, z = 12}}
+	},
+	[Storage.SecretService.CGBMission06] = {
+		itemId = 6260,
+		itemPos = {{x = 32180, y = 31933, z = 11}}
+	},
+	[Storage.OutfitQuest.Knight.RamsaysHelmetDoor] = {
+		itemId = 5122,
+		itemPos = {{x = 32860, y = 32517, z = 11}}
+	},
+	[Storage.Quest.U8_54.TheNewFrontier.ZaoPalaceDoors] = {
+		itemId = 9874,
+		itemPos = {
+			{x = 33161, y = 31265, z = 10},
+			{x = 33161, y = 31266, z = 10}
+		}
+	},
+	[Storage.Quest.U8_54.AnUneasyAlliance.QuestDoor] = {
+		itemId = false,
+		itemPos = {{x = 33047, y = 31295, z = 7}}
+	},
+	[Storage.WrathoftheEmperor.Mission06] = {
+		itemId = false,
+		itemPos = {
+			{x = 33080, y = 31215, z = 7},
+			{x = 33086, y = 31199, z = 7},
+			{x = 33090, y = 31190, z = 7}
+		}
+	},
+	[Storage.WrathoftheEmperor.Mission07] = {
+		itemId = false,
+		itemPos = {
+			{x = 33073, y = 31170, z = 7},
+			{x = 33074, y = 31170, z = 7}
+		}
+	},
+	[Storage.WrathoftheEmperor.Mission09] = {
+		itemId = false,
+		itemPos = {{x = 33083, y = 31216, z = 8}}
+	},
+	[Storage.Quest.U12_20.GraveDanger.QuestLine] = {
+		itemId = false,
+		itemPos = {
+			{x = 33264, y = 31993, z = 7},
+			{x = 33197, y = 31684, z = 7},
+			{x = 32644, y = 32388, z = 8},
+			{x = 32191, y = 31823, z = 8},
+			{x = 32543, y = 31856, z = 6},
+			{x = 33376, y = 32798, z = 8},
+			{x = 33812, y = 31639, z = 10},
+			{x = 32959, y = 31541, z = 7},
+			{x = 33288, y = 32479, z = 9},
+			{x = 32355, y = 32163, z = 11},
+			{x = 32773, y = 31823, z = 8},
+			{x = 32012, y = 31565, z = 7}
+		}
+	},
+	[Storage.TheSecretLibrary.MiniBosses.PreceptorLazare] = {
+		itemId = 6260,
+		itemPos = {{x = 33376, y = 31335, z = 3}}
+	},
+	[Storage.TheSecretLibrary.LowerBastionAccess] = {
+		itemId = 6260,
+		itemPos = {
+			{x = 33371, y = 31349, z = 4},
+			{x = 33375, y = 31346, z = 5}
+		}
+	},
+	[Storage.TheSecretLibrary.UndergroundBastionAccess] = {
+		itemId = false,
+		itemPos = {
+			{x = 33366, y = 31343, z = 7},
+			{x = 33363, y = 31346, z = 7}
+		}
 	}
 }
 
@@ -697,7 +819,7 @@ QuestDoorUnique = {
 	-- Vocation doors
 	-- Sorcerer
 	[22001] = {
-		itemId = 12195,
+		itemId = 11239,
 		itemPos = {x = 32055, y = 31885, z = 6}
 	},
 	-- Druid
@@ -712,7 +834,12 @@ QuestDoorUnique = {
 	},
 	-- Knight
 	[22004] = {
-		itemId = 9279,
+		itemId = 8363,
 		itemPos = {x = 32069, y = 31885, z = 6}
+	},
+	-- Secret Service
+	[22005] = {
+		itemId = 17709,
+		itemPos = {x = 32908, y = 32112, z = 7}
 	}
 }

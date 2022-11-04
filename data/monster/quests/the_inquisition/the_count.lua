@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1250
 monster.maxHealth = 1250
 monster.race = "undead"
-monster.corpse = 8937
+monster.corpse = 8109
 monster.speed = 370
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Banshee", chance = 50, interval = 4000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Banshee", chance = 50, interval = 4000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -68,9 +70,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 40000, maxCount = 98},
-	{id = 8752, chance = 100000},
-	{id = 2391, chance = 2300}
+	{id = 3031, chance = 40000, maxCount = 98}, -- gold coin
+	{id = 7924, chance = 100000}, -- ring of the count
+	{id = 3279, chance = 2300} -- war hammer
 }
 
 monster.attacks = {

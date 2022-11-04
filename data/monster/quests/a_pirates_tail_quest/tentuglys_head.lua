@@ -4,16 +4,15 @@ local monster = {}
 monster.description = "a tentuglys head"
 monster.experience = 40000
 monster.outfit = {
-	lookTypeEx = 39940
+	lookTypeEx = 35105
 }
 
 monster.health = 0 --?
 monster.maxHealth = 0 --?
 monster.race = "blood"
-monster.corpse = 40435
+monster.corpse = 35600
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -53,26 +52,26 @@ monster.light = {
 }
 
 monster.loot = {
-	{name = "Crystal Coin", chance = 68480, maxCount =2},
-	{name = "Ultimate Health Potion", chance = 59780, maxCount =20},
-	{name = "Ultimate Mana Potion", chance = 59780, maxCount =20},
- 	{name = "Platinum Coin", chance = 23910, maxCount =10},
-	{name = "Ultimate Spirit Potion", chance = 23910, maxCount =10},
-	{name = "Mastermind Potion", chance = 19570, maxCount =5},
-	{name = "Berserk Potion", chance = 18480, maxCount =5},
-	{name = "Bullseye Potion", chance = 1630, maxCount =5},
-	{name = "Pirate Coin", chance = 15220, maxCount =50},
-	{name = "Small Treasure Chest", chance = 8700},
-	{name = "Golden Dustbin", chance = 6520},
-	{name = "Giant Amethyst", chance = 5430},
-	{name = "Giant Ruby", chance = 4350},
-	{name = "Tentugly's Eye", chance = 4350},
-	{name = "Tiara", chance = 4350},
-	{name = "Giant Topaz", chance = 3260},
-	{name = "Golden Skull", chance = 3260},
-	{name = "Golden Cheese Wedge", chance = 2170},
-	{name = "Tentacle of Tentugly", chance = 2170},
-	{name = "Plushie of Tentugly", chance = 1090}
+	{name = "crystal coin", chance = 68480, maxCount =2},
+	{name = "ultimate health potion", chance = 59780, maxCount =20},
+	{name = "ultimate mana potion", chance = 59780, maxCount =20},
+ 	{name = "platinum coin", chance = 23910, maxCount =10},
+	{name = "ultimate spirit potion", chance = 23910, maxCount =10},
+	{name = "mastermind potion", chance = 19570, maxCount =5},
+	{name = "berserk potion", chance = 18480, maxCount =5},
+	{name = "bullseye potion", chance = 1630, maxCount =5},
+	{name = "pirate coin", chance = 15220, maxCount =50},
+	{name = "small treasure chest", chance = 8700},
+	{name = "golden dustbin", chance = 6520},
+	{name = "giant amethyst", chance = 5430},
+	{name = "giant ruby", chance = 4350},
+	{name = "tentugly's eye", chance = 4350},
+	{name = "tiara", chance = 4350},
+	{name = "giant topaz", chance = 3260},
+	{name = "golden skull", chance = 3260},
+	{name = "golden cheese wedge", chance = 2170},
+	{name = "tentacle of tentugly", chance = 2170},
+	{name = "plushie of tentugly", chance = 1090}
 }
 
 monster.attacks = {

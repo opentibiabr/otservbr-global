@@ -1,9 +1,5 @@
 local essenceOfMalice = CreatureEvent("EssenceOfMalice")
 function essenceOfMalice.onKill(creature, target)
-	if not creature:isMonster() or creature:getMaster() then
-		return false
-	end
-
 	local boss = {"eshtaba the conjurer", "mezlon the defiler", "eliz the unyielding", "malkhar deathbringer", "dorokoll the mystic"}
 	local newBoss = 0
 	local fromPos = Position(33087, 31909, 15)
@@ -23,7 +19,7 @@ function essenceOfMalice.onKill(creature, target)
 			end
 		end
 	end
-	if newBoss == 1 then
+	if isInArray(boss, target:getName():lower()) and newBoss == 1 then
 		Game.createMonster("Essence Of Malice", Position(33098, 31920, 15))
 	end
 	return true

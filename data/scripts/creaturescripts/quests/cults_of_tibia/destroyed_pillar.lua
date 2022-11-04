@@ -34,7 +34,7 @@ function destroyedPillar.onKill(creature, target)
 					boss:remove()
 				end
 				Game.createMonster("Destroyed Pillar", position, true, true)
-				Game.createMonster("Eshtaba The Conjurer", newpos, true, true):registerEvent("essenceMalice")
+				Game.createMonster("Eshtaba The Conjurer", newpos, true, true)
 			elseif monsterName:find(death) then
 				newpos = {x = position.x, y = position.y + 1, z = position.z}
 				local boss = Tile(Position(newpos)):getTopCreature()
@@ -42,7 +42,7 @@ function destroyedPillar.onKill(creature, target)
 					boss:remove()
 				end
 				Game.createMonster("Destroyed Pillar", position, true, true)
-				Game.createMonster("Malkhar Deathbringer", newpos, true, true):registerEvent("essenceMalice")
+				Game.createMonster("Malkhar Deathbringer", newpos, true, true)
 			elseif monsterName:find(healing) then
 				newpos = {x = position.x, y = position.y -1, z = position.z}
 				local boss = Tile(Position(newpos)):getTopCreature()
@@ -50,7 +50,7 @@ function destroyedPillar.onKill(creature, target)
 					boss:remove()
 				end
 				Game.createMonster("Destroyed Pillar", position, true, true)
-				Game.createMonster("Mezlon The Defiler", newpos, true, true):registerEvent("essenceMalice")
+				Game.createMonster("Mezlon The Defiler", newpos, true, true)
 			elseif monsterName:find(protection) then
 				newpos = {x = position.x - 1, y = position.y , z = position.z}
 				local boss = Tile(Position(newpos)):getTopCreature()
@@ -58,7 +58,7 @@ function destroyedPillar.onKill(creature, target)
 					boss:remove()
 				end
 				Game.createMonster("Destroyed Pillar", position, true, true)
-				Game.createMonster("Eliz The Unyielding", newpos, true, true):registerEvent("essenceMalice")
+				Game.createMonster("Eliz The Unyielding", newpos, true, true)
 			elseif monsterName:find(draining) then
 				newpos = {x = position.x, y = position.y - 1, z = position.z}
 				local boss = Tile(Position(newpos)):getTopCreature()
@@ -66,7 +66,7 @@ function destroyedPillar.onKill(creature, target)
 					boss:remove()
 				end
 				Game.createMonster("Destroyed Pillar", position, true, true)
-				Game.createMonster("Dorokoll The Mystic", newpos, true, true):registerEvent("essenceMalice")
+				Game.createMonster("Dorokoll The Mystic", newpos, true, true)
 			end
 		end
 	end

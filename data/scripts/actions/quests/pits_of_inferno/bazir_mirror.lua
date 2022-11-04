@@ -23,7 +23,7 @@ function pitsOfInfernoBlackMirror.onUse(player, item, fromPosition, target, toPo
 		player:say('Beauty has to be rewarded! Muahahaha!', TALKTYPE_MONSTER_SAY)
 	end
 
-	local tapestry = Tile(useItem.fromPosition):getItemById(6434)
+	local tapestry = Tile(useItem.fromPosition):getItemById(6433)
 	if tapestry then
 		tapestry:moveTo(useItem.toPosition)
 	end

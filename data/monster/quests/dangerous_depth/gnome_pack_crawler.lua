@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 5000
 monster.maxHealth = 5000
 monster.race = "fire"
-monster.corpse = 17336
+monster.corpse = 15991
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 199}
+	{id = 3031, chance = 100000, maxCount = 199} -- gold coin
 }
 
 monster.defenses = {

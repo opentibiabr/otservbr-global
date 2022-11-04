@@ -5,9 +5,9 @@ monster.description = "an ice dragon"
 monster.experience = 2300
 monster.outfit = {
 	lookType = 947,
-	lookHead = 9,
+	lookHead = 0,
 	lookBody = 9,
-	lookLegs = 9,
+	lookLegs = 0,
 	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 2500
 monster.maxHealth = 2500
 monster.race = "undead"
-monster.corpse = 27853
+monster.corpse = 25185
 monster.speed = 212
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -64,10 +63,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 26449, chance = 3000},
-	{id = 2148, chance = 95070, maxCount = 200},
-	{id = 7902, chance = 2000},
-	{id = 2492, chance = 280}
+	{id = 3031, chance = 96850, maxCount = 216}, -- gold coin
+	{id = 3583, chance = 80020, maxCount = 2}, -- dragon ham
+	{id = 762, chance = 78200, maxCount = 10}, -- shiver arrow
+	{id = 238, chance = 40200, maxCount = 2}, -- great mana potion
+	{id = 3029, chance = 52100,}, -- small sapphire
+	{id = 24937, chance = 18680}, -- dragon blood
+	{id = 24938, chance = 11400}, -- dragon tongue
+	{id = 3051, chance = 49900}, -- energy ring
+	{id = 829, chance = 11900}, -- glacier mask
+	{id = 2903, chance = 21700}, -- golden mug
+	{id = 3067, chance = 21700}, -- hailstorm rod
+	{id = 7441, chance = 43400}, -- ice cube
+	{id = 815, chance = 540}, -- glacier amulet
+	{id = 3061, chance = 540}, -- life crystal
+	{id = 7290, chance = 1090}, -- shard
+	{id = 3386, chance = 330} -- dragon scale mail
 }
 
 monster.attacks = {

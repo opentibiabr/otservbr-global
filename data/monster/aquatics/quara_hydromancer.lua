@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6066
 monster.speed = 490
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -89,7 +88,7 @@ monster.loot = {
 	{name = "black pearl", chance = 3150},
 	{name = "great mana potion", chance = 2880},
 	{name = "fish fin", chance = 1410},
-	{name = "ring of healing", chance = 1218},
+	{id = 3098, chance = 1218}, -- ring of healing
 	{name = "wand of cosmic energy", chance = 980},
 	{name = "knight armor", chance = 230}
 }

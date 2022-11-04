@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 500
 monster.maxHealth = 500
 monster.race = "blood"
-monster.corpse = 21295
+monster.corpse = 18978
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -64,17 +63,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 21400, chance = 200},
-	{id = 2148, chance = 80000, maxCount = 100},
-	{id = 2148, chance = 70000, maxCount = 100},
-	{id = 21693, chance = 500},
-	{id = 21692, chance = 500},
-	{id = 2168, chance = 1000},
-	{id = 2145, chance = 7000},
-	{id = 2666, chance = 70000, maxCount = 4},
-	{id = 10609, chance = 70000},
-	{id = 2439, chance = 70000},
-	{id = 11192, chance = 70000}
+	{id = 19083, chance = 200}, -- silver raid token
+	{id = 3031, chance = 80000, maxCount = 100}, -- gold coin
+	{id = 3031, chance = 70000, maxCount = 100}, -- gold coin
+	{id = 19359, chance = 500}, -- horn
+	{id = 19358, chance = 500}, -- albino plate
+	{id = 3052, chance = 1000}, -- life ring
+	{id = 3028, chance = 7000}, -- small diamond
+	{id = 3577, chance = 70000, maxCount = 4}, -- meat
+	{id = 9692, chance = 70000}, -- lump of dirt
+	{id = 3327, chance = 70000}, -- daramian mace
+	{id = 10275, chance = 70000} -- carrion worm fang
 }
 
 monster.attacks = {

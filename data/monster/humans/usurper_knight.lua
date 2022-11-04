@@ -4,11 +4,11 @@ local monster = {}
 monster.description = "a usurper knight"
 monster.experience = 6900
 monster.outfit = {
-	lookType = 1317,
-	lookHead = 57,
-	lookBody = 38,
+	lookType = 1316,
+	lookHead = 76,
+	lookBody = 57,
 	lookLegs = 76,
-	lookFeet = 76,
+	lookFeet = 95,
 	lookAddons = 1,
 	lookMount = 0
 }
@@ -29,10 +29,8 @@ monster.Bestiary = {
 monster.health = 8200
 monster.maxHealth = 8200
 monster.race = "blood"
-monster.corpse = 38812
+monster.corpse = 33977
 monster.speed = 260
-monster.summonCost = 0
-monster.maxSummons = 0
 
 monster.faction = FACTION_LIONUSURPERS
 monster.enemyFactions = {FACTION_LION, FACTION_PLAYER}

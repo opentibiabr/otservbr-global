@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a furious troll"
 monster.experience = 185
 monster.outfit = {
-	lookType = 15,
+	lookType = 281,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 5960
 monster.speed = 180
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 2000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -68,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Mechanical Fighter", chance = 90, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Mechanical Fighter", chance = 90, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {

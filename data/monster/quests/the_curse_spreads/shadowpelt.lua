@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 5000
 monster.maxHealth = 5000
 monster.race = "blood"
-monster.corpse = 32065
+monster.corpse = 27722
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 2000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Werebear", chance = 20, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Werebear", chance = 20, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -79,7 +81,7 @@ monster.loot = {
 	{name = "small enchanted sapphire", chance = 13600000, maxCount = 2},
 	{name = "bear paw", chance = 13600000, maxCount = 2},
 	{name = "furry club", chance = 13600000},
-	{id = 281, chance = 5000},
+	{id = 281, chance = 5000}, -- giant shimmering pearl (green)
 	{name = "great health potion", chance = 13600000, maxCount = 5},
 	{name = "honeycomb", chance = 13600000, maxCount = 2},
 	{name = "spiked squelcher", chance = 13600000},
@@ -90,7 +92,7 @@ monster.loot = {
 	{name = "fur armor", chance = 550},
 	{name = "relic sword", chance = 550},
 	{name = "silver token", chance = 150},
-	{id = 24759, chance = 150},
+	{id = 22103, chance = 150}, -- werebear trophy
 	{name = "wolf backpack", chance = 100}
 }
 

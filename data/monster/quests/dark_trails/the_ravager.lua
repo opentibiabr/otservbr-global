@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "The Ravager"
 monster.experience = 14980
 monster.outfit = {
-	lookType = 87,
+	lookType = 91,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6031
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 16
 
 monster.changeTarget = {
 	interval = 5000,
@@ -62,10 +61,13 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Elder Mummy", chance = 9, interval = 2000, max = 4},
-	{name = "Canopic Jar", chance = 9, interval = 2000, max = 4},
-	{name = "Greater Canopic Jar", chance = 9, interval = 2000, max = 8}
+monster.summon = {
+	maxSummons = 16,
+	summons = {
+		{name = "Elder Mummy", chance = 9, interval = 2000, count = 4},
+		{name = "Canopic Jar", chance = 9, interval = 2000, count = 4},
+		{name = "Greater Canopic Jar", chance = 9, interval = 2000, count = 8}
+	}
 }
 
 monster.voices = {
@@ -74,12 +76,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 95000, maxCount = 243},
-	{id = 7590, chance = 10000, maxCount = 5},
-	{id = 7591, chance = 5000, maxCount = 5},
-	{id = 2152, chance = 37500, maxCount = 5},
-	{id = 2159, chance = 15000, maxCount = 5},
-	{id = 2440, chance = 5000}
+	{id = 3031, chance = 95000, maxCount = 243}, -- gold coin
+	{id = 238, chance = 10000, maxCount = 5}, -- great mana potion
+	{id = 239, chance = 5000, maxCount = 5}, -- great health potion
+	{id = 3035, chance = 37500, maxCount = 5}, -- platinum coin
+	{id = 3042, chance = 15000, maxCount = 5}, -- scarab coin
+	{id = 3328, chance = 5000} -- daramian waraxe
 }
 
 monster.attacks = {

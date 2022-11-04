@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 750
 monster.maxHealth = 750
 monster.race = "blood"
-monster.corpse = 7622
+monster.corpse = 270
 monster.speed = 168
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -103,8 +102,8 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = -10},
-	{type = COMBAT_EARTHDAMAGE, percent = 10},
+	{type = COMBAT_ENERGYDAMAGE, percent = -5},
+	{type = COMBAT_EARTHDAMAGE, percent = 75},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},

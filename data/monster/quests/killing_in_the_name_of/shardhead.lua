@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 7282
 monster.speed = 195
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -64,11 +63,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 99700, maxCount = 87},
-	{id = 7290, chance = 40000},
-	{id = 7588, chance = 100000},
-	{id = 10578, chance = 40000},
-	{id = 7441, chance = 80000}
+	{id = 3031, chance = 99700, maxCount = 87}, -- gold coin
+	{id = 7290, chance = 40000}, -- shard
+	{id = 236, chance = 100000}, -- strong health potion
+	{id = 9661, chance = 40000}, -- frosty heart
+	{id = 7441, chance = 80000} -- ice cube
 }
 
 monster.attacks = {

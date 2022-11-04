@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2000
 monster.maxHealth = 2000
 monster.race = "blood"
-monster.corpse = 27739
+monster.corpse = 25071
 monster.speed = 260
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -51,10 +50,10 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 4,
@@ -78,26 +77,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 27058, chance = 6000},
-	{id = 2144, chance = 2500},
-	{id = 27051, chance = 18000, maxCount = 2},
-	{id = 27053, chance = 15000},
-	{id = 2792, chance = 6800},
-	{id = 27060, chance = 4300},
-	{id = 2148, chance = 50320, maxCount = 150},
-	{id = 2152, chance = 80000, maxCount = 2},
-	{id = 27630, chance = 2800},
-	{id = 27054, chance = 20000},
-	{id = 2214, chance = 1300},
-	{id = 9822, chance = 4500},
-	{id = 2229, chance = 10000},
-	{id = 2147, chance = 4000},
-	{id = 2197, chance = 1500},
-	{id = 7589, chance = 15000},
-	{id = 27055, chance = 15000},
-	{id = 2188, chance = 2000},
-	{id = 8922, chance = 800},
-	{id = 2031, chance = 2000}
+	{id = 24390, chance = 6000}, -- ancient coin
+	{id = 3027, chance = 2500}, -- black pearl
+	{id = 24383, chance = 18000, maxCount = 2}, -- cave turnip
+	{id = 24385, chance = 15000}, -- cracked alabaster vase
+	{id = 3728, chance = 6800}, -- dark mushroom
+	{id = 24392, chance = 4300}, -- gemmed figurine
+	{id = 3031, chance = 50320, maxCount = 150}, -- gold coin
+	{id = 3035, chance = 80000, maxCount = 2}, -- platinum coin
+	{id = 24962, chance = 2800}, -- prismatic quartz
+	{id = 24386, chance = 20000}, -- rhino horn carving
+	{id = 3098, chance = 1300}, -- ring of healing
+	{id = 8908, chance = 4500}, -- slightly rusted helmet
+	{id = 3114, chance = 10000}, -- skull
+	{id = 3030, chance = 4000}, -- small ruby
+	{id = 3081, chance = 1500}, -- stone skin amulet
+	{id = 237, chance = 15000}, -- strong mana potion
+	{id = 24387, chance = 15000}, -- tarnished rhino figurine
+	{id = 3072, chance = 2000}, -- wand of decay
+	{id = 8094, chance = 800}, -- wand of voodoo
+	{id = 2901, chance = 2000} -- waterskin
 }
 
 monster.attacks = {
@@ -114,16 +113,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
+	{type = COMBAT_ENERGYDAMAGE, percent = -5},
 	{type = COMBAT_EARTHDAMAGE, percent = 40},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -20},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_ICEDAMAGE, percent = 20},
+	{type = COMBAT_HOLYDAMAGE , percent = 30},
+	{type = COMBAT_DEATHDAMAGE , percent = 15}
 }
 
 monster.immunities = {

@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 700
 monster.maxHealth = 700
 monster.race = "blood"
-monster.corpse = 21257
+monster.corpse = 18940
 monster.speed = 192
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -88,7 +87,7 @@ monster.loot = {
 	{name = "strong mana potion", chance = 5590},
 	{name = "spellbook of enlightenment", chance = 790},
 	{name = "book of necromantic rituals", chance = 9340},
-	{name = "red gem", chance = 710},
+	{id= 3039, chance = 710}, -- red gem
 	{name = "lancet", chance = 10680},
 	{name = "horoscope", chance = 7950},
 	{name = "blood tincture in a vial", chance = 15460},
@@ -113,15 +112,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 5},
+	{type = COMBAT_ENERGYDAMAGE, percent = 20},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = -10},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = 5},
-	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 
 monster.immunities = {

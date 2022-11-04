@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1950
 monster.maxHealth = 1950
 monster.race = "blood"
-monster.corpse = 8307
+monster.corpse = 949
 monster.speed = 480
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,10 +43,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -81,8 +80,8 @@ monster.loot = {
 	{name = "gold coin", chance = 30000, maxCount = 100},
 	{name = "gold coin", chance = 30000, maxCount = 36},
 	{name = "platinum coin", chance = 25000, maxCount = 3},
-	{name = "stealth ring", chance = 400},
-	{name = "ring of healing", chance = 1100},
+	{id = 3049, chance = 400}, -- stealth ring
+	{id = 3098, chance = 1100}, -- ring of healing
 	{name = "serpent sword", chance = 4200},
 	{name = "plate legs", chance = 7150},
 	{name = "dragon ham", chance = 60000, maxCount = 2},
@@ -113,7 +112,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -15},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
 	{type = COMBAT_ENERGYDAMAGE, percent = -5},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 30},

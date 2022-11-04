@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 80
 monster.maxHealth = 80
 monster.race = "blood"
-monster.corpse = 23817
+monster.corpse = 21446
 monster.speed = 130
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -37,7 +36,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -61,14 +60,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 23839, chance = 9450, maxCount = 10},
-	{id = 2148, chance = 100000, maxCount = 12},
-	{id = 20103, chance = 14500},
-	{id = 2120, chance = 5700},
-	{id = 2484, chance = 4950},
-	{id = 2526, chance = 2670},
-	{id = 20102, chance = 20250},
-	{id = 2787, chance = 18200, maxCount = 4}
+	{id = 21470, chance = 9450, maxCount = 10}, -- simple arrow
+	{id = 3031, chance = 100000, maxCount = 12}, -- gold coin
+	{id = 17823, chance = 14500}, -- piece of swampling wood
+	{id = 3003, chance = 5700}, -- rope
+	{id = 3378, chance = 4950}, -- studded armor
+	{id = 3426, chance = 2670}, -- studded shield
+	{id = 17822, chance = 20250}, -- swampling moss
+	{id = 3723, chance = 18200, maxCount = 4} -- white mushroom
 }
 
 monster.attacks = {

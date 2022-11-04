@@ -1,6 +1,6 @@
 local transformid = {
-	[9825] = 9826,
-	[9826] = 9825
+	[8911] = 8912,
+	[8912] = 8911
 }
 
 local geyser = {
@@ -113,18 +113,18 @@ end
 local function ativarGeyser(player)
 	local frompos = Position(33119, 31913, 15) -- Checagem
 	local topos = Position(33142, 31936, 15) -- Checagem
-	if(isPlayerInArea(frompos, topos)) then
+	if isPlayerInArea(frompos, topos) then
 		addEvent(function()
 			local rand = math.random(1,12)
 			local geyserPos = Position(geyser[rand])
-			local checar1 = Tile(Position(geyserPos)):getItemById(28868)
+			local checar1 = Tile(Position(geyserPos)):getItemById(25509)
 			if checar1 then
 				addEvent(function()
 					local player1 = Game.getPlayers()[1]
-					Game.createItem(28869, 1, geyserPos)
+					Game.createItem(25510, 1, geyserPos)
 					player1:say("SPLASH!", TALKTYPE_MONSTER_SAY, false, false, geyserPos)
 					addEvent(function()
-						local checar2 = Tile(Position(geyserPos)):getItemById(28869)
+						local checar2 = Tile(Position(geyserPos)):getItemById(25510)
 						if checar2 then
 						checar2:remove()
 						end
@@ -148,7 +148,7 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 	local convertTable = {}
 	item:transform(transformid[item:getId()])
 
-	if item:getActionId() == 5501 and item:getId() == 9826 then -- Leiden
+	if item:getActionId() == 5501 and item:getId() == 8912 then -- Leiden
 		if player:getPosition() == Position(33138, 31953, 15) then
 			local teleport = 0
 			for i = 31953, 31957, 1 do
@@ -193,7 +193,7 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 		kickerPlayerRoomAfferMin(convertTable, frompos, topos, Position(33121, 31951, 15), "You were kicked for exceeding the time limit within the boss room.", '', 60, true, ittable, blockmonsters)
 		end
 	end
-	if item:getActionId() == 5502 and item:getId() == 9826 then -- Leiden
+	if item:getActionId() == 5502 and item:getId() == 8912 then -- Leiden
 		if player:getPosition() == Position(33162, 31893, 15) then
 			local teleport = 0
 			for i = 31893, 31897, 1 do
@@ -233,8 +233,8 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 					player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 				end
 			end
-			transformMonster(28661, 1, "minotaur idol", Position(33157, 31910, 15), Position(33168, 31910, 15), 0)
-			transformMonster(28661, 1, "minotaur idol", Position(33158, 31921, 15), Position(33168, 31921, 15), 6)
+			transformMonster(25300, 1, "minotaur idol", Position(33157, 31910, 15), Position(33168, 31910, 15), 0)
+			transformMonster(25300, 1, "minotaur idol", Position(33158, 31921, 15), Position(33168, 31921, 15), 6)
 			addEvent(transformMonster, 13*15000, 3, 3, "Sphere Of Wrath", {}, {}, 0)
 		Game.createMonster("The False God", Position(33159, 31914, 15))
 		-- funçao
@@ -243,7 +243,7 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 	end
 
 	if item:getActionId() == 5500 then -- Essence of Malice
-		if player:getPosition() == Position(33095, 31943, 15) and item:getId() == 9826 then
+		if player:getPosition() == Position(33095, 31943, 15) and item:getId() == 8912 then
 			local teleport = 0
 			for i = 31943, 31947, 1 do
 				local newpos = Position(33095, i, 15)
@@ -288,62 +288,62 @@ function cultsOfTibiaLevers.onUse(player, item, fromPosition, itemEx, toPosition
 		Game.createMonster("Pillar of Protection", Position(33103, 31919, 15))
 		Game.createMonster("Pillar of Healing", Position(33101, 31925, 15))
 		Game.createMonster("Pillar of Draining", Position(33095, 31925, 15))
-		Game.createMonster("Dorokoll The Mystic STOP", Position(33095, 31924, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Eshtaba The Conjurer STOP", Position(33094, 31919, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Eliz The Unyielding STOP", Position(33102, 31919, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Mezlon The Defiler STOP", Position(33101, 31924, 15)):registerEvent("pilaresHealth")
-		Game.createMonster("Malkhar Deathbringer STOP", Position(33098, 31916, 15)):registerEvent("pilaresHealth")
+		Game.createMonster("Dorokoll The Mystic STOP", Position(33095, 31924, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Eshtaba The Conjurer STOP", Position(33094, 31919, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Eliz The Unyielding STOP", Position(33102, 31919, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Mezlon The Defiler STOP", Position(33101, 31924, 15)):registerEvent("HealthPillar")
+		Game.createMonster("Malkhar Deathbringer STOP", Position(33098, 31916, 15)):registerEvent("HealthPillar")
 		end
 	end
 
 	if item:getActionId() == 5503 then -- The Sinister Hermit
-	if player:getPosition() == Position(33127, 31892, 15) and item:getId() == 9826 then
-		local teleport = 0
-		for i = 31892, 31896, 1 do
-			local newpos = Position(33127, i, 15)
-			local nplayer = Tile(newpos):getTopCreature()
-			if nplayer and nplayer:isPlayer() then
-				teleport = teleport + 1
+		if player:getPosition() == Position(33127, 31892, 15) and item:getId() == 8912 then
+			local teleport = 0
+			for i = 31892, 31896, 1 do
+				local newpos = Position(33127, i, 15)
+				local nplayer = Tile(newpos):getTopCreature()
+				if nplayer and nplayer:isPlayer() then
+					teleport = teleport + 1
+				end
 			end
-		end
 
-		local frompos = Position(33119, 31913, 15) -- Checagem
-		local topos = Position(33142, 31936, 15) -- Checagem
+			local frompos = Position(33119, 31913, 15) -- Checagem
+			local topos = Position(33142, 31936, 15) -- Checagem
 
-		if(isPlayerInArea(frompos, topos)) then
-			player:sendCancelMessage('It looks like there is someone inside.')
-			return true
-		end
+			if isPlayerInArea(frompos, topos) then
+				player:sendCancelMessage('It looks like there is someone inside.')
+				return true
+			end
 
-		for _x= frompos.x, topos.x, 1 do
-			for _y= frompos.y, topos.y, 1 do
-				for _z= frompos.z, topos.z, 1 do
-					local tile = Tile(Position(_x, _y, _z))
-					if tile and tile:getTopCreature() and tile:getTopCreature():isMonster() then
-						tile:getTopCreature():remove()
+			for _x= frompos.x, topos.x, 1 do
+				for _y= frompos.y, topos.y, 1 do
+					for _z= frompos.z, topos.z, 1 do
+						local tile = Tile(Position(_x, _y, _z))
+						if tile and tile:getTopCreature() and tile:getTopCreature():isMonster() then
+							tile:getTopCreature():remove()
+						end
 					end
 				end
 			end
-		end
 
-		for i = 31892, 31896, 1 do
-			local newpos = Position(33127, i, 15)
-			local nplayer = Tile(newpos):getTopCreature()
-			if nplayer and nplayer:isPlayer() then
-				nplayer:setStorageValue(Storage.CultsOfTibia.Misguided.BossTimer, os.time() + 20 * 60 * 60)
-				nplayer:teleportTo(Position(33130, 31919, 15),true)
-				convertTable[#convertTable + 1] = nplayer:getId()
-				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			for i = 31892, 31896, 1 do
+				local newpos = Position(33127, i, 15)
+				local nplayer = Tile(newpos):getTopCreature()
+				if nplayer and nplayer:isPlayer() then
+					nplayer:setStorageValue(Storage.CultsOfTibia.Misguided.BossTimer, os.time() + 20 * 60 * 60)
+					nplayer:teleportTo(Position(33130, 31919, 15),true)
+					convertTable[#convertTable + 1] = nplayer:getId()
+					player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+				end
 			end
+			kickerPlayerRoomAfferMin(convertTable, frompos, topos, Position(33109, 31887, 15), "You were kicked for exceeding the time limit within the boss room.", '', 60, true, ittable, blockmonsters)
+			Game.createMonster("The Sinister Hermit Dirty", Position(33131, 31925, 15))
+			ativarGeyser()
 		end
-	kickerPlayerRoomAfferMin(convertTable, frompos, topos, Position(33109, 31887, 15), "You were kicked for exceeding the time limit within the boss room.", '', 60, true, ittable, blockmonsters)
-	Game.createMonster("The Sinister Hermit Dirty", Position(33131, 31925, 15))
-	ativarGeyser()
 	end
-end
 
 	if item:getActionId() == 5504 then -- Boss do orc
-		if player:getPosition() == Position(33164, 31859, 15) and item:getId() == 9826 then
+		if player:getPosition() == Position(33164, 31859, 15) and item:getId() == 8912 then
 			local teleport = 0
 			for y = 31859, 31863, 1 do
 				local newpos = Position(33164, y, 15)
@@ -408,15 +408,15 @@ end
 			-- criando os itens
 			for _, position in pairs(itensToMonster) do
 				local tile = Tile(position)
-				if tile and tile:getItemCountById(8633) < 1 then
-					Game.createItem(8633, 1, position)
+				if tile and tile:getItemCountById(7805) < 1 then
+					Game.createItem(7805, 1, position)
 				end
 			end
 			-- criando os raios
-			criarRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 29087, 1)
-			criarRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 29087, 1)
-			criarRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 29087, 2)
-			criarRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 29087, 2)
+			criarRaio1(Position(33134, 31856, 15), Position(33139, 31856, 15), 6116, 1)
+			criarRaio1(Position(33134, 31863, 15), Position(33139, 31863, 15), 6116, 1)
+			criarRaio1(Position(33140, 31857, 15), Position(33140, 31862, 15), 6117, 2)
+			criarRaio1(Position(33133, 31857, 15), Position(33133, 31862, 15), 6117, 2)
 
 			-- criando os securys
 			Game.createMonster("Security Golem", Position(33131, 31855, 15))
@@ -424,13 +424,13 @@ end
 			Game.createMonster("Security Golem", Position(33141, 31863, 15))
 			Game.createMonster("Security Golem", Position(33132, 31863, 15))
 
-			Game.createMonster("Containment Machine", Position(33133, 31864, 15)):registerEvent("machineDeath")
-			Game.createMonster("The Armored Voidborn", Position(33135, 31859, 15)):registerEvent("machineDeath")
+			Game.createMonster("Containment Machine", Position(33133, 31864, 15)):registerEvent("MachineDeath")
+			Game.createMonster("The Armored Voidborn", Position(33135, 31859, 15)):registerEvent("MachineDeath")
 			kickerPlayerRoomAfferMin(convertTable, frompos, topos, Position(33179, 31840, 15), "You were kicked for exceeding the time limit within the boss room.", '', 60, true, ittable, blockmonsters)
 		end
 	end
 	if item:getActionId() == 5505 then -- Boss da areia
-		if player:getPosition() == Position(33507, 32228, 10) and item:getId() == 9826 then
+		if player:getPosition() == Position(33507, 32228, 10) and item:getId() == 8912 then
 			local teleport = 0
 			for _y = 32228, 32232, 1 do
 				local newpos = Position(33507, _y, 10)
@@ -480,7 +480,7 @@ end
 				end
 			end
 
-			Game.createMonster("the sandking fake", Position(33099, 31858, 15)):registerEvent("sandkingThink")
+			Game.createMonster("the sandking fake", Position(33099, 31858, 15)):registerEvent("SandkingThink")
 			Game.setStorageValue("sandking", 1)
 			kickerPlayerRoomAfferMin(convertTable, frompos, topos, Position(33459, 32269, 10), "You were kicked for exceeding the time limit within the boss room.", '', 60, true, ittable, blockmonsters)
 		end
@@ -488,7 +488,7 @@ end
 
 	-- final boss
 	if item:getActionId() == 5506 then
-		if player:getPosition() == Position(33074, 31884, 15) and item:getId() == 9826 then
+		if player:getPosition() == Position(33074, 31884, 15) and item:getId() == 8912 then
 			local convertTable = {}
 			convertTable[#convertTable + 1] = player:getId()
 
@@ -522,7 +522,7 @@ end
 			end
 
 			Game.createMonster('The Remorseless Corruptor', Position(33039, 31922, 15))
-			Game.createMonster('Zarcorix Of Yalahar', Position(33039, 31921, 15)):registerEvent("yalahariHealth")
+			Game.createMonster('Zarcorix Of Yalahar', Position(33039, 31921, 15)):registerEvent("YalahariHealth")
 			Game.createMonster('Stolen Soul', Position(33039, 31920, 15))
 			Game.createMonster('Soul Reaper', Position(33039, 31919, 15))
 			spawnDarkSoul(1, 30)

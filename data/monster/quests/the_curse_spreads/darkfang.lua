@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 4800
 monster.maxHealth = 4800
 monster.race = "blood"
-monster.corpse = 20380
+monster.corpse = 18099
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Gloom Wolf", chance = 20, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Gloom Wolf", chance = 20, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -80,7 +82,7 @@ monster.loot = {
 	{name = "ultimate health potion", chance = 13600000, maxCount = 5},
 	{name = "platinum amulet", chance = 13600000},
 	{name = "stone skin amulet", chance = 13600000},
-	{id = 2169, chance = 13600000},
+	{id = 3053, chance = 13600000}, -- time ring
 	{name = "troll green", chance = 13600000, maxCount = 2},
 	{name = "werewolf fur", chance = 13600000, maxCount = 2},
 	{name = "wolf paw", chance = 13600000, maxCount = 2},
@@ -88,7 +90,7 @@ monster.loot = {
 	{name = "dreaded cleaver", chance = 400},
 	{name = "werewolf amulet", chance = 400},
 	{name = "sai", chance = 250},
-	{id = 7394, chance = 13600000},
+	{id = 7394, chance = 13600000}, -- wolf trophy
 	{name = "silver token", chance = 250},
 	{name = "wolf backpack", chance = 100}
 }

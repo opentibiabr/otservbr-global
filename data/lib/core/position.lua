@@ -223,17 +223,17 @@ local position = {
 }
 
 -- Checks position 1
-if Position(position[1]):hasItem(1498) then
+if Position(position[1]):hasItem(2129) then
 	return true
 end
 
 -- Checks position 2
-if Position(position[2]):hasItem(1499) then
+if Position(position[2]):hasItem(2130) then
 	return true
 end
 
 -- Check two positions
-if Position(position[1]):hasItem(1498) and Position(position[2]):hasItem(1499) then
+if Position(position[1]):hasItem(2129) and Position(position[2]):hasItem(2130) then
 	return true
 end
 ]]
@@ -350,4 +350,41 @@ function Position:removeItem(itemId, effect)
 		thing:remove(1)
 		Position(self):sendMagicEffect(effect)
 	end
+end
+
+function Position:relocateTo(toPos)
+	if self == toPos then
+		return false
+	end
+
+	local fromTile = Tile(self)
+	if fromTile == nil then
+		return false
+	end
+
+	if Tile(toPos) == nil then
+		return false
+	end
+
+	for i = fromTile:getThingCount() - 1, 0, -1 do
+		local thing = fromTile:getThing(i)
+		if thing then
+			if thing:isItem() then
+				if ItemType(thing:getId()):isMovable() then
+					thing:moveTo(toPos)
+				end
+			elseif thing:isCreature() then
+				thing:teleportTo(toPos)
+			end
+		end
+	end
+	return true
+end
+
+function Position:isProtectionZoneTile()
+	local tile = Tile(self)
+	if not tile then
+		return false
+	end
+	return tile:hasFlag(TILESTATE_PROTECTIONZONE)
 end

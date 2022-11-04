@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 22000
 monster.maxHealth = 22000
 monster.race = "undead"
-monster.corpse = 6331
+monster.corpse = 6330
 monster.speed = 470
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -67,7 +66,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 6537, chance = 100000}
+	{id = 6537, chance = 100000} -- mr. punish's handcuffs
 }
 
 monster.attacks = {

@@ -6,9 +6,9 @@ monster.experience = 7000
 monster.outfit = {
 	lookType = 1316,
 	lookHead = 57,
-	lookBody = 38,
+	lookBody = 2,
 	lookLegs = 21,
-	lookFeet = 21,
+	lookFeet = 95,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -29,10 +29,8 @@ monster.Bestiary = {
 monster.health = 7500
 monster.maxHealth = 7500
 monster.race = "blood"
-monster.corpse = 39019
+monster.corpse = 34184
 monster.speed = 330
-monster.summonCost = 0
-monster.maxSummons = 0
 
 monster.faction = FACTION_LIONUSURPERS
 monster.enemyFactions = {FACTION_LION, FACTION_PLAYER}
@@ -90,7 +88,7 @@ monster.loot = {
 	{name = "lion cloak patch", chance = 8444},
 	{name = "lion crest", chance = 8222},
 	{name = "black pearl", chance = 5778},
-	{id = 7632, chance = 5556},
+	{id = 281, chance = 5556}, -- giant shimmering pearl (green)
 	{name = "terra hood", chance = 4667},
 	{name = "lightning headband", chance = 3778},
 	{name = "green gem", chance = 3556},

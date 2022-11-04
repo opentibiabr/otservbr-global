@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 5600
 monster.maxHealth = 5600
 monster.race = "undead"
-monster.corpse = 6320
+monster.corpse = 6319
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,31 +63,31 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000},
-	{id = 2148, chance = 100000, maxCount = 98},
-	{id = 2666, chance = 100000},
-	{id = 6500, chance = 64000},
-	{id = 7368, chance = 100000, maxCount = 10},
-	{id = 2489, chance = 68000},
-	{id = 2150, chance = 28000, maxCount = 5},
-	{id = 2146, chance = 40000, maxCount = 5},
-	{id = 2145, chance = 32000, maxCount = 5},
-	{id = 11215, chance = 100000},
-	{id = 7452, chance = 32000},
-	{id = 2152, chance = 100000, maxCount = 8},
-	{id = 2393, chance = 24000},
-	{id = 7591, chance = 44000, maxCount = 3},
-	{id = 7590, chance = 44000, maxCount = 3},
-	{id = 8472, chance = 44000, maxCount = 3},
-	{id = 7632, chance = 48000},
-	{id = 7633, chance = 48000},
-	{id = 2645, chance = 4000},
-	{id = 7427, chance = 24000},
-	{id = 7419, chance = 12000},
-	{id = 2125, chance = 24000},
-	{id = 2521, chance = 16000},
-	{id = 6300, chance = 100000},
-	{id = 5741, chance = 4000}
+	{id = 3031, chance = 100000}, -- gold coin
+	{id = 3031, chance = 100000, maxCount = 98}, -- gold coin
+	{id = 3577, chance = 100000}, -- meat
+	{id = 6499, chance = 64000}, -- demonic essence
+	{id = 7368, chance = 100000, maxCount = 10}, -- assassin star
+	{id = 3383, chance = 68000}, -- dark armor
+	{id = 3033, chance = 28000, maxCount = 5}, -- small amethyst
+	{id = 3029, chance = 40000, maxCount = 5}, -- small sapphire
+	{id = 3028, chance = 32000, maxCount = 5}, -- small diamond
+	{id = 10298, chance = 100000}, -- metal spike
+	{id = 7452, chance = 32000}, -- spiked squelcher
+	{id = 3035, chance = 100000, maxCount = 8}, -- platinum coin
+	{id = 3281, chance = 24000}, -- giant sword
+	{id = 239, chance = 44000, maxCount = 3}, -- great health potion
+	{id = 238, chance = 44000, maxCount = 3}, -- great mana potion
+	{id = 7642, chance = 44000, maxCount = 3}, -- great spirit potion
+	{id = 281, chance = 48000}, -- giant shimmering pearl (green)
+	{id = 282, chance = 48000}, -- giant shimmering pearl (brown)
+	{id = 3554, chance = 4000}, -- steel boots
+	{id = 7427, chance = 24000}, -- chaos mace
+	{id = 7419, chance = 12000}, -- dreaded cleaver
+	{id = 3008, chance = 24000}, -- crystal necklace
+	{id = 3421, chance = 16000}, -- dark shield
+	{id = 6299, chance = 100000}, -- death ring
+	{id = 5741, chance = 4000} -- skull helmet
 }
 
 monster.attacks = {

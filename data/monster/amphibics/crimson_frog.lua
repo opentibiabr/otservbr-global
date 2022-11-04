@@ -7,8 +7,8 @@ monster.outfit = {
 	lookType = 226,
 	lookHead = 94,
 	lookBody = 78,
-	lookLegs = 94,
-	lookFeet = 78,
+	lookLegs = 77,
+	lookFeet = 112,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6079
 monster.speed = 320
 monster.manaCost = 305
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,7 +43,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,

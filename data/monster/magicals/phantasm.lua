@@ -5,7 +5,7 @@ monster.description = "a phantasm"
 monster.experience = 4400
 monster.outfit = {
 	lookType = 241,
-	lookHead = 20,
+	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
 	lookFeet = 0,
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 3950
 monster.maxHealth = 3950
 monster.race = "undead"
-monster.corpse = 6344
+monster.corpse = 6343
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -68,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Phantasm Summon", chance = 20, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Phantasm Summon", chance = 20, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -90,11 +92,11 @@ monster.loot = {
 	{name = "small emerald", chance = 10190, maxCount = 3},
 	{name = "small amethyst", chance = 14570, maxCount = 3},
 	{name = "platinum coin", chance = 87730, maxCount = 4},
-	{name = "stealth ring", chance = 550},
+	{id = 3049, chance = 550}, -- stealth ring
 	{name = "blank rune", chance = 22500, maxCount = 2},
 	{name = "crown armor", chance = 660},
 	{name = "shadow herb", chance = 26930, maxCount = 2},
-	{id = 6300, chance = 330},
+	{id = 6299, chance = 330}, -- death ring
 	{name = "demonic essence", chance = 16320},
 	{name = "abyss hammer", chance = 110},
 	{name = "shadow sceptre", chance = 550},

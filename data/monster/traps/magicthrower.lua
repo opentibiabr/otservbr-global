@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a magicthrower"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 1551
+	lookTypeEx = 2190
 }
 
 monster.health = 1
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,

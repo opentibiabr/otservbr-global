@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 1400
 monster.maxHealth = 1400
 monster.race = "blood"
-monster.corpse = 11276
+monster.corpse = 10359
 monster.speed = 266
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -84,10 +83,10 @@ monster.loot = {
 	{name = "strong health potion", chance = 3880},
 	{name = "red lantern", chance = 530},
 	{name = "bunch of ripe rice", chance = 1950},
-	{name = "Zaoan armor", chance = 70},
-	{name = "Zaoan shoes", chance = 460},
+	{name = "zaoan armor", chance = 70},
+	{name = "zaoan shoes", chance = 460},
 	{name = "drakinata", chance = 710},
-	{name = "Zaoan halberd", chance = 960},
+	{name = "zaoan halberd", chance = 960},
 	{name = "legionnaire flags", chance = 1940},
 	{name = "broken halberd", chance = 14940},
 	{name = "lizard trophy", chance = 20}

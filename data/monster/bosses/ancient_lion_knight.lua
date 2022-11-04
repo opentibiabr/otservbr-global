@@ -16,10 +16,8 @@ monster.outfit = {
 monster.health = 9100
 monster.maxHealth = 9100
 monster.race = "blood"
-monster.corpse = 33364
+monster.corpse = 28621
 monster.speed = 260
-monster.summonCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,8 +62,8 @@ monster.loot = {
 	{name = "platinum coin", chance = 100000, maxCount = 5},
 	{name = "dirty fur", chance = 53750},
 	{name = "ham", chance = 53750},
-	{id = 2237, chance = 47500},
-	{id = 2247, chance = 28750},
+	{id = 19148, chance = 47500}, -- torn magic cape
+	{id = 3132, chance = 28750}, -- skull
 	{name = "knife", chance = 25000},
 	{name = "broken helmet", chance = 23750},
 	{name = "dark armor", chance = 18750},
@@ -73,21 +71,21 @@ monster.loot = {
 	{name = "combat knife", chance = 8750},
 	{name = "plate armor", chance = 7500},
 	{name = "studded shield", chance = 7500},
-	{id = 2231, chance = 5000},
+	{id = 3116, chance = 5000}, -- big bone
 	{name = "cape", chance = 5000},
 	{name = "life preserver", chance = 3750},
 	{name = "dwarven shield", chance = 1250},
-	{name = "Lion Spangenhelm", chance = 35},
-	{name = "Lion Plate", chance = 35},
-	{name = "Lion Shield", chance = 35},
-	{name = "Lion Longsword", chance = 35},
-	{name = "Lion Hammer", chance = 35},
-	{name = "Lion Axe", chance = 35},
-	{name = "Lion Longbow", chance = 35},
-	{name = "Lion Spellbook", chance = 35},
-	{name = "Lion Wand", chance = 35},
-	{name = "Lion Amulet", chance = 35},
-	{name = "Lion Rod", chance = 35}
+	{name = "lion spangenhelm", chance = 35},
+	{name = "lion plate", chance = 35},
+	{name = "lion shield", chance = 35},
+	{name = "lion longsword", chance = 35},
+	{name = "lion hammer", chance = 35},
+	{name = "lion axe", chance = 35},
+	{name = "lion longbow", chance = 35},
+	{name = "lion spellbook", chance = 35},
+	{name = "lion wand", chance = 35},
+	{name = "lion amulet", chance = 35},
+	{name = "lion rod", chance = 35}
 }
 
 monster.attacks = {

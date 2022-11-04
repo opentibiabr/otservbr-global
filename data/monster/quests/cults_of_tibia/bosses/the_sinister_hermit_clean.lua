@@ -5,10 +5,10 @@ monster.description = "The Sinister Hermit"
 monster.experience = 0
 monster.outfit = {
 	lookType = 153,
-	lookHead = 1,
-	lookBody = 30,
-	lookLegs = 30,
-	lookFeet = 11,
+	lookHead = 0,
+	lookBody = 85,
+	lookLegs = 79,
+	lookFeet = 9,
 	lookAddons = 3,
 	lookMount = 0
 }
@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Vermin Swarm", chance = 100, interval = 20000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Vermin Swarm", chance = 100, interval = 20000, count = 4}
+	}
 }
 
 monster.voices = {

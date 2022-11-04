@@ -4,16 +4,15 @@ local monster = {}
 monster.description = "Realityquake"
 monster.experience = 80000
 monster.outfit = {
-	lookTypeEx = 1387
+	lookTypeEx = 1949
 }
 
 monster.health = 110000
 monster.maxHealth = 110000
 monster.race = "venom"
-monster.corpse = 26223
+monster.corpse = 23567
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 3000,
@@ -62,27 +61,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 200},
-	{id = 7590, chance = 8000, maxCount = 5},
-	{id = 8472, chance = 8000, maxCount = 5},
-	{id = 8473, chance = 8000, maxCount = 5},
-	{id = 26191, chance = 8000, maxCount = 5},
-	{id = 18413, chance = 8000, maxCount = 3},
-	{id = 18415, chance = 8000, maxCount = 3},
-	{id = 2149, chance = 8000, maxCount = 5},
-	{id = 2147, chance = 8000, maxCount = 5},
-	{id = 18414, chance = 8000, maxCount = 3},
-	{id = 26163, chance = 8000},
-	{id = 26164, chance = 8000},
-	{id = 2156, chance = 8000},
-	{id = 25377, chance = 100000},
-	{id = 26165, chance = 100000},
-	{id = 26166, chance = 100000},
-	{id = 7632, chance = 4000},
-	{id = 7633, chance = 4000},
-	{id = 2189, chance = 8000},
-	{id = 26187, chance = 6000},
-	{id = 26189, chance = 6000}
+	{id = 3031, chance = 100000, maxCount = 200}, -- gold coin
+	{id = 238, chance = 8000, maxCount = 5}, -- great mana potion
+	{id = 7642, chance = 8000, maxCount = 5}, -- great spirit potion
+	{id = 7643, chance = 8000, maxCount = 5}, -- ultimate health potion
+	{id = 23535, chance = 8000, maxCount = 5}, -- energy bar
+	{id = 16119, chance = 8000, maxCount = 3}, -- blue crystal shard
+	{id = 16121, chance = 8000, maxCount = 3}, -- green crystal shard
+	{id = 3032, chance = 8000, maxCount = 5}, -- small emerald
+	{id = 3030, chance = 8000, maxCount = 5}, -- small ruby
+	{id = 16120, chance = 8000, maxCount = 3}, -- violet crystal shard
+	{id = 23507, chance = 8000}, -- crystallized anger
+	{id = 23508, chance = 8000}, -- energy vein
+	{id = 3039, chance = 8000}, -- red gem
+	{id = 22721, chance = 100000}, -- gold token
+	{id = 23509, chance = 100000}, -- mysterious remains
+	{id = 23510, chance = 100000}, -- odd organ
+	{id = 281, chance = 4000}, -- giant shimmering pearl (green)
+	{id = 282, chance = 4000}, -- giant shimmering pearl (brown)
+	{id = 3073, chance = 8000}, -- wand of cosmic energy
+	{id = 23531, chance = 6000}, -- ring of green plasma
+	{id = 23533, chance = 6000} -- ring of red plasma
 }
 
 monster.attacks = {

@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6034
 monster.speed = 180
 monster.manaCost = 200
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -74,7 +73,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 11216, chance = 10230},
+	{id = 10299, chance = 10230}, -- badger fur
 	{name = "beetroot", chance = 40710},
 	{name = "acorn", chance = 5130}
 }

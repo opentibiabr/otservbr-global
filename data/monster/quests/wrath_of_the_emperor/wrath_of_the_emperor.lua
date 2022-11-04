@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 55000
 monster.maxHealth = 55000
 monster.race = "undead"
-monster.corpse = 12317
+monster.corpse = 11361
 monster.speed = 410
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Draken Warmaster", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Draken Warmaster", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {

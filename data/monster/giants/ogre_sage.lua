@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 4800
 monster.maxHealth = 4800
 monster.race = "blood"
-monster.corpse = 36370
+monster.corpse = 31535
 monster.speed = 460
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -69,8 +68,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Young Goanna", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Young Goanna", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -107,7 +109,7 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = -30},
-	{type = COMBAT_EARTHDAMAGE, percent = 75},
+	{type = COMBAT_EARTHDAMAGE, percent = 25},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},

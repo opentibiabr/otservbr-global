@@ -7,8 +7,8 @@ monster.outfit = {
 	lookType = 1059,
 	lookHead = 94,
 	lookBody = 78,
-	lookLegs = 78,
-	lookFeet = 0,
+	lookLegs = 79,
+	lookFeet = 57,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 17000
 monster.maxHealth = 17000
 monster.race = "undead"
-monster.corpse = 32482
+monster.corpse = 28782
 monster.speed = 430
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -74,7 +73,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 33317, chance = 10000},
+	{id = 28570, chance = 10000}, -- glowing rune
 	{name = "great spirit potion", chance = 10000, maxCount = 3},
 	{name = "fire mushroom", chance = 10000, maxCount = 6},
 	{name = "small amethyst", chance = 90000, maxCount = 5},
@@ -84,18 +83,18 @@ monster.loot = {
 	{name = "ultimate health potion", chance = 10000, maxCount = 3},
 	{name = "small topaz", chance = 90000, maxCount = 5},
 	{name = "small emerald", chance = 90000, maxCount = 5},
-	{name = "red gem", chance = 9800, maxCount = 5},
+	{id= 3039, chance = 9800, maxCount = 5}, -- red gem
 	{name = "orb", chance = 66000, maxCount = 5},
 	{name = "purple tome", chance = 6333},
 	{name = "great mana potion", chance = 10000, maxCount = 3},
 	{name = "demonic essence", chance = 4300},
-	{id = 33315, chance = 10000},
+	{id = 28568, chance = 10000}, -- inkwell
 	{name = "small ruby", chance = 90000, maxCount = 5},
 	{name = "talon", chance = 8990},
 	{name = "might ring", chance = 4990},
 	{name = "devil helmet", chance = 6990},
 	{name = "demonrage sword", chance = 400},
-	{id = 7393, chance = 390},
+	{id = 7393, chance = 390}, -- demon trophy
 	{name = "giant sword", chance = 250},
 	{name = "demon shield", chance = 250},
 	{name = "magic plate armor", chance = 150},

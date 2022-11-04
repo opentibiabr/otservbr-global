@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a hive pore"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 15467
+	lookTypeEx = 14064
 }
 
 monster.health = 1
@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 355
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -25,13 +24,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -49,10 +48,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Lesser Swarmer", chance = 100, interval = 30000},
-	{name = "Lesser Swarmer", chance = 100, interval = 30000},
-	{name = "Lesser Swarmer", chance = 100, interval = 30000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Lesser Swarmer", chance = 100, interval = 30000, count = 3}
+	}
 }
 
 monster.voices = {

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 19500
 monster.maxHealth = 19500
 monster.race = "blood"
-monster.corpse = 6312
+monster.corpse = 6311
 monster.speed = 450
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 70,
@@ -64,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 6539, chance = 35000}
+	{id = 6539, chance = 35000} -- handmaiden's protector
 }
 
 monster.attacks = {

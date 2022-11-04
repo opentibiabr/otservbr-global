@@ -6,11 +6,11 @@ monster.description = "a nomad"
 monster.experience = 60
 monster.outfit = {
 	lookType = 150,
-	lookHead = 115,
+	lookHead = 96,
 	lookBody = 39,
-	lookLegs = 59,
-	lookFeet = 2,
-	lookAddons = 2,
+	lookLegs = 40,
+	lookFeet = 3,
+	lookAddons = 3,
 	lookMount = 0
 }
 
@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 160
 monster.maxHealth = 160
 monster.race = "blood"
-monster.corpse = 20462
+monster.corpse = 18181
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -49,7 +48,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -79,16 +78,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 56000, maxCount = 40},
-	{id = 12448, chance = 6420},
-	{id = 8838, chance = 4840, maxCount = 3},
-	{id = 2386, chance = 2730},
-	{id = 2465, chance = 2350},
-	{id = 2398, chance = 2150},
-	{id = 12412, chance = 2140},
-	{id = 2509, chance = 900},
-	{id = 2459, chance = 660},
-	{id = 8267, chance = 210}
+	{id = 3031, chance = 56000, maxCount = 40}, -- gold coin
+	{id = 11492, chance = 6420}, -- rope belt
+	{id = 8010, chance = 4840, maxCount = 3}, -- potato
+	{id = 3274, chance = 2730}, -- axe
+	{id = 3359, chance = 2350}, -- brass armor
+	{id = 3286, chance = 2150}, -- mace
+	{id = 11456, chance = 2140}, -- dirty turban
+	{id = 3409, chance = 900}, -- steel shield
+	{id = 3353, chance = 660}, -- iron helmet
+	{id = 7533, chance = 210} -- nomad parchment
 }
 
 monster.attacks = {

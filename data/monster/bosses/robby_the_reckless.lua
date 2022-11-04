@@ -5,7 +5,7 @@ monster.description = "Robby The Reckless"
 monster.experience = 110
 monster.outfit = {
 	lookType = 129,
-	lookHead = 76,
+	lookHead = 96,
 	lookBody = 132,
 	lookLegs = 118,
 	lookFeet = 114,
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 155
 monster.maxHealth = 155
 monster.race = "blood"
-monster.corpse = 20498
+monster.corpse = 18217
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,8 +63,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2152, chance = 100000, maxCount = 85},
-	{id = 14903, chance = 100000}
+	{id = 3035, chance = 100000, maxCount = 85}, -- platinum coin
+	{id = 13429, chance = 100000} -- bag with stolen gold
 }
 
 monster.attacks = {

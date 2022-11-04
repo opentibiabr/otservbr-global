@@ -28,12 +28,12 @@ function chestRoomTile.onStepIn(creature, item, position, fromPosition)
 	local chestRoomExit = chestRooms.exits[item.actionid]
 	if chestRoomExit then
 		if player:getVocation():getId() == chestRoomExit.vocation then
-			if player:getStorageValue(Storage.Quest.Dawnport.VocationReward) == -1 then
+			if player:getStorageValue(Storage.Quest.U10_55.Dawnport.VocationReward) == -1 then
 				player:sendTextMessage(
 					MESSAGE_EVENT_ADVANCE,
 					"You should check the chest for your " .. player:getVocation():getName() .. " equipment."
 				)
-			elseif player:getStorageValue(Storage.Quest.Dawnport.VocationReward) == 1 then
+			elseif player:getStorageValue(Storage.Quest.U10_55.Dawnport.VocationReward) == 1 then
 				player:teleportTo(chestRoomExit.destination, true)
 				player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 				player:sendTextMessage(
@@ -126,17 +126,17 @@ function tutorialTile1.onStepIn(creature, item, position, fromPosition)
 	if not player then
 		return true
 	end
-	if player:getStorageValue(Storage.Quest.Dawnport.Questline) == 1 then
+	if player:getStorageValue(Storage.Quest.U10_55.Dawnport.Questline) == 1 then
 		return true
 	end
-	if player:getStorageValue(Storage.Quest.Dawnport.Questline) < 1 then
+	if player:getStorageValue(Storage.Quest.U10_55.Dawnport.Questline) < 1 then
 		player:sendTextMessage(
 			MESSAGE_EVENT_ADVANCE,
 			"Welcome to Dawnport! Walk around and explore on your own, or talk to Inigo if you need directions."
 		)
 		player:sendTutorial(2)
-		player:setStorageValue(Storage.Quest.Dawnport.Questline, 1)
-		player:setStorageValue(Storage.Quest.Dawnport.GoMain, 1)
+		player:setStorageValue(Storage.Quest.U10_55.Dawnport.Questline, 1)
+		player:setStorageValue(Storage.Quest.U10_55.Dawnport.GoMain, 1)
 		player:setTown(Town(TOWNS_LIST.DAWNPORT))
 	end
 	return true
@@ -153,16 +153,16 @@ function tutorialTile2.onStepIn(creature, item, position, fromPosition)
 	if not player then
 		return true
 	end
-	if item.itemid == 22693 then
+	if item.itemid == 20344 then
 		player:teleportTo({x = 32070, y = 31900, z = 6}, true)
-	elseif item.itemid == 23745 then
+	elseif item.itemid == 21374 then
 		player:teleportTo({x = 32075, y = 31899, z = 5}, true)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "<krrk> <krrrrrk> You move away hurriedly.")
 	end
 	return true
 end
 
-tutorialTile2:id(22693, 23745)
+tutorialTile2:id(20344, 21374)
 tutorialTile2:register()
 
 -- Message on step in the stair for go to NPC's

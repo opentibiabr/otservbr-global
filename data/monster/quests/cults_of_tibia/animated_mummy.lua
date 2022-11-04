@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6004
 monster.speed = 150
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -70,12 +69,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2124, chance = 1500},
+	{id = 3007, chance = 1500}, -- crystal ring
 	{name = "silver brooch", chance = 4000},
 	{name = "black pearl", chance = 1000},
 	{name = "gold coin", chance = 38000, maxCount = 80},
 	{name = "strange talisman", chance = 5000},
-	{id = 2162, chance = 5800},
+	{id = 3046, chance = 5800}, -- magic light wand
 	{name = "silver amulet", chance = 100},
 	{name = "poison dagger", chance = 450},
 	{name = "black shield", chance = 170},

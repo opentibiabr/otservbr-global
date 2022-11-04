@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a wine cask"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 1773
+	lookTypeEx = 2521
 }
 
 monster.health = 30000
@@ -13,7 +13,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,

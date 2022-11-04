@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "Damage Resonance"
 monster.experience = 560
 monster.outfit = {
-	lookTypeEx = 25417
+	lookTypeEx = 22761
 }
 
 monster.health = 11000
@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 500
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,

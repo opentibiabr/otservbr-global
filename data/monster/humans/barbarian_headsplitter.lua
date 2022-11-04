@@ -6,9 +6,9 @@ monster.experience = 85
 monster.outfit = {
 	lookType = 253,
 	lookHead = 115,
-	lookBody = 105,
+	lookBody = 86,
 	lookLegs = 119,
-	lookFeet = 132,
+	lookFeet = 113,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 100
 monster.maxHealth = 100
 monster.race = "blood"
-monster.corpse = 20343
+monster.corpse = 18062
 monster.speed = 168
 monster.manaCost = 450
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 60000,
@@ -47,7 +46,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -81,13 +80,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2050, chance = 60300},
+	{id = 2920, chance = 60300}, -- torch
 	{name = "gold coin", chance = 75600, maxCount = 30},
-	{name = "life ring", chance = 230},
+	{id = 3052, chance = 230}, -- life ring
 	{name = "knife", chance = 14890},
 	{name = "brass helmet", chance = 20140},
 	{name = "viking helmet", chance = 5020},
-	{id = 2229, chance = 8000, maxCount = 2},
+	{id = 3114, chance = 8000, maxCount = 2}, -- skull
 	{name = "scale armor", chance = 4060},
 	{name = "brown piece of cloth", chance = 980},
 	{name = "fur boots", chance = 90},

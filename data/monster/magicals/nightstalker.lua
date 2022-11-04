@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 700
 monster.maxHealth = 700
 monster.race = "undead"
-monster.corpse = 9915
+monster.corpse = 9001
 monster.speed = 260
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 0,
@@ -83,7 +82,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2124, chance = 1030},
+	{id = 3007, chance = 1030}, -- crystal ring
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "gold coin", chance = 50000, maxCount = 10},
 	{name = "platinum amulet", chance = 121},

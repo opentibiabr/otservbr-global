@@ -5,10 +5,10 @@ monster.description = "a Burster Spectre"
 monster.experience = 6000
 monster.outfit = {
 	lookType = 1122,
-	lookHead = 7,
-	lookBody = 19,
+	lookHead = 9,
+	lookBody = 10,
 	lookLegs = 86,
-	lookFeet = 19,
+	lookFeet = 79,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 6500
 monster.maxHealth = 6500
 monster.race = "blood"
-monster.corpse = 34801
+monster.corpse = 30163
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -87,7 +86,7 @@ monster.loot = {
 	{name = "wand of cosmic energy", chance = 11800},
 	{name = "dragon necklace", chance = 16600},
 	{name = "stone skin amulet", chance = 8860},
-	{id = 34720, chance = 15600},
+	{id = 30082, chance = 15600}, -- blue ectoplasm
 	{name = "glacier amulet", chance = 16890},
 	{name = "orb", chance = 18980},
 	{name = "hailstorm rod", chance = 17550},

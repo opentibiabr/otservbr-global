@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1400
 monster.maxHealth = 1400
 monster.race = "blood"
-monster.corpse = 24803
+monster.corpse = 22147
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -66,22 +65,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 92000, maxCount = 130},
-	{id = 2666, chance = 6200},
-	{id = 24849, chance = 3200, maxCount = 2},
-	{id = 24850, chance = 3200, maxCount = 3},
-	{id = 2687, chance = 2200, maxCount = 7},
-	{id = 8844, chance = 1200, maxCount = 2},
-	{id = 9970, chance = 1200, maxCount = 2},
-	{id = 2147, chance = 1200, maxCount = 2},
-	{id = 7439, chance = 1200},
-	{id = 2194, chance = 2200},
-	{id = 24844, chance = 1200},
-	{id = 24845, chance = 1200},
-	{id = 24847, chance = 1200},
-	{id = 7588, chance = 2200, maxCount = 3},
-	{id = 2391, chance = 600},
-	{id = 24848, chance = 300}
+	{id = 3031, chance = 92000, maxCount = 130}, -- gold coin
+	{id = 3577, chance = 6200}, -- meat
+	{id = 22193, chance = 3200, maxCount = 2}, -- onyx chip
+	{id = 22194, chance = 3200, maxCount = 3}, -- opal
+	{id = 3598, chance = 2200, maxCount = 7}, -- cookie
+	{id = 8016, chance = 1200, maxCount = 2}, -- jalapeno pepper
+	{id = 9057, chance = 1200, maxCount = 2}, -- small topaz
+	{id = 3030, chance = 1200, maxCount = 2}, -- small ruby
+	{id = 7439, chance = 1200}, -- berserk potion
+	{id = 3078, chance = 2200}, -- mysterious fetish
+	{id = 22188, chance = 1200}, -- ogre ear stud
+	{id = 22189, chance = 1200}, -- ogre nose ring
+	{id = 22191, chance = 1200}, -- skull fetish
+	{id = 236, chance = 2200, maxCount = 3}, -- strong health potion
+	{id = 3279, chance = 600}, -- war hammer
+	{id = 22192, chance = 300} -- shamanic mask
 }
 
 monster.attacks = {

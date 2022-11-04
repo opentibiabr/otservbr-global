@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 30000
 monster.maxHealth = 30000
 monster.race = "blood"
-monster.corpse = 36288
+monster.corpse = 31453
 monster.speed = 175
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,45 +63,45 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Energy Bar", chance = 100000},
-	{name = "Platinum Coin", chance = 87000, maxCount = 5},
-	{name = "Green Gem", chance = 85000},
-	{name = "Supreme Health Potion", chance = 53700, maxCount = 14},
-	{name = "Ultimate Mana Potion", chance = 48150, maxCount = 20},
-	{name = "Red Gem", chance = 42500},
-	{name = "Ultimate Spirit Potion", chance = 34000, maxCount = 6},
-	{name = "Yellow Gem", chance = 29600, maxCount = 2},
-	{name = "Royal Star", chance = 26600, maxCount = 100},
-	{id = 7632, chance = 24000},
-	{name = "Berserk Potion", chance = 20300, maxCount = 10},
-	{name = "Blue Gem", chance = 18500, maxCount = 2},
-	{name = "Bullseye Potion", chance = 18500, maxCount = 10},
-	{name = "Magma Coat", chance = 16600},
-	{name = "Terra Rod", chance = 1100},
-	{name = "Crystal Coin", chance = 9200},
-	{name = "Violet Gem", chance = 9000},
-	{name = "Terra Legs", chance = 8500},
-	{name = "Terra Hood", chance = 7400},
-	{name = "Terra Mantle", chance = 7250},
-	{name = "Magma Amulet", chance = 5500},
-	{name = "Silver Token", chance = 6000, maxCount = 4},
-	{name = "Gold Ingot", chance = 5000},
-	{name = "Terra Amulet", chance = 4800},
-	{name = "Giant Sapphire", chance = 4800},
-	{name = "Magma Monocle", chance = 3700},
-	{name = "Cobra Club", chance = 700},
-	{name = "Cobra Axe", chance = 600},
-	{name = "Cobra Crossbow", chance = 600},
-	{name = "Cobra Hood", chance = 400},
-	{name = "Cobra Rod", chance = 650},
-	{name = "Cobra Sword", chance = 650},
-	{name = "Cobra Wand", chance = 650},
-	{name = "The Cobra Amulet", chance = 350}
+	{name = "energy bar", chance = 100000},
+	{name = "platinum coin", chance = 87000, maxCount = 5},
+	{name = "green gem", chance = 85000},
+	{name = "supreme health potion", chance = 53700, maxCount = 14},
+	{name = "ultimate mana potion", chance = 48150, maxCount = 20},
+	{id= 3039, chance = 42500}, -- red gem
+	{name = "ultimate spirit potion", chance = 34000, maxCount = 6},
+	{name = "yellow gem", chance = 29600, maxCount = 2},
+	{name = "royal star", chance = 26600, maxCount = 100},
+	{id = 281, chance = 24000}, -- giant shimmering pearl (green)
+	{name = "berserk potion", chance = 20300, maxCount = 10},
+	{name = "blue gem", chance = 18500, maxCount = 2},
+	{name = "bullseye potion", chance = 18500, maxCount = 10},
+	{name = "magma coat", chance = 16600},
+	{name = "terra rod", chance = 1100},
+	{name = "crystal coin", chance = 9200},
+	{name = "violet gem", chance = 9000},
+	{name = "terra legs", chance = 8500},
+	{name = "terra hood", chance = 7400},
+	{name = "terra mantle", chance = 7250},
+	{name = "magma amulet", chance = 5500},
+	{name = "silver token", chance = 6000, maxCount = 4},
+	{name = "gold ingot", chance = 5000},
+	{name = "terra amulet", chance = 4800},
+	{name = "giant sapphire", chance = 4800},
+	{name = "magma monocle", chance = 3700},
+	{name = "cobra club", chance = 700},
+	{name = "cobra axe", chance = 600},
+	{name = "cobra crossbow", chance = 600},
+	{name = "cobra hood", chance = 400},
+	{name = "cobra rod", chance = 650},
+	{name = "cobra sword", chance = 650},
+	{name = "cobra wand", chance = 650},
+	{name = "cobra amulet", chance = 350}
 }
 
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -600},
-	{name ="sudden death", interval = 2000, chance = 16, minDamage = -400, maxDamage = -600, target = true},
+	{name ="sudden death rune", interval = 2000, chance = 16, minDamage = -400, maxDamage = -600, target = true},
 	{name ="combat", interval = 2000, chance = 13, type = COMBAT_HOLYDAMAGE, minDamage = -450, maxDamage = -640, length = 7, spread = 3, effect = CONST_ME_HOLYAREA, target = false},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -480, maxDamage = -630, radius = 5, effect = CONST_ME_EXPLOSIONHIT, target = false}
 }

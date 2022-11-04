@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 90
 monster.maxHealth = 90
 monster.race = "venom"
-monster.corpse = 23825
+monster.corpse = 21454
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -61,14 +60,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 23839, chance = 21360, maxCount = 16},
-	{id = 2485, chance = 4140},
-	{id = 19738, chance = 11940},
-	{id = 19743, chance = 10130},
-	{id = 2148, chance = 100000, maxCount = 12},
-	{id = 7618, chance = 3630},
-	{id = 7620, chance = 3800},
-	{id = 2545, chance = 14500, maxCount = 8}
+	{id = 21470, chance = 21360, maxCount = 16}, -- simple arrow
+	{id = 3379, chance = 4140}, -- doublet
+	{id = 17458, chance = 11940}, -- damselfly wing
+	{id = 17463, chance = 10130}, -- damselfly eye
+	{id = 3031, chance = 100000, maxCount = 12}, -- gold coin
+	{id = 266, chance = 3630}, -- health potion
+	{id = 268, chance = 3800}, -- mana potion
+	{id = 3448, chance = 14500, maxCount = 8} -- poison arrow
 }
 
 monster.attacks = {
@@ -86,7 +85,7 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = -10},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

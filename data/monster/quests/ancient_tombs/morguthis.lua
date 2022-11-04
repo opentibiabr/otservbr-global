@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "Morguthis"
 monster.experience = 3000
 monster.outfit = {
-	lookType = 90,
+	lookType = 84,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6025
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Hero", chance = 100, interval = 2000, max = 3}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Hero", chance = 100, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -73,7 +75,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2136, chance = 500},
+	{id = 3019, chance = 500}, -- demonbone amulet
 	{name = "black pearl", chance = 7000},
 	{name = "gold coin", chance = 50000, maxCount = 80},
 	{name = "gold coin", chance = 50000, maxCount = 73},

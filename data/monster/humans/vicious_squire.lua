@@ -6,9 +6,9 @@ monster.experience = 900
 monster.outfit = {
 	lookType = 131,
 	lookHead = 97,
-	lookBody = 26,
-	lookLegs = 71,
-	lookFeet = 114,
+	lookBody = 24,
+	lookLegs = 73,
+	lookFeet = 116,
 	lookAddons = 1,
 	lookMount = 0
 }
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1000
 monster.maxHealth = 1000
 monster.race = "blood"
-monster.corpse = 24673
+monster.corpse = 22017
 monster.speed = 260
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -81,23 +80,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2543, chance = 90450, maxCount = 10},
-	{id = 2148, chance = 75410, maxCount = 30},
-	{id = 2681, chance = 15400},
-	{id = 7591, chance = 12340, maxCount = 2},
-	{id = 2666, chance = 5000},
-	{id = 2455, chance = 830},
-	{id = 2652, chance = 760},
-	{id = 2164, chance = 700, maxCount = 2},
-	{id = 2120, chance = 1000},
-	{id = 2661, chance = 1000},
-	{id = 1949, chance = 830},
-	{id = 2145, chance = 830},
-	{id = 2391, chance = 130},
-	{id = 2381, chance = 830},
-	{id = 2515, chance = 330},
-	{id = 2477, chance = 230},
-	{id = 2475, chance = 200}
+	{id = 3446, chance = 90450, maxCount = 10}, -- bolt
+	{id = 3031, chance = 75410, maxCount = 30}, -- gold coin
+	{id = 3592, chance = 15400}, -- grapes
+	{id = 239, chance = 12340, maxCount = 2}, -- great health potion
+	{id = 3577, chance = 5000}, -- meat
+	{id = 3349, chance = 830}, -- crossbow
+	{id = 3563, chance = 760}, -- green tunic
+	{id = 3048, chance = 700, maxCount = 2}, -- might ring
+	{id = 3003, chance = 1000}, -- rope
+	{id = 3572, chance = 1000}, -- scarf
+	{id = 2815, chance = 830}, -- scroll
+	{id = 3028, chance = 830}, -- small diamond
+	{id = 3279, chance = 130}, -- war hammer
+	{id = 3269, chance = 830}, -- halberd
+	{id = 3415, chance = 330}, -- guardian shield
+	{id = 3371, chance = 230}, -- knight legs
+	{id = 3369, chance = 200} -- warrior helmet
 }
 
 monster.attacks = {
@@ -112,16 +111,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
+	{type = COMBAT_ENERGYDAMAGE, percent = 40},
+	{type = COMBAT_EARTHDAMAGE, percent = 50},
+	{type = COMBAT_FIREDAMAGE, percent = 30},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_HOLYDAMAGE , percent = 50},
+	{type = COMBAT_DEATHDAMAGE , percent = -20}
 }
 
 monster.immunities = {

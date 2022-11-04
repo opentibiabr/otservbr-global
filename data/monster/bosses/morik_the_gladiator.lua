@@ -5,9 +5,9 @@ monster.description = "Morik The Gladiator"
 monster.experience = 160
 monster.outfit = {
 	lookType = 131,
-	lookHead = 57,
-	lookBody = 57,
-	lookLegs = 95,
+	lookHead = 38,
+	lookBody = 19,
+	lookLegs = 19,
 	lookFeet = 95,
 	lookAddons = 1,
 	lookMount = 0
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1235
 monster.maxHealth = 1235
 monster.race = "blood"
-monster.corpse = 20454
+monster.corpse = 18173
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 2000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Gladiator", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Gladiator", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -72,7 +74,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 9735, chance = 100000}
+	{id = 8820, chance = 100000} -- morik's helmet
 }
 
 monster.attacks = {

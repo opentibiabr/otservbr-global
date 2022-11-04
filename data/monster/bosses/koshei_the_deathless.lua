@@ -5,10 +5,10 @@ monster.description = "Koshei the Deathless"
 monster.experience = 0
 monster.outfit = {
 	lookType = 99,
-	lookHead = 95,
-	lookBody = 116,
-	lookLegs = 119,
-	lookFeet = 115,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1200
 monster.maxHealth = 1200
 monster.race = "undead"
-monster.corpse = 8272
+monster.corpse = 7538
 monster.speed = 390
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "bonebeast", chance = 21, interval = 1000, max = 1}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "bonebeast", chance = 21, interval = 1000, count = 1}
+	}
 }
 
 monster.voices = {

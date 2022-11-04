@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 5550
 monster.maxHealth = 5550
 monster.race = "blood"
-monster.corpse = 12609
+monster.corpse = 11653
 monster.speed = 332
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -85,10 +84,10 @@ monster.loot = {
 	{name = "assassin dagger", chance = 980},
 	{name = "great mana potion", chance = 9340, maxCount = 3},
 	{name = "ultimate health potion", chance = 9250, maxCount = 3},
-	{name = "Zaoan armor", chance = 490},
-	{name = "Zaoan helmet", chance = 150},
-	{name = "Zaoan legs", chance = 770},
-	{name = "Zaoan sword", chance = 490},
+	{name = "zaoan armor", chance = 490},
+	{name = "zaoan helmet", chance = 150},
+	{name = "zaoan legs", chance = 770},
+	{name = "zaoan sword", chance = 490},
 	{name = "elite draken mail", chance = 110},
 	{name = "twiceslicer", chance = 910},
 	{name = "draken sulphur", chance = 7600},
@@ -106,7 +105,7 @@ monster.attacks = {
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_FIREDAMAGE, minDamage = -240, maxDamage = -550, length = 4, spread = 3, effect = CONST_ME_EXPLOSIONHIT, target = false},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -200, maxDamage = -300, range = 7, shootEffect = CONST_ANI_FIRE, effect = CONST_ME_FIREAREA, target = true},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_EARTHDAMAGE, minDamage = -280, maxDamage = -410, radius = 4, effect = CONST_ME_POFF, target = true},
-	{name ="soulfire", interval = 2000, chance = 10, target = false},
+	{name ="soulfire rune", interval = 2000, chance = 10, target = false},
 	-- poison
 	{name ="condition", type = CONDITION_POISON, interval = 2000, chance = 10, minDamage = -250, maxDamage = -320, range = 7, shootEffect = CONST_ANI_POISON, target = true}
 }

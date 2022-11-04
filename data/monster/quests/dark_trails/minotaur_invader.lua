@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5983
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -66,18 +65,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 175},
-	{id = 2152, chance = 100000, maxCount = 4},
-	{id = 12428, chance = 14285, maxCount = 2},
-	{id = 9970, chance = 10000},
-	{id = 12438, chance = 9090},
-	{id = 2150, chance = 7692},
-	{id = 5878, chance = 5000},
-	{id = 2147, chance = 3703},
-	{id = 2430, chance = 1250},
-	{id = 2515, chance = 1250},
-	{id = 2156, chance = 1250},
-	{id = 5911, chance = 1250}
+	{id = 3031, chance = 100000, maxCount = 175}, -- gold coin
+	{id = 3035, chance = 100000, maxCount = 4}, -- platinum coin
+	{id = 11472, chance = 14285, maxCount = 2}, -- minotaur horn
+	{id = 9057, chance = 10000}, -- small topaz
+	{id = 11482, chance = 9090}, -- piece of warrior armor
+	{id = 3033, chance = 7692}, -- small amethyst
+	{id = 5878, chance = 5000}, -- minotaur leather
+	{id = 3030, chance = 3703}, -- small ruby
+	{id = 3318, chance = 1250}, -- knight axe
+	{id = 3415, chance = 1250}, -- guardian shield
+	{id = 3039, chance = 1250}, -- red gem
+	{id = 5911, chance = 1250} -- red piece of cloth
 }
 
 monster.attacks = {

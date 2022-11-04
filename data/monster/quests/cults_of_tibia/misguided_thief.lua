@@ -6,9 +6,9 @@ monster.experience = 1200
 monster.outfit = {
 	lookType = 684,
 	lookHead = 58,
-	lookBody = 58,
-	lookLegs = 41,
-	lookFeet = 76,
+	lookBody = 40,
+	lookLegs = 60,
+	lookFeet = 116,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1800
 monster.maxHealth = 1800
 monster.race = "blood"
-monster.corpse = 29361
+monster.corpse = 26125
 monster.speed = 240
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,10 +46,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -80,15 +79,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 80},
-	{id = 7589, chance = 9660},
-	{id = 2156, chance = 5680},
-	{id = 2671, chance = 58520},
-	{id = 7588, chance = 5680},
-	{id = 2666, chance = 47160},
-	{id = 2154, chance = 6250},
-	{id = 28657, chance = 6250},
-	{id = 18418, chance = 570}
+	{id = 3031, chance = 100000, maxCount = 80}, -- gold coin
+	{id = 237, chance = 9660}, -- strong mana potion
+	{id = 3039, chance = 5680}, -- red gem
+	{id = 3582, chance = 58520}, -- ham
+	{id = 236, chance = 5680}, -- strong health potion
+	{id = 3577, chance = 47160}, -- meat
+	{id = 3037, chance = 6250}, -- yellow gem
+	{id = 25296, chance = 6250}, -- rubbish amulet
+	{id = 16124, chance = 570} -- blue crystal splinter
 }
 
 monster.attacks = {

@@ -5,10 +5,10 @@ monster.description = "a warlock"
 monster.experience = 4000
 monster.outfit = {
 	lookType = 130,
-	lookHead = 19,
-	lookBody = 71,
+	lookHead = 0,
+	lookBody = 52,
 	lookLegs = 128,
-	lookFeet = 128,
+	lookFeet = 95,
 	lookAddons = 1,
 	lookMount = 0
 }
@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 3500
 monster.maxHealth = 3500
 monster.race = "blood"
-monster.corpse = 20527
+monster.corpse = 18246
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -69,8 +68,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "stone golem", chance = 10, interval = 2000, max = 1}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "stone golem", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -86,17 +88,17 @@ monster.loot = {
 	{name = "candlestick", chance = 1500},
 	{name = "piggy bank", chance = 60},
 	{name = "ring of the sky", chance = 430},
-	{id = 2124, chance = 700},
+	{id = 3007, chance = 700}, -- crystal ring
 	{name = "small sapphire", chance = 1190},
 	{name = "gold coin", chance = 29340, maxCount = 80},
 	{name = "talon", chance = 1150},
-	{name = "energy ring", chance = 2200},
+	{id = 3051, chance = 2200}, -- energy ring
 	{name = "mind stone", chance = 2000},
 	{name = "stone skin amulet", chance = 330},
 	{name = "poison dagger", chance = 7600},
 	{name = "skull staff", chance = 6370},
 	{name = "golden armor", chance = 240},
-	{id = 2600, chance = 1000},
+	{id = 3509, chance = 1000}, -- inkwell
 	{name = "blue robe", chance = 1410},
 	{name = "cherry", chance = 19000, maxCount = 4},
 	{name = "bread", chance = 9000},
@@ -136,7 +138,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 100},
-	{type = COMBAT_HOLYDAMAGE , percent = -5},
+	{type = COMBAT_HOLYDAMAGE , percent = -8},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 

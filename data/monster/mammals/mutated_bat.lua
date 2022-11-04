@@ -32,10 +32,9 @@ monster.Bestiary = {
 monster.health = 900
 monster.maxHealth = 900
 monster.race = "blood"
-monster.corpse = 9829
+monster.corpse = 8915
 monster.speed = 186
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -79,18 +78,17 @@ monster.voices = {
 
 monster.loot = {
 	{name = "black pearl", chance = 720, maxCount = 3},
-	{name = "gold coin", chance = 53000, maxCount = 50},
-	{name = "gold coin", chance = 40000, maxCount = 70},
+	{name = "gold coin", chance = 92500, maxCount = 130},
 	{name = "small amethyst", chance = 500, maxCount = 2},
-	{name = "energy ring", chance = 990},
+	{id = 3051, chance = 990}, -- energy ring
 	{name = "battle shield", chance = 7760},
 	{name = "black shield", chance = 70},
-	{name = "star herb", chance = 7260},
+	{name = "obsidian lance", chance = 7260},
 	{name = "star herb", chance = 5060},
 	{name = "bat wing", chance = 4900, maxCount = 2},
 	{name = "mercenary sword", chance = 110},
-	{id = 9808, chance = 12530},
-	{id = 9809, chance = 12530, maxCount = 2},
+	{id = 8894, chance = 12530}, -- heavily rusted armor
+	{id = 8895, chance = 12530, maxCount = 2}, -- rusted armor
 	{name = "batwing hat", chance = 80},
 	{name = "mutated bat ear", chance = 4900}
 }
@@ -106,7 +104,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 20,
-	armor = 20,
+	armor = 19,
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 80, maxDamage = 95, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
@@ -114,7 +112,7 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},

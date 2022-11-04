@@ -8,7 +8,7 @@ monster.outfit = {
 	lookHead = 77,
 	lookBody = 0,
 	lookLegs = 76,
-	lookFeet = 132,
+	lookFeet = 115,
 	lookAddons = 3,
 	lookMount = 0
 }
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1450
 monster.maxHealth = 1450
 monster.race = "blood"
-monster.corpse = 20438
+monster.corpse = 18157
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 60000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Pirate Cutthroat", chance = 50, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Pirate Cutthroat", chance = 50, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -72,12 +74,12 @@ monster.loot = {
 	{name = "meat", chance = 18750, maxCount = 3},
 	{name = "gold coin", chance = 50000, maxCount = 60},
 	{name = "gold coin", chance = 50000, maxCount = 61},
-	{id = 2229, chance = 81250, maxCount = 2},
+	{id = 3114, chance = 81250, maxCount = 2}, -- skull
 	{name = "pirate backpack", chance = 6250},
 	{name = "plate armor", chance = 56250},
 	{name = "knight armor", chance = 12500},
 	{name = "very old piece of paper", chance = 25000},
-	{id = 6100, chance = 100000}
+	{id = 6100, chance = 100000} -- lethal lissy's shirt
 }
 
 monster.attacks = {

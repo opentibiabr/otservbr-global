@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "Horestis"
 monster.experience = 3500
 monster.outfit = {
-	lookType = 88,
+	lookType = 91,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6031
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Sandstone Scorpion", chance = 12, interval = 1000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Sandstone Scorpion", chance = 12, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -69,19 +71,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 13498, chance = 100000},
-	{id = 2148, chance = 95000, maxCount = 243},
-	{id = 2152, chance = 36000, maxCount = 5},
-	{id = 13472, chance = 17000},
-	{id = 2159, chance = 14000, maxCount = 5},
-	{id = 13739, chance = 12000},
-	{id = 2134, chance = 12000},
-	{id = 7590, chance = 10000, maxCount = 3},
-	{id = 7591, chance = 5000, maxCount = 4},
-	{id = 2446, chance = 5000},
-	{id = 11207, chance = 2500},
-	{id = 9811, chance = 2500},
-	{id = 2447, chance = 2500}
+	{id = 12509, chance = 100000}, -- scorpion sceptre
+	{id = 3031, chance = 95000, maxCount = 243}, -- gold coin
+	{id = 3035, chance = 36000, maxCount = 5}, -- platinum coin
+	{id = 12483, chance = 17000}, -- pharaoh banner
+	{id = 3042, chance = 14000, maxCount = 5}, -- scarab coin
+	{id = 12482, chance = 12000}, -- hieroglyph banner
+	{id = 3017, chance = 12000}, -- silver brooch
+	{id = 238, chance = 10000, maxCount = 3}, -- great mana potion
+	{id = 239, chance = 5000, maxCount = 4}, -- great health potion
+	{id = 3334, chance = 5000}, -- pharaoh sword
+	{id = 10290, chance = 2500}, -- mini mummy
+	{id = 8897, chance = 2500}, -- heavily rusted legs
+	{id = 3335, chance = 2500} -- twin axe
 }
 
 monster.attacks = {

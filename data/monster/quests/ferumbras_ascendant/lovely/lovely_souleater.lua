@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1100
 monster.maxHealth = 1100
 monster.race = "undead"
-monster.corpse = 12631
+monster.corpse = 11675
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -69,17 +68,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 12637, chance = 1990},
-	{id = 12635, chance = 20},
-	{id = 2148, chance = 88060, maxCount = 200},
-	{id = 12636, chance = 15060},
-	{id = 7590, chance = 7960},
-	{id = 8473, chance = 9400},
-	{id = 2152, chance = 49610, maxCount = 6},
-	{id = 2189, chance = 910},
-	{id = 2185, chance = 980},
-	{id = 6300, chance = 330},
-	{id = 5884, chance = 140}
+	{id = 11681, chance = 1990}, -- ectoplasmic sushi
+	{id = 11679, chance = 20}, -- souleater trophy
+	{id = 3031, chance = 88060, maxCount = 200}, -- gold coin
+	{id = 11680, chance = 15060}, -- lizard essence
+	{id = 238, chance = 7960}, -- great mana potion
+	{id = 7643, chance = 9400}, -- ultimate health potion
+	{id = 3035, chance = 49610, maxCount = 6}, -- platinum coin
+	{id = 3073, chance = 910}, -- wand of cosmic energy
+	{id = 3069, chance = 980}, -- necrotic rod
+	{id = 6299, chance = 330}, -- death ring
+	{id = 5884, chance = 140} -- spirit container
 }
 
 monster.attacks = {

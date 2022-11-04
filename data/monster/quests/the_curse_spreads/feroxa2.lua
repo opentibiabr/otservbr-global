@@ -6,10 +6,10 @@ monster.description = "Feroxa"
 monster.experience = 0
 monster.outfit = {
 	lookType = 731,
-	lookHead = 57,
-	lookBody = 76,
-	lookLegs = 77,
-	lookFeet = 57,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -20,7 +20,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 350
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -82,7 +81,7 @@ monster.defenses = {
 	defense = 55,
 	armor = 50,
 	{name ="speed", interval = 2000, chance = 12, speedChange = 1250, effect = CONST_ME_MAGIC_RED, target = false, duration = 10000},
-	{name ="outfit", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 5000, outfitMonster = "were wolf"},
+	{name ="outfit", interval = 2000, chance = 20, effect = CONST_ME_MAGIC_BLUE, target = false, duration = 5000, outfitMonster = "werewolf"},
 	{name ="feroxa summon", interval = 2000, chance = 20, target = false}
 }
 

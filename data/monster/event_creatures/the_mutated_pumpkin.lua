@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 500000
 monster.maxHealth = 500000
 monster.race = "undead"
-monster.corpse = 8960
+monster.corpse = 8133
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -75,16 +74,16 @@ monster.voices = {
 monster.loot = {
 	{name = "pumpkin", chance = 100000},
 	{name = "yummy gummy worm", chance = 100000, maxCount = 20},
-	{id = 2688, chance = 1000, maxCount = 50},
-	{id = 6569, chance = 1000, maxCount = 50},
+	{id = 3599, chance = 1000, maxCount = 50}, -- candy cane
+	{id = 6569, chance = 1000, maxCount = 50}, -- candy
 	{name = "spiderwebs", chance = 1000},
-	{id = 9006, chance = 1000},
-	{id = 6492, chance = 1000},
-	{id = 6526, chance = 1000},
+	{id = 8178, chance = 1000}, -- toy spider
+	{id = 6491, chance = 1000}, -- bat decoration
+	{id = 6525, chance = 1000}, -- skeleton decoration
 	{name = "bar of chocolate", chance = 1000},
-	{id = 6570, chance = 1000},
-	{id = 6571, chance = 1000},
-	{id = 2096, chance = 1000}
+	{id = 6570, chance = 1000}, -- surprise bag
+	{id = 6571, chance = 1000}, -- surprise bag
+	{id = 2977, chance = 1000} -- pumpkinhead
 }
 
 monster.attacks = {

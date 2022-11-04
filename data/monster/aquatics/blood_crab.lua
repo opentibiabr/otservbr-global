@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6075
 monster.speed = 160
 monster.manaCost = 505
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -76,7 +75,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 85750, maxCount = 20},
-	{id = 2667, chance = 14300},--fish
+	{id = 3578, chance = 14300}, -- fish
 	{name = "bloody pincers", chance = 6190},
 	{name = "chain armor", chance = 5240},
 	{name = "brass legs", chance = 2120},

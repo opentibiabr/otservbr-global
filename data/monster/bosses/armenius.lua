@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6006
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -65,7 +64,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2534, chance = 5230}
+	{id = 3434, chance = 5230} -- vampire shield
 }
 
 monster.attacks = {

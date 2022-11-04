@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6005
 monster.speed = 180
 monster.manaCost = 590
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -34,13 +33,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -65,17 +64,17 @@ monster.voices = {
 
 monster.loot = {
 	{name = "small stone", chance = 13890, maxCount = 4},
-	{id = 2124, chance = 120},
+	{id = 3007, chance = 120}, -- crystal ring
 	{name = "gold coin", chance = 90000, maxCount = 40},
-	{name = "red gem", chance = 30},
-	{name = "power ring", chance = 5070},
+	{id= 3039, chance = 30}, -- red gem
+	{id = 3050, chance = 5070}, -- power ring
 	{name = "carlin sword", chance = 2500},
 	{name = "iron ore", chance = 1980},
 	{name = "ancient stone", chance = 1020},
 	{name = "shiny stone", chance = 760},
 	{name = "sulphurous stone", chance = 10370},
 	{name = "piece of marble rock", chance = 380},
-	{id = 13757, chance = 550}
+	{id = 12600, chance = 550} -- coal
 }
 
 monster.attacks = {

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1500
 monster.maxHealth = 1500
 monster.race = "venom"
-monster.corpse = 13752
+monster.corpse = 12595
 monster.speed = 300
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -67,22 +66,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7440, chance = 490},
-	{id = 13881, chance = 300},
-	{id = 13942, chance = 320},
-	{id = 2148, chance = 99800, maxCount = 227},
-	{id = 2789, chance = 9930, maxCount = 3},
-	{id = 7588, chance = 19910},
-	{id = 7589, chance = 19920},
-	{id = 2145, chance = 4860, maxCount = 5},
-	{id = 2151, chance = 950},
-	{id = 2164, chance = 4020},
-	{id = 13877, chance = 270},
-	{id = 2189, chance = 510},
-	{id = 2438, chance = 520},
-	{id = 10221, chance = 570},
-	{id = 7889, chance = 830},
-	{id = 7895, chance = 480}
+	{id = 7440, chance = 490}, -- mastermind potion
+	{id = 12742, chance = 300}, -- yielowax
+	{id = 12805, chance = 320}, -- yielocks
+	{id = 3031, chance = 99800, maxCount = 227}, -- gold coin
+	{id = 3725, chance = 9930, maxCount = 3}, -- brown mushroom
+	{id = 236, chance = 19910}, -- strong health potion
+	{id = 237, chance = 19920}, -- strong mana potion
+	{id = 3028, chance = 4860, maxCount = 5}, -- small diamond
+	{id = 3034, chance = 950}, -- talon
+	{id = 3048, chance = 4020}, -- might ring
+	{id = 12737, chance = 270}, -- broken ring of ending
+	{id = 3073, chance = 510}, -- wand of cosmic energy
+	{id = 3326, chance = 520}, -- epee
+	{id = 9304, chance = 570}, -- shockwave amulet
+	{id = 816, chance = 830}, -- lightning pendant
+	{id = 822, chance = 480} -- lightning legs
 }
 
 monster.attacks = {

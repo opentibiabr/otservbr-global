@@ -5,11 +5,11 @@ monster.description = "an schiach"
 monster.experience = 580
 monster.outfit = {
 	lookType = 1162,
-	lookHead = 19,
+	lookHead = 0,
 	lookBody = 10,
-	lookLegs = 19,
+	lookLegs = 38,
 	lookFeet = 57,
-	lookAddons = 0,
+	lookAddons = 2,
 	lookMount = 0
 }
 
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 600
 monster.maxHealth = 600
 monster.race = "blood"
-monster.corpse = 35127
+monster.corpse = 30298
 monster.speed = 280
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

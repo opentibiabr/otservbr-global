@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 0
 monster.speed = 240
 monster.manaCost = 390
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -34,10 +33,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -62,9 +61,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Barkless Fanatic", chance = 20, interval = 2000},
-	{name = "Barkless Fanatic", chance = 30, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Barkless Fanatic", chance = 20, interval = 2000, count = 1},
+		{name = "Barkless Fanatic", chance = 30, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {

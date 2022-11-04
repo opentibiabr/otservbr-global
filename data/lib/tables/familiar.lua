@@ -10,20 +10,20 @@ FAMILIAR_TIMER = {
 	[2] = {storage=Storage.FamiliarSummonEvent60, countdown=60, message = "one minute"}
 }
 
-function sendMessageFunction(pid, message)
-	if Player(pid) then
-		Player(pid):sendTextMessage(MESSAGE_LOOT, "Your summon will disappear in less than " .. message)
+function SendMessageFunction(playerId, message)
+	if Player(playerId) then
+		Player(playerId):sendTextMessage(MESSAGE_LOOT, "Your summon will disappear in less than " .. message)
 	end
 end
 
-function removeFamiliar(creatureId, playerId)
+function RemoveFamiliar(creatureId, playerId)
 	local creature = Creature(creatureId)
 	local player = Player(playerId)
 	if not creature or not player then
 		return true
 	end
 	creature:remove()
-	for sendMessage = 1, #timer do
-		player:setStorageValue(timer[sendMessage].storage, -1)
+	for sendMessage = 1, #FAMILIAR_TIMER do
+		player:setStorageValue(FAMILIAR_TIMER[sendMessage].storage, -1)
 	end
 end

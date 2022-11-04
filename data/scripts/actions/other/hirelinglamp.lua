@@ -31,5 +31,5 @@ function hirelingLamp.onUse(player, item, fromPosition, target, toPosition, isHo
 	return true
 end
 
-hirelingLamp:id(34070)
+hirelingLamp:id(HIRELING_LAMP_ID)
 hirelingLamp:register()

@@ -15,11 +15,10 @@ monster.outfit = {
 
 monster.health = 10000
 monster.maxHealth = 10000
-monster.race = "undead"
-monster.corpse = 33357
+monster.race = "ink"
+monster.corpse = 28613
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

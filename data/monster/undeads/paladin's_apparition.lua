@@ -19,7 +19,7 @@ monster.Bestiary = {
 	race = BESTY_RACE_UNDEAD,
 	toKill = 5000,
 	FirstUnlock = 25,
-	SecondUnlock = 2500,
+	SecondUnlock = 3394,
 	CharmsPoints = 100,
 	Stars = 5,
 	Occurrence = 0,
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 25000
 monster.maxHealth = 25000
 monster.race = "blood"
-monster.corpse = 6080
+monster.corpse = 111
 monster.speed = 235
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -89,7 +88,7 @@ monster.loot = {
 	{name = "glacier mask", chance = 31920},
 	{name = "wood cape", chance = 21920},
 	{name = "skull helmet", chance = 18920},
-	{id = 26185, chance = 29000} -- Ring of blue plasma
+	{id = 23529, chance = 29000} -- ring of blue plasma
 }
 
 monster.attacks = {

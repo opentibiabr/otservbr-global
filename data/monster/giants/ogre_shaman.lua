@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 800
 monster.maxHealth = 800
 monster.race = "blood"
-monster.corpse = 24795
+monster.corpse = 22139
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -71,9 +70,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Dworc Fleshhunter", chance = 30, interval = 1000, max = 1},
-	{name = "Terror Bird", chance = 30, interval = 1000, max = 1}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Dworc Fleshhunter", chance = 30, interval = 1000, count = 1},
+		{name = "Terror Bird", chance = 30, interval = 1000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -86,26 +88,26 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 92000, maxCount = 130},
-	{id = 24850, chance = 1200, maxCount = 3},
-	{id = 24841, chance = 6200, maxCount = 2},
-	{id = 2147, chance = 2200, maxCount = 2},
-	{id = 2144, chance = 1200, maxCount = 2},
-	{id = 20111, chance = 3200},
-	{id = 12408, chance = 1200},
-	{id = 2185, chance = 800},
-	{id = 24844, chance = 3200},
-	{id = 24845, chance = 2200},
-	{id = 24840, chance = 1200},
-	{id = 2229, chance = 1200},
-	{id = 24847, chance = 1200},
-	{id = 7589, chance = 1000, maxCount = 3},
-	{id = 2188, chance = 600},
-	{id = 2031, chance = 500},
-	{id = 24839, chance = 300},
-	{id = 24848, chance = 300},
-	{id = 3955, chance = 100},
-	{id = 3952, chance = 100, maxCount = 2}
+	{id = 3031, chance = 92000, maxCount = 130}, -- gold coin
+	{id = 22194, chance = 1200, maxCount = 3}, -- opal
+	{id = 22185, chance = 6200, maxCount = 2}, -- prickly pear
+	{id = 3030, chance = 2200, maxCount = 2}, -- small ruby
+	{id = 3027, chance = 1200, maxCount = 2}, -- black pearl
+	{id = 17831, chance = 3200}, -- bone fetish
+	{id = 11452, chance = 1200}, -- broken shamanic staff
+	{id = 3069, chance = 800}, -- necrotic rod
+	{id = 22188, chance = 3200}, -- ogre ear stud
+	{id = 22189, chance = 2200}, -- ogre nose ring
+	{id = 22184, chance = 1200}, -- shamanic talisman
+	{id = 3114, chance = 1200}, -- skull
+	{id = 22191, chance = 1200}, -- skull fetish
+	{id = 237, chance = 1000, maxCount = 3}, -- strong mana potion
+	{id = 3072, chance = 600}, -- wand of decay
+	{id = 2901, chance = 500}, -- waterskin
+	{id = 22183, chance = 300}, -- ogre scepta
+	{id = 22192, chance = 300}, -- shamanic mask
+	{id = 3002, chance = 100}, -- voodoo doll
+	{id = 2965, chance = 100, maxCount = 2} -- didgeridoo
 }
 
 monster.attacks = {
@@ -123,13 +125,13 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 10},
+	{type = COMBAT_ENERGYDAMAGE, percent = 20},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 10},
+	{type = COMBAT_FIREDAMAGE, percent = 20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_ICEDAMAGE, percent = 20},
 	{type = COMBAT_HOLYDAMAGE , percent = -10},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }

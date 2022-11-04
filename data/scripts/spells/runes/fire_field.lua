@@ -11,9 +11,8 @@ function rune.onCastSpell(creature, var, isHotkey)
 end
 
 rune:group("attack")
-rune:id(25)
-rune:name("Fire Field")
-rune:runeId(2301)
+rune:name("fire field rune")
+rune:runeId(3188)
 rune:allowFarUse(true)
 rune:setPzLocked(true)
 rune:charges(3)

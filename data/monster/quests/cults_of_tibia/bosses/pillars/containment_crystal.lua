@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a containment crystal"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 8633
+	lookTypeEx = 7805
 }
 
 monster.health = 20000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,

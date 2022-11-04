@@ -5,10 +5,10 @@ monster.description = "a dark magician"
 monster.experience = 185
 monster.outfit = {
 	lookType = 133,
-	lookHead = 116,
+	lookHead = 58,
 	lookBody = 95,
-	lookLegs = 50,
-	lookFeet = 132,
+	lookLegs = 51,
+	lookFeet = 131,
 	lookAddons = 2,
 	lookMount = 0
 }
@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 325
 monster.maxHealth = 325
 monster.race = "blood"
-monster.corpse = 20367
+monster.corpse = 18086
 monster.speed = 180
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,

@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6052
 monster.speed = 220
 monster.manaCost = 500
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -31,7 +30,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -81,7 +80,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
 	{type = COMBAT_ENERGYDAMAGE, percent = -10},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},

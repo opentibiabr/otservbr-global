@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 300
 monster.maxHealth = 300
 monster.race = "blood"
-monster.corpse = 33423
+monster.corpse = 28811
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -96,7 +95,7 @@ monster.loot = {
 	{name = "wood cape", chance = 820},
 	{name = "leaf legs", chance = 340},
 	{name = "wooden spellbook", chance = 210},
-	{id = 5792, chance = 140}
+	{id = 5792, chance = 140} -- die
 }
 
 monster.attacks = {

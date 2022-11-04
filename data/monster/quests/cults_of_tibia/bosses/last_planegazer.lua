@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a last planegazer"
 monster.experience = 40000
 monster.outfit = {
-	lookType = 1063,
+	lookType = 1044,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 50000
 monster.maxHealth = 50000
 monster.race = "blood"
-monster.corpse = 27916
+monster.corpse = 27613
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -38,7 +37,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = false,
@@ -64,18 +63,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 65700, maxCount = 15},
-	{id = 2510, chance = 20000},
-	{id = 2398, chance = 12900},
-	{id = 2464, chance = 10000},
-	{id = 2460, chance = 7800},
-	{id = 2376, chance = 5000},
-	{id = 2666, chance = 5000},
-	{id = 2386, chance = 4000},
-	{id = 12428, chance = 2000, maxCount = 2},
-	{id = 5878, chance = 980},
-	{id = 2554, chance = 310},
-	{id = 2172, chance = 120}
+	{id = 3031, chance = 65700, maxCount = 15}, -- gold coin
+	{id = 3410, chance = 20000}, -- plate shield
+	{id = 3286, chance = 12900}, -- mace
+	{id = 3358, chance = 10000}, -- chain armor
+	{id = 3354, chance = 7800}, -- brass helmet
+	{id = 3264, chance = 5000}, -- sword
+	{id = 3577, chance = 5000}, -- meat
+	{id = 3274, chance = 4000}, -- axe
+	{id = 11472, chance = 2000, maxCount = 2}, -- minotaur horn
+	{id = 5878, chance = 980}, -- minotaur leather
+	{id = 3457, chance = 310}, -- shovel
+	{id = 3056, chance = 120} -- bronze amulet
 }
 
 monster.attacks = {

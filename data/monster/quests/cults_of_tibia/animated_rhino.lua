@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 3000
 monster.maxHealth = 3000
 monster.race = "blood"
-monster.corpse = 27750
+monster.corpse = 25082
 monster.speed = 150
 monster.manaCost = 290
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -34,13 +33,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -66,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 5925, chance = 50320},
-	{id = 27056, chance = 50320},
-	{id = 27057, chance = 50320},
-	{id = 24842, chance = 50320}
+	{id = 5925, chance = 50320}, -- hardened bone
+	{id = 24388, chance = 50320}, -- rhino hide
+	{id = 24389, chance = 50320}, -- rhino horn
+	{id = 22186, chance = 50320} -- raw meat
 }
 
 monster.attacks = {

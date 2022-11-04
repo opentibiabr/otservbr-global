@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 750
 monster.maxHealth = 750
 monster.race = "venom"
-monster.corpse = 23479
+monster.corpse = 21108
 monster.speed = 160
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -71,8 +70,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Glooth Blob", chance = 6, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Glooth Blob", chance = 6, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -81,14 +83,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 70},
-	{id = 23553, chance = 15410},
-	{id = 2146, chance = 3310, maxCount = 2},
-	{id = 9970, chance = 3420, maxCount = 2},
-	{id = 23554, chance = 400},
-	{id = 23550, chance = 510},
-	{id = 23549, chance = 580},
-	{id = 23551, chance = 560}
+	{id = 3031, chance = 100000, maxCount = 70}, -- gold coin
+	{id = 21182, chance = 15410}, -- glob of glooth
+	{id = 3029, chance = 3310, maxCount = 2}, -- small sapphire
+	{id = 9057, chance = 3420, maxCount = 2}, -- small topaz
+	{id = 21183, chance = 400}, -- glooth amulet
+	{id = 21179, chance = 510}, -- glooth blade
+	{id = 21178, chance = 580}, -- glooth club
+	{id = 21180, chance = 560} -- glooth axe
 }
 
 monster.attacks = {

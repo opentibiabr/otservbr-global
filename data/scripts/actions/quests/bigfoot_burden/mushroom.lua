@@ -1,5 +1,5 @@
 local function revertAid(position)
-	local mushroom = Tile(position):getItemById(18220)
+	local mushroom = Tile(position):getItemById(15704)
 	if mushroom then
 		mushroom:removeAttribute(ITEM_ATTRIBUTE_ACTIONID)
 	end
@@ -12,7 +12,7 @@ function bigfootMushroom.onUse(player, item, fromPosition, target, toPosition, i
 		return true
 	end
 
-	local spore = Game.createItem(math.random(18221, 18224), 1, toPosition)
+	local spore = Game.createItem(math.random(15705, 15708), 1, toPosition)
 	if spore then
 		spore:decay()
 		item:setActionId(100)
@@ -21,5 +21,5 @@ function bigfootMushroom.onUse(player, item, fromPosition, target, toPosition, i
 	return true
 end
 
-bigfootMushroom:id(18220)
+bigfootMushroom:id(15704)
 bigfootMushroom:register()

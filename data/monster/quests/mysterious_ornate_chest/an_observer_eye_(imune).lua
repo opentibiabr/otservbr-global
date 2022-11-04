@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 30000
 monster.maxHealth = 30000
 monster.race = "blood"
-monster.corpse = 27596
+monster.corpse = 24928
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

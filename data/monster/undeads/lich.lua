@@ -5,10 +5,10 @@ monster.description = "a lich"
 monster.experience = 900
 monster.outfit = {
 	lookType = 99,
-	lookHead = 95,
-	lookBody = 116,
-	lookLegs = 119,
-	lookFeet = 115,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -34,7 +34,6 @@ monster.race = "undead"
 monster.corpse = 6028
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 4000,
@@ -72,8 +71,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Bonebeast", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Bonebeast", chance = 10, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -96,9 +98,9 @@ monster.loot = {
 	{name = "platinum coin", chance = 19720},
 	{name = "yellow gem", chance = 690},
 	{name = "platinum amulet", chance = 450},
-	{id = 2175, chance = 10000},
+	{id = 3059, chance = 10000}, -- spellbook
 	{name = "mind stone", chance = 350},
-	{name = "ring of healing", chance = 1540},
+	{id = 3098, chance = 1540}, -- ring of healing
 	{name = "skull staff", chance = 550},
 	{name = "strange helmet", chance = 740},
 	{name = "ancient shield", chance = 2422},
@@ -135,7 +137,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = -10},
+	{type = COMBAT_HOLYDAMAGE , percent = -20},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

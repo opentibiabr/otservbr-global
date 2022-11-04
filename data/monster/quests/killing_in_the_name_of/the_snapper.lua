@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6046
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -64,13 +63,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 178},
-	{id = 7618, chance = 80000, maxCount = 5},
-	{id = 2149, chance = 75000, maxCount = 4},
-	{id = 2647, chance = 44000},
-	{id = 2463, chance = 39800},
-	{id = 3982, chance = 6000},
-	{id = 2476, chance = 400}
+	{id = 3031, chance = 100000, maxCount = 178}, -- gold coin
+	{id = 266, chance = 80000, maxCount = 5}, -- health potion
+	{id = 3032, chance = 75000, maxCount = 4}, -- small emerald
+	{id = 3557, chance = 44000}, -- plate legs
+	{id = 3357, chance = 39800}, -- plate armor
+	{id = 3556, chance = 6000}, -- crocodile boots
+	{id = 3370, chance = 400} -- knight armor
 }
 
 monster.attacks = {

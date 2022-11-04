@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "cosmic energy prism C"
 monster.experience = 840
 monster.outfit = {
-	lookTypeEx = 1548
+	lookTypeEx = 2187
 }
 
 monster.health = 1000
@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,

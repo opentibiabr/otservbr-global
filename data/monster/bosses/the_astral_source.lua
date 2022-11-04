@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "the astral source"
 monster.experience = 3000
 monster.outfit = {
-	lookTypeEx = 26896
+	lookTypeEx = 24228
 }
 
 monster.health = 150000
@@ -13,7 +13,6 @@ monster.race = "venom"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -28,10 +27,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = true,
 	illusionable = false,

@@ -18,9 +18,8 @@ function rune.onCastSpell(creature, var, isHotkey)
 end
 
 rune:group("attack")
-rune:id(7)
-rune:name("Lightest Missile")
-rune:runeId(23723)
+rune:name("lightest missile rune")
+rune:runeId(21352)
 rune:allowFarUse(true)
 rune:charges(10)
 rune:level(1)

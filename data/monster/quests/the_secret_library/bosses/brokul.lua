@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 50000
 monster.maxHealth = 50000
 monster.race = "blood"
-monster.corpse = 33376
+monster.corpse = 28635
 monster.speed = 210
 monster.manaCost = 0
-monster.maxSummons = 5
 
 monster.changeTarget = {
 	interval = 1000,
@@ -38,9 +37,9 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = true,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 60,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "neutral deepling warrior", chance = 70, interval = 1000}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "neutral deepling warrior", chance = 70, interval = 1000, count = 5}
+	}
 }
 
 monster.voices = {
@@ -71,14 +73,14 @@ monster.loot = {
 	{name = "small sapphire", chance = 2854, maxCount = 10},
 	{name = "gold coin", chance = 70000, maxCount = 60},
 	{name = "platinum coin", chance = 80000, maxCount = 10},
-	{name = "Gold Ingot", chance = 3448, maxCount = 10},
-	{name = "Broccoli", chance = 2439, maxCount = 10},
-	{name = "Small Diamond", chance = 498, maxCount = 10},
-	{name = "Blue Gem", chance = 2500},
-	{name = "Red Gem", chance = 2000},
-	{name = "Deepling Ceremonial Dagger", chance = 200},
-	{name = "Deepling Fork", chance = 200},
-	{name = "True Book of Death", chance = 70000}
+	{name = "gold ingot", chance = 3448, maxCount = 10},
+	{name = "broccoli", chance = 2439, maxCount = 10},
+	{name = "small diamond", chance = 498, maxCount = 10},
+	{name = "blue gem", chance = 2500},
+	{id= 3039, chance = 2000}, -- red gem
+	{name = "deepling ceremonial dagger", chance = 200},
+	{name = "deepling fork", chance = 200},
+	{name = "true book of death", chance = 70000}
 }
 
 monster.attacks = {

@@ -8,18 +8,17 @@ monster.outfit = {
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
-	lookFeet = 0,
-	lookAddons = 1,
+	lookFeet = 94,
+	lookAddons = 0,
 	lookMount = 0
 }
 
 monster.health = 24000
 monster.maxHealth = 24000
 monster.race = "undead"
-monster.corpse = 37445
+monster.corpse = 32610
 monster.speed = 285
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -37,7 +36,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = true,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -68,7 +67,7 @@ monster.loot = {
 	{name = "white gem", chance = 33333},
 	{name = "terra rod", chance = 16670},
 	{name = "yellow gem", chance = 16670},
-	{name = "red gem", chance = 16670},
+	{id= 3039, chance = 16670}, -- red gem
 	{name = "necklace of the deep", chance = 8330},
 	{name = "wand of starstorm", chance = 8330},
 	{name = "wand of cosmic energy", chance = 8330},

@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6042
 monster.speed = 128
 monster.manaCost = 220
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -34,10 +33,10 @@ monster.flags = {
 	summonable = false,
 	attackable = true,
 	hostile = false,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -62,7 +61,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "meat", chance = 2120, maxCount = 2},
-	{id = 2695, chance = 980, maxCount = 2},
+	{id = 3606, chance = 980, maxCount = 2}, -- egg
 	{name = "worm", chance = 11000, maxCount = 3},
 	{name = "chicken feather", chance = 19000, maxCount = 2}
 }

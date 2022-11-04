@@ -9,17 +9,16 @@ monster.outfit = {
 	lookBody = 95,
 	lookLegs = 0,
 	lookFeet = 0,
-	lookAddons = 1,
+	lookAddons = 0,
 	lookMount = 0
 }
 
 monster.health = 28000
 monster.maxHealth = 28000
 monster.race = "undead"
-monster.corpse = 37445
+monster.corpse = 32610
 monster.speed = 300
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -37,7 +36,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = true,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -72,7 +71,7 @@ monster.loot = {
 	{name = "warrior's axe", chance = 8300},
 	{name = "death toll", chance = 150},
 	{name = "silver hand mirror", chance = 150},
-	{name = "red gem", chance = 150, maxCount = 2}
+	{id= 3039, chance = 150, maxCount = 2} -- red gem
 }
 
 monster.attacks = {

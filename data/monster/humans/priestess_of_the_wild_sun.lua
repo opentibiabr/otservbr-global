@@ -5,10 +5,10 @@ monster.description = "a priestess of the wild sun"
 monster.experience = 6400
 monster.outfit = {
 	lookType = 1199,
-	lookHead = 114,
+	lookHead = 95,
 	lookBody = 78,
 	lookLegs = 94,
-	lookFeet = 0,
+	lookFeet = 3,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8500
 monster.maxHealth = 8500
 monster.race = "blood"
-monster.corpse = 36254
+monster.corpse = 31419
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -79,12 +78,12 @@ monster.voices = {
 monster.loot = {
 	{name = "platinum coin", chance = 100000, maxCount = 2},
 	{name = "fafnar symbol", chance = 7360},
-	{id = 36268, chance = 6610},
-	{id = 36270, chance = 6610},
-	{id = 36271, chance = 6610},
-	{id = 36166, chance = 2540},
+	{id = 31433, chance = 6610}, -- secret instruction
+	{id = 31435, chance = 6610}, -- secret instruction
+	{id = 31436, chance = 6610}, -- secret instruction
+	{id = 31331, chance = 2540}, -- empty honey glass
 	{name = "sea horse figurine", chance = 910},
-	{id = 36204, chance = 530},
+	{id = 31369, chance = 530}, -- gryphon mask
 	{name = "wand of decay", chance = 1250},
 	{name = "wand of everblazing", chance = 1290},
 	{name = "golden sickle", chance = 1250},
@@ -107,9 +106,9 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 85},
+	{type = COMBAT_ENERGYDAMAGE, percent = 15},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = 80},
+	{type = COMBAT_FIREDAMAGE, percent = 20},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

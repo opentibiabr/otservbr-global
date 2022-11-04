@@ -8,8 +8,8 @@ monster.outfit = {
 	lookHead = 0,
 	lookBody = 14,
 	lookLegs = 0,
-	lookFeet = 0,
-	lookAddons = 1,
+	lookFeet = 83,
+	lookAddons = 0,
 	lookMount = 0
 }
 
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 5000
 monster.maxHealth = 5000
 monster.race = "undead"
-monster.corpse = 37445
+monster.corpse = 32610
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,

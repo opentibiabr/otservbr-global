@@ -5,10 +5,10 @@ monster.description = "an azure frog"
 monster.experience = 20
 monster.outfit = {
 	lookType = 226,
-	lookHead = 69,
-	lookBody = 66,
-	lookLegs = 69,
-	lookFeet = 66,
+	lookHead = 87,
+	lookBody = 85,
+	lookLegs = 85,
+	lookFeet = 87,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6079
 monster.speed = 320
 monster.manaCost = 305
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -44,7 +43,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,

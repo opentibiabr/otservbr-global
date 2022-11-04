@@ -10,16 +10,24 @@ poison:setParameter(CONDITION_PARAM_TICKINTERVAL, 4000)
 poison:setParameter(CONDITION_PARAM_FORCEUPDATE, true)
 
 local fluidMessage = {
-	[3] = 'Aah...',
-	[4] = 'Urgh!',
-	[5] = 'Mmmh.',
-	[7] = 'Aaaah...',
-	[10] = 'Aaaah...',
-	[11] = 'Urgh!',
-	[13] = 'Urgh!',
-	[15] = 'Aah...',
-	[19] = 'Urgh!',
-	[43] = 'Aaaah...'
+	[1] = "Gulp.", -- water
+	[2] = "Aah...", -- wine
+	[3] = "Aah...", -- beer
+	[4] = "Gulp.", -- mud
+	[5] = "Gulp.", -- blood
+	[6] = "Urgh!", -- slime
+	[7] = "Gulp.", -- oil
+	[8] = "Urgh!", -- urine
+	[9] = "Gulp.", -- milk
+	[10] = "Aaaah...", -- manafluid
+	[11] = "Aaaah...", -- lifefluid
+	[12] = "Mmmh.", -- lemonade
+	[13] = "Aah...", -- rum
+	[14] = "Mmmh.", -- fruit juice
+	[15] = "Mmmh.", -- coconut milk
+	[16] = "Aah...", -- mead
+	[17] = "Gulp.", -- tea
+	[18] = "Urgh!" -- ink
 }
 
 local function graveStoneTeleport(cid, fromPosition, toPosition)
@@ -85,12 +93,12 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			item:transform(item.itemid, 0)
 			return true
 		elseif target.type ~= 0 and item.type == 0 then
-			target:transform(target.itemid, 0)
 			item:transform(item.itemid, target.type)
+			target:transform(target.itemid, 0)
 			return true
 		end
 	end
-	if target.itemid == 29312 then
+	if target.itemid == 26076 then
 		if item.type == 0 then
 			player:sendTextMessage(MESSAGE_FAILURE, 'It is empty.')
 		
@@ -109,20 +117,20 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:sendTextMessage(MESSAGE_FAILURE, 'It is empty.')
 
 		elseif target.uid == player.uid then
-			if isInArray({3, 15, 43}, item.type) then
+			if isInArray({2, 3, 16}, item.type) then
 				player:addCondition(drunk)
 
-			elseif item.type == 4 then
+			elseif item.type == 6 then
 				local town = player:getTown()
 				if town and town:getId() == TOWNS_LIST.DAWNPORT then
 					dawnportPoisonCondition(player)
 				else
 					player:addCondition(poison)
 				end
-			elseif item.type == 7 then
+			elseif item.type == 10 then
 				player:addMana(math.random(50, 150))
 				fromPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
-			elseif item.type == 10 then
+			elseif item.type == 11 then
 				player:addHealth(60)
 				fromPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			end
@@ -130,7 +138,7 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:say(fluidMessage[item.type] or 'Gulp.', TALKTYPE_MONSTER_SAY)
 			item:transform(item.itemid, 0)
 		else
-			local pool = Game.createItem(2016, item.type, toPosition)
+			local pool = Game.createItem(2886, item.type, toPosition)
 			if pool then
 				pool:decay()
 				if item.type == 1 then
@@ -150,7 +158,7 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:sendTextMessage(MESSAGE_FAILURE, 'It is empty.')
 
 		else
-			if item.type == 2 and target.actionid == 2023 then
+			if item.type == 5 and target.actionid == 2023 then
 				toPosition.y = toPosition.y + 1
 				local creatures, destination = Tile(toPosition):getCreatures(), Position(32791, 32332, 10)
 				if #creatures == 0 then
@@ -170,7 +178,7 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 					toPosition = player:getPosition()
 				end
 
-				local pool = Game.createItem(2016, item.type, toPosition)
+				local pool = Game.createItem(2886, item.type, toPosition)
 				if pool then
 					pool:decay()
     				if item.type == 1 then
@@ -185,6 +193,6 @@ function fluid.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	return true
 end
 
-fluid:id(1775, 2005, 2006, 2007, 2008, 2009, 2011, 2012, 2013, 2014, 2015, 2023, 2031, 2032, 2033, 2034, 2562, 2574, 2575, 2576, 2577)
+fluid:id(2524, 2873, 2874, 2875, 2876, 2877, 2879, 2880, 2881, 2882, 2885, 2893, 2901, 2902, 2903, 2904, 3465, 3477, 3478, 3479, 3480)
 fluid:register()
 

@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 5800
 monster.maxHealth = 5800
 monster.race = "undead"
-monster.corpse = 6310
+monster.corpse = 6309
 monster.speed = 380
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -51,7 +50,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -83,22 +82,22 @@ monster.loot = {
 	{name = "black pearl", chance = 12000, maxCount = 3},
 	{name = "gold coin", chance = 100000, maxCount = 198},
 	{name = "platinum coin", chance = 100000, maxCount = 7},
-	{name = "red gem", chance = 15000},
+	{id= 3039, chance = 15000}, -- red gem
 	{name = "stone skin amulet", chance = 2780},
 	{name = "blank rune", chance = 35250, maxCount = 3},
 	{name = "skull staff", chance = 850},
 	{name = "tower shield", chance = 740},
 	{name = "skull helmet", chance = 170},
-	{name = "silver goblet", chance = 4950},
+	{id = 5806, chance = 4950}, -- silver goblet
 	{name = "soul orb", chance = 15000},
-	{id = 6300, chance = 2170},
+	{id = 6299, chance = 2170}, -- death ring
 	{name = "demonic essence", chance = 7500},
 	{name = "skeleton decoration", chance = 1250},
 	{name = "haunted blade", chance = 740},
 	{name = "titan axe", chance = 1000},
 	{name = "great mana potion", chance = 14200, maxCount = 2},
 	{name = "great health potion", chance = 8800, maxCount = 2},
-	{id = 9810, chance = 3500},
+	{id = 8896, chance = 3500}, -- slightly rusted armor
 	{name = "unholy bone", chance = 33010}
 }
 
@@ -122,7 +121,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 50},
-	{type = COMBAT_HOLYDAMAGE , percent = -20},
+	{type = COMBAT_HOLYDAMAGE , percent = -25},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

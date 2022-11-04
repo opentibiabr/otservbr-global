@@ -33,7 +33,6 @@ monster.race = "venom"
 monster.corpse = 6047
 monster.speed = 110
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -76,7 +75,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "gold coin", chance = 60000, maxCount = 40},
+	{name = "gold coin", chance = 90000, maxCount = 40},
 	{name = "corncob", chance = 890},
 	{name = "dark mushroom", chance = 7692},
 	{name = "sling herb", chance = 446, maxCount = 2},
@@ -95,7 +94,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 15,
-	armor = 15
+	armor = 22
 }
 
 monster.elements = {
@@ -106,7 +105,7 @@ monster.elements = {
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 35},
+	{type = COMBAT_ICEDAMAGE, percent = 20},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }

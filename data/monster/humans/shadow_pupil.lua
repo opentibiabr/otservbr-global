@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 450
 monster.maxHealth = 450
 monster.race = "blood"
-monster.corpse = 21254
+monster.corpse = 18937
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 4000,
@@ -68,9 +67,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Skeleton", chance = 10, interval = 2000},
-	{name = "Ghost", chance = 5, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Skeleton", chance = 10, interval = 2000, count = 4},
+		{name = "Ghost", chance = 5, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -109,15 +111,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
-	{type = COMBAT_ENERGYDAMAGE, percent = 5},
+	{type = COMBAT_ENERGYDAMAGE, percent = 10},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = -5},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = 5},
+	{type = COMBAT_ICEDAMAGE, percent = 20},
 	{type = COMBAT_HOLYDAMAGE , percent = -5},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 
 monster.immunities = {

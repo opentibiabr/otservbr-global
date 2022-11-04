@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2000
 monster.maxHealth = 2000
 monster.race = "venom"
-monster.corpse = 13485
+monster.corpse = 12496
 monster.speed = 172
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -74,23 +73,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 10572, chance = 5040},
-	{id = 9690, chance = 5070},
-	{id = 2148, chance = 94130, maxCount = 179},
-	{id = 5944, chance = 44990},
-	{id = 2177, chance = 9150},
-	{id = 7589, chance = 5980},
-	{id = 7588, chance = 5790},
-	{id = 9976, chance = 5320},
-	{id = 2164, chance = 940},
-	{id = 7889, chance = 710},
-	{id = 2154, chance = 550},
-	{id = 2189, chance = 530},
-	{id = 13758, chance = 480},
-	{id = 7440, chance = 400},
-	{id = 10221, chance = 110},
-	{id = 8878, chance = 20},
-	{id = 7428, chance = 13}
+	{id = 9655, chance = 5040}, -- gear crystal
+	{id = 8775, chance = 5070}, -- gear wheel
+	{id = 3031, chance = 94130, maxCount = 179}, -- gold coin
+	{id = 5944, chance = 44990}, -- soul orb
+	{id = 3061, chance = 9150}, -- life crystal
+	{id = 237, chance = 5980}, -- strong mana potion
+	{id = 236, chance = 5790}, -- strong health potion
+	{id = 9063, chance = 5320}, -- crystal pedestal
+	{id = 3048, chance = 940}, -- might ring
+	{id = 816, chance = 710}, -- lightning pendant
+	{id = 3037, chance = 550}, -- yellow gem
+	{id = 3073, chance = 530}, -- wand of cosmic energy
+	{id = 12601, chance = 480}, -- slime mould
+	{id = 7440, chance = 400}, -- mastermind potion
+	{id = 9304, chance = 110}, -- shockwave amulet
+	{id = 8050, chance = 20}, -- crystalline armor
+	{id = 7428, chance = 13} -- bonebreaker
 }
 
 monster.attacks = {
@@ -110,14 +109,14 @@ monster.defenses = {
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 100},
-	{type = COMBAT_EARTHDAMAGE, percent = 80},
+	{type = COMBAT_EARTHDAMAGE, percent = 75},
 	{type = COMBAT_FIREDAMAGE, percent = 10},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -5},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = -5}
+	{type = COMBAT_ICEDAMAGE, percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = -15},
+	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 
 monster.immunities = {

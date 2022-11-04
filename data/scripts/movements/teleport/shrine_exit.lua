@@ -1,17 +1,32 @@
-local setting = {
-	{storage = 10017, destination = Position(32360, 31781, 9)},
-	{storage = 10018, destination = Position(32369, 32242, 6)},
-	{storage = 10019, destination = Position(32958, 32077, 5)},
-	{storage = 10020, destination = Position(32681, 31686, 2)},
-	{storage = 10021, destination = Position(32646, 31925, 11)},
-	{storage = 10022, destination = Position(33230, 32392, 5)},
-	{storage = 10023, destination = Position(33130, 32815, 4)},
-	{storage = 10024, destination = Position(33266, 31835, 9)},
-	{storage = 10025, destination = Position(32337, 32837, 8)},
-	{storage = 10026, destination = Position(32628, 32743, 4)},
-	{storage = 10027, destination = Position(32213, 31132, 8)},
-	{storage = 10028, destination = Position(32786, 31245, 5)},
-	{storage = 10029, destination = Position(33594, 31899, 4)}
+local exitDestination = {
+	{x = 32360, y = 31781, z = 9},--Carlin
+	{x = 32369, y = 32242, z = 6},--Thais
+	{x = 32958, y = 32077, z = 5},--Venore
+	{x = 32681, y = 31686, z = 2},--Ab'Dendriel
+	{x = 32646, y = 31925, z = 11},--Kazodroon
+	{x = 33230, y = 32392, z = 5},--Darashia
+	{x = 33130, y = 32815, z = 4},--Ankrahmun
+	{x = 33266, y = 31835, z = 9},--Edron
+	{x = 32337, y = 32837, z = 8},--Liberty Bay
+	{x = 32628, y = 32743, z = 4},--Port Hope
+	{x = 32213, y = 31132, z = 8},--Svargrond
+	{x = 32786, y = 31245, z = 5},--Yalahar
+	{x = 33594, y = 31899, z = 4}--Oramond
+}
+local exitFlamesPos = {
+	{x = 32191, y = 31419, z = 2},--ice
+	{x = 32197, y = 31419, z = 2},
+	{x = 32971, y = 32224, z = 7},--earth
+	{x = 32977, y = 32224, z = 7},
+	{x = 32971, y = 32228, z = 7},
+	{x = 32977, y = 32228, z = 7},
+	{x = 32914, y = 32337, z = 15},--fire
+	{x = 32914, y = 32342, z = 15},
+	{x = 32907, y = 32337, z = 15},
+	{x = 32907, y = 32342, z = 15},
+	{x = 33063, y = 32711, z = 5},--energy
+	{x = 33063, y = 32716, z = 5},
+	{x = 33059, y = 32717, z = 5}
 }
 
 local shrineExit = MoveEvent()
@@ -22,21 +37,17 @@ function shrineExit.onStepIn(creature, item, position, fromPosition)
 		return
 	end
 
-	for i = 1, #setting do
-		local teleport = setting[i]
-		if player:getStorageValue(teleport.storage) >= 1 then
-			player:teleportTo(teleport.destination)
-			teleport.destination:sendMagicEffect(CONST_ME_TELEPORT)
-			player:setStorageValue(teleport.storage, 0)
-			return true
-		end
+	if player:getStorageValue(Storage.ShrineEntrance) >= 1 then
+		player:teleportTo(Position(exitDestination[player:getStorageValue(Storage.ShrineEntrance)]))
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		return true
 	end
-
 	player:teleportTo(player:getTown():getTemplePosition())
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
 
-shrineExit:type("stepin")
-shrineExit:aid(9117)
+for a = 1, #exitFlamesPos do
+	shrineExit:position(exitFlamesPos[a])
+end
 shrineExit:register()

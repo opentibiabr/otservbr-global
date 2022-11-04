@@ -5,8 +5,8 @@ monster.description = "a vile grandmaster"
 monster.experience = 1500
 monster.outfit = {
 	lookType = 268,
-	lookHead = 97,
-	lookBody = 0,
+	lookHead = 59,
+	lookBody = 19,
 	lookLegs = 95,
 	lookFeet = 94,
 	lookAddons = 1,
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1700
 monster.maxHealth = 1700
 monster.race = "blood"
-monster.corpse = 24679
+monster.corpse = 22023
 monster.speed = 280
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -82,28 +81,28 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7364, chance = 1210, maxCount = 4},
-	{id = 2148, chance = 75410, maxCount = 30},
-	{id = 2152, chance = 75410, maxCount = 2},
-	{id = 2681, chance = 1210},
-	{id = 2666, chance = 1210, maxCount = 2},
-	{id = 7591, chance = 1210},
-	{id = 2381, chance = 1610},
-	{id = 2744, chance = 510},
-	{id = 2120, chance = 1510},
-	{id = 12466, chance = 910},
-	{id = 12406, chance = 910},
-	{id = 2147, chance = 810, maxCount = 2},
-	{id = 2146, chance = 810, maxCount = 2},
-	{id = 2121, chance = 510},
-	{id = 5911, chance = 210},
-	{id = 2391, chance = 210},
-	{id = 2487, chance = 310},
-	{id = 2392, chance = 210},
-	{id = 2491, chance = 310},
-	{id = 2519, chance = 210},
-	{id = 2488, chance = 110},
-	{id = 2171, chance = 210}
+	{id = 7364, chance = 1210, maxCount = 4}, -- sniper arrow
+	{id = 3031, chance = 75410, maxCount = 30}, -- gold coin
+	{id = 3035, chance = 75410, maxCount = 2}, -- platinum coin
+	{id = 3592, chance = 1210}, -- grapes
+	{id = 3577, chance = 1210, maxCount = 2}, -- meat
+	{id = 239, chance = 1210}, -- great health potion
+	{id = 3269, chance = 1610}, -- halberd
+	{id = 3658, chance = 510}, -- red rose
+	{id = 3003, chance = 1510}, -- rope
+	{id = 11510, chance = 910}, -- scroll of heroic deeds
+	{id = 11450, chance = 910}, -- small notebook
+	{id = 3030, chance = 810, maxCount = 2}, -- small ruby
+	{id = 3029, chance = 810, maxCount = 2}, -- small sapphire
+	{id = 3004, chance = 510}, -- wedding ring
+	{id = 5911, chance = 210}, -- red piece of cloth
+	{id = 3279, chance = 210}, -- war hammer
+	{id = 3381, chance = 310}, -- crown armor
+	{id = 3280, chance = 210}, -- fire sword
+	{id = 3385, chance = 310}, -- crown helmet
+	{id = 3419, chance = 210}, -- crown shield
+	{id = 3382, chance = 110}, -- crown legs
+	{id = 3055, chance = 210} -- platinum amulet
 }
 
 monster.attacks = {
@@ -120,16 +119,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
-	{type = COMBAT_EARTHDAMAGE, percent = 10},
-	{type = COMBAT_FIREDAMAGE, percent = 10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
+	{type = COMBAT_ENERGYDAMAGE, percent = 25},
+	{type = COMBAT_EARTHDAMAGE, percent = 25},
+	{type = COMBAT_FIREDAMAGE, percent = 25},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 10},
-	{type = COMBAT_DEATHDAMAGE , percent = -10}
+	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_HOLYDAMAGE , percent = 50},
+	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 
 monster.immunities = {

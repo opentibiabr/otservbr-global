@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6017
 monster.speed = 340
 monster.manaCost = 220
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -44,11 +43,11 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = false,
+	convinceable = false,
+	pushable = true,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -68,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "killer rabbit", chance = 30, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "killer rabbit", chance = 30, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {

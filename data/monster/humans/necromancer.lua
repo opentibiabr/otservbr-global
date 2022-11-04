@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 580
 monster.maxHealth = 580
 monster.race = "blood"
-monster.corpse = 20455
+monster.corpse = 18174
 monster.speed = 188
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -69,10 +68,13 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Ghoul", chance = 15, interval = 2000},
-	{name = "Ghost", chance = 5, interval = 2000},
-	{name = "Mummy", chance = 5, interval = 2000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Ghoul", chance = 15, interval = 2000, count = 1},
+		{name = "Ghost", chance = 5, interval = 2000, count = 1},
+		{name = "Mummy", chance = 5, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -117,7 +119,7 @@ monster.elements = {
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
+	{type = COMBAT_ICEDAMAGE, percent = 10},
 	{type = COMBAT_HOLYDAMAGE , percent = -5},
 	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }

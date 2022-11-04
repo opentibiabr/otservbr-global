@@ -29,11 +29,10 @@ monster.Bestiary = {
 
 monster.health = 6500
 monster.maxHealth = 6500
-monster.race = "undead"
-monster.corpse = 33353
+monster.race = "ink"
+monster.corpse = 28609
 monster.speed = 480
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -75,11 +74,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2231, chance = 500, maxCount = 2},
-	{name = "Book Page", chance = 500, maxCount = 4},
-	{name = "Glowing Rune", chance = 500, maxCount = 2},
-	{name = "Platinum Coin", chance = 10000, maxCount = 5},
-	{name = "Silken Bookmark", chance = 500, maxCount = 3}
+	{id = 3116, chance = 500, maxCount = 2}, -- big bone
+	{name = "book page", chance = 500, maxCount = 4},
+	{name = "glowing rune", chance = 500, maxCount = 2},
+	{name = "platinum coin", chance = 10000, maxCount = 5},
+	{name = "silken bookmark", chance = 500, maxCount = 3}
 }
 
 monster.attacks = {

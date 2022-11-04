@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6001
 monster.speed = 115
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -79,12 +78,12 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 100000, maxCount = 135},
-	{name = "sword ring", chance = 7770},
+	{id = 3091, chance = 7770}, -- sword ring
 	{name = "plate shield", chance = 16350},
 	{name = "plate armor", chance = 5900},
 	{name = "brass legs", chance = 2950},
 	{name = "plate legs", chance = 4830},
-	{id = 2667, chance = 29760},
+	{id = 3578, chance = 29760}, -- fish
 	{name = "great health potion", chance = 10190},
 	{name = "orc tooth", chance = 1340},
 	{name = "warrior helmet", chance = 10190},

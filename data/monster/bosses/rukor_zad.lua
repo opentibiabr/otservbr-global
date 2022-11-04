@@ -5,7 +5,7 @@ monster.description = "Rukor Zad"
 monster.experience = 380
 monster.outfit = {
 	lookType = 152,
-	lookHead = 114,
+	lookHead = 95,
 	lookBody = 95,
 	lookLegs = 95,
 	lookFeet = 95,
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 380
 monster.maxHealth = 380
 monster.race = "blood"
-monster.corpse = 20578
+monster.corpse = 18297
 monster.speed = 215
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -67,11 +66,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 93210, maxCount = 50},
-	{id = 2399, chance = 9210, maxCount = 14},
-	{id = 7366, chance = 6200, maxCount = 7},
-	{id = 2457, chance = 4190},
-	{id = 2509, chance = 1940}
+	{id = 3031, chance = 93210, maxCount = 50}, -- gold coin
+	{id = 3287, chance = 9210, maxCount = 14}, -- throwing star
+	{id = 7366, chance = 6200, maxCount = 7}, -- viper star
+	{id = 3351, chance = 4190}, -- steel helmet
+	{id = 3409, chance = 1940} -- steel shield
 }
 
 monster.attacks = {

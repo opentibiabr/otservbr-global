@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 200
 monster.maxHealth = 200
 monster.race = "blood"
-monster.corpse = 6080
+monster.corpse = 111
 monster.speed = 300
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -84,8 +83,8 @@ monster.loot = {
 	{name = "studded helmet", chance = 9500},
 	{name = "studded armor", chance = 7000},
 	{name = "studded shield", chance = 1200},
-	{id = 6570, chance = 500},
-	{id = 6571, chance = 500}
+	{id = 6570, chance = 500}, -- surprise bag
+	{id = 6571, chance = 500} -- surprise bag
 }
 
 monster.attacks = {

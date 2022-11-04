@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 6250
 monster.maxHealth = 6250
 monster.race = "venom"
-monster.corpse = 12623
+monster.corpse = 11667
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 70,
@@ -68,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Death Blob", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Death Blob", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -92,9 +94,9 @@ monster.loot = {
 	{name = "ultimate health potion", chance = 9400, maxCount = 3},
 	{name = "wand of voodoo", chance = 1020},
 	{name = "small topaz", chance = 2900, maxCount = 4},
-	{name = "Zaoan armor", chance = 470},
-	{name = "Zaoan helmet", chance = 560},
-	{name = "Zaoan legs", chance = 780},
+	{name = "zaoan armor", chance = 470},
+	{name = "zaoan helmet", chance = 560},
+	{name = "zaoan legs", chance = 780},
 	{name = "eye of corruption", chance = 12110},
 	{name = "tail of corruption", chance = 6240},
 	{name = "scale of corruption", chance = 10940},

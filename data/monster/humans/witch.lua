@@ -32,10 +32,9 @@ monster.Bestiary = {
 monster.health = 300
 monster.maxHealth = 300
 monster.race = "blood"
-monster.corpse = 20535
+monster.corpse = 18254
 monster.speed = 204
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -80,7 +79,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2129, chance = 10120},
+	{id = 3012, chance = 10120}, -- wolf tooth chain
 	{name = "gold coin", chance = 64000, maxCount = 40},
 	{name = "necrotic rod", chance = 1140},
 	{name = "garlic necklace", chance = 1000},
@@ -110,7 +109,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
 	{type = COMBAT_ENERGYDAMAGE, percent = 100},
 	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = 0},

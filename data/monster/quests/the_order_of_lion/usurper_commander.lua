@@ -22,17 +22,18 @@ monster.maxHealth = 15200
 monster.race = "blood"
 monster.corpse = 0
 monster.speed = 250
-monster.summonCost = 0
-monster.maxSummons = 5
 
 monster.faction = FACTION_LIONUSURPERS
 monster.enemyFactions = {FACTION_LION, FACTION_PLAYER}
 monster.targetPreferPlayer = true
 
-monster.summons = {
-	{name = "hardened usurper archer", chance = 0, interval = 600000},
-	{name = "hardened usurper warlock", chance = 0, interval = 600000},
-	{name = "hardened usurper knight", chance = 0, interval = 600000}
+monster.summon = {
+	maxSummons = 6,
+	summons = {
+		{name = "hardened usurper archer", chance = 0, interval = 600000, count = 2},
+		{name = "hardened usurper warlock", chance = 0, interval = 600000, count = 2},
+		{name = "hardened usurper knight", chance = 0, interval = 600000, count = 2}
+	}
 }
 
 monster.changeTarget = {
@@ -124,7 +125,7 @@ mType.onAppear = function(monster, creature)
 	for i=1, 5 do
 		sum = Game.createMonster(monster:getType():getSummonList()[math.random(1, #monster:getType():getSummonList())].name, monster:getPosition(), true)
 		if sum then
-			monster:addSummon(sum)
+			monster:setSummon(sum)
 			sum:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			sum:setStorageValue(Storage.TheOrderOfTheLion.Drume.Commander, 1)
 		end

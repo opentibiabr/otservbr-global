@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2400
 monster.maxHealth = 2400
 monster.race = "blood"
-monster.corpse = 24666
+monster.corpse = 22010
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 80,
@@ -79,27 +78,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 97000, maxCount = 242},
-	{id = 2152, chance = 18200, maxCount = 5},
-	{id = 7591, chance = 1200, maxCount = 2},
-	{id = 8473, chance = 2210},
-	{id = 7590, chance = 1200},
-	{id = 5896, chance = 800},
-	{id = 2671, chance = 1900, maxCount = 2},
-	{id = 5902, chance = 450},
-	{id = 24713, chance = 580},
-	{id = 7439, chance = 800},
-	{id = 24712, chance = 560},
-	{id = 2197, chance = 430},
-	{id = 7419, chance = 120},
-	{id = 24741, chance = 300},
-	{id = 7432, chance = 400},
-	{id = 24716, chance = 100},
-	{id = 7383, chance = 200},
-	{id = 7452, chance = 300},
-	{id = 2169, chance = 400},
-	{id = 24759, chance = 200},
-	{id = 24739, chance = 200}
+	{id = 3031, chance = 97000, maxCount = 242}, -- gold coin
+	{id = 3035, chance = 18200, maxCount = 5}, -- platinum coin
+	{id = 239, chance = 1200, maxCount = 2}, -- great health potion
+	{id = 7643, chance = 2210}, -- ultimate health potion
+	{id = 238, chance = 1200}, -- great mana potion
+	{id = 5896, chance = 800}, -- bear paw
+	{id = 3582, chance = 1900, maxCount = 2}, -- ham
+	{id = 5902, chance = 450}, -- honeycomb
+	{id = 22057, chance = 580}, -- werebear fur
+	{id = 7439, chance = 800}, -- berserk potion
+	{id = 22056, chance = 560}, -- werebear skull
+	{id = 3081, chance = 430}, -- stone skin amulet
+	{id = 7419, chance = 120}, -- dreaded cleaver
+	{id = 22085, chance = 300}, -- fur armor
+	{id = 7432, chance = 400}, -- furry club
+	{id = 22060, chance = 100}, -- werewolf amulet
+	{id = 7383, chance = 200}, -- relic sword
+	{id = 7452, chance = 300}, -- spiked squelcher
+	{id = 3053, chance = 400}, -- time ring
+	{id = 22103, chance = 200}, -- werebear trophy
+	{id = 22083, chance = 200} -- moonlight crystals
 }
 
 monster.attacks = {
@@ -115,16 +114,16 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = -10},
-	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
+	{type = COMBAT_ENERGYDAMAGE, percent = 15},
+	{type = COMBAT_EARTHDAMAGE, percent = 50},
+	{type = COMBAT_FIREDAMAGE, percent = -5},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 20},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_ICEDAMAGE, percent = 10},
+	{type = COMBAT_HOLYDAMAGE , percent = -5},
+	{type = COMBAT_DEATHDAMAGE , percent = 45}
 }
 
 monster.immunities = {

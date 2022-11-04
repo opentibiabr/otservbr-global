@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6008
 monster.speed = 270
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Orc Berserker", chance = 30, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Orc Berserker", chance = 30, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -68,19 +70,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 12435, chance = 25000},
-	{id = 2148, chance = 18500, maxCount = 45},
-	{id = 2399, chance = 14500, maxCount = 18},
-	{id = 2667, chance = 11300, maxCount = 2},
-	{id = 2428, chance = 5700},
-	{id = 3965, chance = 5700},
-	{id = 2463, chance = 5610},
-	{id = 2647, chance = 4680},
-	{id = 2419, chance = 4050},
-	{id = 2200, chance = 2690},
-	{id = 2377, chance = 2200},
-	{id = 2490, chance = 1900},
-	{id = 7891, chance = 750}
+	{id = 11479, chance = 25000}, -- orc leather
+	{id = 3031, chance = 18500, maxCount = 45}, -- gold coin
+	{id = 3287, chance = 14500, maxCount = 18}, -- throwing star
+	{id = 3578, chance = 11300, maxCount = 2}, -- fish
+	{id = 3316, chance = 5700}, -- orcish axe
+	{id = 3347, chance = 5700}, -- hunting spear
+	{id = 3357, chance = 5610}, -- plate armor
+	{id = 3557, chance = 4680}, -- plate legs
+	{id = 3307, chance = 4050}, -- scimitar
+	{id = 3084, chance = 2690}, -- protection amulet
+	{id = 3265, chance = 2200}, -- two handed sword
+	{id = 3384, chance = 1900}, -- dark helmet
+	{id = 818, chance = 750} -- magma boots
 }
 
 monster.attacks = {

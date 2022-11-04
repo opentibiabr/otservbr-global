@@ -7,7 +7,7 @@ monster.outfit = {
 	lookType = 151,
 	lookHead = 115,
 	lookBody = 76,
-	lookLegs = 35,
+	lookLegs = 33,
 	lookFeet = 117,
 	lookAddons = 2,
 	lookMount = 0
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 1450
 monster.maxHealth = 1450
 monster.race = "blood"
-monster.corpse = 20378
+monster.corpse = 18097
 monster.speed = 300
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 60000,
@@ -69,16 +68,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 6102, chance = 100000},
-	{id = 2148, chance = 100000, maxCount = 140},
-	{id = 2229, chance = 85000, maxCount = 2},
-	{id = 2463, chance = 78000},
-	{id = 2666, chance = 42000, maxCount = 3},
-	{id = 2476, chance = 28000},
-	{id = 2379, chance = 21000},
-	{id = 2145, chance = 14000},
-	{id = 2387, chance = 7000},
-	{id = 5926, chance = 7000}
+	{id = 6102, chance = 100000}, -- deadeye devious' eye patch
+	{id = 3031, chance = 100000, maxCount = 140}, -- gold coin
+	{id = 3114, chance = 85000, maxCount = 2}, -- skull
+	{id = 3357, chance = 78000}, -- plate armor
+	{id = 3577, chance = 42000, maxCount = 3}, -- meat
+	{id = 3370, chance = 28000}, -- knight armor
+	{id = 3267, chance = 21000}, -- dagger
+	{id = 3028, chance = 14000}, -- small diamond
+	{id = 3275, chance = 7000}, -- double axe
+	{id = 5926, chance = 7000} -- pirate backpack
 }
 
 monster.attacks = {

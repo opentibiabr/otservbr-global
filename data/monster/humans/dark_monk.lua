@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 190
 monster.maxHealth = 190
 monster.race = "blood"
-monster.corpse = 20562
+monster.corpse = 18281
 monster.speed = 230
 monster.manaCost = 480
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -46,7 +45,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -79,11 +78,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1949, chance = 1790},
+	{id = 2815, chance = 1790}, -- scroll
 	{name = "brown flask", chance = 380},
-	{id = 2044, chance = 550},
+	{id = 2914, chance = 550}, -- lamp
 	{name = "gold coin", chance = 14600, maxCount = 18},
-	{name = "power ring", chance = 120},
+	{id = 3050, chance = 120}, -- power ring
 	{name = "life crystal", chance = 990},
 	{name = "ankh", chance = 900},
 	{name = "sandals", chance = 890},
@@ -108,7 +107,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -20},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},

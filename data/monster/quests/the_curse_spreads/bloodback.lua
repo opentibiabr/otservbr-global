@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 5200
 monster.maxHealth = 5200
 monster.race = "blood"
-monster.corpse = 32061
+monster.corpse = 27718
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Wereboar", chance = 20, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Wereboar", chance = 20, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -77,7 +79,7 @@ monster.loot = {
 	{name = "red crystal fragment", chance = 13600000, maxCount = 2},
 	{name = "small enchanted ruby", chance = 13600000, maxCount = 3},
 	{name = "furry club", chance = 13600000},
-	{name = "red gem", chance = 13600000},
+	{id= 3039, chance = 13600000}, -- red gem
 	{name = "spiked squelcher", chance = 13600000},
 	{name = "stone skin amulet", chance = 13600000},
 	{name = "wereboar hooves", chance = 13600000, maxCount = 2},
@@ -86,7 +88,7 @@ monster.loot = {
 	{name = "dreaded cleaver", chance = 400},
 	{name = "fur armor", chance = 400},
 	{name = "fur boots", chance = 400},
-	{id = 24758, chance = 250},
+	{id = 22102, chance = 250}, -- wereboar trophy
 	{name = "silver token", chance = 250},
 	{name = "wolf backpack", chance = 100}
 }

@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "an eruption of destruction"
 monster.experience = 320
 monster.outfit = {
-	lookTypeEx = 389
+	lookTypeEx = 391
 }
 
 monster.health = 4000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 120
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

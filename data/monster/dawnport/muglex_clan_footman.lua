@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6002
 monster.speed = 120
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -37,7 +36,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -61,18 +60,18 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2230, chance = 1410},
-	{id = 2449, chance = 9440},
-	{id = 2379, chance = 17040},
-	{id = 2667, chance = 159200, maxCount = 2},
-	{id = 12495, chance = 1130},
-	{id = 2148, chance = 100000, maxCount = 6},
-	{id = 2467, chance = 6060},
-	{id = 2461, chance = 2680},
-	{id = 2235, chance = 850},
-	{id = 2406, chance = 9720},
-	{id = 2559, chance = 7750},
-	{id = 1294, chance = 15210}
+	{id = 3115, chance = 1410}, -- bone
+	{id = 3337, chance = 9440}, -- bone club
+	{id = 3267, chance = 17040}, -- dagger
+	{id = 3578, chance = 159200, maxCount = 2}, -- fish
+	{id = 11539, chance = 1130}, -- goblin ear
+	{id = 3031, chance = 100000, maxCount = 6}, -- gold coin
+	{id = 3361, chance = 6060}, -- leather armor
+	{id = 3355, chance = 2680}, -- leather helmet
+	{id = 3120, chance = 850}, -- mouldy cheese
+	{id = 3294, chance = 9720}, -- short sword
+	{id = 3462, chance = 7750}, -- small axe
+	{id = 1781, chance = 15210} -- small stone
 }
 
 monster.attacks = {

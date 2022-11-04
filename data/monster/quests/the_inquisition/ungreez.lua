@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5995
 monster.speed = 240
 monster.manaCost = 10000
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -34,10 +33,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -66,10 +65,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 21000, maxCount = 90},
-	{id = 2795, chance = 10000, maxCount = 6},
-	{id = 7590, chance = 20000},
-	{id = 7591, chance = 20000}
+	{id = 3031, chance = 21000, maxCount = 90}, -- gold coin
+	{id = 3731, chance = 10000, maxCount = 6}, -- fire mushroom
+	{id = 238, chance = 20000}, -- great mana potion
+	{id = 239, chance = 20000} -- great health potion
 }
 
 monster.attacks = {

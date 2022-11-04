@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5962
 monster.speed = 160
 monster.manaCost = 490
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -34,7 +33,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = true,
@@ -61,17 +60,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2464, chance = 10810},
-	{id = 2458, chance = 12160},
-	{id = 10574, chance = 4050},
-	{id = 2148, chance = 100000, maxCount = 25},
-	{id = 2388, chance = 9460},
-	{id = 2398, chance = 18920},
-	{id = 2666, chance = 30070},
-	{id = 2510, chance = 1350},
-	{id = 2468, chance = 9460},
-	{id = 2376, chance = 21620},
-	{id = 2129, chance = 1350}
+	{id = 3358, chance = 10810}, -- chain armor
+	{id = 3352, chance = 12160}, -- chain helmet
+	{id = 9657, chance = 4050}, -- cyclops toe
+	{id = 3031, chance = 100000, maxCount = 25}, -- gold coin
+	{id = 3276, chance = 9460}, -- hatchet
+	{id = 3286, chance = 18920}, -- mace
+	{id = 3577, chance = 30070}, -- meat
+	{id = 3410, chance = 1350}, -- plate shield
+	{id = 3362, chance = 9460}, -- studded legs
+	{id = 3264, chance = 21620}, -- sword
+	{id = 3012, chance = 1350} -- wolf tooth chain
 }
 
 monster.attacks = {

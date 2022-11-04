@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 200000
 monster.maxHealth = 200000
 monster.race = "blood"
-monster.corpse = 34793
+monster.corpse = 30155
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -67,39 +66,39 @@ monster.loot = {
 	{name = "silver token", chance = 100000000, maxCount = 5},
 	{name = "skull staff", chance = 100000000, maxCount = 5},
 	{name = "energy bar", chance = 100000000, maxCount = 5},
-	{name = "Purple Tendril Lantern", chance = 100000000},
+	{name = "purple tendril lantern", chance = 100000000},
 	{name = "crystal coin", chance = 100000000, maxCount = 2},
 	{name = "blue gem", chance = 100000000},
 	{name = "platinum coin", chance = 29580, maxCount = 5},
 	{name = "supreme health potion", chance = 21540, maxCount = 20},
 	{name = "ultimate spirit potion", chance = 22540, maxCount = 20},
 	{name = "royal star", chance = 26540, maxCount = 100},
-	{id = 7632, chance = 28540},
-	{name = "Gold Token", chance = 15000, maxCount = 2},
+	{id = 281, chance = 28540}, -- giant shimmering pearl (green)
+	{name = "gold token", chance = 15000, maxCount = 2},
 	{name = "berserk potion", chance = 8050, maxCount = 10},
 	{name = "bullseye potion", chance = 6780, maxCount = 10},
-	{id = 26198, chance = 23520},-- collar of blue plasma
-	{id = 26200, chance = 10590},
-	{name = "Gold Ingot", chance = 7630},
-	{name = "Huge Chunk of Crude Iron", chance = 8900},
-	{name = "Mysterious Remains", chance = 90000},
-	{name = "Piggy Bank", chance = 13770, maxCount = 4},
+	{id = 23542, chance = 23520}, -- collar of blue plasma
+	{id = 23544, chance = 10590}, -- collar of red plasma
+	{name = "gold ingot", chance = 7630},
+	{name = "huge chunk of crude iron", chance = 8900},
+	{name = "mysterious remains", chance = 90000},
+	{name = "piggy bank", chance = 13770, maxCount = 4},
 	{name = "green gem", chance = 2740},
-	{name = "red gem", chance = 2580},
-	{name = "Crunor Idol", chance = 2640},
-	{name = "Giant Ruby", chance = 2840},
-	{name = "Magic Sulphur", chance = 2740},
+	{id= 3039, chance = 2580}, -- red gem
+	{name = "crunor idol", chance = 2640},
+	{name = "giant ruby", chance = 2840},
+	{name = "magic sulphur", chance = 2740},
 	{name = "yellow gem", chance = 2900},
 	{name = "mastermind potion", chance = 2900, maxCount = 10},
 	{name = "violet gem", chance = 1500},
-	{name = "Alptramun's Toothbrush", chance = 520},
-	{name = "Dream Shroud", chance = 620},
-	{name = "Pair of Dreamwalkers", chance = 720},
-	{name = "Soul Stone", chance = 820},
-	{id = 26185, chance = 10590},
-	{name = "Pomegranate", chance = 880},
-	{name = "Dream Shroud", chance = 980},
-	{id = 26186, chance = 10590}
+	{name = "alptramun's toothbrush", chance = 520},
+	{name = "dream shroud", chance = 620},
+	{name = "pair of dreamwalkers", chance = 720},
+	{name = "soul stone", chance = 820},
+	{id = 23529, chance = 10590}, -- ring of blue plasma
+	{name = "pomegranate", chance = 880},
+	{name = "dream shroud", chance = 980},
+	{id = 23530, chance = 10590} -- ring of blue plasma
 }
 
 monster.attacks = {
@@ -107,7 +106,7 @@ monster.attacks = {
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -190, maxDamage = -300, range = 7, length = 6, spread = 3, shootEffect = CONST_ANI_POISON, target = false},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_DEATHDAMAGE, minDamage = -70, maxDamage = -160, range = 3, length = 6, spread = 3, effect = CONST_ME_MORTAREA, target = false},
 	{name ="combat", interval = 2000, chance = 15, type = COMBAT_FIREDAMAGE, minDamage = -90, maxDamage = -160, range = 3, length = 6, spread = 3, effect = CONST_ME_HITBYFIRE, target = false},
-	{name ="stone shower", interval = 2000, chance = 10, minDamage = -230, maxDamage = -450, range = 7, target = false}
+	{name ="stone shower rune", interval = 2000, chance = 10, minDamage = -230, maxDamage = -450, range = 7, target = false}
 }
 
 monster.defenses = {

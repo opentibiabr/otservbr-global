@@ -1,8 +1,8 @@
 local serverstartup = GlobalEvent("serverstartup")
 function serverstartup.onStartup()
 	Spdlog.info("Loading map attributes")
-	-- Npc table
-	loadLuaNpcs(NpcTable)
+	Spdlog.info("Loaded ".. Game.getNpcCount() .." npcs and spawned ".. Game.getMonsterCount() .." monsters")
+	Spdlog.info("Loaded ".. #Game.getTowns() .. " towns with ".. #Game.getHouses() .." houses in total")
 	-- Sign table
 	loadLuaMapSign(SignTable)
 	Spdlog.info("Loaded " .. (#SignTable) .. " signs in the map")
@@ -27,7 +27,7 @@ function serverstartup.onStartup()
 	loadLuaMapAction(ItemAction)
 	loadLuaMapUnique(ItemUnique)
 	-- Item daily reward table
-	loadLuaMapAction(DailyRewardAction)
+	-- This is temporary disabled > loadLuaMapAction(DailyRewardAction)
 	-- Item unmoveable table
 	loadLuaMapAction(ItemUnmoveableAction)
 	-- Lever table
@@ -44,6 +44,10 @@ function serverstartup.onStartup()
 	loadLuaMapUnique(TileUnique)
 	-- Tile pick table
 	loadLuaMapAction(TilePickAction)
+	-- Create new item on map
+	CreateMapItem(CreateItemOnMap)
+	-- Update old quest storage keys
+	updateKeysStorage(QuestKeysUpdate)
 
 	Spdlog.info("Loaded all actions in the map")
 	Spdlog.info("Loaded all uniques in the map")
@@ -120,15 +124,38 @@ function serverstartup.onStartup()
 		result.free(resultId)
 	end
 
-	-- Client XP Display Mode
+	do -- Event Schedule rates
+		local lootRate = EventsScheduler.getEventSLoot()
+		if lootRate ~= 100 then
+			SCHEDULE_LOOT_RATE = lootRate
+		end
+
+		local expRate = EventsScheduler.getEventSExp()
+		if expRate ~= 100 then
+			SCHEDULE_EXP_RATE = expRate
+		end
+
+		local skillRate = EventsScheduler.getEventSSkill()
+		if skillRate ~= 100 then
+			SCHEDULE_SKILL_RATE = skillRate
+		end
+
+		local spawnRate = EventsScheduler.getSpawnMonsterSchedule()
+		if spawnRate ~= 100 then
+			SCHEDULE_SPAWN_RATE = spawnRate
+		end
+
+		if expRate ~= 100 or lootRate ~= 100 or spawnRate ~= 100 or skillRate ~= 100 then
+		Spdlog.info("Events: " .. "Exp: " .. expRate .. "%, " .. "loot: " .. lootRate .. "%, " .. "Spawn: " .. spawnRate .. "%, " .. "Skill: ".. skillRate .."%")
+		end
+	end
+
+    -- Client XP Display Mode
 	-- 0 = ignore exp rate /stage
 	-- 1 = include exp rate / stage
-	Game.setStorageValue(GlobalStorage.XpDisplayMode, 0)
+	Game.setStorageValue(GlobalStorage.XpDisplayMode, 1)
 
 	-- Hireling System
 	HirelingsInit()
-
-	-- Load otservbr-custom map (data/world/custom/otservbr-custom.otbm)
-	loadCustomMap()
 end
 serverstartup:register()

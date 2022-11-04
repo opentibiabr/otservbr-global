@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 3500
 monster.maxHealth = 3500
 monster.race = "fire"
-monster.corpse = 9923
+monster.corpse = 9009
 monster.speed = 344
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,7 +60,7 @@ monster.flags = {
 	runHealth = 0,
 	healthHidden = false,
 	isBlockable = false,
-	canWalkOnEnergy = true,
+	canWalkOnEnergy = false,
 	canWalkOnFire = true,
 	canWalkOnPoison = true
 }
@@ -82,24 +81,23 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "gold coin", chance = 60000, maxCount = 100},
-	{name = "gold coin", chance = 60000, maxCount = 100},
-	{name = "gold coin", chance = 60000, maxCount = 36},
+	{name = "gold coin", chance = 93000, maxCount = 236},
 	{name = "morning star", chance = 10000},
 	{name = "warrior helmet", chance = 1886},
 	{name = "knight legs", chance = 3030},
 	{name = "red mushroom", chance = 7692, maxCount = 2},
 	{name = "demonic essence", chance = 9090},
+	{name = "battle shield", chance = 7500},
 	{name = "assassin star", chance = 9090, maxCount = 2},
 	{name = "onyx flail", chance = 103},
 	{name = "berserk potion", chance = 934},
 	{name = "spiked squelcher", chance = 970},
 	{name = "great health potion", chance = 40333},
 	{name = "ultimate health potion", chance = 9090},
-	{id = 9809, chance = 3125},
-	{id = 9810, chance = 3125},
-	{id = 9948, chance = 140},
-	{name = "black skull", chance = 151},
+	{id = 8895, chance = 3125}, -- rusted armor
+	{id = 8896, chance = 3125}, -- slightly rusted armor
+	{id = 9034, chance = 140}, -- dracoyle statue
+	{id = 9056, chance = 151}, -- black skull
 	{name = "small topaz", chance = 5882, maxCount = 3},
 	{name = "hellspawn tail", chance = 20000}
 }
@@ -112,7 +110,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 40,
-	armor = 40,
+	armor = 44,
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 120, maxDamage = 230, effect = CONST_ME_MAGIC_BLUE, target = false},
 	{name ="speed", interval = 2000, chance = 15, speedChange = 270, effect = CONST_ME_MAGIC_RED, target = false, duration = 5000}
 }

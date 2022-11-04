@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 700
 monster.maxHealth = 700
 monster.race = "blood"
-monster.corpse = 20391
+monster.corpse = 18110
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -71,9 +70,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Crypt Shambler", chance = 10, interval = 2000},
-	{name = "Ghost", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Crypt Shambler", chance = 10, interval = 2000, count = 1},
+		{name = "Ghost", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -86,11 +88,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1962, chance = 910},
+	{id = 2828, chance = 910}, -- book
 	{name = "piggy bank", chance = 130},
 	{name = "small sapphire", chance = 550},
 	{name = "gold coin", chance = 64550, maxCount = 70},
-	{name = "energy ring", chance = 450},
+	{id = 3051, chance = 450}, -- energy ring
 	{name = "platinum amulet", chance = 200},
 	{name = "wand of inferno", chance = 180},
 	{name = "protection amulet", chance = 790},
@@ -98,7 +100,7 @@ monster.loot = {
 	{name = "blue robe", chance = 40},
 	{name = "jewelled backpack", chance = 100},
 	{name = "pirate voodoo doll", chance = 430},
-	{id = 6090, chance = 490},
+	{id = 6090, chance = 490}, -- music sheet
 	{name = "amber staff", chance = 100},
 	{name = "strong mana potion", chance = 740},
 	{name = "cultish mask", chance = 10250},
@@ -121,14 +123,14 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
 	{type = COMBAT_ENERGYDAMAGE, percent = -5},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 5},
+	{type = COMBAT_ICEDAMAGE, percent = 20},
 	{type = COMBAT_HOLYDAMAGE , percent = 20},
 	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }

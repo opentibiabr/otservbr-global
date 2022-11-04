@@ -37,10 +37,10 @@ local function playerAddItem(params, item)
 
 	if params.key then
 		local itemType = ItemType(params.itemid)
-		-- 23763 Is key of Dawnport
+		-- 21392 Is key of Dawnport
 		-- Needs independent verification because it cannot be set as "key" in items.xml
 		-- Because it generate bug in the item description
-		if itemType:isKey() or itemType:getId(23763) then
+		if itemType:isKey() or itemType:getId(21392) then
 			-- If is key not in container, uses the "isKey = true" variable
 			keyItem = player:addItem(params.itemid, params.count)
 			keyItem:setActionId(params.storage)
@@ -59,7 +59,11 @@ local function playerAddItem(params, item)
 	end
 
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, params.message .. ".")
-	player:setStorageValue(params.storage, 1)
+	if params.timer then
+		player:setStorageValue(params.timer, os.time() + params.time * 3600)
+	else
+		player:setStorageValue(params.storage, 1)
+	end
 	return true
 end
 
@@ -115,11 +119,20 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 		end
 	end
 
-	if player:getStorageValue(setting.storage) >= 0 then
+	if setting.timerStorage then
+		if player:getStorageValue(setting.timerStorage) > os.time() then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The ".. getItemName(setting.itemId) .. " is empty.")
+			return true
+		end
+	elseif player:getStorageValue(setting.storage) >= 0 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The ".. getItemName(setting.itemId) .. " is empty.")
 		return true
 	end
-
+	if setting.randomReward then
+		local randomReward = math.random(#setting.randomReward)
+		setting.reward[1][1] = setting.randomReward[randomReward][1]
+		setting.reward[1][2] = setting.randomReward[randomReward][2]
+	end
 	local container = player:addItem(setting.container)
 	for i = 1, #setting.reward do
 		local itemid = setting.reward[i][1]
@@ -137,7 +150,9 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 				count = count,
 				weight = getItemWeight(itemid) * count,
 				storage = setting.storage,
-				key = setting.isKey
+				key = setting.isKey,
+				timer = setting.timerStorage,
+				time = setting.time,
 			}
 
 			if count > 1 and ItemType(itemid):isStackable() then
@@ -147,6 +162,9 @@ function questReward.onUse(player, item, fromPosition, itemEx, toPosition)
 				addItemParams.message = "You have found " .. count .. " " .. itemName
 			elseif ItemType(itemid):getCharges() > 0 then
 				addItemParams.message = "You have found " .. itemArticle .. " " .. itemName
+				if not ItemType(itemid):isRune() then
+					addItemParams.weight = getItemWeight(itemid)
+				end
 			else
 				addItemParams.message = "You have found " .. itemArticle .. " " .. itemName
 			end

@@ -11,50 +11,52 @@ Rotem, Head of the Adventurers' Guild
 ]]
 
 local reward = {
-	container = 1988,
+	container = 2854,
 	commonItems = {
-		{id = 18559, amount = 1},	-- Adventurer's stone
+		{id = 16277, amount = 1},	-- Adventurer's stone
 		-- Parchment
-		{id = 1953, amount = 1, text = adventurersGuildText}
+		{id = 2819, amount = 1, text = adventurersGuildText}
 	},
 	vocationItems = {
 		-- Sorcerer
 		[14025] = {
-			{id = 8820, amount = 1},	-- Mage hat
-			{id = 8819, amount = 1},	-- Magician's robe
-			{id = 2649, amount = 1},	-- Leather legs
-			{id = 2643, amount = 1},	-- Leather boots
-			{id = 2190, amount = 1},	-- Wand of vortex
-			{id = 2175, amount = 1}		-- Spellbook
+			{id = 7992, amount = 1},	-- Mage hat
+			{id = 7991, amount = 1},	-- Magician's robe
+			{id = 3559, amount = 1},	-- Leather legs
+			{id = 3552, amount = 1},	-- Leather boots
+			{id = 3074, amount = 1},	-- Wand of vortex
+			{id = 3059, amount = 1}		-- Spellbook
 		},
 		-- Druid
 		[14026] = {
-			{id = 8820, amount = 1},	-- Mage hat
-			{id = 8819, amount = 1},	-- Magician's robe
-			{id = 2649, amount = 1},	-- Leather legs
-			{id = 2643, amount = 1},	-- Leather boots
-			{id = 2182, amount = 1},	-- Snakebite rod
-			{id = 2175, amount = 1}		-- Spellbook
+			{id = 7992, amount = 1},	-- Mage hat
+			{id = 7991, amount = 1},	-- Magician's robe
+			{id = 3559, amount = 1},	-- Leather legs
+			{id = 3552, amount = 1},	-- Leather boots
+			{id = 3066, amount = 1},	-- Snakebite rod
+			{id = 3059, amount = 1}		-- Spellbook
 		},
 		-- Paladin
 		[14027] = {
-			{id = 2461, amount = 1},	-- Leader helmet
-			{id = 2660, amount = 1},	-- Ranger's cloak
-			{id = 8923, amount = 1},	-- Ranger legs
-			{id = 2643, amount = 1},	-- Leather boots
-			{id = 2456, amount = 1},	-- Bow
-			{id = 2389, amount = 1},	-- Spear
-			{id = 40397, amount = 1},	-- Quiver
-			{id = 2544, amount = 100}	-- Arrows
+			{id = 3355, amount = 1},	-- Leader helmet
+			{id = 3571, amount = 1},	-- Ranger's cloak
+			{id = 8095, amount = 1},	-- Ranger legs
+			{id = 3552, amount = 1},	-- Leather boots
+			{id = 3350, amount = 1},	-- Bow
+			{id = 3277, amount = 1},	-- Spear
+			{id = 35562, amount = 1},	-- Quiver
+			{id = 3447, amount = 100}	-- Arrows
 		},
 		-- Knight
 		[14028] = {
-			{id = 2481, amount = 1},	-- Soldier helmet
-			{id = 2465, amount = 1},	-- Brass armor
-			{id = 2478, amount = 1},	-- Brass legs
-			{id = 2643, amount = 1},	-- Leather boots
-			{id = 8602, amount = 1},	-- Jagged sword
-			{id = 2509, amount = 1}		-- Steel shield
+			{id = 3375, amount = 1},	-- Soldier helmet
+			{id = 3359, amount = 1},	-- Brass armor
+			{id = 3372, amount = 1},	-- Brass legs
+			{id = 3552, amount = 1},	-- Leather boots
+			{id = 7774, amount = 1},	-- Jagged sword
+			{id = 17824, amount = 1},	-- Swampling club
+			{id = 7773, amount = 1},	-- steel axe
+			{id = 3409, amount = 1}		-- Steel shield
 		}
 	}
 }
@@ -68,7 +70,7 @@ function vocationReward.onUse(player, item, fromPosition, itemEx, toPosition)
 		return true
 	end
 	-- Check quest storage
-	if player:getStorageValue(Storage.Quest.Dawnport.VocationReward) == 1 then
+	if player:getStorageValue(Storage.Quest.U10_55.Dawnport.VocationReward) == 1 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The " .. item:getName() .. " is empty.")
 		return true
 	end
@@ -118,7 +120,7 @@ function vocationReward.onUse(player, item, fromPosition, itemEx, toPosition)
 	-- Ensure reward was added properly to player
 	if player:addItemEx(container, false, CONST_SLOT_WHEREEVER) == RETURNVALUE_NOERROR then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You have found a " .. container:getName() .. ".")
-		player:setStorageValue(Storage.Quest.Dawnport.VocationReward, 1)
+		player:setStorageValue(Storage.Quest.U10_55.Dawnport.VocationReward, 1)
 	end
 	return true
 end

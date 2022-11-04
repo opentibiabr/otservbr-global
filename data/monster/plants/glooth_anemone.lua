@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2400
 monster.maxHealth = 2400
 monster.race = "venom"
-monster.corpse = 23359
+monster.corpse = 20988
 monster.speed = 180
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -78,24 +77,24 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 23515, chance = 3190},
-	{id = 23568, chance = 2020},
-	{id = 2796, chance = 3180},
-	{id = 23554, chance = 320},
-	{id = 2148, chance = 100000, maxCount = 170},
-	{id = 7588, chance = 6690, maxCount = 2},
-	{id = 7589, chance = 6690, maxCount = 2},
-	{id = 8473, chance = 960},
-	{id = 2152, chance = 57320, maxCount = 3},
-	{id = 9970, chance = 1240, maxCount = 3},
-	{id = 2149, chance = 1600, maxCount = 3},
-	{id = 2147, chance = 1150, maxCount = 3},
-	{id = 23535, chance = 140},
-	{id = 23543, chance = 700},
-	{id = 23550, chance = 120},
-	{id = 23549, chance = 370},
-	{id = 23551, chance = 240},
-	{id = 23529, chance = 370}
+	{id = 21144, chance = 3190}, -- bowl of glooth soup
+	{id = 21197, chance = 2020}, -- slimy leaf tentacle
+	{id = 3732, chance = 3180}, -- green mushroom
+	{id = 21183, chance = 320}, -- glooth amulet
+	{id = 3031, chance = 100000, maxCount = 170}, -- gold coin
+	{id = 236, chance = 6690, maxCount = 2}, -- strong health potion
+	{id = 237, chance = 6690, maxCount = 2}, -- strong mana potion
+	{id = 7643, chance = 960}, -- ultimate health potion
+	{id = 3035, chance = 57320, maxCount = 3}, -- platinum coin
+	{id = 9057, chance = 1240, maxCount = 3}, -- small topaz
+	{id = 3032, chance = 1600, maxCount = 3}, -- small emerald
+	{id = 3030, chance = 1150, maxCount = 3}, -- small ruby
+	{id = 21164, chance = 140}, -- glooth cape
+	{id = 21172, chance = 700}, -- glooth whip
+	{id = 21179, chance = 120}, -- glooth blade
+	{id = 21178, chance = 370}, -- glooth club
+	{id = 21180, chance = 240}, -- glooth axe
+	{id = 21158, chance = 370} -- glooth spear
 }
 
 monster.attacks = {
@@ -122,7 +121,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 5}
+	{type = COMBAT_DEATHDAMAGE , percent = 35}
 }
 
 monster.immunities = {

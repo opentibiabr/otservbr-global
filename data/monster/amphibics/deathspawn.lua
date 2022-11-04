@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 225
 monster.maxHealth = 225
 monster.race = "blood"
-monster.corpse = 2220
+monster.corpse = 3105
 monster.speed = 102
 monster.manaCost = 305
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -31,11 +30,11 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = false,
@@ -83,7 +82,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 15},
-	{type = COMBAT_HOLYDAMAGE , percent = 10},
+	{type = COMBAT_HOLYDAMAGE , percent = -10},
 	{type = COMBAT_DEATHDAMAGE , percent = 100}
 }
 

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 50000
 monster.maxHealth = 50000
 monster.race = "blood"
-monster.corpse = 21270
+monster.corpse = 18953
 monster.speed = 500
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Nightfiend", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Nightfiend", chance = 10, interval = 2000, count = 4}
+	}
 }
 
 monster.voices = {
@@ -74,34 +76,34 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 9020, chance = 100000},
-	{id = 21244, chance = 100000},
-	{id = 21253, chance = 5000},
-	{id = 21252, chance = 5000},
-	{id = 12405, chance = 50000},
-	{id = 10602, chance = 50000},
-	{id = 21400, chance = 5000},
-	{id = 2148, chance = 1000000, maxCount = 100},
-	{id = 2152, chance = 100000, maxCount = 5},
-	{id = 7589, chance = 50000, maxCount = 3},
-	{id = 7588, chance = 50000, maxCount = 3},
-	{id = 2165, chance = 10000},
-	{id = 2214, chance = 10000},
-	{id = 5909, chance = 10000},
-	{id = 5911, chance = 10000},
-	{id = 5912, chance = 10000},
-	{id = 7427, chance = 5000},
-	{id = 2438, chance = 10000},
-	{id = 7419, chance = 5000},
-	{id = 8903, chance = 5000},
-	{id = 21707, chance = 5000},
-	{id = 2534, chance = 5000},
-	{id = 21708, chance = 5000},
-	{id = 2145, chance = 50000, maxCount = 5},
-	{id = 2144, chance = 50000, maxCount = 5},
-	{id = 2146, chance = 50000, maxCount = 5},
-	{id = 2149, chance = 50000, maxCount = 5},
-	{id = 2153, chance = 10000}
+	{id = 8192, chance = 100000}, -- vampire lord token
+	{id = 18927, chance = 100000}, -- vampire's cape chain
+	{id = 18936, chance = 5000}, -- vampire count's medal
+	{id = 18935, chance = 5000}, -- vampire's signet ring
+	{id = 11449, chance = 50000}, -- blood preservation
+	{id = 9685, chance = 50000}, -- vampire teeth
+	{id = 19083, chance = 5000}, -- silver raid token
+	{id = 3031, chance = 1000000, maxCount = 100}, -- gold coin
+	{id = 3035, chance = 100000, maxCount = 5}, -- platinum coin
+	{id = 237, chance = 50000, maxCount = 3}, -- strong mana potion
+	{id = 236, chance = 50000, maxCount = 3}, -- strong health potion
+	{id = 3049, chance = 10000}, -- stealth ring
+	{id = 3098, chance = 10000}, -- ring of healing
+	{id = 5909, chance = 10000}, -- white piece of cloth
+	{id = 5911, chance = 10000}, -- red piece of cloth
+	{id = 5912, chance = 10000}, -- blue piece of cloth
+	{id = 7427, chance = 5000}, -- chaos mace
+	{id = 3326, chance = 10000}, -- epee
+	{id = 7419, chance = 5000}, -- dreaded cleaver
+	{id = 8075, chance = 5000}, -- spellbook of lost souls
+	{id = 19373, chance = 5000}, -- haunted mirror piece
+	{id = 3434, chance = 5000}, -- vampire shield
+	{id = 19374, chance = 5000}, -- vampire silk slippers
+	{id = 3028, chance = 50000, maxCount = 5}, -- small diamond
+	{id = 3027, chance = 50000, maxCount = 5}, -- black pearl
+	{id = 3029, chance = 50000, maxCount = 5}, -- small sapphire
+	{id = 3032, chance = 50000, maxCount = 5}, -- small emerald
+	{id = 3036, chance = 10000} -- violet gem
 }
 
 monster.attacks = {

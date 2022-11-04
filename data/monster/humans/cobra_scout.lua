@@ -7,7 +7,7 @@ monster.outfit = {
 	lookType = 1217,
 	lookHead = 1,
 	lookBody = 1,
-	lookLegs = 101,
+	lookLegs = 102,
 	lookFeet = 78,
 	lookAddons = 2,
 	lookMount = 0
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8500
 monster.maxHealth = 8500
 monster.race = "blood"
-monster.corpse = 36470
+monster.corpse = 31635
 monster.speed = 300
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -88,12 +87,11 @@ monster.loot = {
 	{name = "violet gem", chance = 1300},
 	{name = "yellow gem", chance = 3060},
 	{name = "green gem", chance = 1210},
-	{name = "red gem", chance = 4800},
+	{id= 3039, chance = 4800}, -- red gem
 	{name = "sacred tree amulet", chance = 5100},
 	{name = "green crystal shard", chance = 2130},
-	{id = 26189, chance = 740}-- ring of red plasma
+	{id = 23533, chance = 740} -- ring of red plasma
 }
-
 
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -500},

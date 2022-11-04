@@ -32,7 +32,6 @@ monster.race = "undead"
 monster.corpse = 6070
 monster.speed = 176
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -75,10 +74,10 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 48000, maxCount = 25},
-	{id = 2229, chance = 4460},
-	{id = 2230, chance = 4250},
-	{id = 2231, chance = 5140},
-	{id = 2376, chance = 550},
+	{id = 3114, chance = 4460}, -- skull
+	{id = 3115, chance = 4250}, -- bone
+	{id = 3116, chance = 5140}, -- big bone
+	{id = 3264, chance = 550}, -- sword
 	{name = "short sword", chance = 1003},
 	{name = "bone club", chance = 960},
 	{name = "spooky blue eye", chance = 4730}

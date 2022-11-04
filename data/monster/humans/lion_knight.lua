@@ -16,10 +16,8 @@ monster.outfit = {
 monster.health = 9000
 monster.maxHealth = 9000
 monster.race = "blood"
-monster.corpse = 38792
+monster.corpse = 33957
 monster.speed = 260
-monster.summonCost = 0
-monster.maxSummons = 0
 
 monster.faction = FACTION_LION
 monster.enemyFactions = {FACTION_LIONUSURPERS}

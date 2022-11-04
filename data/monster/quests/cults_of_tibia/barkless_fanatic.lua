@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6012
 monster.speed = 240
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,10 +46,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -80,10 +79,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 199},
-	{id = 29044, chance = 2310},
-	{id = 29043, chance = 12690},
-	{id = 27629, chance = 6920}
+	{id = 3031, chance = 100000, maxCount = 199}, -- gold coin
+	{id = 25743, chance = 2310}, -- bed of nails
+	{id = 25742, chance = 12690}, -- fig leaf
+	{id = 24961, chance = 6920} -- tiger eye
 }
 
 monster.attacks = {

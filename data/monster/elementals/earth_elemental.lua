@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 650
 monster.maxHealth = 650
 monster.race = "undead"
-monster.corpse = 8933
+monster.corpse = 8105
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 80,
@@ -85,11 +84,11 @@ monster.loot = {
 	{name = "blank rune", chance = 10000},
 	{name = "strong mana potion", chance = 1910},
 	{name = "earth arrow", chance = 20160, maxCount = 30},
-	{id = 9808, chance = 350},
+	{id = 8894, chance = 350}, -- heavily rusted armor
 	{name = "small topaz", chance = 620},
 	{name = "lump of earth", chance = 20460},
 	{name = "clay lump", chance = 570},
-	{id = 13757, chance = 470}
+	{id = 12600, chance = 470} -- coal
 }
 
 monster.attacks = {
@@ -110,7 +109,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 50},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 35},
 	{type = COMBAT_ENERGYDAMAGE, percent = 100},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = -25},
@@ -119,7 +118,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 85},
 	{type = COMBAT_HOLYDAMAGE , percent = 50},
-	{type = COMBAT_DEATHDAMAGE , percent = 50}
+	{type = COMBAT_DEATHDAMAGE , percent = 40}
 }
 
 monster.immunities = {

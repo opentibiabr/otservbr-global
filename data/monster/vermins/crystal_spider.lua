@@ -33,7 +33,6 @@ monster.race = "venom"
 monster.corpse = 7344
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 80,
@@ -78,13 +77,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2124, chance = 1560},
+	{id = 3007, chance = 1560}, -- crystal ring
 	{name = "crystal necklace", chance = 1640},
-	{name = "gold coin", chance = 99998, maxCount = 100},
-	{name = "gold coin", chance = 99998, maxCount = 92},
-	{id = 2169, chance = 1480},
+	{name = "gold coin", chance = 100000, maxCount = 197},
+	{id = 3053, chance = 1480}, -- time ring
 	{name = "platinum amulet", chance = 130},
 	{name = "steel helmet", chance = 5200},
+	{id = 7441, chance = 5000}, -- ice cube
 	{name = "plate armor", chance = 9993},
 	{name = "knight armor", chance = 560},
 	{name = "knight legs", chance = 760},

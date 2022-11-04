@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 28000
 monster.maxHealth = 28000
 monster.race = "blood"
-monster.corpse = 21266
+monster.corpse = 18949
 monster.speed = 290
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -66,29 +65,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7591, chance = 30500},
-	{id = 2152, chance = 41325, maxCount = 30},
-	{id = 2148, chance = 49650, maxCount = 100},
-	{id = 9808, chance = 50500},
-	{id = 9971, chance = 33000, maxCount = 4},
-	{id = 2158, chance = 30500},
-	{id = 2155, chance = 20500},
-	{id = 8473, chance = 10500},
-	{id = 11118, chance = 5500},
-	{id = 5944, chance = 19250, maxCount = 4},
-	{id = 2528, chance = 15500},
-	{id = 7366, chance = 8100, maxCount = 67},
-	{id = 7632, chance = 28000, maxCount = 2},
-	{id = 2154, chance = 15500},
-	{id = 2156, chance = 10500},
-	{id = 7440, chance = 10500},
-	{id = 2153, chance = 25500},
-	{id = 7590, chance = 20500},
-	{id = 8882, chance = 5500},
-	{id = 2514, chance = 5500},
-	{id = 2127, chance = 10500},
-	{id = 8891, chance = 5500},
-	{id = 2515, chance = 5500}
+	{id = 239, chance = 30500}, -- great health potion
+	{id = 3035, chance = 41325, maxCount = 30}, -- platinum coin
+	{id = 3031, chance = 49650, maxCount = 100}, -- gold coin
+	{id = 8894, chance = 50500}, -- heavily rusted armor
+	{id = 9058, chance = 33000, maxCount = 4}, -- gold ingot
+	{id = 3041, chance = 30500}, -- blue gem
+	{id = 3038, chance = 20500}, -- green gem
+	{id = 7643, chance = 10500}, -- ultimate health potion
+	{id = 10201, chance = 5500}, -- dragon scale boots
+	{id = 5944, chance = 19250, maxCount = 4}, -- soul orb
+	{id = 3428, chance = 15500}, -- tower shield
+	{id = 7366, chance = 8100, maxCount = 67}, -- viper star
+	{id = 281, chance = 28000, maxCount = 2}, -- giant shimmering pearl (green)
+	{id = 3037, chance = 15500}, -- yellow gem
+	{id = 3039, chance = 10500}, -- red gem
+	{id = 7440, chance = 10500}, -- mastermind potion
+	{id = 3036, chance = 25500}, -- violet gem
+	{id = 238, chance = 20500}, -- great mana potion
+	{id = 8054, chance = 5500}, -- earthborn titan armor
+	{id = 3414, chance = 5500}, -- mastermind shield
+	{id = 3010, chance = 10500}, -- emerald bangle
+	{id = 8063, chance = 5500}, -- paladin armor
+	{id = 3415, chance = 5500} -- guardian shield
 }
 
 monster.attacks = {

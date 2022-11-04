@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 25000
 monster.maxHealth = 25000
 monster.race = "blood"
-monster.corpse = 15228
+monster.corpse = 13801
 monster.speed = 560
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -38,7 +37,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = true,
 	illusionable = false,
 	canPushItems = true,
@@ -65,9 +64,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Depth Ocrea", chance = 1200},
-	{name = "Ornate Mace", chance = 1100, unique = true},
-	{name = "Ornate Shield", chance = 1100}
+	{name = "depth ocrea", chance = 1200},
+	{name = "ornate mace", chance = 1100, unique = true},
+	{name = "ornate shield", chance = 1100}
 }
 
 monster.attacks = {

@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6037
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 5
 
 monster.changeTarget = {
 	interval = 5000,
@@ -55,9 +54,12 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "demon skeleton", chance = 13, interval = 1000, max = 5},
-	{name = "ghost", chance = 12, interval = 1000, max = 4}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "demon skeleton", chance = 13, interval = 1000, count = 5},
+		{name = "ghost", chance = 12, interval = 1000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -68,9 +70,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 45},
-	{id = 5898, chance = 5000},
-	{id = 2148, chance = 80000, maxCount = 90}
+	{id = 3031, chance = 100000, maxCount = 45}, -- gold coin
+	{id = 5898, chance = 5000}, -- bonelord eye
+	{id = 3031, chance = 80000, maxCount = 90} -- gold coin
 }
 
 monster.attacks = {

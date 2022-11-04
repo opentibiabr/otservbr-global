@@ -5,10 +5,10 @@ monster.description = "a usurper archer"
 monster.experience = 6800
 monster.outfit = {
 	lookType = 1316,
-	lookHead = 57,
+	lookHead = 76,
 	lookBody = 57,
-	lookLegs = 57,
-	lookFeet = 57,
+	lookLegs = 76,
+	lookFeet = 95,
 	lookAddons = 2,
 	lookMount = 0
 }
@@ -29,10 +29,8 @@ monster.Bestiary = {
 monster.health = 7300
 monster.maxHealth = 7300
 monster.race = "blood"
-monster.corpse = 38816
+monster.corpse = 33981
 monster.speed = 250
-monster.summonCost = 0
-monster.maxSummons = 0
 
 monster.faction = FACTION_LIONUSURPERS
 monster.enemyFactions = {FACTION_LION, FACTION_PLAYER}
@@ -96,7 +94,7 @@ monster.loot = {
 	{name = "silver brooch", chance = 7838},
 	{name = "knife", chance = 7703},
 	{name = "lion crest", chance = 6892},
-	{id = 7632, chance = 5676},
+	{id = 281, chance = 5676}, -- giant shimmering pearl (green)
 	{name = "gemmed figurine", chance = 4189},
 	{name = "white pearl", chance = 3514},
 	{name = "glacier shoes", chance = 2432},

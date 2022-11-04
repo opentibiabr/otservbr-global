@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8000
 monster.maxHealth = 8000
 monster.race = "undead"
-monster.corpse = 9823
+monster.corpse = 8909
 monster.speed = 300
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -74,12 +73,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Platinum Coin", chance = 44000, maxCount = 40},
-	{name = "Belted Cape", chance = 500},
-	{name = "Ultimate Health Potion", chance = 500, maxCount = 2},
-	{name = "Throwing Star", chance = 500, maxCount = 18},
-	{name = "Knight Axe", chance = 250},
-	{id = 2419, chance = 500},
+	{name = "platinum coin", chance = 44000, maxCount = 40},
+	{name = "belted cape", chance = 500},
+	{name = "ultimate health potion", chance = 500, maxCount = 2},
+	{name = "throwing star", chance = 500, maxCount = 18},
+	{name = "knight axe", chance = 250},
+	{id = 3307, chance = 500}, -- scimitar
 	{name = "protection amulet", chance = 250},
 	{name = "hunting spear", chance = 250},
 	{name = "broken gladiator shield", chance = 250},
@@ -88,10 +87,10 @@ monster.loot = {
 	{name = "plate armor", chance = 250},
 	{name = "plate legs", chance = 250},
 	{name = "two handed sword", chance = 250},
-	{name = "Great Health Potion", chance = 250, maxCount = 2},
-	{name = "stealth ring", chance = 230},
+	{name = "great health potion", chance = 250, maxCount = 2},
+	{id = 3049, chance = 230}, -- stealth ring
 	{name = "crusader helmet", chance = 150},
-	{name = "Relic Sword", chance = 150}
+	{name = "relic sword", chance = 150}
 }
 
 monster.attacks = {

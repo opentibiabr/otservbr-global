@@ -5,10 +5,10 @@ monster.description = "an adept of the cult"
 monster.experience = 400
 monster.outfit = {
 	lookType = 194,
-	lookHead = 114,
+	lookHead = 95,
 	lookBody = 94,
 	lookLegs = 94,
-	lookFeet = 57,
+	lookFeet = 19,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 430
 monster.maxHealth = 430
 monster.race = "blood"
-monster.corpse = 20311
+monster.corpse = 18030
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -71,8 +70,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Ghoul", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Ghoul", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -84,16 +86,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1962, chance = 940},
+	{id = 2828, chance = 940}, -- book
 	{name = "small ruby", chance = 320},
 	{name = "gold coin", chance = 65520, maxCount = 60},
-	{id = 2169, chance = 420},
+	{id = 3053, chance = 420}, -- time ring
 	{name = "silver amulet", chance = 1020},
 	{name = "hailstorm rod", chance = 220},
 	{name = "clerical mace", chance = 1260},
 	{name = "red robe", chance = 80},
 	{name = "pirate voodoo doll", chance = 1730},
-	{id = 6089, chance = 700},
+	{id = 6089, chance = 700}, -- music sheet
 	{name = "lunar staff", chance = 120},
 	{name = "amber staff", chance = 680},
 	{name = "cultish robe", chance = 10080},

@@ -34,7 +34,6 @@ monster.race = "undead"
 monster.corpse = 5993
 monster.speed = 160
 monster.manaCost = 100
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -46,13 +45,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -79,8 +78,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1962, chance = 1310},
-	{name = "stealth ring", chance = 180},
+	{id = 2828, chance = 1310}, -- book
+	{id = 3049, chance = 180}, -- stealth ring
 	{name = "morning star", chance = 10610},
 	{name = "combat knife", chance = 7002},
 	{name = "ancient shield", chance = 860},

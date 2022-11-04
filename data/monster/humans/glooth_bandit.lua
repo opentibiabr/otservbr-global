@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2600
 monster.maxHealth = 2600
 monster.race = "blood"
-monster.corpse = 24251
+monster.corpse = 21882
 monster.speed = 300
 monster.manaCost = 450
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -47,10 +46,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -77,33 +76,33 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2152, chance = 100000, maxCount = 3},
-	{id = 24185, chance = 9090},
-	{id = 7590, chance = 7142},
-	{id = 23574, chance = 5555},
-	{id = 9970, chance = 5555, maxCount = 2},
-	{id = 8472, chance = 5000},
-	{id = 7591, chance = 4545},
-	{id = 23514, chance = 4000},
-	{id = 24183, chance = 3030},
-	{id = 23550, chance = 2500},
-	{id = 23549, chance = 2500},
-	{id = 23536, chance = 2000},
-	{id = 2149, chance = 1492, maxCount = 2},
-	{id = 23529, chance = 1492},
-	{id = 8473, chance = 1492},
-	{id = 23517, chance = 1000},
-	{id = 2436, chance = 1000},
-	{id = 23535, chance = 1000},
-	{id = 2155, chance = 1000},
-	{id = 23551, chance = 1000},
-	{id = 2454, chance = 1000},
-	{id = 7884, chance = 1000},
-	{id = 3962, chance = 1000},
-	{id = 23554, chance = 500},
-	{id = 7886, chance = 500},
-	{id = 7885, chance = 500}
+	{id = 3031, chance = 100000, maxCount = 100}, -- gold coin
+	{id = 3035, chance = 100000, maxCount = 3}, -- platinum coin
+	{id = 21816, chance = 9090}, -- tainted glooth capsule
+	{id = 238, chance = 7142}, -- great mana potion
+	{id = 21203, chance = 5555}, -- glooth bag
+	{id = 9057, chance = 5555, maxCount = 2}, -- small topaz
+	{id = 7642, chance = 5000}, -- great spirit potion
+	{id = 239, chance = 4545}, -- great health potion
+	{id = 21143, chance = 4000}, -- glooth sandwich
+	{id = 21814, chance = 3030}, -- glooth capsule
+	{id = 21179, chance = 2500}, -- glooth blade
+	{id = 21178, chance = 2500}, -- glooth club
+	{id = 21165, chance = 2000}, -- rubber cap
+	{id = 3032, chance = 1492, maxCount = 2}, -- small emerald
+	{id = 21158, chance = 1492}, -- glooth spear
+	{id = 7643, chance = 1492}, -- ultimate health potion
+	{id = 21146, chance = 1000}, -- glooth steak
+	{id = 3324, chance = 1000}, -- skull staff
+	{id = 21164, chance = 1000}, -- glooth cape
+	{id = 3038, chance = 1000}, -- green gem
+	{id = 21180, chance = 1000}, -- glooth axe
+	{id = 3342, chance = 1000}, -- war axe
+	{id = 811, chance = 1000}, -- terra mantle
+	{id = 3344, chance = 1000}, -- beastslayer axe
+	{id = 21183, chance = 500}, -- glooth amulet
+	{id = 813, chance = 500}, -- terra boots
+	{id = 812, chance = 500} -- terra legs
 }
 
 monster.attacks = {

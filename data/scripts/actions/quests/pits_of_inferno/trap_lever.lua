@@ -1,13 +1,13 @@
 local pitsOfInfernoTrapLever = Action()
 function pitsOfInfernoTrapLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
-	item:transform(item.itemid == 1945 and 1946 or 1945)
+	item:transform(item.itemid == 2772 and 2773 or 2772)
 
-	if item.itemid ~= 1945 then
+	if item.itemid ~= 2772 then
 		return true
 	end
 
-	local stoneItem = Tile(Position(32826, 32274, 11)):getItemById(1285)
+	local stoneItem = Tile(Position(32826, 32274, 11)):getItemById(1772)
 	if stoneItem then
 		stoneItem:remove()
 	end

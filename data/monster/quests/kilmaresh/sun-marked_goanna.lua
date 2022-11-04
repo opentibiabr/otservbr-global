@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 7800
 monster.maxHealth = 7800
 monster.race = "blood"
-monster.corpse = 36240
+monster.corpse = 31405
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -61,11 +60,11 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Goanna Hide with Sun Symbol", chance = 100000},
-	{name = "Platinum Coin", chance = 100000, maxCount = 3},
-	{name = "Envenomed Arrow", chance = 50000, maxCount = 29},
-	{name = "Poison Dagger", chance = 50000},
-	{name = "Scared Frog", chance = 50000}
+	{name = "goanna hide with sun symbol", chance = 100000},
+	{name = "platinum coin", chance = 100000, maxCount = 3},
+	{name = "envenomed arrow", chance = 50000, maxCount = 29},
+	{name = "poison dagger", chance = 50000},
+	{name = "scared frog", chance = 50000}
 }
 
 monster.attacks = {

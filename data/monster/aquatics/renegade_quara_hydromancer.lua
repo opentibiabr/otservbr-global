@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6066
 monster.speed = 490
 monster.manaCost = 330
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -47,14 +46,14 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = true,
+	convinceable = false,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
-	canPushItems = false,
+	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
@@ -89,9 +88,9 @@ monster.loot = {
 	{name = "yellow piece of cloth", chance = 3230},
 	{name = "green crystal shard", chance = 3000},
 	{name = "green piece of cloth", chance = 2880},
-	{name = "life ring", chance = 2190},
+	{id = 3052, chance = 2190}, -- life ring
 	{name = "fish fin", chance = 1380},
-	{id = 7632, chance = 1150}, -- giant shimmering pearl
+	{id = 281, chance = 1150}, -- giant shimmering pearl (green)
 	{name = "wand of cosmic energy", chance = 1150},
 	{name = "green gem", chance = 460},
 	{name = "knight armor", chance = 460}

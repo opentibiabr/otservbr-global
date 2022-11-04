@@ -5,21 +5,20 @@ monster.description = "the blazing rose"
 monster.experience = 0
 monster.outfit = {
 	lookType = 1068,
-	lookHead = 95,
-	lookBody = 94,
-	lookLegs = 57,
+	lookHead = 114,
+	lookBody = 113,
+	lookLegs = 76,
 	lookFeet = 79,
-	lookAddons = 2,
+	lookAddons = 3,
 	lookMount = 0
 }
 
 monster.health = 10000
 monster.maxHealth = 10000
 monster.race = "undead"
-monster.corpse = 32494
+monster.corpse = 28794
 monster.speed = 350
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

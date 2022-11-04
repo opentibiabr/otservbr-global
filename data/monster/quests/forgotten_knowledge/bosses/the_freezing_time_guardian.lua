@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 150000
 monster.maxHealth = 150000
 monster.race = "undead"
-monster.corpse = 27753
+monster.corpse = 25085
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -64,27 +63,27 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2152, chance = 100000, maxCount = 25},
-	{id = 2150, chance = 100000, maxCount = 10},
-	{id = 2145, chance = 100000, maxCount = 10},
-	{id = 7590, chance = 100000, maxCount = 5},
-	{id = 8473, chance = 100000, maxCount = 10},
-	{id = 18413, chance = 100000, maxCount = 3},
-	{id = 18415, chance = 100000, maxCount = 3},
-	{id = 18414, chance = 100000, maxCount = 3},
-	{id = 2158, chance = 100000},
-	{id = 12410, chance = 2000},
-	{id = 7440, chance = 2000},
-	{id = 2214, chance = 2000},
-	{id = 2153, chance = 2000},
-	{id = 2436, chance = 1000},
-	{id = 2197, chance = 1000},
-	{id = 2539, chance = 100},
-	{id = 7417, chance = 100},
-	{id = 25377, chance = 100000},
-	{id = 25172, chance = 100000}
+	{id = 3031, chance = 100000, maxCount = 100}, -- gold coin
+	{id = 3031, chance = 100000, maxCount = 100}, -- gold coin
+	{id = 3035, chance = 100000, maxCount = 25}, -- platinum coin
+	{id = 3033, chance = 100000, maxCount = 10}, -- small amethyst
+	{id = 3028, chance = 100000, maxCount = 10}, -- small diamond
+	{id = 238, chance = 100000, maxCount = 5}, -- great mana potion
+	{id = 7643, chance = 100000, maxCount = 10}, -- ultimate health potion
+	{id = 16119, chance = 100000, maxCount = 3}, -- blue crystal shard
+	{id = 16121, chance = 100000, maxCount = 3}, -- green crystal shard
+	{id = 16120, chance = 100000, maxCount = 3}, -- violet crystal shard
+	{id = 3041, chance = 100000}, -- blue gem
+	{id = 11454, chance = 2000}, -- luminous orb
+	{id = 7440, chance = 2000}, -- mastermind potion
+	{id = 3098, chance = 2000}, -- ring of healing
+	{id = 3036, chance = 2000}, -- violet gem
+	{id = 3324, chance = 1000}, -- skull staff
+	{id = 3081, chance = 1000}, -- stone skin amulet
+	{id = 3439, chance = 100}, -- phoenix shield
+	{id = 7417, chance = 100}, -- runed sword
+	{id = 22721, chance = 100000}, -- gold token
+	{id = 22516, chance = 100000} -- silver token
 }
 
 monster.attacks = {

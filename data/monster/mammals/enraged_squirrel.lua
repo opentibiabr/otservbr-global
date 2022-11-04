@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 35
 monster.maxHealth = 35
 monster.race = "blood"
-monster.corpse = 7628
+monster.corpse = 276
 monster.speed = 300
 monster.manaCost = 220
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,7 +61,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7909, chance = 2680}
+	{id = 836, chance = 2680} -- walnut
 }
 
 monster.attacks = {
@@ -78,7 +77,7 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 0},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
-	{type = COMBAT_FIREDAMAGE, percent = -10},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},

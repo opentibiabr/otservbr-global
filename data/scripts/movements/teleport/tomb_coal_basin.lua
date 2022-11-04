@@ -17,7 +17,7 @@ function tombCoalBasin.onAddItem(moveitem, tileitem, position)
 		return true
 	end
 
-	if moveitem.itemid ~= 2159 then
+	if moveitem.itemid ~= 3042 then
 		position:sendMagicEffect(CONST_ME_POFF)
 		return true
 	end
@@ -31,5 +31,5 @@ function tombCoalBasin.onAddItem(moveitem, tileitem, position)
 end
 
 tombCoalBasin:type("additem")
-tombCoalBasin:id(1485)
+tombCoalBasin:id(2114)
 tombCoalBasin:register()

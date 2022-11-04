@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 930
 monster.maxHealth = 930
 monster.race = "undead"
-monster.corpse = 8955
+monster.corpse = 8127
 monster.speed = 400
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Demon Skeleton", chance = 40, interval = 4000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Demon Skeleton", chance = 40, interval = 4000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -73,10 +75,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 10296, chance = 1000},
-	{id = 10302, chance = 1000},
-	{id = 10301, chance = 1000},
-	{id = 10295, chance = 1000}
+	{id = 9379, chance = 1000}, -- heavy metal t-shirt
+	{id = 9385, chance = 1000}, -- club of the fury
+	{id = 9384, chance = 1000}, -- scythe of the reaper
+	{id = 9378, chance = 1000} -- musician's bow
 }
 
 monster.attacks = {

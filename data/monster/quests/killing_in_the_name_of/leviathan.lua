@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 6000
 monster.maxHealth = 6000
 monster.race = "blood"
-monster.corpse = 8307
+monster.corpse = 949
 monster.speed = 758
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -66,16 +65,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 10220, chance = 100000},
-	{id = 10529, chance = 100000},
-	{id = 9809, chance = 83000},
-	{id = 2152, chance = 82000, maxCount = 7},
-	{id = 9812, chance = 77000},
-	{id = 7428, chance = 58000},
-	{id = 2146, chance = 50000, maxCount = 5},
-	{id = 7589, chance = 50000},
-	{id = 10521, chance = 14000},
-	{id = 8887, chance = 1500}
+	{id = 9303, chance = 100000}, -- leviathan's amulet
+	{id = 9613, chance = 100000}, -- sea serpent trophy
+	{id = 8895, chance = 83000}, -- rusted armor
+	{id = 3035, chance = 82000, maxCount = 7}, -- platinum coin
+	{id = 8898, chance = 77000}, -- rusted legs
+	{id = 7428, chance = 58000}, -- bonebreaker
+	{id = 3029, chance = 50000, maxCount = 5}, -- small sapphire
+	{id = 237, chance = 50000}, -- strong mana potion
+	{id = 9604, chance = 14000}, -- moon backpack
+	{id = 8059, chance = 1500} -- frozen plate
 }
 
 monster.attacks = {

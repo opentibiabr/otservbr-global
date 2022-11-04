@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 7200
 monster.maxHealth = 7200
 monster.race = "undead"
-monster.corpse = 17256
+monster.corpse = 15911
 monster.speed = 380
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -80,7 +79,7 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 98},
 	{name = "platinum coin", chance = 100000, maxCount = 10},
 	{name = "yellow gem", chance = 1030},
-	{name = "dwarven ring", chance = 4660},
+	{id = 3097, chance = 4660}, -- dwarven ring
 	{name = "knight legs", chance = 1910},
 	{name = "crown armor", chance = 370},
 	{name = "crown helmet", chance = 890},
@@ -123,7 +122,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
 	{type = COMBAT_ENERGYDAMAGE, percent = -5},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 65},
@@ -132,7 +131,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 5},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
-	{type = COMBAT_DEATHDAMAGE , percent = 15}
+	{type = COMBAT_DEATHDAMAGE , percent = 25}
 }
 
 monster.immunities = {

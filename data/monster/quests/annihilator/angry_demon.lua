@@ -19,7 +19,6 @@ monster.race = "fire"
 monster.corpse = 5995
 monster.speed = 256
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -55,8 +54,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "fire elemental", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "fire elemental", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -77,15 +79,15 @@ monster.loot = {
 	{name = "small amethyst", chance = 7250, maxCount = 5},
 	{name = "small ruby", chance = 7430, maxCount = 5},
 	{name = "small topaz", chance = 7470, maxCount = 5},
-	{name = "red gem", chance = 2220},
+	{id= 3039, chance = 2220}, -- red gem
 	{name = "demonic essence", chance = 14630},
 	{name = "talon", chance = 3430},
 	{name = "might ring", chance = 1890},
-	{name = "stealth ring", chance = 2170},
+	{id = 3049, chance = 2170}, -- stealth ring
 	{name = "platinum amulet", chance = 680},
 	{name = "orb", chance = 2854},
 	{name = "gold ring", chance = 1050},
-	{name = "ring of healing", chance = 1990},
+	{id = 3098, chance = 1990}, -- ring of healing
 	{name = "giant sword", chance = 1980},
 	{name = "ice rapier", chance = 1550},
 	{name = "golden sickle", chance = 1440},
@@ -99,7 +101,7 @@ monster.loot = {
 	{name = "demon horn", chance = 14920},
 	{name = "assassin star", chance = 12550, maxCount = 10},
 	{name = "demonrage sword", chance = 70},
-	{id = 7393, chance = 90},
+	{id = 7393, chance = 90}, -- demon trophy
 	{name = "great mana potion", chance = 22220, maxCount = 3},
 	{name = "ultimate health potion", chance = 19540, maxCount = 3},
 	{name = "great spirit potion", chance = 18510, maxCount = 3}

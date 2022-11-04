@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 5500
 monster.maxHealth = 5500
 monster.race = "blood"
-monster.corpse = 36362
+monster.corpse = 31527
 monster.speed = 430
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,

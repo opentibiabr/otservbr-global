@@ -20,7 +20,6 @@ monster.race = "venom"
 monster.corpse = 5977
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -62,15 +61,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 85},
-	{id = 2545, chance = 11900, maxCount = 11},
-	{id = 2647, chance = 7933},
-	{id = 2463, chance = 10010},
-	{id = 2457, chance = 4945},
-	{id = 7588, chance = 3571},
-	{id = 2477, chance = 850},
-	{id = 2171, chance = 280},
-	{id = 2476, chance = 500}
+	{id = 3031, chance = 100000, maxCount = 85}, -- gold coin
+	{id = 3448, chance = 11900, maxCount = 11}, -- poison arrow
+	{id = 3557, chance = 7933}, -- plate legs
+	{id = 3357, chance = 10010}, -- plate armor
+	{id = 3351, chance = 4945}, -- steel helmet
+	{id = 236, chance = 3571}, -- strong health potion
+	{id = 3371, chance = 850}, -- knight legs
+	{id = 3055, chance = 280}, -- platinum amulet
+	{id = 3370, chance = 500} -- knight armor
 }
 
 monster.attacks = {

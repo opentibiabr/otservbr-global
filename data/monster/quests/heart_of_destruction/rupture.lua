@@ -6,7 +6,7 @@ monster.experience = 112000
 monster.outfit = {
 	lookType = 875,
 	lookHead = 77,
-	lookBody = 98,
+	lookBody = 79,
 	lookLegs = 3,
 	lookFeet = 85,
 	lookAddons = 0,
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 290000
 monster.maxHealth = 290000
 monster.race = "venom"
-monster.corpse = 26220
+monster.corpse = 23564
 monster.speed = 450
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -70,25 +69,25 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 200},
-	{id = 2152, chance = 100000, maxCount = 10},
-	{id = 8473, chance = 8000, maxCount = 5},
-	{id = 18413, chance = 8000, maxCount = 3},
-	{id = 18415, chance = 8000, maxCount = 3},
-	{id = 2150, chance = 8000, maxCount = 10},
-	{id = 2146, chance = 8000, maxCount = 5},
-	{id = 18414, chance = 8000, maxCount = 3},
-	{id = 26191, chance = 8000, maxCount = 5},
-	{id = 26162, chance = 8000},
-	{id = 26166, chance = 100000},
-	{id = 25377, chance = 100000},
-	{id = 26165, chance = 100000},
-	{id = 2155, chance = 6000},
-	{id = 7427, chance = 6000},
-	{id = 26187, chance = 4000},
-	{id = 26189, chance = 4000},
-	{id = 26130, chance = 2000, unique = true},
-	{id = 26133, chance = 2000, unique = true}
+	{id = 3031, chance = 100000, maxCount = 200}, -- gold coin
+	{id = 3035, chance = 100000, maxCount = 10}, -- platinum coin
+	{id = 7643, chance = 8000, maxCount = 5}, -- ultimate health potion
+	{id = 16119, chance = 8000, maxCount = 3}, -- blue crystal shard
+	{id = 16121, chance = 8000, maxCount = 3}, -- green crystal shard
+	{id = 3033, chance = 8000, maxCount = 10}, -- small amethyst
+	{id = 3029, chance = 8000, maxCount = 5}, -- small sapphire
+	{id = 16120, chance = 8000, maxCount = 3}, -- violet crystal shard
+	{id = 23535, chance = 8000, maxCount = 5}, -- energy bar
+	{id = 23506, chance = 8000}, -- plasma pearls
+	{id = 23510, chance = 100000}, -- odd organ
+	{id = 22721, chance = 100000}, -- gold token
+	{id = 23509, chance = 100000}, -- mysterious remains
+	{id = 3038, chance = 6000}, -- green gem
+	{id = 7427, chance = 6000}, -- chaos mace
+	{id = 23531, chance = 4000}, -- ring of green plasma
+	{id = 23533, chance = 4000}, -- ring of red plasma
+	{id = 23474, chance = 2000, unique = true}, -- tiara of power
+	{id = 23477, chance = 2000, unique = true} -- void boots
 }
 
 monster.attacks = {

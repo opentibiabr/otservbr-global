@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 3800
 monster.maxHealth = 3800
 monster.race = "venom"
-monster.corpse = 15354
+monster.corpse = 13937
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -48,7 +47,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -80,10 +79,10 @@ monster.loot = {
 	{name = "gold coin", chance = 49000, maxCount = 100},
 	{name = "gold coin", chance = 50000, maxCount = 97},
 	{name = "platinum coin", chance = 66000, maxCount = 3},
-	{name = "ring of healing", chance = 3270},
+	{id = 3098, chance = 3270}, -- ring of healing
 	{name = "steel boots", chance = 130},
 	{name = "great mana potion", chance = 8950, maxCount = 4},
-	{id = 7632, chance = 2600},
+	{id = 281, chance = 2600}, -- giant shimmering pearl (green)
 	{name = "ultimate health potion", chance = 4000, maxCount = 3},
 	{name = "gold ingot", chance = 5160},
 	{name = "kollos shell", chance = 15390},
@@ -107,13 +106,13 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 5},
+	{type = COMBAT_ENERGYDAMAGE, percent = 10},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 30},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = -5},
+	{type = COMBAT_ICEDAMAGE, percent = -7},
 	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }

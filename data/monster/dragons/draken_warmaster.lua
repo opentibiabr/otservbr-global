@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 4150
 monster.maxHealth = 4150
 monster.race = "blood"
-monster.corpse = 11107
+monster.corpse = 10190
 monster.speed = 324
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -78,20 +77,19 @@ monster.voices = {
 monster.loot = {
 	{name = "ring of the sky", chance = 180},
 	{name = "small ruby", chance = 1525, maxCount = 5},
-	{name = "gold coin", chance = 47000, maxCount = 100},
-	{name = "gold coin", chance = 50000, maxCount = 100},
+	{name = "gold coin", chance = 97500, maxCount = 200},
 	{name = "platinum coin", chance = 50625, maxCount = 5},
 	{name = "tower shield", chance = 2035},
 	{name = "meat", chance = 30300},
 	{name = "great health potion", chance = 4850, maxCount = 3},
 	{name = "ultimate health potion", chance = 4020},
-	{name = "Zaoan armor", chance = 790},
-	{name = "Zaoan shoes", chance = 1900},
-	{name = "Zaoan legs", chance = 960},
+	{name = "zaoan armor", chance = 790},
+	{name = "zaoan shoes", chance = 1900},
+	{name = "zaoan legs", chance = 960},
 	{name = "drakinata", chance = 860},
 	{name = "bone shoulderplate", chance = 12010},
 	{name = "warmaster's wristguards", chance = 7000},
-	{name = "Zaoan halberd", chance = 7925}
+	{name = "zaoan halberd", chance = 7925}
 }
 
 monster.attacks = {
@@ -101,12 +99,12 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 40,
-	armor = 40,
+	armor = 55,
 	{name ="combat", interval = 2000, chance = 10, type = COMBAT_HEALING, minDamage = 510, maxDamage = 600, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 5},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = 5},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 100},

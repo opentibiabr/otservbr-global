@@ -5,10 +5,10 @@ monster.description = "Gravelord Oshuran"
 monster.experience = 2400
 monster.outfit = {
 	lookType = 99,
-	lookHead = 95,
-	lookBody = 116,
-	lookLegs = 119,
-	lookFeet = 115,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6028
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Bonebeast", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Bonebeast", chance = 10, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -69,15 +71,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 115},
-	{id = 7589, chance = 17500},
-	{id = 2144, chance = 15960},
-	{id = 2143, chance = 15000},
-	{id = 2214, chance = 15040},
-	{id = 2656, chance = 500},
-	{id = 7893, chance = 900},
-	{id = 8904, chance = 300},
-	{id = 2175, chance = 4650}
+	{id = 3031, chance = 100000, maxCount = 115}, -- gold coin
+	{id = 237, chance = 17500}, -- strong mana potion
+	{id = 3027, chance = 15960}, -- black pearl
+	{id = 3026, chance = 15000}, -- white pearl
+	{id = 3098, chance = 15040}, -- ring of healing
+	{id = 3567, chance = 500}, -- blue robe
+	{id = 820, chance = 900}, -- lightning boots
+	{id = 8076, chance = 300}, -- spellscroll of prophecies
+	{id = 3059, chance = 4650} -- spellbook
 }
 
 monster.attacks = {

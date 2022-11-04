@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 5981
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Hyaena", chance = 30, interval = 5000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Hyaena", chance = 30, interval = 5000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -73,11 +75,11 @@ monster.voices = {
 
 monster.loot = {
 	{name = "minotaur leather", chance = 100000},
-	{id = 2162, chance = 76000},-- magic light wand
+	{id = 3046, chance = 76000}, -- magic light wand
 	{name = "gold coin", chance = 38000, maxCount = 10},
-	{id = 2050, chance = 30000, maxCount = 2},-- torch
+	{id = 2920, chance = 30000, maxCount = 2}, -- torch
 	{name = "leather legs", chance = 23000},
-	{id = 2684, chance = 7690},-- carrot
+	{id = 3595, chance = 7690}, -- carrot
 	{name = "leather helmet", chance = 7690},
 	{name = "knife", chance = 7690}
 }

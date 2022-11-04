@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6047
 monster.speed = 440
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -62,13 +61,14 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 10},
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2666, chance = 33333, maxCount = 50},
-	{id = 2671, chance = 20000, maxCount = 8},
-	{id = 2145, chance = 33333, maxCount = 3},
-	{id = 7732, chance = 4000},
-	{id = 5015, chance = 100000}
+	{id = 3031, chance = 87250, maxCount = 110}, -- gold coin
+	{id = 3577, chance = 70250, maxCount = 50}, -- meat
+	{id = 3582, chance = 38250, maxCount = 8}, -- ham
+	{id = 3728, chance = 21250, maxCount = 6}, -- dark mushroom
+	{id = 3028, chance = 100}, -- small diamond
+	{id = 647, chance = 100000, maxCount = 3}, -- seeds
+	{id = 12311, chance = 12750}, -- carrot on a stick
+	{id = 5014, chance = 100000} -- mandrake
 }
 
 monster.attacks = {

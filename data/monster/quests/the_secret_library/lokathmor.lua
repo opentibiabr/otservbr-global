@@ -6,9 +6,9 @@ monster.experience = 100000
 monster.outfit = {
 	lookType = 1062,
 	lookHead = 22,
-	lookBody = 22,
+	lookBody = 57,
 	lookLegs = 79,
-	lookFeet = 97,
+	lookFeet = 77,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 300000
 monster.maxHealth = 300000
 monster.race = "blood"
-monster.corpse = 8721
+monster.corpse = 7893
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 5
 
 monster.changeTarget = {
 	interval = 2000,
@@ -55,8 +54,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "demon blood", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "demon blood", chance = 10, interval = 2000, count = 5}
+	}
 }
 
 monster.voices = {
@@ -80,16 +82,16 @@ monster.loot = {
 	{name = "blue gem", chance = 70000},
 	{name = "demon horn", chance = 70000},
 	{name = "demonic essence", chance = 70000},
-	{id = 7632, chance = 70000},
+	{id = 281, chance = 70000}, -- giant shimmering pearl (green)
 	{name = "green gem", chance = 70000},
 	{name = "magic sulphur", chance = 70000},
 	{name = "stone skin amulet", chance = 70000},
 	{name = "silver token", chance = 30000, maxCount = 4},
 	{name = "blue robe", chance = 30000},
 	{name = "dreaded cleaver", chance = 30000},
-	{id = 9814, chance = 30000},
+	{id = 8900, chance = 30000}, -- heavily rusted shield
 	{name = "wand of inferno", chance = 30000},
-	{id = 33094, chance = 1000},
+	{id = 28341, chance = 1000}, -- tessellated wall
 	{name = "sturdy book", chance = 1000}
 }
 

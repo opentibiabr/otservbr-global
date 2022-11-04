@@ -5,10 +5,10 @@ monster.description = "Izcandar the Banished"
 monster.experience = 6900
 monster.outfit = {
 	lookType = 1137,
-	lookHead = 1,
-	lookBody = 114,
+	lookHead = 19,
+	lookBody = 95,
 	lookLegs = 76,
-	lookFeet = 0,
+	lookFeet = 38,
 	lookAddons = 2,
 	lookMount = 0
 }
@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6068
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,

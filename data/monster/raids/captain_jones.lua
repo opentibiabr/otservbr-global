@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 555
 monster.maxHealth = 555
 monster.race = "undead"
-monster.corpse = 5566
+monster.corpse = 5565
 monster.speed = 170
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,12 +63,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 150},
-	{id = 2165, chance = 33000},
-	{id = 2488, chance = 5070},
-	{id = 8871, chance = 3070},
-	{id = 2655, chance = 1110},
-	{id = 2383, chance = 1110}
+	{id = 3031, chance = 100000, maxCount = 150}, -- gold coin
+	{id = 3049, chance = 33000}, -- stealth ring
+	{id = 3382, chance = 5070}, -- crown legs
+	{id = 8043, chance = 3070}, -- focus cape
+	{id = 3566, chance = 1110}, -- red robe
+	{id = 3271, chance = 1110} -- spike sword
 }
 
 monster.attacks = {

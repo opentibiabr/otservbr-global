@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 750
 monster.maxHealth = 750
 monster.race = "blood"
-monster.corpse = 20574
+monster.corpse = 18293
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 5000,
@@ -55,10 +54,13 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Ghoul", chance = 20, interval = 1000},
-	{name = "Ghost", chance = 17, interval = 1000},
-	{name = "Mummy", chance = 15, interval = 1000}
+monster.summon = {
+	maxSummons = 6,
+	summons = {
+		{name = "Ghoul", chance = 20, interval = 1000, count = 2},
+		{name = "Ghost", chance = 17, interval = 1000, count = 2},
+		{name = "Mummy", chance = 15, interval = 1000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -69,21 +71,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 11237, chance = 100000},
-	{id = 2148, chance = 100000, maxCount = 99},
-	{id = 12431, chance = 100000},
-	{id = 5809, chance = 100000},
-	{id = 2423, chance = 52000},
-	{id = 2436, chance = 47000},
-	{id = 2449, chance = 38000},
-	{id = 2229, chance = 19000},
-	{id = 2796, chance = 14000},
-	{id = 2186, chance = 14000},
-	{id = 2231, chance = 9500},
-	{id = 2541, chance = 9500},
-	{id = 2195, chance = 4700},
-	{id = 2663, chance = 4700},
-	{id = 7589, chance = 4700}
+	{id = 10320, chance = 100000}, -- book of necromantic rituals
+	{id = 3031, chance = 100000, maxCount = 99}, -- gold coin
+	{id = 11475, chance = 100000}, -- necromantic robe
+	{id = 5809, chance = 100000}, -- soul stone
+	{id = 3311, chance = 52000}, -- clerical mace
+	{id = 3324, chance = 47000}, -- skull staff
+	{id = 3337, chance = 38000}, -- bone club
+	{id = 3114, chance = 19000}, -- skull
+	{id = 3732, chance = 14000}, -- green mushroom
+	{id = 3070, chance = 14000}, -- moonlight rod
+	{id = 3116, chance = 9500}, -- big bone
+	{id = 3441, chance = 9500}, -- bone shield
+	{id = 3079, chance = 4700}, -- boots of haste
+	{id = 3574, chance = 4700}, -- mystic turban
+	{id = 237, chance = 4700} -- strong mana potion
 }
 
 monster.attacks = {

@@ -26,21 +26,22 @@ weatherConfig = {
 SCHEDULE_LOOT_RATE = 100
 SCHEDULE_EXP_RATE = 100
 SCHEDULE_SKILL_RATE = 100
+SCHEDULE_SPAWN_RATE = 100
 
 -- MARRY
 PROPOSED_STATUS = 1
 MARRIED_STATUS = 2
 PROPACCEPT_STATUS = 3
 LOOK_MARRIAGE_DESCR = TRUE
-ITEM_WEDDING_RING = 2121
-ITEM_ENGRAVED_WEDDING_RING = 10502
+ITEM_WEDDING_RING = 3004
+ITEM_ENGRAVED_WEDDING_RING = 9585
 
 -- Scarlett Etzel
 SCARLETT_MAY_TRANSFORM = 0
 SCARLETT_MAY_DIE = 0
 
-ropeSpots = {384, 418, 8278, 8592, 13189, 14436, 15635, 19518, 26019, 24621, 24622, 24623, 24624}
-specialRopeSpots = { 14435 }
+ropeSpots = {386, 421, 386, 7762, 12202, 12936, 14238, 17238, 23363, 21965, 21966, 21967, 21968}
+specialRopeSpots = { 12935 }
 
 -- Impact Analyser
 -- Every 2 seconds
@@ -51,9 +52,6 @@ healingImpact = {}
 -- Damage
 -- Global table to insert data
 damageImpact = {}
-
--- New prey => preyTimeLeft
-nextPreyTime = {}
 
 startupGlobalStorages = {
 	GlobalStorage.TheAncientTombs.AshmunrahSwitchesGlobalStorage,
@@ -86,23 +84,6 @@ startupGlobalStorages = {
 	GlobalStorage.FerumbrasAscendant.Elements.Third,
 	GlobalStorage.FerumbrasAscendant.Elements.Done
 }
-
-do -- Event Schedule rates
-	local lootRate = Game.getEventSLoot()
-	if lootRate ~= 100 then
-		SCHEDULE_LOOT_RATE = lootRate
-	end
-
-	local expRate = Game.getEventSExp()
-	if expRate ~= 100 then
-		SCHEDULE_EXP_RATE = expRate
-	end
-
-	local skillRate = Game.getEventSSkill()
-	if skillRate ~= 100 then
-		SCHEDULE_SKILL_RATE = skillRate
-	end
-end
 
 table.contains = function(array, value)
 	for _, targetColumn in pairs(array) do
@@ -138,10 +119,6 @@ if nextUseStaminaTime == nil then
 	nextUseStaminaTime = {}
 end
 
-if nextUseStaminaPrey == nil then
-	nextUseStaminaPrey = {}
-end
-
 if nextUseXpStamina == nil then
 	nextUseXpStamina = {}
 end
@@ -150,13 +127,21 @@ if lastItemImbuing == nil then
 	lastItemImbuing = {}
 end
 
-if nextDelayPreyReroll == nil then
-	nextDelayPreyReroll = {}
-end
-
 -- Delay potion
 if not playerDelayPotion then
 	playerDelayPotion = {}
+end
+
+-- for use of: data\scripts\globalevents\customs\save_interval.lua
+SAVE_INTERVAL_TYPE = configManager.getString(configKeys.SAVE_INTERVAL_TYPE)
+SAVE_INTERVAL_CONFIG_TIME = configManager.getNumber(configKeys.SAVE_INTERVAL_TIME)
+SAVE_INTERVAL_TIME = 0
+if SAVE_INTERVAL_TYPE == "second" then
+	SAVE_INTERVAL_TIME = 1000
+elseif SAVE_INTERVAL_TYPE == "minute" then
+	SAVE_INTERVAL_TIME = 60 * 1000
+elseif SAVE_INTERVAL_TYPE == "hour" then
+	SAVE_INTERVAL_TIME = 60 * 60 * 1000
 end
 
 -- Increase Stamina when Attacking Trainer

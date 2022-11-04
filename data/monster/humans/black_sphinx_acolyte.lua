@@ -5,7 +5,7 @@ monster.description = "a black sphinx acolyte"
 monster.experience = 7200
 monster.outfit = {
 	lookType = 1200,
-	lookHead = 114,
+	lookHead = 95,
 	lookBody = 95,
 	lookLegs = 94,
 	lookFeet = 95,
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8100
 monster.maxHealth = 8100
 monster.race = "blood"
-monster.corpse = 36258
+monster.corpse = 31423
 monster.speed = 310
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -68,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Skeleton Elite Warrior", chance = 10, interval = 2000, max = 1}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Skeleton Elite Warrior", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -81,15 +83,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "Platinum Coin", chance = 100000, maxCount = 5},
-	{name = "Blue Crystal Shard", chance = 5000},
-	{name = "Snakebite Rod", chance = 4700},
-	{name = "Underworld Rod", chance = 3400},
-	{name = "Violet Gem", chance = 2600},
-	{name = "Opal", chance = 2200, maxCount = 2},
-	{name = "Wand of Voodoo", chance = 2200},
-	{id = 36166, chance = 3400},
-	{name = "Small Enchanted Emerald", chance = 1500, maxCount = 3}
+	{name = "platinum coin", chance = 100000, maxCount = 5},
+	{name = "blue crystal shard", chance = 5000},
+	{name = "snakebite rod", chance = 4700},
+	{name = "underworld rod", chance = 3400},
+	{name = "violet gem", chance = 2600},
+	{name = "opal", chance = 2200, maxCount = 2},
+	{name = "wand of voodoo", chance = 2200},
+	{id = 31331, chance = 3400}, -- empty honey glass
+	{name = "small enchanted emerald", chance = 1500, maxCount = 3}
 }
 
 monster.attacks = {

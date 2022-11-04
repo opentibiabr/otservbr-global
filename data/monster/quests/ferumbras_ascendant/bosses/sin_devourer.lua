@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 360
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 10,
@@ -64,17 +63,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2804, chance = 4830},
-	{id = 2200, chance = 850},
-	{id = 2171, chance = 120},
-	{id = 2195, chance = 120},
-	{id = 7589, chance = 1600},
-	{id = 2148, chance = 89840, maxCount = 110},
-	{id = 7407, chance = 320},
-	{id = 7427, chance = 120},
-	{id = 9942, chance = 130},
-	{id = 2124, chance = 1030},
-	{id = 8870, chance = 520}
+	{id = 3740, chance = 4830}, -- shadow herb
+	{id = 3084, chance = 850}, -- protection amulet
+	{id = 3055, chance = 120}, -- platinum amulet
+	{id = 3079, chance = 120}, -- boots of haste
+	{id = 237, chance = 1600}, -- strong mana potion
+	{id = 3031, chance = 89840, maxCount = 110}, -- gold coin
+	{id = 7407, chance = 320}, -- haunted blade
+	{id = 7427, chance = 120}, -- chaos mace
+	{id = 9028, chance = 130}, -- crystal of balance
+	{id = 3007, chance = 1030}, -- crystal ring
+	{id = 8042, chance = 520} -- spirit cloak
 }
 
 monster.attacks = {

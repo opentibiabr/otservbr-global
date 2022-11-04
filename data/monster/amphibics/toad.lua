@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 6077
 monster.speed = 210
 monster.manaCost = 400
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -48,7 +47,7 @@ monster.flags = {
 	summonable = true,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = true,
 	rewardBoss = false,
 	illusionable = true,
@@ -80,7 +79,7 @@ monster.loot = {
 	{name = "gold coin", chance = 80000, maxCount = 20},
 	{name = "war hammer", chance = 148},
 	{name = "mace", chance = 2854},
-	{id = 2667, chance = 20000},
+	{id = 3578, chance = 20000}, -- fish
 	{name = "poisonous slime", chance = 4761}
 }
 

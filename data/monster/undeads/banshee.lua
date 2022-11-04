@@ -35,7 +35,6 @@ monster.race = "undead"
 monster.corpse = 6019
 monster.speed = 220
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -88,17 +87,17 @@ monster.voices = {
 monster.loot = {
 	{name = "candlestick", chance = 70000},
 	{name = "wedding ring", chance = 460},
-	{id = 2124, chance = 60},
+	{id = 3007, chance = 60}, -- crystal ring
 	{name = "silver brooch", chance = 1250},
 	{name = "white pearl", chance = 1010},
 	{name = "black pearl", chance = 2030},
 	{name = "gold coin", chance = 30000, maxCount = 80},
 	{name = "silver amulet", chance = 8700},
-	{id = 2175, chance = 520},
+	{id = 3059, chance = 520}, -- spellbook
 	{name = "life crystal", chance = 70},
 	{name = "stone skin amulet", chance = 820},
-	{name = "ring of healing", chance = 730},
-	{id = 2372, chance = 910},
+	{id = 3098, chance = 730}, -- ring of healing
+	{id = 2949, chance = 910}, -- lyre
 	{name = "poison dagger", chance = 1350},
 	{name = "red robe", chance = 150},
 	{name = "blue robe", chance = 700},

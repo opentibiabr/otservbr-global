@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 5993
 monster.speed = 160
 monster.manaCost = 100
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 0,
@@ -31,13 +30,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = false,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,

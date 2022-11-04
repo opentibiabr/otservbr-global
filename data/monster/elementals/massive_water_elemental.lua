@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 1250
 monster.maxHealth = 1250
 monster.race = "undead"
-monster.corpse = 10499
+monster.corpse = 9582
 monster.speed = 430
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -82,9 +81,9 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "small emerald", chance = 1000, maxCount = 2},
 	{name = "platinum coin", chance = 20000, maxCount = 2},
-	{name = "energy ring", chance = 910},
-	{name = "life ring", chance = 1000},
-	{id = 2667, chance = 40000, maxCount = 2},
+	{id = 3051, chance = 910}, -- energy ring
+	{id = 3052, chance = 1000}, -- life ring
+	{id = 3578, chance = 40000, maxCount = 2}, -- fish
 	{name = "rainbow trout", chance = 1340},
 	{name = "green perch", chance = 1590},
 	{name = "great mana potion", chance = 10400},
@@ -106,7 +105,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 40},
 	{type = COMBAT_ENERGYDAMAGE, percent = -25},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
@@ -114,7 +113,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},
 	{type = COMBAT_ICEDAMAGE, percent = 100},
-	{type = COMBAT_HOLYDAMAGE , percent = 30},
+	{type = COMBAT_HOLYDAMAGE , percent = 50},
 	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 

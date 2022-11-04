@@ -6,7 +6,7 @@ monster.experience = 1200
 monster.outfit = {
 	lookType = 159,
 	lookHead = 58,
-	lookBody = 22,
+	lookBody = 21,
 	lookLegs = 41,
 	lookFeet = 76,
 	lookAddons = 0,
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2000
 monster.maxHealth = 2000
 monster.race = "blood"
-monster.corpse = 29361
+monster.corpse = 26125
 monster.speed = 240
 monster.manaCost = 390
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -47,10 +46,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -80,10 +79,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 153},
-	{id = 28657, chance = 5610},
-	{id = 9971, chance = 4930},
-	{id = 2158, chance = 4630}
+	{id = 3031, chance = 100000, maxCount = 153}, -- gold coin
+	{id = 25296, chance = 5610}, -- rubbish amulet
+	{id = 9058, chance = 4930}, -- gold ingot
+	{id = 3041, chance = 4630} -- blue gem
 }
 
 monster.attacks = {

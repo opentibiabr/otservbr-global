@@ -10,9 +10,8 @@ function rune.onCastSpell(creature, var, isHotkey)
 end
 
 rune:group("healing")
-rune:id(31)
-rune:name("Antidote Rune")
-rune:runeId(2266)
+rune:name("antidote rune")
+rune:runeId(3153)
 rune:allowFarUse(true)
 rune:charges(1)
 rune:level(15)

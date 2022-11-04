@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 960
 monster.maxHealth = 960
 monster.race = "blood"
-monster.corpse = 6336
+monster.corpse = 6335
 monster.speed = 350
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 5000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Acid Blob", chance = 40, interval = 4000, max = 3}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Acid Blob", chance = 40, interval = 4000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -71,10 +73,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 10298, chance = 1000},
-	{id = 10303, chance = 1000},
-	{id = 10297, chance = 1000},
-	{id = 10313, chance = 1000}
+	{id = 9381, chance = 1000}, -- helmet of ultimate terror
+	{id = 9386, chance = 1000}, -- farmer's avenger
+	{id = 9380, chance = 1000}, -- shield of care
+	{id = 9396, chance = 1000} -- incredible mumpiz slayer
 }
 
 monster.attacks = {

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 200
 monster.maxHealth = 200
 monster.race = "fire"
-monster.corpse = 8964
+monster.corpse = 8136
 monster.speed = 95
 monster.manaCost = 690
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -31,13 +30,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
-	pushable = false,
+	convinceable = false,
+	pushable = true,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,

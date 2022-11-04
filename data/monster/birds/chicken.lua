@@ -34,7 +34,6 @@ monster.race = "blood"
 monster.corpse = 6042
 monster.speed = 128
 monster.manaCost = 220
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -79,7 +78,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "meat", chance = 2120, maxCount = 2},
-	{id = 2695, chance = 950},
+	{id = 3606, chance = 950}, -- egg
 	{name = "worm", chance = 10000, maxCount = 3},
 	{name = "chicken feather", chance = 20000}
 }

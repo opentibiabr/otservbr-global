@@ -6,7 +6,7 @@ monster.experience = 355
 monster.outfit = {
 	lookType = 264,
 	lookHead = 78,
-	lookBody = 116,
+	lookBody = 97,
 	lookLegs = 95,
 	lookFeet = 121,
 	lookAddons = 0,
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 345
 monster.maxHealth = 345
 monster.race = "blood"
-monster.corpse = 20339
+monster.corpse = 18058
 monster.speed = 280
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 60000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "War Wolf", chance = 40, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "War Wolf", chance = 40, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -70,12 +72,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 48000, maxCount = 35},
-	{id = 2464, chance = 11000},
-	{id = 3965, chance = 12500},
-	{id = 7343, chance = 1000},
-	{id = 2050, chance = 25000},
-	{id = 1958, chance = 15000}
+	{id = 3031, chance = 48000, maxCount = 35}, -- gold coin
+	{id = 3358, chance = 11000}, -- chain armor
+	{id = 3347, chance = 12500}, -- hunting spear
+	{id = 7343, chance = 1000}, -- fur bag
+	{id = 2920, chance = 25000}, -- torch
+	{id = 2824, chance = 15000} -- book
 }
 
 monster.attacks = {

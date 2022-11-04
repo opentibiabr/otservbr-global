@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 140
 monster.maxHealth = 140
 monster.race = "blood"
-monster.corpse = 7926
+monster.corpse = 861
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 5
 
 monster.changeTarget = {
 	interval = 2000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Troll Champion", chance = 30, interval = 2000}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "Troll Champion", chance = 30, interval = 2000, count =5}
+	}
 }
 
 monster.voices = {

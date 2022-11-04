@@ -5,7 +5,7 @@ monster.description = "an energuardian of tales"
 monster.experience = 11361
 monster.outfit = {
 	lookType = 1063,
-	lookHead = 66,
+	lookHead = 86,
 	lookBody = 85,
 	lookLegs = 82,
 	lookFeet = 93,
@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 14000
 monster.maxHealth = 14000
 monster.race = "undead"
-monster.corpse = 32571
+monster.corpse = 28873
 monster.speed = 420
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -74,15 +73,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 33316, chance = 10000, maxCount = 5},
-	{id = 33317, chance = 10000, maxCount = 5},
-	{name = "Small Amethyst", chance = 10000, maxCount = 5},
-	{name = "Flash Arrow", chance = 10000, maxCount = 5},
-	{name = "Lightning Legs", chance = 250},
-	{name = "Spellbook of Warding", chance = 350},
-	{name = "Ultimate Health Potion", chance = 10000, maxCount = 5},
-	{name = "Ultimate Mana Potion", chance = 10000, maxCount = 5},
-	{name = "Wand of Starstorm", chance = 300}
+	{id = 28569, chance = 10000, maxCount = 5}, -- book page
+	{id = 28570, chance = 10000, maxCount = 5}, -- glowing rune
+	{name = "small amethyst", chance = 10000, maxCount = 5},
+	{name = "flash arrow", chance = 10000, maxCount = 5},
+	{name = "lightning legs", chance = 250},
+	{name = "spellbook of warding", chance = 350},
+	{name = "ultimate health potion", chance = 10000, maxCount = 5},
+	{name = "ultimate mana potion", chance = 10000, maxCount = 5},
+	{name = "wand of starstorm", chance = 300}
 }
 
 monster.attacks = {
@@ -97,15 +96,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 50},
-	{type = COMBAT_EARTHDAMAGE, percent = 30},
-	{type = COMBAT_FIREDAMAGE, percent = 80},
+	{type = COMBAT_ENERGYDAMAGE, percent = 100},
+	{type = COMBAT_EARTHDAMAGE, percent = -10},
+	{type = COMBAT_FIREDAMAGE, percent = 0},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 50},
-	{type = COMBAT_HOLYDAMAGE , percent = 50},
-	{type = COMBAT_DEATHDAMAGE , percent = 50}
+	{type = COMBAT_ICEDAMAGE, percent = 0},
+	{type = COMBAT_HOLYDAMAGE , percent = 100},
+	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 
 monster.immunities = {

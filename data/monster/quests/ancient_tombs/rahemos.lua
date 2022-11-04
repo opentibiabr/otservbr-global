@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "Rahemos"
 monster.experience = 3100
 monster.outfit = {
-	lookType = 87,
+	lookType = 88,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6031
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Demon", chance = 12, interval = 1000, max = 1}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Demon", chance = 12, interval = 1000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -80,7 +82,7 @@ monster.loot = {
 	{name = "violet gem", chance = 500},
 	{name = "orb", chance = 500},
 	{name = "crystal wand", chance = 500},
-	{name = "ring of healing", chance = 7000},
+	{id = 3098, chance = 7000}, -- ring of healing
 	{name = "ancient rune", chance = 100000},
 	{name = "twin axe", chance = 200},
 	{name = "magician hat", chance = 300},

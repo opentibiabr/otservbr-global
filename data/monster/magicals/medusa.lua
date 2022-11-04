@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 4500
 monster.maxHealth = 4500
 monster.race = "blood"
-monster.corpse = 10524
+monster.corpse = 9607
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -81,8 +80,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "gold coin", chance = 50000, maxCount = 100},
-	{name = "gold coin", chance = 50000, maxCount = 90},
+	{name = "gold coin", chance = 50000, maxCount = 190},
 	{name = "small emerald", chance = 3770, maxCount = 4},
 	{name = "platinum coin", chance = 74810, maxCount = 6},
 	{name = "knight armor", chance = 1840},
@@ -93,7 +91,7 @@ monster.loot = {
 	{name = "terra legs", chance = 420},
 	{name = "terra amulet", chance = 4060},
 	{name = "ultimate health potion", chance = 9290, maxCount = 2},
-	{id = 9810, chance = 500},
+	{id = 8896, chance = 500}, -- slightly rusted armor
 	{name = "sacred tree amulet", chance = 850},
 	{name = "strand of medusa hair", chance = 9900}
 }
@@ -108,7 +106,7 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 30,
-	armor = 30,
+	armor = 45,
 	{name ="combat", interval = 2000, chance = 25, type = COMBAT_HEALING, minDamage = 150, maxDamage = 300, effect = CONST_ME_MAGIC_BLUE, target = false}
 }
 
@@ -116,7 +114,7 @@ monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
 	{type = COMBAT_ENERGYDAMAGE, percent = -10},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = -5},
+	{type = COMBAT_FIREDAMAGE, percent = -10},
 	{type = COMBAT_LIFEDRAIN, percent = 100},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 100},

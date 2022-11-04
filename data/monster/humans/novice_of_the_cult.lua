@@ -6,8 +6,8 @@ monster.experience = 100
 monster.outfit = {
 	lookType = 133,
 	lookHead = 114,
-	lookBody = 95,
-	lookLegs = 114,
+	lookBody = 114,
+	lookLegs = 76,
 	lookFeet = 114,
 	lookAddons = 0,
 	lookMount = 0
@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 285
 monster.maxHealth = 285
 monster.race = "blood"
-monster.corpse = 20467
+monster.corpse = 18186
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 4000,
@@ -72,8 +71,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Chicken", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Chicken", chance = 10, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -85,15 +87,15 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1962, chance = 700},
+	{id = 2828, chance = 700}, -- book
 	{name = "small diamond", chance = 210},
 	{name = "gold coin", chance = 43380, maxCount = 40},
 	{name = "wand of vortex", chance = 450},
 	{name = "garlic necklace", chance = 420},
-	{name = "dwarven ring", chance = 500},
+	{id = 3097, chance = 500}, -- dwarven ring
 	{name = "scarf", chance = 2900},
 	{name = "pirate voodoo doll", chance = 520},
-	{id = 6087, chance = 970},
+	{id = 6087, chance = 970}, -- music sheet
 	{name = "cultish robe", chance = 1030},
 	{name = "rope belt", chance = 5910}
 }

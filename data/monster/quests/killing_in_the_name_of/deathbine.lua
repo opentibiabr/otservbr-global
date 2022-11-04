@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6047
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -64,17 +63,17 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 11217, chance = 100000},
-	{id = 2152, chance = 100000, maxCount = 5},
-	{id = 2804, chance = 100000},
-	{id = 2149, chance = 100000, maxCount = 4},
-	{id = 2792, chance = 50000},
-	{id = 7732, chance = 50000},
-	{id = 7887, chance = 50000},
-	{id = 7886, chance = 50000},
-	{id = 8912, chance = 50000},
-	{id = 5015, chance = 5555},
-	{id = 13307, chance = 2854}
+	{id = 10300, chance = 100000}, -- carniphila seeds
+	{id = 3035, chance = 100000, maxCount = 5}, -- platinum coin
+	{id = 3740, chance = 100000}, -- shadow herb
+	{id = 3032, chance = 100000, maxCount = 4}, -- small emerald
+	{id = 3728, chance = 50000}, -- dark mushroom
+	{id = 647, chance = 50000}, -- seeds
+	{id = 814, chance = 50000}, -- terra amulet
+	{id = 813, chance = 50000}, -- terra boots
+	{id = 8084, chance = 50000}, -- springsprout rod
+	{id = 5014, chance = 5555}, -- mandrake
+	{id = 12320, chance = 2854} -- sweet smelling bait
 }
 
 monster.attacks = {

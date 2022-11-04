@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 1400
 monster.maxHealth = 1400
 monster.race = "blood"
-monster.corpse = 20415
+monster.corpse = 18134
 monster.speed = 280
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -81,10 +80,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1949, chance = 45000},
-	{id = 2071, chance = 1640},
+	{id = 2815, chance = 45000}, -- scroll
+	{id = 2949, chance = 1640}, -- lyre
 	{name = "piggy bank", chance = 80},
-	{id = 2120, chance = 2190},
+	{id = 3003, chance = 2190}, -- rope
 	{name = "wedding ring", chance = 4910},
 	{name = "gold coin", chance = 59500, maxCount = 100},
 	{name = "might ring", chance = 470},
@@ -121,7 +120,7 @@ monster.defenses = {
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 30},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 10},
 	{type = COMBAT_ENERGYDAMAGE, percent = 40},
 	{type = COMBAT_EARTHDAMAGE, percent = 50},
 	{type = COMBAT_FIREDAMAGE, percent = 30},

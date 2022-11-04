@@ -4,16 +4,15 @@ local monster = {}
 monster.description = "a control tower"
 monster.experience = 3000
 monster.outfit = {
-	lookTypeEx = 23265
+	lookTypeEx = 20894
 }
 
 monster.health = 7500
 monster.maxHealth = 7500
 monster.race = "venom"
-monster.corpse = 24309
+monster.corpse = 21940
 monster.speed = 0
 monster.manaCost = 330
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -28,10 +27,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
@@ -58,9 +57,9 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2152, chance = 100000, maxCount = 5},
-	{id = 7590, chance = 14285},
-	{id = 7591, chance = 14285}
+	{id = 3035, chance = 100000, maxCount = 5}, -- platinum coin
+	{id = 238, chance = 14285}, -- great mana potion
+	{id = 239, chance = 14285} -- great health potion
 }
 
 monster.defenses = {

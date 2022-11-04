@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 900
 monster.maxHealth = 900
 monster.race = "blood"
-monster.corpse = 25398
+monster.corpse = 22742
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -65,12 +64,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 92000, maxCount = 130},
-	{id = 24842, chance = 2200},
-	{id = 5925, chance = 1200, maxCount = 2},
-	{id = 11224, chance = 900},
-	{id = 3973, chance = 400},
-	{id = 7432, chance = 200}
+	{id = 3031, chance = 92000, maxCount = 130}, -- gold coin
+	{id = 22186, chance = 2200}, -- raw meat
+	{id = 5925, chance = 1200, maxCount = 2}, -- hardened bone
+	{id = 10307, chance = 900}, -- thick fur
+	{id = 3443, chance = 400}, -- tusk shield
+	{id = 7432, chance = 200} -- furry club
 }
 
 monster.attacks = {

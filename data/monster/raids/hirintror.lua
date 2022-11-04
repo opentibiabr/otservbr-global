@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 7282
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -67,22 +66,22 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 21697, chance = 200},
-	{id = 2148, chance = 70000, maxCount = 100},
-	{id = 21400, chance = 200},
-	{id = 21696, chance = 200},
-	{id = 2479, chance = 1200},
-	{id = 2396, chance = 2200},
-	{id = 7290, chance = 4200},
-	{id = 7441, chance = 2200},
-	{id = 7892, chance = 3200},
-	{id = 7902, chance = 1200},
-	{id = 7449, chance = 900},
-	{id = 5912, chance = 900},
-	{id = 7589, chance = 20000, maxCount = 5},
-	{id = 7588, chance = 2000, maxCount = 5},
-	{id = 2145, chance = 2000, maxCount = 5},
-	{id = 2152, chance = 20000}
+	{id = 19363, chance = 200}, -- runic ice shield
+	{id = 3031, chance = 70000, maxCount = 100}, -- gold coin
+	{id = 19083, chance = 200}, -- silver raid token
+	{id = 19362, chance = 200}, -- icicle bow
+	{id = 3373, chance = 1200}, -- strange helmet
+	{id = 3284, chance = 2200}, -- ice rapier
+	{id = 7290, chance = 4200}, -- shard
+	{id = 7441, chance = 2200}, -- ice cube
+	{id = 819, chance = 3200}, -- glacier shoes
+	{id = 829, chance = 1200}, -- glacier mask
+	{id = 7449, chance = 900}, -- crystal sword
+	{id = 5912, chance = 900}, -- blue piece of cloth
+	{id = 237, chance = 20000, maxCount = 5}, -- strong mana potion
+	{id = 236, chance = 2000, maxCount = 5}, -- strong health potion
+	{id = 3028, chance = 2000, maxCount = 5}, -- small diamond
+	{id = 3035, chance = 20000} -- platinum coin
 }
 
 monster.attacks = {

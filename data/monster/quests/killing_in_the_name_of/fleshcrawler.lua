@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6021
 monster.speed = 230
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Larva", chance = 10, interval = 2000, max = 3}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Larva", chance = 10, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -68,19 +70,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2152, chance = 98890, maxCount = 15},
-	{id = 2159, chance = 98890, maxCount = 2},
-	{id = 2149, chance = 88890, maxCount = 3},
-	{id = 2150, chance = 87220, maxCount = 4},
-	{id = 10548, chance = 100000},
-	{id = 2142, chance = 45560},
-	{id = 2135, chance = 52220},
-	{id = 7884, chance = 11110},
-	{id = 7588, chance = 43330},
-	{id = 8912, chance = 75560},
-	{id = 2540, chance = 43890},
-	{id = 7426, chance = 30560},
-	{id = 12424, chance = 14440}
+	{id = 3035, chance = 98890, maxCount = 15}, -- platinum coin
+	{id = 3042, chance = 98890, maxCount = 2}, -- scarab coin
+	{id = 3032, chance = 88890, maxCount = 3}, -- small emerald
+	{id = 3033, chance = 87220, maxCount = 4}, -- small amethyst
+	{id = 9631, chance = 100000}, -- scarab pincers
+	{id = 3025, chance = 45560}, -- ancient amulet
+	{id = 3018, chance = 52220}, -- scarab amulet
+	{id = 811, chance = 11110}, -- terra mantle
+	{id = 236, chance = 43330}, -- strong health potion
+	{id = 8084, chance = 75560}, -- springsprout rod
+	{id = 3440, chance = 43890}, -- scarab shield
+	{id = 7426, chance = 30560}, -- amber staff
+	{id = 11468, chance = 14440} -- ornamented brooch
 }
 
 monster.attacks = {

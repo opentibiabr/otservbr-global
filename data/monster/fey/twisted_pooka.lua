@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 700
 monster.maxHealth = 700
 monster.race = "blood"
-monster.corpse = 29114
+monster.corpse = 25827
 monster.speed = 230
 monster.manaCost = 450
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -52,13 +51,13 @@ monster.respawnType = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -88,14 +87,16 @@ monster.loot = {
 	{name = "carrot on a stick", chance = 20},
 	{name = "small stone", chance = 200, maxCount = 5},
 	{name = "gold coin", chance = 30000, maxCount = 100},
-	{name = "stealth ring", chance = 492},
-	{id = 2684, chance = 55000, maxCount = 3},
+	{id = 3049, chance = 492}, -- stealth ring
+	{id = 3595, chance = 55000, maxCount = 3}, -- carrot
 	{name = "strong health potion", chance = 719},
 	{name = "orange mushroom", chance = 10000},
 	{name = "fairy wings", chance = 30100},
 	{name = "orange mushroom", chance = 5155},
-	{name = "Shimmering Beetles", chance = 591},
-	{name = "Small Enchanted Ruby", chance = 3400, maxCount = 2}
+	{name = "shimmering beetles", chance = 591},
+	{name = "prismatic quartz", chance = 2500},
+	{name = "crystal of focus", chance = 60},
+	{name = "small enchanted ruby", chance = 3400, maxCount = 2}
 }
 
 monster.attacks = {

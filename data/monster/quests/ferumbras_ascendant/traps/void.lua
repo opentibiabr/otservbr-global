@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "void"
 monster.experience = 320
 monster.outfit = {
-	lookTypeEx = 460
+	lookTypeEx = 470
 }
 
 monster.health = 2000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 10
 
 monster.changeTarget = {
 	interval = 5000,
@@ -52,8 +51,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Enthralled Demon", chance = 25, interval = 2000, max = 10}
+monster.summon = {
+	maxSummons = 10,
+	summons = {
+		{name = "Enthralled Demon", chance = 25, interval = 2000, count = 10}
+	}
 }
 
 monster.voices = {

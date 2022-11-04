@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2600
 monster.maxHealth = 2600
 monster.race = "fire"
-monster.corpse = 13969
+monster.corpse = 12834
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -86,7 +85,7 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "gold coin", chance = 50000, maxCount = 78},
 	{name = "platinum coin", chance = 33333, maxCount = 4},
-	{name = "stealth ring", chance = 5000},
+	{id = 3049, chance = 5000}, -- stealth ring
 	{name = "wand of inferno", chance = 892},
 	{name = "steel boots", chance = 89},
 	{name = "brown mushroom", chance = 4545},
@@ -115,14 +114,14 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 50},
-	{type = COMBAT_EARTHDAMAGE, percent = -30},
+	{type = COMBAT_ENERGYDAMAGE, percent = 70},
+	{type = COMBAT_EARTHDAMAGE, percent = -15},
 	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 50},
-	{type = COMBAT_HOLYDAMAGE , percent = 0},
+	{type = COMBAT_ICEDAMAGE, percent = 70},
+	{type = COMBAT_HOLYDAMAGE , percent = -5},
 	{type = COMBAT_DEATHDAMAGE , percent = 0}
 }
 

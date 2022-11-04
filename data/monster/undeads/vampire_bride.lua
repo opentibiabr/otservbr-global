@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 1200
 monster.maxHealth = 1200
 monster.race = "blood"
-monster.corpse = 9660
+monster.corpse = 8744
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -90,11 +89,11 @@ monster.loot = {
 	{name = "boots of haste", chance = 220},
 	{name = "strong health potion", chance = 5000},
 	{name = "strong mana potion", chance = 10210},
-	{id = 7733, chance = 200},
+	{id = 649, chance = 200}, -- flower bouquet
 	{name = "hibiscus dress", chance = 1030},
 	{name = "blood goblet", chance = 60},
-	{id = 9809, chance = 1010},
-	{id = 9837, chance = 970},
+	{id = 8895, chance = 1010}, -- rusted armor
+	{id = 8923, chance = 970}, -- velvet tapestry
 	{name = "vampire teeth", chance = 10000},
 	{name = "blood preservation", chance = 4950},
 	{name = "leather whip", chance = 20}

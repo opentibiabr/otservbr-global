@@ -5,9 +5,9 @@ monster.description = "Smuggler Baron Silvertoe"
 monster.experience = 170
 monster.outfit = {
 	lookType = 134,
-	lookHead = 38,
+	lookHead = 57,
 	lookBody = 0,
-	lookLegs = 94,
+	lookLegs = 77,
 	lookFeet = 95,
 	lookAddons = 0,
 	lookMount = 0
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 280
 monster.maxHealth = 280
 monster.race = "blood"
-monster.corpse = 20506
+monster.corpse = 18225
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 3
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Wild Warrior", chance = 20, interval = 2000}
+monster.summon = {
+	maxSummons = 3,
+	summons = {
+		{name = "Wild Warrior", chance = 20, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -73,8 +75,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 80000, maxCount = 30},
-	{id = 2406, chance = 10000}
+	{id = 3031, chance = 80000, maxCount = 30}, -- gold coin
+	{id = 3294, chance = 10000} -- short sword
 }
 
 monster.attacks = {

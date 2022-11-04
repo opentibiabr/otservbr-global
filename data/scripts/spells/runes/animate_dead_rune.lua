@@ -12,7 +12,7 @@ function rune.onCastSpell(player, variant)
 					local summon = Game.createMonster("Skeleton", position, true, true)
 					if summon then
 						corpse:remove()
-						player:addSummon(summon)
+						player:setSummon(summon)
 						position:sendMagicEffect(CONST_ME_MAGIC_BLUE)
 						return true
 					end
@@ -31,9 +31,8 @@ function rune.onCastSpell(player, variant)
 end
 
 rune:group("support")
-rune:id(83)
-rune:name("Animate Dead")
-rune:runeId(2316)
+rune:name("animate dead rune")
+rune:runeId(3203)
 rune:allowFarUse(true)
 rune:charges(1)
 rune:level(27)

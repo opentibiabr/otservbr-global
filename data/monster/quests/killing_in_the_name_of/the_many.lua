@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6048
 monster.speed = 260
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -64,16 +63,16 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2197, chance = 90000},
-	{id = 7589, chance = 83000, maxCount = 5},
-	{id = 10219, chance = 80000},
-	{id = 2475, chance = 79000},
-	{id = 2146, chance = 77000, maxCount = 5},
-	{id = 9971, chance = 60000, maxCount = 3},
-	{id = 2536, chance = 53000},
-	{id = 10523, chance = 37000},
-	{id = 2498, chance = 20000},
-	{id = 2476, chance = 10000}
+	{id = 3081, chance = 90000}, -- stone skin amulet
+	{id = 237, chance = 83000, maxCount = 5}, -- strong mana potion
+	{id = 9302, chance = 80000}, -- sacred tree amulet
+	{id = 3369, chance = 79000}, -- warrior helmet
+	{id = 3029, chance = 77000, maxCount = 5}, -- small sapphire
+	{id = 9058, chance = 60000, maxCount = 3}, -- gold ingot
+	{id = 3436, chance = 53000}, -- medusa shield
+	{id = 9606, chance = 37000}, -- egg of the many
+	{id = 3392, chance = 20000}, -- royal helmet
+	{id = 3370, chance = 10000} -- knight armor
 }
 
 monster.attacks = {

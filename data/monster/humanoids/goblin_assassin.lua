@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6002
 monster.speed = 140
 monster.manaCost = 360
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 10000,
@@ -44,7 +43,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -81,7 +80,7 @@ monster.voices = {
 monster.loot = {
 	{name = "small stone", chance = 9900, maxCount = 3},
 	{name = "gold coin", chance = 50000, maxCount = 9},
-	{id = 2230, chance = 13000},
+	{id = 3115, chance = 13000}, -- bone
 	{name = "mouldy cheese", chance = 6610},
 	{name = "dagger", chance = 17000},
 	{name = "short sword", chance = 8820},
@@ -89,7 +88,7 @@ monster.loot = {
 	{name = "leather helmet", chance = 13000},
 	{name = "leather armor", chance = 7240},
 	{name = "small axe", chance = 9800},
-	{id = 2667, chance = 12400}
+	{id = 3578, chance = 12400} -- fish
 }
 
 monster.attacks = {
@@ -114,8 +113,8 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 1},
-	{type = COMBAT_DEATHDAMAGE , percent = -1}
+	{type = COMBAT_HOLYDAMAGE , percent = 20},
+	{type = COMBAT_DEATHDAMAGE , percent = -10}
 }
 
 monster.immunities = {

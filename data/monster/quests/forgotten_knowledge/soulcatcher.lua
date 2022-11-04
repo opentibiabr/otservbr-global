@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a soulcatcher"
 monster.experience = 320
 monster.outfit = {
-	lookTypeEx = 12009
+	lookTypeEx = 11053
 }
 
 monster.health = 50000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

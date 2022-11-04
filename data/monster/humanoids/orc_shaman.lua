@@ -33,7 +33,6 @@ monster.race = "blood"
 monster.corpse = 5978
 monster.speed = 140
 monster.manaCost = 0
-monster.maxSummons = 4
 
 monster.changeTarget = {
 	interval = 4000,
@@ -69,8 +68,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Snake", chance = 20, interval = 2000, max = 4}
+monster.summon = {
+	maxSummons = 4,
+	summons = {
+		{name = "Snake", chance = 20, interval = 2000, count = 3}
+	}
 }
 
 monster.voices = {
@@ -81,7 +83,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1958, chance = 520},
+	{id = 2824, chance = 520}, -- book
 	{name = "gold coin", chance = 90000, maxCount = 5},
 	{name = "wand of decay", chance = 1000},
 	{name = "spear", chance = 4850},
@@ -91,7 +93,7 @@ monster.loot = {
 	{name = "broken shamanic staff", chance = 10300},
 	{name = "shamanic hood", chance = 6860},
 	{name = "orc leather", chance = 4300},
-	{id = 26654, chance = 1000}
+	{id = 23986, chance = 1000} -- heavy old tome
 }
 
 monster.attacks = {
@@ -115,7 +117,7 @@ monster.elements = {
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 0},
-	{type = COMBAT_HOLYDAMAGE , percent = 25},
+	{type = COMBAT_HOLYDAMAGE , percent = 10},
 	{type = COMBAT_DEATHDAMAGE , percent = -5}
 }
 

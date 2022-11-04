@@ -5,10 +5,10 @@ monster.description = "a zamulosh"
 monster.experience = 50000
 monster.outfit = {
 	lookType = 862,
-	lookHead = 17,
+	lookHead = 16,
 	lookBody = 12,
 	lookLegs = 73,
-	lookFeet = 92,
+	lookFeet = 55,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 20000
 monster.maxHealth = 20000
 monster.race = "blood"
-monster.corpse = 8062
+monster.corpse = 2127
 monster.speed = 235
 monster.manaCost = 200
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -34,10 +33,10 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = true,
 	illusionable = false,

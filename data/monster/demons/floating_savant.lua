@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 8000
 monster.maxHealth = 8000
 monster.race = "undead"
-monster.corpse = 33341
+monster.corpse = 28598
 monster.speed = 330
 monster.manaCost = 0
-monster.maxSummons = 1
 
 monster.changeTarget = {
 	interval = 5000,
@@ -68,8 +67,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Lava Lurker Attendant", chance = 70, interval = 2000}
+monster.summon = {
+	maxSummons = 1,
+	summons = {
+		{name = "Lava Lurker Attendant", chance = 70, interval = 2000, count = 1}
+	}
 }
 
 monster.voices = {
@@ -80,13 +82,13 @@ monster.voices = {
 
 monster.loot = {
 	{name = "small enchanted ruby", chance = 10000, maxCount = 5},
-	{name = "Red Crystal Fragment", chance = 10000, maxCount = 2},
-	{name = "Red Gem", chance = 10000, maxCount = 3},
-	{name = "Red Piece of Cloth", chance = 10000, maxCount = 3},
-	{name = "Concentrated Demonic Blood", chance = 12000, maxCount = 5},
-	{name = "Demonic Essence", chance = 10000, maxCount = 5},
-	{id = 2553, chance = 10000},
-	{name = "Sample of Monster Blood", chance = 10000, maxCount = 5}
+	{name = "red crystal fragment", chance = 10000, maxCount = 2},
+	{id= 3039, chance = 10000, maxCount = 3}, -- red gem
+	{name = "red piece of cloth", chance = 10000, maxCount = 3},
+	{name = "flask of demonic blood", chance = 12000, maxCount = 5},
+	{name = "demonic essence", chance = 10000, maxCount = 5},
+	{id = 3456, chance = 10000}, -- pick
+	{name = "sample of monster blood", chance = 10000, maxCount = 5}
 }
 
 monster.attacks = {
@@ -104,14 +106,14 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 50},
-	{type = COMBAT_EARTHDAMAGE, percent = 30},
-	{type = COMBAT_FIREDAMAGE, percent = 80},
+	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_EARTHDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 100},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 50},
-	{type = COMBAT_HOLYDAMAGE , percent = 50},
+	{type = COMBAT_ICEDAMAGE, percent = -10},
+	{type = COMBAT_HOLYDAMAGE , percent = 0},
 	{type = COMBAT_DEATHDAMAGE , percent = 50}
 }
 

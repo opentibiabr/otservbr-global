@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a force field"
 monster.experience = 0
 monster.outfit = {
-	lookTypeEx = 11098
+	lookTypeEx = 2128
 }
 
 monster.health = 10000
@@ -13,7 +13,6 @@ monster.race = "undead"
 monster.corpse = 0
 monster.speed = 0
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,

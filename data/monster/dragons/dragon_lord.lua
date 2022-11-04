@@ -38,7 +38,6 @@ monster.race = "blood"
 monster.corpse = 5984
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -85,13 +84,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 1976, chance = 9000},
+	{id = 2842, chance = 9000}, -- book
 	{name = "golden mug", chance = 3190},
 	{name = "small sapphire", chance = 5300},
 	{name = "gold coin", chance = 33750, maxCount = 100},
 	{name = "gold coin", chance = 33750, maxCount = 100},
 	{name = "gold coin", chance = 33750, maxCount = 45},
-	{name = "energy ring", chance = 5250},
+	{id = 3051, chance = 5250}, -- energy ring
 	{name = "life crystal", chance = 680},
 	{name = "fire sword", chance = 290},
 	{name = "strange helmet", chance = 360},

@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 5963
 monster.speed = 230
 monster.manaCost = 620
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -34,13 +33,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -69,8 +68,8 @@ monster.loot = {
 	{name = "battle hammer", chance = 5000},
 	{name = "battle shield", chance = 1000},
 	{name = "guardian shield", chance = 5000},
-	{id = 6570, chance = 5538},
-	{id = 6571, chance = 1538}
+	{id = 6570, chance = 5538}, -- surprise bag
+	{id = 6571, chance = 1538} -- surprise bag
 }
 
 monster.attacks = {

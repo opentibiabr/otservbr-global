@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 6532
 monster.speed = 260
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -70,21 +69,21 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 272},
-	{id = 2152, chance = 95660, maxCount = 6},
-	{id = 6500, chance = 20340},
-	{id = 5944, chance = 20130},
-	{id = 9967, chance = 14190},
-	{id = 9968, chance = 11550},
-	{id = 2151, chance = 5930},
-	{id = 2149, chance = 5400, maxCount = 3},
-	{id = 2147, chance = 2750, maxCount = 2},
-	{id = 2145, chance = 2650, maxCount = 2},
-	{id = 6300, chance = 2440},
-	{id = 2156, chance = 1590},
-	{id = 2154, chance = 1380},
-	{id = 2155, chance = 640},
-	{id = 2158, chance = 320}
+	{id = 3031, chance = 100000, maxCount = 272}, -- gold coin
+	{id = 3035, chance = 95660, maxCount = 6}, -- platinum coin
+	{id = 6499, chance = 20340}, -- demonic essence
+	{id = 5944, chance = 20130}, -- soul orb
+	{id = 9054, chance = 14190}, -- glob of acid slime
+	{id = 9055, chance = 11550}, -- glob of tar
+	{id = 3034, chance = 5930}, -- talon
+	{id = 3032, chance = 5400, maxCount = 3}, -- small emerald
+	{id = 3030, chance = 2750, maxCount = 2}, -- small ruby
+	{id = 3028, chance = 2650, maxCount = 2}, -- small diamond
+	{id = 6299, chance = 2440}, -- death ring
+	{id = 3039, chance = 1590}, -- red gem
+	{id = 3037, chance = 1380}, -- yellow gem
+	{id = 3038, chance = 640}, -- green gem
+	{id = 3041, chance = 320} -- blue gem
 }
 
 monster.attacks = {

@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "the Abomination"
 monster.experience = 25000
 monster.outfit = {
-	lookType = 238,
+	lookType = 1393,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 38050
 monster.maxHealth = 38050
 monster.race = "venom"
-monster.corpse = 6532
+monster.corpse = 36612
 monster.speed = 340
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = true,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -65,10 +64,10 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 100},
-	{id = 2152, chance = 10000, maxCount = 3},
-	{id = 6500, chance = 2857},
-	{id = 5944, chance = 2500}
+	{id = 3031, chance = 100000, maxCount = 100}, -- gold coin
+	{id = 3035, chance = 10000, maxCount = 3}, -- platinum coin
+	{id = 6499, chance = 2857}, -- demonic essence
+	{id = 5944, chance = 2500} -- soul orb
 }
 
 monster.attacks = {

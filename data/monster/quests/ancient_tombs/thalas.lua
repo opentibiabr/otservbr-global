@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "Thalas"
 monster.experience = 2950
 monster.outfit = {
-	lookType = 90,
+	lookType = 89,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -19,7 +19,6 @@ monster.race = "undead"
 monster.corpse = 6025
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 8
 
 monster.changeTarget = {
 	interval = 5000,
@@ -57,8 +56,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Slime", chance = 100, interval = 2000, max = 8}
+monster.summon = {
+	maxSummons = 8,
+	summons = {
+		{name = "Slime", chance = 100, interval = 2000, count = 8}
+	}
 }
 
 monster.voices = {
@@ -72,8 +74,8 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 80},
 	{name = "small emerald", chance = 7000, maxCount = 3},
 	{name = "green gem", chance = 500},
-	{name = "stealth ring", chance = 1500},
-	{id = 2169, chance = 7000},
+	{id = 3049, chance = 1500}, -- stealth ring
+	{id = 3053, chance = 7000}, -- time ring
 	{name = "cobrafang dagger", chance = 100000},
 	{name = "serpent sword", chance = 500},
 	{name = "poison dagger", chance = 7000},

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 3500
 monster.maxHealth = 3500
 monster.race = "fire"
-monster.corpse = 9923
+monster.corpse = 9009
 monster.speed = 260
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -64,29 +63,29 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2152, chance = 100000},
-	{id = 2152, chance = 100000, maxCount = 13},
-	{id = 7591, chance = 75810},
-	{id = 11221, chance = 100000},
-	{id = 7368, chance = 19350, maxCount = 5},
-	{id = 8473, chance = 77420},
-	{id = 6500, chance = 35480},
-	{id = 2788, chance = 67740, maxCount = 2},
-	{id = 9970, chance = 43550, maxCount = 4},
-	{id = 2477, chance = 67740},
-	{id = 2475, chance = 20970},
-	{id = 7452, chance = 6450},
-	{id = 7439, chance = 37100},
-	{id = 9969, chance = 20970},
-	{id = 9948, chance = 1610},
-	{id = 7421, chance = 3230},
-	{id = 13298, chance = 4840},
-	{id = 2519, chance = 29030}
+	{id = 3035, chance = 100000}, -- platinum coin
+	{id = 3035, chance = 100000, maxCount = 13}, -- platinum coin
+	{id = 239, chance = 75810}, -- great health potion
+	{id = 10304, chance = 100000}, -- hellspawn tail
+	{id = 7368, chance = 19350, maxCount = 5}, -- assassin star
+	{id = 7643, chance = 77420}, -- ultimate health potion
+	{id = 6499, chance = 35480}, -- demonic essence
+	{id = 3724, chance = 67740, maxCount = 2}, -- red mushroom
+	{id = 9057, chance = 43550, maxCount = 4}, -- small topaz
+	{id = 3371, chance = 67740}, -- knight legs
+	{id = 3369, chance = 20970}, -- warrior helmet
+	{id = 7452, chance = 6450}, -- spiked squelcher
+	{id = 7439, chance = 37100}, -- berserk potion
+	{id = 9056, chance = 20970}, -- black skull
+	{id = 9034, chance = 1610}, -- dracoyle statue
+	{id = 7421, chance = 3230}, -- onyx flail
+	{id = 12311, chance = 4840}, -- carrot on a stick
+	{id = 3419, chance = 29030} -- crown shield
 }
 
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -350},
-	{name ="fireball", interval = 2000, chance = 20, minDamage = -150, maxDamage = -175, target = false},
+	{name ="fireball rune", interval = 2000, chance = 20, minDamage = -150, maxDamage = -175, target = false},
 	{name ="hellspawn soulfire", interval = 2000, chance = 10, range = 5, target = false}
 }
 

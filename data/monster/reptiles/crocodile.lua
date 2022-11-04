@@ -31,9 +31,8 @@ monster.health = 105
 monster.maxHealth = 105
 monster.race = "blood"
 monster.corpse = 6046
-monster.speed = 78
+monster.speed = 156
 monster.manaCost = 350
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -88,11 +87,11 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 15,
-	armor = 15
+	armor = 13
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = -5},
+	{type = COMBAT_PHYSICALDAMAGE, percent = -10},
 	{type = COMBAT_ENERGYDAMAGE, percent = -5},
 	{type = COMBAT_EARTHDAMAGE, percent = 20},
 	{type = COMBAT_FIREDAMAGE, percent = -10},

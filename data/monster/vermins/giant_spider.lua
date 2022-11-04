@@ -41,7 +41,6 @@ monster.race = "venom"
 monster.corpse = 5977
 monster.speed = 240
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -79,8 +78,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Poison Spider", chance = 10, interval = 2000, max = 2}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Poison Spider", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -89,9 +91,8 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "gold coin", chance = 99990, maxCount = 100},
-	{name = "gold coin", chance = 99990, maxCount = 95},
-	{id = 2169, chance = 710},
+	{name = "gold coin", chance = 99990, maxCount = 195},
+	{id = 3053, chance = 710}, -- time ring
 	{name = "platinum amulet", chance = 280},
 	{name = "two handed sword", chance = 5100},
 	{name = "steel helmet", chance = 4980},

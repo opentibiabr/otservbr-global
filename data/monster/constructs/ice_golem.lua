@@ -33,7 +33,6 @@ monster.race = "undead"
 monster.corpse = 7282
 monster.speed = 190
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -78,19 +77,19 @@ monster.voices = {
 }
 
 monster.loot = {
-	{name = "black pearl", chance = 1612},
-	{name = "small diamond", chance = 66},
+	{name = "black pearl", chance = 1500},
+	{name = "small diamond", chance = 750},
 	{name = "small sapphire", chance = 578},
-	{name = "gold coin", chance = 50000, maxCount = 100},
-	{name = "gold coin", chance = 50000, maxCount = 3},
-	{name = "ice rapier", chance = 400},
-	{name = "strange helmet", chance = 444},
-	{name = "shard", chance = 266},
-	{id = 7441, chance = 5000},
-	{name = "crystal sword", chance = 177},
-	{name = "strong health potion", chance = 444},
-	{name = "glacier mask", chance = 111},
-	{name = "frosty heart", chance = 11111}
+	{name = "gold coin", chance = 100000, maxCount = 111},
+	{name = "ice rapier", chance = 350},
+	{name = "strange helmet", chance = 350},
+	{name = "shard", chance = 200},
+	{id = 7441, chance = 5000}, -- ice cube
+	{name = "crystal sword", chance = 600},
+	{name = "strong health potion", chance = 2500},
+	{name = "strong mana potion", chance = 3000},
+	{name = "glacier mask", chance = 200},
+	{name = "frosty heart", chance = 14500}
 }
 
 monster.attacks = {
@@ -102,11 +101,11 @@ monster.attacks = {
 
 monster.defenses = {
 	defense = 26,
-	armor = 25
+	armor = 47
 }
 
 monster.elements = {
-	{type = COMBAT_PHYSICALDAMAGE, percent = 25},
+	{type = COMBAT_PHYSICALDAMAGE, percent = 20},
 	{type = COMBAT_ENERGYDAMAGE, percent = -20},
 	{type = COMBAT_EARTHDAMAGE, percent = 0},
 	{type = COMBAT_FIREDAMAGE, percent = 100},

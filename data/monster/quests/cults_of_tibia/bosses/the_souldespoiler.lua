@@ -5,10 +5,10 @@ monster.description = "The Souldespoiler"
 monster.experience = 0
 monster.outfit = {
 	lookType = 875,
-	lookHead = 11,
-	lookBody = 0,
-	lookLegs = 94,
-	lookFeet = 95,
+	lookHead = 0,
+	lookBody = 3,
+	lookLegs = 77,
+	lookFeet = 81,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 50000
 monster.maxHealth = 50000
 monster.race = "blood"
-monster.corpse = 26220
+monster.corpse = 23564
 monster.speed = 250
 monster.manaCost = 0
-monster.maxSummons = 5
 
 monster.changeTarget = {
 	interval = 6000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Freed Soul", chance = 5, interval = 5000}
+monster.summon = {
+	maxSummons = 5,
+	summons = {
+		{name = "Freed Soul", chance = 5, interval = 5000, count = 5}
+	}
 }
 
 monster.voices = {
@@ -72,7 +74,7 @@ monster.voices = {
 monster.loot = {
 	{name = "curious matter", chance = 8920, maxCount = 10},
 	{name = "spark sphere", chance = 21200, maxCount = 10},
-	{id = 7633, chance = 26900},
+	{id = 282, chance = 26900}, -- giant shimmering pearl (brown)
 	{name = "wand of defiance", chance = 8920},
 	{name = "rift lance", chance = 13200},
 	{name = "rift crossbow", chance = 7620},

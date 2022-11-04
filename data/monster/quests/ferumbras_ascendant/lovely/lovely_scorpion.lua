@@ -19,7 +19,6 @@ monster.race = "venom"
 monster.corpse = 5988
 monster.speed = 150
 monster.manaCost = 310
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 2000,
@@ -34,13 +33,13 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = true,
+	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
@@ -64,7 +63,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 10568, chance = 4970}
+	{id = 9651, chance = 4970} -- scorpion tail
 }
 
 monster.attacks = {

@@ -9,7 +9,7 @@ end
 function deathFallen.onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjustified, mostdamageunjustified)
 	if corpse then
 		corpse:setDestination(Position(33621, 31023, 14))
-		addEvent(removeTp, 30 * 1000, corpse:getPosition(), 1397)
+		addEvent(removeTp, 30 * 1000, corpse:getPosition(), 1949)
 	end
 	return true
 end

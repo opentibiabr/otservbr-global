@@ -5,10 +5,10 @@ monster.description = "a silver rabbit"
 monster.experience = 0
 monster.outfit = {
 	lookType = 262,
-	lookHead = 69,
-	lookBody = 66,
-	lookLegs = 69,
-	lookFeet = 66,
+	lookHead = 0,
+	lookBody = 0,
+	lookLegs = 0,
+	lookFeet = 0,
 	lookAddons = 0,
 	lookMount = 0
 }
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 7338
 monster.speed = 184
 monster.manaCost = 220
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -50,7 +49,7 @@ monster.flags = {
 	convinceable = true,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 70,
@@ -75,7 +74,7 @@ monster.voices = {
 
 monster.loot = {
 	{name = "meat", chance = 86170, maxCount = 2},
-	{id = 2684, chance = 11150},
+	{id = 3595, chance = 11150}, -- carrot
 	{name = "silky fur", chance = 28670}
 }
 

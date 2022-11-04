@@ -7,7 +7,7 @@ monster.outfit = {
 	lookType = 133,
 	lookHead = 95,
 	lookBody = 0,
-	lookLegs = 94,
+	lookLegs = 93,
 	lookFeet = 114,
 	lookAddons = 1,
 	lookMount = 0
@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 475
 monster.maxHealth = 475
 monster.race = "blood"
-monster.corpse = 20439
+monster.corpse = 18158
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 2
 
 monster.changeTarget = {
 	interval = 4000,
@@ -58,8 +57,11 @@ monster.light = {
 	color = 0
 }
 
-monster.summons = {
-	{name = "Zombie", chance = 10, interval = 2000}
+monster.summon = {
+	maxSummons = 2,
+	summons = {
+		{name = "Zombie", chance = 10, interval = 2000, count = 2}
+	}
 }
 
 monster.voices = {
@@ -72,12 +74,12 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 2000, maxCount = 95},
-	{id = 2152, chance = 30000, maxCount = 9},
-	{id = 10316, chance = 1000},
-	{id = 10289, chance = 1000},
-	{id = 10290, chance = 1000},
-	{id = 10300, chance = 1000}
+	{id = 3031, chance = 2000, maxCount = 95}, -- gold coin
+	{id = 3035, chance = 30000, maxCount = 9}, -- platinum coin
+	{id = 9399, chance = 1000}, -- mighty helm of green sparks
+	{id = 9372, chance = 1000}, -- meat shield
+	{id = 9373, chance = 1000}, -- glutton's mace
+	{id = 9383, chance = 1000} -- trousers of the ancients
 }
 
 monster.attacks = {

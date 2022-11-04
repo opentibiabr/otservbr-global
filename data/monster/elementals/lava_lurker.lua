@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 5900
 monster.maxHealth = 5900
 monster.race = "fire"
-monster.corpse = 31997
+monster.corpse = 27586
 monster.speed = 58
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -79,7 +78,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7760, chance = 14620, maxCount = 2}
+	{id = 676, chance = 14620, maxCount = 2} -- small enchanted ruby
 }
 
 monster.attacks = {
@@ -111,6 +110,10 @@ monster.immunities = {
 	{type = "outfit", condition = false},
 	{type = "invisible", condition = true},
 	{type = "bleed", condition = false}
+}
+
+monster.heals = {
+	{type = COMBAT_FIREDAMAGE, percent = 100},
 }
 
 mType:register(monster)

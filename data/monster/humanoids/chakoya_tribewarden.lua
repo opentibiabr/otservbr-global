@@ -4,7 +4,7 @@ local monster = {}
 monster.description = "a chakoya tribewarden"
 monster.experience = 40
 monster.outfit = {
-	lookType = 259,
+	lookType = 249,
 	lookHead = 0,
 	lookBody = 0,
 	lookLegs = 0,
@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 7320
 monster.speed = 124
 monster.manaCost = 305
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 60000,
@@ -44,7 +43,7 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = true,
+	summonable = false,
 	attackable = true,
 	hostile = true,
 	convinceable = true,
@@ -81,7 +80,7 @@ monster.loot = {
 	{name = "gold coin", chance = 79590, maxCount = 20},
 	{name = "short sword", chance = 4810},
 	{name = "bone shield", chance = 1030},
-	{id = 2667, chance = 19370},
+	{id = 3578, chance = 19370}, -- fish
 	{name = "northern pike", chance = 60},
 	{name = "rainbow trout", chance = 50},
 	{name = "green perch", chance = 100},

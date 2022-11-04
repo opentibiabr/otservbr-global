@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 8250
 monster.maxHealth = 8250
 monster.race = "venom"
-monster.corpse = 6516
+monster.corpse = 6515
 monster.speed = 320
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -54,7 +53,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 70,
@@ -89,11 +88,11 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 65},
 	{name = "small amethyst", chance = 5000, maxCount = 3},
 	{name = "platinum coin", chance = 7142, maxCount = 2},
-	{name = "axe ring", chance = 4347},
-	{name = "club ring", chance = 4761},
+	{id = 3092, chance = 4347}, -- axe ring
+	{id = 3093, chance = 4761}, -- club ring
 	{name = "piece of iron", chance = 20000},
 	{name = "mouldy cheese", chance = 50000},
-	{id = 33528, chance = 60000},
+	{id = 3122, chance = 60000}, -- dirty cape
 	{name = "two handed sword", chance = 20000},
 	{name = "war hammer", chance = 2127},
 	{name = "morning star", chance = 29000},
@@ -109,7 +108,7 @@ monster.loot = {
 	{name = "demonic essence", chance = 9033},
 	{name = "onyx arrow", chance = 7692, maxCount = 4},
 	{name = "great health potion", chance = 10000},
-	{id = 9810, chance = 540}
+	{id = 8896, chance = 540} -- slightly rusted armor
 }
 
 monster.attacks = {
@@ -136,7 +135,7 @@ monster.elements = {
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
 	{type = COMBAT_ICEDAMAGE, percent = 20},
 	{type = COMBAT_HOLYDAMAGE , percent = -10},
-	{type = COMBAT_DEATHDAMAGE , percent = 1}
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

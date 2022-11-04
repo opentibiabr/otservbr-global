@@ -1,20 +1,20 @@
 local flowerPositions = {
-	[1] = {itemid = 2762, position = Position(33455, 32707, 14)},
-	[2] = {itemid = 2762, position = Position(33460, 32707, 14)},
-	[3] = {itemid = 2764, position = Position(33455, 32708, 14)},
-	[4] = {itemid = 2763, position = Position(33457, 32707, 14)},
-	[5] = {itemid = 2764, position = Position(33457, 32708, 14)},
-	[6] = {itemid = 2763, position = Position(33456, 32708, 14)},
-	[7] = {itemid = 2762, position = Position(33458, 32709, 14)},
-	[8] = {itemid = 2763, position = Position(33459, 32708, 14)},
-	[9] = {itemid = 2764, position = Position(33460, 32709, 14)}
+	[1] = {itemid = 3676, position = Position(33455, 32707, 14)},
+	[2] = {itemid = 3676, position = Position(33460, 32707, 14)},
+	[3] = {itemid = 3678, position = Position(33455, 32708, 14)},
+	[4] = {itemid = 3677, position = Position(33457, 32707, 14)},
+	[5] = {itemid = 3678, position = Position(33457, 32708, 14)},
+	[6] = {itemid = 3677, position = Position(33456, 32708, 14)},
+	[7] = {itemid = 3676, position = Position(33458, 32709, 14)},
+	[8] = {itemid = 3677, position = Position(33459, 32708, 14)},
+	[9] = {itemid = 3678, position = Position(33460, 32709, 14)}
 }
 
 local gates = {
-	{position = Position(33476, 32698, 14), itemid = 19160, transform = 19157},
-	{position = Position(33478, 32698, 14), itemid = 19160, transform = 19156},
-	{position = Position(33475, 32698, 14), itemid = 19157, transform = 19160},
-	{position = Position(33479, 32698, 14), itemid = 19156, transform = 19160}
+	{position = Position(33476, 32698, 14), itemid = 7144, transform = 1635},
+	{position = Position(33478, 32698, 14), itemid = 7144, transform = 1634},
+	{position = Position(33475, 32698, 14), itemid = 1635, transform = 7144},
+	{position = Position(33479, 32698, 14), itemid = 1634, transform = 7144}
 }
 
 local function revertItem(position, itemId, transformId)
@@ -26,7 +26,7 @@ end
 
 local ferumbrasAscendantFlowerPuzzle = Action()
 function ferumbrasAscendantFlowerPuzzle.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if item.itemid == 10029 then
+	if item.itemid == 9110 then
 		for a = 1, #flowerPositions do
 			local flower = flowerPositions[a]
 			if not Tile(flower.position):getItemById(flower.itemid) then
@@ -52,14 +52,14 @@ function ferumbrasAscendantFlowerPuzzle.onUse(player, item, fromPosition, target
 				end
 				addEvent(revertItem, 30 * 1000, gate.position, gate.itemid, gate.transform)
 			end
-			local wall = Tile(Position(33477, 32698, 14)):getItemById(6116)
+			local wall = Tile(Position(33477, 32698, 14)):getItemById(5068)
 			if not wall then
-				Game.createItem(6116, 1, Position(33477, 32698, 14))
+				Game.createItem(5068, 1, Position(33477, 32698, 14))
 			end
 		end
-		item:transform(10030)
-	elseif item.itemid == 10030 then
-		item:transform(10029)
+		item:transform(9111)
+	elseif item.itemid == 9111 then
+		item:transform(9110)
 	end
 	return true
 end

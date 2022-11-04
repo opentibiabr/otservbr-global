@@ -30,10 +30,9 @@ monster.Bestiary = {
 monster.health = 5000
 monster.maxHealth = 5000
 monster.race = "venom"
-monster.corpse = 15296
+monster.corpse = 13870
 monster.speed = 394
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -49,7 +48,7 @@ monster.flags = {
 	attackable = true,
 	hostile = true,
 	convinceable = false,
-	pushable = true,
+	pushable = false,
 	rewardBoss = false,
 	illusionable = false,
 	canPushItems = true,
@@ -80,10 +79,10 @@ monster.loot = {
 	{name = "gold coin", chance = 50000, maxCount = 100},
 	{name = "platinum coin", chance = 45000, maxCount = 6},
 	{name = "violet gem", chance = 1120},
-	{id = 6300, chance = 4480},
+	{id = 6299, chance = 4480}, -- death ring
 	{name = "titan axe", chance = 1440},
 	{name = "great mana potion", chance = 20400, maxCount = 2},
-	{id = 7632, chance = 3040},
+	{id = 281, chance = 3040}, -- giant shimmering pearl (green)
 	{name = "ultimate health potion", chance = 9250, maxCount = 2},
 	{name = "spidris mandible", chance = 27440},
 	{name = "compound eye", chance = 13210},
@@ -103,15 +102,15 @@ monster.defenses = {
 
 monster.elements = {
 	{type = COMBAT_PHYSICALDAMAGE, percent = 0},
-	{type = COMBAT_ENERGYDAMAGE, percent = 0},
+	{type = COMBAT_ENERGYDAMAGE, percent = -5},
 	{type = COMBAT_EARTHDAMAGE, percent = 100},
-	{type = COMBAT_FIREDAMAGE, percent = 0},
+	{type = COMBAT_FIREDAMAGE, percent = 15},
 	{type = COMBAT_LIFEDRAIN, percent = 0},
 	{type = COMBAT_MANADRAIN, percent = 0},
 	{type = COMBAT_DROWNDAMAGE, percent = 0},
-	{type = COMBAT_ICEDAMAGE, percent = 0},
+	{type = COMBAT_ICEDAMAGE, percent = -3},
 	{type = COMBAT_HOLYDAMAGE , percent = -10},
-	{type = COMBAT_DEATHDAMAGE , percent = 0}
+	{type = COMBAT_DEATHDAMAGE , percent = 10}
 }
 
 monster.immunities = {

@@ -19,7 +19,6 @@ monster.race = "blood"
 monster.corpse = 6015
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 500,
@@ -40,7 +39,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = true,
-	illusionable = false,
+	illusionable = true,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 90,
@@ -68,7 +67,7 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 7699, chance = 1000000}
+	{id = 396, chance = 1000000} -- technomancer beard
 }
 
 monster.attacks = {

@@ -16,10 +16,9 @@ monster.outfit = {
 monster.health = 200000
 monster.maxHealth = 200000
 monster.race = "blood"
-monster.corpse = 18384
+monster.corpse = 16088
 monster.speed = 470
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 5000,
@@ -69,13 +68,13 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 18465, chance = 8430},
-	{id = 18452, chance = 6570},
-	{id = 18450, chance = 10480},
-	{id = 18430, chance = 100000},
-	{id = 18453, chance = 12380},
-	{id = 18451, chance = 7430},
-	{id = 18454, chance = 11430}
+	{id = 16175, chance = 8430}, -- shiny blade
+	{id = 16162, chance = 6570}, -- mycological mace
+	{id = 16160, chance = 10480}, -- crystalline sword
+	{id = 16136, chance = 100000}, -- deathstrike's snippet
+	{id = 16163, chance = 12380}, -- crystal crossbow
+	{id = 16161, chance = 7430}, -- crystalline axe
+	{id = 16164, chance = 11430} -- mycological bow
 }
 
 monster.attacks = {

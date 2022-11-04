@@ -29,10 +29,9 @@ monster.Bestiary = {
 monster.health = 2700
 monster.maxHealth = 2700
 monster.race = "blood"
-monster.corpse = 40207
+monster.corpse = 35372
 monster.speed = 200
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -53,7 +52,7 @@ monster.flags = {
 	convinceable = false,
 	pushable = false,
 	rewardBoss = false,
-	illusionable = true,
+	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 70,
@@ -78,20 +77,20 @@ monster.voices = {
 }
 
 monster.loot = {
-	{id = 2148, chance = 100000, maxCount = 120},
-	{id = 8472, chance = 100000, maxCount = 2},
-	{id = 40407, chance = 10000},
-	{id = 7886, chance = 4761},
-	{id = 7886, chance = 4761},
-	{id = 20092, chance = 5000},
-	{id = 20093, chance = 5000},
-	{id = 20097, chance = 16666},
-	{id = 20098, chance = 3846},
-	{id = 40431, chance = 11111},
-	{id = 20100, chance = 14285},
-	{id = 20101, chance = 14285},
-	{id = 7893, chance = 1612},
-	{id = 7891, chance = 3225}
+	{id = 3031, chance = 100000, maxCount = 120}, -- gold coin
+	{id = 7642, chance = 100000, maxCount = 2}, -- great spirit potion
+	{id = 35572, chance = 10000}, -- pirate coin
+	{id = 813, chance = 4761}, -- terra boots
+	{id = 813, chance = 4761}, -- terra boots
+	{id = 17812, chance = 5000}, -- ratana
+	{id = 17813, chance = 5000}, -- life preserver
+	{id = 17817, chance = 16666}, -- cheese cutter
+	{id = 17818, chance = 3846}, -- cheesy figurine
+	{id = 35596, chance = 11111}, -- mouldy powder
+	{id = 17820, chance = 14285}, -- soft cheese
+	{id = 17821, chance = 14285}, -- rat cheese
+	{id = 820, chance = 1612}, -- lightning boots
+	{id = 818, chance = 3225} -- magma boots
 }
 
 monster.attacks = {

@@ -32,7 +32,6 @@ monster.race = "blood"
 monster.corpse = 6043
 monster.speed = 184
 monster.manaCost = 0
-monster.maxSummons = 0
 
 monster.changeTarget = {
 	interval = 4000,
@@ -78,9 +77,9 @@ monster.voices = {
 
 monster.loot = {
 	{name = "gold coin", chance = 69000, maxCount = 40},
-	{name = "power ring", chance = 300},
+	{id = 3050, chance = 300}, -- power ring
 	{name = "protection amulet", chance = 990},
-	{name = "club ring", chance = 230},
+	{id = 3093, chance = 230}, -- club ring
 	{name = "plate armor", chance = 950},
 	{name = "banana", chance = 30000, maxCount = 12},
 	{name = "ape fur", chance = 980},
